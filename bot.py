@@ -26,111 +26,77 @@ HTML_MASTER = f'''
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KEYGAP | QUANTUM ADVANTAGE DASHBOARD</title>
+    <title>KEYGAP | QUANTUM ADVANTAGE</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
     <style>
+        html {{ scroll-behavior: smooth; }}
         body {{ background-color: #050505; color: #e0e0e0; font-family: 'Inter', sans-serif; overflow-x: hidden; }}
         .mono {{ font-family: 'JetBrains Mono', monospace; }}
         .glass {{ background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.05); }}
         .neon-text {{ color: #00ff41; text-shadow: 0 0 10px rgba(0,255,65,0.5); }}
         .neon-border {{ border: 1px solid #00ff41; box-shadow: 0 0 15px rgba(0,255,65,0.2); }}
         .grid-bg {{ background-image: radial-gradient(rgba(0, 255, 65, 0.1) 1px, transparent 1px); background-size: 30px 30px; }}
-        .scanline {{ width: 100%; height: 100px; background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,255,65,0.02) 50%, rgba(0,0,0,0) 100%); position: fixed; top: 0; animation: scan 8s linear infinite; pointer-events: none; }}
+        .scanline {{ width: 100%; height: 100px; background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,255,65,0.02) 50%, rgba(0,0,0,0) 100%); position: fixed; top: 0; animation: scan 8s linear infinite; pointer-events: none; z-index: 999; }}
         @keyframes scan {{ 0% {{ top: -100px; }} 100% {{ top: 100%; }} }}
-        @keyframes pulse {{ 0% {{ opacity: 1; }} 50% {{ opacity: 0.4; }} 100% {{ opacity: 1; }} }}
         .pulse {{ animation: pulse 2s infinite; }}
+        @keyframes pulse {{ 0% {{ opacity: 1; }} 50% {{ opacity: 0.4; }} 100% {{ opacity: 1; }} }}
     </style>
 </head>
 <body class="grid-bg">
     <div class="scanline"></div>
 
-    <div class="w-full border-b border-white/10 glass sticky top-0 z-50 px-4 py-2 flex justify-between items-center">
+    <nav class="w-full border-b border-white/10 glass sticky top-0 z-50 px-4 py-2 flex justify-between items-center">
         <div class="flex items-center gap-6">
-            <span class="mono text-[10px] uppercase tracking-tighter">
-                <span class="text-white/40">Terminal_ID:</span> <span class="text-white">KG-PRO-2026</span>
-            </span>
-            <span class="mono text-[10px] uppercase tracking-tighter hidden md:inline">
-                <span class="text-white/40">Status:</span> <span class="neon-text pulse">Connected_Live</span>
-            </span>
+            <span class="mono text-[10px] uppercase tracking-tighter text-white/40">Terminal: <span class="text-white">KG-PRO</span></span>
+            <span class="mono text-[10px] uppercase neon-text pulse hidden md:inline">Connected_Live</span>
         </div>
         <div class="mono text-[11px] font-bold">
             <span id="clock" class="neon-text">--:--:--</span>
         </div>
-    </div>
+    </nav>
 
     <div class="max-w-[1600px] mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
-        
-        <aside class="lg:col-span-2 space-y-4">
+        <aside class="lg:col-span-3 space-y-4">
             <div class="glass p-4 rounded-sm border-l-2 border-green-500">
-                <h3 class="mono text-[10px] text-white/50 mb-3 uppercase tracking-widest">Global_Index</h3>
-                <iframe src="https://s.tradingview.com/embed-widget/mini-symbol-overview/?symbol=SP:SPX&theme=dark" width="100%" height="120" frameborder="0"></iframe>
-            </div>
-            <div class="glass p-4 rounded-sm border-l-2 border-blue-500">
-                <h3 class="mono text-[10px] text-white/50 mb-3 uppercase tracking-widest">Crypto_Sentiment</h3>
-                <iframe src="https://s.tradingview.com/embed-widget/mini-symbol-overview/?symbol=BINANCE:BTCUSDT&theme=dark" width="100%" height="120" frameborder="0"></iframe>
+                <h3 class="mono text-[9px] text-white/50 mb-3 uppercase tracking-widest">Market_Scanner</h3>
+                <iframe src="https://s.tradingview.com/embed-widget/screener/?market=crypto&theme=dark" width="100%" height="350" frameborder="0"></iframe>
             </div>
         </aside>
 
-        <main class="lg:col-span-7 space-y-6">
-            <div class="glass p-8 relative overflow-hidden rounded-sm border border-white/10">
-                <div class="absolute top-0 right-0 p-2 mono text-[9px] text-white/20">A.I. ENGINE v4.2</div>
-                <div class="mb-6">
-                    <span class="bg-white/10 text-white px-2 py-1 text-[9px] font-bold uppercase tracking-widest mb-4 inline-block">Flash_Report</span>
-                    <h2 class="text-4xl md:text-5xl font-black italic tracking-tighter text-white leading-none uppercase">
-                        "{testo_notizia}"
-                    </h2>
+        <main class="lg:col-span-6 space-y-6">
+            <div class="glass p-6 border border-white/10">
+                <div class="flex justify-between items-start mb-6">
+                    <span class="bg-white/10 text-white px-2 py-1 text-[9px] font-bold uppercase tracking-widest">Intelligence_Report</span>
+                    <span class="mono text-[9px] text-white/20">v4.2</span>
                 </div>
-                
+                <h2 class="text-3xl md:text-5xl font-black italic tracking-tighter text-white leading-none uppercase mb-8">
+                    "{testo_notizia}"
+                </h2>
                 <div class="h-[500px] neon-border bg-black mb-6">
-                    <iframe src="https://s.tradingview.com/widgetembed/?symbol=TVC:DXY&theme=dark&v={id_versione}" width="100%" height="100%" frameborder="0"></iframe>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mono text-[11px] leading-relaxed">
-                    <div class="text-white/60 p-4 border border-white/5">
-                        <span class="text-green-500 font-bold underline">/// ANALISI_TECNICA:</span><br>
-                        Dati incrociati mostrano una divergenza rialzista nel breve termine. I cluster di liquidità sono posizionati a livelli critici.
-                    </div>
-                    <div class="text-white/60 p-4 border border-white/5">
-                        <span class="text-blue-500 font-bold underline">/// SENTIMENT_HFT:</span><br>
-                        Algoritmi ad alta frequenza stanno accumulando posizioni. Si consiglia cautela nelle aree di breakout.
-                    </div>
+                    <iframe src="https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT&theme=dark&v={id_versione}" width="100%" height="100%" frameborder="0"></iframe>
                 </div>
             </div>
         </main>
 
         <aside class="lg:col-span-3 space-y-6">
-            <div class="glass p-4 rounded-sm border-t-2 border-white/20">
-                <h3 class="mono text-[10px] text-white/50 mb-4 uppercase tracking-widest">Market_Scanner</h3>
-                <iframe src="https://s.tradingview.com/embed-widget/screener/?itemsCount=5&market=crypto&theme=dark" width="100%" height="400" frameborder="0"></iframe>
-            </div>
-            <div class="glass p-4 rounded-sm">
-                <h3 class="mono text-[10px] text-white/50 mb-4 uppercase tracking-widest">Economic_Pulse</h3>
-                <iframe src="https://s.tradingview.com/embed-widget/events/?colorTheme=dark&width=100%25&height=300" width="100%" height="300" frameborder="0"></iframe>
+            <div class="glass p-4">
+                <h3 class="mono text-[9px] text-white/50 mb-4 uppercase tracking-widest">Global_Events</h3>
+                <iframe src="https://s.tradingview.com/embed-widget/events/?colorTheme=dark&width=100%25&height=400" width="100%" height="400" frameborder="0"></iframe>
             </div>
         </aside>
-
     </div>
 
-    <footer class="mt-12 border-t border-white/5 bg-black/50 p-12 text-center mono">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-[12px] text-white font-bold mb-4 tracking-[10px] uppercase">Keygap_Advantage</div>
-            <p class="text-[9px] text-white/30 uppercase mb-6 tracking-widest leading-loose">
-                Distributed Ledger Intelligence // No Financial Advice // Build_ID: {id_versione}
-            </p>
-            <div class="flex justify-center gap-8 text-[9px] text-white/50">
-                <span class="hover:text-green-500 cursor-pointer transition">PRO_TOOLS</span>
-                <span class="hover:text-green-500 cursor-pointer transition">API_ACCESS</span>
-                <span class="hover:text-green-500 cursor-pointer transition">SECURITY</span>
-            </div>
-        </div>
+    <footer class="mt-12 border-t border-white/5 p-8 text-center mono">
+        <p class="text-[9px] text-white/30 uppercase tracking-widest leading-loose">
+            Keygap Advantage System // Build_ID: {id_versione}
+        </p>
     </footer>
 
     <script>
         function updateClock() {{
             const now = new Date();
-            const timeString = now.toLocaleTimeString('it-IT', {{ hour12: false }});
-            document.getElementById('clock').textContent = timeString;
+            document.getElementById('clock').textContent = now.toLocaleTimeString('it-IT', {{ hour12: false }});
         }}
         setInterval(updateClock, 1000);
         updateClock();
@@ -140,15 +106,12 @@ HTML_MASTER = f'''
 </html>
 '''
 
-# --- ESECUZIONE ---
 try:
     with open(os.path.join(BASE_DIR, "index.html"), "w", encoding="utf-8") as f:
         f.write(HTML_MASTER)
     if "GITHUB_ACTIONS" not in os.environ:
         subprocess.run(["git", "add", "."], cwd=BASE_DIR)
-        subprocess.run(["git", "commit", "-m", f"QUANTUM-CORE Update {ora_esatta}"], cwd=BASE_DIR)
+        subprocess.run(["git", "commit", "-m", f"QUANTUM-CORE {ora_esatta}"], cwd=BASE_DIR)
         subprocess.run(["git", "push", "origin", "main"], cwd=BASE_DIR)
-    else:
-        print(f"🤖 QUANTUM ENGINE ONLINE ({ora_esatta})")
 except Exception as e:
-    print(f"❌ SYSTEM_FAILURE: {e}")
+    print(f"ERROR: {{e}}")
