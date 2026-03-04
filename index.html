@@ -4,111 +4,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KEYGAP | NEXT-GEN 3D DESK</title>
+    <title>KEYGAP | THE QUANTUM ADVANTAGE</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Rajdhani:wght@300;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
-        :root { --neon: #00f2ff; --accent: #ff0055; }
+        :root { --neon: #00f2ff; --bg: #030406; --glass: rgba(255, 255, 255, 0.02); }
         body { 
-            background: #050608; 
-            color: #e0e6ed; font-family: 'Rajdhani', sans-serif;
-            perspective: 2000px; overflow-x: hidden;
+            background: var(--bg); color: #e0e6ed; font-family: 'Rajdhani', sans-serif;
+            perspective: 2000px; overflow-x: hidden; margin: 0;
         }
-        /* BACKGROUND 3D EFFECT */
-        body::before {
-            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at 50% 50%, rgba(0, 242, 255, 0.05) 0%, transparent 80%);
-            pointer-events: none;
+        
+        /* BACKGROUND GLOWS */
+        .glow {
+            position: fixed; width: 600px; height: 600px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 242, 255, 0.07) 0%, transparent 70%);
+            z-index: -1; filter: blur(50px);
         }
 
-        /* NEUMORPHIC GLASS CARD */
-        .card-premium {
-            background: rgba(255, 255, 255, 0.01);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 30px;
+        /* GLASS CARD 3D - EFFETTO BLOOMBERG MODERN */
+        .card-3d {
+            background: var(--glass);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 40px;
             transform-style: preserve-3d;
-            box-shadow: 
-                20px 20px 60px rgba(0, 0, 0, 0.8),
-                -5px -5px 20px rgba(255, 255, 255, 0.02);
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 40px 100px rgba(0,0,0,0.9), inset 0 0 0 1px rgba(255,255,255,0.05);
+            transition: all 0.7s cubic-bezier(0.15, 0.83, 0.66, 1);
         }
-        .card-premium:hover {
-            transform: translateZ(50px) rotateX(2deg) rotateY(-2deg);
+        .card-3d:hover {
+            transform: translateZ(40px) rotateX(1deg) rotateY(-1deg);
             border-color: var(--neon);
-            box-shadow: 0 0 50px rgba(0, 242, 255, 0.1);
+            box-shadow: 0 0 60px rgba(0, 242, 255, 0.1);
         }
 
-        /* 3D BUTTONS */
-        .btn-3d {
-            background: rgba(255, 255, 255, 0.05);
+        /* BUTTONS 3D */
+        .btn-quantum {
+            background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(0, 242, 255, 0.2);
-            padding: 8px 15px;
-            border-radius: 12px;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 10px;
-            transition: all 0.3s;
-            cursor: pointer;
+            padding: 10px 20px; border-radius: 15px;
+            font-family: 'Orbitron', sans-serif; font-size: 11px;
+            color: white; transition: 0.4s; cursor: pointer;
+            text-transform: uppercase; letter-spacing: 2px;
         }
-        .btn-3d:hover {
-            background: var(--neon);
-            color: black;
-            box-shadow: 0 0 20px var(--neon);
-            transform: translateY(-3px);
+        .btn-quantum:hover {
+            background: var(--neon); color: black;
+            box-shadow: 0 0 30px var(--neon); transform: translateY(-5px) scale(1.05);
         }
 
-        .neon-text { color: var(--neon); text-shadow: 0 0 15px rgba(0, 242, 255, 0.5); font-family: 'Orbitron', sans-serif; }
-        iframe { border-radius: 20px; }
+        .neon-text { color: var(--neon); text-shadow: 0 0 15px rgba(0, 242, 255, 0.6); font-family: 'Orbitron', sans-serif; }
+        iframe { border-radius: 30px !important; border: none; }
     </style>
 </head>
 <body class="min-h-screen">
+    <div class="glow" style="top: -200px; left: -200px;"></div>
+    <div class="glow" style="bottom: -200px; right: -200px; background: radial-gradient(circle, rgba(255,0,85,0.05) 0%, transparent 70%);"></div>
 
-    <nav class="sticky top-0 z-50 p-6 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-[1600px] mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <div class="w-2 h-2 bg-red-600 rounded-full shadow-[0_0_10px_red] pulse"></div>
-                <h1 class="neon-text text-2xl tracking-[8px] uppercase">Keygap <span class="text-white">Advantage</span></h1>
+    <nav class="p-8 backdrop-blur-xl border-b border-white/5 sticky top-0 z-50">
+        <div class="max-w-[1700px] mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <div class="flex flex-col">
+                    <h1 class="neon-text text-3xl tracking-[12px] uppercase leading-none">Keygap</h1>
+                    <span class="text-[9px] text-white/40 tracking-[5px] uppercase mt-2">Advantage Intelligence</span>
+                </div>
             </div>
-            <div id="clock" class="text-cyan-400 font-bold tracking-[3px] text-lg">00:00:00</div>
+            <div id="clock" class="text-white font-black tracking-[4px] text-2xl mono opacity-80">00:00:00</div>
         </div>
     </nav>
 
-    <main class="max-w-[1600px] mx-auto p-6 grid grid-cols-1 lg:grid-cols-12 gap-8 mt-10">
+    <main class="max-w-[1700px] mx-auto p-6 grid grid-cols-1 lg:grid-cols-12 gap-10 mt-10">
         
-        <aside class="lg:col-span-3">
-            <div class="card-premium p-6 h-full border-l-4 border-l-cyan-500">
-                <h3 class="neon-text text-[10px] mb-6 tracking-widest uppercase">Live Market Scanner</h3>
-                <div class="bg-black/40 rounded-3xl p-1 border border-white/5">
+        <aside class="lg:col-span-3 space-y-10">
+            <div class="card-3d p-8">
+                <h3 class="neon-text text-[11px] mb-8 tracking-[4px] uppercase border-b border-white/5 pb-4">Market Scanner</h3>
+                <div class="bg-black/60 rounded-[30px] p-2 overflow-hidden shadow-inner">
                     <iframe src="https://s.tradingview.com/embed-widget/screener/?market=crypto&theme=dark" width="100%" height="550" frameborder="0"></iframe>
                 </div>
             </div>
         </aside>
 
-        <section class="lg:col-span-6 space-y-8">
-            <div class="card-premium p-8">
-                <div class="flex justify-between items-center mb-8">
-                    <div class="flex gap-2">
-                        <button onclick="changeChart('BINANCE:BTCUSDT')" class="btn-3d">BTC/USDT</button>
-                        <button onclick="changeChart('TVC:GOLD')" class="btn-3d">GOLD</button>
-                        <button onclick="changeChart('INDEX:SPX')" class="btn-3d">S&P500</button>
-                    </div>
-                    <span class="text-[9px] text-white/30 tracking-[4px] uppercase">Quantum_Core_v10</span>
+        <section class="lg:col-span-6 space-y-10">
+            <div class="card-3d p-10">
+                <div class="flex justify-center gap-4 mb-10">
+                    <button onclick="changeChart('BINANCE:BTCUSDT')" class="btn-quantum">Bitcoin</button>
+                    <button onclick="changeChart('TVC:GOLD')" class="btn-quantum">Gold</button>
+                    <button onclick="changeChart('INDEX:SPX')" class="btn-quantum">S&P 500</button>
+                    <button onclick="changeChart('FX:EURUSD')" class="btn-quantum">EUR/USD</button>
                 </div>
 
-                <h2 class="text-4xl md:text-6xl font-black mb-10 italic uppercase tracking-tighter leading-none text-white shadow-sm">
-                    "TEST DI CONNESSIONE: Il bot Keygap è operativo. Automazione Crontab verificata alle ore 18:35."
-                </h2>
+                <div class="text-center mb-12">
+                    <span class="bg-cyan-500/10 text-cyan-400 px-4 py-1 rounded-full text-[10px] font-bold tracking-[3px] uppercase border border-cyan-500/20">Analysis_Report</span>
+                    <h2 class="text-4xl md:text-6xl font-black italic uppercase tracking-tighter leading-none text-white mt-6 mb-8 shadow-2xl">
+                        "TEST DI CONNESSIONE: Il bot Keygap è operativo. Automazione Crontab verificata alle ore 18:35."
+                    </h2>
+                </div>
 
-                <div class="h-[550px] shadow-2xl relative">
-                    <iframe id="mainChart" src="https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT&theme=dark&style=3&v=20260304234419" width="100%" height="100%" frameborder="0"></iframe>
+                <div class="h-[600px] shadow-[0_0_100px_rgba(0,0,0,0.5)] relative group">
+                    <div class="absolute inset-0 border border-white/10 rounded-[30px] pointer-events-none group-hover:border-cyan-500/30 transition-all duration-700"></div>
+                    <iframe id="mainChart" src="https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT&theme=dark&style=3&v=20260304234810" width="100%" height="100%" frameborder="0"></iframe>
                 </div>
             </div>
         </section>
 
-        <aside class="lg:col-span-3">
-            <div class="card-premium p-6 h-full border-r-4 border-r-red-500">
-                <h3 class="text-red-500 font-bold text-[10px] mb-6 tracking-widest uppercase italic">Economic Calendar</h3>
-                <div class="bg-black/40 rounded-3xl p-1 border border-white/5">
+        <aside class="lg:col-span-3 space-y-10">
+            <div class="card-3d p-8">
+                <h3 class="text-red-500 font-bold text-[11px] mb-8 tracking-[4px] uppercase border-b border-white/5 pb-4">Global Calendar</h3>
+                <div class="bg-black/60 rounded-[30px] p-2 overflow-hidden shadow-inner">
                     <iframe src="https://s.tradingview.com/embed-widget/events/?colorTheme=dark&isTransparent=true" width="100%" height="550" frameborder="0"></iframe>
                 </div>
             </div>
@@ -116,8 +116,11 @@
 
     </main>
 
-    <footer class="mt-20 p-20 text-center opacity-20 border-t border-white/5">
-        <div class="tracking-[15px] text-[10px] uppercase">Keygap Advantage // Giampiero De Luca</div>
+    <footer class="mt-32 p-24 border-t border-white/5 text-center">
+        <div class="flex flex-col items-center gap-6 opacity-30">
+            <div class="text-[12px] tracking-[20px] uppercase text-white">Keygap Advantage Terminal</div>
+            <p class="text-[9px] tracking-[5px] uppercase">Distributed Intelligence System // © 2026</p>
+        </div>
     </footer>
 
     <script>
@@ -130,7 +133,9 @@
 
         function changeChart(symbol) {
             const iframe = document.getElementById('mainChart');
+            iframe.style.opacity = '0.5';
             iframe.src = `https://s.tradingview.com/widgetembed/?symbol=${symbol}&theme=dark&style=3&v=${new Date().getTime()}`;
+            setTimeout(() => { iframe.style.opacity = '1'; }, 500);
         }
     </script>
     <script src="https://pl28819682.effectivegatecpm.com/07/47/37/074737f2d1be0f3c0e9de0585a695fd7.js"></script>
