@@ -15,8 +15,13 @@ def ottieni_contenuto():
             return f.read().strip()
     return "ANALISI DI MERCATO: I nostri algoritmi stanno elaborando i dati in tempo reale..."
 
+# --- GESTIONE ORARIO E ANTI-CACHE ---
+# Allineamento orario Italia (UTC+1) e generazione ID versione univoco
+ora_attuale = datetime.datetime.now() + datetime.timedelta(hours=1) 
+ora_esatta = ora_attuale.strftime("%H:%M")
+id_versione = ora_attuale.strftime("%Y%m%d%H%M%S")
+
 testo_notizia = ottieni_contenuto()
-ora_esatta = datetime.datetime.now().strftime("%H:%M")
 
 # --- LAYOUT SEO PROFESSIONALE & STYLE ---
 HTML_MASTER = f'''
@@ -25,6 +30,7 @@ HTML_MASTER = f'''
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     
     <title>Keygap Advantage | Analisi Mercati e Finanza in Tempo Reale</title>
     <meta name="description" content="Il portale leader per l'analisi tecnica, forex, crypto e strategie di investimento. Aggiornamenti ogni ora su mercati globali.">
@@ -41,6 +47,8 @@ HTML_MASTER = f'''
         .breaking-tag {{ background: #c00; color: white; padding: 2px 8px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; }}
         .article-title {{ font-family: 'Playfair Display', serif; line-height: 1.1; }}
         .accent-color {{ color: #c00; }}
+        .live-dot {{ height: 8px; width: 8px; background-color: #ff0000; border-radius: 50%; display: inline-block; animation: blink 1s infinite; }}
+        @keyframes blink {{ 0% {{ opacity: 1; }} 50% {{ opacity: 0.3; }} 100% {{ opacity: 1; }} }}
         a {{ text-decoration: none; color: inherit; }}
     </style>
 </head>
@@ -48,7 +56,7 @@ HTML_MASTER = f'''
 
     <nav class="top-nav p-3 mb-6">
         <div class="max-w-6xl mx-auto flex justify-between items-center text-xs font-bold uppercase tracking-widest text-gray-500">
-            <span>Finanza & Mercati • {ora_esatta}</span>
+            <span><span class="live-dot mr-1"></span> Finanza & Mercati • {ora_esatta}</span>
             <div class="space-x-4">
                 <a href="index.html" class="hover:text-red-600 transition">Home</a>
                 <a href="#" class="hover:text-red-600 transition">Analisi</a>
@@ -71,7 +79,7 @@ HTML_MASTER = f'''
                 <div class="mb-4"><span class="breaking-tag">In Primo Piano</span></div>
                 <h2 class="article-title text-4xl md:text-6xl font-bold mb-8 italic">"{testo_notizia}"</h2>
                 <div class="h-[500px] main-card rounded-lg overflow-hidden">
-                    <iframe src="https://s.tradingview.com/widgetembed/?symbol=TVC:DXY&theme=light&interval=D" width="100%" height="100%" frameborder="0"></iframe>
+                    <iframe src="https://s.tradingview.com/widgetembed/?symbol=TVC:DXY&theme=light&interval=D&v={id_versione}" width="100%" height="100%" frameborder="0"></iframe>
                 </div>
                 <div class="mt-6 p-6 main-card rounded-lg italic text-gray-700 leading-relaxed border-l-4 border-red-600">
                     Analisi Esclusiva: I nostri sistemi hanno rilevato una variazione significativa nei volumi di scambio. Si raccomanda prudenza nelle sessioni odierne.
@@ -116,6 +124,7 @@ HTML_MASTER = f'''
             <p class="text-gray-400 text-xs uppercase tracking-widest mb-6">© 2026 - Analisi Finanziaria Indipendente • Proprietà di Giampiero De Luca</p>
             <div class="text-gray-500 text-[10px] max-w-2xl mx-auto leading-relaxed uppercase">
                 Le informazioni fornite su questo sito non costituiscono consulenza finanziaria, sollecitazione al pubblico risparmio o raccomandazione personalizzata. Il trading comporta rischi elevati.
+                <br><span class="opacity-30">Build ID: {id_versione}</span>
             </div>
         </div>
     </footer>
@@ -133,7 +142,7 @@ try:
     
     if "GITHUB_ACTIONS" not in os.environ:
         subprocess.run(["git", "add", "."], cwd=BASE_DIR)
-        subprocess.run(["git", "commit", "-m", f"SEO Update {ora_esatta}"], cwd=BASE_DIR)
+        subprocess.run(["git", "commit", "-m", f"V-LIVE Update {ora_esatta}"], cwd=BASE_DIR)
         subprocess.run(["git", "push", "origin", "main"], cwd=BASE_DIR)
     else:
         print(f"🤖 ESECUZIONE AUTOMATICA GITHUB ACTIONS COMPLETATA ({ora_esatta})")
