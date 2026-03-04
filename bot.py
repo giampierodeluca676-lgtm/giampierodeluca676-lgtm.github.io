@@ -11,7 +11,7 @@ def ottieni_contenuto():
     if os.path.exists(path_file):
         with open(path_file, "r", encoding="utf-8") as f:
             return f.read().strip()
-    return "QUANTUM_ENGINE: Sincronizzazione dati completata. Monitoraggio volatilità attivo."
+    return "QUANTUM_ENGINE: Sincronizzazione flussi completata. Sistema in ascolto."
 
 # --- DATI DINAMICI ---
 ora_attuale = datetime.datetime.now() + datetime.timedelta(hours=1) 
@@ -19,93 +19,127 @@ ora_esatta = ora_attuale.strftime("%H:%M")
 id_v = ora_attuale.strftime("%Y%m%d%H%M%S")
 testo = ottieni_contenuto()
 
-# --- LAYOUT 3D ULTRA-PROFESSIONALE ---
+# --- LAYOUT "THE NEXT LEVEL" 3D ---
 HTML_MASTER = f'''
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KEYGAP | 3D QUANTUM DESK</title>
+    <title>KEYGAP | NEXT-GEN 3D DESK</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Rajdhani:wght@300;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {{ --neon: #00f2ff; --bg: #050608; }}
+        :root {{ --neon: #00f2ff; --accent: #ff0055; }}
         body {{ 
-            background: radial-gradient(circle at center, #10121a 0%, #050608 100%);
+            background: #050608; 
             color: #e0e6ed; font-family: 'Rajdhani', sans-serif;
             perspective: 2000px; overflow-x: hidden;
         }}
-        .card-3d {{
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(0, 242, 255, 0.1);
-            border-radius: 24px;
+        /* BACKGROUND 3D EFFECT */
+        body::before {{
+            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 242, 255, 0.05) 0%, transparent 80%);
+            pointer-events: none;
+        }}
+
+        /* NEUMORPHIC GLASS CARD */
+        .card-premium {{
+            background: rgba(255, 255, 255, 0.01);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 30px;
             transform-style: preserve-3d;
-            transform: rotateX(5deg) rotateY(-2deg);
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.7);
-            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            box-shadow: 
+                20px 20px 60px rgba(0, 0, 0, 0.8),
+                -5px -5px 20px rgba(255, 255, 255, 0.02);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }}
-        .card-3d:hover {{
-            transform: rotateX(0deg) rotateY(0deg) translateZ(30px);
+        .card-premium:hover {{
+            transform: translateZ(50px) rotateX(2deg) rotateY(-2deg);
             border-color: var(--neon);
-            box-shadow: 0 0 40px rgba(0, 242, 255, 0.15);
+            box-shadow: 0 0 50px rgba(0, 242, 255, 0.1);
         }}
-        .neon-text {{ color: var(--neon); text-shadow: 0 0 12px rgba(0, 242, 255, 0.5); font-family: 'Orbitron', sans-serif; }}
-        .glass-nav {{ background: rgba(5, 6, 8, 0.9); border-bottom: 1px solid rgba(0, 242, 255, 0.3); }}
+
+        /* 3D BUTTONS */
+        .btn-3d {{
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 242, 255, 0.2);
+            padding: 8px 15px;
+            border-radius: 12px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 10px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }}
+        .btn-3d:hover {{
+            background: var(--neon);
+            color: black;
+            box-shadow: 0 0 20px var(--neon);
+            transform: translateY(-3px);
+        }}
+
+        .neon-text {{ color: var(--neon); text-shadow: 0 0 15px rgba(0, 242, 255, 0.5); font-family: 'Orbitron', sans-serif; }}
+        iframe {{ border-radius: 20px; }}
     </style>
 </head>
 <body class="min-h-screen">
 
-    <nav class="glass-nav sticky top-0 z-50 p-4 backdrop-blur-xl">
-        <div class="max-w-[1500px] mx-auto flex justify-between items-center">
+    <nav class="sticky top-0 z-50 p-6 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-[1600px] mx-auto flex justify-between items-center">
             <div class="flex items-center gap-4">
-                <div class="w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
-                <h1 class="neon-text text-lg tracking-[6px] uppercase">Keygap <span class="text-white">Advantage</span></h1>
+                <div class="w-2 h-2 bg-red-600 rounded-full shadow-[0_0_10px_red] pulse"></div>
+                <h1 class="neon-text text-2xl tracking-[8px] uppercase">Keygap <span class="text-white">Advantage</span></h1>
             </div>
-            <div class="text-cyan-400 font-bold mono text-sm" id="clock">00:00:00</div>
+            <div id="clock" class="text-cyan-400 font-bold tracking-[3px] text-lg">00:00:00</div>
         </div>
     </nav>
 
-    <main class="max-w-[1500px] mx-auto p-6 grid grid-cols-1 lg:grid-cols-12 gap-8 mt-12">
+    <main class="max-w-[1600px] mx-auto p-6 grid grid-cols-1 lg:grid-cols-12 gap-8 mt-10">
         
         <aside class="lg:col-span-3">
-            <div class="card-3d p-6 h-full">
-                <h3 class="text-cyan-400 text-xs font-black uppercase mb-6 tracking-widest">Market Watch</h3>
-                <div class="rounded-xl overflow-hidden border border-white/10 bg-[#131722]">
-                    <iframe src="https://s.tradingview.com/embed-widget/screener/?market=crypto&theme=dark" width="100%" height="500" frameborder="0"></iframe>
+            <div class="card-premium p-6 h-full border-l-4 border-l-cyan-500">
+                <h3 class="neon-text text-[10px] mb-6 tracking-widest uppercase">Live Market Scanner</h3>
+                <div class="bg-black/40 rounded-3xl p-1 border border-white/5">
+                    <iframe src="https://s.tradingview.com/embed-widget/screener/?market=crypto&theme=dark" width="100%" height="550" frameborder="0"></iframe>
                 </div>
             </div>
         </aside>
 
-        <section class="lg:col-span-6">
-            <div class="card-3d p-8 border-t-4 border-t-cyan-500">
-                <div class="flex justify-between mb-8">
-                    <span class="text-[10px] bg-cyan-500/10 text-cyan-400 px-4 py-1 rounded-sm border border-cyan-500/20 uppercase font-black tracking-widest">Core_Active</span>
-                    <span class="text-[10px] text-white/30 mono">V_9.1_STABLE</span>
+        <section class="lg:col-span-6 space-y-8">
+            <div class="card-premium p-8">
+                <div class="flex justify-between items-center mb-8">
+                    <div class="flex gap-2">
+                        <button onclick="changeChart('BINANCE:BTCUSDT')" class="btn-3d">BTC/USDT</button>
+                        <button onclick="changeChart('TVC:GOLD')" class="btn-3d">GOLD</button>
+                        <button onclick="changeChart('INDEX:SPX')" class="btn-3d">S&P500</button>
+                    </div>
+                    <span class="text-[9px] text-white/30 tracking-[4px] uppercase">Quantum_Core_v10</span>
                 </div>
-                <h2 class="text-3xl md:text-5xl font-bold mb-10 italic tracking-tighter uppercase leading-[0.9]">
+
+                <h2 class="text-4xl md:text-6xl font-black mb-10 italic uppercase tracking-tighter leading-none text-white shadow-sm">
                     "{testo}"
                 </h2>
-                <div class="rounded-2xl overflow-hidden shadow-2xl h-[550px] border border-white/5">
-                    <iframe src="https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT&theme=dark&style=2&v={id_v}" width="100%" height="100%" frameborder="0"></iframe>
+
+                <div class="h-[550px] shadow-2xl relative">
+                    <iframe id="mainChart" src="https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT&theme=dark&style=3&v={id_v}" width="100%" height="100%" frameborder="0"></iframe>
                 </div>
             </div>
         </section>
 
         <aside class="lg:col-span-3">
-            <div class="card-3d p-6 h-full">
-                <h3 class="text-cyan-400 text-xs font-black uppercase mb-6 tracking-widest">Macro Events</h3>
-                <div class="rounded-xl overflow-hidden border border-white/10">
-                    <iframe src="https://s.tradingview.com/embed-widget/events/?colorTheme=dark&isTransparent=true" width="100%" height="500" frameborder="0"></iframe>
+            <div class="card-premium p-6 h-full border-r-4 border-r-red-500">
+                <h3 class="text-red-500 font-bold text-[10px] mb-6 tracking-widest uppercase italic">Economic Calendar</h3>
+                <div class="bg-black/40 rounded-3xl p-1 border border-white/5">
+                    <iframe src="https://s.tradingview.com/embed-widget/events/?colorTheme=dark&isTransparent=true" width="100%" height="550" frameborder="0"></iframe>
                 </div>
             </div>
         </aside>
 
     </main>
 
-    <footer class="mt-24 p-12 text-center border-t border-white/5 opacity-30">
-        <div class="text-[10px] uppercase tracking-[8px]">Keygap Terminal // {id_v}</div>
+    <footer class="mt-20 p-20 text-center opacity-20 border-t border-white/5">
+        <div class="tracking-[15px] text-[10px] uppercase">Keygap Advantage // Giampiero De Luca</div>
     </footer>
 
     <script>
@@ -115,6 +149,11 @@ HTML_MASTER = f'''
         }}
         setInterval(updateClock, 1000);
         updateClock();
+
+        function changeChart(symbol) {{
+            const iframe = document.getElementById('mainChart');
+            iframe.src = `https://s.tradingview.com/widgetembed/?symbol=${{symbol}}&theme=dark&style=3&v=${{new Date().getTime()}}`;
+        }}
     </script>
     <script src="https://pl28819682.effectivegatecpm.com/07/47/37/074737f2d1be0f3c0e9de0585a695fd7.js"></script>
 </body>
@@ -126,7 +165,7 @@ try:
         f.write(HTML_MASTER)
     if "GITHUB_ACTIONS" not in os.environ:
         subprocess.run(["git", "add", "."], cwd=BASE_DIR)
-        subprocess.run(["git", "commit", "-m", f"UI-CORE-3D {ora_esatta}"], cwd=BASE_DIR)
+        subprocess.run(["git", "commit", "-m", f"V10-ULTRA-3D {ora_esatta}"], cwd=BASE_DIR)
         subprocess.run(["git", "push", "origin", "main"], cwd=BASE_DIR)
 except Exception as e:
     print(f"ERROR: {{e}}")
