@@ -41,6 +41,7 @@ HTML_MASTER = f'''
         .breaking-tag {{ background: #c00; color: white; padding: 2px 8px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; }}
         .article-title {{ font-family: 'Playfair Display', serif; line-height: 1.1; }}
         .accent-color {{ color: #c00; }}
+        a {{ text-decoration: none; color: inherit; }}
     </style>
 </head>
 <body class="antialiased">
@@ -49,9 +50,9 @@ HTML_MASTER = f'''
         <div class="max-w-6xl mx-auto flex justify-between items-center text-xs font-bold uppercase tracking-widest text-gray-500">
             <span>Finanza & Mercati • {ora_esatta}</span>
             <div class="space-x-4">
-                <a href="#" class="hover:text-red-600">Home</a>
-                <a href="#" class="hover:text-red-600">Mercati</a>
-                <a href="#" class="hover:text-red-600">Trading</a>
+                <a href="index.html" class="hover:text-red-600 transition">Home</a>
+                <a href="#" class="hover:text-red-600 transition">Analisi</a>
+                <a href="#" class="hover:text-red-600 transition">Guide</a>
             </div>
         </div>
     </nav>
@@ -59,7 +60,9 @@ HTML_MASTER = f'''
     <div class="max-w-6xl mx-auto px-4">
         
         <header class="text-center mb-12">
-            <h1 class="header-logo inline-block px-4 uppercase tracking-tighter">Keygap <span class="accent-color">Advantage</span></h1>
+            <a href="index.html">
+                <h1 class="header-logo inline-block px-4 uppercase tracking-tighter">Keygap <span class="accent-color">Advantage</span></h1>
+            </a>
             <p class="text-gray-500 mt-2 italic font-semibold">Il punto di riferimento per l'analisi finanziaria professionale</p>
         </header>
 
@@ -91,18 +94,18 @@ HTML_MASTER = f'''
         <div class="border-t-2 border-black pt-8 mb-12">
             <h3 class="text-3xl font-bold mb-8 uppercase tracking-tighter">Archivio Analisi</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="main-card p-6 hover:shadow-lg transition cursor-pointer">
+                <a href="#" class="main-card p-6 hover:shadow-lg transition block">
                     <h4 class="font-bold text-xl mb-3 text-red-700">Strategia S&P 500</h4>
-                    <p class="text-sm text-gray-600">Analisi profonda sui livelli di supporto e resistenza basata su volumi istituzionali.</p>
-                </div>
-                <div class="main-card p-6 hover:shadow-lg transition cursor-pointer">
+                    <p class="text-sm text-gray-600">Come interpretare il grafico S&P500: Una guida completa per capire i movimenti del mercato americano.</p>
+                </a>
+                <a href="#" class="main-card p-6 hover:shadow-lg transition block">
                     <h4 class="font-bold text-xl mb-3 text-red-700">Focus Criptovalute</h4>
-                    <p class="text-sm text-gray-600">Bitcoin e il floor psicologico. Cosa aspettarsi dalle decisioni della FED.</p>
-                </div>
-                <div class="main-card p-6 hover:shadow-lg transition cursor-pointer">
+                    <p class="text-sm text-gray-600">Analisi Bitcoin: Supporti e Resistenze. Cosa aspettarsi dalla regina delle cripto nelle prossime ore.</p>
+                </a>
+                <a href="#" class="main-card p-6 hover:shadow-lg transition block">
                     <h4 class="font-bold text-xl mb-3 text-red-700">Commodities: Oro</h4>
-                    <p class="text-sm text-gray-600">Analisi del bene rifugio per eccellenza in un contesto di inflazione variabile.</p>
-                </div>
+                    <p class="text-sm text-gray-600">Previsioni Oro 2026: Il bene rifugio per eccellenza sotto la lente dei nostri algoritmi.</p>
+                </a>
             </div>
         </div>
     </div>
