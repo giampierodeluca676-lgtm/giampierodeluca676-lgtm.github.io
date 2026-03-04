@@ -3,40 +3,57 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>KEYGAP MASTER V52</title>
+    <title>KEYGAP MASTER V60</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background: #05070a; color: #e6edf3; font-family: sans-serif; margin: 0; height: 100vh; overflow: hidden; }
-        .grid-layout { display: grid; grid-template-columns: 1fr 350px; height: calc(100vh - 50px); gap: 10px; padding: 10px; }
-        header { height: 50px; background: #0d1117; display: flex; align-items: center; padding: 0 20px; border-bottom: 1px solid #30363d; justify-content: space-between; }
+        body { background: #05070a; color: #e6edf3; font-family: sans-serif; margin: 0; height: 100vh; overflow: hidden; display: flex; flex-direction: column; }
+        header { height: 60px; background: #0d1117; display: flex; align-items: center; padding: 0 20px; border-bottom: 2px solid #c5a059; justify-content: space-between; }
+        .main-layout { display: grid; grid-template-columns: 400px 1fr 350px; flex: 1; gap: 10px; padding: 10px; overflow: hidden; }
         .card { background: #0d1117; border: 1px solid #30363d; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
-        .card-header { background: #161b22; padding: 10px; font-size: 11px; font-weight: bold; color: #58a6ff; text-transform: uppercase; }
+        .card-header { background: #161b22; padding: 10px; font-size: 11px; font-weight: bold; color: #c5a059; text-transform: uppercase; border-bottom: 1px solid #30363d; }
+        .bot-post { background: #05121f; border-left: 4px solid #64ffda; padding: 15px; margin: 10px; border-radius: 4px; }
         iframe { width: 100%; height: 100%; border: none; }
+        #editorial-feed { overflow-y: auto; flex: 1; }
     </style>
 </head>
 <body>
     <header>
-        <div style="font-weight: 900; font-size: 20px;">KEYGAP <span style="color:#58a6ff">MASTER</span></div>
-        <div id="clock" style="font-family: monospace; color: #58a6ff; font-weight: bold;">00:00:00</div>
+        <div style="font-weight: 900; font-size: 22px;">KEYGAP <span style="color:#c5a059">GLOBAL TERMINAL</span></div>
+        <div style="text-align: right;">
+            <div id="date" style="font-size: 10px; color: #c5a059; font-weight: bold;">04 March 2026, 18:32:55</div>
+            <div id="clock" style="font-family: monospace; color: #64ffda; font-weight: bold; font-size: 18px;">00:00:00</div>
+        </div>
     </header>
-    <div class="grid-layout">
+    
+    <div class="main-layout">
+        <div class="card">
+            <div class="card-header">NEWS STREAM & BOT INSIGHTS</div>
+            <div id="editorial-feed">
+                <div class="bot-post">
+                    <div style="font-size: 9px; color: #64ffda; font-weight: 900;">SYSTEM UPDATE // 04 March 2026, 18:32:55</div>
+                    <div style="font-weight: bold; margin: 5px 0; color: #fff;">STRATEGY BRIEF: Test capital 500 stabile. Monitoraggio volatilità attivo.</div>
+                </div>
+                <iframe src="https://s.tradingview.com/embed-widget/timeline/?locale=it&theme=dark"></iframe>
+            </div>
+        </div>
+
         <div class="card">
             <div class="card-header">S&P 500 LIVE CHART</div>
             <iframe src="https://s.tradingview.com/widgetembed/?symbol=SPX&interval=5&theme=dark"></iframe>
         </div>
-        <div style="display: grid; grid-template-rows: 1fr 1fr; gap: 10px;">
-            <div class="card">
-                <div class="card-header">MARKET NEWS</div>
-                <iframe src="https://s.tradingview.com/embed-widget/timeline/?locale=it&theme=dark"></iframe>
-            </div>
-            <div class="card">
-                <div class="card-header">TECHNICAL GAUGE</div>
-                <iframe src="https://s.tradingview.com/embed-widget/technical-analysis/?symbol=SPX&theme=dark"></iframe>
-            </div>
+
+        <div class="card">
+            <div class="card-header">TECHNICAL GAUGE</div>
+            <iframe src="https://s.tradingview.com/embed-widget/technical-analysis/?symbol=SPX&theme=dark"></iframe>
         </div>
     </div>
+
     <script>
-        setInterval(() => { document.getElementById('clock').innerText = new Date().toLocaleTimeString('it-IT'); }, 1000);
+        setInterval(() => { 
+            const now = new Date();
+            document.getElementById('clock').innerText = now.toLocaleTimeString('it-IT');
+            document.getElementById('date').innerText = now.toLocaleDateString('it-IT', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+        }, 1000);
     </script>
 </body>
 </html>
