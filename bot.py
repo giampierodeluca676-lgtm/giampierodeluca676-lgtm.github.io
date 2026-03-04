@@ -1,8 +1,9 @@
-import os, subprocess, datetime
+import os, subprocess, datetime, requests
 
 # --- CONFIGURAZIONE ---
 REPO_PATH = os.path.expanduser("~") + "/Desktop/Keygap_AdVantage"
 ARTICOLI_PATH = os.path.join(REPO_PATH, "articoli_pronti")
+ADSTERRA_API_TOKEN = "IL_TUO_TOKEN_QUI" # Incolla qui il token dalla sezione API di Adsterra
 
 def ottieni_contenuto():
     ora = datetime.datetime.now().hour
@@ -16,7 +17,7 @@ def ottieni_contenuto():
 testo_notizia = ottieni_contenuto()
 ora_esatta = datetime.datetime.now().strftime("%H:%M")
 
-# --- LAYOUT STYLE ARANZULLA / FINANCIAL TIMES ---
+# --- LAYOUT STYLE ARANZULLA / FINANCIAL TIMES CON ADSTERRA ---
 HTML_MASTER = f'''
 <!DOCTYPE html>
 <html lang="it">
@@ -110,6 +111,8 @@ HTML_MASTER = f'''
         </div>
     </footer>
 
+    <script src="https://pl28819682.effectivegatecpm.com/07/47/37/074737f2d1be0f3c0e9de0585a695fd7.js"></script>
+
 </body>
 </html>
 '''
@@ -120,13 +123,17 @@ try:
         f.write(HTML_MASTER)
     
     subprocess.run(["git", "add", "."])
-    subprocess.run(["git", "commit", "-m", f"Aranzulla-Style Update {ora_esatta}"])
+    subprocess.run(["git", "commit", "-m", f"Update with Adsterra & Token {ora_esatta}"])
     result = subprocess.run(["git", "push", "origin", "main"], capture_output=True, text=True)
     
     if result.returncode == 0:
-        print("✅ LIVELLO PRO RAGGIUNTO: Il sito è ora un portale finanziario autorevole!")
+        print(f"✅ SITO AGGIORNATO ALLE {ora_esatta}")
+        # Se il token è inserito, prova a stampare un report veloce
+        if ADSTERRA_API_TOKEN != "IL_TUO_TOKEN_QUI":
+            print("📊 Verificando guadagni su Adsterra...")
+            # Qui il bot potrebbe interrogare le API di Adsterra in futuro
     else:
-        print(f"❌ ERRORE: {result.stderr}")
+        print(f"❌ ERRORE GIT: {result.stderr}")
 
 except Exception as e:
     print(f"❌ ERRORE CRITICO: {e}")
