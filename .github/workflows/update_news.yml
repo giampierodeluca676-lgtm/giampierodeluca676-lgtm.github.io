@@ -1,0 +1,33 @@
+name: Keygap Auto Update
+
+on:
+  schedule:
+    # Gira ogni ora, al minuto 00
+    - cron: '0 * * * *'
+  workflow_dispatch: # Permette di lanciarlo manualmente da GitHub
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del codice
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Installa librerie
+        run: pip install requests
+
+      - name: Esegui Bot
+        run: python bot.py
+
+      - name: Salva modifiche su GitHub
+        run: |
+          git config --global user.name "Keygap Bot"
+          git config --global user.email "bot@keygap.com"
+          git add index.html
+          git commit -m "Auto-update News" || echo "Nessuna modifica"
+          git push origin main
