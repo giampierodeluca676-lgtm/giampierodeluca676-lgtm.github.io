@@ -11,72 +11,103 @@ def ottieni_contenuto():
     if os.path.exists(path_file):
         with open(path_file, "r", encoding="utf-8") as f:
             return f.read().strip()
-    return "ANALISI DI MERCATO: In attesa di nuovi dati algoritmici..."
+    return "GUIDA AI MERCATI: Analisi tecnica e fondamentale in corso..."
 
 testo_notizia = ottieni_contenuto()
 ora_esatta = datetime.datetime.now().strftime("%H:%M")
 
-# --- LAYOUT PROFESSIONAL DASHBOARD ---
+# --- LAYOUT STYLE ARANZULLA / FINANCIAL TIMES ---
 HTML_MASTER = f'''
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KEYGAP ADVANTAGE | Terminal</title>
+    <title>Keygap Advantage | Il Punto sulla Finanza</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body {{ background-color: #0a0a0a; color: #e5e5e5; font-family: 'Inter', sans-serif; overflow-x: hidden; }}
-        .glass {{ background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }}
-        .neon-border {{ border-left: 4px solid #3b82f6; }}
-        @keyframes pulse-red {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0.5; }} }}
-        .live-dot {{ height: 8px; width: 8px; background-color: #ef4444; border-radius: 50%; display: inline-block; animation: pulse-red 1s infinite; }}
+        body {{ background-color: #fcfcfc; color: #1a1a1a; font-family: 'Inter', sans-serif; }}
+        .header-logo {{ font-family: 'Playfair Display', serif; font-size: 2.5rem; border-bottom: 3px solid #1a1a1a; }}
+        .top-nav {{ border-bottom: 1px solid #eee; background: white; }}
+        .main-card {{ background: white; border: 1px solid #e5e7eb; transition: all 0.3s ease; }}
+        .breaking-tag {{ background: #c00; color: white; padding: 2px 8px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; }}
+        .article-title {{ font-family: 'Playfair Display', serif; line-height: 1.2; }}
     </style>
 </head>
-<body class="p-2 md:p-4">
+<body>
 
-    <header class="glass mb-4 p-4 rounded-lg border-l-4 border-red-600">
-        <div class="flex items-center justify-between mb-2">
-            <span class="text-xs font-bold tracking-widest uppercase text-red-500">
-                <span class="live-dot mr-2"></span>LIVE MARKET ULTIMATUM
-            </span>
-            <span class="text-xs text-gray-500 font-mono">{ora_esatta} - SERVER: OPERATIONAL</span>
-        </div>
-        <h1 class="text-2xl md:text-3xl font-black italic tracking-tighter text-white uppercase">
-            {testo_notizia}
-        </h1>
-    </header>
-
-    <div class="glass mb-4 rounded-lg overflow-hidden">
-        <iframe src="https://s.tradingview.com/embed-widget/ticker-tape/?symbols=BINANCE:BTCUSDT,BINANCE:ETHUSDT,NASDAQ:AAPL,NASDAQ:TSLA,FX:EURUSD,TVC:GOLD&theme=dark" width="100%" height="46" frameborder="0"></iframe>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        
-        <div class="lg:col-span-2 glass rounded-lg p-2 h-[500px] md:h-[600px]">
-            <iframe src="https://s.tradingview.com/widgetembed/?symbol=NASDAQ:AAPL&theme=dark&interval=D" width="100%" height="100%" frameborder="0"></iframe>
-        </div>
-
-        <div class="flex flex-col gap-4">
-            <div class="glass rounded-lg p-4 flex-1">
-                <h3 class="text-sm font-bold text-blue-400 mb-3 uppercase tracking-wider">Analisi Tecnica</h3>
-                <iframe src="https://s.tradingview.com/embed-widget/technical-analysis/?symbol=NASDAQ:AAPL&theme=dark&interval=1D" width="100%" height="100%" frameborder="0"></iframe>
+    <nav class="top-nav p-3 mb-6">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="text-xs font-bold uppercase tracking-widest text-gray-500">
+                Finanza & Mercati • {ora_esatta}
             </div>
-            
-            <div class="glass rounded-lg p-4 h-48">
-                <h3 class="text-sm font-bold text-green-400 mb-2 uppercase tracking-wider">Stato Sistema</h3>
-                <div class="space-y-2 text-xs font-mono">
-                    <div class="flex justify-between border-b border-gray-800 pb-1"><span>BOT STATUS:</span> <span class="text-green-500">ACTIVE</span></div>
-                    <div class="flex justify-between border-b border-gray-800 pb-1"><span>CAPITAL:</span> <span>€ 500,00</span></div>
-                    <div class="flex justify-between border-b border-gray-800 pb-1"><span>MODE:</span> <span class="text-yellow-500">PAPER TRADING</span></div>
-                    <div class="flex justify-between"><span>BRANCH:</span> <span class="text-blue-500">MAIN</span></div>
+            <div class="space-x-4 text-xs font-semibold uppercase">
+                <a href="#" class="hover:text-red-600">Home</a>
+                <a href="#" class="hover:text-red-600">Analisi</a>
+                <a href="#" class="hover:text-red-600">Guide</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-6xl mx-auto px-4">
+        
+        <header class="text-center mb-10">
+            <h1 class="header-logo inline-block px-4">Keygap Advantage</h1>
+            <p class="text-gray-500 mt-2 italic">Il portale di riferimento per l'analisi finanziaria professionale</p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <div class="lg:col-span-2">
+                <div class="mb-4">
+                    <span class="breaking-tag">In Primo Piano</span>
+                </div>
+                <h2 class="article-title text-4xl md:text-5xl font-bold mb-6">
+                    {testo_notizia}
+                </h2>
+                <div class="h-[400px] main-card rounded-lg overflow-hidden shadow-sm">
+                    <iframe src="https://s.tradingview.com/widgetembed/?symbol=TVC:DXY&theme=light&interval=D" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="main-card p-4 rounded-lg">
+                    <h3 class="font-bold border-b pb-2 mb-4 uppercase text-sm">Prezzi in Tempo Reale</h3>
+                    <iframe src="https://s.tradingview.com/embed-widget/tickers/?symbols=FX:EURUSD,TVC:GOLD,INDEX:SPX,BINANCE:BTCUSDT&theme=light" width="100%" height="250" frameborder="0"></iframe>
+                </div>
+                
+                <div class="main-card p-4 rounded-lg bg-gray-50">
+                    <h3 class="font-bold border-b pb-2 mb-4 uppercase text-sm text-red-700">Eventi Chiave</h3>
+                    <iframe src="https://s.tradingview.com/embed-widget/events/?colorTheme=light&width=100%25&height=300" width="100%" height="300" frameborder="0"></iframe>
                 </div>
             </div>
         </div>
+
+        <div class="border-t pt-8 mb-12">
+            <h3 class="text-2xl font-bold mb-6">Le ultime analisi tecniche</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="main-card p-4 hover:shadow-md cursor-pointer">
+                    <h4 class="font-bold text-lg mb-2">Come interpretare il grafico S&P500</h4>
+                    <p class="text-sm text-gray-600">Una guida completa per capire i movimenti del mercato americano...</p>
+                </div>
+                <div class="main-card p-4 hover:shadow-md cursor-pointer">
+                    <h4 class="font-bold text-lg mb-2">Analisi Bitcoin: Supporti e Resistenze</h4>
+                    <p class="text-sm text-gray-600">Cosa aspettarsi dalla regina delle cripto nelle prossime ore...</p>
+                </div>
+                <div class="main-card p-4 hover:shadow-md cursor-pointer">
+                    <h4 class="font-bold text-lg mb-2">Previsioni Oro 2026</h4>
+                    <p class="text-sm text-gray-600">Il bene rifugio per eccellenza sotto la lente dei nostri algoritmi...</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    <footer class="mt-4 text-center text-[10px] text-gray-600 uppercase tracking-[0.2em]">
-        Keygap AdVantage © 2026 - Proprietary Algorithmic Terminal
+    <footer class="bg-gray-900 text-white py-10 mt-12 text-center">
+        <div class="max-w-6xl mx-auto px-4">
+            <p class="text-xl font-serif mb-4">Keygap Advantage</p>
+            <p class="text-gray-400 text-xs tracking-widest uppercase">© 2026 - Il sapere finanziario alla portata di tutti</p>
+        </div>
     </footer>
 
 </body>
@@ -89,11 +120,11 @@ try:
         f.write(HTML_MASTER)
     
     subprocess.run(["git", "add", "."])
-    subprocess.run(["git", "commit", "-m", f"Dashboard Pro Update {ora_esatta}"])
+    subprocess.run(["git", "commit", "-m", f"Aranzulla-Style Update {ora_esatta}"])
     result = subprocess.run(["git", "push", "origin", "main"], capture_output=True, text=True)
     
     if result.returncode == 0:
-        print("✅ DASHBOARD AGGIORNATA: Il sito è ora in modalità professionale!")
+        print("✅ LIVELLO PRO RAGGIUNTO: Il sito è ora un portale finanziario autorevole!")
     else:
         print(f"❌ ERRORE: {result.stderr}")
 
