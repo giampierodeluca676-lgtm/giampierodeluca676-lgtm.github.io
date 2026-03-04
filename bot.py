@@ -1,9 +1,8 @@
 import os, subprocess, datetime, requests
 
-# --- CONFIGURAZIONE UNIVERSALE ---
+# --- CONFIGURAZIONE ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ARTICOLI_PATH = os.path.join(BASE_DIR, "articoli_pronti")
-ADSTERRA_API_TOKEN = os.environ.get("ADSTERRA_TOKEN", "") 
 
 def ottieni_contenuto():
     ora = datetime.datetime.now().hour
@@ -12,120 +11,120 @@ def ottieni_contenuto():
     if os.path.exists(path_file):
         with open(path_file, "r", encoding="utf-8") as f:
             return f.read().strip()
-    return "MARKET WATCH: I mercati globali mostrano segnali di consolidamento in attesa dei dati macro."
+    return "QUANTUM ENGINE: Analisi dei flussi istituzionali in corso. Rilevata bassa volatilità."
 
-# --- GESTIONE ORARIO E ANTI-CACHE ---
+# --- GESTIONE DATI DINAMICI ---
 ora_attuale = datetime.datetime.now() + datetime.timedelta(hours=1) 
 ora_esatta = ora_attuale.strftime("%H:%M")
 id_versione = ora_attuale.strftime("%Y%m%d%H%M%S")
 testo_notizia = ottieni_contenuto()
 
-# --- LAYOUT PREMIUM NEWS PORTAL ---
+# --- LAYOUT "QUANTUM DASHBOARD" ---
 HTML_MASTER = f'''
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <title>Keygap Advantage | Professional Financial Hub</title>
+    <title>KEYGAP | QUANTUM ADVANTAGE DASHBOARD</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
     <style>
-        html {{ scroll-behavior: smooth; }}
-        body {{ background-color: #f3f4f6; color: #111827; font-family: 'Inter', sans-serif; }}
-        .news-header {{ font-family: 'Playfair Display', serif; border-bottom: 4px solid #000; }}
-        .ticker-wrap {{ background: #000; color: #fff; overflow: hidden; padding: 5px 0; }}
-        .main-container {{ max-width: 1200px; margin: 0 auto; background: white; box-shadow: 0 0 50px rgba(0,0,0,0.05); }}
-        .sidebar-box {{ border-top: 3px solid #c00; background: #fafafa; }}
-        .accent {{ color: #c00; }}
-        .live-dot {{ height: 10px; width: 10px; background-color: #ff0000; border-radius: 50%; display: inline-block; animation: blink 1s infinite; }}
-        @keyframes blink {{ 0% {{ opacity: 1; }} 50% {{ opacity: 0.2; }} 100% {{ opacity: 1; }} }}
+        body {{ background-color: #050505; color: #e0e0e0; font-family: 'Inter', sans-serif; overflow-x: hidden; }}
+        .mono {{ font-family: 'JetBrains Mono', monospace; }}
+        .glass {{ background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.05); }}
+        .neon-text {{ color: #00ff41; text-shadow: 0 0 10px rgba(0,255,65,0.5); }}
+        .neon-border {{ border: 1px solid #00ff41; box-shadow: 0 0 15px rgba(0,255,65,0.2); }}
+        .grid-bg {{ background-image: radial-gradient(rgba(0, 255, 65, 0.1) 1px, transparent 1px); background-size: 30px 30px; }}
+        .scanline {{ width: 100%; height: 100px; background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,255,65,0.02) 50%, rgba(0,0,0,0) 100%); position: fixed; top: 0; animation: scan 8s linear infinite; pointer-events: none; }}
+        @keyframes scan {{ 0% {{ top: -100px; }} 100% {{ top: 100%; }} }}
+        @keyframes pulse {{ 0% {{ opacity: 1; }} 50% {{ opacity: 0.4; }} 100% {{ opacity: 1; }} }}
+        .pulse {{ animation: pulse 2s infinite; }}
     </style>
 </head>
-<body class="py-0 md:py-8">
+<body class="grid-bg">
+    <div class="scanline"></div>
 
-    <div class="main-container">
-        <div class="ticker-wrap h-10">
-            <iframe src="https://s.tradingview.com/embed-widget/ticker-tape/?symbols=FX:EURUSD,TVC:GOLD,INDEX:SPX,BINANCE:BTCUSDT,BINANCE:ETHUSDT&theme=dark" width="100%" height="100%" frameborder="0"></iframe>
+    <div class="w-full border-b border-white/10 glass sticky top-0 z-50 px-4 py-2 flex justify-between items-center">
+        <div class="flex items-center gap-6">
+            <span class="mono text-[10px] uppercase tracking-tighter">
+                <span class="text-white/40">Terminal_ID:</span> <span class="text-white">KG-PRO-2026</span>
+            </span>
+            <span class="mono text-[10px] uppercase tracking-tighter hidden md:inline">
+                <span class="text-white/40">Status:</span> <span class="neon-text pulse">Connected_Live</span>
+            </span>
         </div>
-
-        <nav class="p-4 border-b flex justify-between items-center text-[10px] font-bold uppercase tracking-widest">
-            <div class="flex items-center gap-4">
-                <span><span class="live-dot mr-1"></span> LIVE: <span id="clock">--:--:--</span></span>
-                <span class="hidden md:inline text-gray-400">|</span>
-                <span class="hidden md:inline">Status: Market Open</span>
-            </div>
-            <div class="flex gap-6">
-                <a href="index.html" class="hover:accent">Home</a>
-                <a href="#analisi" class="hover:accent">Analisi Tecnica</a>
-                <a href="#market" class="hover:accent">Market Data</a>
-            </div>
-        </nav>
-
-        <header class="p-8 text-center news-header">
-            <h1 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter">Keygap <span class="accent">Advantage</span></h1>
-            <p class="text-gray-500 italic mt-3 text-lg font-serif">"L'informazione finanziaria che precede il mercato"</p>
-        </header>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
-            
-            <div class="lg:col-span-3 border-r p-6 hidden lg:block bg-gray-50">
-                <h3 class="font-black border-b-2 border-black pb-2 mb-4 uppercase text-xs">Trending Now</h3>
-                <div class="space-y-6">
-                    <div>
-                        <span class="text-[10px] font-bold text-red-600 uppercase">Forex</span>
-                        <h4 class="font-bold text-sm leading-tight hover:underline cursor-pointer">Resistenza chiave EUR/USD a 1.0850</h4>
-                    </div>
-                    <div>
-                        <span class="text-[10px] font-bold text-red-600 uppercase">Commodities</span>
-                        <h4 class="font-bold text-sm leading-tight hover:underline cursor-pointer">L'Oro testa i massimi storici</h4>
-                    </div>
-                    <div class="pt-4 border-t">
-                        <iframe src="https://s.tradingview.com/embed-widget/mini-symbol-overview/?symbol=FX:EURUSD&theme=light" width="100%" height="150" frameborder="0"></iframe>
-                    </div>
-                </div>
-            </div>
-
-            <div id="analisi" class="lg:col-span-6 p-6 md:p-10">
-                <div class="mb-4 text-center">
-                    <span class="bg-black text-white px-3 py-1 text-[10px] font-black uppercase tracking-widest">Analisi del Giorno</span>
-                </div>
-                <h2 class="text-4xl md:text-5xl font-bold font-serif italic text-center leading-tight mb-8 uppercase tracking-tighter">
-                    "{testo_notizia}"
-                </h2>
-                <div class="h-[450px] border shadow-inner mb-8 bg-black">
-                    <iframe src="https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT&theme=light&v={id_versione}" width="100%" height="100%" frameborder="0"></iframe>
-                </div>
-                <p class="text-gray-600 leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-3">
-                    Le attuali condizioni di mercato suggeriscono una fase di riaccumulazione. I nostri modelli quantitativi indicano una probabilità dell'85% di volatilità espansa nelle prossime 48 ore. Gli investitori istituzionali stanno monitorando attentamente i livelli di liquidità sotto i minimi settimanali.
-                </p>
-            </div>
-
-            <div id="market" class="lg:col-span-3 p-6 bg-gray-50 border-l">
-                <div class="sidebar-box p-4 mb-6 shadow-sm">
-                    <h3 class="font-bold text-xs mb-4 uppercase">Market Screener</h3>
-                    <iframe src="https://s.tradingview.com/embed-widget/screener/?itemsCount=5&market=crypto&theme=light" width="100%" height="400" frameborder="0"></iframe>
-                </div>
-                <div class="sidebar-box p-4 shadow-sm">
-                    <h3 class="font-bold text-xs mb-4 uppercase">Economic Calendar</h3>
-                    <iframe src="https://s.tradingview.com/embed-widget/events/?colorTheme=light&isTransparent=false&width=100%25&height=300" width="100%" height="300" frameborder="0"></iframe>
-                </div>
-            </div>
+        <div class="mono text-[11px] font-bold">
+            <span id="clock" class="neon-text">--:--:--</span>
         </div>
-
-        <footer class="bg-black text-white p-12 text-center">
-            <h2 class="text-3xl font-serif italic mb-4">Keygap Advantage</h2>
-            <div class="flex justify-center gap-8 text-[10px] uppercase tracking-widest text-gray-400 mb-8">
-                <a href="#" class="hover:text-white">Privacy Policy</a>
-                <a href="#" class="hover:text-white">Terms of Service</a>
-                <a href="#" class="hover:text-white">Risk Disclosure</a>
-            </div>
-            <p class="text-[9px] text-gray-600 max-w-xl mx-auto leading-loose uppercase">
-                Tutti i contenuti sono generati da algoritmi proprietari. Il trading comporta rischi. Build ID: {id_versione}
-            </p>
-        </footer>
     </div>
+
+    <div class="max-w-[1600px] mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <aside class="lg:col-span-2 space-y-4">
+            <div class="glass p-4 rounded-sm border-l-2 border-green-500">
+                <h3 class="mono text-[10px] text-white/50 mb-3 uppercase tracking-widest">Global_Index</h3>
+                <iframe src="https://s.tradingview.com/embed-widget/mini-symbol-overview/?symbol=SP:SPX&theme=dark" width="100%" height="120" frameborder="0"></iframe>
+            </div>
+            <div class="glass p-4 rounded-sm border-l-2 border-blue-500">
+                <h3 class="mono text-[10px] text-white/50 mb-3 uppercase tracking-widest">Crypto_Sentiment</h3>
+                <iframe src="https://s.tradingview.com/embed-widget/mini-symbol-overview/?symbol=BINANCE:BTCUSDT&theme=dark" width="100%" height="120" frameborder="0"></iframe>
+            </div>
+        </aside>
+
+        <main class="lg:col-span-7 space-y-6">
+            <div class="glass p-8 relative overflow-hidden rounded-sm border border-white/10">
+                <div class="absolute top-0 right-0 p-2 mono text-[9px] text-white/20">A.I. ENGINE v4.2</div>
+                <div class="mb-6">
+                    <span class="bg-white/10 text-white px-2 py-1 text-[9px] font-bold uppercase tracking-widest mb-4 inline-block">Flash_Report</span>
+                    <h2 class="text-4xl md:text-5xl font-black italic tracking-tighter text-white leading-none uppercase">
+                        "{testo_notizia}"
+                    </h2>
+                </div>
+                
+                <div class="h-[500px] neon-border bg-black mb-6">
+                    <iframe src="https://s.tradingview.com/widgetembed/?symbol=TVC:DXY&theme=dark&v={id_versione}" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mono text-[11px] leading-relaxed">
+                    <div class="text-white/60 p-4 border border-white/5">
+                        <span class="text-green-500 font-bold underline">/// ANALISI_TECNICA:</span><br>
+                        Dati incrociati mostrano una divergenza rialzista nel breve termine. I cluster di liquidità sono posizionati a livelli critici.
+                    </div>
+                    <div class="text-white/60 p-4 border border-white/5">
+                        <span class="text-blue-500 font-bold underline">/// SENTIMENT_HFT:</span><br>
+                        Algoritmi ad alta frequenza stanno accumulando posizioni. Si consiglia cautela nelle aree di breakout.
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="lg:col-span-3 space-y-6">
+            <div class="glass p-4 rounded-sm border-t-2 border-white/20">
+                <h3 class="mono text-[10px] text-white/50 mb-4 uppercase tracking-widest">Market_Scanner</h3>
+                <iframe src="https://s.tradingview.com/embed-widget/screener/?itemsCount=5&market=crypto&theme=dark" width="100%" height="400" frameborder="0"></iframe>
+            </div>
+            <div class="glass p-4 rounded-sm">
+                <h3 class="mono text-[10px] text-white/50 mb-4 uppercase tracking-widest">Economic_Pulse</h3>
+                <iframe src="https://s.tradingview.com/embed-widget/events/?colorTheme=dark&width=100%25&height=300" width="100%" height="300" frameborder="0"></iframe>
+            </div>
+        </aside>
+
+    </div>
+
+    <footer class="mt-12 border-t border-white/5 bg-black/50 p-12 text-center mono">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-[12px] text-white font-bold mb-4 tracking-[10px] uppercase">Keygap_Advantage</div>
+            <p class="text-[9px] text-white/30 uppercase mb-6 tracking-widest leading-loose">
+                Distributed Ledger Intelligence // No Financial Advice // Build_ID: {id_versione}
+            </p>
+            <div class="flex justify-center gap-8 text-[9px] text-white/50">
+                <span class="hover:text-green-500 cursor-pointer transition">PRO_TOOLS</span>
+                <span class="hover:text-green-500 cursor-pointer transition">API_ACCESS</span>
+                <span class="hover:text-green-500 cursor-pointer transition">SECURITY</span>
+            </div>
+        </div>
+    </footer>
 
     <script>
         function updateClock() {{
@@ -147,9 +146,9 @@ try:
         f.write(HTML_MASTER)
     if "GITHUB_ACTIONS" not in os.environ:
         subprocess.run(["git", "add", "."], cwd=BASE_DIR)
-        subprocess.run(["git", "commit", "-m", f"UI-PREMIUM Update {ora_esatta}"], cwd=BASE_DIR)
+        subprocess.run(["git", "commit", "-m", f"QUANTUM-CORE Update {ora_esatta}"], cwd=BASE_DIR)
         subprocess.run(["git", "push", "origin", "main"], cwd=BASE_DIR)
     else:
-        print(f"🤖 AUTOMAZIONE COMPLETATA ({ora_esatta})")
+        print(f"🤖 QUANTUM ENGINE ONLINE ({ora_esatta})")
 except Exception as e:
-    print(f"❌ ERRORE: {e}")
+    print(f"❌ SYSTEM_FAILURE: {e}")
