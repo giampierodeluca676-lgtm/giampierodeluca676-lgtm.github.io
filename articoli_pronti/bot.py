@@ -4,58 +4,30 @@ from datetime import datetime
 def genera_e_salva_report():
     data_ora = datetime.now().strftime('%d/%m/%Y %H:%M')
     folder = os.path.expanduser('~/Desktop/Keygap_AdVantage/articoli_pronti')
-    filename = 'INSIGHT_PROFESSIONALE_KEYGAP.txt'
-    path = os.path.join(folder, filename)
     
     btc, eth, xrp = '€61.734,20 (+4.1%)', '€3.105,88 (-1.2%)', '€0.5891 (+2.7%)'
     
-    fb_desc = f'''🏛️ KEYGAP INTELLIGENCE: ANALISI ISTITUZIONALE FLOW-DATA
-
-DATA SESSIONE: {data_ora}
-STATUS: MONITORAGGIO HFT ATTIVO 🟢
-
-L'analisi odierna dei flussi di mercato rivela un'attività anomala nei cluster di liquidità. Il motore Keygap ADK 2.0 ha isolato pattern di esecuzione che confermano la presenza di operatori Market Maker in fase di riposizionamento strategico.
-
-📊 DECODIFICA ASSET (SESSIONE CORRENTE):
-
-🔸 BITCOIN (BTC): {btc}
-Analisi: Segnale di Accumulo HFT confermato. Le "bacchette sparse" evidenziano un assorbimento della pressione di vendita in area micro-gap. I flussi istituzionali stanno costruendo un floor di supporto invisibile al retail.
-
-🔹 ETHEREUM (ETH): {eth}
-Analisi: Micro-glitch di compressione volumetrica. Rilevato un pattern di "spoofing" algoritmico atto a testare la liquidità dei livelli inferiori prima di una possibile espansione.
-
-🔸 RIPPLE (XRP): {xrp}
-Analisi: Tracce di ordini algoritmici a bassa latenza. Il sistema rileva un'interazione diretta tra smart contracts istituzionali e pool di liquidità centralizzate.
-
-🔍 KEYGAP INSIGHT - SENTIMENT ALGORITMICO:
-Non limitatevi a guardare le candele. Le ombre dei prezzi sono le tracce lasciate dai giganti della finanza. Noi decodifichiamo il linguaggio dell'Order Flow per anticipare i movimenti che il grafico mostrerà solo in seguito.
-
-#KeygapInsights #HFTTrading #OrderFlow #AnalisiTecnica #Bitcoin #FinanzaIstituzionale #MarketInsights #CryptoData'''
+    # 1. VERSIONE HTML PER BLOGGER
+    html_content = f'''<div style="font-family: Arial; color: #333; max-width: 800px; margin: auto; border: 1px solid #ddd; padding: 20px; border-radius: 8px;">
+    <h2 style="color: #1a73e8; text-align: center;">🏛️ KEYGAP INTELLIGENCE: ANALISI ISTITUZIONALE</h2>
+    <p style="text-align: center; font-weight: bold;">Sessione: {data_ora} | HFT ATTIVO 🟢</p>
+    <div style="background: #f8f9fa; padding: 15px; margin: 10px 0;"><h3>BTC: {btc}</h3><p>Segnale Accumulo HFT: Assorbimento pressione vendita.</p></div>
+    <div style="background: #f8f9fa; padding: 15px; margin: 10px 0;"><h3>ETH: {eth}</h3><p>Spoofing Algoritmico: Test liquidita livelli inferiori.</p></div>
+    <div style="background: #f8f9fa; padding: 15px; margin: 10px 0;"><h3>XRP: {xrp}</h3><p>Low Latency Flow: Interazione smart contracts istituzionali.</p></div>
+</div>'''
     
-    tt_desc = f'''🔑 KEYGAP: DENTRO IL LINGUAGGIO HFT
+    # 2. VERSIONE SOCIAL (FB/TT)
+    social_content = f'''📑 REPORT ELITE KEYGAP
 
-📉 BTC {btc} -> Segnale Istituzionale
-📈 ETH {eth} -> Test Liquidità
-📊 XRP {xrp} -> Pattern Algoritmico
+[FACEBOOK PROFESSONALE]
+Analisi Micro-struttura: BTC ({btc}) mostra assorbimento volumi istituzionali. ETH ({eth}) in fase di compressione tecnica.
 
-I glitch grafici sono la nostra mappa. Smetti di guardare il prezzo, guarda i volumi nascosti. #Keygap #TradingAlgoritmico #HFT #Crypto #PerTe'''
+[TIKTOK RIDOTTO]
+Glitch = Segnali. Segui i giganti. #Keygap #HFT'''
 
-    contenuto = f'''--- SCHEDA EDITORIALE ELITE KEYGAP ---
-
-[PER FACEBOOK: ANALISI APPROFONDITA]
-
-{fb_desc}
-
-==============================================
-
-[PER TIKTOK: FAST INSIGHT]
-
-{tt_desc}
----
-'''
+    with open(os.path.join(folder, 'POST_SOCIAL.txt'), 'w') as f: f.write(social_content)
+    with open(os.path.join(folder, 'PAGINA_BLOGGER.html'), 'w') as f: f.write(html_content)
     
-    with open(path, 'w') as f:
-        f.write(contenuto)
-    print(f'✅ Report Elite salvato in: {path}')
+    print(f'✅ Creati POST_SOCIAL.txt e PAGINA_BLOGGER.html in {folder}')
 
 genera_e_salva_report()
