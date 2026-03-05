@@ -4,30 +4,46 @@ from datetime import datetime
 def genera_e_salva_report():
     data_ora = datetime.now().strftime('%d/%m/%Y %H:%M')
     folder = os.path.expanduser('~/Desktop/Keygap_AdVantage/articoli_pronti')
+    os.makedirs(folder, exist_ok=True)
     
     btc, eth, xrp = '€61.734,20 (+4.1%)', '€3.105,88 (-1.2%)', '€0.5891 (+2.7%)'
     
-    # 1. VERSIONE HTML PER BLOGGER
-    html_content = f'''<div style="font-family: Arial; color: #333; max-width: 800px; margin: auto; border: 1px solid #ddd; padding: 20px; border-radius: 8px;">
-    <h2 style="color: #1a73e8; text-align: center;">🏛️ KEYGAP INTELLIGENCE: ANALISI ISTITUZIONALE</h2>
-    <p style="text-align: center; font-weight: bold;">Sessione: {data_ora} | HFT ATTIVO 🟢</p>
-    <div style="background: #f8f9fa; padding: 15px; margin: 10px 0;"><h3>BTC: {btc}</h3><p>Segnale Accumulo HFT: Assorbimento pressione vendita.</p></div>
-    <div style="background: #f8f9fa; padding: 15px; margin: 10px 0;"><h3>ETH: {eth}</h3><p>Spoofing Algoritmico: Test liquidita livelli inferiori.</p></div>
-    <div style="background: #f8f9fa; padding: 15px; margin: 10px 0;"><h3>XRP: {xrp}</h3><p>Low Latency Flow: Interazione smart contracts istituzionali.</p></div>
-</div>'''
+    fb = (
+        f"📑 REPORT ANALITICO: KEYGAP ADK 2.0 (LIVE UPDATE)\n\n"
+        f"Status: Operativo 🟢\nData: {data_ora}\n\n"
+        f"L'ecosistema Keygap ha isolato impronte digitali di algoritmi HFT istituzionali.\n\n"
+        f"📊 ANALISI PERFORMANCE ASSET:\n"
+        f"• BTC: {btc} 🚀\nDiagnosi: Accumulo HFT. Posizionamento massivo dei grandi player.\n"
+        f"• ETH: {eth} 📉\nDiagnosi: Micro-glitch di compressione. Fase di stallo tecnico.\n"
+        f"• XRP: {xrp} ✨\nDiagnosi: Institutional Movement. Ordini a bassa latenza rilevati.\n\n"
+        f"🔍 KEYGAP INSIGHT:\nDecodifichiamo il linguaggio nascosto della finanza algoritmica.\n"
+        f"🔗 https://giampierodeluca676-lgtm.github.io/\n\n"
+        f"#KeygapInsights #HFT #Bitcoin #Ethereum #Ripple #CryptoAnalysis"
+    )
     
-    # 2. VERSIONE SOCIAL (FB/TT)
-    social_content = f'''📑 REPORT ELITE KEYGAP
-
-[FACEBOOK PROFESSONALE]
-Analisi Micro-struttura: BTC ({btc}) mostra assorbimento volumi istituzionali. ETH ({eth}) in fase di compressione tecnica.
-
-[TIKTOK RIDOTTO]
-Glitch = Segnali. Segui i giganti. #Keygap #HFT'''
-
-    with open(os.path.join(folder, 'POST_SOCIAL.txt'), 'w') as f: f.write(social_content)
-    with open(os.path.join(folder, 'PAGINA_BLOGGER.html'), 'w') as f: f.write(html_content)
+    tt = (
+        f"🔑 KEYGAP: DECODIFICA HFT ATTIVA\n\n"
+        f"BTC {btc} 🚀\nETH {eth} 📉\nXRP {xrp} ✨\n\n"
+        f"I glitch sono le tracce dei Giganti.\n"
+        f"#Keygap #Crypto #HFT #PerTe"
+    )
     
-    print(f'✅ Creati POST_SOCIAL.txt e PAGINA_BLOGGER.html in {folder}')
+    html = (
+        f"<div style='font-family:Arial;border:1px solid #ddd;padding:20px;border-radius:10px;max-width:600px;'>\n"
+        f"<h2 style='color:#1a73e8;'>🏛️ KEYGAP INTELLIGENCE</h2>\n"
+        f"<p><b>Sessione:</b> {data_ora}</p>\n"
+        f"<hr><p><b>BTC:</b> {btc} (Accumulo HFT)</p>\n"
+        f"<p><b>ETH:</b> {eth} (Compressione)</p>\n"
+        f"<p><b>XRP:</b> {xrp} (Low Latency Flow)</p>\n"
+        f"</div>"
+    )
+
+    with open(os.path.join(folder, 'REPORT_SOCIAL.txt'), 'w') as f:
+        f.write(f"--- FACEBOOK ---\n{fb}\n\n--- TIKTOK ---\n{tt}")
+    
+    with open(os.path.join(folder, 'PAGINA_BLOGGER.html'), 'w') as f:
+        f.write(html)
+
+    print(f"✅ File generati con successo in: {folder}")
 
 genera_e_salva_report()
