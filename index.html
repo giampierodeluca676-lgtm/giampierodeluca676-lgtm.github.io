@@ -9,15 +9,13 @@
     <style>
         :root { --neon: #00f2ff; --bg: #010204; }
         
-        /* Modifica per permettere lo scorrimento verticale su mobile */
         body { 
             background: var(--bg); 
             color: #fff; 
             font-family: 'Rajdhani', sans-serif; 
             margin: 0; 
-            perspective: 1500px; 
             min-height: 100vh; 
-            overflow-y: auto; 
+            overflow-y: auto !important; /* */
             overflow-x: hidden; 
         }
 
@@ -26,137 +24,110 @@
         .terminal-grid { 
             display: flex; 
             flex-direction: column; 
-            min-height: 100vh; 
             padding: 15px; 
             gap: 20px; 
+            width: 100%;
         }
 
         .main-title { 
             font-size: clamp(1.8rem, 8vw, 3.5rem); 
             font-weight: 900; 
             text-transform: uppercase; 
-            font-style: italic; 
-            letter-spacing: 2px; 
             text-align: center; 
             line-height: 1.1; 
         }
-        .main-title span { color: var(--neon); text-shadow: 0 0 30px rgba(0, 242, 255, 0.6); }
+        .main-title span { color: var(--neon); }
 
         .btn-asset { 
             background: rgba(0, 242, 255, 0.05); 
             border: 1px solid rgba(0, 242, 255, 0.4); 
-            padding: 12px 20px; 
+            padding: 12px; 
             font-family: 'Orbitron'; 
-            font-size: clamp(10px, 3vw, 14px); 
-            font-weight: 700; 
-            letter-spacing: 2px; 
-            transition: 0.4s;
-            flex: 1 1 40%; 
+            font-size: 11px;
+            flex: 1 1 45%; 
         }
         
-        .btn-terminal { 
-            border: 3px solid var(--neon); 
-            padding: 15px 30px; 
-            font-family: 'Orbitron'; 
-            font-size: clamp(12px, 4vw, 16px); 
-            font-weight: 900; 
-            letter-spacing: 5px; 
-            background: rgba(0, 242, 255, 0.1); 
-            transition: 0.5s; 
-            width: 100%;
-            max-width: 400px;
-        }
-
-        /* Altezza Grafico allungata per Mobile */
+        /* FIX DEFINITIVO: Altezza minima garantita per il frame */
         .chart-frame { 
             background: #000; 
             border: 1px solid rgba(255,255,255,0.1); 
             border-radius: 4px; 
             position: relative; 
-            height: 650px; 
-            width: 100%;
-            flex-grow: 0;
-            margin-bottom: 20px;
+            height: 700px !important; 
+            width: 100% !important;
+            margin-bottom: 30px;
+        }
+
+        /* Forza il div interno del grafico */
+        #tradingview_chart {
+            height: 650px !important; 
+            width: 100% !important;
         }
 
         @media (min-width: 1024px) {
             .terminal-grid { display: grid; grid-template-rows: auto auto 1fr auto; height: 100vh; padding: 25px 50px; }
-            .chart-frame { height: auto; flex-grow: 1; margin-bottom: 0; }
-            body { overflow: hidden; } /* Blocca lo scroll solo su PC */
+            .chart-frame { height: auto !important; margin-bottom: 0; }
+            #tradingview_chart { height: 100% !important; }
+            body { overflow: hidden !important; }
         }
-
-        .page-exit { opacity: 0; filter: blur(50px); transform: scale(1.3); transition: 1.2s; }
     </style>
 </head>
 <body>
     <div class="terminal-grid">
         <header class="flex justify-between items-center opacity-70">
-            <div class="text-left">
-                <div class="neon-text text-[8px] sm:text-[10px] tracking-[4px] sm:tracking-[6px] mb-1">SYSTEM://DATE</div>
-                <div id="date" class="text-lg sm:text-2xl font-light tracking-tighter text-white/50 uppercase">--/--/----</div>
-            </div>
-            <div class="text-right">
-                <div class="neon-text text-[8px] sm:text-[10px] tracking-[4px] sm:tracking-[6px] mb-1">SYSTEM://TIME</div>
-                <div id="clock" class="text-lg sm:text-2xl font-light tracking-tighter text-white/50">00:00:00</div>
-            </div>
+            <div><div class="neon-text text-[8px] tracking-[4px]">DATE</div><div id="date" class="text-xl">--/--/----</div></div>
+            <div class="text-right"><div class="neon-text text-[8px] tracking-[4px]">TIME</div><div id="clock" class="text-xl">00:00:00</div></div>
         </header>
 
         <div class="flex flex-col items-center gap-6">
             <h1 class="main-title"><span>Keygap</span> Advantage</h1>
-            <div class="flex flex-col items-center gap-4 w-full">
-                <div class="flex flex-wrap justify-center gap-3 w-full">
-                    <button onclick="switchSymbol('BITSTAMP:BTCUSD')" class="btn-asset uppercase">Bitcoin</button>
-                    <button onclick="switchSymbol('TVC:GOLD')" class="btn-asset uppercase">Gold</button>
-                    <button onclick="switchSymbol('SP:SPX')" class="btn-asset uppercase">S&P 500</button>
-                    <button onclick="switchSymbol('FX:EURUSD')" class="btn-asset uppercase">EUR / USD</button>
-                </div>
-                <button onclick="startTransition()" class="btn-terminal uppercase">> Terminale Notizie</button>
+            <div class="flex flex-wrap justify-center gap-3 w-full">
+                <button onclick="switchSymbol('BITSTAMP:BTCUSD')" class="btn-asset">BITCOIN</button>
+                <button onclick="switchSymbol('TVC:GOLD')" class="btn-asset">GOLD</button>
+                <button onclick="switchSymbol('SP:SPX')" class="btn-asset">S&P 500</button>
+                <button onclick="switchSymbol('FX:EURUSD')" class="btn-asset">EUR/USD</button>
             </div>
+            <button onclick="startTransition()" class="border-2 border-[#00f2ff] p-3 w-full font-bold tracking-[5px] bg-[#00f2ff]/10">🚀 TERMINALE NOTIZIE</button>
         </div>
 
         <div class="chart-frame">
             <div class="panel-header flex justify-between items-center p-3 border-b border-white/10 bg-[#0d1117]">
-                <span id="chart-title" class="neon-text text-[9px] sm:text-[12px] tracking-[4px] sm:tracking-[8px]">PRIMARY DATASTREAM // BTCUSD</span>
-                <span class="hidden sm:inline text-[10px] text-white/40 tracking-[3px]">ENCRYPTED FEED</span>
+                <span id="chart-title" class="neon-text text-[10px] tracking-[4px]">PRIMARY DATASTREAM // BTCUSD</span>
             </div>
-            <div id="tradingview_chart" style="height: calc(100% - 48px); width: 100%;"></div>
+            <div id="tradingview_chart"></div>
         </div>
         
-        <footer class="text-center opacity-20 pb-2">
-            <div class="neon-text text-[8px] tracking-[10px] sm:tracking-[40px]">Keygap Titan</div>
+        <footer class="text-center opacity-20 pb-10">
+            <div class="neon-text text-[10px] tracking-[20px]">Keygap Titan</div>
         </footer>
     </div>
 
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script>
         function initChart(symbol = 'BITSTAMP:BTCUSD') {
+            // Rimosso "autosize" e impostate altezze fisse per forzare il mobile
             new TradingView.widget({ 
                 "width": "100%", 
-                "height": "100%", 
+                "height": window.innerWidth < 1024 ? 650 : "100%", 
                 "symbol": symbol, 
                 "interval": "D", 
-                "timezone": "Etc/UTC", 
                 "theme": "dark", 
                 "style": "1", 
                 "locale": "it", 
                 "container_id": "tradingview_chart",
                 "hide_side_toolbar": true,
-                "allow_symbol_change": false,
-                "save_image": false
+                "allow_symbol_change": false
             });
         }
         function switchSymbol(symbol) { 
             document.getElementById('chart-title').textContent = 'PRIMARY DATASTREAM // ' + symbol.split(':')[1]; 
             initChart(symbol); 
         }
-        function startTransition() { 
-            document.body.classList.add('page-exit'); 
-            setTimeout(() => { window.location.href = "editoriale.html"; }, 1000); 
-        }
+        function startTransition() { window.location.href = "editoriale.html"; }
         function updateDateTime() { 
             const now = new Date();
-            document.getElementById('clock').textContent = now.toLocaleTimeString('it-IT', { hour12: false });
-            document.getElementById('date').textContent = now.toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            document.getElementById('clock').textContent = now.toLocaleTimeString('it-IT');
+            document.getElementById('date').textContent = now.toLocaleDateString('it-IT');
         }
         setInterval(updateDateTime, 1000); 
         updateDateTime(); 
