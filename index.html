@@ -117,3 +117,13 @@
         }
     })();
 </script>
+<script>
+function startTransition() {
+    document.body.style.opacity = '0';
+    document.body.style.filter = 'blur(10px)';
+    document.body.style.transition = 'all 0.8s ease';
+    setTimeout(function() {
+        window.location.href = "editoriale.html";
+    }, 800);
+}
+</script>
