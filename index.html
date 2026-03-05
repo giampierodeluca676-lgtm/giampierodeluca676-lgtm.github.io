@@ -10,61 +10,29 @@
         :root { --neon: #00f2ff; --bg: #010204; }
         body { background: var(--bg); color: #fff; font-family: 'Rajdhani', sans-serif; margin: 0; overflow: hidden; perspective: 1500px; height: 100vh; }
         .neon-text { color: var(--neon); text-shadow: 0 0 15px rgba(0, 242, 255, 0.7); font-family: 'Orbitron', sans-serif; }
-        
         .terminal-grid { display: grid; grid-template-rows: auto auto 1fr auto; height: 100vh; padding: 25px 50px; gap: 30px; }
-
-        /* Titolo Imponente */
         .main-title { font-size: 3.5rem; font-weight: 900; text-transform: uppercase; font-style: italic; letter-spacing: 2px; text-align: center; line-height: 1; }
         .main-title span { color: var(--neon); text-shadow: 0 0 30px rgba(0, 242, 255, 0.6); }
-
-        /* Navigazione Potenziata (Pulsanti più grandi) */
-        .btn-asset { 
-            background: rgba(0, 242, 255, 0.05); 
-            border: 1px solid rgba(0, 242, 255, 0.4); 
-            padding: 16px 35px; 
-            font-family: 'Orbitron'; 
-            font-size: 14px; 
-            font-weight: 700;
-            letter-spacing: 3px; 
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-        }
-        .btn-asset:hover { 
-            background: var(--neon); 
-            color: #000; 
-            box-shadow: 0 0 30px var(--neon); 
-            transform: scale(1.1) translateZ(50px); 
-        }
-
-        .btn-terminal { 
-            border: 3px solid var(--neon); 
-            padding: 20px 60px; 
-            font-family: 'Orbitron'; 
-            font-size: 16px; 
-            font-weight: 900;
-            letter-spacing: 10px; 
-            background: rgba(0, 242, 255, 0.1); 
-            transition: 0.5s;
-            margin-top: 10px;
-        }
-        .btn-terminal:hover { 
-            background: var(--neon); 
-            color: #000; 
-            box-shadow: 0 0 60px var(--neon); 
-            transform: scale(1.05) translateZ(70px); 
-        }
-
-        /* Frame Grafico */
-        .chart-frame { background: #000; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; position: relative; box-shadow: 0 50px 100px rgba(0,0,0,1); }
+        .btn-asset { background: rgba(0, 242, 255, 0.05); border: 1px solid rgba(0, 242, 255, 0.4); padding: 16px 35px; font-family: 'Orbitron'; font-size: 14px; font-weight: 700; letter-spacing: 3px; transition: 0.4s; }
+        .btn-asset:hover { background: var(--neon); color: #000; box-shadow: 0 0 30px var(--neon); transform: scale(1.1); }
+        .btn-terminal { border: 3px solid var(--neon); padding: 20px 60px; font-family: 'Orbitron'; font-size: 16px; font-weight: 900; letter-spacing: 10px; background: rgba(0, 242, 255, 0.1); transition: 0.5s; margin-top: 10px; }
+        .btn-terminal:hover { background: var(--neon); color: #000; box-shadow: 0 0 60px var(--neon); transform: scale(1.05); }
+        .chart-frame { background: #000; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; position: relative; }
         .panel-header { background: #0d1117; padding: 12px 25px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-
         .page-exit { opacity: 0; filter: blur(50px); transform: scale(1.3); transition: 1.2s; }
     </style>
 </head>
 <body>
     <div class="terminal-grid">
         <header class="flex justify-between items-center opacity-70">
-            <div><div class="neon-text text-[10px] tracking-[6px]">SYSTEM://TITAN_ACTIVE</div><div id="clock" class="text-3xl font-light text-white/50">00:00:00</div></div>
-            <div class="text-right"><div class="neon-text text-[10px] tracking-[5px]">KEYGAP_QUANTUM</div><div class="text-[10px] text-white/20 tracking-[2px]">BATTLEGROUND READY</div></div>
+            <div class="text-left">
+                <div class="neon-text text-[10px] tracking-[6px] mb-1">SYSTEM://DATE</div>
+                <div id="date" class="text-2xl font-light tracking-tighter text-white/50 uppercase">--/--/----</div>
+            </div>
+            <div class="text-right">
+                <div class="neon-text text-[10px] tracking-[6px] mb-1">SYSTEM://TIME</div>
+                <div id="clock" class="text-2xl font-light tracking-tighter text-white/50">00:00:00</div>
+            </div>
         </header>
 
         <div class="flex flex-col items-center gap-8">
@@ -87,28 +55,21 @@
             </div>
             <div id="tradingview_chart" style="height: calc(100% - 48px); width: 100%;"></div>
         </div>
-
         <footer class="text-center opacity-20 pb-2"><div class="neon-text text-[10px] tracking-[40px]">Keygap Titan</div></footer>
     </div>
-
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script>
-        let widget;
         function initChart(symbol = 'BITSTAMP:BTCUSD') {
-            widget = new TradingView.widget({
-                "width": "100%", "height": "100%", "symbol": symbol, "interval": "D", "timezone": "Etc/UTC", "theme": "dark", "style": "1", "locale": "it", "enable_publishing": false, "backgroundColor": "#010204", "gridColor": "rgba(0, 242, 255, 0.03)", "container_id": "tradingview_chart"
-            });
+            new TradingView.widget({ "width": "100%", "height": "100%", "symbol": symbol, "interval": "D", "timezone": "Etc/UTC", "theme": "dark", "style": "1", "locale": "it", "container_id": "tradingview_chart" });
         }
-        function switchSymbol(symbol) {
-            document.getElementById('chart-title').textContent = 'PRIMARY DATASTREAM // ' + symbol.split(':')[1];
-            initChart(symbol);
+        function switchSymbol(symbol) { document.getElementById('chart-title').textContent = 'PRIMARY DATASTREAM // ' + symbol.split(':')[1]; initChart(symbol); }
+        function startTransition() { document.body.classList.add('page-exit'); setTimeout(() => { window.location.href = "editoriale.html"; }, 1000); }
+        function updateDateTime() { 
+            const now = new Date();
+            document.getElementById('clock').textContent = now.toLocaleTimeString('it-IT', { hour12: false });
+            document.getElementById('date').textContent = now.toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' });
         }
-        function startTransition() {
-            document.body.classList.add('page-exit');
-            setTimeout(() => { window.location.href = "editoriale.html"; }, 1000);
-        }
-        function updateClock() { document.getElementById('clock').textContent = new Date().toLocaleTimeString('it-IT', { hour12: false }); }
-        setInterval(updateClock, 1000); updateClock(); initChart();
+        setInterval(updateDateTime, 1000); updateDateTime(); initChart();
     </script>
 </body>
 </html>
