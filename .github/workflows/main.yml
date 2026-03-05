@@ -7,9 +7,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.9"
       - name: Install
@@ -21,5 +23,5 @@ jobs:
           git config --global user.name "giampierodeluca676-lgtm"
           git config --global user.email "giampierodeluca676@gmail.com"
           git add -A
-          git commit -m "Fix finale" || exit 0
+          git commit -m "KEYGAP: Auto Log Update" || exit 0
           git push origin main || exit 0
