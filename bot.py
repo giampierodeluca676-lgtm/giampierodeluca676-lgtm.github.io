@@ -9,32 +9,43 @@ def genera_e_salva_report():
     
     btc, eth, xrp = '€61.734,20 (+4.1%)', '€3.105,88 (-1.2%)', '€0.5891 (+2.7%)'
     
-    fb_h = '#KeygapInsights #TradingProfessionale #HFT #Bitcoin #Ethereum #Ripple #CryptoAnalysis #FinanzaAlgoritmica #TradingReport #DigitalAssets'
-    tt_h = '#Keygap #Crypto #Trading #Bitcoin #HFT #GlitchSignal #PerTe #TradingBot #Finance #Blockchain'
+    # Blocchi Testo Professionali
+    fb_desc = f'''🚀 KEYGAP INSIGHTS: OLTRE IL MERCATO! 🚀
 
-    contenuto = f'''--- REPORT ANALITICO KEYGAP ADK 2.0 ---
-Data: {data_ora}
+L'algoritmo ha isolato anomalie grafiche critiche. Non sono errori, è HFT istituzionale in azione.
 
-[VERSIONE FACEBOOK]
-Status: Operativo 🟢
-BTC: {btc} -> Accumulo HFT
-ETH: {eth} -> Compressione
-XRP: {xrp} -> Segnale Istituzionale
+📊 DATI REALI (Sessione {data_ora}):
+• BTC: {btc} -> Accumulo HFT
+• ETH: {eth} -> Compressione
+• XRP: {xrp} -> Movimento Istituzionale
 
-{fb_h}
+I glitch sono le tracce lasciate dai giganti. Noi li decodifichiamo per te.
 
-[VERSIONE TIKTOK]
+#KeygapInsights #TradingProfessionale #HFT #Bitcoin #Ethereum #Ripple #CryptoAnalysis'''
+    
+    tt_desc = f'''🔑 KEYGAP: I GLITCH SONO SEGNALI
+
 BTC {btc} 🚀
 ETH {eth} 📉
 XRP {xrp} ✨
-Glitch rilevati: SI. Segui il segnale.
 
-{tt_h}
+Analisi HFT attiva. Segui il segnale. #Keygap #Crypto #Trading #PerTe'''
+
+    contenuto = f'''--- SCHEDA PUBBLICAZIONE KEYGAP ---
+Data: {data_ora}
+
+[PER FACEBOOK - COPIA DA QUI]
+{fb_desc}
+
+------------------------------------
+
+[PER TIKTOK - COPIA DA QUI]
+{tt_desc}
 ---
 '''
     
     with open(path, 'w') as f:
         f.write(contenuto)
-    print(f'✅ Report con Hashtag salvato in: {path}')
+    print(f'✅ Scheda completa salvata in: {path}')
 
 genera_e_salva_report()
