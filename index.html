@@ -10,155 +10,46 @@
     <style>
         :root { --neon: #00f2ff; --bg: #010204; }
         body { background: var(--bg); color: #fff; font-family: 'Rajdhani', sans-serif; margin: 0; }
-        
-        .neon-glow {
-            color: var(--neon);
-            text-shadow: 0 0 20px rgba(0, 242, 255, 1);
-            font-family: 'Orbitron', sans-serif;
-        }
-
-        .main-title {
-            font-size: clamp(2.5rem, 6vw, 5.5rem);
-            font-weight: 900;
-            color: var(--neon);
-            text-shadow: 0 0 40px rgba(0, 242, 255, 0.5);
-            line-height: 0.85;
-            margin: 50px 0;
-            font-style: italic;
-        }
-
-        /* CARD PROFESSIONALE QUANT */
-        .quant-panel {
-            background: #0a0b0d;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-top: 2px solid var(--neon);
-            border-radius: 10px;
-            box-shadow: 0 50px 80px rgba(0,0,0,0.9);
-            position: relative;
-        }
-
-        .btn-command {
-            border: 1px solid var(--neon);
-            color: var(--neon);
-            padding: 20px 45px;
-            border-radius: 4px; /* Taglio netto più professionale */
-            font-family: 'Orbitron', sans-serif;
-            font-size: 15px;
-            font-weight: 900;
-            letter-spacing: 4px;
-            transition: 0.3s;
-            background: rgba(0, 242, 255, 0.02);
-            text-transform: uppercase;
-        }
-        .btn-command:hover { 
-            background: var(--neon); 
-            color: #000; 
-            box-shadow: 0 0 50px rgba(0, 242, 255, 0.3);
-            transform: scale(1.05);
-        }
-        
-        .heatmap-box {
-            height: 550px;
-            width: 100%;
-            background: #131722;
-            border-radius: 0 0 10px 10px;
-            padding: 5px;
-        }
-
-        .panel-header {
-            padding: 15px 25px;
-            background: rgba(255,255,255,0.02);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        .neon-glow { color: var(--neon); text-shadow: 0 0 20px rgba(0, 242, 255, 1); font-family: 'Orbitron', sans-serif; }
+        .main-title { font-size: clamp(2rem, 6vw, 5.5rem); font-weight: 900; color: var(--neon); text-shadow: 0 0 40px rgba(0, 242, 255, 0.5); line-height: 0.9; margin: 50px 0; font-style: italic; }
+        .quant-panel { background: #0a0b0d; border: 1px solid rgba(255, 255, 255, 0.05); border-top: 2px solid var(--neon); border-radius: 10px; box-shadow: 0 50px 80px rgba(0,0,0,0.9); }
+        .btn-command { border: 1px solid var(--neon); color: var(--neon); padding: 20px 45px; border-radius: 4px; font-family: 'Orbitron', sans-serif; font-size: 15px; font-weight: 900; letter-spacing: 4px; transition: 0.3s; background: rgba(0, 242, 255, 0.02); }
+        .btn-command:hover { background: var(--neon); color: #000; box-shadow: 0 0 50px rgba(0, 242, 255, 0.3); transform: scale(1.05); }
+        .heatmap-box { height: 550px; width: 100%; background: #131722; padding: 5px; }
+        .panel-header { padding: 15px 25px; background: rgba(255,255,255,0.02); border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; }
     </style>
 </head>
 <body class="p-6 md:p-12">
-
     <nav class="flex justify-between items-center max-w-[1700px] mx-auto mb-16 border-b border-white/5 pb-8">
-        <div>
-            <h1 class="neon-glow text-4xl tracking-[15px]">Keygap</h1>
-            <p class="text-[10px] tracking-[8px] opacity-40 uppercase mt-2">Institutional Trading Desk</p>
-        </div>
-        <div class="text-right">
-            <div id="clock" class="neon-glow text-2xl">00:00:00</div>
-            <div class="text-[9px] text-white/20 uppercase tracking-[4px]">UTC+1 Stable</div>
-        </div>
+        <div><h1 class="neon-glow text-4xl tracking-[15px]">Keygap</h1><p class="text-[10px] tracking-[8px] opacity-40 uppercase">Institutional Trading Desk</p></div>
+        <div class="text-right"><div id="clock" class="neon-glow text-2xl">00:00:00</div></div>
     </nav>
-
     <div class="max-w-[1700px] mx-auto text-center">
-        <h2 class="main-title uppercase">"TEST DI CONNESSIONE: Il bot Keygap è operativo. Automazione Crontab verificata alle ore 18:35."</h2>
-        
+        <h2 class="main-title uppercase italic">"TEST DI CONNESSIONE: Il bot Keygap è operativo. Automazione Crontab verificata alle ore 18:35."</h2>
         <div class="flex flex-wrap justify-center gap-8 mb-20">
             <button onclick="change('BINANCE:BTCUSDT')" class="btn-command">Bitcoin</button>
             <button onclick="change('TVC:GOLD')" class="btn-command">Gold</button>
             <button onclick="change('INDEX:SPX')" class="btn-command">S&P 500</button>
             <button onclick="change('FX:EURUSD')" class="btn-command">EUR / USD</button>
         </div>
-
-        <div class="quant-panel mb-16 overflow-hidden">
-            <div class="panel-header">
-                <span class="text-[10px] tracking-[4px] uppercase font-bold text-white/50">Market_Core_Visualizer</span>
-                <div class="flex gap-2"><div class="w-2 h-2 rounded-full bg-red-500"></div><div class="w-2 h-2 rounded-full bg-yellow-500"></div><div class="w-2 h-2 rounded-full bg-green-500"></div></div>
-            </div>
-            <div class="h-[750px]">
-                <iframe id="mainChart" src="https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT&theme=dark&style=3" width="100%" height="100%" frameborder="0"></iframe>
-            </div>
+        <div class="quant-panel mb-16">
+            <div class="panel-header"><span class="text-[10px] uppercase font-bold text-white/50">Market_Core_Visualizer</span></div>
+            <div class="h-[750px]"><iframe id="mainChart" src="https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT&theme=dark&style=3" width="100%" height="100%" frameborder="0"></iframe></div>
         </div>
-
-        <div class="quant-panel mb-20 text-left">
-            <div class="panel-header">
-                <span class="neon-glow text-[11px] tracking-[5px]">Global Asset Distribution Heatmap</span>
-                <span class="text-[9px] opacity-30">V.3.1_ENHANCED</span>
-            </div>
+        <div class="quant-panel mb-20">
+            <div class="panel-header"><span class="neon-glow text-[11px] tracking-[5px]">Global Asset Distribution Heatmap</span></div>
             <div class="heatmap-box">
                 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-crypto-coins-heatmap.js" async>
-                {
-                  "symbolGroups": [
-                    {
-                      "name": "Market Leaders",
-                      "symbols": [
-                        { "name": "BINANCE:BTCUSDT" }, { "name": "BINANCE:ETHUSDT" },
-                        { "name": "BINANCE:SOLUSDT" }, { "name": "BINANCE:BNBUSDT" },
-                        { "name": "BINANCE:XRPUSDT" }, { "name": "BINANCE:ADAUSDT" },
-                        { "name": "BINANCE:DOTUSDT" }, { "name": "BINANCE:LINKUSDT" },
-                        { "name": "BINANCE:MATICUSDT" }, { "name": "BINANCE:AVAXUSDT" },
-                        { "name": "BINANCE:TRXUSDT" }, { "name": "BINANCE:LTCUSDT" }
-                      ]
-                    }
-                  ],
-                  "colorTheme": "dark",
-                  "isTransparent": false,
-                  "hasSymbolTooltip": true,
-                  "locale": "it",
-                  "displayMode": "regular",
-                  "width": "100%",
-                  "height": "100%"
-                }
+                { "symbolGroups": [ { "name": "Market Leaders", "symbols": [ { "name": "BINANCE:BTCUSDT" }, { "name": "BINANCE:ETHUSDT" }, { "name": "BINANCE:SOLUSDT" }, { "name": "BINANCE:BNBUSDT" }, { "name": "BINANCE:XRPUSDT" }, { "name": "BINANCE:ADAUSDT" }, { "name": "BINANCE:DOTUSDT" }, { "name": "BINANCE:LINKUSDT" } ] } ], "colorTheme": "dark", "isTransparent": false, "hasSymbolTooltip": true, "locale": "it", "displayMode": "regular", "width": "100%", "height": "100%" }
                 </script>
             </div>
         </div>
-
     </div>
-
-    <footer class="text-center py-20 border-t border-white/5 opacity-20">
-        <div class="neon-glow text-[10px] tracking-[20px]">Keygap Terminal // 20260305000626</div>
-    </footer>
-
+    <footer class="text-center py-20 border-t border-white/5 opacity-20"><div class="neon-glow text-[10px] tracking-[20px]">Keygap Terminal // 20260305030235</div></footer>
     <script>
-        function updateClock() {
-            document.getElementById('clock').textContent = new Date().toLocaleTimeString('it-IT', { hour12: false });
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
-
-        function change(s) {
-            const f = document.getElementById('mainChart');
-            f.src = `https://s.tradingview.com/widgetembed/?symbol=${s}&theme=dark&style=3&v=${Date.now()}`;
-        }
+        function updateClock() { document.getElementById('clock').textContent = new Date().toLocaleTimeString('it-IT', { hour12: false }); }
+        setInterval(updateClock, 1000); updateClock();
+        function change(s) { document.getElementById('mainChart').src = `https://s.tradingview.com/widgetembed/?symbol=${s}&theme=dark&style=3&v=${Date.now()}`; }
     </script>
-    <script src="https://pl28819682.effectivegatecpm.com/07/47/37/074737f2d1be0f3c0e9de0585a695fd7.js"></script>
 </body>
 </html>
