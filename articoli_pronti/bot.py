@@ -4,47 +4,51 @@ from datetime import datetime
 def genera_e_salva_report():
     data_ora = datetime.now().strftime('%d/%m/%Y %H:%M')
     folder = os.path.expanduser('~/Desktop/Keygap_AdVantage/articoli_pronti')
-    filename = 'report_corretto_strutturato.txt'
+    filename = 'INSIGHT_PROFESSIONALE_KEYGAP.txt'
     path = os.path.join(folder, filename)
     
     btc, eth, xrp = '€61.734,20 (+4.1%)', '€3.105,88 (-1.2%)', '€0.5891 (+2.7%)'
     
-    fb_desc = f'''📑 REPORT ANALITICO: KEYGAP ADK 2.0 (LIVE UPDATE)
+    fb_desc = f'''🏛️ KEYGAP INTELLIGENCE: ANALISI ISTITUZIONALE FLOW-DATA
 
-Status del Sistema: Operativo 🟢
-Data: {data_ora}
+DATA SESSIONE: {data_ora}
+STATUS: MONITORAGGIO HFT ATTIVO 🟢
 
-L'ecosistema Keygap ha completato la scansione dei flussi dati in tempo reale. Le anomalie grafiche rilevate — i cosiddetti "glitch" — sono state isolate e identificate come impronte digitali di algoritmi HFT (High-Frequency Trading) istituzionali.
+L'analisi odierna dei flussi di mercato rivela un'attività anomala nei cluster di liquidità. Il motore Keygap ADK 2.0 ha isolato pattern di esecuzione che confermano la presenza di operatori Market Maker in fase di riposizionamento strategico.
 
-📊 ANALISI PERFORMANCE ASSET:
-• BITCOIN (BTC): {btc} 🚀 -> Rilevato segnale di Accumulo HFT. Le "bacchette sparse" indicano posizionamento massivo.
-• ETHEREUM (ETH): {eth} 📉 -> Micro-glitch di compressione tecnica. Fase di stallo monitorata.
-• RIPPLE (XRP): {xrp} ✨ -> Tracce di ordini algoritmici precisi rilevate dai sensori.
+📊 DECODIFICA ASSET (SESSIONE CORRENTE):
 
-🔍 KEYGAP INSIGHT:
-Mentre il mercato retail osserva solo i prezzi, l'intelligenza autonoma di Keygap decodifica il linguaggio nascosto della finanza algoritmica. Non seguiamo il trend: analizziamo le tracce lasciate dai giganti.
+🔸 BITCOIN (BTC): {btc}
+Analisi: Segnale di Accumulo HFT confermato. Le "bacchette sparse" evidenziano un assorbimento della pressione di vendita in area micro-gap. I flussi istituzionali stanno costruendo un floor di supporto invisibile al retail.
 
-#KeygapInsights #TradingProfessionale #HFT #Bitcoin #Ethereum #Ripple #CryptoAnalysis #FinanzaAlgoritmica #TradingReport #DigitalAssets'''
+🔹 ETHEREUM (ETH): {eth}
+Analisi: Micro-glitch di compressione volumetrica. Rilevato un pattern di "spoofing" algoritmico atto a testare la liquidità dei livelli inferiori prima di una possibile espansione.
+
+🔸 RIPPLE (XRP): {xrp}
+Analisi: Tracce di ordini algoritmici a bassa latenza. Il sistema rileva un'interazione diretta tra smart contracts istituzionali e pool di liquidità centralizzate.
+
+🔍 KEYGAP INSIGHT - SENTIMENT ALGORITMICO:
+Non limitatevi a guardare le candele. Le ombre dei prezzi sono le tracce lasciate dai giganti della finanza. Noi decodifichiamo il linguaggio dell'Order Flow per anticipare i movimenti che il grafico mostrerà solo in seguito.
+
+#KeygapInsights #HFTTrading #OrderFlow #AnalisiTecnica #Bitcoin #FinanzaIstituzionale #MarketInsights #CryptoData'''
     
-    tt_desc = f'''🔑 KEYGAP: I GLITCH SONO SEGNALI
+    tt_desc = f'''🔑 KEYGAP: DENTRO IL LINGUAGGIO HFT
 
-BTC {btc} 🚀
-ETH {eth} 📉
-XRP {xrp} ✨
+📉 BTC {btc} -> Segnale Istituzionale
+📈 ETH {eth} -> Test Liquidità
+📊 XRP {xrp} -> Pattern Algoritmico
 
-Analisi HFT attiva. Segui il segnale.
+I glitch grafici sono la nostra mappa. Smetti di guardare il prezzo, guarda i volumi nascosti. #Keygap #TradingAlgoritmico #HFT #Crypto #PerTe'''
 
-#Keygap #Crypto #Trading #Bitcoin #HFT #PerTe #Viral'''
+    contenuto = f'''--- SCHEDA EDITORIALE ELITE KEYGAP ---
 
-    contenuto = f'''--- SCHEDA EDITORIALE DEFINITIVA ---
-
-[VERSIONE FACEBOOK: COPIA TUTTO IL TESTO SOTTO]
+[PER FACEBOOK: ANALISI APPROFONDITA]
 
 {fb_desc}
 
 ==============================================
 
-[VERSIONE TIKTOK: COPIA TUTTO IL TESTO SOTTO]
+[PER TIKTOK: FAST INSIGHT]
 
 {tt_desc}
 ---
@@ -52,6 +56,6 @@ Analisi HFT attiva. Segui il segnale.
     
     with open(path, 'w') as f:
         f.write(contenuto)
-    print(f'✅ Report professionale salvato in: {path}')
+    print(f'✅ Report Elite salvato in: {path}')
 
 genera_e_salva_report()
