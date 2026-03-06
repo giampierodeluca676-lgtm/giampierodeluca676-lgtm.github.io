@@ -3,119 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>KEYGAP | TITAN TERMINAL</title>
+    <title>KEYGAP | TITAN</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Rajdhani:wght@700&display=swap" rel="stylesheet">
     <style>
         :root { --neon: #00f2ff; --bg: #010204; }
-        body { background: var(--bg); color: #fff; font-family: 'Rajdhani', sans-serif; margin: 0; min-height: 100vh; overflow: hidden; display: flex; flex-direction: column; }
+        body { background: var(--bg); color: #fff; font-family: 'Rajdhani', sans-serif; margin: 0; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
         .neon-text { color: var(--neon); text-shadow: 0 0 20px rgba(0, 242, 255, 0.8); font-family: 'Orbitron'; }
-        
-        /* Layout Terminale Unico */
-        .terminal-container { flex: 1; display: grid; grid-template-columns: 1fr; gap: 0; }
-        @media (min-width: 1024px) { .terminal-container { grid-template-columns: 3.2fr 0.8fr; } }
-
-        /* Grafico Moderno */
-        .chart-viewport { position: relative; background: #000; border-right: 2px solid rgba(0,242,255,0.2); }
-        
-        /* Sidebar Intelligence */
-        .intelligence-sidebar { background: #05070a; border-left: 2px solid var(--neon); padding: 30px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: -10px 0 30px rgba(0,0,0,0.9); }
-
-        .data-bit { border-bottom: 1px solid rgba(0,242,255,0.1); padding: 15px 0; }
-        .data-label { font-size: 10px; tracking: 4px; color: rgba(0,242,255,0.5); font-family: 'Orbitron'; }
-        .data-value { font-size: 20px; font-weight: 900; display: block; }
-
-        .btn-action {
-            background: rgba(0,242,255,0.05); border: 1px solid var(--neon); color: var(--neon);
-            padding: 20px; font-family: 'Orbitron'; font-weight: 900; transition: 0.3s;
-            cursor: pointer; text-transform: uppercase; margin-bottom: 10px;
-        }
-        .btn-action:hover { background: var(--neon); color: #000; box-shadow: 0 0 30px var(--neon); }
+        header { padding: 15px; border-bottom: 3px solid var(--neon); background: #000; flex-shrink: 0; }
+        .titan-font { font-size: clamp(2rem, 8vw, 4.5rem); font-weight: 900; line-height: 1; text-transform: uppercase; white-space: nowrap; }
+        .main-layout { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+        @media (min-width: 1024px) { .main-layout { flex-direction: row; } }
+        .chart-container { flex: 2.5; background: #000; position: relative; border-bottom: 2px solid var(--neon); }
+        @media (min-width: 1024px) { .chart-container { border-bottom: none; border-right: 2px solid var(--neon); } }
+        .sidebar { flex: 0.7; background: #05070a; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; }
+        .btn-titan { background: transparent; border: 2px solid var(--neon); color: var(--neon); font-family: 'Orbitron'; font-weight: 900; padding: 20px; cursor: pointer; text-transform: uppercase; width: 100%; font-size: 14px; transition: 0.2s; }
+        .btn-titan:hover { background: var(--neon); color: #000; box-shadow: 0 0 30px var(--neon); }
+        .status-row { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(0,242,255,0.2); padding: 15px 0; font-family: 'Orbitron'; font-size: 14px; }
     </style>
 </head>
 <body>
-
-    <header class="bg-black p-6 border-b-2 border-cyan-400 flex justify-between items-center">
-        <div class="neon-text text-5xl font-black italic tracking-tighter">KEYGAP</div>
-        <div class="text-right">
-            <div id="date" class="text-xs opacity-50 font-bold">--/--/----</div>
-            <div id="clock" class="text-3xl font-black neon-text">00:00:00</div>
+    <header class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="neon-text text-6xl italic tracking-tighter">KEYGAP</div>
+        <div class="flex flex-row gap-6 md:gap-12 items-center">
+            <div id="date" class="titan-font text-white">--/--/--</div>
+            <div id="clock" class="titan-font neon-text">00:00:00</div>
         </div>
     </header>
-
-    <div class="terminal-container">
-        <div class="chart-viewport">
-            <div id="TV_ENGINE_FINAL" style="width: 100%; height: 100%;"></div>
-        </div>
-
-        <div class="intelligence-sidebar">
-            <div>
-                <div class="data-bit">
-                    <span class="data-label">CORE_STATUS</span>
-                    <span id="m-status" class="data-value text-green-400 animate-pulse uppercase">Online</span>
-                </div>
-                <div class="data-bit">
-                    <span class="data-label">LIVE_PRICE</span>
-                    <span id="m-price" class="data-value">---</span>
-                </div>
-                <div class="data-bit">
-                    <span class="data-label">ALGO_SIGNAL</span>
-                    <span id="m-signal" class="data-value">---</span>
-                </div>
+    <div class="main-layout">
+        <div class="chart-container" id="CHART_ZONE"><div id="TV_FINAL" style="width:100%;height:100%;"></div></div>
+        <div class="sidebar">
+            <div class="status-panel">
+                <div class="status-row"><span>STATUS</span><span id="m-status" class="neon-text">ONLINE</span></div>
+                <div class="status-row"><span>PRICE</span><span id="m-price" class="text-white font-bold">---</span></div>
+                <div class="status-row"><span>SIGNAL</span><span id="m-signal" class="text-white font-bold">---</span></div>
             </div>
-
-            <div class="flex flex-col">
-                <button onclick="bootAsset('BITSTAMP:BTCUSD')" class="btn-action">Bitcoin_Core</button>
-                <button onclick="bootAsset('TVC:GOLD')" class="btn-action">Gold_Titan</button>
-                <button onclick="window.location.href='editoriale.html'" class="btn-action border-white text-white">Editoriale ►</button>
+            <div class="flex flex-col gap-3">
+                <div class="grid grid-cols-2 gap-3">
+                    <button onclick="loadChart('BITSTAMP:BTCUSD')" class="btn-titan">BTC</button>
+                    <button onclick="loadChart('TVC:GOLD')" class="btn-titan">GOLD</button>
+                </div>
+                <button onclick="window.location.href='editoriale.html'" class="btn-titan border-white text-white">EDITORIALE ►</button>
             </div>
         </div>
     </div>
-
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script>
-        // Funzione per distruggere e ricreare il grafico (Fix Oro)
-        function bootAsset(symbol) {
-            document.getElementById('TV_ENGINE_FINAL').innerHTML = ''; // Pulizia totale
+        function loadChart(s) {
+            document.getElementById('TV_FINAL').innerHTML = '';
             new TradingView.widget({
-                "autosize": true,
-                "symbol": symbol,
-                "interval": "D",
-                "timezone": "Europe/Rome",
-                "theme": "dark",
-                "style": "3", // STILE AREA: Il più moderno, niente linee schiacciate
-                "locale": "it",
-                "container_id": "TV_ENGINE_FINAL",
-                "enable_publishing": false,
-                "hide_top_toolbar": false,
-                "backgroundColor": "#010204",
-                "gridColor": "rgba(0, 242, 255, 0.05)",
-                "save_image": false
+                "autosize": true, "symbol": s, "interval": "D", "timezone": "Europe/Rome",
+                "theme": "dark", "style": "8", "locale": "it", "container_id": "TV_FINAL",
+                "hide_side_toolbar": false, "allow_symbol_change": true, "backgroundColor": "#010204",
+                "overrides": { "mainSeriesProperties.priceAxisProperties.autoScale": true }
             });
         }
-
-        async function syncData() {
+        async function sync() {
             try {
                 const r = await fetch('./market_status.json?v=' + Date.now());
                 const d = await r.json();
-                document.getElementById('m-status').textContent = d.status || "SYNCING";
+                document.getElementById('m-status').textContent = d.status || "ONLINE";
                 document.getElementById('m-price').textContent = d.price || "---";
                 document.getElementById('m-signal').textContent = d.signal || "---";
             } catch (e) {}
         }
-
-        function updateClock() {
-            const now = new Date();
-            document.getElementById('clock').textContent = now.toLocaleTimeString('it-IT');
-            document.getElementById('date').textContent = now.toLocaleDateString('it-IT');
+        function update() {
+            const n = new Date();
+            document.getElementById('clock').textContent = n.toLocaleTimeString('it-IT');
+            document.getElementById('date').textContent = n.toLocaleDateString('it-IT');
         }
-
-        setInterval(updateClock, 1000);
-        setInterval(syncData, 5000);
-        updateClock();
-        syncData();
-        // Caricamento ritardato per fregare la cache
-        setTimeout(() => { bootAsset('BITSTAMP:BTCUSD'); }, 500);
+        setInterval(update, 1000); setInterval(sync, 5000);
+        update(); sync(); setTimeout(() => { loadChart('BITSTAMP:BTCUSD'); }, 500);
     </script>
 </body>
 </html>
