@@ -1,10 +1,1 @@
-{
-    "status": "OPERATIVO",
-    "price": "$ 68,232.76",
-    "signal": "MONITORING",
-    "last_update": "16:15:00",
-    "last_post_title": "⚠️ ANALISI QUANTISTICA: BTC Rompe i Massimi",
-    "last_post_url": "https://giampierodeluca676.blogspot.com/",
-    "ticker": "BTC/USD: $ 68.232 • ETH/USD: $ 3.850 • KEYGAP SIGNAL: MONITORING • ",
-    "reliability": "98%"
-}
+{"status": "OPERATIVO", "price": "$ 67,756.32", "signal": "MONITORING"}
