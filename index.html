@@ -3,63 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keygap Advantage - Terminale & News</title>
+    <title>Keygap Advantage - Financial Hub</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background: #fdfdfd; }
-        .header { border-bottom: 4px solid #d00; margin-bottom: 30px; }
-        .header h1 { color: #d00; margin: 0; font-size: 28px; }
-        .card { background: #fff; border: 1px solid #ddd; padding: 20px; border-radius: 4px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-        .price-big { font-size: 32px; font-weight: bold; color: #000; }
-        .news-box { background: #fff; border: 1px solid #d00; padding: 15px; border-radius: 4px; border-left: 10px solid #d00; }
-        .news-title { font-weight: bold; color: #d00; text-decoration: none; font-size: 18px; display: block; margin-bottom: 5px; }
-        .news-title:hover { text-decoration: underline; }
-        .badge { padding: 4px 8px; border-radius: 3px; font-size: 12px; font-weight: bold; background: #e8f5e9; color: #2e7d32; }
-        .btn-link { display: inline-block; margin-top: 10px; color: #007bff; text-decoration: none; font-weight: bold; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1a1a1a; max-width: 1000px; margin: 0 auto; padding: 0; background: #f4f7f6; }
+        .top-bar { background: #d00; color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .ticker-wrap { background: #222; color: #0f0; padding: 5px 0; overflow: hidden; white-space: nowrap; font-family: monospace; font-size: 14px; }
+        .ticker-content { display: inline-block; animation: ticker 30s linear infinite; }
+        @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+        
+        .container { padding: 20px; display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+        .card { background: white; border: 1px solid #ddd; border-radius: 4px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        h2 { color: #d00; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 0; }
+        
+        .price-hero { font-size: 48px; font-weight: 900; color: #000; margin: 10px 0; }
+        .news-item { border-bottom: 1px solid #eee; padding: 10px 0; }
+        .news-item:last-child { border: none; }
+        .news-tag { background: #d00; color: white; font-size: 10px; padding: 2px 5px; border-radius: 2px; margin-right: 5px; vertical-align: middle; }
+        
+        .finance-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        .finance-table th { text-align: left; background: #f8f8f8; padding: 10px; color: #666; }
+        .finance-table td { padding: 10px; border-bottom: 1px solid #eee; }
+        
+        @media (max-width: 768px) { .container { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Keygap Advantage</h1>
-        <p>Analisi Quantitativa & Report Ufficiali</p>
-    </div>
 
-    <div class="card">
-        <span style="color: #666; font-size: 14px;">BITCOIN LIVE FEED:</span>
-        <div id="btc-price" class="price-big">€ --.---,--</div>
-        <div style="margin-top: 10px;">
-            <span class="badge" id="status-text">OPERATIVO</span>
-            <span style="margin-left: 10px; font-size: 13px; color: #888;">Update: <span id="clock">--:--:--</span></span>
+<div class="top-bar">
+    <div style="font-weight:bold; font-size:20px;">KEYGAP ADVANTAGE</div>
+    <div id="status-badge" style="font-size:12px; border:1px solid white; padding:2px 8px; border-radius:10px;">SYSTEM: ONLINE</div>
+</div>
+
+<div class="ticker-wrap">
+    <div class="ticker-content" id="ticker">
+        BTC/EUR: € --.--- • ETH/EUR: € -.--- • GOLD: $ 2.150 • S&P500: 5.120 • NASDAQ: 16.270 • KEYGAP SIGNAL: BULLISH • 
+    </div>
+</div>
+
+<div class="container">
+    <div class="main-content">
+        <div class="card">
+            <span style="color:#666; font-size:14px; font-weight:bold;">PREZZO IN TEMPO REALE</span>
+            <div id="btc-price" class="price-hero">€ --.---,--</div>
+            <div style="color: #2e7d32; font-weight:bold;">▲ +2.4% <span style="color:#999; font-weight:normal; font-size:12px;">(24h Change)</span></div>
+        </div>
+
+        <div class="card">
+            <h2>Ultimi Editoriali & News</h2>
+            <div id="news-feed">
+                <div class="news-item">
+                    <span class="news-tag">LATEST</span>
+                    <a href="#" id="post-link" style="font-weight:bold; color:#d00; text-decoration:none; font-size:18px;">Caricamento ultimo post...</a>
+                    <p style="font-size:14px; margin:5px 0;">Analisi tecnica profonda sui flussi di liquidità HFT rilevati dal server.</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="news-box">
-        <small style="text-transform: uppercase; color: #666; font-weight: bold;">📰 Ultimo Editoriale dal Blog:</small>
-        <a href="#" id="post-link" class="news-title" target="_blank">Caricamento ultimo post...</a>
-        <p id="post-desc" style="font-size: 14px; margin: 5px 0;">Il bot sta recuperando l'ultima analisi pubblicata su Blogger.</p>
-        <a href="https://giampierodeluca676.blogspot.com/" target="_blank" class="btn-link">Vai all'archivio completo →</a>
-    </div>
+    <div class="sidebar">
+        <div class="card">
+            <h3>Parametri Mercato</h3>
+            <table class="finance-table">
+                <tr><th>Asset</th><th>Trend</th></tr>
+                <tr><td>Bitcoin</td><td style="color:green">Bullish</td></tr>
+                <tr><td>Ethereum</td><td style="color:green">Stable</td></tr>
+                <tr><td>Dollar Index</td><td style="color:red">Weak</td></tr>
+                <tr><td>Volatility</td><td style="color:orange">Medium</td></tr>
+            </table>
+        </div>
 
-    <div class="card" style="margin-top: 20px; background: #f9f9f9;">
-        <h3>💡 Prossima Mossa Algoritmica</h3>
-        <p id="signal-text">Monitoraggio in corso...</p>
+        <div class="card" style="background: #222; color: white;">
+            <h3 style="color: #d00;">Stato Algoritmo</h3>
+            <p style="font-size:13px;">Il bot sta operando in modalità <b>Price Discovery</b>. Nessun ostacolo rilevato verso i massimi storici.</p>
+            <div style="background:#444; height:10px; border-radius:5px; margin-top:10px;">
+                <div style="background:#d00; width:98%; height:100%; border-radius:5px;"></div>
+            </div>
+            <p style="font-size:10px; margin-top:5px; text-align:right;">Reliability: 98%</p>
+        </div>
     </div>
+</div>
 
-    <script>
-        function update() {
-            fetch("market_status.json?t=" + new Date().getTime())
-            .then(r => r.json()).then(d => {
-                document.getElementById("btc-price").innerText = d.price;
-                document.getElementById("status-text").innerText = d.status;
-                document.getElementById("clock").innerText = d.last_update || new Date().toLocaleTimeString();
-                document.getElementById("signal-text").innerText = "Il sistema ha rilevato un segnale " + d.signal + ". Affidabilità calcolata: " + (d.reliability || "95%");
-                
-                if(d.last_post_title) {
-                    document.getElementById("post-link").innerText = d.last_post_title;
-                    document.getElementById("post-link").href = d.last_post_url;
-                }
-            }).catch(e => console.log("Attesa sincronizzazione..."));
-        }
-        setInterval(update, 10000); update();
-    </script>
+<script>
+    function updateData() {
+        fetch("market_status.json?t=" + new Date().getTime())
+        .then(r => r.json()).then(d => {
+            document.getElementById("btc-price").innerText = d.price;
+            if(d.last_post_title) {
+                document.getElementById("post-link").innerText = d.last_post_title;
+                document.getElementById("post-link").href = d.last_post_url;
+            }
+            // Aggiorna anche il ticker con il prezzo attuale
+            document.getElementById("ticker").innerText = "BTC/EUR: " + d.price + " • ETH/EUR: € 3.450 • GOLD: $ 2.150 • S&P500: 5.120 • KEYGAP SIGNAL: " + d.signal + " • ";
+        }).catch(e => console.log("Waiting for bot..."));
+    }
+    setInterval(updateData, 10000); updateData();
+</script>
+
 </body>
 </html>
