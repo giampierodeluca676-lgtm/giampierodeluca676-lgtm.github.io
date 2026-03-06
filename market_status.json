@@ -1,10 +1,1 @@
-{
-    "status": "OPERATIVO",
-    "price": "\u20ac 87.420,10",
-    "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "16:40:58",
-    "last_post_title": "Update 16:40:58",
-    "last_post_url": "https://giampierodeluca676.blogspot.com/",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 STATUS: OK \u2022 UPDATE: 16:40:58 \u2022 "
-}
+{"status": "OPERATIVO", "price": "$ 67,575.27", "signal": "MONITORING"}
