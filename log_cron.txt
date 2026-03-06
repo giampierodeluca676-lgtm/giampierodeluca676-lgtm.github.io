@@ -27719,3 +27719,8 @@ To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.
  2 files changed, 6 insertions(+), 2 deletions(-)
 [main fb6f5a6] 🚀 System Update 00:22:30
  1 file changed, 2 insertions(+)
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   be7eea6..6413977  main -> main
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 3736b34a6367675d8c36d26dba56908e0a554af5 but expected be7eea67c1cb0aae7a6d937d40068d243c342aa7)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
