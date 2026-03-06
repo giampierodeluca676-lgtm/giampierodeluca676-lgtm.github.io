@@ -8,7 +8,7 @@ from google.auth.transport.requests import Request
 import pickle
 
 # CONFIGURAZIONE
-BLOG_ID = '8423232148419688536'
+BLOG_ID = '2744764892823107807'
 SCOPES = ['https://www.googleapis.com/auth/blogger']
 # PERCORSO INTERNO ALLA CARTELLA DEL PROGETTO
 LOCAL_REPORT_DIR = os.path.join(os.getcwd(), "Report_Finanziari")
