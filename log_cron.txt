@@ -11,3 +11,16 @@ Traceback (most recent call last):
     with open(client_secrets_file, "r") as json_file:
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 FileNotFoundError: [Errno 2] No such file or directory: 'client_secrets.json'
+Traceback (most recent call last):
+  File "/home/linuxlite/Desktop/Keygap_AdVantage/bot.py", line 59, in <module>
+    publish_post()
+  File "/home/linuxlite/Desktop/Keygap_AdVantage/bot.py", line 28, in publish_post
+    service = get_service()
+              ^^^^^^^^^^^^^
+  File "/home/linuxlite/Desktop/Keygap_AdVantage/bot.py", line 21, in get_service
+    flow = InstalledAppFlow.from_client_secrets_file('client_secrets.json', SCOPES)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/linuxlite/.local/lib/python3.12/site-packages/google_auth_oauthlib/flow.py", line 198, in from_client_secrets_file
+    with open(client_secrets_file, "r") as json_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'client_secrets.json'
