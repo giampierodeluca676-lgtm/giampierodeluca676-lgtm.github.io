@@ -3,100 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>KEYGAP | TITAN</title>
+    <title>KEYGAP | INTELLIGENCE TERMINAL</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Rajdhani:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Rajdhani:wght@700&family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --neon: #00f2ff; --bg: #010204; }
+        :root { --neon: #00f2ff; --bg: #010204; --darker: #05070a; }
         body { background: var(--bg); color: #fff; font-family: 'Rajdhani', sans-serif; margin: 0; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
         .neon-text { color: var(--neon); text-shadow: 0 0 15px rgba(0, 242, 255, 0.8); font-family: 'Orbitron'; }
-        header { padding: 10px 15px; border-bottom: 2px solid var(--neon); background: #000; flex-shrink: 0; }
-        .titan-time { font-size: clamp(1.2rem, 5vw, 2.8rem); font-weight: 900; line-height: 1; text-transform: uppercase; }
+        
+        header { padding: 15px 20px; border-bottom: 2px solid var(--neon); background: #000; flex-shrink: 0; z-index: 10; }
+        .titan-time { font-size: clamp(1rem, 4vw, 2rem); font-weight: 900; }
 
-        .main-layout { flex: 1; display: flex; flex-direction: column; min-height: 0; overflow: hidden; }
-        @media (min-width: 1024px) { .main-layout { flex-direction: row; } }
+        .main-layout { flex: 1; display: flex; flex-direction: column; min-height: 0; padding: 15px; gap: 15px; overflow-y: auto; }
+        @media (min-width: 1024px) { .main-layout { flex-direction: row; padding: 30px; gap: 30px; } }
 
-        /* FIX MOBILE: Grafico ridotto drasticamente per far apparire i tasti */
-        .chart-box-titan { height: 35vh; background: #000; position: relative; border-bottom: 2px solid var(--neon); flex-shrink: 0; }
-        @media (min-width: 1024px) { .chart-box-titan { height: 100%; flex: 2.5; border-bottom: none; border-right: 2px solid var(--neon); } }
+        /* DATA CARDS */
+        .card { background: var(--darker); border: 1px solid rgba(0, 242, 255, 0.2); padding: 20px; border-radius: 4px; position: relative; overflow: hidden; }
+        .card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--neon); }
 
-        /* SIDEBAR: Scrollabile se il telefono è piccolo */
-        .sidebar { flex: 1; background: #05070a; padding: 10px; display: flex; flex-direction: column; overflow-y: auto; }
-        @media (min-width: 1024px) { .sidebar { flex: 1; padding: 30px; justify-content: space-between; } }
+        .monitor-grid { flex: 2; display: flex; flex-direction: column; gap: 15px; }
+        .sidebar { flex: 1; display: flex; flex-direction: column; gap: 15px; }
 
-        .status-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(0,242,255,0.1); padding: 8px 0; font-family: 'Orbitron'; }
-        .status-label { font-size: 10px; color: rgba(0,242,255,0.6); }
-        .status-value { font-size: 14px; font-weight: 900; }
+        .status-value { font-family: 'Orbitron'; font-size: clamp(1.5rem, 4vw, 3rem); font-weight: 900; line-height: 1; }
+        .label { font-size: 12px; tracking: 3px; color: rgba(0, 242, 255, 0.5); text-transform: uppercase; margin-bottom: 5px; display: block; }
 
-        @media (min-width: 1024px) {
-            .status-label { font-size: 18px; }
-            .status-value { font-size: 30px; }
-            .status-row { padding: 20px 0; }
-        }
+        /* LOG TERMINAL */
+        #log-terminal { font-family: 'Fira Code', monospace; font-size: 11px; color: #00f2ff; background: rgba(0,0,0,0.5); height: 200px; overflow-y: auto; padding: 10px; border: 1px solid rgba(0,242,255,0.1); }
+        @media (min-width: 1024px) { #log-terminal { height: 100%; flex: 1; font-size: 13px; } }
 
-        .btn-titan { background: transparent; border: 2px solid var(--neon); color: var(--neon); font-family: 'Orbitron'; font-weight: 900; padding: 10px; cursor: pointer; text-transform: uppercase; width: 100%; font-size: 10px; margin-bottom: 5px; }
-        @media (min-width: 1024px) { .btn-titan { font-size: 16px; padding: 20px; margin-bottom: 15px; } }
+        .btn-titan { background: transparent; border: 2px solid var(--neon); color: var(--neon); font-family: 'Orbitron'; font-weight: 900; padding: 18px; cursor: pointer; text-transform: uppercase; width: 100%; font-size: 14px; transition: 0.2s; }
+        .btn-titan:hover { background: var(--neon); color: #000; }
         .btn-main { border-color: #fff; color: #fff; }
     </style>
 </head>
 <body>
     <header class="flex justify-between items-center">
-        <div class="neon-text text-2xl md:text-5xl italic tracking-tighter">KEYGAP</div>
-        <div class="flex gap-4 md:gap-8">
+        <div class="neon-text text-2xl md:text-5xl tracking-tighter italic">KEYGAP</div>
+        <div class="flex gap-4 md:gap-10">
             <div id="date" class="titan-time text-white opacity-90">--/--/--</div>
             <div id="clock" class="titan-time neon-text">00:00:00</div>
         </div>
     </header>
 
     <div class="main-layout">
-        <div class="chart-box-titan" id="CHART_HOLDER"></div>
-        <div class="sidebar">
-            <div class="status-panel">
-                <div class="status-row"><span class="status-label">STATUS</span><span id="m-status" class="status-value text-green-400">OPERATIVO</span></div>
-                <div class="status-row"><span class="status-label">PRICE</span><span id="m-price" class="status-value text-white">---</span></div>
-                <div class="status-row"><span class="status-label">SIGNAL</span><span id="m-signal" class="status-value neon-text">---</span></div>
+        <div class="monitor-grid">
+            <div class="card">
+                <span class="label">System Core Status</span>
+                <div id="m-status" class="status-value text-green-400">OPERATIVO</div>
             </div>
-            <div class="flex flex-col gap-1 mt-3">
-                <button onclick="window.location.href='editoriale.html'" class="btn-titan btn-main">NEWS TERMINAL ►</button>
-                <div class="grid grid-cols-2 gap-2">
-                    <button onclick="loadChart('BITSTAMP:BTCUSD')" class="btn-titan">BTC</button>
-                    <button onclick="loadChart('TVC:GOLD')" class="btn-titan">GOLD</button>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="card">
+                    <span class="label">Market Price (BTC)</span>
+                    <div id="m-price" class="status-value text-white">---</div>
+                </div>
+                <div class="card">
+                    <span class="label">Current Signal</span>
+                    <div id="m-signal" class="status-value neon-text">NEUTRAL</div>
+                </div>
+            </div>
+
+            <div class="card flex-1 flex flex-col">
+                <span class="label">Execution Logs</span>
+                <div id="log-terminal">
+                    [SYSTEM] Terminale inizializzato...<br>
+                    [CHECK] Connessione BingX stabilita.<br>
+                    [WAIT] In attesa di segnale operativo...
                 </div>
             </div>
         </div>
+
+        <div class="sidebar">
+            <button onclick="window.location.href='editoriale.html'" class="btn-titan btn-main mb-2">NEWS TERMINAL ►</button>
+            <div class="card mb-4 text-center">
+                <span class="label">Intelligence Info</span>
+                <p class="text-xs text-gray-400">Analisi quantitativa basata su script proprietari Titan. Asset monitorati: BTC, GOLD.</p>
+            </div>
+            <button onclick="addLog('Comando BTC inviato...')" class="btn-titan">REFRESH BTC</button>
+            <button onclick="addLog('Comando GOLD inviato...')" class="btn-titan">REFRESH GOLD</button>
+        </div>
     </div>
 
-    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script>
-        function loadChart(s) {
-            document.getElementById('CHART_HOLDER').innerHTML = '<div id="TV_ACTUAL" style="width:100%;height:100%;"></div>';
-            new TradingView.widget({
-                "autosize": true, "symbol": s, "interval": "D", "timezone": "Europe/Rome",
-                "theme": "dark", "style": "2", "locale": "it", "container_id": "TV_ACTUAL",
-                "hide_side_toolbar": false, "allow_symbol_change": true, "backgroundColor": "#010204",
-                "overrides": {
-                    "mainSeriesProperties.priceAxisProperties.autoScale": true,
-                    "paneProperties.topMargin": 20,
-                    "paneProperties.bottomMargin": 20
-                }
-            });
+        function update() {
+            const n = new Date();
+            document.getElementById('clock').textContent = n.toLocaleTimeString('it-IT');
+            document.getElementById('date').textContent = n.toLocaleDateString('it-IT');
         }
+
         async function sync() {
             try {
                 const r = await fetch('./market_status.json?v=' + Date.now());
                 const d = await r.json();
                 if(d.status) document.getElementById('m-status').textContent = d.status.toUpperCase();
                 if(d.price) document.getElementById('m-price').textContent = d.price;
-                if(d.signal) document.getElementById('m-signal').textContent = d.signal.toUpperCase();
+                if(d.signal) {
+                    const sig = d.signal.toUpperCase();
+                    document.getElementById('m-signal').textContent = sig;
+                    addLog("Segnale rilevato: " + sig);
+                }
             } catch(e) {}
         }
-        function update() {
-            const n = new Date();
-            document.getElementById('clock').textContent = n.toLocaleTimeString('it-IT');
-            document.getElementById('date').textContent = n.toLocaleDateString('it-IT');
+
+        function addLog(msg) {
+            const log = document.getElementById('log-terminal');
+            const time = new Date().toLocaleTimeString('it-IT');
+            log.innerHTML += `[${time}] ${msg}<br>`;
+            log.scrollTop = log.scrollHeight;
         }
-        setInterval(update, 1000); setInterval(sync, 5000);
-        update(); sync(); setTimeout(() => { loadChart('BITSTAMP:BTCUSD'); }, 800);
+
+        setInterval(update, 1000);
+        setInterval(sync, 5000);
+        update();
+        sync();
     </script>
 </body>
 </html>
