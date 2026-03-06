@@ -1,0 +1,5 @@
+Per fermare tutto: sudo systemctl stop blogger-bot.service
+
+Per farlo ripartire: sudo systemctl start blogger-bot.service
+
+Per disattivarlo all'avvio del PC: sudo systemctl disable blogger-bot.service
