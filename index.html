@@ -3,164 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>KEYGAP | TITAN</title>
+    <title>KEYGAP | TITAN TERMINAL</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
     <style>
-        :root { --neon: #00f2ff; --bg: #05070a; }
-        body { background: var(--bg); color: #fff; font-family: 'Rajdhani', sans-serif; margin: 0; min-height: 100vh; background-image: radial-gradient(circle at 50% 0%, #111a24 0%, transparent 70%); display: flex; flex-direction: column; overflow-x: hidden; }
-        .neon-text { color: var(--neon); text-shadow: 0 0 10px rgba(0, 242, 255, 0.5); font-family: 'Orbitron', sans-serif; }
+        :root { --neon: #00f2ff; --bg: #020406; --glass: rgba(15, 23, 42, 0.8); }
+        body { background: var(--bg); color: #fff; font-family: 'Rajdhani', sans-serif; margin: 0; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
         
-        /* Effetto Rilievo 3D */
-        .card-rilievo {
-            background: linear-gradient(145deg, #0e141c, #0b0f15);
-            border-radius: 12px;
-            border: 1px solid rgba(0, 242, 255, 0.15);
-            box-shadow: 8px 8px 16px rgba(0,0,0,0.8), -4px -4px 12px rgba(255,255,255,0.03), inset 1px 1px 2px rgba(255,255,255,0.05);
-            overflow: hidden; display: flex; flex-direction: column;
+        /* Terminal Header */
+        .term-header { background: #000; border-bottom: 2px solid var(--neon); padding: 10px 20px; box-shadow: 0 0 20px rgba(0,242,255,0.2); z-index: 50; }
+        .neon-title { font-family: 'Orbitron'; color: var(--neon); text-shadow: 0 0 10px var(--neon); letter-spacing: 5px; }
+
+        /* Glass Graph Container */
+        .graph-master-container {
+            flex: 1; position: relative; margin: 15px; border-radius: 15px;
+            background: var(--glass); border: 1px solid rgba(0, 242, 255, 0.2);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 0 30px rgba(0, 242, 255, 0.05);
+            backdrop-filter: blur(10px); display: flex; flex-direction: column;
         }
 
-        .header-rilievo { background: #080c11; box-shadow: 0 4px 15px rgba(0,0,0,0.6); border-bottom: 2px solid rgba(0, 242, 255, 0.3); }
+        .graph-top-bar {
+            padding: 10px 20px; background: rgba(0,0,0,0.4); border-bottom: 1px solid rgba(0,242,255,0.1);
+            display: flex; justify-content: space-between; align-items: center; border-radius: 15px 15px 0 0;
+        }
 
-        .status-row { border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; font-family: 'Orbitron'; font-size: 13px; transition: background 0.3s; }
-        .status-row:hover { background: rgba(0, 242, 255, 0.05); }
-        .value-box { background: #000; padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(0,242,255,0.2); box-shadow: inset 0 0 5px rgba(0,0,0,0.8); }
+        .status-dot { width: 8px; height: 8px; background: #00ff88; border-radius: 50%; box-shadow: 0 0 10px #00ff88; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
 
-        .btn-glow { background: linear-gradient(90deg, transparent, rgba(0,242,255,0.1), transparent); border: 1px solid var(--neon); color: var(--neon); font-family: 'Orbitron'; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s ease; cursor: pointer; }
-        .btn-glow:hover, .btn-glow:active { background: var(--neon); color: #000; box-shadow: 0 0 20px var(--neon); transform: scale(1.02); }
+        /* Bot Side Card - Floating */
+        .bot-overlay {
+            position: absolute; bottom: 20px; right: 20px; width: 280px;
+            background: rgba(0,0,0,0.9); border: 1px solid var(--neon); padding: 15px;
+            border-radius: 10px; z-index: 100; box-shadow: 0 0 30px rgba(0,0,0,1);
+        }
+
+        .btn-action {
+            background: rgba(0,242,255,0.1); border: 1px solid var(--neon); color: var(--neon);
+            font-family: 'Orbitron'; font-size: 10px; padding: 10px; width: 100%; transition: 0.3s;
+        }
+        .btn-action:hover { background: var(--neon); color: #000; box-shadow: 0 0 20px var(--neon); }
     </style>
 </head>
-<body class="p-4 lg:p-6 flex flex-col gap-6">
+<body>
 
-    <header class="header-rilievo p-4 lg:p-6 rounded-xl flex flex-col lg:flex-row justify-between items-center gap-4 relative overflow-hidden flex-shrink-0">
-        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-50"></div>
-        <div class="neon-text text-4xl lg:text-5xl font-black italic tracking-widest text-center lg:text-left">KEYGAP<span class="text-white opacity-50 font-light">_MAIN</span></div>
-        <div class="flex gap-6 lg:gap-8 text-right bg-black/40 p-3 rounded-lg border border-white/5 shadow-inner">
-            <div>
-                <div class="text-[9px] text-cyan-500 tracking-[3px] font-bold mb-1 uppercase">Date_Sys</div>
-                <div id="date" class="text-2xl lg:text-3xl font-bold text-gray-200">--/--/----</div>
+    <header class="term-header flex justify-between items-center">
+        <div class="neon-title text-2xl font-black italic">KEYGAP_TITAN</div>
+        <div class="flex gap-6 items-center">
+            <div class="text-right">
+                <div id="date" class="text-xs text-gray-500 font-bold uppercase tracking-tighter">--/--/----</div>
+                <div id="clock" class="text-xl font-bold tracking-tighter">00:00:00</div>
             </div>
-            <div>
-                <div class="text-[9px] text-cyan-500 tracking-[3px] font-bold mb-1 uppercase">Time_Sys</div>
-                <div id="clock" class="neon-text text-3xl lg:text-4xl font-bold">00:00:00</div>
-            </div>
+            <div class="status-dot"></div>
         </div>
     </header>
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 flex-1 min-h-0">
+    <main class="graph-master-container">
+        <div class="graph-top-bar">
+            <div class="flex items-center gap-4">
+                <span class="text-[10px] font-bold tracking-[3px] text-cyan-500">ENGINE://STREAMING_LIVE</span>
+                <span id="active-symbol" class="bg-cyan-900/50 px-2 py-1 rounded text-[10px] text-white font-mono">BTCUSD</span>
+            </div>
+            <div class="flex gap-2">
+                <button onclick="switchSymbol('BITSTAMP:BTCUSD')" class="text-[9px] border border-white/20 px-2 py-1 hover:border-cyan-400 transition">BTC</button>
+                <button onclick="switchSymbol('TVC:GOLD')" class="text-[9px] border border-white/20 px-2 py-1 hover:border-cyan-400 transition">GOLD</button>
+            </div>
+        </div>
         
-        <div class="lg:col-span-8 card-rilievo min-h-[450px] lg:h-full relative">
-            <div class="bg-[#05080c] p-3 flex justify-between items-center border-b border-cyan-900/50">
-                <div class="neon-text text-[10px] tracking-[4px] font-black">LIVE_CHART_ANALYSIS</div>
-                <div class="text-xs text-gray-500 font-mono" id="current-asset">BITSTAMP:BTCUSD</div>
+        <div id="tradingview_widget" class="flex-1"></div>
+
+        <div class="bot-overlay">
+            <div class="flex justify-between items-center mb-4 border-b border-white/10 pb-2">
+                <span class="text-[10px] font-bold tracking-widest text-cyan-500">BOT_CORE_V3</span>
+                <span id="m-status" class="text-[9px] text-green-400 font-bold">READY</span>
             </div>
-            <div class="w-full flex-1 relative" style="height: calc(100% - 40px);">
-                <div id="tradingview_chart" class="absolute top-0 left-0 w-full h-full"></div>
+            <div class="grid grid-cols-2 gap-4 text-[11px] mb-4 font-mono">
+                <div><span class="text-gray-500">PRICE:</span><br><span id="m-price" class="text-white">---</span></div>
+                <div><span class="text-gray-500">SIGNAL:</span><br><span id="m-signal" class="text-white">---</span></div>
             </div>
+            <button onclick="window.location.href='editoriale.html'" class="btn-action">GO TO NEWS TERMINAL ►</button>
         </div>
-
-        <div class="lg:col-span-4 flex flex-col gap-6 lg:h-full">
-            
-            <div class="card-rilievo flex-shrink-0">
-                <div class="bg-gradient-to-r from-cyan-900/20 to-transparent p-3 border-b border-cyan-500/30">
-                    <div class="neon-text text-[11px] tracking-[5px] font-black">KEYGAP_BOT_STATUS</div>
-                </div>
-                <div class="p-2">
-                    <div class="status-row">
-                        <span class="text-gray-400">STATUS</span>
-                        <span id="m-status" class="value-box text-yellow-400 font-bold text-[10px] animate-pulse">RICERCA SEGNALE...</span>
-                    </div>
-                    <div class="status-row">
-                        <span class="text-gray-400">PRICE</span>
-                        <span id="m-price" class="value-box text-white">---</span>
-                    </div>
-                    <div class="status-row">
-                        <span class="text-gray-400">SIGNAL</span>
-                        <span id="m-signal" class="value-box text-white">---</span>
-                    </div>
-                    <div class="status-row">
-                        <span class="text-gray-400">ACCURACY</span>
-                        <span id="m-reliability" class="value-box text-white">---</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-rilievo p-4 flex-shrink-0">
-                <div class="text-[9px] text-gray-400 tracking-[3px] font-bold mb-3 uppercase">Seleziona Asset</div>
-                <div class="grid grid-cols-2 gap-3">
-                    <button onclick="switchSymbol('BITSTAMP:BTCUSD', 'BITCOIN')" class="btn-glow py-3 text-xs font-bold rounded">BITCOIN</button>
-                    <button onclick="switchSymbol('TVC:GOLD', 'GOLD')" class="btn-glow py-3 text-xs font-bold rounded">GOLD</button>
-                </div>
-            </div>
-
-            <button onclick="window.location.href='editoriale.html'" class="card-rilievo btn-glow flex-1 min-h-[80px] flex items-center justify-center text-lg lg:text-xl font-black rounded-xl">
-                ACCESSO INTELLIGENCE TERMINAL ►
-            </button>
-
-        </div>
-    </div>
+    </main>
 
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script>
-        // Sincronizzazione Dati
-        async function loadKeygapData() {
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('clock').textContent = now.toLocaleTimeString('it-IT');
+            document.getElementById('date').textContent = now.toLocaleDateString('it-IT');
+        }
+        
+        async function loadBotData() {
             try {
                 const r = await fetch('./market_status.json?v=' + Date.now());
-                if (!r.ok) throw new Error("File Missing");
                 const d = await r.json();
-                const s = document.getElementById('m-status');
-                
-                s.textContent = d.status || "N/A";
-                s.classList.remove("animate-pulse", "text-yellow-400", "text-red-500");
-                s.classList.add("text-green-400", "shadow-[0_0_10px_rgba(74,222,128,0.5)]");
-
+                document.getElementById('m-status').textContent = d.status || "IDLE";
                 document.getElementById('m-price').textContent = d.price || "---";
                 document.getElementById('m-signal').textContent = d.signal || "---";
-                document.getElementById('m-reliability').textContent = d.reliability || "---";
-            } catch (e) { 
-                document.getElementById('m-status').textContent = "IN ATTESA DEL BOT...";
-                document.getElementById('m-status').className = "value-box text-red-500 font-bold text-[10px] animate-pulse";
-            }
+            } catch (e) { console.log("Syncing..."); }
         }
 
-        // TradingView Inizializzazione
-        let tvWidget = null;
-        function initChart(s = 'BITSTAMP:BTCUSD') {
-            document.getElementById('tradingview_chart').innerHTML = ''; // Pulisce il contenitore
-            tvWidget = new TradingView.widget({
+        function initChart(symbol = 'BITSTAMP:BTCUSD') {
+            new TradingView.widget({
                 "autosize": true,
-                "symbol": s,
+                "symbol": symbol,
                 "interval": "D",
                 "timezone": "Europe/Rome",
                 "theme": "dark",
                 "style": "1",
                 "locale": "it",
+                "toolbar_bg": "#f1f3f6",
                 "enable_publishing": false,
-                "backgroundColor": "#05080c",
-                "gridColor": "rgba(0, 242, 255, 0.05)",
-                "hide_top_toolbar": false, /* SBLOCCATA: Ora puoi zoomare e cambiare candele */
-                "hide_legend": false,
-                "save_image": false,
-                "container_id": "tradingview_chart"
+                "hide_side_toolbar": false,
+                "allow_symbol_change": true,
+                "container_id": "tradingview_widget",
+                "studies": ["MASimple@tv-basicstudies"],
+                "disabled_features": ["header_screenshot", "header_symbol_search"],
+                "overrides": {
+                    "paneProperties.background": "#020406",
+                    "paneProperties.vertGridProperties.color": "rgba(0, 242, 255, 0.02)",
+                    "paneProperties.horzGridProperties.color": "rgba(0, 242, 255, 0.02)"
+                }
             });
+            document.getElementById('active-symbol').textContent = symbol.split(':')[1];
         }
 
-        function switchSymbol(symbolId, symbolName) { 
-            initChart(symbolId); 
-            document.getElementById('current-asset').textContent = symbolId;
-        }
+        function switchSymbol(s) { initChart(s); }
 
-        // Orologio
-        function updateDateTime() { 
-            const now = new Date();
-            document.getElementById('clock').textContent = now.toLocaleTimeString('it-IT');
-            document.getElementById('date').textContent = now.toLocaleDateString('it-IT');
-        }
-
-        // Avvio Motori
-        setInterval(updateDateTime, 1000); 
-        setInterval(loadKeygapData, 5000);
-        updateDateTime(); initChart(); loadKeygapData();
+        setInterval(updateTime, 1000);
+        setInterval(loadBotData, 5000);
+        updateTime();
+        initChart();
+        loadBotData();
     </script>
 </body>
 </html>
