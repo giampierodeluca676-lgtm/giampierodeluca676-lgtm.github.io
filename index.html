@@ -114,7 +114,7 @@
 
 <script>
     function update() {
-        fetch("market_status.json?t=" + new Date().getTime())
+        fetch("./market_status.json?nocache=" + Math.random())
         .then(r => r.json()).then(d => {
             document.getElementById("btc-price").innerText = d.price;
             document.getElementById("ticker").innerText = d.ticker || "MERCATI ATTIVI...";
