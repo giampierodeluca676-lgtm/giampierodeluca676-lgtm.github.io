@@ -28,7 +28,7 @@
     <header class="flex flex-col gap-4">
         <div class="neon-text text-5xl font-black italic tracking-tighter">KEYGAP</div>
         <div class="flex justify-between items-center border-t border-white/10 pt-4">
-            <div id="date" class="text-3xl font-bold">--/--/----</div>
+            <div id="date" class="text-3xl font-bold text-white">--/--/----</div>
             <div id="clock" class="neon-text text-4xl font-bold">00:00:00</div>
         </div>
     </header>
@@ -37,7 +37,7 @@
         <div class="side-card">
             <div class="mb-6">
                 <div class="neon-text text-[10px] mb-4 tracking-[4px]">MARKET_STATUS_REPORT</div>
-                <div class="status-row"><span>STATUS</span><span id="m-status" class="text-green-400 font-bold">CARICAMENTO...</span></div>
+                <div class="status-row"><span>STATUS</span><span id="m-status" class="text-green-400 font-bold">---</span></div>
                 <div class="status-row"><span>PRICE</span><span id="m-price" class="font-bold">---</span></div>
                 <div class="status-row"><span>SIGNAL</span><span id="m-signal" class="font-bold">---</span></div>
                 <div class="status-row"><span>ACCURACY</span><span id="m-reliability" class="font-bold">---</span></div>
@@ -46,7 +46,7 @@
                 <button onclick="switchSymbol('BITSTAMP:BTCUSD')" class="btn-glow text-center">BITCOIN</button>
                 <button onclick="switchSymbol('TVC:GOLD')" class="btn-glow text-center">GOLD</button>
             </div>
-            <button onclick="window.location.href='editoriale.html'" class="btn-glow w-full text-lg py-5 font-black">NEWS TERMINAL</button>
+            <button onclick="window.location.href='editoriale.html'" class="btn-glow w-full text-lg py-5 font-black text-center">NEWS TERMINAL</button>
         </div>
     </div>
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
@@ -54,16 +54,18 @@
         async function loadData() {
             try {
                 const r = await fetch('./market_status.json?v=' + Date.now());
-                if (!r.ok) throw new Error();
                 const d = await r.json();
-                document.getElementById('m-status').textContent = d.status || "N/D";
+                document.getElementById('m-status').textContent = d.status || "N/A";
                 document.getElementById('m-price').textContent = d.price || "---";
                 document.getElementById('m-signal').textContent = d.signal || "---";
                 document.getElementById('m-reliability').textContent = d.reliability || "---";
-            } catch (e) { console.log("In attesa del file JSON..."); }
+            } catch (e) { console.log("Waiting data..."); }
         }
         function initChart(s = 'BITSTAMP:BTCUSD') {
-            new TradingView.widget({"autosize": true, "symbol": s, "interval": "D", "theme": "dark", "container_id": "tradingview_chart", "hide_side_toolbar": true});
+            new TradingView.widget({
+                "autosize": true, "symbol": s, "interval": "D", "timezone": "Europe/Rome",
+                "theme": "dark", "style": "1", "locale": "it", "container_id": "tradingview_chart", "hide_side_toolbar": true
+            });
         }
         function switchSymbol(s) { initChart(s); }
         function updateTime() {
