@@ -20644,3 +20644,14 @@ To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.
 To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
  ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 4a3bde5490fc4afccecfa8509d161758a0c28fa7 but expected 89c836a72f73cf34921158f64ce220d51d0abdc0)
 error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+fatal: Unable to create '/home/linuxlite/Desktop/Keygap_AdVantage/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+[main c932f17] 🚀 System Update 22:40:35
+ 2 files changed, 9 insertions(+), 2 deletions(-)
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   4a3bde5..c932f17  main -> main
