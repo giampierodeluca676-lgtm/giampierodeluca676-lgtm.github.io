@@ -10,35 +10,24 @@
         :root { --neon: #00f2ff; --bg: #010204; }
         body { background: var(--bg); color: #fff; font-family: 'Rajdhani', sans-serif; margin: 0; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
         .neon-text { color: var(--neon); text-shadow: 0 0 15px rgba(0, 242, 255, 0.8); font-family: 'Orbitron'; }
-        
         header { padding: 10px 20px; border-bottom: 2px solid var(--neon); background: #000; flex-shrink: 0; }
-        .titan-time { font-size: clamp(1.5rem, 5vw, 3.2rem); font-weight: 900; line-height: 1; text-transform: uppercase; }
-
+        .titan-time { font-size: clamp(1.5rem, 5vw, 3rem); font-weight: 900; line-height: 1; text-transform: uppercase; }
         .main-layout { flex: 1; display: flex; flex-direction: column; min-height: 0; }
         @media (min-width: 1024px) { .main-layout { flex-direction: row; } }
-
         .chart-container { height: 42vh; background: #000; position: relative; border-bottom: 2px solid var(--neon); flex-shrink: 0; }
         @media (min-width: 1024px) { .chart-container { height: 100%; flex: 2.5; border-bottom: none; border-right: 2px solid var(--neon); } }
-
-        .sidebar { flex: 1; background: #05070a; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; overflow-y: auto; }
-        @media (min-width: 1024px) { .sidebar { flex: 1; padding: 30px; } }
-
-        /* DATI CALIBRATI PC */
+        .sidebar { flex: 1; background: #05070a; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; overflow-y: auto; }
         .status-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(0,242,255,0.1); padding: 10px 0; font-family: 'Orbitron'; }
-        .status-label { font-size: 11px; color: rgba(0,242,255,0.6); tracking: 2px; }
+        .status-label { font-size: 11px; color: rgba(0,242,255,0.6); }
         .status-value { font-size: 15px; font-weight: 900; }
-
         @media (min-width: 1024px) {
-            .status-row { padding: 25px 0; }
-            .status-label { font-size: 18px; tracking: 4px; }
-            .status-value { font-size: 32px; }
+            .status-label { font-size: 18px; }
+            .status-value { font-size: 30px; }
+            .status-row { padding: 20px 0; }
         }
-
         .btn-titan { background: transparent; border: 2px solid var(--neon); color: var(--neon); font-family: 'Orbitron'; font-weight: 900; padding: 12px; cursor: pointer; text-transform: uppercase; width: 100%; font-size: 11px; margin-bottom: 6px; }
-        @media (min-width: 1024px) { .btn-titan { font-size: 16px; padding: 22px; margin-bottom: 15px; } }
-        
-        .btn-main { border-color: #fff; color: #fff; font-size: 14px; }
-        @media (min-width: 1024px) { .btn-main { font-size: 24px; padding: 30px; } }
+        @media (min-width: 1024px) { .btn-titan { font-size: 16px; padding: 20px; } }
+        .btn-main { border-color: #fff; color: #fff; }
     </style>
 </head>
 <body>
@@ -49,28 +38,14 @@
             <div id="clock" class="titan-time neon-text">00:00:00</div>
         </div>
     </header>
-
     <div class="main-layout">
-        <div class="chart-container" id="CHART_HOLDER">
-            <div id="TV_FINAL" style="width:100%;height:100%;"></div>
-        </div>
-
+        <div class="chart-container" id="CHART_HOLDER"><div id="TV_FINAL" style="width:100%;height:100%;"></div></div>
         <div class="sidebar">
             <div class="status-panel">
-                <div class="status-row">
-                    <span class="status-label">STATUS</span>
-                    <span id="m-status" class="status-value text-green-400">OPERATIVO</span>
-                </div>
-                <div class="status-row">
-                    <span class="status-label">PRICE</span>
-                    <span id="m-price" class="status-value text-white">---</span>
-                </div>
-                <div class="status-row">
-                    <span class="status-label">SIGNAL</span>
-                    <span id="m-signal" class="status-value neon-text">---</span>
-                </div>
+                <div class="status-row"><span class="status-label">STATUS</span><span id="m-status" class="status-value text-green-400">OPERATIVO</span></div>
+                <div class="status-row"><span class="status-label">PRICE</span><span id="m-price" class="status-value text-white">---</span></div>
+                <div class="status-row"><span class="status-label">SIGNAL</span><span id="m-signal" class="status-value neon-text">---</span></div>
             </div>
-
             <div class="flex flex-col gap-1 mt-4">
                 <button onclick="window.location.href='editoriale.html'" class="btn-titan btn-main">NEWS TERMINAL ►</button>
                 <div class="grid grid-cols-2 gap-2">
@@ -80,17 +55,19 @@
             </div>
         </div>
     </div>
-
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script>
         function loadChart(s) {
-            const container = document.getElementById('CHART_HOLDER');
-            container.innerHTML = '<div id="TV_FINAL" style="width:100%;height:100%;"></div>';
+            document.getElementById('CHART_HOLDER').innerHTML = '<div id="TV_FINAL" style="width:100%;height:100%;"></div>';
             new TradingView.widget({
                 "autosize": true, "symbol": s, "interval": "D", "timezone": "Europe/Rome",
-                "theme": "dark", "style": "3", "locale": "it", "container_id": "TV_FINAL",
+                "theme": "dark", "style": "1", "locale": "it", "container_id": "TV_FINAL",
                 "hide_side_toolbar": false, "allow_symbol_change": true, "backgroundColor": "#010204",
-                "overrides": { "mainSeriesProperties.priceAxisProperties.autoScale": true }
+                "overrides": {
+                    "mainSeriesProperties.priceAxisProperties.autoScale": true,
+                    "paneProperties.topMargin": 30,
+                    "paneProperties.bottomMargin": 30
+                }
             });
         }
         async function sync() {
@@ -100,7 +77,7 @@
                 if(d.status) document.getElementById('m-status').textContent = d.status.toUpperCase();
                 if(d.price) document.getElementById('m-price').textContent = d.price;
                 if(d.signal) document.getElementById('m-signal').textContent = d.signal.toUpperCase();
-            } catch (e) {}
+            } catch(e) {}
         }
         function update() {
             const n = new Date();
