@@ -3,51 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keygap Advantage</title>
+    <title>Keygap Advantage | Financial Terminal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @keyframes scroll { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-        .ticker-wrap { background: #000; color: #3b82f6; padding: 10px 0; overflow: hidden; border-bottom: 1px solid #1e40af; }
-        .ticker-move { display: inline-block; white-space: nowrap; animation: scroll 30s linear infinite; font-family: monospace; }
+        .ticker-wrap { background: #000; color: #3b82f6; padding: 10px 0; overflow: hidden; border-bottom: 1px solid #1e40af; z-index: 50; position: sticky; top: 0; }
+        .ticker-move { display: inline-block; white-space: nowrap; animation: scroll 40s linear infinite; font-family: monospace; }
         .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(59, 130, 246, 0.2); }
+        .widget-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: #3b82f6; margin-bottom: 10px; font-weight: bold; }
     </style>
 </head>
-<body class="bg-black text-white font-sans">
+<body class="bg-black text-white font-sans selection:bg-blue-500">
 
     <div class="ticker-wrap">
-        <div class="ticker-move" id="ticker-text">CONNESSO AD ADSTERRA • STATUS: LIVE • MARKET DATA ACTIVE • KEYGAP ADVANTAGE • </div>
+        <div class="ticker-move" id="ticker-text">KEYGAP ADVANTAGE TERMINAL • MARKET DATA LIVE • CRYPTO FLOW ACTIVE • ADSTERRA PARTNER • </div>
     </div>
 
-    <div class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-        <h1 class="text-3xl font-black tracking-tighter text-blue-600 italic">KEYGAP <span class="text-white">ADV</span></h1>
+    <div class="p-6 flex justify-between items-center max-w-[1400px] mx-auto">
+        <div>
+            <h1 class="text-4xl font-black tracking-tighter text-blue-600 italic">KEYGAP <span class="text-white font-normal text-2xl">ADVANTAGE</span></h1>
+        </div>
         <div class="text-right">
-            <p id="live-clock" class="text-3xl font-mono font-bold text-white">00:00:00</p>
-            <p class="text-[10px] text-blue-500 uppercase tracking-widest font-bold">Live System Time</p>
+            <p id="live-clock" class="text-3xl font-mono font-bold leading-none">00:00:00</p>
+            <p class="text-[10px] text-blue-500 uppercase font-bold mt-1">Global Market Time</p>
         </div>
     </div>
 
-    <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-        <div class="glass p-4 rounded-xl text-center">
-            <p class="text-[10px] uppercase text-gray-500">Prezzo BTC</p>
-            <p id="price" class="text-xl font-bold text-white">--.---</p>
+    <div class="max-w-[1400px] mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        <div class="glass p-4 rounded-xl">
+            <p class="widget-title">BTC/EUR Rate</p>
+            <p id="price" class="text-2xl font-bold">--.---</p>
         </div>
-        <div class="glass p-4 rounded-xl text-center">
-            <p class="text-[10px] uppercase text-gray-500">Segnale</p>
-            <p id="signal" class="text-xl font-bold text-green-400">---</p>
+        <div class="glass p-4 rounded-xl">
+            <p class="widget-title">AI Prediction</p>
+            <p id="signal" class="text-2xl font-bold text-green-400">---</p>
         </div>
-        <div class="glass p-4 rounded-xl text-center">
-            <p class="text-[10px] uppercase text-gray-500">Affidabilità</p>
-            <p id="reliability" class="text-xl font-bold text-blue-400">--%</p>
+        <div class="glass p-4 rounded-xl">
+            <p class="widget-title">Volatility Index</p>
+            <p id="reliability" class="text-2xl font-bold text-blue-400">--%</p>
         </div>
-        <div class="glass p-4 rounded-xl text-center">
-            <p class="text-[10px] uppercase text-gray-500">Ultimo Sync</p>
-            <p id="bot-update" class="text-xl font-mono text-gray-400">--:--</p>
+        <div class="glass p-4 rounded-xl">
+            <p class="widget-title">System Status</p>
+            <p class="text-2xl font-bold text-white">OPERATIONAL</p>
         </div>
     </div>
 
-    <div class="max-w-6xl mx-auto px-4 pb-10">
-        <div class="glass rounded-3xl overflow-hidden shadow-2xl" style="height: 500px;">
-            <div id="tv-widget" style="height: 100%;"></div>
+    <div class="max-w-[1400px] mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-6 pb-10">
+        
+        <div class="lg:col-span-3 space-y-6">
+            <div class="glass p-4 rounded-2xl h-[400px]">
+                <p class="widget-title">Market Heatmap</p>
+                <div class="tradingview-widget-container" style="height: calc(100% - 30px);">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-crypto-coins-heatmap.js" async>
+                    {
+                      "dataSource": "crypto", "symbolGroups": [ { "name": "Coins", "symbols": [ { "name": "BINANCE:BTCUSDT" }, { "name": "BINANCE:ETHUSDT" }, { "name": "BINANCE:SOLUSDT" }, { "name": "BINANCE:BNBUSDT" } ] } ],
+                      "colorTheme": "dark", "hasTopBar": false, "isTransparent": true, "width": "100%", "height": "100%"
+                    }
+                    </script>
+                </div>
+            </div>
+            <div class="glass p-4 rounded-2xl">
+                <p class="widget-title">Technical Gauge</p>
+                <div id="gauge-widget" style="height: 200px;">
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+                    { "interval": "1h", "width": "100%", "isTransparent": true, "height": "100%", "symbol": "BINANCE:BTCUSDT", "showIntervalTabs": true, "locale": "it", "colorTheme": "dark" }
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:col-span-6">
+            <div class="glass rounded-3xl overflow-hidden shadow-2xl h-[650px]">
+                <div id="main-terminal-chart" style="height: 100%;"></div>
+            </div>
+        </div>
+
+        <div class="lg:col-span-3 space-y-6">
+            <div class="glass p-4 rounded-2xl h-[650px] overflow-hidden">
+                <p class="widget-title">Live News Feed</p>
+                <div class="tradingview-widget-container" style="height: calc(100% - 30px);">
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+                    { "feedMode": "all_symbols", "colorTheme": "dark", "isTransparent": true, "displayMode": "regular", "width": "100%", "height": "100%", "locale": "it" }
+                    </script>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -58,24 +98,23 @@
         setInterval(() => { document.getElementById('live-clock').innerText = new Date().toLocaleTimeString('it-IT'); }, 1000);
 
         new TradingView.widget({
-            "autosize": true, "symbol": "BINANCE:BTCUSDT", "interval": "D",
-            "theme": "dark", "style": "1", "locale": "it",
-            "allow_symbol_change": true, "container_id": "tv-widget"
+            "autosize": true, "symbol": "BINANCE:BTCUSDT", "interval": "D", "timezone": "Europe/Rome",
+            "theme": "dark", "style": "1", "locale": "it", "enable_publishing": false,
+            "allow_symbol_change": true, "container_id": "main-terminal-chart"
         });
 
-        async function checkUpdates() {
+        async function updateTerminal() {
             try {
                 const r = await fetch('market_status.json?v=' + Date.now());
                 const d = await r.json();
                 document.getElementById('price').innerText = d.price || '---';
                 document.getElementById('signal').innerText = d.signal || '---';
                 document.getElementById('reliability').innerText = d.reliability || '--%';
-                document.getElementById('bot-update').innerText = d.last_update || '--:--';
                 if(d.ticker) document.getElementById('ticker-text').innerText = d.ticker.repeat(3);
             } catch (e) {}
         }
-        setInterval(checkUpdates, 10000);
-        checkUpdates();
+        setInterval(updateTerminal, 10000);
+        updateTerminal();
     </script>
 </body>
 </html>
