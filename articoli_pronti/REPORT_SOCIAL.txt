@@ -1,7 +1,7 @@
 📑 REPORT ANALITICO: KEYGAP ADK 2.0
 
 Status: Operativo 🟢
-Data: 05/03/2026 19:44
+Data: 06/03/2026 09:33
 
 L'ecosistema Keygap ha isolato impronte digitali di algoritmi HFT istituzionali.
 
