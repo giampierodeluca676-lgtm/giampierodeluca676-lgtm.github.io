@@ -2,104 +2,40 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>KEYGAP | FINANCIAL INTELLIGENCE</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keygap Advantage - Report HFT</title>
     <style>
-        @media (max-width: 768px) {
-            .dashboard-side { position: fixed; bottom: 0; left: 0; width: 100%; background: #000; padding: 15px; border-top: 2px solid var(--brand); z-index: 999; display: block; }
-            .dashboard-side .stat-card { background: transparent; border: none; padding: 0; }
-            .dashboard-side .btn-action { font-size: 1rem; padding: 18px; }
-            .main-container { padding-bottom: 100px; }
-            .main-container { padding: 8px; gap: 8px; }
-            .stat-card { padding: 10px; }
-            .value { font-size: 1.2rem; }
-            .chart-wrapper { height: 60vh !important; }
-            .log-box { height: 120px; font-size: 0.65rem; }
-            .btn-action { padding: 15px; font-size: 0.9rem; }
-            .logo { font-size: 1.1rem; }
-        }
-        :root { --brand: #3b82f6; --bg-dark: #0f172a; --panel: #1e293b; --text: #f8fafc; }
-        body { background: var(--bg-dark); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
-        
-        header { background: #000; padding: 12px 20px; border-bottom: 1px solid #334155; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
-        .logo { font-weight: 800; font-size: 1.5rem; letter-spacing: -0.05em; color: var(--brand); }
-        
-        .main-container { flex: 1; display: flex; flex-direction: column; padding: 12px; gap: 12px; overflow-y: auto; }
-        @media (min-width: 1024px) { .main-container { flex-direction: row; padding: 20px; gap: 20px; overflow: hidden; } }
-
-        .dashboard-main { flex: 2; display: flex; flex-direction: column; gap: 12px; }
-        .dashboard-side { flex: 1; display: flex; flex-direction: column; gap: 12px; }
-
-        .stat-card { background: var(--panel); border-radius: 8px; padding: 15px; border: 1px solid #334155; }
-        .label { font-size: 0.7rem; font-weight: 600; color: #94a3b8; text-transform: uppercase; margin-bottom: 2px; display: block; }
-        .value { font-size: 1.5rem; font-weight: 700; color: #fff; }
-        
-        /* BOX GRAFICO MODERNO */
-        .chart-wrapper { background: #000; border-radius: 8px; border: 1px solid #334155; height: 55vh; overflow: hidden; position: relative; }
-        @media (min-width: 1024px) { .chart-wrapper { flex: 1; height: auto; min-height: 0; } }
-
-        .log-box { background: #000; border-radius: 8px; padding: 12px; border: 1px solid #334155; height: 150px; overflow-y: auto; font-family: monospace; font-size: 0.75rem; }
-        @media (min-width: 1024px) { .log-box { height: 200px; } }
-
-        .btn-action { background: var(--brand); color: #fff; padding: 12px; border-radius: 6px; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; text-align: center; cursor: pointer; transition: 0.2s; border: none; width: 100%; }
-        .btn-action:hover { background: #2563eb; }
-        .btn-outline { background: transparent; border: 1px solid #334155; color: #f8fafc; margin-top: 5px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background: #f9f9f9; }
+        .card { background: #fff; border: 1px solid #ddd; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        h1 { color: #d00; border-bottom: 2px solid #d00; padding-bottom: 10px; }
+        .live-data { font-size: 1.2em; font-weight: bold; color: #007bff; }
+        .btn-interact { background: #f4f4f4; border: 1px solid #ccc; padding: 10px; cursor: pointer; border-radius: 4px; width: 100%; text-align: left; }
+        .btn-interact:hover { background: #eee; }
+        .status-badge { padding: 4px 8px; border-radius: 4px; font-size: 0.8em; background: #28a745; color: #fff; }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">KEYGAP <span class="text-white font-normal text-sm md:text-xl">ADVANTAGE</span></div>
-        <div class="text-right">
-            <div id="clock" class="text-lg font-bold leading-none">00:00:00</div>
-            <div id="date" class="text-[10px] text-slate-400">---</div>
-        </div>
-    </header>
-
-    <div class="main-container">
-        <div class="dashboard-main">
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-                <div class="stat-card">
-                    <span class="label">Status</span>
-                    <div id="m-status" class="text-green-400 font-bold text-sm">OPERATIONAL</div>
-                </div>
-                <div class="stat-card">
-                    <span class="label">BTC Price</span>
-                    <div id="m-price" class="font-bold text-sm md:text-lg">$ --,---.--</div>
-                </div>
-                <div class="stat-card col-span-2 md:col-span-1">
-                    <span class="label">Signal</span>
-                    <div id="m-signal" class="text-blue-400 font-bold text-sm">ANALYZING</div>
-                </div>
-            </div>
-
-            <div class="chart-wrapper" id="CHART_CONTAINER">
-                <div id="tradingview_chart" style="width:100%;height:100%;"></div>
-            </div>
-
-            </div>
-        </div>
-
-        <div class="dashboard-side">
-            <button onclick="window.location.href='editoriale.html'" class="btn-action">EDITORIALE NEWS ►</button>
-            <div class="stat-card">
-                <span class="label">Asset Selector</span>
-                <div class="grid grid-cols-2 gap-2 mt-2">
-                    <button onclick="loadChart('BITSTAMP:BTCUSD')" class="btn-action btn-outline">BTC</button>
-                    <button onclick="loadChart('TVC:GOLD')" class="btn-action btn-outline">GOLD</button>
-                </div>
-            </div>
-            <div class="stat-card flex-1 hidden lg:block">
-                <span class="label">Terminal Intelligence</span>
-                <p class="text-xs text-slate-400 mt-2">Dati aggregati da fonti istituzionali. Sincronizzazione automatica ogni 5 secondi.</p>
-            </div>
-        </div>
+    <h1>Keygap Advantage: Analisi Bitcoin</h1>
+    <div class="card">
+        <p><strong>Ultimo Prezzo:</strong> <span id="btc-price" class="live-data">Caricamento...</span></p>
+        <p><strong>Stato Sistema:</strong> <span id="status-text" class="status-badge">ONLINE</span></p>
+        <p><strong>Segnale:</strong> <span id="signal-text">In analisi...</span></p>
     </div>
-
-    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-<script>
-$(cat update_script.js)
-</script>
+    <div class="card">
+        <h3>Interazioni & Strumenti</h3>
+        <button class="btn-interact" onclick="location.reload()">🔄 Forza Aggiornamento Dati</button>
+        <p><small>I dati vengono aggiornati automaticamente ogni 10 secondi dal terminale HFT.</small></p>
+    </div>
+    <script>
+        function update() {
+            fetch("market_status.json?t=" + new Date().getTime())
+            .then(r => r.json()).then(d => {
+                document.getElementById("btc-price").innerText = d.price;
+                document.getElementById("status-text").innerText = d.status;
+                document.getElementById("signal-text").innerText = d.signal;
+            }).catch(e => console.log("In attesa del bot..."));
+        }
+        setInterval(update, 10000); update();
+    </script>
 </body>
 </html>
