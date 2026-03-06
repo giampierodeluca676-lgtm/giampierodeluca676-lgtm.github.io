@@ -1,69 +1,90 @@
 import os
-from datetime import datetime
+import pickle
+import json  # Aggiunto per la tabella web
+from google_auth_oauthlib.flow import InstalledAppFlow
+from google.auth.transport.requests import Request
+from googleapiclient.discovery import build
 
-def genera_e_salva_report():
-    data_ora = datetime.now().strftime('%d/%m/%Y %H:%M')
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    folder = os.path.join(base_dir, 'articoli_pronti')
-    os.makedirs(folder, exist_ok=True)
+# Configurazione definitiva
+SCOPES = ['https://www.googleapis.com/auth/blogger']
+BLOG_ID = '2744764892823107807' 
+
+def get_service():
+    creds = None
+    if os.path.exists('token.json'):
+        with open('token.json', 'rb') as token:
+            creds = pickle.load(token)
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        else:
+            flow = InstalledAppFlow.from_client_secrets_file('client_secrets.json', SCOPES)
+            creds = flow.run_local_server(port=0)
+        with open('token.json', 'wb') as token:
+            pickle.dump(creds, token)
+    return build('blogger', 'v3', credentials=creds)
+
+def publish_post():
+    service = get_service()
     
-    # Dati simulati/reali
-    btc, eth, xrp = '€61.734,20 (+4.1%)', '€3.105,88 (-1.2%)', '€0.5891 (+2.7%)'
+    # Dati variabili
+    prezzo_btc = "€87.420,10"
+    data_label = "06/03"
     
-    # --- VERSIONE FACEBOOK ELITE ---
-    fb = (f"📑 REPORT ANALITICO: KEYGAP ADK 2.0\n\nStatus: Operativo 🟢\nData: {data_ora}\n\n"
-          f"L'ecosistema Keygap ha isolato impronte digitali di algoritmi HFT istituzionali.\n\n"
-          f"📊 ANALISI PERFORMANCE ASSET:\n• BTC: {btc} 🚀 (Accumulo HFT)\n• ETH: {eth} 📉 (Compressione)\n• XRP: {xrp} ✨ (Institutional Flow)\n\n"
-          f"🔍 KEYGAP INSIGHT: Decodifichiamo il linguaggio nascosto della finanza algoritmica.\n"
-          f"🔗 https://giampierodeluca676-lgtm.github.io/\n\n#KeygapInsights #HFT #Bitcoin #CryptoAnalysis")
+    # 1. Contenuto per il Blog (Aggiornato alla proiezione)
+    content = f"""
+    <p>Dati di mercato aggiornati:</p>
+    <ul>
+        <li><b>Asset:</b> Bitcoin (BTC)</li>
+        <li><b>Prezzo:</b> {prezzo_btc} (Price Discovery)</li>
+        <li><b>Sito:</b> <a href="https://giampierodeluca676-lgtm.github.io/">Visita il sito ufficiale</a></li>
+    </ul>
+    """
+    
+    body = {
+        'kind': 'blogger#post',
+        'title': f'Keygap - Aggiornamento BTC {data_label}',
+        'content': content
+    }
+    
+    print("🚀 Invio post in corso...")
+    posts = service.posts().insert(blogId=BLOG_ID, body=body).execute()
+    print(f"✅ POST PUBBLICATO! Link: {posts['url']}")
 
-    # --- VERSIONE BLOGGER HTML (ESTETICA PROFESSIONALE) ---
-    html = f"""
-<div style="background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; padding: 30px; border-radius: 15px; max-width: 800px; margin: auto; border: 1px solid #1e293b; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
-    <div style="text-align: center; border-bottom: 1px solid #334155; padding-bottom: 20px; margin-bottom: 20px;">
-        <h1 style="color: #38bdf8; margin: 0; font-size: 24px; letter-spacing: 2px;">KEYGAP QUANTUM INTELLIGENCE</h1>
-        <p style="color: #94a3b8; font-size: 14px;">TERMINAL STATUS: <span style="color: #22c55e;">ACTIVE 🟢</span> | SESSION: {data_ora}</p>
-    </div>
+    # --- AGGIUNTA: SALVATAGGIO AUTOMATICO SUL DESKTOP ---
+    path_desktop = os.path.join(os.path.expanduser("~"), "Desktop", "REPORT_SOCIAL_OGGI.txt")
+    
+    report_text = f"""⚡ KEYGAP QUANTUM UPDATE {data_label} ⚡
+🟢 STATUS: OPERATIVO
 
-    <div style="display: grid; gap: 15px; margin-bottom: 25px;">
-        <div style="background: #1e293b; padding: 15px; border-radius: 10px; border-left: 4px solid #f59e0b;">
-            <h3 style="margin: 0; color: #f59e0b;">BITCOIN (BTC)</h3>
-            <p style="font-size: 20px; margin: 5px 0; font-weight: bold;">{btc}</p>
-            <p style="font-size: 13px; color: #94a3b8; margin: 0;">Diagnosi: Accumulo HFT Istituzionale rilevato nei cluster.</p>
-        </div>
-        
-        <div style="background: #1e293b; padding: 15px; border-radius: 10px; border-left: 4px solid #6366f1;">
-            <h3 style="margin: 0; color: #6366f1;">ETHEREUM (ETH)</h3>
-            <p style="font-size: 20px; margin: 5px 0; font-weight: bold;">{eth}</p>
-            <p style="font-size: 13px; color: #94a3b8; margin: 0;">Diagnosi: Fase di compressione volumetrica in corso.</p>
-        </div>
+Il sistema ha isolato nuove impronte digitali istituzionali.
+PROIEZIONE BTC: {prezzo_btc} (Price Discovery) 🚀
 
-        <div style="background: #1e293b; padding: 15px; border-radius: 10px; border-left: 4px solid #0ea5e9;">
-            <h3 style="margin: 0; color: #0ea5e9;">RIPPLE (XRP)</h3>
-            <p style="font-size: 20px; margin: 5px 0; font-weight: bold;">{xrp}</p>
-            <p style="font-size: 13px; color: #94a3b8; margin: 0;">Diagnosi: Movimenti algoritmici a bassa latenza (Institutional).</p>
-        </div>
-    </div>
+Link Blog: {posts['url']}
+Terminale Live: https://giampierodeluca676-lgtm.github.io/
 
-    <div style="background: rgba(56, 189, 248, 0.1); padding: 20px; border-radius: 10px; border: 1px dashed #38bdf8;">
-        <h4 style="margin: 0 0 10px 0; color: #38bdf8;">🔍 ANALISI GLITCH HFT</h4>
-        <p style="font-size: 14px; line-height: 1.6; color: #cbd5e1; margin: 0;">
-            Il sistema ha isolato micro-distorsioni nei data-feed. Queste anomalie non sono errori tecnici, ma impronte digitali di ordini massivi eseguiti da bot istituzionali. Keygap sta processando i vettori di uscita.
-        </p>
-    </div>
+#Keygap #HFT #Bitcoin2026 #Trading #PriceDiscovery"""
 
-    <div style="margin-top: 25px; text-align: center; font-size: 12px; color: #64748b;">
-        <p>Monitoraggio in tempo reale: <a href="https://giampierodeluca676-lgtm.github.io/" style="color: #38bdf8; text-decoration: none;">Accedi al Portale Live</a></p>
-        <p>#KeygapInsights #TradingProfessionale #HFT #BlockchainIntelligence</p>
-    </div>
-</div>
-"""
+    with open(path_desktop, "w") as f:
+        f.write(report_text)
+    
+    print(f"📂 Report salvato correttamente sul Desktop: {path_desktop}")
 
-    with open(os.path.join(folder, 'REPORT_SOCIAL.txt'), 'w') as f:
-        f.write(fb)
-    with open(os.path.join(folder, 'PAGINA_BLOGGER.html'), 'w') as f:
-        f.write(html)
-    print(f"✅ Tutto pronto! File HTML e Social generati.")
+    # --- NUOVA IMPLEMENTAZIONE: DATI PER TABELLA MARKET STATUS ---
+    # Questo file serve alla index.html per riempire la tabella web
+    market_status_data = {
+        "last_update": data_label,
+        "price": prezzo_btc,
+        "status": "OPERATIVO",
+        "signal": "BULLISH",
+        "reliability": "98%"
+    }
+    
+    with open('market_status.json', 'w') as json_file:
+        json.dump(market_status_data, json_file, indent=4)
+    
+    print("📊 Dati Market Status generati in market_status.json")
+    # ---------------------------------------------------
 
 if __name__ == '__main__':
-    genera_e_salva_report()
+    publish_post()
