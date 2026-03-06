@@ -21,6 +21,8 @@
         /* Widget News */
         .news-item { border-bottom: 1px solid var(--border); padding: 12px 0; }
         .news-tag { background: #d00; color: white; font-size: 10px; padding: 2px 6px; border-radius: 2px; margin-right: 8px; }
+        .pulse { animation: pulse-red 2s infinite; font-size: 10px; margin-right: 5px; color: #d00; }
+        @keyframes pulse-red { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
         
         .btn-mode { background: white; color: black; border: none; padding: 5px 10px; cursor: pointer; border-radius: 4px; font-weight: bold; }
         body.dark .btn-mode { background: #333; color: white; }
@@ -51,7 +53,7 @@
             <h2>📰 Editoriali & Global Finance News</h2>
             <div id="news-feed">
                 <div class="news-item" style="background: rgba(221,0,0,0.05); padding: 15px; border-radius: 4px;">
-                    <span class="news-tag">KEYGAP EXCLUSIVE</span>
+                    <span class="news-tag">KEYGAP EXCLUSIVE</span><span class="pulse">🔴 LIVE</span>
                     <a href="#" id="post-link" style="font-weight:bold; color:#d00; text-decoration:none; font-size:18px;">In attesa dell'ultima analisi...</a>
                     <p style="font-size:14px; margin:5px 0;">Il bot sta sincronizzando l'ultimo post pubblicato su Blogger.</p>
                 </div>
