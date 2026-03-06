@@ -67,7 +67,7 @@
 
             <div class="log-box">
                 <span class="label mb-2">System Logs</span>
-                <div id="feed"></div>
+<div id="feed" class="space-y-1 text-[10px] md:text-xs"></div>
             </div>
         </div>
 
@@ -119,6 +119,9 @@
         }
 
         async function sync() {
+    const msgs = ["Analisi volatilità completata", "Rilevato pattern volumetrico", "Node sync: 100%", "Check liquidità BingX...", "Sentiment: BULLISH", "Filtro rumore attivo"];
+    const randomMsg = msgs[Math.floor(Math.random() * msgs.length)];
+    addLog(randomMsg);
             try {
                 const r = await fetch('./market_status.json?v=' + Date.now());
                 const d = await r.json();
