@@ -2,113 +2,111 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>KEYGAP | TITAN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>KEYGAP | TITAN NEON</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
     <style>
-        :root { --neon: #00f2ff; --bg: #010204; }
-        body { background: var(--bg); color: #fff; font-family: 'Rajdhani', sans-serif; margin: 0; min-height: 100vh; display: flex; flex-direction: column; }
-        .neon-text { color: var(--neon); text-shadow: 0 0 15px rgba(0, 242, 255, 0.7); font-family: 'Orbitron'; }
+        :root { --neon: #00f2ff; --bg: #020408; }
+        body { background: var(--bg); color: #fff; font-family: 'Rajdhani', sans-serif; margin: 0; min-height: 100vh; overflow: hidden; background-image: radial-gradient(circle at 50% 50%, #0a111a 0%, #020408 100%); }
+        .neon-text { color: var(--neon); text-shadow: 0 0 20px rgba(0, 242, 255, 0.8); font-family: 'Orbitron'; }
         
-        /* HEADER GIGANTE ORIGINALE */
-        header { padding: 15px; border-bottom: 2px solid var(--neon); background: rgba(0,0,0,0.8); }
-        
-        .main-container { flex: 1; display: flex; flex-direction: column; padding: 15px; gap: 20px; }
-        
-        /* BOX GRAFICO MODERNO */
-        .chart-box { 
-            height: 400px; 
-            border: 2px solid var(--neon); 
-            border-radius: 8px; 
-            overflow: hidden; 
-            background: #000; 
-            flex-shrink: 0;
-            box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
-        }
-        
-        /* CARD DATI ORIGINALE */
-        .side-card { 
-            background: rgba(10, 15, 25, 0.98); 
-            border: 2px solid var(--neon); 
-            border-radius: 12px; 
-            padding: 25px; 
-            box-shadow: 0 0 30px rgba(0, 242, 255, 0.3); 
+        /* Interfaccia a Schermi Sospesi */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 242, 255, 0.2);
+            border-radius: 20px;
+            box-shadow: inset 0 0 20px rgba(0, 242, 255, 0.05), 0 10px 40px rgba(0,0,0,0.7);
         }
 
-        .btn-glow { 
-            background: rgba(0, 242, 255, 0.1); 
-            border: 2px solid var(--neon); 
-            color: var(--neon); 
-            font-family: 'Orbitron'; 
-            text-transform: uppercase; 
-            font-size: 14px; 
-            padding: 18px; 
-            transition: 0.3s; 
+        .header-main { padding: 30px; text-align: center; position: relative; }
+        .header-main::after { content: ''; position: absolute; bottom: 0; left: 10%; width: 80%; height: 1px; background: linear-gradient(90deg, transparent, var(--neon), transparent); }
+
+        .titan-grid { display: grid; grid-template-columns: 1fr; gap: 25px; padding: 20px; height: calc(100vh - 180px); }
+
+        /* Il Grafico Moderno - Area Estesa */
+        .chart-container { position: relative; overflow: hidden; }
+        
+        /* Overlay per nascondere i loghi e rendere il look più pulito */
+        .chart-mask { position: absolute; bottom: 0; left: 0; width: 100%; height: 30px; background: var(--bg); z-index: 10; }
+
+        .data-card { padding: 30px; display: flex; flex-direction: column; justify-content: center; }
+        .data-item { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid rgba(0,242,255,0.1); }
+        .data-label { font-family: 'Orbitron'; font-size: 12px; color: rgba(0, 242, 255, 0.6); }
+        .data-value { font-family: 'Orbitron'; font-size: 18px; font-weight: 900; }
+
+        .btn-titan {
+            background: linear-gradient(135deg, rgba(0,242,255,0.1) 0%, transparent 100%);
+            border: 1px solid var(--neon);
+            padding: 20px;
+            border-radius: 12px;
+            font-family: 'Orbitron';
             font-weight: 900;
+            color: var(--neon);
+            transition: 0.4s;
+            text-align: center;
         }
-        .btn-glow:hover { background: var(--neon); color: #000; box-shadow: 0 0 25px var(--neon); }
-
-        .status-row { 
-            border-bottom: 1px solid rgba(0, 242, 255, 0.2); 
-            padding: 15px 0; 
-            display: flex; 
-            justify-content: space-between; 
-            font-family: 'Orbitron'; 
-            font-size: 15px; 
-        }
+        .btn-titan:hover { background: var(--neon); color: #000; box-shadow: 0 0 30px var(--neon); transform: translateY(-3px); }
 
         @media (min-width: 1024px) {
-            .main-container { flex-direction: row; padding: 30px; }
-            .chart-box { flex: 3; height: 75vh; }
-            .side-card { flex: 1; }
+            .titan-grid { grid-template-columns: 2.5fr 1fr; padding: 40px; }
         }
     </style>
 </head>
 <body>
-    <header class="flex flex-col gap-4">
-        <div class="neon-text text-6xl font-black italic tracking-tighter">KEYGAP</div>
-        <div class="flex justify-between items-center border-t border-white/10 pt-4">
-            <div id="date" class="text-4xl font-bold text-white uppercase">--/--/----</div>
-            <div id="clock" class="neon-text text-5xl font-bold">00:00:00</div>
+
+    <header class="header-main">
+        <div class="neon-text text-7xl font-black italic tracking-[-5px]">KEYGAP</div>
+        <div class="flex justify-center gap-10 mt-4 font-bold">
+            <div id="date" class="text-2xl opacity-50 uppercase tracking-[5px]">--/--/----</div>
+            <div id="clock" class="text-2xl neon-text tracking-[5px]">00:00:00</div>
         </div>
     </header>
 
-    <div class="main-container">
-        <div class="chart-box">
-            <div id="tradingview_main" style="width: 100%; height: 100%;"></div>
+    <div class="titan-grid">
+        <div class="glass-panel chart-container">
+            <div id="tradingview_advanced" style="width: 100%; height: 100%;"></div>
+            <div class="chart-mask"></div>
         </div>
 
-        <div class="side-card">
-            <div class="mb-8">
-                <div class="neon-text text-[12px] mb-6 tracking-[6px] font-bold">SYSTEM_REPORT_V3</div>
-                <div class="status-row"><span>STATUS</span><span id="m-status" class="text-green-400 font-black">--</span></div>
-                <div class="status-row"><span>PRICE</span><span id="m-price" class="font-black text-white">--</span></div>
-                <div class="status-row"><span>SIGNAL</span><span id="m-signal" class="font-black text-white">--</span></div>
-                <div class="status-row"><span>RELIABILITY</span><span id="m-reliability" class="font-black text-white">--</span></div>
+        <div class="glass-panel data-card">
+            <div class="mb-10 text-center">
+                <div class="text-[10px] tracking-[10px] text-cyan-500 font-bold uppercase mb-2">Neural_Core_Status</div>
+                <div id="m-status" class="text-4xl font-black neon-text uppercase">ONLINE</div>
             </div>
             
-            <div class="grid grid-cols-2 gap-4 mb-8">
-                <button onclick="switchSymbol('BITSTAMP:BTCUSD')" class="btn-glow text-center">BITCOIN</button>
-                <button onclick="switchSymbol('TVC:GOLD')" class="btn-glow text-center">GOLD</button>
+            <div class="space-y-2 mb-10">
+                <div class="data-item"><span class="data-label">MARKET_PRICE</span><span id="m-price" class="data-value">---</span></div>
+                <div class="data-item"><span class="data-label">SIGNAL_TYPE</span><span id="m-signal" class="data-value">---</span></div>
+                <div class="data-item"><span class="data-label">ACCURACY</span><span id="m-reliability" class="data-value">---</span></div>
             </div>
-            
-            <button onclick="window.location.href='editoriale.html'" class="btn-glow w-full text-2xl py-8 font-black shadow-lg">NEWS TERMINAL ►</button>
+
+            <div class="grid grid-cols-2 gap-4 mt-auto">
+                <button onclick="switchSymbol('BITSTAMP:BTCUSD')" class="btn-titan text-xs">BITCOIN</button>
+                <button onclick="switchSymbol('TVC:GOLD')" class="btn-titan text-xs">GOLD</button>
+            </div>
+            <button onclick="window.location.href='editoriale.html'" class="btn-titan mt-4 w-full">INTELLIGENCE TERMINAL ►</button>
         </div>
     </div>
 
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script>
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('clock').textContent = now.toLocaleTimeString('it-IT');
+            document.getElementById('date').textContent = now.toLocaleDateString('it-IT');
+        }
+
         async function loadData() {
             try {
                 const r = await fetch('./market_status.json?v=' + Date.now());
-                if (!r.ok) return;
                 const d = await r.json();
-                document.getElementById('m-status').textContent = d.status || "WAITING";
+                document.getElementById('m-status').textContent = d.status || "STANDBY";
                 document.getElementById('m-price').textContent = d.price || "---";
                 document.getElementById('m-signal').textContent = d.signal || "---";
                 document.getElementById('m-reliability').textContent = d.reliability || "---";
-            } catch (e) { }
+            } catch (e) {}
         }
 
         function initChart(s = 'BITSTAMP:BTCUSD') {
@@ -118,30 +116,33 @@
                 "interval": "D",
                 "timezone": "Europe/Rome",
                 "theme": "dark",
-                "style": "1",
+                "style": "8", // STILE HEIKIN-ASHI: Le candele più fluide e moderne al mondo
                 "locale": "it",
-                "toolbar_bg": "#000000",
+                "toolbar_bg": "rgba(0,0,0,0)",
                 "enable_publishing": false,
-                "hide_side_toolbar": false, // Sbloccata per analisi pro
-                "allow_symbol_change": true,
-                "container_id": "tradingview_main",
+                "hide_top_toolbar": false,
+                "hide_legend": true,
+                "save_image": false,
+                "container_id": "tradingview_advanced",
+                "backgroundColor": "rgba(2, 4, 8, 1)",
+                "gridColor": "rgba(0, 242, 255, 0.05)",
+                "withdateranges": true,
+                "details": false,
+                "hotlist": false,
+                "calendar": false,
+                "studies": [ "STDDEV@tv-basicstudies" ], // Aggiunge volatilità in modo elegante
                 "overrides": {
-                    "mainSeriesProperties.candleStyle.upColor": "#00f2ff",
-                    "mainSeriesProperties.candleStyle.downColor": "#ff0055",
-                    "paneProperties.background": "#010204"
+                    "mainSeriesProperties.style": 8,
+                    "paneProperties.background": "#020408",
+                    "paneProperties.vertGridProperties.color": "rgba(0, 242, 255, 0.02)",
+                    "paneProperties.horzGridProperties.color": "rgba(0, 242, 255, 0.02)"
                 }
             });
         }
 
         function switchSymbol(s) { initChart(s); }
         
-        function updateTime() {
-            const n = new Date();
-            document.getElementById('clock').textContent = n.toLocaleTimeString('it-IT');
-            document.getElementById('date').textContent = n.toLocaleDateString('it-IT');
-        }
-
-        setInterval(updateTime, 1000); 
+        setInterval(updateTime, 1000);
         setInterval(loadData, 5000);
         updateTime(); initChart(); loadData();
     </script>
