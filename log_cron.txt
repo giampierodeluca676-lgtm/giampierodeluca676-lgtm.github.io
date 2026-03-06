@@ -559,3 +559,6 @@ To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.
  2 files changed, 4 insertions(+), 2 deletions(-)
 To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
    9ad4597..e4b8bcd  main -> main
+[main a652614] 🚀 System Update 18:43:45
+ 2 files changed, 6 insertions(+), 2 deletions(-)
+fatal: unable to access 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git/': Could not resolve host: github.com
