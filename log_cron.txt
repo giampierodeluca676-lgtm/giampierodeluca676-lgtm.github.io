@@ -517,3 +517,5 @@ To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.
    2063051..e542c91  main -> main
 [main 5628c33] 🚀 System Update 18:40:11
  2 files changed, 6 insertions(+), 2 deletions(-)
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   e542c91..5628c33  main -> main
