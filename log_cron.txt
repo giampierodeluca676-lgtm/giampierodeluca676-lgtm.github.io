@@ -2212,3 +2212,5 @@ To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.
    3098d75..5c9fd87  main -> main
 [main bfceb17] 🚀 System Update 19:59:25
  2 files changed, 8 insertions(+), 2 deletions(-)
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   5c9fd87..bfceb17  main -> main
