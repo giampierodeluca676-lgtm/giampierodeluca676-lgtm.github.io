@@ -3,90 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keygap Advantage | Financial Terminal</title>
+    <title>Keygap Advantage | Professional Terminal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @keyframes scroll { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-        .ticker-wrap { background: #000; color: #3b82f6; padding: 10px 0; overflow: hidden; border-bottom: 1px solid #1e40af; z-index: 50; position: sticky; top: 0; }
+        .ticker-wrap { background: #000; color: #3b82f6; padding: 10px 0; overflow: hidden; border-bottom: 1px solid #1e40af; z-index: 100; position: sticky; top: 0; }
         .ticker-move { display: inline-block; white-space: nowrap; animation: scroll 40s linear infinite; font-family: monospace; }
-        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(59, 130, 246, 0.2); }
-        .widget-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: #3b82f6; margin-bottom: 10px; font-weight: bold; }
+        .glass { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(59, 130, 246, 0.2); }
+        
+        /* Stile Cassetto News */
+        #news-drawer {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 200;
+        }
+        .drawer-closed { transform: translateX(100%); }
+        .drawer-open { transform: translateX(0); }
     </style>
 </head>
-<body class="bg-black text-white font-sans selection:bg-blue-500">
+<body class="bg-black text-white font-sans overflow-x-hidden">
 
     <div class="ticker-wrap">
-        <div class="ticker-move" id="ticker-text">KEYGAP ADVANTAGE TERMINAL • MARKET DATA LIVE • CRYPTO FLOW ACTIVE • ADSTERRA PARTNER • </div>
+        <div class="ticker-move" id="ticker-text">KEYGAP ADVANTAGE TERMINAL • NEWS FEED ACTIVE • MARKET ANALYSIS • </div>
     </div>
 
     <div class="p-6 flex justify-between items-center max-w-[1400px] mx-auto">
-        <div>
-            <h1 class="text-4xl font-black tracking-tighter text-blue-600 italic">KEYGAP <span class="text-white font-normal text-2xl">ADVANTAGE</span></h1>
-        </div>
-        <div class="text-right">
-            <p id="live-clock" class="text-3xl font-mono font-bold leading-none">00:00:00</p>
-            <p class="text-[10px] text-blue-500 uppercase font-bold mt-1">Global Market Time</p>
+        <h1 class="text-3xl font-black tracking-tighter text-blue-600 italic">KEYGAP <span class="text-white">ADV</span></h1>
+        <div class="flex items-center gap-6">
+            <button onclick="toggleNews()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all flex items-center gap-2 shadow-lg shadow-blue-900/20">
+                📰 NOTIZIE LIVE
+            </button>
+            <div class="text-right">
+                <p id="live-clock" class="text-3xl font-mono font-bold leading-none">00:00:00</p>
+                <p class="text-[10px] text-blue-500 uppercase font-bold">System Time</p>
+            </div>
         </div>
     </div>
 
     <div class="max-w-[1400px] mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-        <div class="glass p-4 rounded-xl">
-            <p class="widget-title">BTC/EUR Rate</p>
+        <div class="glass p-4 rounded-xl text-center">
+            <p class="text-[10px] uppercase text-gray-500 mb-1">Price BTC</p>
             <p id="price" class="text-2xl font-bold">--.---</p>
         </div>
-        <div class="glass p-4 rounded-xl">
-            <p class="widget-title">AI Prediction</p>
+        <div class="glass p-4 rounded-xl text-center">
+            <p class="text-[10px] uppercase text-gray-500 mb-1">AI Prediction</p>
             <p id="signal" class="text-2xl font-bold text-green-400">---</p>
         </div>
-        <div class="glass p-4 rounded-xl">
-            <p class="widget-title">Volatility Index</p>
+        <div class="glass p-4 rounded-xl text-center">
+            <p class="text-[10px] uppercase text-gray-500 mb-1">Reliability</p>
             <p id="reliability" class="text-2xl font-bold text-blue-400">--%</p>
         </div>
-        <div class="glass p-4 rounded-xl">
-            <p class="widget-title">System Status</p>
-            <p class="text-2xl font-bold text-white">OPERATIONAL</p>
+        <div class="glass p-4 rounded-xl text-center">
+            <p class="text-[10px] uppercase text-gray-500 mb-1">Status</p>
+            <p class="text-2xl font-bold text-white">ONLINE</p>
         </div>
     </div>
 
-    <div class="max-w-[1400px] mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-6 pb-10">
-        
-        <div class="lg:col-span-3 space-y-6">
-            <div class="glass p-4 rounded-2xl h-[400px]">
-                <p class="widget-title">Market Heatmap</p>
-                <div class="tradingview-widget-container" style="height: calc(100% - 30px);">
-                    <div class="tradingview-widget-container__widget"></div>
-                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-crypto-coins-heatmap.js" async>
-                    {
-                      "dataSource": "crypto", "symbolGroups": [ { "name": "Coins", "symbols": [ { "name": "BINANCE:BTCUSDT" }, { "name": "BINANCE:ETHUSDT" }, { "name": "BINANCE:SOLUSDT" }, { "name": "BINANCE:BNBUSDT" } ] } ],
-                      "colorTheme": "dark", "hasTopBar": false, "isTransparent": true, "width": "100%", "height": "100%"
-                    }
-                    </script>
-                </div>
-            </div>
-            <div class="glass p-4 rounded-2xl">
-                <p class="widget-title">Technical Gauge</p>
-                <div id="gauge-widget" style="height: 200px;">
-                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
-                    { "interval": "1h", "width": "100%", "isTransparent": true, "height": "100%", "symbol": "BINANCE:BTCUSDT", "showIntervalTabs": true, "locale": "it", "colorTheme": "dark" }
-                    </script>
-                </div>
+    <div class="max-w-[1400px] mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-6 pb-20">
+        <div class="lg:col-span-4 h-[600px] glass p-2 rounded-2xl overflow-hidden">
+            <div class="tradingview-widget-container" style="height: 100%;">
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-crypto-coins-heatmap.js" async>
+                { "dataSource": "crypto", "colorTheme": "dark", "hasTopBar": false, "isTransparent": true, "width": "100%", "height": "100%" }
+                </script>
             </div>
         </div>
-
-        <div class="lg:col-span-6">
-            <div class="glass rounded-3xl overflow-hidden shadow-2xl h-[650px]">
-                <div id="main-terminal-chart" style="height: 100%;"></div>
-            </div>
+        <div class="lg:col-span-8 h-[600px] glass rounded-2xl overflow-hidden shadow-2xl">
+            <div id="main-chart" style="height: 100%;"></div>
         </div>
+    </div>
 
-        <div class="lg:col-span-3 space-y-6">
-            <div class="glass p-4 rounded-2xl h-[650px] overflow-hidden">
-                <p class="widget-title">Live News Feed</p>
-                <div class="tradingview-widget-container" style="height: calc(100% - 30px);">
-                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
-                    { "feedMode": "all_symbols", "colorTheme": "dark", "isTransparent": true, "displayMode": "regular", "width": "100%", "height": "100%", "locale": "it" }
-                    </script>
-                </div>
+    <div id="news-drawer" class="fixed top-0 right-0 h-full w-[350px] md:w-[450px] glass border-l border-blue-900/50 drawer-closed shadow-[-10px_0_30px_rgba(0,0,0,0.5)]">
+        <div class="p-4 flex justify-between items-center border-b border-gray-800">
+            <h2 class="text-xl font-bold text-blue-500">ARTICOLI & NEWS</h2>
+            <button onclick="toggleNews()" class="text-gray-400 hover:text-white text-2xl font-bold">&times;</button>
+        </div>
+        <div class="h-full p-2">
+            <div class="tradingview-widget-container" style="height: calc(100% - 80px);">
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+                { "feedMode": "all_symbols", "colorTheme": "dark", "isTransparent": true, "displayMode": "regular", "width": "100%", "height": "100%", "locale": "it" }
+                </script>
             </div>
         </div>
     </div>
@@ -95,15 +89,24 @@
 
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script>
+        // Funzione per Aprire/Chiudere News
+        function toggleNews() {
+            const drawer = document.getElementById('news-drawer');
+            drawer.classList.toggle('drawer-closed');
+            drawer.classList.toggle('drawer-open');
+        }
+
+        // Orologio Fluido
         setInterval(() => { document.getElementById('live-clock').innerText = new Date().toLocaleTimeString('it-IT'); }, 1000);
 
+        // Grafico Principale
         new TradingView.widget({
-            "autosize": true, "symbol": "BINANCE:BTCUSDT", "interval": "D", "timezone": "Europe/Rome",
-            "theme": "dark", "style": "1", "locale": "it", "enable_publishing": false,
-            "allow_symbol_change": true, "container_id": "main-terminal-chart"
+            "autosize": true, "symbol": "BINANCE:BTCUSDT", "interval": "D", "theme": "dark", "style": "1", "locale": "it",
+            "allow_symbol_change": true, "container_id": "main-chart"
         });
 
-        async function updateTerminal() {
+        // Sync Dati dal Bot
+        async function sync() {
             try {
                 const r = await fetch('market_status.json?v=' + Date.now());
                 const d = await r.json();
@@ -113,8 +116,8 @@
                 if(d.ticker) document.getElementById('ticker-text').innerText = d.ticker.repeat(3);
             } catch (e) {}
         }
-        setInterval(updateTerminal, 10000);
-        updateTerminal();
+        setInterval(sync, 10000);
+        sync();
     </script>
 </body>
 </html>
