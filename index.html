@@ -32,7 +32,7 @@
 
 <div class="top-bar">
     <div style="font-weight:bold; font-size:20px;">KEYGAP ADVANTAGE PRO</div>
-    <button class="btn-mode" onclick="document.body.classList.toggle('dark')">🌙 NIGHT MODE</button>
+    <button class="btn-mode" onclick="toggleDarkMode()">🌙 NIGHT MODE</button>
 </div>
 
 <div class="ticker-wrap">
@@ -98,6 +98,22 @@
 </div>
 
 <script>
+    // Funzione per salvare la preferenza Night Mode
+    const body = document.body;
+    const btnMode = document.querySelector(".btn-mode");
+
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark");
+    }
+
+    function toggleDarkMode() {
+        body.classList.toggle("dark");
+        if (body.classList.contains("dark")) {
+            localStorage.setItem("theme", "dark");
+        } else {
+            localStorage.setItem("theme", "light");
+        }
+    }
     function update() {
         fetch("market_status.json?t=" + new Date().getTime())
         .then(r => r.json()).then(d => {
