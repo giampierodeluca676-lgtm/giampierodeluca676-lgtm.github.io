@@ -12,29 +12,30 @@
         .neon-text { color: var(--neon); text-shadow: 0 0 15px rgba(0, 242, 255, 0.8); font-family: 'Orbitron'; }
         
         header { padding: 10px; border-bottom: 2px solid var(--neon); background: #000; flex-shrink: 0; }
-        .titan-font { font-size: clamp(1.4rem, 5vw, 3.5rem); font-weight: 900; line-height: 1; text-transform: uppercase; }
+        .titan-font { font-size: clamp(1.2rem, 5vw, 3rem); font-weight: 900; line-height: 1; text-transform: uppercase; }
 
         .main-layout { flex: 1; display: flex; flex-direction: column; min-height: 0; }
         @media (min-width: 1024px) { .main-layout { flex-direction: row; } }
 
-        /* FIX MOBILE: Il grafico occupa solo il 50% dell'altezza disponibile */
-        .chart-container { height: 50vh; background: #000; position: relative; border-bottom: 2px solid var(--neon); }
+        /* MOBILE: Grafico ridotto al 40% per far stare i tasti */
+        .chart-container { height: 40vh; background: #000; position: relative; border-bottom: 2px solid var(--neon); flex-shrink: 0; }
         @media (min-width: 1024px) { .chart-container { height: 100%; flex: 3; border-bottom: none; border-right: 2px solid var(--neon); } }
 
-        /* SIDEBAR: Sempre visibile sotto al grafico su mobile */
-        .sidebar { flex: 1; background: #05070a; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; overflow-y: auto; }
+        /* SIDEBAR: Scrollabile se necessario */
+        .sidebar { flex: 1; background: #05070a; padding: 12px; display: flex; flex-direction: column; overflow-y: auto; }
         @media (min-width: 1024px) { .sidebar { flex: 0.8; } }
 
-        .btn-titan { background: transparent; border: 2px solid var(--neon); color: var(--neon); font-family: 'Orbitron'; font-weight: 900; padding: 15px; cursor: pointer; text-transform: uppercase; width: 100%; font-size: 13px; margin-bottom: 6px; }
-        .btn-titan:hover { background: var(--neon); color: #000; box-shadow: 0 0 20px var(--neon); }
-        
-        .status-row { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(0,242,255,0.1); padding: 8px 0; font-family: 'Orbitron'; font-size: 11px; }
+        .btn-titan { background: transparent; border: 2px solid var(--neon); color: var(--neon); font-family: 'Orbitron'; font-weight: 900; padding: 12px; cursor: pointer; text-transform: uppercase; width: 100%; font-size: 11px; margin-bottom: 5px; }
+        .btn-titan:hover { background: var(--neon); color: #000; box-shadow: 0 0 15px var(--neon); }
+        .btn-news { border-color: #fff; color: #fff; background: rgba(255,255,255,0.05); }
+
+        .status-row { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(0,242,255,0.1); padding: 6px 0; font-family: 'Orbitron'; font-size: 10px; }
     </style>
 </head>
 <body>
     <header class="flex justify-between items-center px-4">
-        <div class="neon-text text-3xl md:text-5xl italic tracking-tighter">KEYGAP</div>
-        <div class="flex gap-4 md:gap-10">
+        <div class="neon-text text-2xl md:text-5xl italic tracking-tighter">KEYGAP</div>
+        <div class="flex gap-3 md:gap-10">
             <div id="date" class="titan-font text-white">--/--/--</div>
             <div id="clock" class="titan-font neon-text">00:00:00</div>
         </div>
@@ -42,22 +43,23 @@
 
     <div class="main-layout">
         <div class="chart-container">
-            <div id="TV_ULTIMATE" style="width:100%;height:100%;"></div>
+            <div id="TV_FINAL_CORE" style="width:100%;height:100%;"></div>
         </div>
 
         <div class="sidebar">
-            <div class="status-panel">
+            <div class="status-panel mb-2">
                 <div class="status-row"><span>STATUS</span><span id="m-status" class="neon-text">ONLINE</span></div>
                 <div class="status-row"><span>PRICE</span><span id="m-price" class="text-white font-bold">---</span></div>
                 <div class="status-row"><span>SIGNAL</span><span id="m-signal" class="text-white font-bold">---</span></div>
             </div>
 
-            <div class="flex flex-col gap-2 mt-4">
-                <div class="grid grid-cols-2 gap-2">
+            <div class="flex flex-col gap-1">
+                <button onclick="window.location.href='editoriale.html'" class="btn-titan btn-news">INTELLIGENCE TERMINAL ►</button>
+                
+                <div class="grid grid-cols-2 gap-2 mt-2">
                     <button onclick="loadChart('BITSTAMP:BTCUSD')" class="btn-titan">BTC</button>
                     <button onclick="loadChart('TVC:GOLD')" class="btn-titan">GOLD</button>
                 </div>
-                <button onclick="window.location.href='editoriale.html'" class="btn-titan border-white text-white">NEWS TERMINAL ►</button>
             </div>
         </div>
     </div>
@@ -65,17 +67,12 @@
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script>
         function loadChart(s) {
-            document.getElementById('TV_ULTIMATE').innerHTML = '';
+            document.getElementById('TV_FINAL_CORE').innerHTML = '';
             new TradingView.widget({
                 "autosize": true, "symbol": s, "interval": "D", "timezone": "Europe/Rome",
-                "theme": "dark", 
-                "style": "3", // STILE AREA: Risolve il bug delle linee schiacciate sull'oro
-                "locale": "it", "container_id": "TV_ULTIMATE",
+                "theme": "dark", "style": "3", "locale": "it", "container_id": "TV_FINAL_CORE",
                 "hide_side_toolbar": false, "allow_symbol_change": true, "backgroundColor": "#010204",
-                "overrides": { 
-                    "mainSeriesProperties.priceAxisProperties.autoScale": true,
-                    "paneProperties.topMargin": 15
-                }
+                "overrides": { "mainSeriesProperties.priceAxisProperties.autoScale": true }
             });
         }
         async function sync() {
