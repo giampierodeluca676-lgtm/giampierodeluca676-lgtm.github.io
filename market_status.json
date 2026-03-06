@@ -1,10 +1,1 @@
-{
-    "status": "OPERATIVO",
-    "price": "\u20ac 87.420,10",
-    "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "16:38:48",
-    "last_post_title": "\u26a0\ufe0f UPDATE: BTC \u20ac 87.420,10",
-    "last_post_url": "https://keygap-insights.blogspot.com/2026/03/keygap-0603-163848.html",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 STATUS: OPERATIVO \u2022 SIGNAL: BULLISH \u2022 UPDATE: 16:38:48 \u2022 "
-}
+{"status": "OPERATIVO", "price": "$ 68,343.76", "signal": "MONITORING"}
