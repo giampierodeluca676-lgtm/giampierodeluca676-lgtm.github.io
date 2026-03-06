@@ -3,29 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keygap Advantage - Report HFT</title>
+    <title>Keygap Advantage - Terminale HFT</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background: #f9f9f9; }
-        .card { background: #fff; border: 1px solid #ddd; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        h1 { color: #d00; border-bottom: 2px solid #d00; padding-bottom: 10px; }
-        .live-data { font-size: 1.2em; font-weight: bold; color: #007bff; }
-        .btn-interact { background: #f4f4f4; border: 1px solid #ccc; padding: 10px; cursor: pointer; border-radius: 4px; width: 100%; text-align: left; }
-        .btn-interact:hover { background: #eee; }
-        .status-badge { padding: 4px 8px; border-radius: 4px; font-size: 0.8em; background: #28a745; color: #fff; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background: #fff; }
+        .header { border-bottom: 3px solid #d00; padding-bottom: 10px; margin-bottom: 30px; }
+        .header h1 { color: #d00; margin: 0; font-size: 28px; }
+        .card { border: 1px solid #eaeaea; background: #fafafa; padding: 20px; border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .data-label { font-weight: bold; color: #666; text-transform: uppercase; font-size: 12px; }
+        .data-value { font-size: 24px; font-weight: bold; color: #000; display: block; margin-top: 5px; }
+        .status-on { color: #28a745; }
+        .footer { font-size: 12px; color: #999; text-align: center; margin-top: 50px; }
+        .btn-refresh { background: #d00; color: #fff; border: none; padding: 10px 20px; border-radius: 3px; cursor: pointer; font-weight: bold; }
     </style>
 </head>
 <body>
-    <h1>Keygap Advantage: Analisi Bitcoin</h1>
-    <div class="card">
-        <p><strong>Ultimo Prezzo:</strong> <span id="btc-price" class="live-data">Caricamento...</span></p>
-        <p><strong>Stato Sistema:</strong> <span id="status-text" class="status-badge">ONLINE</span></p>
-        <p><strong>Segnale:</strong> <span id="signal-text">In analisi...</span></p>
+    <div class="header">
+        <h1>Keygap Advantage</h1>
+        <p>Terminale di Analisi Quantistica Bitcoin</p>
     </div>
+
     <div class="card">
-        <h3>Interazioni & Strumenti</h3>
-        <button class="btn-interact" onclick="location.reload()">🔄 Forza Aggiornamento Dati</button>
-        <p><small>I dati vengono aggiornati automaticamente ogni 10 secondi dal terminale HFT.</small></p>
+        <span class="data-label">Prezzo Attuale BTC</span>
+        <span id="btc-price" class="data-value">€ --.---,--</span>
     </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div class="card">
+            <span class="data-label">Stato Sistema</span>
+            <span id="status-text" class="data-value status-on">Caricamento...</span>
+        </div>
+        <div class="card">
+            <span class="data-label">Segnale Algoritmo</span>
+            <span id="signal-text" class="data-value">ANALISI...</span>
+        </div>
+    </div>
+
+    <div class="card" style="text-align:center;">
+        <button class="btn-refresh" onclick="location.reload()">AGGIORNA DATI MANUALE</button>
+        <p><small>Ultimo battito HFT: <span id="clock">--:--:--</span></small></p>
+    </div>
+
     <script>
         function update() {
             fetch("market_status.json?t=" + new Date().getTime())
@@ -33,9 +50,11 @@
                 document.getElementById("btc-price").innerText = d.price;
                 document.getElementById("status-text").innerText = d.status;
                 document.getElementById("signal-text").innerText = d.signal;
+                document.getElementById("clock").innerText = d.last_update || new Date().toLocaleTimeString();
             }).catch(e => console.log("In attesa del bot..."));
         }
-        setInterval(update, 10000); update();
+        setInterval(update, 5000); update();
     </script>
+    <div class="footer">© 2026 Keygap Quantum Intelligence - Tutti i diritti riservati</div>
 </body>
 </html>
