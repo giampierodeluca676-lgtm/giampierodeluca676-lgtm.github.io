@@ -12,25 +12,33 @@
         .neon-text { color: var(--neon); text-shadow: 0 0 15px rgba(0, 242, 255, 0.8); font-family: 'Orbitron'; }
         
         header { padding: 10px 20px; border-bottom: 2px solid var(--neon); background: #000; flex-shrink: 0; }
-        /* DATA E ORA IDENTICI */
         .titan-time { font-size: clamp(1.8rem, 6vw, 4rem); font-weight: 900; line-height: 1; text-transform: uppercase; }
 
         .main-layout { flex: 1; display: flex; flex-direction: column; min-height: 0; }
         @media (min-width: 1024px) { .main-layout { flex-direction: row; } }
 
-        /* GRAFICO: 45% su mobile, 75% su PC */
         .chart-container { height: 45vh; background: #000; position: relative; border-bottom: 2px solid var(--neon); flex-shrink: 0; }
-        @media (min-width: 1024px) { .chart-container { height: 100%; flex: 3; border-bottom: none; border-right: 2px solid var(--neon); } }
+        @media (min-width: 1024px) { .chart-container { height: 100%; flex: 2.8; border-bottom: none; border-right: 2px solid var(--neon); } }
 
-        /* SIDEBAR: Scrollabile per i tasti */
         .sidebar { flex: 1; background: #05070a; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; overflow-y: auto; }
-        @media (min-width: 1024px) { .sidebar { flex: 0.8; } }
+        @media (min-width: 1024px) { .sidebar { flex: 1.2; padding: 40px; } }
 
-        .btn-titan { background: transparent; border: 2px solid var(--neon); color: var(--neon); font-family: 'Orbitron'; font-weight: 900; padding: 14px; cursor: pointer; text-transform: uppercase; width: 100%; font-size: 12px; margin-bottom: 8px; }
-        .btn-titan:hover { background: var(--neon); color: #000; box-shadow: 0 0 15px var(--neon); }
-        .btn-main { border-color: #fff; color: #fff; font-size: 16px; padding: 18px; }
+        /* DATA BLOCK ENHANCEMENT */
+        .status-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(0,242,255,0.1); padding: 12px 0; font-family: 'Orbitron'; }
+        .status-label { font-size: 12px; color: rgba(0,242,255,0.6); tracking: 2px; }
+        .status-value { font-size: 16px; font-weight: 900; }
 
-        .status-row { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(0,242,255,0.1); padding: 8px 0; font-family: 'Orbitron'; font-size: 12px; }
+        @media (min-width: 1024px) {
+            .status-row { padding: 35px 0; border-bottom-width: 2px; }
+            .status-label { font-size: 24px; tracking: 6px; }
+            .status-value { font-size: 45px; }
+        }
+
+        .btn-titan { background: transparent; border: 2px solid var(--neon); color: var(--neon); font-family: 'Orbitron'; font-weight: 900; padding: 14px; cursor: pointer; text-transform: uppercase; width: 100%; font-size: 12px; margin-bottom: 8px; transition: 0.2s; }
+        @media (min-width: 1024px) { .btn-titan { font-size: 22px; padding: 30px; margin-bottom: 20px; border-width: 3px; } }
+        
+        .btn-main { border-color: #fff; color: #fff; font-size: 16px; }
+        @media (min-width: 1024px) { .btn-main { font-size: 32px; padding: 45px; } }
     </style>
 </head>
 <body>
@@ -44,20 +52,29 @@
 
     <div class="main-layout">
         <div class="chart-container" id="CHART_ZONE">
-            <div id="TV_MASTER" style="width:100%;height:100%;"></div>
+            <div id="TV_ELITE" style="width:100%;height:100%;"></div>
         </div>
 
         <div class="sidebar">
             <div class="status-panel">
-                <div class="status-row"><span>STATUS</span><span id="m-status" class="neon-text">ONLINE</span></div>
-                <div class="status-row"><span>PRICE</span><span id="m-price" class="text-white font-bold">---</span></div>
-                <div class="status-row"><span>SIGNAL</span><span id="m-signal" class="text-white font-bold">---</span></div>
+                <div class="status-row">
+                    <span class="status-label">STATUS</span>
+                    <span id="m-status" class="status-value text-green-400 drop-shadow-[0_0_10px_rgba(74,222,128,0.5)]">OPERATIVO</span>
+                </div>
+                <div class="status-row">
+                    <span class="status-label">PRICE</span>
+                    <span id="m-price" class="status-value text-white">---</span>
+                </div>
+                <div class="status-row">
+                    <span class="status-label">SIGNAL</span>
+                    <span id="m-signal" class="status-value neon-text">---</span>
+                </div>
             </div>
 
-            <div class="flex flex-col gap-2 mt-4">
+            <div class="flex flex-col gap-2">
                 <button onclick="window.location.href='editoriale.html'" class="btn-titan btn-main">NEWS TERMINAL ►</button>
-                <div class="grid grid-cols-2 gap-2">
-                    <button onclick="loadChart('BITSTAMP:BTCUSD')" class="btn-titan">BITCOIN</button>
+                <div class="grid grid-cols-2 gap-2 lg:gap-5">
+                    <button onclick="loadChart('BITSTAMP:BTCUSD')" class="btn-titan">BTC</button>
                     <button onclick="loadChart('TVC:GOLD')" class="btn-titan">GOLD</button>
                 </div>
             </div>
@@ -67,17 +84,13 @@
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script>
         function loadChart(s) {
-            document.getElementById('TV_MASTER').innerHTML = ''; // Forza il reset del DOM
+            document.getElementById('TV_ELITE').innerHTML = '';
             new TradingView.widget({
                 "autosize": true, "symbol": s, "interval": "D", "timezone": "Europe/Rome",
-                "theme": "dark", 
-                "style": "3", // Stile AREA per evitare il bug delle candele schiacciate
-                "locale": "it", "container_id": "TV_MASTER",
+                "theme": "dark", "style": "3", "locale": "it", "container_id": "TV_ELITE",
                 "hide_side_toolbar": false, "allow_symbol_change": true, "backgroundColor": "#010204",
                 "overrides": { 
-                    "mainSeriesProperties.priceAxisProperties.autoScale": true,
-                    "paneProperties.topMargin": 20,
-                    "paneProperties.bottomMargin": 20
+                    "mainSeriesProperties.priceAxisProperties.autoScale": true
                 }
             });
         }
@@ -85,9 +98,9 @@
             try {
                 const r = await fetch('./market_status.json?v=' + Date.now());
                 const d = await r.json();
-                document.getElementById('m-status').textContent = d.status || "READY";
-                document.getElementById('m-price').textContent = d.price || "---";
-                document.getElementById('m-signal').textContent = d.signal || "---";
+                if(d.status) document.getElementById('m-status').textContent = d.status.toUpperCase();
+                if(d.price) document.getElementById('m-price').textContent = d.price;
+                if(d.signal) document.getElementById('m-signal').textContent = d.signal.toUpperCase();
             } catch (e) {}
         }
         function update() {
