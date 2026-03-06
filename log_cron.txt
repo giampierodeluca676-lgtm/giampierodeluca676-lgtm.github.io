@@ -2381,3 +2381,10 @@ may have crashed in this repository earlier:
 remove the file manually to continue.
 [main 15c6678] 🚀 System Update 20:06:08
  2 files changed, 6 insertions(+), 2 deletions(-)
+[main ccbc088] 🚀 System Update 20:06:09
+ 2 files changed, 11 insertions(+), 2 deletions(-)
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at ccbc08855eb184a614b81deafad98fe94c3efe05 but expected 944aa5c85998018e7d9502fe245d89896d31dd1d)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   944aa5c..ccbc088  main -> main
