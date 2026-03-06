@@ -9,38 +9,41 @@
         @keyframes scroll { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
         .ticker-wrap { background: #000; color: #3b82f6; padding: 10px 0; overflow: hidden; border-bottom: 1px solid #1e40af; }
         .ticker-move { display: inline-block; white-space: nowrap; animation: scroll 30s linear infinite; font-family: monospace; }
+        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(59, 130, 246, 0.2); }
     </style>
 </head>
 <body class="bg-black text-white font-sans">
 
     <div class="ticker-wrap">
         <div class="ticker-move" id="ticker-text">
-            CONNESSO AD ASTERRA • STATUS: LIVE • MARKET DATA ACTIVE • KEYGAP ADVANTAGE • 
+            CONNESSO AD ADSTERRA • STATUS: LIVE • MARKET DATA ACTIVE • KEYGAP ADVANTAGE • 
         </div>
     </div>
 
     <div class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-        <h1 class="text-3xl font-black tracking-tighter text-blue-600">KEYGAP <span class="text-white">ADV</span></h1>
+        <h1 class="text-3xl font-black tracking-tighter text-blue-600 italic">KEYGAP <span class="text-white">ADV</span></h1>
         <div class="text-right">
-            <p id="live-clock" class="text-3xl font-mono font-bold">00:00:00</p>
-            <p class="text-[10px] text-blue-500 uppercase">System Time</p>
+            <p id="live-clock" class="text-3xl font-mono font-bold text-white">00:00:00</p>
+            <p class="text-[10px] text-blue-500 uppercase tracking-widest font-bold">System Live Time</p>
         </div>
     </div>
 
     <div class="max-w-6xl mx-auto px-4 pb-10">
-        <div class="bg-gray-900 rounded-3xl overflow-hidden border border-gray-800 shadow-2xl" style="height: 600px;">
+        <div class="glass rounded-3xl overflow-hidden shadow-2xl" style="height: 600px;">
             <div id="tv-widget" style="height: 100%;"></div>
         </div>
     </div>
 
+    <script src="https://pl28819682.effectivegatecpm.com/07/47/37/074737f2d1be0f3c0e9de0585a695fd7.js"></script>
+
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script>
-        // Orologio fluido che non si ferma mai
+        // Orologio Fluido
         setInterval(() => {
             document.getElementById('live-clock').innerText = new Date().toLocaleTimeString('it-IT');
         }, 1000);
 
-        // Grafico con ricerca nativa (clicca sul nome in alto a sx del grafico)
+        // Grafico con Ricerca Nativa
         new TradingView.widget({
             "autosize": true,
             "symbol": "BINANCE:BTCUSDT",
@@ -52,7 +55,7 @@
             "container_id": "tv-widget"
         });
 
-        // Legge gli aggiornamenti da Asterra/Bot se presenti
+        // Sync Dati
         async function checkUpdates() {
             try {
                 const r = await fetch('market_status.json?v=' + Date.now());
