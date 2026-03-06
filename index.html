@@ -7,6 +7,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
+        @media (max-width: 768px) {
+            .main-container { padding: 8px; gap: 8px; }
+            .stat-card { padding: 10px; }
+            .value { font-size: 1.2rem; }
+            .chart-wrapper { height: 30vh !important; }
+            .log-box { height: 120px; font-size: 0.65rem; }
+            .btn-action { padding: 15px; font-size: 0.9rem; }
+            .logo { font-size: 1.1rem; }
+        }
         :root { --brand: #3b82f6; --bg-dark: #0f172a; --panel: #1e293b; --text: #f8fafc; }
         body { background: var(--bg-dark); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
         
