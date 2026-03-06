@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keygap Advantage - Financial Hub Pro</title>
     <script>
-        // SCRIPT ANTI-ABBAGLIAMENTO: Eseguito prima del rendering
         (function() {
             const savedTheme = localStorage.getItem("theme");
             if (savedTheme === "dark") {
@@ -21,24 +20,21 @@
     <style>
         :root { --bg: #f4f7f6; --card: #fff; --text: #1a1a1a; --border: #ddd; }
         .dark-mode { --bg: #0e1111; --card: #1c1c1c; --text: #e0e0e0; --border: #333; }
-        
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: var(--text); max-width: 1200px; margin: 0 auto; padding: 0; background: var(--bg); transition: background 0.3s; }
         .top-bar { background: #d00; color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
         .ticker-wrap { background: #000; color: #0f0; padding: 5px 0; overflow: hidden; white-space: nowrap; font-family: monospace; }
         .ticker-content { display: inline-block; animation: ticker 40s linear infinite; }
         @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-        
         .container { padding: 20px; display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
         .card { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
         .price-hero { font-size: 48px; font-weight: 900; margin: 10px 0; color: var(--text); }
-        .news-item { border-bottom: 1px solid var(--border); padding: 12px 0; }
         .news-tag { background: #d00; color: white; font-size: 10px; padding: 2px 6px; border-radius: 2px; margin-right: 8px; }
         .pulse { animation: pulse-red 2s infinite; font-size: 10px; margin-right: 5px; color: #d00; }
         @keyframes pulse-red { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
-        
         .btn-mode { background: white; color: black; border: none; padding: 8px 15px; cursor: pointer; border-radius: 4px; font-weight: bold; }
         .dark-mode .btn-mode { background: #333; color: white; }
-        @media (max-width: 768px) { .container { grid-template-columns: 1fr; } }
+        .glossary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 13px; }
+        @media (max-width: 768px) { .container { grid-template-columns: 1fr; } .glossary-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -61,44 +57,44 @@
         </div>
 
         <div class="card">
-            <h2>📰 Editoriali & Global Finance News</h2>
-            <div id="news-feed">
-                <div class="news-item" style="background: rgba(221,0,0,0.05); padding: 15px; border-radius: 4px;">
-                    <span class="news-tag">KEYGAP EXCLUSIVE</span><span class="pulse">🔴 LIVE</span>
-                    <a href="#" id="post-link" style="font-weight:bold; color:#d00; text-decoration:none; font-size:18px;">In attesa dell'ultima analisi...</a>
+            <h2>📰 News Esclusive & Mercati</h2>
+            <div class="news-item" style="background: rgba(221,0,0,0.05); padding: 15px; border-radius: 4px;">
+                <span class="news-tag">KEYGAP EXCLUSIVE</span><span class="pulse">🔴 LIVE</span>
+                <a href="#" id="post-link" style="font-weight:bold; color:#d00; text-decoration:none; font-size:18px;">In attesa dell'ultima analisi...</a>
+            </div>
+            <div style="margin-top:20px;">
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+                    { "feedMode": "all_symbols", "colorTheme": "light", "width": "100%", "height": 300, "locale": "it" }
+                    </script>
                 </div>
-                <div style="margin-top:20px;">
-                    <div class="tradingview-widget-container">
-                        <div class="tradingview-widget-container__widget"></div>
-                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
-                        {
-                          "feedMode": "all_symbols",
-                          "colorTheme": "light",
-                          "isTransparent": false,
-                          "displayMode": "regular",
-                          "width": "100%",
-                          "height": 400,
-                          "locale": "it"
-                        }
-                        </script>
-                    </div>
-                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 style="font-size: 20px; border-bottom: 2px solid #eee; padding-bottom: 10px;">📚 Mini Glossario Keygap</h2>
+            <div class="glossary-grid">
+                <div><strong>HFT:</strong> High-Frequency Trading. Algoritmi che analizzano il mercato in millisecondi.</div>
+                <div><strong>LIQUIDITÀ:</strong> Facilità con cui un asset si scambia senza variazioni di prezzo.</div>
+                <div><strong>BULLISH:</strong> Mercato rialzista (il Toro spinge verso l'alto).</div>
+                <div><strong>VOLATILITÀ:</strong> Misura della variazione dei prezzi in un periodo.</div>
+                <div><strong>SENTIMENT:</strong> Umore degli investitori basato su dati on-chain.</div>
+                <div><strong>SCALPING:</strong> Analisi per catturare piccoli movimenti veloci.</div>
             </div>
         </div>
     </div>
 
     <div class="sidebar">
         <div class="card">
-            <h3>📊 Parametri Quantistici</h3>
-            <table style="width:100%; font-size:14px; border-collapse: collapse;">
-                <tr style="border-bottom: 1px solid var(--border);"><td style="padding:10px 0;">Trend Asset</td><td style="color:green; text-align:right; font-weight:bold;">BULLISH</td></tr>
-                <tr style="border-bottom: 1px solid var(--border);"><td style="padding:10px 0;">Dominance BTC</td><td style="text-align:right; font-weight:bold;">52.4%</td></tr>
-            </table>
+            <h3>📊 Parametri</h3>
+            <p>Trend: <span style="color:green; font-weight:bold;">BULLISH</span></p>
+            <p>BTC Dominance: 52.4%</p>
         </div>
         <div class="card" style="background: #1a1a1a; color: white;">
             <h3 style="color: #d00;">Stato Algoritmo</h3>
-            <p style="font-size:12px;">Reliability: 98%</p>
             <div style="background:#333; height:8px; border-radius:4px;"><div style="background:#d00; width:98%; height:100%; border-radius:4px;"></div></div>
+            <p style="font-size:10px; text-align:right;">Reliability: 98%</p>
         </div>
     </div>
 </div>
@@ -108,7 +104,7 @@
         fetch("market_status.json?t=" + new Date().getTime())
         .then(r => r.json()).then(d => {
             document.getElementById("btc-price").innerText = d.price;
-            document.getElementById("ticker").innerText = d.ticker || "MERCATI ATTIVI: BTC/EUR " + d.price + "...";
+            document.getElementById("ticker").innerText = d.ticker || "MERCATI ATTIVI...";
             if(d.last_post_title) {
                 document.getElementById("post-link").innerText = d.last_post_title;
                 document.getElementById("post-link").href = d.last_post_url;
