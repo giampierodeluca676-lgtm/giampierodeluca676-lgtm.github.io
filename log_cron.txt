@@ -27351,3 +27351,8 @@ To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.
 To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
  ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at db9b6cfa729732113590330820995622aecf26ff but expected 96801f5bb2d651b515c0d6d85be1dcde674ad1b4)
 error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
