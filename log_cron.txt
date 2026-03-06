@@ -18181,3 +18181,29 @@ To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.
 error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
 [main 1b8b596] 🚀 System Update 22:09:59
  2 files changed, 30 insertions(+), 2 deletions(-)
+remote: error: GH013: Repository rule violations found for refs/heads/main.        
+remote: 
+remote: - GITHUB PUSH PROTECTION        
+remote:   —————————————————————————————————————————        
+remote:     Resolve the following violations before pushing again        
+remote: 
+remote:     - Push cannot contain secrets        
+remote: 
+remote:             
+remote:      (?) Learn how to resolve a blocked push        
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push        
+remote:             
+remote:             
+remote:       —— Google OAuth Access Token —————————————————————————        
+remote:        locations:        
+remote:          - commit: c07f802af126889111ccd9d5326752dcc7311d5f        
+remote:            path: token.pickle:1        
+remote:             
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.        
+remote:        https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io/security/secret-scanning/unblock-secret/3AaQuKBjMjmjE329lhfRrdcwQ9s        
+remote:             
+remote: 
+remote: 
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [remote rejected] main -> main (push declined due to repository rule violations)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
