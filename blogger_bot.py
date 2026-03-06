@@ -70,7 +70,7 @@ def pubblica():
 print("Bot Blogger Attivo. Report programmati alle 08:30 e 20:30.")
 print(f"I file verranno salvati in: {LOCAL_REPORT_DIR}")
 
-while True:
+if True:
     ora_attuale = datetime.now().strftime("%H:%M")
     if ora_attuale in ["08:30", "20:30"]:
         pubblica()
