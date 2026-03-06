@@ -10,36 +10,51 @@
         :root { --neon: #00f2ff; --bg: #010204; }
         body { background: var(--bg); color: #fff; font-family: 'Rajdhani', sans-serif; margin: 0; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
         .neon-text { color: var(--neon); text-shadow: 0 0 20px rgba(0, 242, 255, 0.8); font-family: 'Orbitron'; }
-        header { padding: 15px; border-bottom: 3px solid var(--neon); background: #000; flex-shrink: 0; }
-        .titan-font { font-size: clamp(2rem, 8vw, 4.5rem); font-weight: 900; line-height: 1; text-transform: uppercase; white-space: nowrap; }
-        .main-layout { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+        
+        header { padding: 10px 15px; border-bottom: 3px solid var(--neon); background: #000; flex-shrink: 0; }
+        .titan-font { font-size: clamp(1.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1; text-transform: uppercase; }
+
+        .main-layout { flex: 1; display: flex; flex-direction: column; min-height: 0; }
         @media (min-width: 1024px) { .main-layout { flex-direction: row; } }
-        .chart-container { flex: 2.5; background: #000; position: relative; border-bottom: 2px solid var(--neon); }
-        @media (min-width: 1024px) { .chart-container { border-bottom: none; border-right: 2px solid var(--neon); } }
-        .sidebar { flex: 0.7; background: #05070a; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; }
-        .btn-titan { background: transparent; border: 2px solid var(--neon); color: var(--neon); font-family: 'Orbitron'; font-weight: 900; padding: 20px; cursor: pointer; text-transform: uppercase; width: 100%; font-size: 14px; transition: 0.2s; }
-        .btn-titan:hover { background: var(--neon); color: #000; box-shadow: 0 0 30px var(--neon); }
-        .status-row { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(0,242,255,0.2); padding: 15px 0; font-family: 'Orbitron'; font-size: 14px; }
+
+        /* GRAFICO DINAMICO: SI ADATTA SENZA SCHIACCIARE */
+        .chart-container { flex: 1.5; background: #000; position: relative; min-height: 0; }
+        @media (min-width: 1024px) { .chart-container { flex: 3; border-right: 2px solid var(--neon); } }
+
+        /* SIDEBAR SEMPRE VISIBILE */
+        .sidebar { flex: 1; background: #05070a; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; border-top: 2px solid var(--neon); overflow-y: auto; }
+        @media (min-width: 1024px) { .sidebar { flex: 0.8; border-top: none; } }
+
+        .btn-titan { background: transparent; border: 2px solid var(--neon); color: var(--neon); font-family: 'Orbitron'; font-weight: 900; padding: 15px; cursor: pointer; text-transform: uppercase; width: 100%; font-size: 12px; }
+        .btn-titan:hover { background: var(--neon); color: #000; }
+        
+        .status-panel { margin-bottom: 10px; }
+        .status-row { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(0,242,255,0.2); padding: 8px 0; font-family: 'Orbitron'; font-size: 12px; }
     </style>
 </head>
 <body>
-    <header class="flex flex-col md:flex-row justify-between items-center gap-4">
-        <div class="neon-text text-6xl italic tracking-tighter">KEYGAP</div>
-        <div class="flex flex-row gap-6 md:gap-12 items-center">
+    <header class="flex flex-col md:flex-row justify-between items-center text-center">
+        <div class="neon-text text-4xl md:text-6xl italic tracking-tighter">KEYGAP</div>
+        <div class="flex flex-row gap-4 md:gap-12">
             <div id="date" class="titan-font text-white">--/--/--</div>
             <div id="clock" class="titan-font neon-text">00:00:00</div>
         </div>
     </header>
+
     <div class="main-layout">
-        <div class="chart-container" id="CHART_ZONE"><div id="TV_FINAL" style="width:100%;height:100%;"></div></div>
+        <div class="chart-container" id="CHART_ZONE">
+            <div id="TV_TITAN" style="width:100%;height:100%;"></div>
+        </div>
+
         <div class="sidebar">
             <div class="status-panel">
                 <div class="status-row"><span>STATUS</span><span id="m-status" class="neon-text">ONLINE</span></div>
                 <div class="status-row"><span>PRICE</span><span id="m-price" class="text-white font-bold">---</span></div>
                 <div class="status-row"><span>SIGNAL</span><span id="m-signal" class="text-white font-bold">---</span></div>
             </div>
-            <div class="flex flex-col gap-3">
-                <div class="grid grid-cols-2 gap-3">
+
+            <div class="flex flex-col gap-2">
+                <div class="grid grid-cols-2 gap-2">
                     <button onclick="loadChart('BITSTAMP:BTCUSD')" class="btn-titan">BTC</button>
                     <button onclick="loadChart('TVC:GOLD')" class="btn-titan">GOLD</button>
                 </div>
@@ -47,13 +62,14 @@
             </div>
         </div>
     </div>
+
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script>
         function loadChart(s) {
-            document.getElementById('TV_FINAL').innerHTML = '';
+            document.getElementById('TV_TITAN').innerHTML = '';
             new TradingView.widget({
                 "autosize": true, "symbol": s, "interval": "D", "timezone": "Europe/Rome",
-                "theme": "dark", "style": "8", "locale": "it", "container_id": "TV_FINAL",
+                "theme": "dark", "style": "8", "locale": "it", "container_id": "TV_TITAN",
                 "hide_side_toolbar": false, "allow_symbol_change": true, "backgroundColor": "#010204",
                 "overrides": { "mainSeriesProperties.priceAxisProperties.autoScale": true }
             });
@@ -62,7 +78,7 @@
             try {
                 const r = await fetch('./market_status.json?v=' + Date.now());
                 const d = await r.json();
-                document.getElementById('m-status').textContent = d.status || "ONLINE";
+                document.getElementById('m-status').textContent = d.status || "LIVE";
                 document.getElementById('m-price').textContent = d.price || "---";
                 document.getElementById('m-signal').textContent = d.signal || "---";
             } catch (e) {}
