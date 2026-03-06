@@ -8,90 +8,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root { --neon: #00f2ff; --bg: #010204; }
-        
-        /* Blocca la larghezza ed evita lo scroll orizzontale */
-        html, body { 
-            background: var(--bg); 
-            color: #fff; 
-            font-family: 'Rajdhani', sans-serif; 
-            margin: 0; 
-            padding: 0;
-            width: 100%;
-            overflow-x: hidden; 
-            overflow-y: auto !important; 
-            -webkit-text-size-adjust: 100%;
-        }
-
+        html, body { background: var(--bg); color: #fff; font-family: 'Rajdhani', sans-serif; margin: 0; padding: 0; width: 100%; overflow-x: hidden; overflow-y: auto !important; }
         .neon-text { color: var(--neon); text-shadow: 0 0 15px rgba(0, 242, 255, 0.7); font-family: 'Orbitron', sans-serif; }
-        
-        .terminal-grid { 
-            display: flex; 
-            flex-direction: column; 
-            padding: 15px; 
-            gap: 20px; 
-            width: 100%;
-            box-sizing: border-box; /* Assicura che il padding non allarghi la pagina */
-        }
-
-        .main-title { 
-            font-size: clamp(1.8rem, 8vw, 3.5rem); 
-            font-weight: 900; 
-            text-transform: uppercase; 
-            text-align: center; 
-            line-height: 1.1; 
-        }
+        .terminal-grid { display: flex; flex-direction: column; padding: 15px; gap: 20px; width: 100%; box-sizing: border-box; }
+        .main-title { font-size: clamp(1.8rem, 8vw, 3.5rem); font-weight: 900; text-transform: uppercase; text-align: center; line-height: 1.1; }
         .main-title span { color: var(--neon); }
-
-        .btn-asset { 
-            background: rgba(0, 242, 255, 0.05); 
-            border: 1px solid rgba(0, 242, 255, 0.4); 
-            padding: 12px; 
-            font-family: 'Orbitron'; 
-            font-size: 11px;
-            flex: 1 1 45%; 
-        }
+        .btn-asset { background: rgba(0, 242, 255, 0.05); border: 1px solid rgba(0, 242, 255, 0.4); padding: 12px; font-family: 'Orbitron'; font-size: 11px; flex: 1 1 45%; }
         
-        .chart-frame { 
-            background: #000; 
-            border: 1px solid rgba(255,255,255,0.1); 
-            border-radius: 4px; 
-            position: relative; 
-            height: 700px !important; 
-            width: 100% !important;
-            margin-bottom: 30px;
-            box-sizing: border-box;
-        }
+        /* Stile Tabella Market Status */
+        .market-status-box { border: 1px solid rgba(0, 242, 255, 0.3); background: rgba(0, 242, 255, 0.02); padding: 15px; margin-top: 10px; }
+        .status-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; font-family: 'Orbitron'; font-size: 10px; }
+        .status-item { border-bottom: 1px solid rgba(255,255,255,0.1); padding: 5px 0; }
+        .status-label { color: var(--neon); opacity: 0.7; }
 
-        #tradingview_chart {
-            height: 650px !important; 
-            width: 100% !important;
-        }
+        .chart-frame { background: #000; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; position: relative; height: 500px !important; width: 100% !important; box-sizing: border-box; }
+        #tradingview_chart { height: 450px !important; width: 100% !important; }
 
         @media (min-width: 1024px) {
-            .terminal-grid { display: grid; grid-template-rows: auto auto 1fr auto; height: 100vh; padding: 25px 50px; }
-            .chart-frame { height: auto !important; margin-bottom: 0; }
-            #tradingview_chart { height: 100% !important; }
+            .terminal-grid { display: grid; grid-template-columns: 1fr 350px; grid-template-rows: auto 1fr auto; height: 100vh; padding: 25px 50px; }
+            .chart-frame { grid-row: 2; height: auto !important; }
+            .side-panel { grid-column: 2; grid-row: 2; display: flex; flex-direction: column; gap: 20px; }
             body { overflow: hidden !important; }
         }
     </style>
 </head>
 <body>
     <div class="terminal-grid">
-        <header class="flex justify-between items-center opacity-70">
+        <header class="flex justify-between items-center opacity-70 col-span-2">
             <div><div class="neon-text text-[8px] tracking-[4px]">DATE</div><div id="date" class="text-xl">--/--/----</div></div>
             <div class="text-right"><div class="neon-text text-[8px] tracking-[4px]">TIME</div><div id="clock" class="text-xl">00:00:00</div></div>
         </header>
-
-        <div class="flex flex-col items-center gap-6">
-            <h1 class="main-title"><span>Keygap</span> Advantage</h1>
-            <div class="flex flex-wrap justify-center gap-3 w-full">
-                <button onclick="switchSymbol('BITSTAMP:BTCUSD')" class="btn-asset">BITCOIN</button>
-                <button onclick="switchSymbol('TVC:GOLD')" class="btn-asset">GOLD</button>
-                <button onclick="switchSymbol('SP:SPX')" class="btn-asset">S&P 500</button>
-                <button onclick="switchSymbol('FX:EURUSD')" class="btn-asset">EUR/USD</button>
-            </div>
-            <button onclick="startTransition()" class="border-2 border-[#00f2ff] p-3 w-full font-bold bg-[#00f2ff]/10 text-[12px] tracking-[3px]">🚀 TERMINALE NOTIZIE</button>
-        </div>
 
         <div class="chart-frame">
             <div class="panel-header flex justify-between items-center p-3 border-b border-white/10 bg-[#0d1117]">
@@ -99,18 +45,56 @@
             </div>
             <div id="tradingview_chart"></div>
         </div>
+
+        <div class="side-panel">
+            <div class="flex flex-col gap-4">
+                <h1 class="main-title text-left"><span>Keygap</span></h1>
+                
+                <div class="market-status-box">
+                    <div class="neon-text text-[9px] mb-3 tracking-[2px]">MARKET STATUS REPORT</div>
+                    <div class="status-grid" id="market-table">
+                        <div class="status-item"><div class="status-label">STATUS</div><div id="m-status">LOADING...</div></div>
+                        <div class="status-item"><div class="status-label">PRICE</div><div id="m-price">---</div></div>
+                        <div class="status-item"><div class="status-label">SIGNAL</div><div id="m-signal">---</div></div>
+                        <div class="status-item"><div class="status-label">ACCURACY</div><div id="m-reliability">---</div></div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-2 w-full">
+                    <button onclick="switchSymbol('BITSTAMP:BTCUSD')" class="btn-asset">BITCOIN</button>
+                    <button onclick="switchSymbol('TVC:GOLD')" class="btn-asset">GOLD</button>
+                    <button onclick="switchSymbol('SP:SPX')" class="btn-asset">S&P 500</button>
+                    <button onclick="switchSymbol('FX:EURUSD')" class="btn-asset">EUR/USD</button>
+                </div>
+                <button onclick="startTransition()" class="border-2 border-[#00f2ff] p-3 w-full font-bold bg-[#00f2ff]/10 text-[12px] tracking-[3px]">🚀 TERMINALE NOTIZIE</button>
+            </div>
+        </div>
         
-        <footer class="text-center opacity-20 pb-10">
+        <footer class="text-center opacity-20 pb-5 col-span-2">
             <div class="neon-text text-[10px] tracking-[20px]">Keygap Titan</div>
         </footer>
     </div>
 
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script>
+        // FUNZIONE PER LEGGERE IL JSON GENERATO DAL BOT
+        async function loadMarketStatus() {
+            try {
+                const response = await fetch('market_status.json?v=' + new Date().getTime());
+                const data = await response.json();
+                document.getElementById('m-status').textContent = data.status;
+                document.getElementById('m-price').textContent = data.price;
+                document.getElementById('m-signal').textContent = data.signal;
+                document.getElementById('m-reliability').textContent = data.reliability;
+            } catch (error) {
+                console.log("Errore caricamento dati:", error);
+            }
+        }
+
         function initChart(symbol = 'BITSTAMP:BTCUSD') {
             new TradingView.widget({ 
                 "width": "100%", 
-                "height": window.innerWidth < 1024 ? 650 : "100%", 
+                "height": "100%", 
                 "symbol": symbol, 
                 "interval": "D", 
                 "theme": "dark", 
@@ -121,19 +105,25 @@
                 "allow_symbol_change": false
             });
         }
+
         function switchSymbol(symbol) { 
             document.getElementById('chart-title').textContent = 'PRIMARY DATASTREAM // ' + symbol.split(':')[1]; 
             initChart(symbol); 
         }
+
         function startTransition() { window.location.href = "editoriale.html"; }
+        
         function updateDateTime() { 
             const now = new Date();
             document.getElementById('clock').textContent = now.toLocaleTimeString('it-IT');
             document.getElementById('date').textContent = now.toLocaleDateString('it-IT');
         }
+
         setInterval(updateDateTime, 1000); 
         updateDateTime(); 
         initChart();
+        loadMarketStatus(); // Carica i dati all'avvio
+        setInterval(loadMarketStatus, 60000); // Ricarica ogni minuto
     </script>
 </body>
 </html>
