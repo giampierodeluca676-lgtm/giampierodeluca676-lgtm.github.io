@@ -7,131 +7,142 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
     <style>
-        :root { --neon: #00f2ff; --bg: #020408; }
-        body { background: var(--bg); color: #fff; font-family: 'Rajdhani', sans-serif; margin: 0; min-height: 100vh; overflow: hidden; background-image: radial-gradient(circle at 50% 50%, #0a111a 0%, #020408 100%); }
+        :root { --neon: #00f2ff; --bg: #010204; }
+        body { background: var(--bg); color: #fff; font-family: 'Rajdhani', sans-serif; margin: 0; min-height: 100vh; overflow-x: hidden; background-image: radial-gradient(circle at 50% 50%, #0a111a 0%, #010204 100%); }
         .neon-text { color: var(--neon); text-shadow: 0 0 20px rgba(0, 242, 255, 0.8); font-family: 'Orbitron'; }
         
+        /* Pannelli Sospesi 3D */
         .glass-panel {
             background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(0, 242, 255, 0.2);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 242, 255, 0.3);
             border-radius: 20px;
-            box-shadow: inset 0 0 20px rgba(0, 242, 255, 0.05), 0 10px 40px rgba(0,0,0,0.7);
+            box-shadow: 0 10px 50px rgba(0,0,0,0.8), inset 0 0 30px rgba(0, 242, 255, 0.05);
         }
 
-        .header-main { padding: 30px; text-align: center; }
-        .titan-grid { display: grid; grid-template-columns: 1fr; gap: 25px; padding: 20px; height: calc(100vh - 180px); }
-
+        .main-grid { display: grid; grid-template-columns: 1fr; gap: 20px; padding: 20px; height: calc(100vh - 160px); }
+        
         .btn-titan {
             background: linear-gradient(135deg, rgba(0,242,255,0.1) 0%, transparent 100%);
-            border: 1px solid var(--neon);
-            padding: 20px;
+            border: 2px solid var(--neon);
+            padding: 22px;
             border-radius: 12px;
             font-family: 'Orbitron';
             font-weight: 900;
             color: var(--neon);
-            transition: 0.4s;
+            transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             text-align: center;
             cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
-        .btn-titan:hover { background: var(--neon); color: #000; box-shadow: 0 0 30px var(--neon); }
+        .btn-titan:hover { background: var(--neon); color: #000; box-shadow: 0 0 40px var(--neon); transform: scale(1.02); }
 
         @media (min-width: 1024px) {
-            .titan-grid { grid-template-columns: 2.5fr 1fr; padding: 40px; }
+            .main-grid { grid-template-columns: 2.8fr 1.2fr; padding: 30px; }
         }
     </style>
 </head>
 <body>
 
-    <header class="header-main">
-        <div class="neon-text text-7xl font-black italic tracking-[-5px]">KEYGAP</div>
-        <div class="flex justify-center gap-10 mt-4 font-bold">
-            <div id="date" class="text-2xl opacity-50 uppercase tracking-[5px]">--/--/----</div>
-            <div id="clock" class="text-2xl neon-text tracking-[5px]">00:00:00</div>
+    <header class="p-8 text-center relative overflow-hidden">
+        <div class="neon-text text-7xl font-black italic tracking-tighter">KEYGAP</div>
+        <div class="flex justify-center gap-12 mt-4">
+            <div id="date" class="text-2xl font-bold opacity-40 uppercase tracking-[4px]">--/--/----</div>
+            <div id="clock" class="text-2xl font-black neon-text tracking-[4px]">00:00:00</div>
         </div>
     </header>
 
-    <div class="titan-grid">
-        <div class="glass-panel overflow-hidden" id="chart_terminal_container">
-            <div id="tv_logic_container" style="width: 100%; height: 100%;"></div>
+    <div class="main-grid">
+        <div class="glass-panel relative overflow-hidden">
+            <div id="CHART_ENGINE_V3" style="width: 100%; height: 100%;"></div>
         </div>
 
-        <div class="glass-panel p-8 flex flex-col">
-            <div class="mb-10 text-center">
-                <div class="text-[10px] tracking-[10px] text-cyan-500 font-bold uppercase mb-2">Neural_Core</div>
-                <div id="m-status" class="text-4xl font-black neon-text">ONLINE</div>
-            </div>
-            
-            <div class="space-y-4 mb-10 border-y border-white/5 py-6">
-                <div class="flex justify-between"><span class="opacity-50 text-xs tracking-widest uppercase">Price</span><span id="m-price" class="font-bold">---</span></div>
-                <div class="flex justify-between"><span class="opacity-50 text-xs tracking-widest uppercase">Signal</span><span id="m-signal" class="font-bold">---</span></div>
+        <div class="glass-panel p-8 flex flex-col justify-between">
+            <div>
+                <div class="text-[10px] tracking-[8px] text-cyan-500 font-bold uppercase mb-8 border-b border-cyan-500/20 pb-2">Intelligence_Report</div>
+                
+                <div class="space-y-6">
+                    <div class="flex justify-between items-end border-b border-white/5 pb-4">
+                        <span class="text-xs opacity-40 uppercase tracking-widest">Core_Status</span>
+                        <span id="m-status" class="text-2xl font-black neon-text uppercase">Online</span>
+                    </div>
+                    <div class="flex justify-between items-end border-b border-white/5 pb-4">
+                        <span class="text-xs opacity-40 uppercase tracking-widest">Market_Price</span>
+                        <span id="m-price" class="text-xl font-bold">---</span>
+                    </div>
+                    <div class="flex justify-between items-end border-b border-white/5 pb-4">
+                        <span class="text-xs opacity-40 uppercase tracking-widest">Bot_Signal</span>
+                        <span id="m-signal" class="text-xl font-bold">---</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="grid grid-cols-2 gap-4 mt-auto">
-                <button onclick="changeAsset('BITSTAMP:BTCUSD')" class="btn-titan text-xs uppercase">Bitcoin</button>
-                <button onclick="changeAsset('TVC:GOLD')" class="btn-titan text-xs uppercase">Gold</button>
+            <div class="flex flex-col gap-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <button onclick="bootChart('BITSTAMP:BTCUSD')" class="btn-titan text-[10px]">Bitcoin</button>
+                    <button onclick="bootChart('TVC:GOLD')" class="btn-titan text-[10px]">Gold</button>
+                </div>
+                <button onclick="window.location.href='editoriale.html'" class="btn-titan w-full text-lg">Editoriale Terminal ►</button>
             </div>
-            <button onclick="window.location.href='editoriale.html'" class="btn-titan mt-4 w-full">NEWS TERMINAL ►</button>
         </div>
     </div>
 
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script>
-        // Memoria persistente
-        let activeAsset = localStorage.getItem('titan_asset') || 'BITSTAMP:BTCUSD';
+        // Memoria di sessione per l'asset
+        let activeSymbol = localStorage.getItem('keygap_active_asset') || 'BITSTAMP:BTCUSD';
 
-        function renderNewChart(symbol) {
-            // Pulizia totale del contenitore per forzare il refresh
-            document.getElementById('tv_logic_container').innerHTML = '';
+        function bootChart(symbol) {
+            activeSymbol = symbol;
+            localStorage.setItem('keygap_active_asset', symbol);
             
+            // Forziamo lo svuotamento del contenitore
+            document.getElementById('CHART_ENGINE_V3').innerHTML = '';
+
             new TradingView.widget({
                 "autosize": true,
                 "symbol": symbol,
                 "interval": "D",
                 "timezone": "Europe/Rome",
                 "theme": "dark",
-                "style": "8", // Heikin-Ashi (Moderno)
+                "style": "8", // Heikin-Ashi: Il look moderno definitivo
                 "locale": "it",
-                "container_id": "tv_logic_container",
+                "container_id": "CHART_ENGINE_V3",
                 "enable_publishing": false,
                 "hide_top_toolbar": false,
                 "hide_legend": true,
                 "save_image": false,
-                "backgroundColor": "#020408",
-                "gridColor": "rgba(0, 242, 255, 0.02)",
+                "backgroundColor": "#010204",
+                "gridColor": "rgba(0, 242, 255, 0.03)",
                 "withdateranges": true
             });
         }
 
-        function changeAsset(s) {
-            activeAsset = s;
-            localStorage.setItem('titan_asset', s);
-            renderNewChart(s);
-        }
-
-        async function updateBotStats() {
+        async function refreshData() {
             try {
                 const r = await fetch('./market_status.json?v=' + Date.now());
                 const d = await r.json();
-                document.getElementById('m-status').textContent = d.status || "READY";
+                document.getElementById('m-status').textContent = d.status || "IDLE";
                 document.getElementById('m-price').textContent = d.price || "---";
                 document.getElementById('m-signal').textContent = d.signal || "---";
             } catch (e) {}
         }
 
-        function clock() {
+        function runClock() {
             const n = new Date();
             document.getElementById('clock').textContent = n.toLocaleTimeString('it-IT');
             document.getElementById('date').textContent = n.toLocaleDateString('it-IT');
         }
 
-        setInterval(clock, 1000);
-        setInterval(updateBotStats, 5000);
+        // Inizializzazione
+        setInterval(runClock, 1000);
+        setInterval(refreshData, 5000);
+        runClock();
+        refreshData();
         
-        clock();
-        updateBotStats();
-        // Caricamento forzato all'avvio
-        setTimeout(() => { renderNewChart(activeAsset); }, 500);
+        // Timeout di sicurezza per garantire il caricamento del DOM
+        setTimeout(() => { bootChart(activeSymbol); }, 300);
     </script>
 </body>
 </html>
