@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>KEYGAP | TITAN NEON</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
@@ -10,15 +10,39 @@
         :root { --neon: #00f2ff; --bg: #020408; }
         body { background: var(--bg); color: #fff; font-family: 'Rajdhani', sans-serif; margin: 0; min-height: 100vh; overflow: hidden; background-image: radial-gradient(circle at 50% 50%, #0a111a 0%, #020408 100%); }
         .neon-text { color: var(--neon); text-shadow: 0 0 20px rgba(0, 242, 255, 0.8); font-family: 'Orbitron'; }
-        .glass-panel { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(15px); border: 1px solid rgba(0, 242, 255, 0.2); border-radius: 20px; box-shadow: inset 0 0 20px rgba(0, 242, 255, 0.05), 0 10px 40px rgba(0,0,0,0.7); }
-        .header-main { padding: 30px; text-align: center; position: relative; }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 242, 255, 0.2);
+            border-radius: 20px;
+            box-shadow: inset 0 0 20px rgba(0, 242, 255, 0.05), 0 10px 40px rgba(0,0,0,0.7);
+        }
+
+        .header-main { padding: 30px; text-align: center; }
         .titan-grid { display: grid; grid-template-columns: 1fr; gap: 25px; padding: 20px; height: calc(100vh - 180px); }
-        .btn-titan { background: linear-gradient(135deg, rgba(0,242,255,0.1) 0%, transparent 100%); border: 1px solid var(--neon); padding: 20px; border-radius: 12px; font-family: 'Orbitron'; font-weight: 900; color: var(--neon); transition: 0.4s; text-align: center; cursor: pointer; }
+
+        .btn-titan {
+            background: linear-gradient(135deg, rgba(0,242,255,0.1) 0%, transparent 100%);
+            border: 1px solid var(--neon);
+            padding: 20px;
+            border-radius: 12px;
+            font-family: 'Orbitron';
+            font-weight: 900;
+            color: var(--neon);
+            transition: 0.4s;
+            text-align: center;
+            cursor: pointer;
+        }
         .btn-titan:hover { background: var(--neon); color: #000; box-shadow: 0 0 30px var(--neon); }
-        @media (min-width: 1024px) { .titan-grid { grid-template-columns: 2.5fr 1fr; padding: 40px; } }
+
+        @media (min-width: 1024px) {
+            .titan-grid { grid-template-columns: 2.5fr 1fr; padding: 40px; }
+        }
     </style>
 </head>
 <body>
+
     <header class="header-main">
         <div class="neon-text text-7xl font-black italic tracking-[-5px]">KEYGAP</div>
         <div class="flex justify-center gap-10 mt-4 font-bold">
@@ -28,78 +52,86 @@
     </header>
 
     <div class="titan-grid">
-        <div class="glass-panel overflow-hidden relative">
-            <div id="tradingview_advanced" style="width: 100%; height: 100%;"></div>
+        <div class="glass-panel overflow-hidden" id="chart_terminal_container">
+            <div id="tv_logic_container" style="width: 100%; height: 100%;"></div>
         </div>
 
         <div class="glass-panel p-8 flex flex-col">
             <div class="mb-10 text-center">
                 <div class="text-[10px] tracking-[10px] text-cyan-500 font-bold uppercase mb-2">Neural_Core</div>
-                <div id="m-status" class="text-4xl font-black neon-text uppercase">ONLINE</div>
+                <div id="m-status" class="text-4xl font-black neon-text">ONLINE</div>
             </div>
             
             <div class="space-y-4 mb-10 border-y border-white/5 py-6">
-                <div class="flex justify-between"><span class="opacity-50 text-xs tracking-widest">PRICE</span><span id="m-price" class="font-bold">---</span></div>
-                <div class="flex justify-between"><span class="opacity-50 text-xs tracking-widest">SIGNAL</span><span id="m-signal" class="font-bold">---</span></div>
+                <div class="flex justify-between"><span class="opacity-50 text-xs tracking-widest uppercase">Price</span><span id="m-price" class="font-bold">---</span></div>
+                <div class="flex justify-between"><span class="opacity-50 text-xs tracking-widest uppercase">Signal</span><span id="m-signal" class="font-bold">---</span></div>
             </div>
 
             <div class="grid grid-cols-2 gap-4 mt-auto">
-                <button onclick="changeAsset('BITSTAMP:BTCUSD')" class="btn-titan text-xs">BITCOIN</button>
-                <button onclick="changeAsset('TVC:GOLD')" class="btn-titan text-xs">GOLD</button>
+                <button onclick="changeAsset('BITSTAMP:BTCUSD')" class="btn-titan text-xs uppercase">Bitcoin</button>
+                <button onclick="changeAsset('TVC:GOLD')" class="btn-titan text-xs uppercase">Gold</button>
             </div>
-            <button onclick="window.location.href='editoriale.html'" class="btn-titan mt-4 w-full">INTELLIGENCE TERMINAL ►</button>
+            <button onclick="window.location.href='editoriale.html'" class="btn-titan mt-4 w-full">NEWS TERMINAL ►</button>
         </div>
     </div>
 
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script>
-        // MEMORIA: Recupera l'ultimo asset o usa BTC
-        let currentAsset = localStorage.getItem('keygap_last_asset') || 'BITSTAMP:BTCUSD';
+        // Memoria persistente
+        let activeAsset = localStorage.getItem('titan_asset') || 'BITSTAMP:BTCUSD';
 
-        function initChart(symbol) {
+        function renderNewChart(symbol) {
+            // Pulizia totale del contenitore per forzare il refresh
+            document.getElementById('tv_logic_container').innerHTML = '';
+            
             new TradingView.widget({
                 "autosize": true,
                 "symbol": symbol,
                 "interval": "D",
+                "timezone": "Europe/Rome",
                 "theme": "dark",
-                "style": "8", // Heikin-Ashi
+                "style": "8", // Heikin-Ashi (Moderno)
                 "locale": "it",
-                "container_id": "tradingview_advanced",
+                "container_id": "tv_logic_container",
                 "enable_publishing": false,
                 "hide_top_toolbar": false,
+                "hide_legend": true,
+                "save_image": false,
                 "backgroundColor": "#020408",
-                "gridColor": "rgba(0, 242, 255, 0.02)"
+                "gridColor": "rgba(0, 242, 255, 0.02)",
+                "withdateranges": true
             });
         }
 
-        function changeAsset(symbol) {
-            currentAsset = symbol;
-            localStorage.setItem('keygap_last_asset', symbol); // Salva la scelta
-            initChart(symbol);
+        function changeAsset(s) {
+            activeAsset = s;
+            localStorage.setItem('titan_asset', s);
+            renderNewChart(s);
         }
 
-        async function loadData() {
+        async function updateBotStats() {
             try {
                 const r = await fetch('./market_status.json?v=' + Date.now());
                 const d = await r.json();
-                document.getElementById('m-status').textContent = d.status || "ONLINE";
+                document.getElementById('m-status').textContent = d.status || "READY";
                 document.getElementById('m-price').textContent = d.price || "---";
                 document.getElementById('m-signal').textContent = d.signal || "---";
             } catch (e) {}
         }
 
-        function updateTime() {
-            const now = new Date();
-            document.getElementById('clock').textContent = now.toLocaleTimeString('it-IT');
-            document.getElementById('date').textContent = now.toLocaleDateString('it-IT');
+        function clock() {
+            const n = new Date();
+            document.getElementById('clock').textContent = n.toLocaleTimeString('it-IT');
+            document.getElementById('date').textContent = n.toLocaleDateString('it-IT');
         }
 
-        setInterval(updateTime, 1000);
-        setInterval(loadData, 5000);
+        setInterval(clock, 1000);
+        setInterval(updateBotStats, 5000);
         
-        updateTime();
-        loadData();
-        initChart(currentAsset); // Carica l'asset salvato
+        clock();
+        updateBotStats();
+        // Caricamento forzato all'avvio
+        setTimeout(() => { renderNewChart(activeAsset); }, 500);
     </script>
 </body>
 </html>
