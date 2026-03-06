@@ -3,70 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keygap Advantage - Guida & Terminale BTC</title>
+    <title>Keygap Advantage - Terminale & News</title>
     <style>
-        body { font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background: #fdfdfd; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background: #fdfdfd; }
         .header { border-bottom: 4px solid #d00; margin-bottom: 30px; }
-        .header h1 { color: #d00; margin-bottom: 5px; font-size: 32px; }
+        .header h1 { color: #d00; margin: 0; font-size: 28px; }
         .card { background: #fff; border: 1px solid #ddd; padding: 20px; border-radius: 4px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .price-big { font-size: 36px; font-weight: bold; color: #000; letter-spacing: -1px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th, td { text-align: left; padding: 12px; border-bottom: 1px solid #eee; }
-        th { background: #f8f8f8; font-size: 13px; text-transform: uppercase; color: #666; }
-        .badge { display: inline-block; padding: 5px 10px; border-radius: 3px; font-weight: bold; font-size: 12px; background: #e8f5e9; color: #2e7d32; }
-        .faq-box { background: #fff9c4; border-left: 5px solid #fbc02d; padding: 15px; margin-top: 20px; }
-        .btn-action { background: #007bff; color: white; border: none; padding: 12px 24px; border-radius: 4px; cursor: pointer; width: 100%; font-weight: bold; margin-top: 10px; }
+        .price-big { font-size: 32px; font-weight: bold; color: #000; }
+        .news-box { background: #fff; border: 1px solid #d00; padding: 15px; border-radius: 4px; border-left: 10px solid #d00; }
+        .news-title { font-weight: bold; color: #d00; text-decoration: none; font-size: 18px; display: block; margin-bottom: 5px; }
+        .news-title:hover { text-decoration: underline; }
+        .badge { padding: 4px 8px; border-radius: 3px; font-size: 12px; font-weight: bold; background: #e8f5e9; color: #2e7d32; }
+        .btn-link { display: inline-block; margin-top: 10px; color: #007bff; text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>Keygap Advantage</h1>
-        <p>Bitcoin: Analisi, Prezzi e Strategie HFT (High-Frequency Trading)</p>
+        <p>Analisi Quantitativa & Report Ufficiali</p>
     </div>
 
     <div class="card">
-        <span style="color: #666; font-size: 14px;">MERCATO LIVE:</span>
+        <span style="color: #666; font-size: 14px;">BITCOIN LIVE FEED:</span>
         <div id="btc-price" class="price-big">€ --.---,--</div>
         <div style="margin-top: 10px;">
             <span class="badge" id="status-text">OPERATIVO</span>
-            <span style="margin-left: 10px; font-size: 14px; color: #888;">Aggiornato alle: <span id="clock">--:--</span></span>
+            <span style="margin-left: 10px; font-size: 13px; color: #888;">Update: <span id="clock">--:--:--</span></span>
         </div>
     </div>
 
-    <div class="grid">
-        <div class="card">
-            <h3>📊 Analisi Tecnica</h3>
-            <p><strong>Segnale:</strong> <span id="signal-text" style="color:#d00">BULLISH</span></p>
-            <p style="font-size: 13px;">Il bot sta monitorando volumi istituzionali su Binance e Coinbase.</p>
-        </div>
-        <div class="card">
-            <h3>🛡️ Sentiment</h3>
-            <p><strong>Affidabilità:</strong> 98%</p>
-            <p style="font-size: 13px;">Rilevato basso rischio di manipolazione nel breve termine.</p>
-        </div>
+    <div class="news-box">
+        <small style="text-transform: uppercase; color: #666; font-weight: bold;">📰 Ultimo Editoriale dal Blog:</small>
+        <a href="#" id="post-link" class="news-title" target="_blank">Caricamento ultimo post...</a>
+        <p id="post-desc" style="font-size: 14px; margin: 5px 0;">Il bot sta recuperando l'ultima analisi pubblicata su Blogger.</p>
+        <a href="https://giampierodeluca676.blogspot.com/" target="_blank" class="btn-link">Vai all'archivio completo →</a>
     </div>
 
-    <div class="card">
-        <h3>🏆 BTC vs Asset Tradizionali</h3>
-        <table>
-            <thead>
-                <tr><th>Asset</th><th>Stato</th><th>Trend</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>Bitcoin (BTC)</td><td><span style="color:green">● Accumulo</span></td><td>Rialzista</td></tr>
-                <tr><td>Oro (Gold)</td><td><span style="color:orange">● Neutro</span></td><td>Stabile</td></tr>
-                <tr><td>S&P 500</td><td><span style="color:green">● Forte</span></td><td>Massimi</td></tr>
-            </tbody>
-        </table>
+    <div class="card" style="margin-top: 20px; background: #f9f9f9;">
+        <h3>💡 Prossima Mossa Algoritmica</h3>
+        <p id="signal-text">Monitoraggio in corso...</p>
     </div>
-
-    <div class="faq-box">
-        <h4>Cos'è il sistema Keygap?</h4>
-        <p style="font-size: 14px;">È un algoritmo quantistico proprietario che scansiona i mercati 24/7 per identificare zone di liquidità. Questo sito mostra i dati grezzi provenienti direttamente dal terminale Linux Lite di supporto.</p>
-    </div>
-
-    <button class="btn-action" onclick="window.open('https://t.me/share/url?url='+window.location.href)">Condividi Analisi su Telegram</button>
 
     <script>
         function update() {
@@ -74,9 +50,14 @@
             .then(r => r.json()).then(d => {
                 document.getElementById("btc-price").innerText = d.price;
                 document.getElementById("status-text").innerText = d.status;
-                document.getElementById("signal-text").innerText = d.signal;
                 document.getElementById("clock").innerText = d.last_update || new Date().toLocaleTimeString();
-            }).catch(e => console.log("Attesa bot..."));
+                document.getElementById("signal-text").innerText = "Il sistema ha rilevato un segnale " + d.signal + ". Affidabilità calcolata: " + (d.reliability || "95%");
+                
+                if(d.last_post_title) {
+                    document.getElementById("post-link").innerText = d.last_post_title;
+                    document.getElementById("post-link").href = d.last_post_url;
+                }
+            }).catch(e => console.log("Attesa sincronizzazione..."));
         }
         setInterval(update, 10000); update();
     </script>
