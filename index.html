@@ -133,7 +133,7 @@
     const randomMsg = msgs[Math.floor(Math.random() * msgs.length)];
     addLog(randomMsg);
             try {
-                const r = await fetch('./market_status.json?v=' + Date.now());
+                const r = await fetch('./market_status.json?t=" + new Date().getTime());
                 const d = await r.json();
                 if(d.status) document.getElementById('m-status').textContent = d.status.toUpperCase();
                 if(d.price) document.getElementById('m-price').textContent = d.price;
