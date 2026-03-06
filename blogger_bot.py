@@ -72,7 +72,7 @@ print(f"I file verranno salvati in: {LOCAL_REPORT_DIR}")
 
 while True:
     ora_attuale = datetime.now().strftime("%H:%M")
-    if ora_attuale in ["08:30", "20:30"]:
+    if ora_attuale in ["08:30", "21:20"]:
         pubblica()
         time.sleep(61)
     time.sleep(30)
