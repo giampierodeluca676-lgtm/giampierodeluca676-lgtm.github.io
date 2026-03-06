@@ -7,85 +7,60 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @keyframes scroll { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-        .ticker-wrap { background: #000; color: #3b82f6; padding: 8px 0; overflow: hidden; border-bottom: 1px solid #1e3a8a; }
-        .ticker-move { display: inline-block; white-space: nowrap; animation: scroll 30s linear infinite; font-family: monospace; font-size: 0.9rem; }
-        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(59, 130, 246, 0.2); }
+        .ticker-wrap { background: #000; color: #3b82f6; padding: 10px 0; overflow: hidden; border-bottom: 1px solid #1e40af; }
+        .ticker-move { display: inline-block; white-space: nowrap; animation: scroll 30s linear infinite; font-family: monospace; }
     </style>
 </head>
-<body class="bg-black text-gray-200 font-sans overflow-x-hidden">
+<body class="bg-black text-white font-sans">
 
     <div class="ticker-wrap">
-        <div class="ticker-move" id="ticker-text">CARICAMENTO STREAM DATI... • KEYGAP ADVANTAGE • MARKET STATUS: ONLINE • </div>
+        <div class="ticker-move" id="ticker-text">
+            CONNESSO AD ASTERRA • STATUS: LIVE • MARKET DATA ACTIVE • KEYGAP ADVANTAGE • 
+        </div>
     </div>
 
     <div class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-        <div>
-            <h1 class="text-2xl font-black tracking-tighter text-blue-500">KEYGAP <span class="text-white">ADV</span></h1>
-        </div>
+        <h1 class="text-3xl font-black tracking-tighter text-blue-600">KEYGAP <span class="text-white">ADV</span></h1>
         <div class="text-right">
-            <p id="live-clock" class="text-2xl font-mono font-bold text-white">00:00:00</p>
-            <p class="text-[10px] text-blue-400 uppercase tracking-widest">Live System Time</p>
+            <p id="live-clock" class="text-3xl font-mono font-bold">00:00:00</p>
+            <p class="text-[10px] text-blue-500 uppercase">System Time</p>
         </div>
     </div>
 
     <div class="max-w-6xl mx-auto px-4 pb-10">
-        <div class="glass rounded-2xl overflow-hidden shadow-2xl">
-            <div id="tv-chart" style="height: 550px;"></div>
-        </div>
-        
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-            <div class="glass p-4 rounded-xl text-center">
-                <p class="text-[10px] uppercase text-gray-500">Signal</p>
-                <p id="signal" class="text-green-400 font-bold">---</p>
-            </div>
-            <div class="glass p-4 rounded-xl text-center">
-                <p class="text-[10px] uppercase text-gray-500">Price</p>
-                <p id="price" class="text-white font-bold">---</p>
-            </div>
-            <div class="glass p-4 rounded-xl text-center">
-                <p class="text-[10px] uppercase text-gray-500">Reliability</p>
-                <p id="reliability" class="text-blue-400 font-bold">---</p>
-            </div>
-            <div class="glass p-4 rounded-xl text-center">
-                <p class="text-[10px] uppercase text-gray-500">Bot Sync</p>
-                <p id="bot-update" class="text-gray-400 font-mono">--:--</p>
-            </div>
+        <div class="bg-gray-900 rounded-3xl overflow-hidden border border-gray-800 shadow-2xl" style="height: 600px;">
+            <div id="tv-widget" style="height: 100%;"></div>
         </div>
     </div>
 
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script>
-        // 1. Orologio Fluido (Indipendente dal bot)
+        // Orologio fluido che non si ferma mai
         setInterval(() => {
-            const now = new Date();
-            document.getElementById('live-clock').innerText = now.toLocaleTimeString('it-IT');
+            document.getElementById('live-clock').innerText = new Date().toLocaleTimeString('it-IT');
         }, 1000);
 
-        // 2. Grafico TradingView
+        // Grafico con ricerca nativa (clicca sul nome in alto a sx del grafico)
         new TradingView.widget({
-            "container_id": "tv-chart",
-            "width": "100%", "height": "100%",
+            "autosize": true,
             "symbol": "BINANCE:BTCUSDT",
-            "interval": "D", "theme": "dark", "style": "1", "locale": "it",
+            "interval": "D",
+            "theme": "dark",
+            "style": "1",
+            "locale": "it",
             "allow_symbol_change": true,
-            "hide_top_toolbar": false,
-            "save_image": false
+            "container_id": "tv-widget"
         });
 
-        // 3. Update Dati Bot
-        async function refreshData() {
+        // Legge gli aggiornamenti da Asterra/Bot se presenti
+        async function checkUpdates() {
             try {
                 const r = await fetch('market_status.json?v=' + Date.now());
                 const d = await r.json();
-                document.getElementById('signal').innerText = d.signal;
-                document.getElementById('price').innerText = d.price;
-                document.getElementById('reliability').innerText = d.reliability;
-                document.getElementById('bot-update').innerText = d.last_update;
-                document.getElementById('ticker-text').innerText = d.ticker.repeat(3);
-            } catch (e) { console.log("Sync..."); }
+                if(d.ticker) document.getElementById('ticker-text').innerText = d.ticker.repeat(3);
+            } catch (e) {}
         }
-        setInterval(refreshData, 10000);
-        refreshData();
+        setInterval(checkUpdates, 10000);
     </script>
 </body>
 </html>
