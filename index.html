@@ -204,36 +204,84 @@ new TradingView.widget({
     "save_image": false,
     "container_id": "main-chart"
 });
+</script>
 
-// Sync Dati
+<script>
+// 1. WEBSOCKET PER PREZZO IN TEMPO REALE
+const priceEl = document.getElementById('price');
+const btcSocket = new WebSocket('wss://stream.binance.com:9443/ws/btcusdt@ticker');
+
+btcSocket.onmessage = (event) => {
+    const data = JSON.parse(event.data);
+    const price = parseFloat(data.c).toFixed(2);
+    const oldPrice = parseFloat(priceEl.innerText);
+    
+    if (price > oldPrice) priceEl.style.color = "#22c55e";
+    else if (price < oldPrice) priceEl.style.color = "#ef4444";
+    
+    priceEl.innerText = price;
+    setTimeout(() => { priceEl.style.color = "white"; }, 300);
+};
+
+// 2. SYNC DATI DAL BOT (SEGNALE E NEWS)
 async function sync() {
     try {
         const r = await fetch('market_status.json?v=' + Date.now());
         const d = await r.json();
-        
-        const priceEl = document.getElementById('price');
         const signalEl = document.getElementById('signal');
         
-        priceEl.innerText = d.price || '---';
         signalEl.innerText = d.signal || '---';
-
-        // Styling dinamico segnale
         if(d.signal === "BULLISH") signalEl.className = "text-3xl font-black mono text-green-500";
         else if(d.signal === "BEARISH") signalEl.className = "text-3xl font-black mono text-red-500";
+        else signalEl.className = "text-3xl font-black mono text-blue-400";
 
         if (d.news && d.news.length > 0) {
             document.getElementById('news-container').innerHTML = d.news.map(n => `
                 <div class="group border-b border-white/5 pb-3 transition-all hover:pl-2">
                     <span class="text-[10px] mono text-blue-500 font-bold">${n.time}</span>
-                    <a href="${n.link || '#'}" target="_blank" class="block mt-1 font-medium group-hover:text-blue-400 transition-colors italic">
-                        ${n.text}
-                    </a>
+                    <a href="${n.link || '#'}" target="_blank" class="block mt-1 font-medium group-hover:text-blue-400 transition-colors italic">${n.text}</a>
                 </div>
             `).join('');
         }
-    } catch(e) {}
+    } catch(e) { console.log("Sync Error:", e); }
 }
-setInterval(sync, 30000); sync();
+
+// UI HELPERS
+function toggleIntelligence() {
+    const o = document.getElementById('intelligence-overlay');
+    if (o.classList.contains('invisible')) {
+        o.classList.remove('invisible', 'opacity-0');
+        document.body.style.overflow = 'hidden';
+        loadIntelligenceReports();
+    } else {
+        o.classList.add('invisible', 'opacity-0');
+        document.body.style.overflow = '';
+    }
+}
+
+async function loadIntelligenceReports() {
+    const area = document.getElementById('reports-display-area');
+    area.innerHTML = '<div class="mono text-red-600 animate-pulse text-xl">DECRIPTING PACKETS...</div>';
+    try {
+        const response = await fetch('latest_report.html?v=' + Date.now());
+        if (response.ok) {
+            let text = await response.text();
+            area.innerHTML = `<div class="prose prose-invert max-w-none text-gray-300">${text}</div>`;
+        }
+    } catch (e) { area.innerHTML = 'Signal Lost.'; }
+}
+
+function updateDateTime() {
+    const now = new Date();
+    document.getElementById('live-date').innerText = now.toLocaleDateString('it-IT', {day:'2-digit', month:'long', year:'numeric'}).toUpperCase();
+    document.getElementById('live-clock').innerText = now.toLocaleTimeString('it-IT', {hour12: false});
+}
+
+// AVVIO
+setInterval(updateDateTime, 1000); 
+setInterval(sync, 30000); 
+updateDateTime();
+sync();
 </script>
 
 <script type='text/javascript' src='//pl25884877.highrevenuenetwork.com/07/47/37/074737f2d1be0f3c0e9de0585a695fd7.js'></script>
