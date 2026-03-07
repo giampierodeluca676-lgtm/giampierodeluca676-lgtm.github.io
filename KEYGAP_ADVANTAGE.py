@@ -215,11 +215,17 @@ def run_update():
             j.flush()
             os.fsync(j.fileno())
 
-        # Scrittura Report Mondiale in formato HTML
+        # Scrittura Report Mondiale in formato HTML (Storico)
         with open(nome_file_storico, "w", encoding='utf-8') as h_rep:
             h_rep.write(html_report)
             h_rep.flush()
             os.fsync(h_rep.fileno())
+
+        # --- AGGIORNAMENTO NECESSARIO PER IL SITO LIVE ---
+        with open("latest_report.html", "w", encoding='utf-8') as l_rep:
+            l_rep.write(html_report)
+            l_rep.flush()
+            os.fsync(l_rep.fileno())
         
         # PUSH SU GITHUB
         subprocess.run(["git", "add", "."], check=True)

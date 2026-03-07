@@ -1,11 +1,15 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.407,06",
+    "price": "€ 58.437,61",
     "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "17:49:24",
-    "ticker": "BTC/EUR: € 58.407,06 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 17:49:24 • ",
+    "reliability": "97%",
+    "last_update": "17:54:41",
+    "ticker": "BTC/EUR: € 58.437,61 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 17:54:41 • ",
     "news": [
+        {
+            "time": "17:49",
+            "text": "Solana at $84: Two Liquidity Clusters Might Decide Next Move"
+        },
         {
             "time": "17:36",
             "text": "Tezos price prediction 2026-2032: How high can XTZ rise?"
@@ -25,10 +29,6 @@
         {
             "time": "17:29",
             "text": "Short Term Bitcoin Holders Send 27,000 BTC to Exchanges as Selling Pressure Increases"
-        },
-        {
-            "time": "17:26",
-            "text": "Nintendo joins over 1,000 companies pushing the U.S. for refunds on 'illegal' Trump tariffs"
         }
     ]
 }
