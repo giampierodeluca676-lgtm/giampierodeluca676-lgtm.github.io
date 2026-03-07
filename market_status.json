@@ -1,11 +1,23 @@
 {
     "status": "OPERATIVO",
-    "price": "\u20ac 87.420,10",
+    "price": "\u20ac 58.569,32",
     "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "16:27:02",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 16:27:02 \u2022 ",
+    "reliability": "99%",
+    "last_update": "16:30:03",
+    "ticker": "BTC/EUR: \u20ac 58.569,32 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 16:30:03 \u2022 ",
     "news": [
+        {
+            "time": "16:27",
+            "text": "\"Not Bridges\": Cardano Builder Highlights Vision for Direct Withdrawals"
+        },
+        {
+            "time": "16:25",
+            "text": "Bitcoin World Live Feed Operating Hours: Essential Guide to 24/7 Cryptocurrency Coverage"
+        },
+        {
+            "time": "16:21",
+            "text": "Top ways to earn crypto in 2026: Choose what fits you"
+        },
         {
             "time": "16:15",
             "text": "XRP Price Prediction as Ripple Secures Key UK License"
@@ -17,18 +29,6 @@
         {
             "time": "16:05",
             "text": "Solana Price Prediction: ETF Inflows Stay Firm as $100 Breakout Setup Forms"
-        },
-        {
-            "time": "16:05",
-            "text": "Time Traveler Says XRP Holders Will Get the Last Laugh. Here\u2019s Why"
-        },
-        {
-            "time": "16:03",
-            "text": "Circle moves $68 million in just 30 minutes by using its own stablecoin for internal payments"
-        },
-        {
-            "time": "16:02",
-            "text": "Binance Formally Rejects US Senate Claims of Iran Sanctions Violations"
         }
     ]
 }
