@@ -3,9 +3,13 @@
     "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "12:40:35",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 12:40:35 \u2022 ",
+    "last_update": "12:45:07",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 12:45:07 \u2022 ",
     "news": [
+        {
+            "time": "12:40",
+            "text": "Trump Claims Iran Apologized to Middle East: A Stunning Shift in Regional Dynamics"
+        },
         {
             "time": "12:31",
             "text": "Shiba Inu Community Update: New ShibClaw Skill Launches With Warning Issued"
@@ -25,10 +29,6 @@
         {
             "time": "12:25",
             "text": "Strategic Spark Protocol Buyback: DeFi Lending Giant Acquires 1.84M SPK Tokens in $36K Confidence Move"
-        },
-        {
-            "time": "12:15",
-            "text": "This is How Bitcoin\u2019s Bear Market will Come to a Close \u2014According to Historical Data"
         }
     ]
 }
