@@ -1,11 +1,15 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.412,99",
+    "price": "€ 58.414,28",
     "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "17:29:58",
-    "ticker": "BTC/EUR: € 58.412,99 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 17:29:58 • ",
+    "reliability": "98%",
+    "last_update": "17:31:04",
+    "ticker": "BTC/EUR: € 58.414,28 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 17:31:04 • ",
     "news": [
+        {
+            "time": "17:26",
+            "text": "Nintendo joins over 1,000 companies pushing the U.S. for refunds on 'illegal' Trump tariffs"
+        },
         {
             "time": "17:24",
             "text": "Crypto Breakthrough: Florida Senate Approves Groundbreaking State-Level Stablecoin Bill, DeSantis’ Signature Next"
@@ -25,10 +29,6 @@
         {
             "time": "17:10",
             "text": "NYSE Agrees to $9M SEC Penalty After 2023 Opening Auction Failure"
-        },
-        {
-            "time": "17:06",
-            "text": "Dubai Regulator Orders KuCoin and MEXC to Stop Crypto Activity"
         }
     ]
 }
