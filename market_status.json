@@ -1,11 +1,15 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.152,14",
+    "price": "€ 58.139,92",
     "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "22:59:30",
-    "ticker": "BTC/EUR: € 58.152,14 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 22:59:30 • ",
+    "reliability": "98%",
+    "last_update": "23:05:04",
+    "ticker": "BTC/EUR: € 58.139,92 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 23:05:04 • ",
     "news": [
+        {
+            "time": "23:00",
+            "text": "Analysts Predict Conservative XRP Price If It Follows 2017 Run"
+        },
         {
             "time": "22:30",
             "text": "The World’s Largest Asset Managers Hold MSTR: Strategy Highlights Massive Institutional Bitcoin Exposure"
@@ -25,10 +29,6 @@
         {
             "time": "22:06",
             "text": "Solana Trading Volume Tops $4 Trillion as Market Eyes Recovery Above $90"
-        },
-        {
-            "time": "22:00",
-            "text": "Assessing if Zcash’s $200 support is at risk after ZEC falls by 8%"
         }
     ]
 }
