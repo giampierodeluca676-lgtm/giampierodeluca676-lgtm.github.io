@@ -18,27 +18,30 @@
 .opacity-0 { opacity: 0; visibility: hidden; }
 .opacity-100 { opacity: 1; visibility: visible; }
 
-/* FIX ULTIMATUM PER RELLIABILITY INDEX E TESTI LUNGHI */
+/* --- FIX ULTIMATUM: VERTICALE E SCROLLABILE --- */
 #reports-display-area {
-    display: flex !important;
-    flex-direction: column !important; /* FORZA L'IMPILAMENTO VERTICALE */
+    display: block !important; /* Block è più sicuro di flex per lo scroll lungo */
     width: 100% !important;
-    padding: 10px !important;
-    overflow-x: hidden !important; 
+    padding: 15px !important;
+    overflow-y: auto !important; /* Abilita lo scroll verticale */
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch; /* Rende lo scroll fluido su iPhone/Android */
+    max-height: 80vh; /* Impedisce al report di uscire dallo schermo */
 }
 
-/* Fix per evitare l'effetto "Insegna Bar" (testo stretto e lungo) */
+/* Fix per evitare l'effetto "Insegna Bar" e garantire la larghezza intera */
 #reports-display-area div, 
 #reports-display-area span, 
 #reports-display-area p,
 #reports-display-area * {
     max-width: 100% !important;
-    width: 100% !important; /* Occupa tutta la larghezza disponibile */
-    word-break: normal !important; /* Evita di rompere le parole a metà se non necessario */
+    width: 100% !important; 
+    word-break: normal !important; 
     white-space: normal !important;
     box-sizing: border-box !important;
     height: auto !important;
-    display: block !important; /* Forza ogni elemento su una nuova riga */
+    display: block !important; 
+    margin-bottom: 12px; /* Spazio tra i rettangoli e il testo */
 }
 
 #chart-container { height: calc(100vh - 220px); min-height: 450px; }
