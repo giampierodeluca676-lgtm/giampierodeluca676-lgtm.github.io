@@ -3,13 +3,9 @@
     "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "16:26:36",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 16:26:36 \u2022 ",
+    "last_update": "16:27:02",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 16:27:02 \u2022 ",
     "news": [
-        {
-            "time": "16:21",
-            "text": "Top ways to earn crypto in 2026: Choose what fits you"
-        },
         {
             "time": "16:15",
             "text": "XRP Price Prediction as Ripple Secures Key UK License"
@@ -29,6 +25,10 @@
         {
             "time": "16:03",
             "text": "Circle moves $68 million in just 30 minutes by using its own stablecoin for internal payments"
+        },
+        {
+            "time": "16:02",
+            "text": "Binance Formally Rejects US Senate Claims of Iran Sanctions Violations"
         }
     ]
 }
