@@ -1,11 +1,15 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.969,47",
+    "price": "€ 57.990,56",
     "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "20:31:13",
-    "ticker": "BTC/EUR: € 57.969,47 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 20:31:13 • ",
+    "reliability": "97%",
+    "last_update": "20:36:16",
+    "ticker": "BTC/EUR: € 57.990,56 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 20:36:16 • ",
     "news": [
+        {
+            "time": "20:30",
+            "text": "Stablecoin Market Tops $313 Billion as Sky’s USDS Leads Weekly Gains"
+        },
         {
             "time": "20:24",
             "text": "What If Bill Gates Never Sold His Microsoft Stock Since 1999?"
@@ -25,10 +29,6 @@
         {
             "time": "20:00",
             "text": "Bitcoin Losing Strength — $66,000 Now The Line Between Recovery And Crash"
-        },
-        {
-            "time": "20:00",
-            "text": "Bitcoin – How ceasefire hopes, oil prices are driving crypto market’s volatility"
         }
     ]
 }
