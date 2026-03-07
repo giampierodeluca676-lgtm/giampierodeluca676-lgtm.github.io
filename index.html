@@ -34,110 +34,92 @@
         </div>
     </div>
 
-    <main class="p-4 lg:p-6 max-w-[1600px] mx-auto space-y-6">
+    <main class="p-4 lg:p-6 max-w-[1800px] mx-auto flex flex-col lg:flex-row gap-6 h-screen max-h-[900px]">
         
-        <header class="flex flex-col md:flex-row justify-between items-center gap-4 border-b border-gray-800 pb-6">
-            <div>
-                <h1 class="text-3xl font-black italic tracking-tighter text-white">KEYGAP <span class="text-blue-500">ADVANTAGE</span></h1>
-                <p class="text-xs font-mono text-blue-400/60 uppercase tracking-widest">High-Frequency Data Terminal v.4.0</p>
-            </div>
-            
-            <div class="flex items-center gap-4">
-                <button onclick="toggleIntelligence()" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all flex items-center gap-2 shadow-lg shadow-red-900/20">
-                    📊 INTELLIGENCE
-                </button>
-                <button onclick="toggleNews()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all flex items-center gap-2 shadow-lg shadow-blue-900/20">
-                    📰 NOTIZIE LIVE
-                </button>
-                <div class="bg-black/40 border border-gray-800 px-4 py-2 rounded-lg font-mono text-blue-400 text-sm" id="live-clock">
-                    00:00:00
-                </div>
-            </div>
-        </header>
-
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
-            
-            <div class="lg:col-span-1 space-y-6">
-    <div class="glass p-5 rounded-2xl">
-        <h3 class="text-xs font-bold text-gray-500 uppercase mb-4 flex items-center gap-2">
-            <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span> Analisi Algoritmica
-        </h3>
-        
-        <div class="space-y-4">
-            <div class="grid grid-cols-2 gap-2">
-                <div class="bg-black/30 p-3 rounded-xl border border-white/5 text-center">
-                    <span class="text-[10px] text-gray-400 block uppercase">Prezzo BTC</span>
-                    <div class="text-lg font-black text-white" id="price">---</div>
-                </div>
-                <div class="bg-black/30 p-3 rounded-xl border border-white/5 text-center">
-                    <span class="text-[10px] text-gray-400 block uppercase">Affidabilità</span>
-                    <div class="text-lg font-black text-green-400" id="reliability">--%</div>
-                </div>
-            </div>
-
-            <div class="bg-black/30 p-4 rounded-xl border border-white/5 text-center">
-                <span class="text-[10px] text-gray-400 block uppercase font-bold">Segnale Operativo</span>
-                <div class="text-2xl font-black text-blue-400 tracking-tighter" id="signal">CALCOLO...</div>
-            </div>
-
-            <div class="glass p-6 rounded-xl border-l-4 border-red-600 shadow-2xl bg-gradient-to-br from-red-950/30 to-black/20">
-                <div class="flex items-center justify-between mb-4">
-                    <span class="text-[12px] font-bold text-red-500 uppercase tracking-widest animate-pulse">● TG MONDIALE LIVE</span>
-                    <span class="text-[10px] font-mono text-gray-500" id="tg-timer">12s</span>
-                </div>
+        <div class="w-full lg:w-72 flex flex-col gap-6">
+            <div class="glass p-5 rounded-2xl flex-1 flex flex-col border-b-4 border-blue-500 shadow-2xl">
+                <h3 class="text-xs font-bold text-gray-500 uppercase mb-6 flex items-center gap-2">
+                    <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span> Analisi Algoritmica
+                </h3>
                 
-                <div id="tg-news-content" class="min-h-[120px] flex flex-col justify-start">
-                    <div id="tg-category" class="text-[11px] font-black text-blue-500 uppercase mb-2 tracking-widest border-b border-blue-500/20 pb-1 inline-block">Sincronizzazione...</div>
-                    <div id="tg-headline" class="text-xl font-extrabold text-white leading-tight tracking-tight italic">
-                        Inizializzazione flussi Intelligence...
+                <div class="space-y-6 flex-1">
+                    <div class="bg-black/30 p-4 rounded-xl border border-white/5 text-center">
+                        <span class="text-[10px] text-gray-400 block uppercase font-bold mb-1">Prezzo BTC</span>
+                        <div class="text-2xl font-black text-white" id="price">---</div>
+                    </div>
+
+                    <div class="bg-black/30 p-4 rounded-xl border border-white/5 text-center">
+                        <span class="text-[10px] text-gray-400 block uppercase font-bold mb-1">Segnale Operativo</span>
+                        <div class="text-2xl font-black text-blue-400 tracking-tighter" id="signal">CALCOLO...</div>
+                    </div>
+
+                    <div class="bg-black/30 p-4 rounded-xl border border-white/5 text-center">
+                        <span class="text-[10px] text-gray-400 block uppercase font-bold mb-1">Affidabilità</span>
+                        <div class="text-2xl font-black text-green-400" id="reliability">--%</div>
                     </div>
                 </div>
 
-                <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden mt-6">
-                    <div id="tg-progress" class="bg-red-600 h-full shadow-[0_0_15px_#dc2626]" style="width: 0%"></div>
+                <div class="mt-auto pt-6">
+                    <div class="rounded-xl overflow-hidden border border-gray-800 bg-black/20 h-[250px] flex items-center justify-center">
+                        <script type="text/javascript">
+                            atOptions = { 'key' : '074737f2d1be0f3c0e9de0585a695fd7', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
+                        </script>
+                        <script type="text/javascript" src="https://www.highperformanceformat.com/074737f2d1be0f3c0e9de0585a695fd7/invoke.js"></script>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="rounded-xl overflow-hidden border border-gray-800 bg-black/20 h-[250px] flex items-center justify-center">
-        <script type="text/javascript">
-            atOptions = { 'key' : '074737f2d1be0f3c0e9de0585a695fd7', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
-        </script>
-        <script type="text/javascript" src="https://www.highperformanceformat.com/074737f2d1be0f3c0e9de0585a695fd7/invoke.js"></script>
-    </div>
-</div>
+        <div class="flex-1 flex flex-col gap-6">
+            
+            <header class="flex flex-col md:flex-row justify-between items-center gap-4 border-b border-gray-800 pb-4">
+                <div>
+                    <h1 class="text-3xl font-black italic tracking-tighter text-white">KEYGAP <span class="text-blue-500">ADVANTAGE</span></h1>
+                    <p class="text-xs font-mono text-blue-400/60 uppercase tracking-widest">High-Frequency Data Terminal v.4.0</p>
+                </div>
+                
+                <div class="flex items-center gap-4">
+                    <button onclick="toggleIntelligence()" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all flex items-center gap-2 shadow-lg shadow-red-900/20">
+                        📊 INTELLIGENCE
+                    </button>
+                    <button onclick="toggleNews()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all flex items-center gap-2 shadow-lg shadow-blue-900/20">
+                        📰 NOTIZIE LIVE
+                    </button>
+                    <div class="bg-black/40 border border-gray-800 px-4 py-2 rounded-lg font-mono text-blue-400 text-sm" id="live-clock">
+                        00:00:00
+                    </div>
+                </div>
+            </header>
 
-            <div class="lg:col-span-3 h-[600px] glass rounded-3xl overflow-hidden relative border border-blue-500/20 shadow-2xl shadow-blue-500/5">
+            <div class="glass p-5 rounded-2xl border-l-8 border-red-600 shadow-2xl bg-gradient-to-r from-red-950/30 to-black/20">
+                <div class="flex items-center gap-6">
+                    <div class="shrink-0 border-r border-white/10 pr-6">
+                        <div class="flex items-center gap-2">
+                            <span class="text-[14px] font-black text-red-500 uppercase tracking-tighter animate-pulse">● TG MONDIALE</span>
+                            <span class="text-[10px] font-mono text-gray-500" id="tg-timer">12s</span>
+                        </div>
+                        <div id="tg-category" class="text-[11px] font-black text-blue-500 uppercase tracking-widest mt-1">Sincronizzazione...</div>
+                    </div>
+                    
+                    <div class="flex-1">
+                        <div id="tg-headline" class="text-2xl font-extrabold text-white leading-tight italic tracking-tight">
+                            Inizializzazione flussi Intelligence...
+                        </div>
+                        <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden mt-3">
+                            <div id="tg-progress" class="bg-red-600 h-full shadow-[0_0_15px_#dc2626]" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-1 glass rounded-3xl overflow-hidden relative border border-blue-500/20 shadow-2xl shadow-blue-500/5 min-h-[400px]">
                 <div id="main-chart" class="w-full h-full"></div>
             </div>
         </div>
     </main>
 
-    <div id="news-drawer" class="fixed top-0 right-0 h-full w-full md:w-[400px] glass border-l border-gray-800 drawer-closed flex flex-col shadow-2xl">
-        <div class="p-6 border-b border-gray-800 flex justify-between items-center bg-black/20">
-            <h2 class="font-black text-xl italic tracking-tighter">NEWS <span class="text-blue-500">FEED</span></h2>
-            <button onclick="toggleNews()" class="text-gray-400 hover:text-white">&times; CHIUDI</button>
-        </div>
-        <div class="flex-1 overflow-y-auto p-4 space-y-4" id="news-container">
-            <div class="p-4 border border-gray-800 rounded-xl bg-white/5 animate-pulse">Sincronizzazione flussi...</div>
-        </div>
-    </div>
-
-    <div id="intelligence-overlay" class="fixed inset-0 bg-black/98 hidden opacity-0 flex flex-col">
-        <div class="p-6 border-b border-gray-800 flex justify-between items-center bg-black">
-            <h2 class="text-2xl font-black italic text-red-600">KEYGAP <span class="text-white">INTELLIGENCE</span></h2>
-            <button onclick="toggleIntelligence()" class="text-4xl font-light hover:text-red-500 transition-colors">&times; CHIUDI</button>
-        </div>
-        <div class="flex-1 overflow-y-auto p-4 md:p-10 bg-[#050505]">
-            <div class="max-w-4xl mx-auto space-y-12" id="reports-display-area">
-                <div class="text-center text-gray-500 animate-pulse font-mono">STABILENDO CONNESSIONE CRIPTATA...</div>
-            </div>
-        </div>
-    </div>
-
-    <footer class="mt-10 border-t border-gray-900 p-8 text-center bg-black/40">
-        <p class="text-xs text-gray-600 font-mono mb-4">ADVERTISING PARTNER NETWORK</p>
+    <footer class="mt-6 border-t border-gray-900 p-6 text-center bg-black/40">
+        <p class="text-xs text-gray-600 font-mono mb-4 uppercase tracking-widest">Advertising Partner Network</p>
         <div class="flex justify-center">
             <script type="text/javascript">
                 atOptions = { 'key' : '074737f2d1be0f3c0e9de0585a695fd7', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
