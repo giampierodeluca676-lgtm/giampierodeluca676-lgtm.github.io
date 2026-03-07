@@ -14,7 +14,7 @@
         /* Stile Cassetto News */
         #news-drawer {
             transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            z-index: 200;
+            z-index: 400; /* Aumentato per stare sopra tutto */
         }
         .drawer-closed { transform: translateX(100%); }
         .drawer-open { transform: translateX(0); }
@@ -22,8 +22,13 @@
         /* Integrazione Intelligence Overlay */
         #intelligence-overlay {
             transition: opacity 0.7s ease-in-out;
-            z-index: 300;
+            z-index: 500; /* Massimo livello di priorità */
         }
+
+        /* AGGIORNAMENTO FIX PULSANTI E GRAFICO */
+        header { position: relative; z-index: 50; }
+        button { cursor: pointer !important; pointer-events: auto !important; position: relative; z-index: 60; }
+        #main-chart { z-index: 1; position: relative; }
     </style>
 </head>
 <body class="bg-[#020617] text-gray-200 font-sans selection:bg-blue-500/30">
@@ -72,17 +77,17 @@
 
         <div class="flex-1 flex flex-col gap-6">
             
-            <header class="flex flex-col md:flex-row justify-between items-center gap-4 border-b border-gray-800 pb-4">
-                <div>
+            <header class="relative z-50 flex flex-col md:flex-row justify-between items-center gap-4 border-b border-gray-800 pb-4">
+                <div class="relative z-50">
                     <h1 class="text-3xl font-black italic tracking-tighter text-white">KEYGAP <span class="text-blue-500">ADVANTAGE</span></h1>
                     <p class="text-xs font-mono text-blue-400/60 uppercase tracking-widest">High-Frequency Data Terminal v.4.0</p>
                 </div>
                 
-                <div class="flex items-center gap-4">
-                    <button onclick="toggleIntelligence()" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all flex items-center gap-2 shadow-lg shadow-red-900/20">
+                <div class="flex items-center gap-4 relative z-50">
+                    <button onclick="toggleIntelligence()" class="relative z-[60] pointer-events-auto bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all flex items-center gap-2 shadow-lg shadow-red-900/20 active:scale-95">
                         📊 INTELLIGENCE
                     </button>
-                    <button onclick="toggleNews()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all flex items-center gap-2 shadow-lg shadow-blue-900/20">
+                    <button onclick="toggleNews()" class="relative z-[60] pointer-events-auto bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all flex items-center gap-2 shadow-lg shadow-blue-900/20 active:scale-95">
                         📰 NOTIZIE LIVE
                     </button>
                     <div class="bg-black/40 border border-gray-800 px-4 py-2 rounded-lg font-mono text-blue-400 text-sm" id="live-clock">
