@@ -1,11 +1,15 @@
 {
     "status": "OPERATIVO",
-    "price": "\u20ac 58.413,81",
+    "price": "\u20ac 58.477,24",
     "signal": "BULLISH",
     "reliability": "97%",
-    "last_update": "16:46:21",
-    "ticker": "BTC/EUR: \u20ac 58.413,81 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 16:46:21 \u2022 ",
+    "last_update": "16:51:06",
+    "ticker": "BTC/EUR: \u20ac 58.477,24 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 16:51:06 \u2022 ",
     "news": [
+        {
+            "time": "16:47",
+            "text": "dYdX price prediction 2026- 2032: Will dYdX recover its ATH soon?"
+        },
         {
             "time": "16:35",
             "text": "AI Agents Enter Crypto Markets With Support From Exchanges, Wallets, Data Firms and More"
@@ -25,10 +29,6 @@
         {
             "time": "16:21",
             "text": "Top ways to earn crypto in 2026: Choose what fits you"
-        },
-        {
-            "time": "16:15",
-            "text": "XRP Price Prediction as Ripple Secures Key UK License"
         }
     ]
 }
