@@ -67,13 +67,29 @@
                             <span class="text-xs text-gray-400">Prezzo Attuale (BTC)</span>
                             <div class="text-2xl font-black text-white" id="price">---</div>
                         </div>
+
                         <div class="bg-black/30 p-4 rounded-xl border border-white/5">
                             <span class="text-xs text-gray-400">Segnale Operativo</span>
                             <div class="text-2xl font-black text-blue-400" id="signal">CALCOLO...</div>
                         </div>
+
                         <div class="bg-black/30 p-4 rounded-xl border border-white/5">
                             <span class="text-xs text-gray-400">Affidabilità Segnale</span>
                             <div class="text-2xl font-black text-green-400" id="reliability">--%</div>
+                        </div>
+
+                        <div class="glass p-4 rounded-xl border-l-4 border-red-600 shadow-lg mt-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-[10px] font-bold text-red-500 uppercase tracking-widest animate-pulse">● Global Flash TG</span>
+                                <i class="fas fa-globe-americas text-gray-500 text-[10px]"></i>
+                            </div>
+                            <div id="tg-news-content" class="min-h-[60px]">
+                                <div id="tg-category" class="text-[9px] font-bold text-blue-400 uppercase mb-1">Inizializzazione...</div>
+                                <div id="tg-headline" class="text-xs font-bold text-white leading-tight italic">Connessione ai flussi mondiali...</div>
+                            </div>
+                            <div class="w-full bg-gray-800 h-1 rounded-full overflow-hidden mt-2">
+                                <div id="tg-progress" class="bg-red-600 h-full" style="width: 0%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -177,6 +193,7 @@
         });
 
         // Sync Dati dal Bot
+        let newsIndex = 0;
         async function sync() {
             try {
                 const r = await fetch('market_status.json?v=' + Date.now());
@@ -193,6 +210,34 @@
                         <div class="text-sm font-medium leading-relaxed">${n.text}</div>
                     </div>
                 `).join('') : 'Nessuna notizia';
+
+                // --- AGGIORNAMENTO MINI TG MONDIALE ---
+                if (d.news && d.news.length > 0) {
+                    const headline = document.getElementById('tg-headline');
+                    const category = document.getElementById('tg-category');
+                    const progress = document.getElementById('tg-progress');
+                    
+                    if (headline && category && progress) {
+                        const currentNews = d.news[newsIndex];
+                        headline.innerText = currentNews.text;
+                        
+                        // Logica Categorie TG
+                        const txt = currentNews.text.toUpperCase();
+                        if (txt.includes('WAR') || txt.includes('GUERRA') || txt.includes('ATTACK')) category.innerText = "CONFLITTI / GEO";
+                        else if (txt.includes('FED') || txt.includes('RATE') || txt.includes('INFLATION')) category.innerText = "MACROECONOMIA";
+                        else category.innerText = "MARKET INTELLIGENCE";
+
+                        // Animazione barra
+                        progress.style.transition = 'none';
+                        progress.style.width = '0%';
+                        setTimeout(() => {
+                            progress.style.transition = 'width 4900ms linear';
+                            progress.style.width = '100%';
+                        }, 50);
+
+                        newsIndex = (newsIndex + 1) % d.news.length;
+                    }
+                }
             } catch(e) { console.log("Sync error"); }
         }
         setInterval(sync, 5000);
