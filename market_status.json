@@ -1,11 +1,21 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.047,07",
+    "price": "€ 58.017,47",
     "signal": "BEARISH",
     "reliability": "97%",
-    "last_update": "00:48:45",
-    "ticker": "BTC/EUR: € 58.047,07 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 00:48:45 • ",
+    "last_update": "00:53:47",
+    "ticker": "BTC/EUR: € 58.017,47 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 00:53:47 • ",
     "news": [
+        {
+            "time": "00:50",
+            "text": "Ethereum at a Breaking Point as ETH/BTC Stalls and $2,340 Comes Into View",
+            "link": "https://coinpaper.com/15249/ethereum-at-a-breaking-point-as-eth-btc-stalls-and-2-340-comes-into-view"
+        },
+        {
+            "time": "00:46",
+            "text": "Bitcoin May Be Entering a Final Selloff Phase, Charts Warn",
+            "link": "https://coinpaper.com/15248/bitcoin-may-be-entering-a-final-selloff-phase-charts-warn"
+        },
         {
             "time": "00:31",
             "text": "IRS Pushes Crypto Exchanges Toward Mandatory Digital Tax Reporting",
@@ -25,16 +35,6 @@
             "time": "00:30",
             "text": "Here’s Why Bitcoin Price Must Not Fall To $54K: Analyst",
             "link": "https://www.newsbtc.com/news/bitcoin/heres-why-bitcoin-price-must-not-fall-to-54k-analyst/"
-        },
-        {
-            "time": "00:10",
-            "text": "Trump’s Bank Regulators Outdo Basel, Boost Tokenized Securities",
-            "link": "https://www.forbes.com/sites/jasonbrett/2026/03/07/trumps-bank-regulators-outdo-basel-boost-tokenized-securities/"
-        },
-        {
-            "time": "00:10",
-            "text": "Grammarly’s ‘Expert Review’ Feature Exposed: The Shocking Absence of Human Experts",
-            "link": "https://bitcoinworld.co.in/grammarly-expert-review-analysis/"
         }
     ]
 }
