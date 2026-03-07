@@ -1,11 +1,19 @@
 {
     "status": "OPERATIVO",
-    "price": "\u20ac 87.420,10",
+    "price": "\u20ac 58.435,05",
     "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "16:37:06",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 16:37:06 \u2022 ",
+    "reliability": "97%",
+    "last_update": "16:46:04",
+    "ticker": "BTC/EUR: \u20ac 58.435,05 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 16:46:04 \u2022 ",
     "news": [
+        {
+            "time": "16:35",
+            "text": "AI Agents Enter Crypto Markets With Support From Exchanges, Wallets, Data Firms and More"
+        },
+        {
+            "time": "16:30",
+            "text": "Pi Network\u2019s (PI) Price Soars 16% Again as Team Reveals Distributed AI Computing Plans"
+        },
         {
             "time": "16:27",
             "text": "\"Not Bridges\": Cardano Builder Highlights Vision for Direct Withdrawals"
@@ -21,14 +29,6 @@
         {
             "time": "16:15",
             "text": "XRP Price Prediction as Ripple Secures Key UK License"
-        },
-        {
-            "time": "16:10",
-            "text": "Bitcoin Golden Cross Signals Imminent Explosive Rally: On-Chain Data Points to 30-40 Day Window"
-        },
-        {
-            "time": "16:05",
-            "text": "Solana Price Prediction: ETF Inflows Stay Firm as $100 Breakout Setup Forms"
         }
     ]
 }
