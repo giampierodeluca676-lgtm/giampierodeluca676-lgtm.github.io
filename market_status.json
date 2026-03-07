@@ -3,9 +3,17 @@
     "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "15:36:43",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 15:36:43 \u2022 ",
+    "last_update": "15:40:05",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 15:40:05 \u2022 ",
     "news": [
+        {
+            "time": "15:37",
+            "text": "The 30-Day Countdown: Bitcoin\u2019s \u2018Golden Cross\u2019 Signal Points to Explosive Rally"
+        },
+        {
+            "time": "15:33",
+            "text": "21Shares Launches First U.S. Spot Polkadot ETF on Nasdaq"
+        },
         {
             "time": "15:32",
             "text": "Crypto ETFs Stay Red: Bitcoin Loses $349 Million in Friday Pullback"
@@ -21,14 +29,6 @@
         {
             "time": "15:27",
             "text": "Ripple Expands Institutional Push as XRPL Progress Continues"
-        },
-        {
-            "time": "15:25",
-            "text": "Binance Proof of Reserves Reveals Alarming 8,004 BTC Drop in User Holdings"
-        },
-        {
-            "time": "15:07",
-            "text": "Trending stocks this week as Wall Street slips amid Middle East conflict"
         }
     ]
 }
