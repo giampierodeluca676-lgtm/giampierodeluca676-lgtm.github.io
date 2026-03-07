@@ -1,10 +1,10 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.011,87",
+    "price": "€ 58.112,90",
     "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "21:36:38",
-    "ticker": "BTC/EUR: € 58.011,87 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 21:36:38 • ",
+    "reliability": "98%",
+    "last_update": "21:41:40",
+    "ticker": "BTC/EUR: € 58.112,90 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 21:41:40 • ",
     "news": [
         {
             "time": "21:30",
@@ -13,6 +13,10 @@
         {
             "time": "21:30",
             "text": "XRP Whale Outflows Continue On Binance — What’s Happening?"
+        },
+        {
+            "time": "21:27",
+            "text": "Analyze Trends Like a Wall Street Pro with Advanced Charting Tools"
         },
         {
             "time": "21:21",
@@ -25,10 +29,6 @@
         {
             "time": "21:11",
             "text": "Ethereum Holds the Line at $1,965 as Market Eyes Key Technical Levels"
-        },
-        {
-            "time": "21:10",
-            "text": "Bitcoin Price Plummets: BTC Falls Below Critical $67,000 Support Level"
         }
     ]
 }
