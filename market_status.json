@@ -3,9 +3,13 @@
     "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "13:15:52",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 13:15:52 \u2022 ",
+    "last_update": "13:20:07",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 13:20:07 \u2022 ",
     "news": [
+        {
+            "time": "13:14",
+            "text": "Top Crypto PR Agencies for Crisis & Reputation Management in 2026"
+        },
         {
             "time": "13:08",
             "text": "Beyond the Hype: The Top 5 Crypto PR Agencies Winning in Asia (2026 Guide)"
@@ -25,10 +29,6 @@
         {
             "time": "13:01",
             "text": "Kalshi, Polymarket eye $20B valuations in potential fundraising: WSJ"
-        },
-        {
-            "time": "13:00",
-            "text": "KuCoin Blocked In UAE As Authorities Mandate Immediate Service Stop"
         }
     ]
 }
