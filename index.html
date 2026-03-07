@@ -7,81 +7,88 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @keyframes scroll { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-        .ticker-wrap { background: #000; color: #3b82f6; padding: 10px 0; overflow: hidden; border-bottom: 1px solid #1e40af; z-index: 100; position: sticky; top: 0; }
-        .ticker-move { display: inline-block; white-space: nowrap; animation: scroll 40s linear infinite; font-family: monospace; }
+        .ticker-wrap { background: #000; color: #3b82f6; padding: 8px 0; overflow: hidden; border-bottom: 1px solid #1e40af; z-index: 100; position: sticky; top: 0; height: 40px; }
+        .ticker-move { display: inline-block; white-space: nowrap; animation: scroll 30s linear infinite; font-family: monospace; font-size: 12px; }
         .glass { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(59, 130, 246, 0.2); }
         
-        /* Drawer News */
         #news-drawer { transition: transform 0.4s ease; z-index: 1000; }
         .drawer-closed { transform: translateX(100%); }
 
-        /* OVERLAY INTELLIGENCE - FIX MOBILE */
-        #intelligence-overlay { 
-            transition: opacity 0.5s ease, visibility 0.5s; 
-            z-index: 2000;
-            background: #000;
-        }
+        #intelligence-overlay { transition: opacity 0.5s ease, visibility 0.5s; z-index: 2000; background: #000; }
         .opacity-0 { opacity: 0; visibility: hidden; }
         .opacity-100 { opacity: 1; visibility: visible; }
         
-        /* Fix per il grafico schiacciato */
-        #chart-container { height: calc(100vh - 200px); min-height: 500px; }
-        @media (max-width: 1024px) { #chart-container { height: 500px; } }
+        /* FIX TOTALE PER IL REPORT SU CELLULARE */
+        #reports-display-area {
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+            white-space: normal !important;
+        }
+        /* Forza tabelle e div del bot a non superare la larghezza dello schermo */
+        #reports-display-area * {
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+        }
+
+        #chart-container { height: calc(100vh - 220px); min-height: 450px; }
+        @media (max-width: 1024px) { #chart-container { height: 400px; } }
     </style>
 </head>
 <body class="bg-[#020617] text-gray-200 font-sans overflow-x-hidden">
 
     <div class="ticker-wrap">
-        <div class="ticker-move">CONNESSONE HFT STABILITA... AGGIORNAMENTO NODI KEYGAP... ANALISI FLUSSI...</div>
+        <div class="ticker-move uppercase tracking-widest">
+            CONNESSONE HFT STABILITA... AGGIORNAMENTO NODI KEYGAP... ANALISI FLUSSI... SENTIMENT DI MERCATO OTTIMIZZATO... 
+            DATA STREAM ATTIVO... CRITTOGRAFIA END-TO-END...
+        </div>
     </div>
 
     <main class="p-2 md:p-6 max-w-[1800px] mx-auto flex flex-col lg:flex-row gap-4">
         
         <div class="w-full lg:w-96 flex flex-col gap-4 shrink-0">
-            
             <div class="glass p-6 rounded-3xl border-b-4 border-blue-500 shadow-xl">
-                <div class="flex flex-col gap-4">
+                <div class="grid grid-cols-1 gap-4">
                     <div class="bg-black/60 p-4 rounded-2xl border border-white/5 text-center">
                         <span class="text-[10px] text-gray-500 block uppercase mb-1">BTC PRICE</span>
-                        <div id="price" class="text-3xl font-black text-white">---</div>
+                        <div id="price" class="text-4xl font-black text-white">---</div>
                     </div>
                     <div class="bg-black/60 p-4 rounded-2xl border border-white/5 text-center">
                         <span class="text-[10px] text-gray-500 block uppercase mb-1">SIGNAL</span>
-                        <div id="signal" class="text-3xl font-black text-blue-400">---</div>
+                        <div id="signal" class="text-4xl font-black text-blue-400">---</div>
                     </div>
                 </div>
             </div>
 
-            <div class="glass p-6 rounded-3xl border-l-8 border-red-600 shadow-xl">
+            <div class="glass p-6 rounded-3xl border-l-8 border-red-600 shadow-xl flex-1">
                 <span class="text-[10px] font-black text-red-500 animate-pulse uppercase">● TG LIVE</span>
-                <div id="tg-headline" class="text-xl font-bold text-white italic mt-2 min-h-[80px] leading-tight text-ellipsis overflow-hidden">Sincronizzazione...</div>
+                <div id="tg-headline" class="text-xl font-bold text-white italic mt-2 min-h-[80px] leading-tight">Sincronizzazione...</div>
                 <div class="w-full bg-gray-800 h-2 rounded-full mt-4 overflow-hidden">
                     <div id="tg-progress" class="bg-red-600 h-full w-0 transition-all"></div>
                 </div>
             </div>
 
             <div class="flex flex-col gap-3">
-                <button onclick="toggleIntelligence()" class="w-full h-24 bg-red-600 hover:bg-red-700 text-white rounded-2xl font-black text-lg uppercase tracking-tighter shadow-lg active:scale-95 transition-all">
-                    📊 Intelligence Terminal
+                <button onclick="toggleIntelligence()" class="w-full h-24 bg-red-600 hover:bg-red-700 text-white rounded-2xl font-black text-xl uppercase shadow-lg active:scale-95 transition-all">
+                    📊 Intelligence
                 </button>
-                <button onclick="toggleNews()" class="w-full h-24 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-black text-lg uppercase tracking-tighter shadow-lg active:scale-95 transition-all">
-                    📰 Notizie Live Feed
+                <button onclick="toggleNews()" class="w-full h-24 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-black text-xl uppercase shadow-lg active:scale-95 transition-all">
+                    📰 Notizie Feed
                 </button>
             </div>
         </div>
 
         <div class="flex-1 flex flex-col gap-4 w-full">
             <header class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-gray-800 pb-4 px-2">
-                <div class="mb-2 sm:mb-0">
-                    <h1 class="text-3xl md:text-5xl font-black italic text-white tracking-tighter">KEYGAP <span class="text-blue-500">ADVANTAGE</span></h1>
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-black italic text-white tracking-tighter">KEYGAP <span class="text-blue-500">ADVANTAGE</span></h1>
                 </div>
-                <div class="text-left sm:text-right">
+                <div class="text-left sm:text-right mt-2 sm:mt-0">
                     <div id="live-date" class="text-blue-500 font-bold text-xs uppercase mb-1">DATA</div>
-                    <div id="live-clock" class="text-4xl md:text-6xl font-black text-white font-mono tracking-tighter leading-none">00:00:00</div>
+                    <div id="live-clock" class="text-5xl md:text-7xl font-black text-white font-mono tracking-tighter leading-none">00:00:00</div>
                 </div>
             </header>
 
-            <div id="chart-container" class="glass rounded-[2.5rem] overflow-hidden border border-white/5 relative shadow-inner w-full">
+            <div id="chart-container" class="glass rounded-[2.5rem] overflow-hidden border border-white/5 relative w-full">
                 <div id="main-chart" class="w-full h-full"></div>
             </div>
         </div>
@@ -90,32 +97,15 @@
     <div id="intelligence-overlay" class="fixed inset-0 opacity-0 overflow-hidden flex flex-col">
         <div class="p-6 border-b border-gray-800 flex justify-between items-center bg-black">
             <h2 class="text-2xl font-black italic text-red-600 uppercase">Intelligence Report</h2>
-            <button onclick="toggleIntelligence()" class="text-white text-5xl font-light p-2">&times;</button>
+            <button onclick="toggleIntelligence()" class="text-white text-5xl font-light">&times;</button>
         </div>
-        <div id="reports-display-area" class="flex-1 overflow-y-auto p-4 md:p-10 bg-black text-white">
-            <style>
-                /* Questo stile assicura che nulla esca fuori dallo schermo del cellulare */
-                #reports-display-area {
-                    word-wrap: break-word;
-                    overflow-wrap: break-word;
-                    font-family: 'Inter', sans-serif;
-                }
-                /* Stile speciale per l'Indice di Affidabilità se inviato come classe */
-                .reliability-highlight {
-                    border: 1px solid #dc2626;
-                    background: rgba(220, 38, 38, 0.1);
-                    padding: 15px;
-                    border-radius: 12px;
-                    text-align: center;
-                    margin: 15px 0;
-                }
-            </style>
+        <div id="reports-display-area" class="flex-1 overflow-y-auto p-4 md:p-10 bg-black text-gray-100 text-lg">
             </div>
     </div>
 
     <div id="news-drawer" class="fixed top-0 right-0 h-full w-full md:w-[450px] bg-[#020617] border-l border-gray-800 drawer-closed flex flex-col shadow-2xl">
         <div class="p-6 border-b border-gray-800 flex justify-between items-center bg-black">
-            <h2 class="font-black text-2xl italic text-white uppercase text-center">Live Feed</h2>
+            <h2 class="font-black text-2xl italic text-white uppercase">Live Feed</h2>
             <button onclick="toggleNews()" class="text-white text-5xl">&times;</button>
         </div>
         <div id="news-container" class="flex-1 overflow-y-auto p-4 space-y-4"></div>
@@ -123,66 +113,36 @@
 
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script>
-        function toggleNews() { 
-            const d = document.getElementById('news-drawer'); 
-            d.classList.toggle('drawer-closed'); 
-        }
-
+        function toggleNews() { document.getElementById('news-drawer').classList.toggle('drawer-closed'); }
         async function toggleIntelligence() {
             const o = document.getElementById('intelligence-overlay');
             if (o.classList.contains('opacity-0')) {
-                o.classList.remove('opacity-0'); 
-                o.classList.add('opacity-100');
-                document.body.style.overflow = 'hidden'; // Blocca lo scroll del sito sotto
+                o.classList.remove('opacity-0'); o.classList.add('opacity-100');
+                document.body.style.overflow = 'hidden';
                 await loadIntelligenceReports();
             } else {
-                o.classList.remove('opacity-100'); 
-                o.classList.add('opacity-0');
-                document.body.style.overflow = ''; // Riabilita lo scroll
+                o.classList.remove('opacity-100'); o.classList.add('opacity-0');
+                document.body.style.overflow = '';
             }
         }
 
         async function loadIntelligenceReports() {
             const area = document.getElementById('reports-display-area');
-            area.innerHTML = `
-                <div class="flex flex-col items-center justify-center mt-20">
-                    <div class="w-12 h-12 border-4 border-red-600 border-t-transparent rounded-full animate-spin mb-4"></div>
-                    <div class="text-red-600 font-mono animate-pulse text-xl uppercase tracking-widest text-center">
-                        Decrypting Reliability Data...
-                    </div>
-                </div>`;
+            area.innerHTML = '<div class="text-center text-red-600 font-mono animate-pulse text-2xl mt-20">DECRYPTING...</div>';
             try {
-                // Il parametro v=Date.now() serve a forzare il browser a scaricare il report nuovo e non quello vecchio in cache
                 const response = await fetch('latest_report.html?v=' + Date.now());
-                if (response.ok) {
-                    area.innerHTML = await response.text();
-                } else {
-                    area.innerHTML = '<div class="text-center text-gray-500 mt-20">INTELLIGENCE SIGNAL OFFLINE</div>';
-                }
-            } catch (e) { 
-                area.innerHTML = '<div class="text-center text-red-500 mt-20">UPLINK ERROR: CHECK BOT STATUS</div>'; 
-            }
+                area.innerHTML = response.ok ? await response.text() : 'Signal Offline.';
+            } catch (e) { area.innerHTML = 'Error.'; }
         }
 
         function updateDateTime() {
             const ora = new Date();
-            const opzioniData = { day: '2-digit', month: 'short', year: 'numeric' };
-            document.getElementById('live-date').innerText = ora.toLocaleDateString('it-IT', opzioniData).toUpperCase();
+            document.getElementById('live-date').innerText = ora.toLocaleDateString('it-IT', {day:'2-digit', month:'long', year:'numeric'}).toUpperCase();
             document.getElementById('live-clock').innerText = ora.toLocaleTimeString('it-IT');
         }
-        setInterval(updateDateTime, 1000); 
-        updateDateTime();
+        setInterval(updateDateTime, 1000); updateDateTime();
 
-        // Inizializzazione TradingView
-        new TradingView.widget({ 
-            "autosize": true, 
-            "symbol": "BINANCE:BTCUSDT", 
-            "interval": "15", 
-            "theme": "dark", 
-            "container_id": "main-chart", 
-            "locale": "it", 
-            "style": "1" 
-        });
+        new TradingView.widget({ "autosize": true, "symbol": "BINANCE:BTCUSDT", "interval": "15", "theme": "dark", "container_id": "main-chart", "locale": "it" });
 
         let newsIndex = 0;
         async function sync() {
@@ -191,29 +151,18 @@
                 const d = await r.json();
                 document.getElementById('price').innerText = d.price || '---';
                 document.getElementById('signal').innerText = d.signal || '---';
-                
                 if (d.news && d.news.length > 0) {
                     const nc = document.getElementById('news-container');
-                    nc.innerHTML = d.news.map(n => `
-                        <div class="p-4 border-b border-white/5">
-                            <b class="text-blue-500 text-[10px] uppercase tracking-tighter">${n.time}</b>
-                            <p class="text-sm font-medium leading-relaxed mt-1 text-gray-200">${n.text}</p>
-                        </div>`).join('');
-                    
+                    nc.innerHTML = d.news.map(n => `<div class="p-4 border-b border-white/5"><b class="text-blue-500 text-xs">${n.time}</b><p class="text-sm mt-1">${n.text}</p></div>`).join('');
                     document.getElementById('tg-headline').innerText = d.news[newsIndex].text;
                     const prog = document.getElementById('tg-progress');
-                    prog.style.transition = 'none'; 
-                    prog.style.width = '0%';
-                    setTimeout(() => { 
-                        prog.style.transition = 'width 11800ms linear'; 
-                        prog.style.width = '100%'; 
-                    }, 100);
+                    prog.style.transition = 'none'; prog.style.width = '0%';
+                    setTimeout(() => { prog.style.transition = 'width 11800ms linear'; prog.style.width = '100%'; }, 100);
                     newsIndex = (newsIndex + 1) % d.news.length;
                 }
             } catch(e) {}
         }
-        setInterval(sync, 12000); 
-        sync();
+        setInterval(sync, 12000); sync();
     </script>
 </body>
 </html>
