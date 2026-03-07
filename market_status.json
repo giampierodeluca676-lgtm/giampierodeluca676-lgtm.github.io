@@ -1,11 +1,15 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.229,10",
+    "price": "€ 58.243,07",
     "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "20:04:54",
-    "ticker": "BTC/EUR: € 58.229,10 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 20:04:54 • ",
+    "reliability": "99%",
+    "last_update": "20:09:57",
+    "ticker": "BTC/EUR: € 58.243,07 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 20:09:57 • ",
     "news": [
+        {
+            "time": "20:05",
+            "text": "We Asked Google Gemini Where XRP Will Trade On March 31, 2026, Here’s What It Said"
+        },
         {
             "time": "20:01",
             "text": "The Multibillion-dollar shift turning prediction markets into a professional hedging tool"
@@ -25,10 +29,6 @@
         {
             "time": "19:25",
             "text": "Bitcoin price prediction 2026-2032: Will BTC hit $150k soon?"
-        },
-        {
-            "time": "19:20",
-            "text": "South Korea is ending a nine-year \"shadow ban\" to allow 3,500 listed companies to invest in digital assets"
         }
     ]
 }
