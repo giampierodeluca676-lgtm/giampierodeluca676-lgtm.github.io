@@ -1,11 +1,16 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.017,47",
-    "signal": "BEARISH",
-    "reliability": "97%",
-    "last_update": "00:53:47",
-    "ticker": "BTC/EUR: € 58.017,47 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 00:53:47 • ",
+    "price": "€ 58.030,15",
+    "signal": "BULLISH",
+    "reliability": "98%",
+    "last_update": "00:58:49",
+    "ticker": "BTC/EUR: € 58.030,15 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 00:58:49 • ",
     "news": [
+        {
+            "time": "00:55",
+            "text": "Did George Soros Get Arrested in the US? Here’s What We Know",
+            "link": "https://coinpaper.com/15250/did-george-soros-get-arrested-in-the-us-here-s-what-we-know"
+        },
         {
             "time": "00:50",
             "text": "Ethereum at a Breaking Point as ETH/BTC Stalls and $2,340 Comes Into View",
@@ -30,11 +35,6 @@
             "time": "00:30",
             "text": "Shiba Inu (SHIB) Approaches Pivotal Support Level. Here’s What Traders Must Watch",
             "link": "https://timestabloid.com/shiba-inu-shib-approaches-pivotal-support-level-heres-what-traders-must-watch/"
-        },
-        {
-            "time": "00:30",
-            "text": "Here’s Why Bitcoin Price Must Not Fall To $54K: Analyst",
-            "link": "https://www.newsbtc.com/news/bitcoin/heres-why-bitcoin-price-must-not-fall-to-54k-analyst/"
         }
     ]
 }
