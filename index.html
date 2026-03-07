@@ -146,29 +146,26 @@
             }
         }
 
-        // CARICAMENTO AUTOMATICO REPORT
         async function loadIntelligenceReports() {
-            const area = document.getElementById('reports-display-area');
-            // Nota: assicurati che questi nomi file corrispondano a quelli generati dal bot
-            const files = [
-                'Report_Finanziari/report_DEFI_20260307_1030.html',
-                'Report_Finanziari/report_CEFI_20260307_1030.html'
-            ];
+    const area = document.getElementById('reports-display-area');
+    area.innerHTML = '<div class="text-center text-red-500 font-mono">STABILENDO CONNESSIONE CRIPTATA...</div>';
 
-            area.innerHTML = '<div class="text-center text-red-500 font-mono">CARICAMENTO REPORT NODI MONDIALI...</div>';
-
-            let loadedContent = "";
-            for (const file of files) {
-                try {
-                    const response = await fetch(file + '?v=' + Date.now());
-                    if(response.ok) {
-                        const html = await response.text();
-                        loadedContent += `<div class="bg-white rounded-lg overflow-hidden shadow-2xl border-4 border-red-600/20 mb-10 transform hover:scale-[1.01] transition-all">${html}</div>`;
-                    }
-                } catch (e) { console.error("Report non trovato:", file); }
-            }
-            area.innerHTML = loadedContent || '<div class="text-center text-gray-500">Nessun report disponibile al momento.</div>';
+    try {
+        // Pesca il file 'latest_report.html' che il bot aggiorna ogni 5 minuti
+        const response = await fetch('latest_report.html?v=' + Date.now());
+        if(response.ok) {
+            const html = await response.text();
+            area.innerHTML = `
+                <div class="bg-white rounded-lg overflow-hidden shadow-2xl border-4 border-red-600/20 mb-10 transform hover:scale-[1.01] transition-all">
+                    ${html}
+                </div>`;
+        } else {
+            area.innerHTML = '<div class="text-center text-gray-500">In attesa del primo report mondiale...</div>';
         }
+    } catch (e) { 
+        area.innerHTML = '<div class="text-center text-gray-500">Errore di connessione al nodo Intelligence.</div>';
+    }
+}
 
         // Orologio Fluido
         setInterval(() => { document.getElementById('live-clock').innerText = new Date().toLocaleTimeString('it-IT'); }, 1000);

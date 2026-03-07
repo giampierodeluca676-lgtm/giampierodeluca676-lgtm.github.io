@@ -221,7 +221,7 @@ def run_update():
             h_rep.flush()
             os.fsync(h_rep.fileno())
 
-        # --- AGGIORNAMENTO NECESSARIO PER IL SITO LIVE ---
+        # --- AGGIORNAMENTO PER IL SITO LIVE ---
         with open("latest_report.html", "w", encoding='utf-8') as l_rep:
             l_rep.write(html_report)
             l_rep.flush()
