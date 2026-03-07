@@ -3,9 +3,17 @@
     "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "15:30:02",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 15:30:02 \u2022 ",
+    "last_update": "15:30:12",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 15:30:12 \u2022 ",
     "news": [
+        {
+            "time": "15:28",
+            "text": "Bitcoin Rally Falters Under $68,000 As Investors Pull $228 Million From Spot BTC ETFs"
+        },
+        {
+            "time": "15:27",
+            "text": "Ripple Expands Institutional Push as XRPL Progress Continues"
+        },
         {
             "time": "15:25",
             "text": "Binance Proof of Reserves Reveals Alarming 8,004 BTC Drop in User Holdings"
@@ -21,14 +29,6 @@
         {
             "time": "15:03",
             "text": "Former Washington CFO bags two-year sentence for $35 million fraud"
-        },
-        {
-            "time": "15:00",
-            "text": "Composite Index Marks Bitcoin\u2019s Market Cycle at Key Midpoint"
-        },
-        {
-            "time": "15:00",
-            "text": "Could Jane Street\u2019s $19M Bitcoin sale spark fresh liquidation risks?"
         }
     ]
 }
