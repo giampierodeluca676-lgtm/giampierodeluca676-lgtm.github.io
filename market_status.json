@@ -3,9 +3,13 @@
     "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "12:00:20",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 12:00:20 \u2022 ",
+    "last_update": "12:04:01",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 12:04:01 \u2022 ",
     "news": [
+        {
+            "time": "12:00",
+            "text": "4,277 BTC bought, is 10K next? How STRC is fueling MSTR\u2019s Bitcoin moves!"
+        },
         {
             "time": "11:53",
             "text": "Quantum Computing Can Break Zcash and Monero Privacy, Researcher Says"
@@ -25,10 +29,6 @@
         {
             "time": "11:43",
             "text": "Bybit Releases Its 31st Proof-of-Reserves Report"
-        },
-        {
-            "time": "11:42",
-            "text": "YY Group Holdings adopts bitcoin as treasury reserve asset"
         }
     ]
 }
