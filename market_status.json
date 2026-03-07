@@ -1,11 +1,19 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.846,46",
+    "price": "€ 57.933,37",
     "signal": "BULLISH",
-    "reliability": "97%",
-    "last_update": "21:01:25",
-    "ticker": "BTC/EUR: € 57.846,46 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 21:01:25 • ",
+    "reliability": "98%",
+    "last_update": "21:06:27",
+    "ticker": "BTC/EUR: € 57.933,37 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 21:06:27 • ",
     "news": [
+        {
+            "time": "21:00",
+            "text": "Ethereum – BlackRock drops ETH ETF staking fee as firm issues ‘warning’"
+        },
+        {
+            "time": "21:00",
+            "text": "What’s Driving Bitcoin And Ethereum Prices – And Why Investors Should Be Watchful"
+        },
         {
             "time": "20:46",
             "text": "Trump's cyber strategy vows to 'support the security' of cryptocurrencies and blockchain"
@@ -21,14 +29,6 @@
         {
             "time": "20:24",
             "text": "What If Bill Gates Never Sold His Microsoft Stock Since 1999?"
-        },
-        {
-            "time": "20:23",
-            "text": "CLARITY Act Draws Support From White House Crypto Adviser as Approval Odds Hit 70%"
-        },
-        {
-            "time": "20:05",
-            "text": "We Asked Google Gemini Where XRP Will Trade On March 31, 2026, Here’s What It Said"
         }
     ]
 }
