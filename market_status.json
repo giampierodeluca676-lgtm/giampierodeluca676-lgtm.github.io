@@ -1,34 +1,34 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.117,42",
+    "price": "€ 58.057,42",
     "signal": "BULLISH",
     "reliability": "99%",
-    "last_update": "21:56:45",
-    "ticker": "BTC/EUR: € 58.117,42 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 21:56:45 • ",
+    "last_update": "22:35:55",
+    "ticker": "BTC/EUR: € 58.057,42 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 22:35:55 • ",
     "news": [
         {
-            "time": "21:30",
-            "text": "Vancouver City Staff Rejects Bitcoin Treasury Idea Ahead of March 10 Council Vote"
+            "time": "22:30",
+            "text": "The World’s Largest Asset Managers Hold MSTR: Strategy Highlights Massive Institutional Bitcoin Exposure"
         },
         {
-            "time": "21:30",
-            "text": "XRP Whale Outflows Continue On Binance — What’s Happening?"
+            "time": "22:30",
+            "text": "Crypto Gets A Boost In Trump’s New National Cyber Strategy"
         },
         {
-            "time": "21:27",
-            "text": "Analyze Trends Like a Wall Street Pro with Advanced Charting Tools"
+            "time": "22:20",
+            "text": "Bitcoin ETFs saw $348M in outflows on March 6, the biggest since Feb 14"
         },
         {
-            "time": "21:21",
-            "text": "Cardano price prediction 2026-2032: Will ADA recover to $1 soon?"
+            "time": "22:18",
+            "text": "Crypto Investor Says Attackers Stole $24M in Violent Robbery"
         },
         {
-            "time": "21:20",
-            "text": "Iran has been under a near-total internet blackout for more than seven days"
+            "time": "22:06",
+            "text": "Solana Trading Volume Tops $4 Trillion as Market Eyes Recovery Above $90"
         },
         {
-            "time": "21:11",
-            "text": "Ethereum Holds the Line at $1,965 as Market Eyes Key Technical Levels"
+            "time": "22:00",
+            "text": "Assessing if Zcash’s $200 support is at risk after ZEC falls by 8%"
         }
     ]
 }
