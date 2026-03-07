@@ -3,9 +3,17 @@
     "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "16:05:03",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 16:05:03 \u2022 ",
+    "last_update": "16:05:12",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 16:05:12 \u2022 ",
     "news": [
+        {
+            "time": "16:03",
+            "text": "Circle moves $68 million in just 30 minutes by using its own stablecoin for internal payments"
+        },
+        {
+            "time": "16:00",
+            "text": "Big banks in top losers; Circle Internet, Coinbase, SoFi among gainers - week's financials wrap"
+        },
         {
             "time": "16:00",
             "text": "Are \u2018busy\u2019 Ethereum whales a sign of big players getting ready for a big move?"
@@ -21,14 +29,6 @@
         {
             "time": "16:00",
             "text": "1.7 Billion Cardano in 24 Hours, ADA Bulls React to Market Sentiment Shift"
-        },
-        {
-            "time": "15:58",
-            "text": "Ethereum Price Prediction: $2,147 Breakout Could Send ETH Toward $2,400"
-        },
-        {
-            "time": "15:52",
-            "text": "SEC Files Proposed Settlement to Drop Most Claims Against Justin Sun and Tron"
         }
     ]
 }
