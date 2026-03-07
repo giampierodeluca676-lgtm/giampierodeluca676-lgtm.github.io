@@ -1,11 +1,19 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.076,72",
+    "price": "€ 57.969,47",
     "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "20:25:04",
-    "ticker": "BTC/EUR: € 58.076,72 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 20:25:04 • ",
+    "reliability": "99%",
+    "last_update": "20:31:13",
+    "ticker": "BTC/EUR: € 57.969,47 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 20:31:13 • ",
     "news": [
+        {
+            "time": "20:24",
+            "text": "What If Bill Gates Never Sold His Microsoft Stock Since 1999?"
+        },
+        {
+            "time": "20:23",
+            "text": "CLARITY Act Draws Support From White House Crypto Adviser as Approval Odds Hit 70%"
+        },
         {
             "time": "20:05",
             "text": "We Asked Google Gemini Where XRP Will Trade On March 31, 2026, Here’s What It Said"
@@ -21,14 +29,6 @@
         {
             "time": "20:00",
             "text": "Bitcoin – How ceasefire hopes, oil prices are driving crypto market’s volatility"
-        },
-        {
-            "time": "19:30",
-            "text": "Legal Storm Hits Kalshi as Traders Claim ‘Death Carveout’ Erased Their Winning Bets"
-        },
-        {
-            "time": "19:25",
-            "text": "Bitcoin price prediction 2026-2032: Will BTC hit $150k soon?"
         }
     ]
 }
