@@ -20,20 +20,25 @@
 
 /* FIX ULTIMATUM PER RELLIABILITY INDEX E TESTI LUNGHI */
 #reports-display-area {
-    display: block !important;
+    display: flex !important;
+    flex-direction: column !important; /* FORZA L'IMPILAMENTO VERTICALE */
     width: 100% !important;
     padding: 10px !important;
     overflow-x: hidden !important; 
 }
+
+/* Fix per evitare l'effetto "Insegna Bar" (testo stretto e lungo) */
 #reports-display-area div, 
 #reports-display-area span, 
 #reports-display-area p,
 #reports-display-area * {
     max-width: 100% !important;
-    word-break: break-all !important; 
+    width: 100% !important; /* Occupa tutta la larghezza disponibile */
+    word-break: normal !important; /* Evita di rompere le parole a metà se non necessario */
     white-space: normal !important;
     box-sizing: border-box !important;
     height: auto !important;
+    display: block !important; /* Forza ogni elemento su una nuova riga */
 }
 
 #chart-container { height: calc(100vh - 220px); min-height: 450px; }
@@ -140,10 +145,10 @@ async function loadIntelligenceReports() {
         if (response.ok) {
             let text = await response.text();
             
-            // Applica la pulizia delle tabelle per garantire fluidità su mobile
+            // Pulisce le tabelle ma mantiene i div per il layout verticale
             text = text.replace(/<table/g, '<div').replace(/<\/table>/g, '</div>');
             text = text.replace(/<tr/g, '<div').replace(/<\/tr>/g, '</div>');
-            text = text.replace(/<td/g, '<div style="margin-bottom:10px"').replace(/<\/td>/g, '</div>');
+            text = text.replace(/<td/g, '<div style="margin-bottom:15px; width:100%;"').replace(/<\/td>/g, '</div>');
             
             area.innerHTML = text;
         } else {
