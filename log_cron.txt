@@ -37452,3 +37452,5 @@ To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.
 To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
  ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at c23658c2189880adea2d134275659a7097948160 but expected 788d44abfa75bda94a5e7d5acf7f2d387bc07257)
 error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   c23658c..9c61240  main -> main
