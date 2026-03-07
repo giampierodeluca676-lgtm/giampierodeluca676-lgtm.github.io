@@ -3,9 +3,13 @@
     "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "16:16:58",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 16:16:58 \u2022 ",
+    "last_update": "16:20:07",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 16:20:07 \u2022 ",
     "news": [
+        {
+            "time": "16:15",
+            "text": "XRP Price Prediction as Ripple Secures Key UK License"
+        },
         {
             "time": "16:10",
             "text": "Bitcoin Golden Cross Signals Imminent Explosive Rally: On-Chain Data Points to 30-40 Day Window"
@@ -25,10 +29,6 @@
         {
             "time": "16:02",
             "text": "Binance Formally Rejects US Senate Claims of Iran Sanctions Violations"
-        },
-        {
-            "time": "16:00",
-            "text": "Big banks in top losers; Circle Internet, Coinbase, SoFi among gainers - week's financials wrap"
         }
     ]
 }
