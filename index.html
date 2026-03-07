@@ -18,16 +18,15 @@
 .opacity-0 { opacity: 0; visibility: hidden; }
 .opacity-100 { opacity: 1; visibility: visible; }
 
-/* --- FIX MOBILE ORDINE: TITOLO E GRAFICO PRIMA DEI BOTTONI --- */
+/* --- FIX MOBILE ORDINE --- */
 @media (max-width: 1024px) {
     main {
         display: flex !important;
-        flex-direction: column-reverse !important; /* Inverte l'ordine dei due blocchi principali */
+        flex-direction: column-reverse !important; 
     }
     #chart-container { height: 400px; }
 }
 
-/* --- FIX ULTIMATUM: VERTICALE E SCROLLABILE --- */
 #reports-display-area {
     display: block !important;
     width: 100% !important;
@@ -38,9 +37,6 @@
     max-height: 80vh;
 }
 
-#reports-display-area div, 
-#reports-display-area span, 
-#reports-display-area p,
 #reports-display-area * {
     max-width: 100% !important;
     width: 100% !important; 
@@ -119,8 +115,7 @@
     <h2 class="text-2xl font-black italic text-red-600 uppercase">Intelligence Report</h2>
     <button onclick="toggleIntelligence()" class="text-white text-5xl font-light p-2">&times;</button>
 </div>
-<div id="reports-display-area" class="flex-1 overflow-y-auto p-4 md:p-10 bg-black text-gray-100">
-    </div>
+<div id="reports-display-area" class="flex-1 overflow-y-auto p-4 md:p-10 bg-black text-gray-100"></div>
 </div>
 
 <div id="news-drawer" class="fixed top-0 right-0 h-full w-full md:w-[450px] bg-[#020617] border-l border-gray-800 drawer-closed flex flex-col shadow-2xl">
@@ -176,14 +171,24 @@ new TradingView.widget({ "autosize": true, "symbol": "BINANCE:BTCUSDT", "interva
 let newsIndex = 0;
 async function sync() {
     try {
+        // Cache busting per forzare il browser a leggere i nuovi dati inviati dal bot
         const r = await fetch('market_status.json?v=' + Date.now());
         const d = await r.json();
-        document.getElementById('price').innerText = d.price || '---';
-        document.getElementById('signal').innerText = d.signal || '---';
+        
+        // Aggiornamento dinamico elementi
+        const priceEl = document.getElementById('price');
+        const signalEl = document.getElementById('signal');
+        
+        priceEl.innerText = d.price || '---';
+        signalEl.innerText = d.signal || '---';
+
+        // Cambio colore dinamico in base al segnale
+        if(d.signal === "BULLISH") signalEl.className = "text-4xl font-black text-green-500";
+        else if(d.signal === "BEARISH") signalEl.className = "text-4xl font-black text-red-500";
+        else signalEl.className = "text-4xl font-black text-blue-400";
         
         if (d.news && d.news.length > 0) {
             const nc = document.getElementById('news-container');
-            // MODIFICA QUI: Aggiungiamo il tag <a> per rendere la notizia un link
             nc.innerHTML = d.news.map(n => `
                 <div class="p-4 border-b border-white/5 hover:bg-blue-900/20 transition-all">
                     <b class="text-blue-500 text-xs">${n.time}</b>
@@ -194,15 +199,23 @@ async function sync() {
                 </div>
             `).join('');
             
+            // Gestione TG Live News
             document.getElementById('tg-headline').innerText = d.news[newsIndex].text;
             const prog = document.getElementById('tg-progress');
-            prog.style.transition = 'none'; prog.style.width = '0%';
-            setTimeout(() => { prog.style.transition = 'width 11800ms linear'; prog.style.width = '100%'; }, 100);
+            prog.style.transition = 'none'; 
+            prog.style.width = '0%';
+            setTimeout(() => { 
+                prog.style.transition = 'width 29500ms linear'; // Sincronizzato con l'intervallo di 30s
+                prog.style.width = '100%'; 
+            }, 100);
             newsIndex = (newsIndex + 1) % d.news.length;
         }
-    } catch(e) {}
+    } catch(e) { console.log("Sync Error: ", e); }
 }
-setInterval(sync, 12000); sync();
+
+// Esegue l'aggiornamento ogni 30 secondi per un terminale sempre "Live"
+setInterval(sync, 30000); 
+sync();
 </script>
 </body>
 </html>
