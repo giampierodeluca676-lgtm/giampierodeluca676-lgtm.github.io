@@ -3,17 +3,9 @@
     "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "16:05:48",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 16:05:48 \u2022 ",
+    "last_update": "16:05:54",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 16:05:54 \u2022 ",
     "news": [
-        {
-            "time": "16:05",
-            "text": "Time Traveler Says XRP Holders Will Get the Last Laugh. Here\u2019s Why"
-        },
-        {
-            "time": "16:03",
-            "text": "Circle moves $68 million in just 30 minutes by using its own stablecoin for internal payments"
-        },
         {
             "time": "16:00",
             "text": "Big banks in top losers; Circle Internet, Coinbase, SoFi among gainers - week's financials wrap"
@@ -29,6 +21,14 @@
         {
             "time": "16:00",
             "text": "Those who cheered U.S. Bitcoin reserve have spent year watching Trump's order languish"
+        },
+        {
+            "time": "16:00",
+            "text": "1.7 Billion Cardano in 24 Hours, ADA Bulls React to Market Sentiment Shift"
+        },
+        {
+            "time": "15:58",
+            "text": "Ethereum Price Prediction: $2,147 Breakout Could Send ETH Toward $2,400"
         }
     ]
 }
