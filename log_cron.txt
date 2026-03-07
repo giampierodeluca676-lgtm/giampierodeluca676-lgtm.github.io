@@ -35422,3 +35422,12 @@ To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.
    e9e76b1..54e87bf  main -> main
 [main 44b38d0] 🚀 System Update 01:50:57
  2 files changed, 6 insertions(+), 2 deletions(-)
+fatal: Unable to create '/home/linuxlite/Desktop/Keygap_AdVantage/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   54e87bf..44b38d0  main -> main
