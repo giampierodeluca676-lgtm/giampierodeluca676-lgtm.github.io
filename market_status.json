@@ -3,6 +3,32 @@
     "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "15:36:08",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 15:36:08 \u2022 "
+    "last_update": "15:36:09",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 15:36:09 \u2022 ",
+    "news": [
+        {
+            "time": "15:32",
+            "text": "Crypto ETFs Stay Red: Bitcoin Loses $349 Million in Friday Pullback"
+        },
+        {
+            "time": "15:30",
+            "text": "XRP Bull Flag Breakout After 8-Month Consolidation To Send Price To $11"
+        },
+        {
+            "time": "15:28",
+            "text": "Bitcoin Rally Falters Under $68,000 As Investors Pull $228 Million From Spot BTC ETFs"
+        },
+        {
+            "time": "15:27",
+            "text": "Ripple Expands Institutional Push as XRPL Progress Continues"
+        },
+        {
+            "time": "15:25",
+            "text": "Binance Proof of Reserves Reveals Alarming 8,004 BTC Drop in User Holdings"
+        },
+        {
+            "time": "15:07",
+            "text": "Trending stocks this week as Wall Street slips amid Middle East conflict"
+        }
+    ]
 }
