@@ -3,9 +3,25 @@
     "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "12:30:31",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 12:30:31 \u2022 ",
+    "last_update": "12:35:04",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 12:35:04 \u2022 ",
     "news": [
+        {
+            "time": "12:31",
+            "text": "Shiba Inu Community Update: New ShibClaw Skill Launches With Warning Issued"
+        },
+        {
+            "time": "12:30",
+            "text": "Lots of RLUSD Issued on the XRP Ledger for Gemini. What\u2019s Happening?"
+        },
+        {
+            "time": "12:30",
+            "text": "Solana price registers 14% rally, how SOL and utility protocols are shaping crypto in Q1 2026"
+        },
+        {
+            "time": "12:26",
+            "text": "Market Outlook Reveals XRP Has Begun Its \u201cMelting Phase\u201d \u2014 A Shed Before The Pump?"
+        },
         {
             "time": "12:25",
             "text": "Strategic Spark Protocol Buyback: DeFi Lending Giant Acquires 1.84M SPK Tokens in $36K Confidence Move"
@@ -13,22 +29,6 @@
         {
             "time": "12:15",
             "text": "This is How Bitcoin\u2019s Bear Market will Come to a Close \u2014According to Historical Data"
-        },
-        {
-            "time": "12:05",
-            "text": "Jake Claver: Good Time for BlackRock to Enter the Picture With an XRP ETF"
-        },
-        {
-            "time": "12:02",
-            "text": "Kalshi dragged to court as Polymarket draws scrutiny over Iran conflict contracts"
-        },
-        {
-            "time": "12:00",
-            "text": "Former CFO Sentenced to Prison for Diverting $35 Million into Cryptocurrency Schemes"
-        },
-        {
-            "time": "12:00",
-            "text": "4,277 BTC bought, is 10K next? How STRC is fueling MSTR\u2019s Bitcoin moves!"
         }
     ]
 }
