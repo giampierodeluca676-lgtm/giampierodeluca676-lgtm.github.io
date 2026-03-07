@@ -1,11 +1,23 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.330,48",
+    "price": "€ 58.232,87",
     "signal": "BULLISH",
-    "reliability": "97%",
-    "last_update": "19:19:00",
-    "ticker": "BTC/EUR: € 58.330,48 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 19:19:00 • ",
+    "reliability": "98%",
+    "last_update": "19:33:57",
+    "ticker": "BTC/EUR: € 58.232,87 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 19:33:57 • ",
     "news": [
+        {
+            "time": "19:30",
+            "text": "Legal Storm Hits Kalshi as Traders Claim ‘Death Carveout’ Erased Their Winning Bets"
+        },
+        {
+            "time": "19:25",
+            "text": "Bitcoin price prediction 2026-2032: Will BTC hit $150k soon?"
+        },
+        {
+            "time": "19:20",
+            "text": "South Korea is ending a nine-year \"shadow ban\" to allow 3,500 listed companies to invest in digital assets"
+        },
         {
             "time": "19:10",
             "text": "Bitcoin’s Market Cap Growth Falls Behind Realized Value, Signaling Rising Sell Pressure"
@@ -17,18 +29,6 @@
         {
             "time": "19:04",
             "text": "Prediction market Kalshi sued over Khamenei trade carveout"
-        },
-        {
-            "time": "19:01",
-            "text": "Inside the Quest at Colossus to Replace Visa and Mastercard With KYC-Less Crypto Cards"
-        },
-        {
-            "time": "19:00",
-            "text": "Bitcoin Price Analysis: BTC Must Break This Key Level to Confirm a Real Rally"
-        },
-        {
-            "time": "19:00",
-            "text": "Should PEPE traders brace for volatility as short squeeze potential builds?"
         }
     ]
 }
