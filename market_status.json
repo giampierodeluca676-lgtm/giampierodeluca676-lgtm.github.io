@@ -1,11 +1,23 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.252,43",
+    "price": "€ 58.229,10",
     "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "19:59:53",
-    "ticker": "BTC/EUR: € 58.252,43 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 19:59:53 • ",
+    "reliability": "98%",
+    "last_update": "20:04:54",
+    "ticker": "BTC/EUR: € 58.229,10 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 20:04:54 • ",
     "news": [
+        {
+            "time": "20:01",
+            "text": "The Multibillion-dollar shift turning prediction markets into a professional hedging tool"
+        },
+        {
+            "time": "20:00",
+            "text": "Bitcoin Losing Strength — $66,000 Now The Line Between Recovery And Crash"
+        },
+        {
+            "time": "20:00",
+            "text": "Bitcoin – How ceasefire hopes, oil prices are driving crypto market’s volatility"
+        },
         {
             "time": "19:30",
             "text": "Legal Storm Hits Kalshi as Traders Claim ‘Death Carveout’ Erased Their Winning Bets"
@@ -17,18 +29,6 @@
         {
             "time": "19:20",
             "text": "South Korea is ending a nine-year \"shadow ban\" to allow 3,500 listed companies to invest in digital assets"
-        },
-        {
-            "time": "19:10",
-            "text": "Bitcoin’s Market Cap Growth Falls Behind Realized Value, Signaling Rising Sell Pressure"
-        },
-        {
-            "time": "19:05",
-            "text": "XRP Loses Aggregate Holder Cost Basis. Here’s Why This Is Risky"
-        },
-        {
-            "time": "19:04",
-            "text": "Prediction market Kalshi sued over Khamenei trade carveout"
         }
     ]
 }
