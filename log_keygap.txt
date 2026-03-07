@@ -1,12 +1,1 @@
 nohup: ignoring input
-[main eeee25958] 🚀 KEYGAP_ADVANTAGE Update 16:46:21
- 2 files changed, 4 insertions(+), 4 deletions(-)
-To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
-   10602ce35..eeee25958  main -> main
-[main e55f98448] 🚀 KEYGAP_ADVANTAGE Update 16:51:23
- 2 files changed, 4 insertions(+), 4 deletions(-)
-To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
-   1d5274f03..e55f98448  main -> main
-
-To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
-   eeee25958..1d5274f03  main -> main
