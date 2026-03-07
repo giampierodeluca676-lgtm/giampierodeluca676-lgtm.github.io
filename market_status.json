@@ -1,11 +1,15 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.973,14",
+    "price": "€ 57.810,57",
     "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "20:46:20",
-    "ticker": "BTC/EUR: € 57.973,14 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 20:46:20 • ",
+    "reliability": "97%",
+    "last_update": "20:51:22",
+    "ticker": "BTC/EUR: € 57.810,57 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 20:51:22 • ",
     "news": [
+        {
+            "time": "20:46",
+            "text": "Trump's cyber strategy vows to 'support the security' of cryptocurrencies and blockchain"
+        },
         {
             "time": "20:30",
             "text": "Stablecoin Market Tops $313 Billion as Sky’s USDS Leads Weekly Gains"
@@ -25,10 +29,6 @@
         {
             "time": "20:05",
             "text": "We Asked Google Gemini Where XRP Will Trade On March 31, 2026, Here’s What It Said"
-        },
-        {
-            "time": "20:01",
-            "text": "The Multibillion-dollar shift turning prediction markets into a professional hedging tool"
         }
     ]
 }
