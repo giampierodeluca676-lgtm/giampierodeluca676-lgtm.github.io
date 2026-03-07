@@ -1,34 +1,34 @@
 {
     "status": "OPERATIVO",
-    "price": "\u20ac 58.495,37",
+    "price": "\u20ac 58.475,05",
     "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "17:03:31",
-    "ticker": "BTC/EUR: \u20ac 58.495,37 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 17:03:31 \u2022 ",
+    "reliability": "99%",
+    "last_update": "17:08:33",
+    "ticker": "BTC/EUR: \u20ac 58.475,05 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 17:08:33 \u2022 ",
     "news": [
+        {
+            "time": "17:06",
+            "text": "Dubai Regulator Orders KuCoin and MEXC to Stop Crypto Activity"
+        },
+        {
+            "time": "17:05",
+            "text": "Pundit Says XRP is the New E-SDR. Here\u2019s Why"
+        },
+        {
+            "time": "17:01",
+            "text": "Rising Stagflation Fears in the US Spotlight Bitcoin\u2019s Role in Economic Uncertainty"
+        },
         {
             "time": "17:00",
             "text": "Ethereum Rising Wedge Warning: Breakdown Could Send Price Toward $1,500"
         },
         {
             "time": "17:00",
+            "text": "'$8 To $2.80'\u2014Standard Chartered Cuts XRP Price Prediction Target"
+        },
+        {
+            "time": "17:00",
             "text": "Bitcoin \u2013 Derivatives flash \u2018mixed signals,\u2019 but is $72K a real possibility?"
-        },
-        {
-            "time": "16:47",
-            "text": "dYdX price prediction 2026- 2032: Will dYdX recover its ATH soon?"
-        },
-        {
-            "time": "16:35",
-            "text": "AI Agents Enter Crypto Markets With Support From Exchanges, Wallets, Data Firms and More"
-        },
-        {
-            "time": "16:30",
-            "text": "Pi Network\u2019s (PI) Price Soars 16% Again as Team Reveals Distributed AI Computing Plans"
-        },
-        {
-            "time": "16:27",
-            "text": "\"Not Bridges\": Cardano Builder Highlights Vision for Direct Withdrawals"
         }
     ]
 }

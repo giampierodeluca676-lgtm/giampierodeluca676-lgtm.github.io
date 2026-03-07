@@ -88,8 +88,11 @@ def run_update():
             "news": vere_notizie
         }
         
-        with open("market_status.json", "w") as j:
-            json.dump(status_web, j, indent=4)
+        with open("market_status.json", "w", encoding='utf-8') as j:
+            json.dump(status_web, j, indent=4, ensure_ascii=False)
+            j.flush()
+            os.fsync(j.fileno()) # Forza la scrittura fisica sul disco prima del pushwith open("market_status.json", "w", encoding='utf-8') as j:
+    
         
         # PUSH SU GITHUB
         subprocess.run(["git", "add", "."], check=True)
