@@ -97,8 +97,12 @@ def run_update():
             
         nome_file_storico = f"{cartella_report}/Report_Mondiale_{data_per_file}.html"
         
+        # --- INIEZIONE SCRIPT ADSTERRA ---
+        adsterra_script = '<script src="https://pl28819682.effectivegatecpm.com/07/47/37/074737f2d1be0f3c0e9de0585a695fd7.js"></script>'
+        
         # CREAZIONE DEL CONTENUTO HTML PROFESSIONALE (DEFI & CEFI INTELLIGENCE)
         html_report = f"""
+        {adsterra_script}
         <div style="font-family: 'Segoe UI', Helvetica, Arial, sans-serif; max-width: 900px; margin: auto; border: 1px solid #e1e4e8; border-radius: 12px; background-color: #ffffff; color: #1a1d21; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
             
             <div style="background: linear-gradient(135deg, #0f172a, #1e293b); padding: 40px 20px; text-align: center; color: #f8fafc;">

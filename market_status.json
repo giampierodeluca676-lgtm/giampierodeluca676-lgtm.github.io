@@ -1,34 +1,14 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.414,28",
+    "price": "€ 58.393,01",
     "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "17:31:04",
-    "ticker": "BTC/EUR: € 58.414,28 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 17:31:04 • ",
+    "reliability": "99%",
+    "last_update": "17:40:43",
+    "ticker": "BTC/EUR: € 58.393,01 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 17:40:43 • ",
     "news": [
         {
-            "time": "17:26",
-            "text": "Nintendo joins over 1,000 companies pushing the U.S. for refunds on 'illegal' Trump tariffs"
-        },
-        {
-            "time": "17:24",
-            "text": "Crypto Breakthrough: Florida Senate Approves Groundbreaking State-Level Stablecoin Bill, DeSantis’ Signature Next"
-        },
-        {
-            "time": "17:18",
-            "text": "US Cybersecurity Strategy For The First Time Protects Crypto And Blockchain"
-        },
-        {
-            "time": "17:14",
-            "text": "U.S. court dismisses terrorism financing claims against Binance"
-        },
-        {
-            "time": "17:11",
-            "text": "Circle CEO Shares New Development Involving USDC and Circle Mints"
-        },
-        {
-            "time": "17:10",
-            "text": "NYSE Agrees to $9M SEC Penalty After 2023 Opening Auction Failure"
+            "time": "SYS",
+            "text": "Sincronizzazione flussi globali in corso..."
         }
     ]
 }
