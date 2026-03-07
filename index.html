@@ -18,15 +18,17 @@
         .opacity-0 { opacity: 0; visibility: hidden; }
         .opacity-100 { opacity: 1; visibility: visible; }
         
-        /* FIX TOTALE PER IL REPORT SU CELLULARE */
+        /* FIX DEFINITIVO PER IL TESTO FANTASMA E IL RELIABILITY INDEX */
         #reports-display-area {
             word-wrap: break-word !important;
             overflow-wrap: break-word !important;
             white-space: normal !important;
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
-        /* Forza tabelle e div del bot a non superare la larghezza dello schermo */
         #reports-display-area * {
             max-width: 100% !important;
+            height: auto !important;
             box-sizing: border-box !important;
         }
 
@@ -38,8 +40,7 @@
 
     <div class="ticker-wrap">
         <div class="ticker-move uppercase tracking-widest">
-            CONNESSONE HFT STABILITA... AGGIORNAMENTO NODI KEYGAP... ANALISI FLUSSI... SENTIMENT DI MERCATO OTTIMIZZATO... 
-            DATA STREAM ATTIVO... CRITTOGRAFIA END-TO-END...
+            CONNESSONE HFT STABILITA... AGGIORNAMENTO NODI KEYGAP... ANALISI FLUSSI... SENTIMENT OTTIMIZZATO... DATA STREAM ATTIVO...
         </div>
     </div>
 
@@ -97,21 +98,10 @@
     <div id="intelligence-overlay" class="fixed inset-0 opacity-0 overflow-hidden flex flex-col">
         <div class="p-6 border-b border-gray-800 flex justify-between items-center bg-black">
             <h2 class="text-2xl font-black italic text-red-600 uppercase">Intelligence Report</h2>
-            <button onclick="toggleIntelligence()" class="text-white text-5xl font-light">&times;</button>
+            <button onclick="toggleIntelligence()" class="text-white text-5xl font-light p-2">&times;</button>
         </div>
-        <div id="reports-display-area" class="flex-1 overflow-y-auto p-4 md:p-10 bg-black text-gray-100 text-lg">
-            <style>
-                #reports-display-area {
-                    word-wrap: break-word !important;
-                    overflow-wrap: break-word !important;
-                    white-space: normal !important;
-                }
-                #reports-display-area * {
-                    max-width: 100% !important;
-                    box-sizing: border-box !important;
-                }
-            </style>
-        </div>
+        <div id="reports-display-area" class="flex-1 overflow-y-auto p-4 md:p-10 bg-black text-gray-100">
+            </div>
     </div>
 
     <div id="news-drawer" class="fixed top-0 right-0 h-full w-full md:w-[450px] bg-[#020617] border-l border-gray-800 drawer-closed flex flex-col shadow-2xl">
@@ -123,7 +113,6 @@
     </div>
 
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-
     <script>
         function toggleNews() { document.getElementById('news-drawer').classList.toggle('drawer-closed'); }
         
@@ -141,20 +130,11 @@
 
         async function loadIntelligenceReports() {
             const area = document.getElementById('reports-display-area');
-            const styleFix = '<style>#reports-display-area{word-wrap:break-word!important;overflow-wrap:break-word!important;white-space:normal!important;} #reports-display-area *{max-width:100%!important;height:auto!important;display:block!important;}</style>';
-            
-            area.innerHTML = styleFix + '<div class="text-center text-red-600 font-mono animate-pulse text-2xl mt-20 uppercase">Decoding secure data stream...</div>';
-            
+            area.innerHTML = '<div class="text-center text-red-600 font-mono animate-pulse text-2xl mt-20 uppercase tracking-widest">Decoding Uplink...</div>';
             try {
                 const response = await fetch('latest_report.html?v=' + Date.now());
-                if (response.ok) {
-                    area.innerHTML = styleFix + await response.text();
-                } else {
-                    area.innerHTML = styleFix + '<p class="text-center text-gray-500 italic mt-20">In attesa del prossimo segnale...</p>';
-                }
-            } catch (e) { 
-                area.innerHTML = styleFix + '<p class="text-center text-red-500 mt-20">Errore di Uplink.</p>'; 
-            }
+                area.innerHTML = response.ok ? await response.text() : '<p class="text-center mt-20">Nessun report disponibile.</p>';
+            } catch (e) { area.innerHTML = '<p class="text-center mt-20">Errore di connessione.</p>'; }
         }
 
         function updateDateTime() {
@@ -162,39 +142,29 @@
             document.getElementById('live-date').innerText = ora.toLocaleDateString('it-IT', {day:'2-digit', month:'long', year:'numeric'}).toUpperCase();
             document.getElementById('live-clock').innerText = ora.toLocaleTimeString('it-IT');
         }
-        setInterval(updateDateTime, 1000); 
-        updateDateTime();
+        setInterval(updateDateTime, 1000); updateDateTime();
 
-        // Inizializzazione Grafico
         new TradingView.widget({ "autosize": true, "symbol": "BINANCE:BTCUSDT", "interval": "15", "theme": "dark", "container_id": "main-chart", "locale": "it" });
 
         let newsIndex = 0;
         async function sync() {
             try {
                 const r = await fetch('market_status.json?v=' + Date.now());
-                if (!r.ok) return;
                 const d = await r.json();
                 document.getElementById('price').innerText = d.price || '---';
                 document.getElementById('signal').innerText = d.signal || '---';
-                
                 if (d.news && d.news.length > 0) {
                     const nc = document.getElementById('news-container');
-                    nc.innerHTML = d.news.map(n => `<div class="p-4 border-b border-white/5"><b class="text-blue-500 text-xs">${n.time}</b><p class="text-sm mt-1 text-white">${n.text}</p></div>`).join('');
-                    
+                    nc.innerHTML = d.news.map(n => `<div class="p-4 border-b border-white/5"><b class="text-blue-500 text-xs">${n.time}</b><p class="text-sm mt-1">${n.text}</p></div>`).join('');
                     document.getElementById('tg-headline').innerText = d.news[newsIndex].text;
                     const prog = document.getElementById('tg-progress');
-                    prog.style.transition = 'none'; 
-                    prog.style.width = '0%';
-                    setTimeout(() => { 
-                        prog.style.transition = 'width 11800ms linear'; 
-                        prog.style.width = '100%'; 
-                    }, 100);
+                    prog.style.transition = 'none'; prog.style.width = '0%';
+                    setTimeout(() => { prog.style.transition = 'width 11800ms linear'; prog.style.width = '100%'; }, 100);
                     newsIndex = (newsIndex + 1) % d.news.length;
                 }
-            } catch(e) { console.log("Sync error"); }
+            } catch(e) {}
         }
-        setInterval(sync, 12000); 
-        sync();
+        setInterval(sync, 12000); sync();
     </script>
 </body>
 </html>
