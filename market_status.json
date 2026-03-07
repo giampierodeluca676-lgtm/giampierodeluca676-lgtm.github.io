@@ -1,22 +1,18 @@
 {
     "status": "OPERATIVO",
-    "price": "\u20ac 58.475,05",
+    "price": "€ 58.499,71",
     "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "17:08:33",
-    "ticker": "BTC/EUR: \u20ac 58.475,05 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 17:08:33 \u2022 ",
+    "reliability": "97%",
+    "last_update": "17:09:04",
+    "ticker": "BTC/EUR: € 58.499,71 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 17:09:04 • ",
     "news": [
         {
-            "time": "17:06",
-            "text": "Dubai Regulator Orders KuCoin and MEXC to Stop Crypto Activity"
-        },
-        {
             "time": "17:05",
-            "text": "Pundit Says XRP is the New E-SDR. Here\u2019s Why"
+            "text": "Pundit Says XRP is the New E-SDR. Here’s Why"
         },
         {
             "time": "17:01",
-            "text": "Rising Stagflation Fears in the US Spotlight Bitcoin\u2019s Role in Economic Uncertainty"
+            "text": "Rising Stagflation Fears in the US Spotlight Bitcoin’s Role in Economic Uncertainty"
         },
         {
             "time": "17:00",
@@ -24,11 +20,15 @@
         },
         {
             "time": "17:00",
-            "text": "'$8 To $2.80'\u2014Standard Chartered Cuts XRP Price Prediction Target"
+            "text": "'$8 To $2.80'—Standard Chartered Cuts XRP Price Prediction Target"
         },
         {
             "time": "17:00",
-            "text": "Bitcoin \u2013 Derivatives flash \u2018mixed signals,\u2019 but is $72K a real possibility?"
+            "text": "Bitcoin – Derivatives flash ‘mixed signals,’ but is $72K a real possibility?"
+        },
+        {
+            "time": "16:47",
+            "text": "dYdX price prediction 2026- 2032: Will dYdX recover its ATH soon?"
         }
     ]
 }
