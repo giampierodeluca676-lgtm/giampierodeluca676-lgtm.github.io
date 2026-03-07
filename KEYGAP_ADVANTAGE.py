@@ -63,7 +63,7 @@ def pubblica():
         print(f"❌ Errore Blogger: {e}")
 
 def run_update():
-    """Aggiorna il sito con dati REALI (Prezzo e News)"""
+    """Aggiorna il sito con dati REALI (Prezzo e News) e archivia i Report"""
     try:
         # AGGIORNAMENTO PREZZO REALE
         try:
@@ -76,6 +76,7 @@ def run_update():
 
         percentuale = f"{random.randint(97, 99)}%" 
         ora_attuale = datetime.now().strftime("%H:%M:%S")
+        data_per_file = datetime.now().strftime("%d_%m_%Y_%H_%M")
         vere_notizie = get_real_news()
         
         status_web = {
@@ -88,21 +89,34 @@ def run_update():
             "news": vere_notizie
         }
         
+        # --- GESTIONE REPORT FINANZIARI (AGGIUNTA) ---
+        cartella_report = "Report Finanziari"
+        if not os.path.exists(cartella_report):
+            os.makedirs(cartella_report)
+            
+        nome_file_storico = f"{cartella_report}/Report_{data_per_file}.json"
+        
+        # Scrittura file principale per il sito
         with open("market_status.json", "w", encoding='utf-8') as j:
             json.dump(status_web, j, indent=4, ensure_ascii=False)
             j.flush()
-            os.fsync(j.fileno()) # Forza la scrittura fisica sul disco prima del pushwith open("market_status.json", "w", encoding='utf-8') as j:
-    
+            os.fsync(j.fileno())
+
+        # Scrittura copia nei Report Finanziari
+        with open(nome_file_storico, "w", encoding='utf-8') as j_rep:
+            json.dump(status_web, j_rep, indent=4, ensure_ascii=False)
+            j_rep.flush()
+            os.fsync(j_rep.fileno())
+        # --------------------------------------------
         
         # PUSH SU GITHUB
         subprocess.run(["git", "add", "."], check=True)
         subprocess.run(["git", "commit", "-m", f"🚀 KEYGAP_ADVANTAGE Update {ora_attuale}"], check=True)
         subprocess.run(["git", "push", "origin", "main", "--force"], check=True)
-        print(f"✅ [KEYGAP_ADVANTAGE] SITO AGGIORNATO: {prezzo_btc} alle: {ora_attuale}")
+        print(f"✅ [KEYGAP_ADVANTAGE] SITO E REPORT AGGIORNATI: {prezzo_btc} alle: {ora_attuale}")
         
     except Exception as e:
         print(f"❌ Errore aggiornamento: {e}")
-
 if __name__ == "__main__":
     print("🔥 KEYGAP_ADVANTAGE CORE - Avviato e monitorato.")
     while True:
