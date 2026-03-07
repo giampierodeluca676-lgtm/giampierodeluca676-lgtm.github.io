@@ -1,11 +1,23 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.933,37",
+    "price": "€ 57.964,65",
     "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "21:06:27",
-    "ticker": "BTC/EUR: € 57.933,37 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 21:06:27 • ",
+    "reliability": "97%",
+    "last_update": "21:11:29",
+    "ticker": "BTC/EUR: € 57.964,65 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 21:11:29 • ",
     "news": [
+        {
+            "time": "21:11",
+            "text": "Ethereum Holds the Line at $1,965 as Market Eyes Key Technical Levels"
+        },
+        {
+            "time": "21:10",
+            "text": "Bitcoin Price Plummets: BTC Falls Below Critical $67,000 Support Level"
+        },
+        {
+            "time": "21:05",
+            "text": "Analyst: Many New XRP Millionaires Will Be Made In The Next 3 Months. Here’s Why"
+        },
         {
             "time": "21:00",
             "text": "Ethereum – BlackRock drops ETH ETF staking fee as firm issues ‘warning’"
@@ -15,20 +27,8 @@
             "text": "What’s Driving Bitcoin And Ethereum Prices – And Why Investors Should Be Watchful"
         },
         {
-            "time": "20:46",
-            "text": "Trump's cyber strategy vows to 'support the security' of cryptocurrencies and blockchain"
-        },
-        {
-            "time": "20:30",
-            "text": "Stablecoin Market Tops $313 Billion as Sky’s USDS Leads Weekly Gains"
-        },
-        {
-            "time": "20:30",
-            "text": "Pi Network Price Prediction 2026–2032: Can Pi Reclaim Its All-Time High soon?"
-        },
-        {
-            "time": "20:24",
-            "text": "What If Bill Gates Never Sold His Microsoft Stock Since 1999?"
+            "time": "20:55",
+            "text": "Alibaba says its coding AI agent began mining crypto and opening covert network tunnels without authorization"
         }
     ]
 }
