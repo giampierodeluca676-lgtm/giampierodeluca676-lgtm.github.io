@@ -3,12 +3,32 @@
     "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "13:00:42",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 13:00:42 \u2022 ",
+    "last_update": "13:05:03",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 13:05:03 \u2022 ",
     "news": [
         {
-            "time": "SYS",
-            "text": "Sincronizzazione flussi globali in corso..."
+            "time": "13:00",
+            "text": "KuCoin Blocked In UAE As Authorities Mandate Immediate Service Stop"
+        },
+        {
+            "time": "13:00",
+            "text": "Bitcoin trades 20% below miner costs as fear builds, but is a bullish rotation starting?"
+        },
+        {
+            "time": "13:00",
+            "text": "Solana Keeps Its Recovery Structure Intact \u2014 Is SOL Ready to Push Back Toward $90?"
+        },
+        {
+            "time": "12:40",
+            "text": "Trump Claims Iran Apologized to Middle East: A Stunning Shift in Regional Dynamics"
+        },
+        {
+            "time": "12:31",
+            "text": "Shiba Inu Community Update: New ShibClaw Skill Launches With Warning Issued"
+        },
+        {
+            "time": "12:30",
+            "text": "Lots of RLUSD Issued on the XRP Ledger for Gemini. What\u2019s Happening?"
         }
     ]
 }
