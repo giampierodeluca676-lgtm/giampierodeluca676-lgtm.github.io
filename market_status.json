@@ -3,12 +3,16 @@
     "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "12:10:23",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 12:10:23 \u2022 ",
+    "last_update": "12:15:07",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 12:15:07 \u2022 ",
     "news": [
         {
             "time": "12:05",
             "text": "Jake Claver: Good Time for BlackRock to Enter the Picture With an XRP ETF"
+        },
+        {
+            "time": "12:02",
+            "text": "Kalshi dragged to court as Polymarket draws scrutiny over Iran conflict contracts"
         },
         {
             "time": "12:00",
@@ -25,10 +29,6 @@
         {
             "time": "11:53",
             "text": "Quantum Computing Can Break Zcash and Monero Privacy, Researcher Says"
-        },
-        {
-            "time": "11:51",
-            "text": "Everstake, Midas, and Apollo Launch mEVUSD, a Regulatory-Compliant Tokenized Investment Strategy"
         }
     ]
 }
