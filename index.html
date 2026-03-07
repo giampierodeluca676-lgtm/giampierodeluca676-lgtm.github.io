@@ -18,18 +18,26 @@
 .opacity-0 { opacity: 0; visibility: hidden; }
 .opacity-100 { opacity: 1; visibility: visible; }
 
-/* --- FIX ULTIMATUM: VERTICALE E SCROLLABILE --- */
-#reports-display-area {
-    display: block !important; /* Block è più sicuro di flex per lo scroll lungo */
-    width: 100% !important;
-    padding: 15px !important;
-    overflow-y: auto !important; /* Abilita lo scroll verticale */
-    overflow-x: hidden !important;
-    -webkit-overflow-scrolling: touch; /* Rende lo scroll fluido su iPhone/Android */
-    max-height: 80vh; /* Impedisce al report di uscire dallo schermo */
+/* --- FIX MOBILE ORDINE: TITOLO E GRAFICO PRIMA DEI BOTTONI --- */
+@media (max-width: 1024px) {
+    main {
+        display: flex !important;
+        flex-direction: column-reverse !important; /* Inverte l'ordine dei due blocchi principali */
+    }
+    #chart-container { height: 400px; }
 }
 
-/* Fix per evitare l'effetto "Insegna Bar" e garantire la larghezza intera */
+/* --- FIX ULTIMATUM: VERTICALE E SCROLLABILE --- */
+#reports-display-area {
+    display: block !important;
+    width: 100% !important;
+    padding: 15px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch;
+    max-height: 80vh;
+}
+
 #reports-display-area div, 
 #reports-display-area span, 
 #reports-display-area p,
@@ -41,11 +49,10 @@
     box-sizing: border-box !important;
     height: auto !important;
     display: block !important; 
-    margin-bottom: 12px; /* Spazio tra i rettangoli e il testo */
+    margin-bottom: 12px;
 }
 
 #chart-container { height: calc(100vh - 220px); min-height: 450px; }
-@media (max-width: 1024px) { #chart-container { height: 400px; } }
 </style>
 </head>
 <body class="bg-[#020617] text-gray-200 font-sans overflow-x-hidden">
@@ -147,12 +154,9 @@ async function loadIntelligenceReports() {
         const response = await fetch('latest_report.html?v=' + Date.now());
         if (response.ok) {
             let text = await response.text();
-            
-            // Pulisce le tabelle ma mantiene i div per il layout verticale
             text = text.replace(/<table/g, '<div').replace(/<\/table>/g, '</div>');
             text = text.replace(/<tr/g, '<div').replace(/<\/tr>/g, '</div>');
             text = text.replace(/<td/g, '<div style="margin-bottom:15px; width:100%;"').replace(/<\/td>/g, '</div>');
-            
             area.innerHTML = text;
         } else {
             area.innerHTML = '<p class="text-center mt-20 uppercase font-mono text-gray-500">Signal Lost: No Report Found</p>';
