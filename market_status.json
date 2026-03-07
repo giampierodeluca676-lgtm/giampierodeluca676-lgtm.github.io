@@ -3,13 +3,9 @@
     "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "13:40:05",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 13:40:05 \u2022 ",
+    "last_update": "13:40:14",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 13:40:14 \u2022 ",
     "news": [
-        {
-            "time": "13:34",
-            "text": "\u2018Iran Will Be Hit Very Hard Today,\u2019 Warns Trump: How Will BTC\u2019s Price React?"
-        },
         {
             "time": "13:33",
             "text": "Earn Daily Interest on USDT in 2026: Fixed and Flexible Savings Options on Clapp"
@@ -29,6 +25,10 @@
         {
             "time": "13:22",
             "text": "No Lockups, No Hassle: Best Platforms for Liquid Crypto Savings in 2026"
+        },
+        {
+            "time": "13:14",
+            "text": "Top Crypto PR Agencies for Crisis & Reputation Management in 2026"
         }
     ]
 }
