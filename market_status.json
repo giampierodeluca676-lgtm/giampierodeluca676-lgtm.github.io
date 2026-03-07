@@ -3,9 +3,17 @@
     "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "14:31:19",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 14:31:19 \u2022 ",
+    "last_update": "14:35:03",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 14:35:03 \u2022 ",
     "news": [
+        {
+            "time": "14:32",
+            "text": "Binance Announces Inaugural \u201cBlockchain 100 Award\u201d Winners, Celebrating Global Web3 Content Innovators \u2013 Copy"
+        },
+        {
+            "time": "14:30",
+            "text": "Analyst Projects XRP Price Breakout for March 9. What\u2019s Coming?"
+        },
         {
             "time": "14:25",
             "text": "Bybit Proof of Reserves Reveals Crucial 2.41% Drop in User Bitcoin Holdings"
@@ -21,14 +29,6 @@
         {
             "time": "14:09",
             "text": "Binance scores win in lawsuit dismissal, knocks back Senate down of $1.7B Iran-Russia ties"
-        },
-        {
-            "time": "14:05",
-            "text": "Analyst Says BlackRock\u2019s Plan for XRP Could Go Beyond an ETF. Here\u2019s Why"
-        },
-        {
-            "time": "14:01",
-            "text": "Inside the Growing \u2018Digisexual\u2019 Subculture of People in Relationships With AI"
         }
     ]
 }
