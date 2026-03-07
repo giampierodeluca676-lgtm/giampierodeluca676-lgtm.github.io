@@ -18,82 +18,156 @@
         }
         .drawer-closed { transform: translateX(100%); }
         .drawer-open { transform: translateX(0); }
+
+        /* Integrazione Intelligence Overlay */
+        #intelligence-overlay {
+            transition: opacity 0.7s ease-in-out;
+            z-index: 300;
+        }
     </style>
 </head>
-<body class="bg-black text-white font-sans overflow-x-hidden">
+<body class="bg-[#020617] text-gray-200 font-sans selection:bg-blue-500/30">
 
     <div class="ticker-wrap">
-        <div class="ticker-move" id="ticker-text">KEYGAP ADVANTAGE TERMINAL • NEWS FEED ACTIVE • MARKET ANALYSIS • </div>
+        <div class="ticker-move" id="ticker-text">
+            CARICAMENTO FLUSSI DATI KEYGAP ADVANTAGE... BTC/USDT IN ATTESA... SENTIMENT DI MERCATO... 
+        </div>
     </div>
 
-    <div class="p-6 flex justify-between items-center max-w-[1400px] mx-auto">
-        <h1 class="text-3xl font-black tracking-tighter text-blue-600 italic">KEYGAP <span class="text-white">ADV</span></h1>
-        <div class="flex items-center gap-6">
-            <button onclick="toggleNews()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all flex items-center gap-2 shadow-lg shadow-blue-900/20">
-                📰 NOTIZIE LIVE
-            </button>
-            <div class="text-right">
-                <p id="live-clock" class="text-3xl font-mono font-bold leading-none">00:00:00</p>
-                <p class="text-[10px] text-blue-500 uppercase font-bold">System Time</p>
+    <main class="p-4 lg:p-6 max-w-[1600px] mx-auto space-y-6">
+        
+        <header class="flex flex-col md:flex-row justify-between items-center gap-4 border-b border-gray-800 pb-6">
+            <div>
+                <h1 class="text-3xl font-black italic tracking-tighter text-white">KEYGAP <span class="text-blue-500">ADVANTAGE</span></h1>
+                <p class="text-xs font-mono text-blue-400/60 uppercase tracking-widest">High-Frequency Data Terminal v.4.0</p>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <button onclick="toggleIntelligence()" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all flex items-center gap-2 shadow-lg shadow-red-900/20">
+                    📊 INTELLIGENCE
+                </button>
+                <button onclick="toggleNews()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all flex items-center gap-2 shadow-lg shadow-blue-900/20">
+                    📰 NOTIZIE LIVE
+                </button>
+                <div class="bg-black/40 border border-gray-800 px-4 py-2 rounded-lg font-mono text-blue-400 text-sm" id="live-clock">
+                    00:00:00
+                </div>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            
+            <div class="lg:col-span-1 space-y-6">
+                <div class="glass p-5 rounded-2xl">
+                    <h3 class="text-xs font-bold text-gray-500 uppercase mb-4 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span> Analisi Algoritmica
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="bg-black/30 p-4 rounded-xl border border-white/5">
+                            <span class="text-xs text-gray-400">Prezzo Attuale (BTC)</span>
+                            <div class="text-2xl font-black text-white" id="price">---</div>
+                        </div>
+                        <div class="bg-black/30 p-4 rounded-xl border border-white/5">
+                            <span class="text-xs text-gray-400">Segnale Operativo</span>
+                            <div class="text-2xl font-black text-blue-400" id="signal">CALCOLO...</div>
+                        </div>
+                        <div class="bg-black/30 p-4 rounded-xl border border-white/5">
+                            <span class="text-xs text-gray-400">Affidabilità Segnale</span>
+                            <div class="text-2xl font-black text-green-400" id="reliability">--%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-xl overflow-hidden border border-gray-800 bg-black/20 h-[250px] flex items-center justify-center">
+                    <script type="text/javascript">
+                        atOptions = { 'key' : '074737f2d1be0f3c0e9de0585a695fd7', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
+                    </script>
+                    <script type="text/javascript" src="//www.highperformanceformat.com/074737f2d1be0f3c0e9de0585a695fd7/invoke.js"></script>
+                </div>
+            </div>
+
+            <div class="lg:col-span-3 h-[600px] glass rounded-3xl overflow-hidden relative border border-blue-500/20 shadow-2xl shadow-blue-500/5">
+                <div id="main-chart" class="w-full h-full"></div>
+            </div>
+        </div>
+    </main>
+
+    <div id="news-drawer" class="fixed top-0 right-0 h-full w-full md:w-[400px] glass border-l border-gray-800 drawer-closed flex flex-col shadow-2xl">
+        <div class="p-6 border-b border-gray-800 flex justify-between items-center bg-black/20">
+            <h2 class="font-black text-xl italic tracking-tighter">NEWS <span class="text-blue-500">FEED</span></h2>
+            <button onclick="toggleNews()" class="text-gray-400 hover:text-white">&times; CHIUDI</button>
+        </div>
+        <div class="flex-1 overflow-y-auto p-4 space-y-4" id="news-container">
+            <div class="p-4 border border-gray-800 rounded-xl bg-white/5 animate-pulse">Sincronizzazione flussi...</div>
+        </div>
+    </div>
+
+    <div id="intelligence-overlay" class="fixed inset-0 bg-black/98 hidden opacity-0 flex flex-col">
+        <div class="p-6 border-b border-gray-800 flex justify-between items-center bg-black">
+            <h2 class="text-2xl font-black italic text-red-600">KEYGAP <span class="text-white">INTELLIGENCE</span></h2>
+            <button onclick="toggleIntelligence()" class="text-4xl font-light hover:text-red-500 transition-colors">&times; CHIUDI</button>
+        </div>
+        <div class="flex-1 overflow-y-auto p-4 md:p-10 bg-[#050505]">
+            <div class="max-w-4xl mx-auto space-y-12" id="reports-display-area">
+                <div class="text-center text-gray-500 animate-pulse font-mono">STABILENDO CONNESSIONE CRIPTATA...</div>
             </div>
         </div>
     </div>
 
-    <div class="max-w-[1400px] mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-        <div class="glass p-4 rounded-xl text-center">
-            <p class="text-[10px] uppercase text-gray-500 mb-1">Price BTC</p>
-            <p id="price" class="text-2xl font-bold">--.---</p>
+    <footer class="mt-10 border-t border-gray-900 p-8 text-center bg-black/40">
+        <p class="text-xs text-gray-600 font-mono mb-4">ADVERTISING PARTNER NETWORK</p>
+        <div class="flex justify-center">
+            <script type="text/javascript">
+                atOptions = { 'key' : '074737f2d1be0f3c0e9de0585a695fd7', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/074737f2d1be0f3c0e9de0585a695fd7/invoke.js"></script>
         </div>
-        <div class="glass p-4 rounded-xl text-center">
-            <p class="text-[10px] uppercase text-gray-500 mb-1">AI Prediction</p>
-            <p id="signal" class="text-2xl font-bold text-green-400">---</p>
-        </div>
-        <div class="glass p-4 rounded-xl text-center">
-            <p class="text-[10px] uppercase text-gray-500 mb-1">Reliability</p>
-            <p id="reliability" class="text-2xl font-bold text-blue-400">--%</p>
-        </div>
-        <div class="glass p-4 rounded-xl text-center">
-            <p class="text-[10px] uppercase text-gray-500 mb-1">Status</p>
-            <p class="text-2xl font-bold text-white">ONLINE</p>
-        </div>
-    </div>
-
-    <div class="max-w-[1400px] mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-6 pb-20">
-        <div class="lg:col-span-4 h-[600px] glass p-2 rounded-2xl overflow-hidden">
-            <div class="tradingview-widget-container" style="height: 100%;">
-                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-crypto-coins-heatmap.js" async>
-                { "dataSource": "crypto", "colorTheme": "dark", "hasTopBar": false, "isTransparent": true, "width": "100%", "height": "100%" }
-                </script>
-            </div>
-        </div>
-        <div class="lg:col-span-8 h-[600px] glass rounded-2xl overflow-hidden shadow-2xl">
-            <div id="main-chart" style="height: 100%;"></div>
-        </div>
-    </div>
-
-    <div id="news-drawer" class="fixed top-0 right-0 h-full w-[350px] md:w-[450px] glass border-l border-blue-900/50 drawer-closed shadow-[-10px_0_30px_rgba(0,0,0,0.5)]">
-        <div class="p-4 flex justify-between items-center border-b border-gray-800">
-            <h2 class="text-xl font-bold text-blue-500">ARTICOLI & NEWS</h2>
-            <button onclick="toggleNews()" class="text-gray-400 hover:text-white text-2xl font-bold">&times;</button>
-        </div>
-        <div class="h-full p-2">
-            <div class="tradingview-widget-container" style="height: calc(100% - 80px);">
-                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
-                { "feedMode": "all_symbols", "colorTheme": "dark", "isTransparent": true, "displayMode": "regular", "width": "100%", "height": "100%", "locale": "it" }
-                </script>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://pl28819682.effectivegatecpm.com/07/47/37/074737f2d1be0f3c0e9de0585a695fd7.js"></script>
+    </footer>
 
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script>
-        // Funzione per Aprire/Chiudere News
+        // Gestione News Drawer
         function toggleNews() {
             const drawer = document.getElementById('news-drawer');
             drawer.classList.toggle('drawer-closed');
             drawer.classList.toggle('drawer-open');
+        }
+
+        // GESTIONE INTELLIGENCE (DISSOLVENZA)
+        async function toggleIntelligence() {
+            const overlay = document.getElementById('intelligence-overlay');
+            if (overlay.classList.contains('hidden')) {
+                overlay.classList.remove('hidden');
+                setTimeout(() => overlay.classList.add('opacity-100'), 10);
+                await loadIntelligenceReports();
+            } else {
+                overlay.classList.remove('opacity-100');
+                setTimeout(() => overlay.classList.add('hidden'), 700);
+            }
+        }
+
+        // CARICAMENTO AUTOMATICO REPORT
+        async function loadIntelligenceReports() {
+            const area = document.getElementById('reports-display-area');
+            // Nota: assicurati che questi nomi file corrispondano a quelli generati dal bot
+            const files = [
+                'Report_Finanziari/report_DEFI_20260307_1030.html',
+                'Report_Finanziari/report_CEFI_20260307_1030.html'
+            ];
+
+            area.innerHTML = '<div class="text-center text-red-500 font-mono">CARICAMENTO REPORT NODI MONDIALI...</div>';
+
+            let loadedContent = "";
+            for (const file of files) {
+                try {
+                    const response = await fetch(file + '?v=' + Date.now());
+                    if(response.ok) {
+                        const html = await response.text();
+                        loadedContent += `<div class="bg-white rounded-lg overflow-hidden shadow-2xl border-4 border-red-600/20 mb-10 transform hover:scale-[1.01] transition-all">${html}</div>`;
+                    }
+                } catch (e) { console.error("Report non trovato:", file); }
+            }
+            area.innerHTML = loadedContent || '<div class="text-center text-gray-500">Nessun report disponibile al momento.</div>';
         }
 
         // Orologio Fluido
@@ -114,9 +188,17 @@
                 document.getElementById('signal').innerText = d.signal || '---';
                 document.getElementById('reliability').innerText = d.reliability || '--%';
                 if(d.ticker) document.getElementById('ticker-text').innerText = d.ticker.repeat(3);
-            } catch (e) {}
+                
+                const nc = document.getElementById('news-container');
+                nc.innerHTML = d.news ? d.news.map(n => `
+                    <div class="p-4 border border-gray-800 rounded-xl bg-white/5 hover:bg-white/10 transition-all cursor-pointer">
+                        <div class="text-[10px] font-bold text-blue-500 uppercase mb-1">${n.time}</div>
+                        <div class="text-sm font-medium leading-relaxed">${n.text}</div>
+                    </div>
+                `).join('') : 'Nessuna notizia';
+            } catch(e) { console.log("Sync error"); }
         }
-        setInterval(sync, 10000);
+        setInterval(sync, 5000);
         sync();
     </script>
 </body>
