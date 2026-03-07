@@ -37222,3 +37222,6 @@ To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.
    36ebdfb..7e25c3e  main -> main
 To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
    7e25c3e..40433b7  main -> main
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 135267c863d79dcf636b5c39d2797c89deb9dcef but expected 7e25c3e5f7e418a09d51cd7c7438f4569e79f62f)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
