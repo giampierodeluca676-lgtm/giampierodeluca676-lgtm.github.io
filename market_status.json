@@ -1,11 +1,26 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.991,12",
+    "price": "€ 58.046,82",
     "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "23:59:28",
-    "ticker": "BTC/EUR: € 57.991,12 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 23:59:28 • ",
+    "reliability": "97%",
+    "last_update": "00:04:30",
+    "ticker": "BTC/EUR: € 58.046,82 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 00:04:30 • ",
     "news": [
+        {
+            "time": "00:00",
+            "text": "$1.2B liquidity warning – How BlackRock could ‘rock’ the crypto market",
+            "link": "https://ambcrypto.com/1-2b-liquidity-warning-how-blackrock-could-rock-the-crypto-market/"
+        },
+        {
+            "time": "00:00",
+            "text": "Ethereum Under Pressure As Researchers Issue Critical Report",
+            "link": "https://bitcoinist.com/ethereum-under-pressure/"
+        },
+        {
+            "time": "00:00",
+            "text": "Wall Street Veteran Drops Major XRP Bombshell: Details",
+            "link": "https://timestabloid.com/wall-street-veteran-drops-major-xrp-bombshell-details/"
+        },
         {
             "time": "23:30",
             "text": "Binance Pushes Back on Senate Inquiry, Calls Allegations ‘False and Defamatory’ in Formal Response",
@@ -20,21 +35,6 @@
             "time": "23:20",
             "text": "Palantir's has the US Pentagon in a chokehold that threatens the entire world",
             "link": "https://www.cryptopolitan.com/palantir-pentagon-disgustingly-twisted-rship/"
-        },
-        {
-            "time": "23:05",
-            "text": "Crypto Fear and Greed Index falls back down to 'extreme fear' levels",
-            "link": "https://cointelegraph.com/news/crypto-fear-greed-index-extreme-fear?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
-        },
-        {
-            "time": "23:00",
-            "text": "Analysts Predict Conservative XRP Price If It Follows 2017 Run",
-            "link": "https://www.newsbtc.com/altcoin/analysts-predict-conservative-xrp-price-if-it-follows-2017-run/"
-        },
-        {
-            "time": "22:30",
-            "text": "The World’s Largest Asset Managers Hold MSTR: Strategy Highlights Massive Institutional Bitcoin Exposure",
-            "link": "https://news.bitcoin.com/the-worlds-largest-asset-managers-hold-mstr-strategy-highlights-massive-institutional-bitcoin-exposure/"
         }
     ]
 }
