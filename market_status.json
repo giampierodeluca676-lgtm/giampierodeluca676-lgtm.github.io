@@ -1,10 +1,10 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.490,96",
+    "price": "\u20ac 58.494,30",
     "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "17:13:12",
-    "ticker": "BTC/EUR: € 58.490,96 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 17:13:12 • ",
+    "reliability": "99%",
+    "last_update": "17:13:35",
+    "ticker": "BTC/EUR: \u20ac 58.494,30 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 17:13:35 \u2022 ",
     "news": [
         {
             "time": "17:11",
@@ -20,11 +20,11 @@
         },
         {
             "time": "17:05",
-            "text": "Pundit Says XRP is the New E-SDR. Here’s Why"
+            "text": "Pundit Says XRP is the New E-SDR. Here\u2019s Why"
         },
         {
             "time": "17:01",
-            "text": "Rising Stagflation Fears in the US Spotlight Bitcoin’s Role in Economic Uncertainty"
+            "text": "Rising Stagflation Fears in the US Spotlight Bitcoin\u2019s Role in Economic Uncertainty"
         },
         {
             "time": "17:00",
