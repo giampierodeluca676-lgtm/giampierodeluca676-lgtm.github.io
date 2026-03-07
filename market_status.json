@@ -3,6 +3,32 @@
     "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "11:45:07",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 11:45:07 \u2022 "
+    "last_update": "11:48:41",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 11:48:41 \u2022 ",
+    "news": [
+        {
+            "time": "11:47",
+            "text": "Bitcoin hovers just under $72k, taking a breather after hefty gains this week"
+        },
+        {
+            "time": "11:43",
+            "text": "Bybit Releases Its 31st Proof-of-Reserves Report"
+        },
+        {
+            "time": "11:42",
+            "text": "YY Group Holdings adopts bitcoin as treasury reserve asset"
+        },
+        {
+            "time": "11:40",
+            "text": "OmniPact Secures $50 Million to Advance Trust Infrastructure"
+        },
+        {
+            "time": "11:33",
+            "text": "Washington Man Sentenced to 2 Years for Diverting $35M to Failed DeFi Platform"
+        },
+        {
+            "time": "11:30",
+            "text": "OKX Introduces Social Trading Platform After $25 Billion Valuation"
+        }
+    ]
 }
