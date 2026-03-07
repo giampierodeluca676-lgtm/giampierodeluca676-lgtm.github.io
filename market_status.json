@@ -3,9 +3,13 @@
     "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "16:00:32",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 16:00:32 \u2022 ",
+    "last_update": "16:00:46",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 16:00:46 \u2022 ",
     "news": [
+        {
+            "time": "15:58",
+            "text": "Ethereum Price Prediction: $2,147 Breakout Could Send ETH Toward $2,400"
+        },
         {
             "time": "15:52",
             "text": "SEC Files Proposed Settlement to Drop Most Claims Against Justin Sun and Tron"
@@ -25,10 +29,6 @@
         {
             "time": "15:30",
             "text": "XRP Bull Flag Breakout After 8-Month Consolidation To Send Price To $11"
-        },
-        {
-            "time": "15:28",
-            "text": "Bitcoin Rally Falters Under $68,000 As Investors Pull $228 Million From Spot BTC ETFs"
         }
     ]
 }
