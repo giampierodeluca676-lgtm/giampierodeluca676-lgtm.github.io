@@ -29,18 +29,23 @@ def get_service():
     return build('blogger', 'v3', credentials=creds)
 
 def get_real_news():
-    """Scarica notizie vere dal mercato crypto via API pubblica"""
+    """Scarica notizie vere dal mercato crypto via API pubblica con LINK"""
     try:
         url = "https://min-api.cryptocompare.com/data/v2/news/?lang=EN"
         r = requests.get(url, timeout=5).json()
         news_list = []
         for item in r['Data'][:6]:
             t = datetime.fromtimestamp(item['published_on']).strftime('%H:%M')
-            news_list.append({"time": t, "text": item['title']})
+            # AGGIORNATO: Ora prende anche l'URL originale della notizia
+            news_list.append({
+                "time": t, 
+                "text": item['title'],
+                "link": item['url'] 
+            })
         return news_list
     except Exception as e:
         print(f"⚠️ Errore recupero news: {e}")
-        return [{"time": "SYS", "text": "Sincronizzazione flussi globali in corso..."}]
+        return [{"time": "SYS", "text": "Sincronizzazione flussi globali in corso...", "link": "#"}]
 
 def pubblica():
     """Crea un post SEO-friendly per Blogger con stile Mondiale e Monetizzazione"""
@@ -190,7 +195,9 @@ def run_update():
                     {"".join([f'''
                     <div style="padding: 15px; border-bottom: 1px solid #f1f5f9;">
                         <span style="color: #3b82f6; font-weight: 700; font-size: 13px;">[{n['time']}]</span>
-                        <span style="margin-left: 10px; font-size: 14px; color: #1e293b;">{n['text']}</span>
+                        <a href="{n.get('link', '#')}" target="_blank" style="margin-left: 10px; font-size: 14px; color: #1e293b; text-decoration: none; font-weight: 500; display: inline-block;">
+                            {n['text']} <span style="color: #3b82f6; font-size: 11px; margin-left: 5px;">→</span>
+                        </a>
                     </div>''' for n in vere_notizie])}
                 </div>
 
