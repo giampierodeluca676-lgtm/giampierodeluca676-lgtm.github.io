@@ -1,11 +1,15 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.097,26",
+    "price": "€ 58.041,43",
     "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "23:10:06",
-    "ticker": "BTC/EUR: € 58.097,26 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 23:10:06 • ",
+    "reliability": "97%",
+    "last_update": "23:15:08",
+    "ticker": "BTC/EUR: € 58.041,43 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 23:15:08 • ",
     "news": [
+        {
+            "time": "23:05",
+            "text": "Crypto Fear and Greed Index falls back down to 'extreme fear' levels"
+        },
         {
             "time": "23:00",
             "text": "Analysts Predict Conservative XRP Price If It Follows 2017 Run"
@@ -25,10 +29,6 @@
         {
             "time": "22:18",
             "text": "Crypto Investor Says Attackers Stole $24M in Violent Robbery"
-        },
-        {
-            "time": "22:06",
-            "text": "Solana Trading Volume Tops $4 Trillion as Market Eyes Recovery Above $90"
         }
     ]
 }

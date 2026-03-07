@@ -180,9 +180,20 @@ async function sync() {
         const d = await r.json();
         document.getElementById('price').innerText = d.price || '---';
         document.getElementById('signal').innerText = d.signal || '---';
+        
         if (d.news && d.news.length > 0) {
             const nc = document.getElementById('news-container');
-            nc.innerHTML = d.news.map(n => `<div class="p-4 border-b border-white/5"><b class="text-blue-500 text-xs">${n.time}</b><p class="text-sm mt-1">${n.text}</p></div>`).join('');
+            // MODIFICA QUI: Aggiungiamo il tag <a> per rendere la notizia un link
+            nc.innerHTML = d.news.map(n => `
+                <div class="p-4 border-b border-white/5 hover:bg-blue-900/20 transition-all">
+                    <b class="text-blue-500 text-xs">${n.time}</b>
+                    <a href="${n.link || '#'}" target="_blank" class="block text-sm mt-1 text-gray-200 hover:text-blue-400 decoration-none">
+                        ${n.text}
+                        ${n.link ? '<span class="text-[10px] block text-blue-600 mt-1">Leggi fonte originale →</span>' : ''}
+                    </a>
+                </div>
+            `).join('');
+            
             document.getElementById('tg-headline').innerText = d.news[newsIndex].text;
             const prog = document.getElementById('tg-progress');
             prog.style.transition = 'none'; prog.style.width = '0%';
