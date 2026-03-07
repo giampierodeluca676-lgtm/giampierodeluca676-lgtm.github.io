@@ -1,12 +1,8 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 87.420,10",
+    "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "11:22:00",
-    "ticker": "BTC/EUR: € 87.420,10 • KEYGAP SIGNAL: BULLISH • ",
-    "news": [
-        { "time": "11:20", "text": "BTC mantiene il supporto a 87k. Analisi Keygap conferma trend." },
-        { "time": "11:15", "text": "Aggiornamento flussi Intelligence completato con successo." }
-    ]
+    "last_update": "11:30:03",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 11:30:03 \u2022 "
 }
