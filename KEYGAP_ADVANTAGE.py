@@ -91,7 +91,7 @@ def run_update():
         }
         
         # --- GESTIONE REPORT FINANZIARI (AGGIORNATA A HTML) ---
-        cartella_report = "Report Finanziari"
+        cartella_report = "Report_Finanziari"
         if not os.path.exists(cartella_report):
             os.makedirs(cartella_report)
             

@@ -1,11 +1,15 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.471,89",
+    "price": "€ 58.446,19",
     "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "17:23:44",
-    "ticker": "BTC/EUR: € 58.471,89 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 17:23:44 • ",
+    "reliability": "98%",
+    "last_update": "17:26:57",
+    "ticker": "BTC/EUR: € 58.446,19 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 17:26:57 • ",
     "news": [
+        {
+            "time": "17:24",
+            "text": "Crypto Breakthrough: Florida Senate Approves Groundbreaking State-Level Stablecoin Bill, DeSantis’ Signature Next"
+        },
         {
             "time": "17:18",
             "text": "US Cybersecurity Strategy For The First Time Protects Crypto And Blockchain"
@@ -25,10 +29,6 @@
         {
             "time": "17:06",
             "text": "Dubai Regulator Orders KuCoin and MEXC to Stop Crypto Activity"
-        },
-        {
-            "time": "17:05",
-            "text": "Pundit Says XRP is the New E-SDR. Here’s Why"
         }
     ]
 }
