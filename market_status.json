@@ -1,11 +1,31 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.076,00",
-    "signal": "BEARISH",
-    "reliability": "99%",
-    "last_update": "00:28:38",
-    "ticker": "BTC/EUR: € 58.076,00 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 00:28:38 • ",
+    "price": "€ 58.101,70",
+    "signal": "BULLISH",
+    "reliability": "98%",
+    "last_update": "00:33:40",
+    "ticker": "BTC/EUR: € 58.101,70 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 00:33:40 • ",
     "news": [
+        {
+            "time": "00:31",
+            "text": "IRS Pushes Crypto Exchanges Toward Mandatory Digital Tax Reporting",
+            "link": "https://en.coin-turk.com/irs-pushes-crypto-exchanges-toward-mandatory-digital-tax-reporting/"
+        },
+        {
+            "time": "00:30",
+            "text": "PBOC Governor: China Continues to Pursue Yuan Internationalization for Cross Border Payments",
+            "link": "https://news.bitcoin.com/pboc-governor-china-continues-to-pursue-yuan-internationalization-for-cross-border-payments/"
+        },
+        {
+            "time": "00:30",
+            "text": "Shiba Inu (SHIB) Approaches Pivotal Support Level. Here’s What Traders Must Watch",
+            "link": "https://timestabloid.com/shiba-inu-shib-approaches-pivotal-support-level-heres-what-traders-must-watch/"
+        },
+        {
+            "time": "00:30",
+            "text": "Here’s Why Bitcoin Price Must Not Fall To $54K: Analyst",
+            "link": "https://www.newsbtc.com/news/bitcoin/heres-why-bitcoin-price-must-not-fall-to-54k-analyst/"
+        },
         {
             "time": "00:10",
             "text": "Trump’s Bank Regulators Outdo Basel, Boost Tokenized Securities",
@@ -15,26 +35,6 @@
             "time": "00:10",
             "text": "Grammarly’s ‘Expert Review’ Feature Exposed: The Shocking Absence of Human Experts",
             "link": "https://bitcoinworld.co.in/grammarly-expert-review-analysis/"
-        },
-        {
-            "time": "00:00",
-            "text": "$1.2B liquidity warning – How BlackRock could ‘rock’ the crypto market",
-            "link": "https://ambcrypto.com/1-2b-liquidity-warning-how-blackrock-could-rock-the-crypto-market/"
-        },
-        {
-            "time": "00:00",
-            "text": "Ethereum Under Pressure As Researchers Issue Critical Report",
-            "link": "https://bitcoinist.com/ethereum-under-pressure/"
-        },
-        {
-            "time": "00:00",
-            "text": "Wall Street Veteran Drops Major XRP Bombshell: Details",
-            "link": "https://timestabloid.com/wall-street-veteran-drops-major-xrp-bombshell-details/"
-        },
-        {
-            "time": "23:30",
-            "text": "Binance Pushes Back on Senate Inquiry, Calls Allegations ‘False and Defamatory’ in Formal Response",
-            "link": "https://news.bitcoin.com/binance-pushes-back-on-senate-inquiry-calls-allegations-false-and-defamatory-in-formal-response/"
         }
     ]
 }
