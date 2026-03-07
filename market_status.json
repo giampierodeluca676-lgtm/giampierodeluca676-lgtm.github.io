@@ -3,9 +3,13 @@
     "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "13:05:03",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 13:05:03 \u2022 ",
+    "last_update": "13:05:14",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 13:05:14 \u2022 ",
     "news": [
+        {
+            "time": "13:01",
+            "text": "Kalshi, Polymarket eye $20B valuations in potential fundraising: WSJ"
+        },
         {
             "time": "13:00",
             "text": "KuCoin Blocked In UAE As Authorities Mandate Immediate Service Stop"
@@ -25,10 +29,6 @@
         {
             "time": "12:31",
             "text": "Shiba Inu Community Update: New ShibClaw Skill Launches With Warning Issued"
-        },
-        {
-            "time": "12:30",
-            "text": "Lots of RLUSD Issued on the XRP Ledger for Gemini. What\u2019s Happening?"
         }
     ]
 }
