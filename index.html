@@ -41,81 +41,97 @@
 
     <main class="p-4 lg:p-6 max-w-[1800px] mx-auto flex flex-col lg:flex-row gap-6 h-screen max-h-[900px]">
         
-        <div class="w-full lg:w-72 flex flex-col gap-6">
-            <div class="glass p-5 rounded-2xl flex-1 flex flex-col border-b-4 border-blue-500 shadow-2xl">
-                <h3 class="text-xs font-bold text-gray-500 uppercase mb-6 flex items-center gap-2">
-                    <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span> Analisi Algoritmica
-                </h3>
-                
-                <div class="space-y-6 flex-1">
-                    <div class="bg-black/30 p-4 rounded-xl border border-white/5 text-center">
-                        <span class="text-[10px] text-gray-400 block uppercase font-bold mb-1">Prezzo BTC</span>
-                        <div class="text-2xl font-black text-white" id="price">---</div>
-                    </div>
+        <div class="w-full lg:w-72 flex flex-col gap-4">
+    
+    <div class="glass p-5 rounded-2xl border-b-2 border-blue-500 shadow-lg">
+        <h3 class="text-[10px] font-bold text-gray-500 uppercase mb-4 flex items-center gap-2">
+            <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span> Market Data
+        </h3>
+        <div class="space-y-4">
+            <div class="bg-black/40 p-3 rounded-xl border border-white/5 text-center">
+                <span class="text-[10px] text-gray-400 block uppercase">Prezzo BTC</span>
+                <div class="text-xl font-black text-white" id="price">---</div>
+            </div>
+            <div class="bg-black/40 p-3 rounded-xl border border-white/5 text-center">
+                <span class="text-[10px] text-gray-400 block uppercase">Segnale</span>
+                <div class="text-xl font-black text-blue-400" id="signal">---</div>
+            </div>
+            <div class="bg-black/40 p-3 rounded-xl border border-white/5 text-center">
+                <span class="text-[10px] text-gray-400 block uppercase">Affidabilità</span>
+                <div class="text-xl font-black text-green-400" id="reliability">--%</div>
+            </div>
+        </div>
+    </div>
 
-                    <div class="bg-black/30 p-4 rounded-xl border border-white/5 text-center">
-                        <span class="text-[10px] text-gray-400 block uppercase font-bold mb-1">Segnale Operativo</span>
-                        <div class="text-2xl font-black text-blue-400 tracking-tighter" id="signal">CALCOLO...</div>
-                    </div>
+    <div class="glass p-5 rounded-2xl border-l-4 border-red-600 shadow-xl bg-gradient-to-br from-red-950/20 to-black/20">
+        <div class="flex items-center justify-between mb-3">
+            <span class="text-[10px] font-bold text-red-500 uppercase tracking-widest animate-pulse">● TG LIVE</span>
+            <span class="text-[9px] font-mono text-gray-500" id="tg-timer">12s</span>
+        </div>
+        
+        <div id="tg-news-content" class="min-h-[100px]">
+            <div id="tg-category" class="text-[9px] font-black text-blue-500 uppercase mb-1 border-b border-blue-500/10 pb-1">Sincronizzazione...</div>
+            <div id="tg-headline" class="text-lg font-extrabold text-white leading-tight italic">
+                Caricamento Intelligence...
+            </div>
+        </div>
 
-                    <div class="bg-black/30 p-4 rounded-xl border border-white/5 text-center">
-                        <span class="text-[10px] text-gray-400 block uppercase font-bold mb-1">Affidabilità</span>
-                        <div class="text-2xl font-black text-green-400" id="reliability">--%</div>
-                    </div>
-                </div>
+        <div class="w-full bg-gray-800 h-1.5 rounded-full overflow-hidden mt-4">
+            <div id="tg-progress" class="bg-red-600 h-full shadow-[0_0_10px_#dc2626]" style="width: 0%"></div>
+        </div>
+    </div>
 
-                <div class="mt-auto pt-6">
-                    <div class="rounded-xl overflow-hidden border border-gray-800 bg-black/20 h-[250px] flex items-center justify-center">
-                        <script type="text/javascript">
-                            atOptions = { 'key' : '074737f2d1be0f3c0e9de0585a695fd7', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
-                        </script>
-                        <script type="text/javascript" src="https://www.highperformanceformat.com/074737f2d1be0f3c0e9de0585a695fd7/invoke.js"></script>
-                    </div>
-                </div>
+    <div class="mt-auto rounded-xl overflow-hidden border border-gray-800 bg-black/20 h-[250px] flex items-center justify-center">
+        <script type="text/javascript">
+            atOptions = { 'key' : '074737f2d1be0f3c0e9de0585a695fd7', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
+        </script>
+        <script type="text/javascript" src="https://www.highperformanceformat.com/074737f2d1be0f3c0e9de0585a695fd7/invoke.js"></script>
+    </div>
+</div>
             </div>
         </div>
 
         <div class="flex-1 flex flex-col gap-6">
-            
-            <header class="relative z-50 flex flex-col md:flex-row justify-between items-center gap-4 border-b border-gray-800 pb-4">
-                <div class="relative z-50">
-                    <h1 class="text-3xl font-black italic tracking-tighter text-white">KEYGAP <span class="text-blue-500">ADVANTAGE</span></h1>
-                    <p class="text-xs font-mono text-blue-400/60 uppercase tracking-widest">High-Frequency Data Terminal v.4.0</p>
-                </div>
-                
-                <div class="flex items-center gap-4 relative z-50">
-                    <button onclick="toggleIntelligence()" class="relative z-[60] pointer-events-auto bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all flex items-center gap-2 shadow-lg shadow-red-900/20 active:scale-95">
-                        📊 INTELLIGENCE
-                    </button>
-                    <button onclick="toggleNews()" class="relative z-[60] pointer-events-auto bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all flex items-center gap-2 shadow-lg shadow-blue-900/20 active:scale-95">
-                        📰 NOTIZIE LIVE
-                    </button>
-                    <div class="bg-black/40 border border-gray-800 px-4 py-2 rounded-lg font-mono text-blue-400 text-sm" id="live-clock">
-                        00:00:00
-                    </div>
-                </div>
-            </header>
+    
+    <header class="relative z-50 flex flex-col md:flex-row justify-between items-center gap-4 border-b border-gray-800 pb-4">
+        <div class="relative z-50">
+            <h1 class="text-3xl font-black italic tracking-tighter text-white">KEYGAP <span class="text-blue-500">ADVANTAGE</span></h1>
+            <p class="text-xs font-mono text-blue-400/60 uppercase tracking-widest">High-Frequency Data Terminal v.4.0</p>
+        </div>
+        
+        <div class="flex items-center gap-4 relative z-50">
+            <button onclick="toggleIntelligence()" class="relative z-[60] pointer-events-auto bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all flex items-center gap-2 shadow-lg shadow-red-900/20 active:scale-95">
+                📊 INTELLIGENCE
+            </button>
+            <button onclick="toggleNews()" class="relative z-[60] pointer-events-auto bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all flex items-center gap-2 shadow-lg shadow-blue-900/20 active:scale-95">
+                📰 NOTIZIE LIVE
+            </button>
+            <div class="bg-black/40 border border-gray-800 px-4 py-2 rounded-lg font-mono text-blue-400 text-sm" id="live-clock">
+                00:00:00
+            </div>
+        </div>
+    </header>
 
-            <div class="glass p-5 rounded-2xl border-l-8 border-red-600 shadow-2xl bg-gradient-to-r from-red-950/30 to-black/20">
-                <div class="flex items-center gap-6">
-                    <div class="shrink-0 border-r border-white/10 pr-6">
-                        <div class="flex items-center gap-2">
-                            <span class="text-[14px] font-black text-red-500 uppercase tracking-tighter animate-pulse">● TG MONDIALE</span>
-                            <span class="text-[10px] font-mono text-gray-500" id="tg-timer">12s</span>
-                        </div>
-                        <div id="tg-category" class="text-[11px] font-black text-blue-500 uppercase tracking-widest mt-1">Sincronizzazione...</div>
-                    </div>
-                    
-                    <div class="flex-1">
-                        <div id="tg-headline" class="text-2xl font-extrabold text-white leading-tight italic tracking-tight">
-                            Inizializzazione flussi Intelligence...
-                        </div>
-                        <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden mt-3">
-                            <div id="tg-progress" class="bg-red-600 h-full shadow-[0_0_15px_#dc2626]" style="width: 0%"></div>
-                        </div>
-                    </div>
+    <div class="glass p-5 rounded-2xl border-l-8 border-red-600 shadow-2xl bg-gradient-to-r from-red-950/30 to-black/20">
+        <div class="flex items-center gap-6">
+            <div class="shrink-0 border-r border-white/10 pr-6">
+                <div class="flex items-center gap-2">
+                    <span class="text-[14px] font-black text-red-500 uppercase tracking-tighter animate-pulse">● TG MONDIALE</span>
+                    <span class="text-[10px] font-mono text-gray-500" id="tg-timer-top">12s</span>
+                </div>
+                <div id="tg-category-top" class="text-[11px] font-black text-blue-500 uppercase tracking-widest mt-1">Sincronizzazione...</div>
+            </div>
+            
+            <div class="flex-1">
+                <div id="tg-headline-top" class="text-2xl font-extrabold text-white leading-tight italic tracking-tight">
+                    Inizializzazione flussi Intelligence...
+                </div>
+                <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden mt-3">
+                    <div id="tg-progress-top" class="bg-red-600 h-full shadow-[0_0_15px_#dc2626]" style="width: 0%"></div>
                 </div>
             </div>
+        </div>
+    </div>
 
             <div class="flex-1 glass rounded-3xl overflow-hidden relative border border-blue-500/20 shadow-2xl shadow-blue-500/5 min-h-[400px]">
                 <div id="main-chart" class="w-full h-full"></div>
@@ -187,54 +203,54 @@
 
         // Sync Dati dal Bot
         let newsIndex = 0;
-        async function sync() {
-            try {
-                const r = await fetch('market_status.json?v=' + Date.now());
-                const d = await r.json();
-                
-                // Aggiornamento Dati Tecnici
-                document.getElementById('price').innerText = d.price || '---';
-                document.getElementById('signal').innerText = d.signal || '---';
-                document.getElementById('reliability').innerText = d.reliability || '--%';
-                if(d.ticker) document.getElementById('ticker-text').innerText = d.ticker.repeat(3);
-                
-                // Aggiornamento Cassetto News Laterale
-                const nc = document.getElementById('news-container');
-                nc.innerHTML = d.news ? d.news.map(n => `
-                    <div class="p-4 border border-gray-800 rounded-xl bg-white/5">
-                        <div class="text-[10px] font-bold text-blue-500 uppercase mb-1">${n.time}</div>
-                        <div class="text-sm font-medium leading-relaxed">${n.text}</div>
-                    </div>
-                `).join('') : 'Nessuna notizia';
+async function sync() {
+    try {
+        const r = await fetch('market_status.json?v=' + Date.now());
+        const d = await r.json();
+        
+        // 1. Aggiornamento Dati Tecnici (Prezzo, Segnale, ecc.)
+        document.getElementById('price').innerText = d.price || '---';
+        document.getElementById('signal').innerText = d.signal || '---';
+        document.getElementById('reliability').innerText = d.reliability || '--%';
+        
+        if (d.news && d.news.length > 0) {
+            // 2. Aggiornamento Cassetto News (Drawer)
+            const nc = document.getElementById('news-container');
+            nc.innerHTML = d.news.map(n => `
+                <div class="p-3 border border-gray-800 rounded-lg bg-white/5 mb-2">
+                    <b class="text-blue-400">${n.time}</b>: ${n.text}
+                </div>`).join('');
+            
+            const currentNews = d.news[newsIndex];
+            const categoryText = currentNews.text.toUpperCase().includes('WAR') ? "🚨 GEOPOLITICA" : "🌐 MERCATI";
 
-                // --- MOTORE TG 12 SECONDI ---
-                if (d.news && d.news.length > 0) {
-                    const headline = document.getElementById('tg-headline');
-                    const category = document.getElementById('tg-category');
-                    const progress = document.getElementById('tg-progress');
-                    
-                    if (headline && category && progress) {
-                        const currentNews = d.news[newsIndex];
-                        headline.innerText = currentNews.text;
-                        
-                        const txt = currentNews.text.toUpperCase();
-                        if (txt.includes('WAR') || txt.includes('GUERRA') || txt.includes('ATTACK')) category.innerText = "🚨 GEOPOLITICA / GUERRE";
-                        else if (txt.includes('FED') || txt.includes('RATE') || txt.includes('CPI')) category.innerText = "🏛️ MACROECONOMIA";
-                        else category.innerText = "🌐 MERCATI GLOBALI";
+            // 3. Sincronizzazione TG LATERALE (ID originali)
+            document.getElementById('tg-headline').innerText = currentNews.text;
+            document.getElementById('tg-category').innerText = categoryText;
+            const progSide = document.getElementById('tg-progress');
+            progSide.style.transition = 'none';
+            progSide.style.width = '0%';
 
-                        // Reset e avvio barra lenta (12 secondi)
-                        progress.style.transition = 'none';
-                        progress.style.width = '0%';
-                        setTimeout(() => {
-                            progress.style.transition = 'width 11800ms linear';
-                            progress.style.width = '100%';
-                        }, 100);
+            // 4. Sincronizzazione TG TOP (Nuovi ID - quelli che hai incollato ora)
+            document.getElementById('tg-headline-top').innerText = currentNews.text;
+            document.getElementById('tg-category-top').innerText = categoryText;
+            const progTop = document.getElementById('tg-progress-top');
+            progTop.style.transition = 'none';
+            progTop.style.width = '0%';
 
-                        newsIndex = (newsIndex + 1) % d.news.length;
-                    }
-                }
-            } catch(e) { console.log("Sync error"); }
+            // Avvio sincronizzato delle barre (12 secondi)
+            setTimeout(() => {
+                const style = 'width 11800ms linear';
+                progSide.style.transition = style;
+                progSide.style.width = '100%';
+                progTop.style.transition = style;
+                progTop.style.width = '100%';
+            }, 100);
+
+            newsIndex = (newsIndex + 1) % d.news.length;
         }
+    } catch(e) { console.error("Sync Error:", e); }
+}
 
         // AGGIORNAMENTO OGNI 12 SECONDI PER LEGGERE BENE
         setInterval(sync, 12000); 
