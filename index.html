@@ -18,18 +18,16 @@
         .opacity-0 { opacity: 0; visibility: hidden; }
         .opacity-100 { opacity: 1; visibility: visible; }
         
-        /* FIX DEFINITIVO PER IL TESTO FANTASMA E IL RELIABILITY INDEX */
+        /* FIX MOBILE PER RELLIABILITY INDEX */
         #reports-display-area {
             word-wrap: break-word !important;
             overflow-wrap: break-word !important;
             white-space: normal !important;
-            font-size: 1.1rem;
-            line-height: 1.6;
         }
         #reports-display-area * {
             max-width: 100% !important;
-            height: auto !important;
             box-sizing: border-box !important;
+            height: auto !important;
         }
 
         #chart-container { height: calc(100vh - 220px); min-height: 450px; }
@@ -133,8 +131,12 @@
             area.innerHTML = '<div class="text-center text-red-600 font-mono animate-pulse text-2xl mt-20 uppercase tracking-widest">Decoding Uplink...</div>';
             try {
                 const response = await fetch('latest_report.html?v=' + Date.now());
-                area.innerHTML = response.ok ? await response.text() : '<p class="text-center mt-20">Nessun report disponibile.</p>';
-            } catch (e) { area.innerHTML = '<p class="text-center mt-20">Errore di connessione.</p>'; }
+                if (response.ok) {
+                    area.innerHTML = await response.text();
+                } else {
+                    area.innerHTML = '<p class="text-center mt-20 uppercase font-mono text-gray-500">Signal Lost: No Report Found</p>';
+                }
+            } catch (e) { area.innerHTML = '<p class="text-center mt-20 text-red-500">Connection Error</p>'; }
         }
 
         function updateDateTime() {
