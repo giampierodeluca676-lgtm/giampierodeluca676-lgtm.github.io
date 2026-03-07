@@ -1,11 +1,19 @@
 {
     "status": "OPERATIVO",
-    "price": "\u20ac 58.548,12",
+    "price": "\u20ac 58.495,37",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "16:58:29",
-    "ticker": "BTC/EUR: \u20ac 58.548,12 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 16:58:29 \u2022 ",
+    "last_update": "17:03:31",
+    "ticker": "BTC/EUR: \u20ac 58.495,37 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 17:03:31 \u2022 ",
     "news": [
+        {
+            "time": "17:00",
+            "text": "Ethereum Rising Wedge Warning: Breakdown Could Send Price Toward $1,500"
+        },
+        {
+            "time": "17:00",
+            "text": "Bitcoin \u2013 Derivatives flash \u2018mixed signals,\u2019 but is $72K a real possibility?"
+        },
         {
             "time": "16:47",
             "text": "dYdX price prediction 2026- 2032: Will dYdX recover its ATH soon?"
@@ -21,14 +29,6 @@
         {
             "time": "16:27",
             "text": "\"Not Bridges\": Cardano Builder Highlights Vision for Direct Withdrawals"
-        },
-        {
-            "time": "16:25",
-            "text": "Bitcoin World Live Feed Operating Hours: Essential Guide to 24/7 Cryptocurrency Coverage"
-        },
-        {
-            "time": "16:21",
-            "text": "Top ways to earn crypto in 2026: Choose what fits you"
         }
     ]
 }
