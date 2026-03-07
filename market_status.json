@@ -1,34 +1,34 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.472,19",
+    "price": "€ 58.330,48",
     "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "18:01:44",
-    "ticker": "BTC/EUR: € 58.472,19 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 18:01:44 • ",
+    "reliability": "97%",
+    "last_update": "19:19:00",
+    "ticker": "BTC/EUR: € 58.330,48 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 19:19:00 • ",
     "news": [
         {
-            "time": "17:49",
-            "text": "Solana at $84: Two Liquidity Clusters Might Decide Next Move"
+            "time": "19:10",
+            "text": "Bitcoin’s Market Cap Growth Falls Behind Realized Value, Signaling Rising Sell Pressure"
         },
         {
-            "time": "17:36",
-            "text": "Tezos price prediction 2026-2032: How high can XTZ rise?"
+            "time": "19:05",
+            "text": "XRP Loses Aggregate Holder Cost Basis. Here’s Why This Is Risky"
         },
         {
-            "time": "17:35",
-            "text": "Why Black Swan Capitalist Founder Believes Ripple’s XRP May Survive Quantum Threats That Gravely Endanger Bitcoin, Ethereum"
+            "time": "19:04",
+            "text": "Prediction market Kalshi sued over Khamenei trade carveout"
         },
         {
-            "time": "17:30",
-            "text": "Derivatives Activity Boils as Bitcoin Options Traders Favor Calls Over Puts"
+            "time": "19:01",
+            "text": "Inside the Quest at Colossus to Replace Visa and Mastercard With KYC-Less Crypto Cards"
         },
         {
-            "time": "17:30",
-            "text": "Kalshi, Polymarket seeking $20 billion valuations in fundraising talks: WSJ"
+            "time": "19:00",
+            "text": "Bitcoin Price Analysis: BTC Must Break This Key Level to Confirm a Real Rally"
         },
         {
-            "time": "17:29",
-            "text": "Short Term Bitcoin Holders Send 27,000 BTC to Exchanges as Selling Pressure Increases"
+            "time": "19:00",
+            "text": "Should PEPE traders brace for volatility as short squeeze potential builds?"
         }
     ]
 }
