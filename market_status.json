@@ -3,9 +3,25 @@
     "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "14:01:08",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 14:01:08 \u2022 ",
+    "last_update": "14:05:03",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 14:05:03 \u2022 ",
     "news": [
+        {
+            "time": "14:01",
+            "text": "Inside the Growing \u2018Digisexual\u2019 Subculture of People in Relationships With AI"
+        },
+        {
+            "time": "14:00",
+            "text": "Bitcoin Difficulty Holds Flat As Hashrate Moves Sideways"
+        },
+        {
+            "time": "14:00",
+            "text": "Bitcoin On-Chain Data Identifies Unusual Market Cap Behavior \u2013 Details"
+        },
+        {
+            "time": "14:00",
+            "text": "Ethena\u2019s price slips 15% from its weekly high \u2013 Deeper losses ahead?"
+        },
         {
             "time": "13:56",
             "text": "AI sets odds of XRP hitting $5 in 2026"
@@ -13,22 +29,6 @@
         {
             "time": "13:52",
             "text": "XRP Price at Make or Break Point, Bollinger Bands Signal"
-        },
-        {
-            "time": "13:50",
-            "text": "Avalanche Price Prediction 2026-2030: Critical Analysis on Whether AVAX Can Realistically Surge to $100"
-        },
-        {
-            "time": "13:45",
-            "text": "Worldcoin Price Prediction 2026-2030: Will WLD\u2019s Ambitious $10 Target Become Reality?"
-        },
-        {
-            "time": "13:40",
-            "text": "Hyperliquid Price Prediction 2026-2030: Critical Analysis on HYPE\u2019s Potential for a New ATH"
-        },
-        {
-            "time": "13:38",
-            "text": "Poland parliament receives crypto law proposal with minimal MiCA implementation"
         }
     ]
 }
