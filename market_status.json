@@ -3,6 +3,32 @@
     "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "15:21:04",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 15:21:04 \u2022 "
+    "last_update": "15:21:03",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 15:21:03 \u2022 ",
+    "news": [
+        {
+            "time": "15:07",
+            "text": "Trending stocks this week as Wall Street slips amid Middle East conflict"
+        },
+        {
+            "time": "15:05",
+            "text": "Black Swan Capitalist Issues a Critical Warning to XRP Holders"
+        },
+        {
+            "time": "15:03",
+            "text": "Former Washington CFO bags two-year sentence for $35 million fraud"
+        },
+        {
+            "time": "15:00",
+            "text": "Composite Index Marks Bitcoin\u2019s Market Cycle at Key Midpoint"
+        },
+        {
+            "time": "15:00",
+            "text": "Could Jane Street\u2019s $19M Bitcoin sale spark fresh liquidation risks?"
+        },
+        {
+            "time": "15:00",
+            "text": "Binance Claps Back At Senator Blumenthal\u2019s Allegations, Denouncing False Claims"
+        }
+    ]
 }
