@@ -1,11 +1,26 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.011,79",
+    "price": "€ 57.944,86",
     "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "23:29:17",
-    "ticker": "BTC/EUR: € 58.011,79 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 23:29:17 • ",
+    "reliability": "98%",
+    "last_update": "23:34:19",
+    "ticker": "BTC/EUR: € 57.944,86 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 23:34:19 • ",
     "news": [
+        {
+            "time": "23:30",
+            "text": "Binance Pushes Back on Senate Inquiry, Calls Allegations ‘False and Defamatory’ in Formal Response",
+            "link": "https://news.bitcoin.com/binance-pushes-back-on-senate-inquiry-calls-allegations-false-and-defamatory-in-formal-response/"
+        },
+        {
+            "time": "23:26",
+            "text": "AI Agents Have Already Chosen Their Money: Bitcoin",
+            "link": "https://www.forbes.com/sites/davidbirnbaum/2026/03/07/ai-agents-have-already-chosen-their-money-bitcoin/"
+        },
+        {
+            "time": "23:20",
+            "text": "Palantir's has the US Pentagon in a chokehold that threatens the entire world",
+            "link": "https://www.cryptopolitan.com/palantir-pentagon-disgustingly-twisted-rship/"
+        },
         {
             "time": "23:05",
             "text": "Crypto Fear and Greed Index falls back down to 'extreme fear' levels",
@@ -20,21 +35,6 @@
             "time": "22:30",
             "text": "The World’s Largest Asset Managers Hold MSTR: Strategy Highlights Massive Institutional Bitcoin Exposure",
             "link": "https://news.bitcoin.com/the-worlds-largest-asset-managers-hold-mstr-strategy-highlights-massive-institutional-bitcoin-exposure/"
-        },
-        {
-            "time": "22:30",
-            "text": "Crypto Gets A Boost In Trump’s New National Cyber Strategy",
-            "link": "https://bitcoinist.com/crypto-gets-a-boost-in-trumps-new-national-cyber-strategy/"
-        },
-        {
-            "time": "22:20",
-            "text": "Bitcoin ETFs saw $348M in outflows on March 6, the biggest since Feb 14",
-            "link": "https://www.cryptopolitan.com/etfs-outflows-raise-bull-trap-fears-for-bitcoin/"
-        },
-        {
-            "time": "22:18",
-            "text": "Crypto Investor Says Attackers Stole $24M in Violent Robbery",
-            "link": "https://cryptopotato.com/crypto-investor-says-attackers-stole-24m-in-violent-robbery/"
         }
     ]
 }
