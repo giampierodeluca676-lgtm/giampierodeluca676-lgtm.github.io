@@ -1,11 +1,27 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.996,22",
+    "price": "€ 58.011,87",
     "signal": "BULLISH",
-    "reliability": "97%",
-    "last_update": "21:31:36",
-    "ticker": "BTC/EUR: € 57.996,22 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 21:31:36 • ",
+    "reliability": "99%",
+    "last_update": "21:36:38",
+    "ticker": "BTC/EUR: € 58.011,87 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 21:36:38 • ",
     "news": [
+        {
+            "time": "21:30",
+            "text": "Vancouver City Staff Rejects Bitcoin Treasury Idea Ahead of March 10 Council Vote"
+        },
+        {
+            "time": "21:30",
+            "text": "XRP Whale Outflows Continue On Binance — What’s Happening?"
+        },
+        {
+            "time": "21:21",
+            "text": "Cardano price prediction 2026-2032: Will ADA recover to $1 soon?"
+        },
+        {
+            "time": "21:20",
+            "text": "Iran has been under a near-total internet blackout for more than seven days"
+        },
         {
             "time": "21:11",
             "text": "Ethereum Holds the Line at $1,965 as Market Eyes Key Technical Levels"
@@ -13,22 +29,6 @@
         {
             "time": "21:10",
             "text": "Bitcoin Price Plummets: BTC Falls Below Critical $67,000 Support Level"
-        },
-        {
-            "time": "21:05",
-            "text": "Analyst: Many New XRP Millionaires Will Be Made In The Next 3 Months. Here’s Why"
-        },
-        {
-            "time": "21:00",
-            "text": "Ethereum – BlackRock drops ETH ETF staking fee as firm issues ‘warning’"
-        },
-        {
-            "time": "21:00",
-            "text": "What’s Driving Bitcoin And Ethereum Prices – And Why Investors Should Be Watchful"
-        },
-        {
-            "time": "20:55",
-            "text": "Alibaba says its coding AI agent began mining crypto and opening covert network tunnels without authorization"
         }
     ]
 }
