@@ -39446,3 +39446,12 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
    0517eac..3fa72f2  main -> main
+fatal: Unable to create '/home/linuxlite/Desktop/Keygap_AdVantage/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+[main 263a8be] 🚀 System Update 02:31:06
+ 2 files changed, 16 insertions(+), 2 deletions(-)
