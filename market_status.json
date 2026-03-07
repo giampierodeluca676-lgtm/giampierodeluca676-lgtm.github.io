@@ -1,14 +1,18 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.030,13",
+    "price": "€ 57.973,14",
     "signal": "BULLISH",
-    "reliability": "97%",
-    "last_update": "20:41:18",
-    "ticker": "BTC/EUR: € 58.030,13 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 20:41:18 • ",
+    "reliability": "99%",
+    "last_update": "20:46:20",
+    "ticker": "BTC/EUR: € 57.973,14 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 20:46:20 • ",
     "news": [
         {
             "time": "20:30",
             "text": "Stablecoin Market Tops $313 Billion as Sky’s USDS Leads Weekly Gains"
+        },
+        {
+            "time": "20:30",
+            "text": "Pi Network Price Prediction 2026–2032: Can Pi Reclaim Its All-Time High soon?"
         },
         {
             "time": "20:24",
@@ -25,10 +29,6 @@
         {
             "time": "20:01",
             "text": "The Multibillion-dollar shift turning prediction markets into a professional hedging tool"
-        },
-        {
-            "time": "20:00",
-            "text": "Bitcoin Losing Strength — $66,000 Now The Line Between Recovery And Crash"
         }
     ]
 }
