@@ -1,11 +1,15 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.415,24",
+    "price": "€ 58.457,50",
     "signal": "BULLISH",
-    "reliability": "97%",
-    "last_update": "17:19:52",
-    "ticker": "BTC/EUR: € 58.415,24 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 17:19:52 • ",
+    "reliability": "99%",
+    "last_update": "17:22:54",
+    "ticker": "BTC/EUR: € 58.457,50 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 17:22:54 • ",
     "news": [
+        {
+            "time": "17:18",
+            "text": "US Cybersecurity Strategy For The First Time Protects Crypto And Blockchain"
+        },
         {
             "time": "17:14",
             "text": "U.S. court dismisses terrorism financing claims against Binance"
@@ -25,10 +29,6 @@
         {
             "time": "17:05",
             "text": "Pundit Says XRP is the New E-SDR. Here’s Why"
-        },
-        {
-            "time": "17:01",
-            "text": "Rising Stagflation Fears in the US Spotlight Bitcoin’s Role in Economic Uncertainty"
         }
     ]
 }

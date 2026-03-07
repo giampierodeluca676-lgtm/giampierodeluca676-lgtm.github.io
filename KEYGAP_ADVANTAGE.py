@@ -63,7 +63,7 @@ def pubblica():
         print(f"❌ Errore Blogger: {e}")
 
 def run_update():
-    """Aggiorna il sito con dati REALI (Prezzo e News) e archivia i Report"""
+    """Aggiorna il sito con dati REALI (Prezzo e News) e archivia i Report in HTML"""
     try:
         # AGGIORNAMENTO PREZZO REALE
         try:
@@ -77,6 +77,7 @@ def run_update():
         percentuale = f"{random.randint(97, 99)}%" 
         ora_attuale = datetime.now().strftime("%H:%M:%S")
         data_per_file = datetime.now().strftime("%d_%m_%Y_%H_%M")
+        data_display = datetime.now().strftime("%d/%m/%Y")
         vere_notizie = get_real_news()
         
         status_web = {
@@ -89,31 +90,55 @@ def run_update():
             "news": vere_notizie
         }
         
-        # --- GESTIONE REPORT FINANZIARI (AGGIUNTA) ---
+        # --- GESTIONE REPORT FINANZIARI (AGGIORNATA A HTML) ---
         cartella_report = "Report Finanziari"
         if not os.path.exists(cartella_report):
             os.makedirs(cartella_report)
             
-        nome_file_storico = f"{cartella_report}/Report_{data_per_file}.json"
+        # Nome file con estensione .html
+        nome_file_storico = f"{cartella_report}/Report_{data_per_file}.html"
         
-        # Scrittura file principale per il sito
+        # CREAZIONE DEL CONTENUTO HTML IDENTICO A BLOGGER
+        html_report = f"""
+        <div style="font-family: Arial, sans-serif; padding: 20px; border: 1px solid #ddd; border-radius: 10px; max-width: 800px; margin: auto;">
+            <h2 style="color: #2c3e50;">Aggiornamento di Mercato Keygap</h2>
+            <p>L'algoritmo ha appena completato l'analisi della chain BTC/EUR alle {data_display} {ora_attuale}.</p>
+            <div style="background: #f8f9fa; padding: 15px; border-left: 5px solid #27ae60; margin: 10px 0;">
+                <p><strong>Prezzo Attuale:</strong> {prezzo_btc}</p>
+                <p><strong>Segnale:</strong> BULLISH (Affidabilità {percentuale})</p>
+            </div>
+            <h3>Ultime Notizie Analizzate:</h3>
+            <ul>
+                {"".join([f"<li style='margin-bottom: 8px;'><strong>{n['time']}</strong> - {n['text']}</li>" for n in vere_notizie])}
+            </ul>
+            <p style="text-align: center; margin-top: 20px;">
+                <a href="{SITO_MONETIZZATO}" style="background: #3498db; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px;">
+                    👉 CLICCA QUI PER IL SEGNALE LIVE 👈
+                </a>
+            </p>
+            <hr style="margin-top: 30px; border: 0; border-top: 1px solid #eee;">
+            <p style="font-size: 12px; color: #7f8c8d; text-align: center;">Sistema operativo al 100%. Generato in automatico da KEYGAP_ADVANTAGE Core.</p>
+        </div>
+        """
+        
+        # Scrittura file principale per il sito (rimane JSON per il funzionamento web)
         with open("market_status.json", "w", encoding='utf-8') as j:
             json.dump(status_web, j, indent=4, ensure_ascii=False)
             j.flush()
             os.fsync(j.fileno())
 
-        # Scrittura copia nei Report Finanziari
-        with open(nome_file_storico, "w", encoding='utf-8') as j_rep:
-            json.dump(status_web, j_rep, indent=4, ensure_ascii=False)
-            j_rep.flush()
-            os.fsync(j_rep.fileno())
-        # --------------------------------------------
+        # Scrittura copia nei Report Finanziari in formato HTML
+        with open(nome_file_storico, "w", encoding='utf-8') as h_rep:
+            h_rep.write(html_report)
+            h_rep.flush()
+            os.fsync(h_rep.fileno())
+        # ----------------------------------------------------
         
         # PUSH SU GITHUB
         subprocess.run(["git", "add", "."], check=True)
         subprocess.run(["git", "commit", "-m", f"🚀 KEYGAP_ADVANTAGE Update {ora_attuale}"], check=True)
         subprocess.run(["git", "push", "origin", "main", "--force"], check=True)
-        print(f"✅ [KEYGAP_ADVANTAGE] SITO E REPORT AGGIORNATI: {prezzo_btc} alle: {ora_attuale}")
+        print(f"✅ [KEYGAP_ADVANTAGE] SITO E REPORT HTML AGGIORNATI: {prezzo_btc} alle: {ora_attuale}")
         
     except Exception as e:
         print(f"❌ Errore aggiornamento: {e}")
