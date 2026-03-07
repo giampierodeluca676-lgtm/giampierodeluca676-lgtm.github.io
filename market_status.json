@@ -3,6 +3,32 @@
     "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "11:55:09",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 11:55:09 \u2022 "
+    "last_update": "11:55:18",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 11:55:18 \u2022 ",
+    "news": [
+        {
+            "time": "11:51",
+            "text": "Everstake, Midas, and Apollo Launch mEVUSD, a Regulatory-Compliant Tokenized Investment Strategy"
+        },
+        {
+            "time": "11:48",
+            "text": "Did Grok's Roasts Affect the XAI Token?"
+        },
+        {
+            "time": "11:47",
+            "text": "Bitcoin hovers just under $72k, taking a breather after hefty gains this week"
+        },
+        {
+            "time": "11:43",
+            "text": "Bybit Releases Its 31st Proof-of-Reserves Report"
+        },
+        {
+            "time": "11:42",
+            "text": "YY Group Holdings adopts bitcoin as treasury reserve asset"
+        },
+        {
+            "time": "11:40",
+            "text": "OmniPact Secures $50 Million to Advance Trust Infrastructure"
+        }
+    ]
 }
