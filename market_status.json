@@ -3,9 +3,13 @@
     "price": "\u20ac 87.420,10",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "16:06:54",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 16:06:54 \u2022 ",
+    "last_update": "16:10:04",
+    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 16:10:04 \u2022 ",
     "news": [
+        {
+            "time": "16:05",
+            "text": "Solana Price Prediction: ETF Inflows Stay Firm as $100 Breakout Setup Forms"
+        },
         {
             "time": "16:05",
             "text": "Time Traveler Says XRP Holders Will Get the Last Laugh. Here\u2019s Why"
@@ -25,10 +29,6 @@
         {
             "time": "16:00",
             "text": "Are \u2018busy\u2019 Ethereum whales a sign of big players getting ready for a big move?"
-        },
-        {
-            "time": "16:00",
-            "text": "Elon Musk Cosigns X Money Post, But Does It Have Anything To Do With Dogecoin?"
         }
     ]
 }
