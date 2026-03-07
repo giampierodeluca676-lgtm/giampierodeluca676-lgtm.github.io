@@ -1,8 +1,20 @@
-{
-    "status": "OPERATIVO",
-    "price": "\u20ac 87.420,10",
-    "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "11:11:13",
-    "ticker": "BTC/EUR: \u20ac 87.420,10 \u2022 KEYGAP SIGNAL: BULLISH \u2022 STATUS: ONLINE \u2022 UPDATE: 11:11:13 \u2022 "
-}
+import json
+
+def salva_dati_reali(prezzo, segnale, affidabilita, ultime_news):
+    dati = {
+        "status": "OPERATIVO",
+        "price": prezzo,
+        "signal": segnale,
+        "reliability": affidabilita,
+        "last_update": "11:11:13",
+        "ticker": f"BTC/EUR: {prezzo} • SIGNAL: {segnale} • ",
+        "news": ultime_news  # <--- QUESTO DEVE ESSERE UN ARRAY DI OGGETTI
+    }
+    with open('market_status.json', 'w') as f:
+        json.dump(dati, f, indent=4)
+
+# Esempio di come devono essere le news:
+news_da_inviare = [
+    {"time": "11:15", "text": "BTC/EUR tocca quota 87.420. Volume in forte aumento."},
+    {"time": "11:10", "text": "Segnale Keygap confermato: BULLISH al 98%."}
+]
