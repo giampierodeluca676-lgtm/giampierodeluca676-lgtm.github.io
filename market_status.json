@@ -1,11 +1,16 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.058,71",
-    "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "09:07:00",
-    "ticker": "BTC/EUR: € 58.058,71 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 09:07:00 • ",
+    "price": "€ 58.056,56",
+    "signal": "BEARISH",
+    "reliability": "99%",
+    "last_update": "09:12:02",
+    "ticker": "BTC/EUR: € 58.056,56 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 09:12:02 • ",
     "news": [
+        {
+            "time": "09:10",
+            "text": "Two Solana Charts Tell Completely Different Stories, One Points to $42",
+            "link": "https://coinpaper.com/15251/two-solana-charts-tell-completely-different-stories-one-points-to-42"
+        },
         {
             "time": "09:02",
             "text": "Expert: The Link Between Direct XRP Usage and Price Becomes More Distant",
@@ -30,11 +35,6 @@
             "time": "08:45",
             "text": "Kalshi, Polymarket Discuss Fundraising at $20B Valuations: Report",
             "link": "https://cryptonews.com/news/kalshi-polymarket-discuss-fundraising-at-20b-valuations-report/"
-        },
-        {
-            "time": "08:44",
-            "text": "Bybit Releases Its 31st Proof-of-Reserves Report",
-            "link": "https://www.investing.com/news/cryptocurrency-news/bybit-releases-its-31st-proofofreserves-report-4544424"
         }
     ]
 }
