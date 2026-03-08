@@ -1,11 +1,16 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.916,69",
-    "signal": "BEARISH",
-    "reliability": "97%",
-    "last_update": "07:01:13",
-    "ticker": "BTC/EUR: € 57.916,69 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 07:01:13 • ",
+    "price": "€ 57.952,06",
+    "signal": "BULLISH",
+    "reliability": "98%",
+    "last_update": "07:06:15",
+    "ticker": "BTC/EUR: € 57.952,06 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 07:06:15 • ",
     "news": [
+        {
+            "time": "07:02",
+            "text": "XRP News: Ripple CEO Says Investors Will Be Very Happy in 5 Years",
+            "link": "https://thecryptobasic.com/2026/03/08/xrp-news-ripple-ceo-says-investors-will-be-very-happy-in-5-years/"
+        },
         {
             "time": "06:41",
             "text": "Markets Brace as Fed Rate Decision and Geopolitical Tensions Drive Crypto Surge",
@@ -30,11 +35,6 @@
             "time": "06:14",
             "text": "Top crypto to watch: Pi Network, Polkadot, Sei, Pump, Starknet",
             "link": "https://invezz.com/news/2026/03/08/top-crypto-to-watch-pi-network-polkadot-sei-pump-starknet/"
-        },
-        {
-            "time": "06:14",
-            "text": "Top crypto to watch this week: Pi Network, Polkadot, Sei, Pump, and Starknet",
-            "link": "https://invezz.com/news/2026/03/08/top-crypto-to-watch-this-week-pi-network-polkadot-sei-pump-and-starknet/"
         }
     ]
 }
