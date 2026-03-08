@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.199,33",
-    "signal": "BULLISH",
+    "price": "€ 57.968,53",
+    "signal": "BEARISH",
     "reliability": "98%",
-    "last_update": "20:46:28",
-    "ticker": "BTC/EUR: € 58.199,33 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 20:46:28 • ",
+    "last_update": "21:16:32",
+    "ticker": "BTC/EUR: € 57.968,53 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 21:16:32 • ",
     "news": [
         {
-            "time": "20:37",
-            "text": "Macro Data Made Simple: Track Fed Rates and Crypto Trends in One Place",
-            "link": "https://en.coin-turk.com/macro-data-made-simple-track-fed-rates-and-crypto-trends-in-one-place/"
+            "time": "21:11",
+            "text": "Fidelity Spotlights Shifting Bitcoin Cycle as Institutional Players Gain Ground",
+            "link": "https://en.coin-turk.com/fidelity-spotlights-shifting-bitcoin-cycle-as-institutional-players-gain-ground/"
         },
         {
-            "time": "20:35",
-            "text": "CryptoQuant Names the Most Transparent Exchange for Reserves",
-            "link": "https://cryptopotato.com/cryptoquant-names-the-most-transparent-exchange-for-reserves/"
+            "time": "21:05",
+            "text": "Ripple CEO Drops XRP Prediction Bombshell for Next 5 Years",
+            "link": "https://timestabloid.com/ripple-ceo-drops-xrp-prediction-bombshell-for-next-5-years/"
         },
         {
-            "time": "20:33",
-            "text": "Brazil's Pix instant payments system expands to Argentina",
-            "link": "https://cointelegraph.com/news/brazil-pix-payments-expand-argentina?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            "time": "21:01",
+            "text": "Fidelity Highlights Shift in Bitcoin Cycles as Institutions Gain Ground",
+            "link": "https://en.coin-turk.com/fidelity-highlights-shift-in-bitcoin-cycles-as-institutions-gain-ground/"
         },
         {
-            "time": "20:27",
-            "text": "BNB Price Prediction as Judge Throws Out Anti-Terrorism Lawsuit Against Binance",
-            "link": "https://coinpaper.com/15256/bnb-price-prediction-as-judge-throws-out-anti-terrorism-lawsuit-against-binance"
+            "time": "21:00",
+            "text": "Ethereum co-founder moves 157M to exchange – Can ETH’s $1,800 hold?",
+            "link": "https://ambcrypto.com/ethereum-co-founder-moves-157m-to-exchange-can-eths-1800-hold/"
         },
         {
-            "time": "20:05",
-            "text": "Pundit Says BlackRock Could Easily Trigger XRP Price Rally With This Action",
-            "link": "https://timestabloid.com/pundit-says-blackrock-could-easily-trigger-xrp-price-rally-with-this-action/"
+            "time": "21:00",
+            "text": "Analyst Predicts XRP Breakout Against BTC, Says $10 Move Could Be Just The Starts",
+            "link": "https://zycrypto.com/analyst-predicts-xrp-breakout-against-btc-says-10-move-could-be-just-the-starts/"
         },
         {
-            "time": "20:05",
-            "text": "Crypto’s Rock ’n’ Roll Era Is Over",
-            "link": "https://www.coindesk.com/opinion/2026/03/08/crypto-s-rock-n-roll-era-is-over"
+            "time": "20:51",
+            "text": "Bitcoin Could Rally to $85K But Woo Warns It’s Bull Trap, Not Bottom Confirmation",
+            "link": "https://zycrypto.com/bitcoin-could-rally-to-85k-but-woo-warns-its-bull-trap-not-bottom-confirmation/"
         }
     ]
 }
