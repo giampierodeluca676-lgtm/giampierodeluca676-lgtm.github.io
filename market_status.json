@@ -1,11 +1,16 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.968,98",
-    "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "01:59:13",
-    "ticker": "BTC/EUR: € 57.968,98 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 01:59:13 • ",
+    "price": "€ 57.966,56",
+    "signal": "BEARISH",
+    "reliability": "97%",
+    "last_update": "02:04:14",
+    "ticker": "BTC/EUR: € 57.966,56 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 02:04:14 • ",
     "news": [
+        {
+            "time": "02:00",
+            "text": "‘You’ll burn down your home?’ – Trump crypto advisor slams banks’ position on CLARITY Act",
+            "link": "https://ambcrypto.com/youll-burn-down-your-home-trump-crypto-advisor-slams-banks-position-on-clarity-act/"
+        },
         {
             "time": "01:40",
             "text": "Sundar Pichai’s Staggering $692M Google Pay Package Reveals High-Stakes Performance Gamble",
@@ -30,11 +35,6 @@
             "time": "01:00",
             "text": "Analyzing if Hyperliquid can become the 24/7 derivatives hub – Why and why not?",
             "link": "https://ambcrypto.com/analyzing-if-hyperliquid-can-become-the-24-7-derivatives-hub-why-and-why-not/"
-        },
-        {
-            "time": "00:55",
-            "text": "Did George Soros Get Arrested in the US? Here’s What We Know",
-            "link": "https://coinpaper.com/15250/did-george-soros-get-arrested-in-the-us-here-s-what-we-know"
         }
     ]
 }
