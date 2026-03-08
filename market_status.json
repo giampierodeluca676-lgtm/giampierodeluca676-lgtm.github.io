@@ -1,11 +1,16 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.880,71",
+    "price": "€ 57.858,65",
     "signal": "BEARISH",
-    "reliability": "98%",
-    "last_update": "07:26:22",
-    "ticker": "BTC/EUR: € 57.880,71 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 07:26:22 • ",
+    "reliability": "99%",
+    "last_update": "07:31:24",
+    "ticker": "BTC/EUR: € 57.858,65 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 07:31:24 • ",
     "news": [
+        {
+            "time": "07:25",
+            "text": "AI Regulation: The Urgent Pro-Human Declaration Emerges as Washington Stalls",
+            "link": "https://bitcoinworld.co.in/pro-human-declaration-ai-regulation-framework/"
+        },
         {
             "time": "07:17",
             "text": "Bessent Meets Bukele to Talk Crypto",
@@ -30,11 +35,6 @@
             "time": "06:30",
             "text": "South African Economist Flags Authoritarian Risks in CBDCs",
             "link": "https://news.bitcoin.com/south-african-economist-flags-authoritarian-risks-in-cbdcs/"
-        },
-        {
-            "time": "06:30",
-            "text": "The rise of yield infrastructure for long-term crypto holders",
-            "link": "https://ambcrypto.com/the-rise-of-yield-infrastructure-for-long-term-crypto-holders/"
         }
     ]
 }
