@@ -1,11 +1,26 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.023,82",
-    "signal": "BEARISH",
-    "reliability": "99%",
-    "last_update": "09:27:07",
-    "ticker": "BTC/EUR: € 58.023,82 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 09:27:07 • ",
+    "price": "€ 58.052,39",
+    "signal": "BULLISH",
+    "reliability": "98%",
+    "last_update": "09:32:09",
+    "ticker": "BTC/EUR: € 58.052,39 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 09:32:09 • ",
     "news": [
+        {
+            "time": "09:30",
+            "text": "A Week of Digital Darkness: Iran Passes the 168 Hour Mark With No Internet Access",
+            "link": "https://news.bitcoin.com/a-week-of-digital-darkness-iran-passes-the-168-hour-mark-with-no-internet-access/"
+        },
+        {
+            "time": "09:29",
+            "text": "1win Arranges Private Charter Flights for VIP Clients Leaving the UAE Amid Aviation Disruptions",
+            "link": "https://www.cryptointelligence.co.uk/1win-arranges-private-charter-flights-for-vip-clients-leaving-the-uae-amid-aviation-disruptions/"
+        },
+        {
+            "time": "09:25",
+            "text": "1win Arranges Private Charter Flights for VIP Clients Leaving the UAE Amid Aviation Disruptions",
+            "link": "https://cryptodaily.co.uk/2026/03/1win-arranges-private-charter-flights-for-vip-clients-leaving-the-uae-amid-aviation-disruptions"
+        },
         {
             "time": "09:25",
             "text": "1win Arranges Private Charter Flights for VIP Clients Leaving the UAE Amid Aviation Disruptions",
@@ -20,21 +35,6 @@
             "time": "09:10",
             "text": "Woo on BTC Price: 'Bull Trap Incoming'",
             "link": "https://u.today/woo-on-btc-price-bull-trap-incoming"
-        },
-        {
-            "time": "09:02",
-            "text": "Expert: The Link Between Direct XRP Usage and Price Becomes More Distant",
-            "link": "https://timestabloid.com/expert-the-link-between-direct-xrp-usage-and-price-becomes-more-distant/"
-        },
-        {
-            "time": "09:00",
-            "text": "AI sector grows to $14.4B yet Bittensor fades – Will TAO revisit $165?",
-            "link": "https://ambcrypto.com/ai-sector-grows-to-14-4b-yet-bittensor-fades-will-tao-revisit-165/"
-        },
-        {
-            "time": "09:00",
-            "text": "$2.6B options expire today, utility protocols in focus as traders position for what’s next",
-            "link": "https://ambcrypto.com/2-6b-options-expire-today-utility-protocols-in-focus-as-traders-position-for-whats-next/"
         }
     ]
 }
