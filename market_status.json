@@ -1,15 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.054,68",
+    "price": "€ 58.058,71",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "09:01:57",
-    "ticker": "BTC/EUR: € 58.054,68 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 09:01:57 • ",
+    "last_update": "09:07:00",
+    "ticker": "BTC/EUR: € 58.058,71 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 09:07:00 • ",
     "news": [
         {
-            "time": "SYS",
-            "text": "Sincronizzazione flussi globali in corso...",
-            "link": "#"
+            "time": "09:02",
+            "text": "Expert: The Link Between Direct XRP Usage and Price Becomes More Distant",
+            "link": "https://timestabloid.com/expert-the-link-between-direct-xrp-usage-and-price-becomes-more-distant/"
+        },
+        {
+            "time": "09:00",
+            "text": "AI sector grows to $14.4B yet Bittensor fades – Will TAO revisit $165?",
+            "link": "https://ambcrypto.com/ai-sector-grows-to-14-4b-yet-bittensor-fades-will-tao-revisit-165/"
+        },
+        {
+            "time": "09:00",
+            "text": "$2.6B options expire today, utility protocols in focus as traders position for what’s next",
+            "link": "https://ambcrypto.com/2-6b-options-expire-today-utility-protocols-in-focus-as-traders-position-for-whats-next/"
+        },
+        {
+            "time": "08:46",
+            "text": "Bitcoin hovers just under $72k, taking a breather after hefty gains this week",
+            "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-upbeat-at-72k-leads-broader-crypto-rally-as-risk-appetite-improves-4542892"
+        },
+        {
+            "time": "08:45",
+            "text": "Kalshi, Polymarket Discuss Fundraising at $20B Valuations: Report",
+            "link": "https://cryptonews.com/news/kalshi-polymarket-discuss-fundraising-at-20b-valuations-report/"
+        },
+        {
+            "time": "08:44",
+            "text": "Bybit Releases Its 31st Proof-of-Reserves Report",
+            "link": "https://www.investing.com/news/cryptocurrency-news/bybit-releases-its-31st-proofofreserves-report-4544424"
         }
     ]
 }
