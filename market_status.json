@@ -1,11 +1,31 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.804,10",
+    "price": "€ 57.695,20",
     "signal": "BEARISH",
     "reliability": "97%",
-    "last_update": "19:16:12",
-    "ticker": "BTC/EUR: € 57.804,10 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 19:16:12 • ",
+    "last_update": "19:46:18",
+    "ticker": "BTC/EUR: € 57.695,20 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 19:46:18 • ",
     "news": [
+        {
+            "time": "19:41",
+            "text": "Bitcoin Network Withstands Cable Disruptions as Resilience Grows with Tor Adoption",
+            "link": "https://en.coin-turk.com/bitcoin-network-withstands-cable-disruptions-as-resilience-grows-with-tor-adoption/"
+        },
+        {
+            "time": "19:33",
+            "text": "XRP Holders Facing $51 Billion Worth of Unrealized Losses",
+            "link": "https://u.today/xrp-holders-facing-51-billion-worth-of-unrealized-losses"
+        },
+        {
+            "time": "19:30",
+            "text": "AI’s Wild Weekend: OpenAI Shakeup, Pentagon Clash, and Robots That Refuse to Die",
+            "link": "https://news.bitcoin.com/ais-wild-weekend-openai-shakeup-pentagon-clash-and-robots-that-refuse-to-die/"
+        },
+        {
+            "time": "19:21",
+            "text": "Ethereum Faces Crucial Technical Test as Market Awaits Breakout",
+            "link": "https://en.coin-turk.com/ethereum-faces-crucial-technical-test-as-market-awaits-breakout/"
+        },
         {
             "time": "19:05",
             "text": "Analyst to XRP Investors: This is the End. Here’s why",
@@ -15,26 +35,6 @@
             "time": "19:00",
             "text": "What happened to Bitcoin, Ethereum, Solana, and XRP ETFs this week?",
             "link": "https://ambcrypto.com/what-happened-to-bitcoin-ethereum-solana-and-xrp-etfs-this-week/"
-        },
-        {
-            "time": "19:00",
-            "text": "Bitcoin And The Race To Build Money For AI Agents",
-            "link": "https://www.forbes.com/sites/davidbirnbaum/2026/03/08/bitcoin-and-the-race-to-build-money-for-ai-agents/"
-        },
-        {
-            "time": "18:40",
-            "text": "The Graph price prediction 2026-2032: Will GRT recapture its ATH?",
-            "link": "https://www.cryptopolitan.com/the-graph-price-prediction/"
-        },
-        {
-            "time": "18:15",
-            "text": "Capital Rotates? Largest Gold ETF Suffers Huge Outflow as BTC Funds Recover",
-            "link": "https://cryptopotato.com/capital-rotates-largest-gold-etf-suffers-huge-outflow-as-btc-funds-recover/"
-        },
-        {
-            "time": "18:14",
-            "text": "Michael B. Jordan takes the lead on Polymarket for Oscars Best Actor",
-            "link": "https://cointelegraph.com/news/michael-jordan-oscars-best-actor-polymarket?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
         }
     ]
 }
