@@ -235,22 +235,46 @@ async function loadIntelligenceReports() {
     const signal = document.getElementById('signal').innerText;
     const rel = document.getElementById('reliability-val').innerText;
     
-    area.innerHTML = '<div class="mono text-red-600 animate-pulse text-xl">DECRIPTING...</div>';
+    area.innerHTML = '<div class="mono text-red-600 animate-pulse text-xl text-center py-10">DECRIPTING...</div>';
+    
     try {
         const response = await fetch('latest_report.html?v=' + Date.now());
         const text = await response.text();
         
+        // Header compatto con i 3 dati principali in linea
         const header = `
-            <div class="grid grid-cols-3 gap-4 mb-8 p-4 bg-white/5 border border-white/10 rounded-xl text-center">
-                <div><span class="text-[9px] uppercase text-gray-500 font-bold">Market Price</span><div class="text-lg font-black mono">${price}</div></div>
-                <div><span class="text-[9px] uppercase text-gray-500 font-bold">Signal</span><div class="text-lg font-black mono text-blue-400">${signal}</div></div>
-                <div><span class="text-[9px] uppercase text-gray-500 font-bold">Reliability</span><div class="text-lg font-black mono text-yellow-500">${rel}</div></div>
+            <div class="grid grid-cols-3 gap-2 mb-6 p-3 bg-white/5 border border-white/10 rounded-xl text-center">
+                <div>
+                    <span class="text-[8px] uppercase text-gray-500 font-bold tracking-tighter">Market Price</span>
+                    <div class="text-sm font-black mono text-white">${price}</div>
+                </div>
+                <div>
+                    <span class="text-[8px] uppercase text-gray-500 font-bold tracking-tighter">Signal</span>
+                    <div class="text-sm font-black mono ${signal === 'BULLISH' ? 'text-green-500' : 'text-red-500'}">${signal}</div>
+                </div>
+                <div>
+                    <span class="text-[8px] uppercase text-gray-500 font-bold tracking-tighter">Reliability</span>
+                    <div class="text-sm font-black mono text-yellow-500">${rel}</div>
+                </div>
             </div>`;
         
-        area.innerHTML = `<div class="prose prose-invert max-w-none">${header}${text}</div>`;
-    } catch (e) { area.innerHTML = 'Signal Lost.'; }
+        // Pulizia del testo del report per evitare doppioni
+        // Rimuoviamo eventuali intestazioni ripetute se presenti nel file caricato
+        area.innerHTML = `
+            <div class="prose prose-invert max-w-none">
+                ${header}
+                <div class="text-[11px] leading-relaxed text-gray-400 border-t border-white/5 pt-4">
+                    ${text}
+                </div>
+            </div>`;
+            
+    } catch (e) { 
+        area.innerHTML = '<div class="text-red-500 mono text-center">SIGNAL LOST: Uplink Failure</div>'; 
+    }
 }
 
+// Rimuovi il tasto del terminale dal fondo se presente nel tuo HTML:
+// Cerca il blocco <button> che contiene "ACCEDI AL TERMINALE" e cancellalo.
 function toggleIntelligence() {
     const o = document.getElementById('intelligence-overlay');
     o.classList.toggle('invisible');
