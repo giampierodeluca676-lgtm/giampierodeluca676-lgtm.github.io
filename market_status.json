@@ -1,11 +1,26 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.921,75",
-    "signal": "BEARISH",
-    "reliability": "98%",
-    "last_update": "22:16:42",
-    "ticker": "BTC/EUR: € 57.921,75 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 22:16:42 • ",
+    "price": "€ 58.048,53",
+    "signal": "BULLISH",
+    "reliability": "97%",
+    "last_update": "22:46:47",
+    "ticker": "BTC/EUR: € 58.048,53 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 22:46:47 • ",
     "news": [
+        {
+            "time": "22:40",
+            "text": "Ethereum Price Downtrend Intensifies: Critical $1,800 Support Faces Unrelenting Pressure",
+            "link": "https://bitcoinworld.co.in/ethereum-price-downtrend-support-pressure/"
+        },
+        {
+            "time": "22:31",
+            "text": "Saylor signals another Bitcoin buy as BTC hovers near $66K",
+            "link": "https://cointelegraph.com/news/saylor-signals-bitcoin-buy-btc-near-66k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        },
+        {
+            "time": "22:31",
+            "text": "UTEXO Partners with Tether to Enable Instant USDT Payments on Bitcoin",
+            "link": "https://en.coin-turk.com/utexo-partners-with-tether-to-enable-instant-usdt-payments-on-bitcoin/"
+        },
         {
             "time": "22:13",
             "text": "Ethereum Price Hits a Breaking Point as Support Cracks and Short Pressure Builds",
@@ -20,21 +35,6 @@
             "time": "22:10",
             "text": "Bitcoin Price Prediction: BTC Retests Breakout as $64K Liquidity Zone Looms",
             "link": "https://coinpaper.com/15257/bitcoin-price-prediction-btc-retests-breakout-as-64-k-liquidity-zone-looms"
-        },
-        {
-            "time": "22:10",
-            "text": "USDT Transfer Stuns Market: $1.1 Billion Whale Move from OKX Sparks Intense Scrutiny",
-            "link": "https://bitcoinworld.co.in/usdt-whale-transfer-okx-analysis-4/"
-        },
-        {
-            "time": "22:05",
-            "text": "Analyst: XRP Will Pump Over $100 in a Day. Here’s Why",
-            "link": "https://timestabloid.com/analyst-xrp-will-pump-over-100-in-a-day-heres-why/"
-        },
-        {
-            "time": "22:00",
-            "text": "Analyst Reveals Bitcoin Strategy With 250% Potential Upside — Key Entry Levels Identified",
-            "link": "https://bitcoinist.com/analyst-reveals-bitcoin-strategy-with-250-potential/"
         }
     ]
 }
