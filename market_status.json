@@ -1,11 +1,16 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.516,74",
+    "price": "€ 57.631,60",
     "signal": "BULLISH",
-    "reliability": "97%",
-    "last_update": "06:00:47",
-    "ticker": "BTC/EUR: € 57.516,74 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 06:00:47 • ",
+    "reliability": "99%",
+    "last_update": "06:05:51",
+    "ticker": "BTC/EUR: € 57.631,60 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 06:05:51 • ",
     "news": [
+        {
+            "time": "06:00",
+            "text": "Satoshi Nakamoto’s Bitcoin Could Get Stolen, But A BTC Dev Has Proprosed A Solution",
+            "link": "https://bitcoinist.com/satoshi-bitcoin-risk-stolen/"
+        },
         {
             "time": "05:30",
             "text": "Seattle Court Sentences Former CFO for Unauthorized $35M Cryptocurrency Gamble",
@@ -30,11 +35,6 @@
             "time": "04:30",
             "text": "Florida Passes First State-Level Stablecoin Bill — Crypto CLARITY Act Next?",
             "link": "https://bitcoinist.com/florida-state-level-stablecoin-bill-crypto-next/"
-        },
-        {
-            "time": "04:30",
-            "text": "US Judge Throws out Lawsuit Against Binance and CZ Over Claims of Funding Linked to Violent Attacks",
-            "link": "https://news.bitcoin.com/us-judge-throws-out-lawsuit-against-binance-and-cz-over-claims-of-funding-linked-to-violent-attacks/"
         }
     ]
 }
