@@ -1,11 +1,26 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.968,53",
-    "signal": "BEARISH",
-    "reliability": "98%",
-    "last_update": "21:16:32",
-    "ticker": "BTC/EUR: € 57.968,53 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 21:16:32 • ",
+    "price": "€ 58.209,23",
+    "signal": "BULLISH",
+    "reliability": "99%",
+    "last_update": "21:46:37",
+    "ticker": "BTC/EUR: € 58.209,23 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 21:46:37 • ",
     "news": [
+        {
+            "time": "21:31",
+            "text": "Startup Starcloud Plans First Bitcoin Mining Satellite in Low-Earth Orbit",
+            "link": "https://news.bitcoin.com/startup-starcloud-plans-first-bitcoin-mining-satellite-in-low-earth-orbit/"
+        },
+        {
+            "time": "21:20",
+            "text": "Shayne Coplan said Polymarket is facing more backlash as it gets bigger",
+            "link": "https://www.cryptopolitan.com/polymarket-ceo-shayne-coplan-on-haters/"
+        },
+        {
+            "time": "21:20",
+            "text": "Pentagon’s Anthropic Controversy: Will Defense Tech Startups Flee Government Contracts?",
+            "link": "https://bitcoinworld.co.in/pentagon-anthropic-controversy-defense-startups/"
+        },
         {
             "time": "21:11",
             "text": "Fidelity Spotlights Shifting Bitcoin Cycle as Institutional Players Gain Ground",
@@ -20,21 +35,6 @@
             "time": "21:01",
             "text": "Fidelity Highlights Shift in Bitcoin Cycles as Institutions Gain Ground",
             "link": "https://en.coin-turk.com/fidelity-highlights-shift-in-bitcoin-cycles-as-institutions-gain-ground/"
-        },
-        {
-            "time": "21:00",
-            "text": "Ethereum co-founder moves 157M to exchange – Can ETH’s $1,800 hold?",
-            "link": "https://ambcrypto.com/ethereum-co-founder-moves-157m-to-exchange-can-eths-1800-hold/"
-        },
-        {
-            "time": "21:00",
-            "text": "Analyst Predicts XRP Breakout Against BTC, Says $10 Move Could Be Just The Starts",
-            "link": "https://zycrypto.com/analyst-predicts-xrp-breakout-against-btc-says-10-move-could-be-just-the-starts/"
-        },
-        {
-            "time": "20:51",
-            "text": "Bitcoin Could Rally to $85K But Woo Warns It’s Bull Trap, Not Bottom Confirmation",
-            "link": "https://zycrypto.com/bitcoin-could-rally-to-85k-but-woo-warns-its-bull-trap-not-bottom-confirmation/"
         }
     ]
 }
