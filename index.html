@@ -203,50 +203,61 @@ btcSocket.onmessage = (event) => {
     setTimeout(() => { priceEl.style.color = "white"; }, 300);
 };
 
-// 3. SYNC DATI DAL BOT (SEGNALE E NEWS) + AGGIORNAMENTO RELIABILITY DA FILE
+// 3. SYNC DATI DAL BOT (VERSIONE DEFINITIVA ANTI-TRATTINI)
 async function sync() {
     try {
-        const r = await fetch('market_status.json?v=' + Date.now());
+        // Aggiungiamo il timestamp per bypassare la cache di GitHub
+        const r = await fetch('market_status.json?nocache=' + new Date().getTime());
+        if (!r.ok) throw new Error('File non trovato');
+        
         const d = await r.json();
+        
         const signalEl = document.getElementById('signal');
         const priceEl = document.getElementById('price');
         const relEl = document.getElementById('reliability-val');
         
-        // Segnale - Aggiornamento da d.signal
-        signalEl.innerText = d.signal || '---';
-        if(d.signal === "BULLISH") signalEl.className = "text-3xl font-black mono text-green-500";
-        else if(d.signal === "BEARISH") signalEl.className = "text-3xl font-black mono text-red-500";
-        else signalEl.className = "text-3xl font-black mono text-blue-400";
-
-        // Prezzo - Prende il valore in Euro dal tuo Bot
-        if(priceEl && d.price) {
-            priceEl.innerText = d.price;
+        // 1. Aggiorna Segnale
+        if (d.signal && signalEl) {
+            signalEl.innerText = d.signal;
+            if(d.signal === "BULLISH") signalEl.className = "text-3xl font-black mono text-green-500";
+            else if(d.signal === "BEARISH") signalEl.className = "text-3xl font-black mono text-red-500";
+            else signalEl.className = "text-3xl font-black mono text-blue-400";
         }
 
-        // Reliability Index - Legge il valore reale dal tuo JSON (es. "98%")
+        // 2. Aggiorna Prezzo (Disattiviamo temporaneamente il cambio colore del websocket per evitare i trattini)
+        if(priceEl && d.price) {
+            priceEl.innerText = d.price;
+            priceEl.style.color = "white"; 
+        }
+
+        // 3. Aggiorna Reliability Index
         if(relEl && d.reliability) {
             relEl.innerText = d.reliability;
         }
 
-        // News
+        // 4. Aggiorna News
         if (d.news && d.news.length > 0) {
-            document.getElementById('news-container').innerHTML = d.news.map(n => `
-                <div class="group border-b border-white/5 pb-3 transition-all hover:pl-2">
-                    <span class="text-[10px] mono text-blue-500 font-bold">${n.time}</span>
-                    <a href="${n.link || '#'}" target="_blank" class="block mt-1 font-medium group-hover:text-blue-400 transition-colors italic">${n.text}</a>
-                </div>
-            `).join('');
+            const newsContainer = document.getElementById('news-container');
+            if (newsContainer) {
+                newsContainer.innerHTML = d.news.map(n => `
+                    <div class="group border-b border-white/5 pb-3 transition-all hover:pl-2">
+                        <span class="text-[10px] mono text-blue-500 font-bold">${n.time}</span>
+                        <a href="${n.link || '#'}" target="_blank" class="block mt-1 font-medium group-hover:text-blue-400 transition-colors italic">${n.text}</a>
+                    </div>
+                `).join('');
+            }
         }
         
-        // Aggiorna anche il ticker scorrevole se presente nel JSON
+        // 5. Aggiorna Ticker
         const tickerEl = document.querySelector('.animate-\\[scroll_40s_linear_infinite\\]');
         if(tickerEl && d.ticker) {
-            tickerEl.innerText = d.ticker + d.ticker + d.ticker; // Ripete per continuità
+            tickerEl.innerText = d.ticker.repeat(3);
         }
 
-    } catch(e) { console.log("Sync Error:", e); }
+    } catch(e) { 
+        console.log("Errore critico sincronizzazione:", e); 
+    }
 }
-
 <script>
 // 4. UI HELPERS - VERSIONE AGGIORNATA CON RELIABILITY NEL REPORT
 function toggleIntelligence() {
