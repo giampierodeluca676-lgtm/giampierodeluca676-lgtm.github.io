@@ -1,11 +1,16 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.854,76",
-    "signal": "BULLISH",
-    "reliability": "97%",
-    "last_update": "05:20:29",
-    "ticker": "BTC/EUR: € 57.854,76 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 05:20:29 • ",
+    "price": "€ 57.815,63",
+    "signal": "BEARISH",
+    "reliability": "99%",
+    "last_update": "05:25:31",
+    "ticker": "BTC/EUR: € 57.815,63 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 05:25:31 • ",
     "news": [
+        {
+            "time": "05:21",
+            "text": "Bitcoin Holds Steady as Geopolitical Tensions Rattle Crypto Markets",
+            "link": "https://en.coin-turk.com/bitcoin-holds-steady-as-geopolitical-tensions-rattle-crypto-markets/"
+        },
         {
             "time": "05:00",
             "text": "Solana – What to expect when bullish fundamentals meet bearish market reality",
@@ -30,11 +35,6 @@
             "time": "04:00",
             "text": "Aave’s revenue surges despite DAO turmoil – Is lending DeFi’s backbone now?",
             "link": "https://ambcrypto.com/aaves-revenue-surges-despite-dao-turmoil-is-lending-defis-backbone-now/"
-        },
-        {
-            "time": "03:00",
-            "text": "CBDC: Senator Pushes For Permanent Ban In Housing Act Amendment",
-            "link": "https://bitcoinist.com/cbdc-regulation-senator-ted-cruz-push-permanent-ban/"
         }
     ]
 }
