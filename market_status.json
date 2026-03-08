@@ -1,11 +1,16 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.885,72",
-    "signal": "BEARISH",
-    "reliability": "98%",
-    "last_update": "07:51:31",
-    "ticker": "BTC/EUR: € 57.885,72 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 07:51:31 • ",
+    "price": "€ 57.932,33",
+    "signal": "BULLISH",
+    "reliability": "97%",
+    "last_update": "07:56:33",
+    "ticker": "BTC/EUR: € 57.932,33 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 07:56:33 • ",
     "news": [
+        {
+            "time": "07:46",
+            "text": "ETH Tests the Crucial Zone That Defined Its Last Cycle: Could a 4x Rally Follow?",
+            "link": "https://cryptopotato.com/eth-tests-the-crucial-zone-that-defined-its-last-cycle-could-a-4x-rally-follow/"
+        },
         {
             "time": "07:33",
             "text": "Ripple Quietly Moved 200 Million XRP In Single Transaction. What’s Happening?",
@@ -30,11 +35,6 @@
             "time": "07:02",
             "text": "XRP News: Ripple CEO Says Investors Will Be Very Happy in 5 Years",
             "link": "https://thecryptobasic.com/2026/03/08/xrp-news-ripple-ceo-says-investors-will-be-very-happy-in-5-years/"
-        },
-        {
-            "time": "06:59",
-            "text": "Bitcoin’s Liquidation Map Reveals Asset’s Potential Near-Term Move",
-            "link": "https://zycrypto.com/bitcoins-liquidation-map-reveals-assets-potential-near-term-move/"
         }
     ]
 }
