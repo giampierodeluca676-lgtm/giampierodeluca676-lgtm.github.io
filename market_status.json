@@ -1,11 +1,21 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.062,02",
+    "price": "€ 58.061,40",
     "signal": "BEARISH",
     "reliability": "99%",
-    "last_update": "08:46:52",
-    "ticker": "BTC/EUR: € 58.062,02 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 08:46:52 • ",
+    "last_update": "08:51:54",
+    "ticker": "BTC/EUR: € 58.061,40 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 08:51:54 • ",
     "news": [
+        {
+            "time": "08:46",
+            "text": "Bitcoin hovers just under $72k, taking a breather after hefty gains this week",
+            "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-upbeat-at-72k-leads-broader-crypto-rally-as-risk-appetite-improves-4542892"
+        },
+        {
+            "time": "08:45",
+            "text": "Kalshi, Polymarket Discuss Fundraising at $20B Valuations: Report",
+            "link": "https://cryptonews.com/news/kalshi-polymarket-discuss-fundraising-at-20b-valuations-report/"
+        },
         {
             "time": "08:44",
             "text": "Bybit Releases Its 31st Proof-of-Reserves Report",
@@ -25,16 +35,6 @@
             "time": "08:39",
             "text": "Bitcoin slips, falling to $68k, as risk assets sell off amid Iran conflict",
             "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-price-today-falls-to-70k-amid-iran-conflict-set-for-weekly-jump-4546036"
-        },
-        {
-            "time": "08:37",
-            "text": "BTCC TradFi Hits $200M Volume and Celebrates with Zero-Fee Campaign on Gold and Silver",
-            "link": "https://www.investing.com/news/cryptocurrency-news/btcc-tradfi-hits-200m-volume-and-celebrates-with-zerofee-campaign-on-gold-and-silver-4544808"
-        },
-        {
-            "time": "08:35",
-            "text": "Bybit and Block Scholes Report Highlights Crypto Market Resilience Amid Geopolitical Tensions",
-            "link": "https://www.investing.com/news/cryptocurrency-news/bybit-and-block-scholes-report-highlights-crypto-market-resilience-amid-geopolitical-tensions-4546925"
         }
     ]
 }
