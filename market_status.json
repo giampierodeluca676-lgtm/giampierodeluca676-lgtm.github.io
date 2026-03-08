@@ -1,11 +1,16 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.893,49",
+    "price": "€ 57.880,71",
     "signal": "BEARISH",
-    "reliability": "97%",
-    "last_update": "07:21:21",
-    "ticker": "BTC/EUR: € 57.893,49 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 07:21:21 • ",
+    "reliability": "98%",
+    "last_update": "07:26:22",
+    "ticker": "BTC/EUR: € 57.880,71 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 07:26:22 • ",
     "news": [
+        {
+            "time": "07:17",
+            "text": "Bessent Meets Bukele to Talk Crypto",
+            "link": "https://u.today/bessent-meets-bukele-to-talk-crypto"
+        },
         {
             "time": "07:02",
             "text": "XRP News: Ripple CEO Says Investors Will Be Very Happy in 5 Years",
@@ -30,11 +35,6 @@
             "time": "06:30",
             "text": "The rise of yield infrastructure for long-term crypto holders",
             "link": "https://ambcrypto.com/the-rise-of-yield-infrastructure-for-long-term-crypto-holders/"
-        },
-        {
-            "time": "06:16",
-            "text": "Bitcoin dip may not be over as whales sell into retail buying — a bearish signal",
-            "link": "https://www.coindesk.com/markets/2026/03/08/bitcoin-dip-may-not-be-over-as-whales-sell-into-retail-buying-a-bearish-signal"
         }
     ]
 }
