@@ -1,11 +1,16 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.114,64",
+    "price": "€ 58.127,82",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "01:03:51",
-    "ticker": "BTC/EUR: € 58.114,64 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 01:03:51 • ",
+    "last_update": "01:08:52",
+    "ticker": "BTC/EUR: € 58.127,82 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 01:08:52 • ",
     "news": [
+        {
+            "time": "01:05",
+            "text": "Shiba Inu Records -131 Billion in 24 Hours: Negative Netflow Signals Growing Demand",
+            "link": "https://u.today/shiba-inu-records-131-billion-in-24-hours-negative-netflow-signals-growing-demand"
+        },
         {
             "time": "01:00",
             "text": "Analyzing if Hyperliquid can become the 24/7 derivatives hub – Why and why not?",
@@ -30,11 +35,6 @@
             "time": "00:31",
             "text": "IRS Pushes Crypto Exchanges Toward Mandatory Digital Tax Reporting",
             "link": "https://en.coin-turk.com/irs-pushes-crypto-exchanges-toward-mandatory-digital-tax-reporting/"
-        },
-        {
-            "time": "00:30",
-            "text": "PBOC Governor: China Continues to Pursue Yuan Internationalization for Cross Border Payments",
-            "link": "https://news.bitcoin.com/pboc-governor-china-continues-to-pursue-yuan-internationalization-for-cross-border-payments/"
         }
     ]
 }
