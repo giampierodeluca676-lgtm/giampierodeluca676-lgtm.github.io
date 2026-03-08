@@ -1,14 +1,14 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.851,68",
-    "signal": "BEARISH",
-    "reliability": "97%",
-    "last_update": "07:36:26",
-    "ticker": "BTC/EUR: € 57.851,68 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 07:36:26 • ",
+    "price": "€ 57.880,91",
+    "signal": "BULLISH",
+    "reliability": "99%",
+    "last_update": "07:41:28",
+    "ticker": "BTC/EUR: € 57.880,91 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 07:41:28 • ",
     "news": [
         {
             "time": "07:33",
-            "text": "Ripple Quietly Moved 200 Million XRP In Single Transaction. What’s Happening",
+            "text": "Ripple Quietly Moved 200 Million XRP In Single Transaction. What’s Happening?",
             "link": "https://timestabloid.com/ripple-quietly-moved-200-million-xrp-in-single-transaction-whats-happening/"
         },
         {
