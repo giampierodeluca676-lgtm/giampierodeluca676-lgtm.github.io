@@ -1,11 +1,21 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.088,49",
+    "price": "€ 58.059,53",
     "signal": "BEARISH",
-    "reliability": "98%",
-    "last_update": "01:29:02",
-    "ticker": "BTC/EUR: € 58.088,49 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 01:29:02 • ",
+    "reliability": "99%",
+    "last_update": "01:34:03",
+    "ticker": "BTC/EUR: € 58.059,53 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 01:34:03 • ",
     "news": [
+        {
+            "time": "01:30",
+            "text": "Pundit Says XRP Price Could Reach $1,000 By End Of 2026 If This Happens",
+            "link": "https://www.newsbtc.com/altcoin/pundit-says-xrp-price-could-reach-1000-by-end-of-2026-if-this-happens/"
+        },
+        {
+            "time": "01:30",
+            "text": "Ripple’s Global Payments Expansion Strengthens XRP’s Institutional Role",
+            "link": "https://news.bitcoin.com/ripples-global-payments-expansion-strengthens-xrps-institutional-role/"
+        },
         {
             "time": "01:05",
             "text": "Shiba Inu Records -131 Billion in 24 Hours: Negative Netflow Signals Growing Demand",
@@ -25,16 +35,6 @@
             "time": "00:50",
             "text": "Ethereum at a Breaking Point as ETH/BTC Stalls and $2,340 Comes Into View",
             "link": "https://coinpaper.com/15249/ethereum-at-a-breaking-point-as-eth-btc-stalls-and-2-340-comes-into-view"
-        },
-        {
-            "time": "00:46",
-            "text": "Bitcoin May Be Entering a Final Selloff Phase, Charts Warn",
-            "link": "https://coinpaper.com/15248/bitcoin-may-be-entering-a-final-selloff-phase-charts-warn"
-        },
-        {
-            "time": "00:31",
-            "text": "IRS Pushes Crypto Exchanges Toward Mandatory Digital Tax Reporting",
-            "link": "https://en.coin-turk.com/irs-pushes-crypto-exchanges-toward-mandatory-digital-tax-reporting/"
         }
     ]
 }
