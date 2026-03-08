@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.100,43",
-    "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "08:31:47",
-    "ticker": "BTC/EUR: € 58.100,43 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 08:31:47 • ",
+    "price": "€ 58.075,18",
+    "signal": "BEARISH",
+    "reliability": "97%",
+    "last_update": "08:36:49",
+    "ticker": "BTC/EUR: € 58.075,18 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 08:36:49 • ",
     "news": [
+        {
+            "time": "08:35",
+            "text": "Bybit and Block Scholes Report Highlights Crypto Market Resilience Amid Geopolitical Tensions",
+            "link": "https://www.investing.com/news/cryptocurrency-news/bybit-and-block-scholes-report-highlights-crypto-market-resilience-amid-geopolitical-tensions-4546925"
+        },
+        {
+            "time": "08:34",
+            "text": "Bitcoin to see lower lows before $50K capitulation, ’Godfather of Crypto’ says",
+            "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-to-see-lower-lows-before-50k-capitulation-godfather-of-crypto-says-4544567"
+        },
+        {
+            "time": "08:32",
+            "text": "Bitcoin slides to $67,000 as ’extreme fear’ grips crypto markets",
+            "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-slides-to-67000-as-extreme-fear-grips-crypto-markets-4548565"
+        },
+        {
+            "time": "08:30",
+            "text": "Tether Invests in Axiym to Expand Global USDT Payment Infrastructure",
+            "link": "https://news.bitcoin.com/tether-invests-in-axiym-to-expand-global-usdt-payment-infrastructure/"
+        },
+        {
+            "time": "08:30",
+            "text": "Ripple Whales Take Control of XRP Trading as Key Metric Signals Potential Rally",
+            "link": "https://cryptopotato.com/ripple-whales-take-control-of-xrp-trading-as-key-metric-signals-potential-rally/"
+        },
         {
             "time": "08:21",
             "text": "Crypto Investors See Bitcoin and Ethereum Deliver 20-Fold Gains Since 2018",
             "link": "https://en.coin-turk.com/crypto-investors-see-bitcoin-and-ethereum-deliver-20-fold-gains-since-2018/"
-        },
-        {
-            "time": "08:18",
-            "text": "XRP Ledger Plans to Become Native DeFi Lending Powerhouse",
-            "link": "https://u.today/xrp-ledger-plans-to-become-native-defi-lending-powerhouse"
-        },
-        {
-            "time": "08:13",
-            "text": "CZ says CEXs have ‘zero motive’ to aid terrorists as court dismisses terrorism case",
-            "link": "https://cointelegraph.com/news/cz-says-cexs-zero-motive-aid-terrorists-court-dismisses-binance-case?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
-        },
-        {
-            "time": "08:02",
-            "text": "Analyst Says XRP Could Hit $47 Before the End of May 2026 If This Happens",
-            "link": "https://timestabloid.com/analyst-says-xrp-could-hit-47-before-the-end-of-may-2026-if-this-happens/"
-        },
-        {
-            "time": "08:00",
-            "text": "South Korea moves to block USDT and USDC from corporate trading – Details",
-            "link": "https://ambcrypto.com/south-korea-moves-to-block-usdt-and-usdc-from-corporate-trading-details/"
-        },
-        {
-            "time": "07:46",
-            "text": "ETH Tests the Crucial Zone That Defined Its Last Cycle: Could a 4x Rally Follow?",
-            "link": "https://cryptopotato.com/eth-tests-the-crucial-zone-that-defined-its-last-cycle-could-a-4x-rally-follow/"
         }
     ]
 }
