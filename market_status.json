@@ -1,11 +1,16 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.096,60",
+    "price": "€ 58.114,64",
     "signal": "BULLISH",
-    "reliability": "97%",
-    "last_update": "01:03:21",
-    "ticker": "BTC/EUR: € 58.096,60 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 01:03:21 • ",
+    "reliability": "98%",
+    "last_update": "01:03:51",
+    "ticker": "BTC/EUR: € 58.114,64 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 01:03:51 • ",
     "news": [
+        {
+            "time": "01:00",
+            "text": "Analyzing if Hyperliquid can become the 24/7 derivatives hub – Why and why not?",
+            "link": "https://ambcrypto.com/analyzing-if-hyperliquid-can-become-the-24-7-derivatives-hub-why-and-why-not/"
+        },
         {
             "time": "00:55",
             "text": "Did George Soros Get Arrested in the US? Here’s What We Know",
@@ -30,11 +35,6 @@
             "time": "00:30",
             "text": "PBOC Governor: China Continues to Pursue Yuan Internationalization for Cross Border Payments",
             "link": "https://news.bitcoin.com/pboc-governor-china-continues-to-pursue-yuan-internationalization-for-cross-border-payments/"
-        },
-        {
-            "time": "00:30",
-            "text": "Shiba Inu (SHIB) Approaches Pivotal Support Level. Here’s What Traders Must Watch",
-            "link": "https://timestabloid.com/shiba-inu-shib-approaches-pivotal-support-level-heres-what-traders-must-watch/"
         }
     ]
 }
