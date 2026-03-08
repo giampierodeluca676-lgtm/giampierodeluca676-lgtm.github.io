@@ -1,15 +1,20 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.078,83",
-    "signal": "BEARISH",
+    "price": "€ 58.100,43",
+    "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "08:26:45",
-    "ticker": "BTC/EUR: € 58.078,83 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 08:26:45 • ",
+    "last_update": "08:31:47",
+    "ticker": "BTC/EUR: € 58.100,43 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 08:31:47 • ",
     "news": [
         {
             "time": "08:21",
             "text": "Crypto Investors See Bitcoin and Ethereum Deliver 20-Fold Gains Since 2018",
             "link": "https://en.coin-turk.com/crypto-investors-see-bitcoin-and-ethereum-deliver-20-fold-gains-since-2018/"
+        },
+        {
+            "time": "08:18",
+            "text": "XRP Ledger Plans to Become Native DeFi Lending Powerhouse",
+            "link": "https://u.today/xrp-ledger-plans-to-become-native-defi-lending-powerhouse"
         },
         {
             "time": "08:13",
@@ -30,11 +35,6 @@
             "time": "07:46",
             "text": "ETH Tests the Crucial Zone That Defined Its Last Cycle: Could a 4x Rally Follow?",
             "link": "https://cryptopotato.com/eth-tests-the-crucial-zone-that-defined-its-last-cycle-could-a-4x-rally-follow/"
-        },
-        {
-            "time": "07:33",
-            "text": "Ripple Quietly Moved 200 Million XRP In Single Transaction. What’s Happening?",
-            "link": "https://timestabloid.com/ripple-quietly-moved-200-million-xrp-in-single-transaction-whats-happening/"
         }
     ]
 }
