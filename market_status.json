@@ -1,11 +1,21 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.858,65",
+    "price": "€ 57.851,68",
     "signal": "BEARISH",
-    "reliability": "99%",
-    "last_update": "07:31:24",
-    "ticker": "BTC/EUR: € 57.858,65 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 07:31:24 • ",
+    "reliability": "97%",
+    "last_update": "07:36:26",
+    "ticker": "BTC/EUR: € 57.851,68 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 07:36:26 • ",
     "news": [
+        {
+            "time": "07:33",
+            "text": "Ripple Quietly Moved 200 Million XRP In Single Transaction. What’s Happening",
+            "link": "https://timestabloid.com/ripple-quietly-moved-200-million-xrp-in-single-transaction-whats-happening/"
+        },
+        {
+            "time": "07:30",
+            "text": "Kraken’s Tokenized Equities Platform Debuts Trading Engine to Eliminate Fragmentation",
+            "link": "https://news.bitcoin.com/krakens-tokenized-equities-platform-debuts-trading-engine-to-eliminate-fragmentation/"
+        },
         {
             "time": "07:25",
             "text": "AI Regulation: The Urgent Pro-Human Declaration Emerges as Washington Stalls",
@@ -25,16 +35,6 @@
             "time": "06:59",
             "text": "Bitcoin’s Liquidation Map Reveals Asset’s Potential Near-Term Move",
             "link": "https://zycrypto.com/bitcoins-liquidation-map-reveals-assets-potential-near-term-move/"
-        },
-        {
-            "time": "06:41",
-            "text": "Markets Brace as Fed Rate Decision and Geopolitical Tensions Drive Crypto Surge",
-            "link": "https://en.coin-turk.com/markets-brace-as-fed-rate-decision-and-geopolitical-tensions-drive-crypto-surge/"
-        },
-        {
-            "time": "06:30",
-            "text": "South African Economist Flags Authoritarian Risks in CBDCs",
-            "link": "https://news.bitcoin.com/south-african-economist-flags-authoritarian-risks-in-cbdcs/"
         }
     ]
 }
