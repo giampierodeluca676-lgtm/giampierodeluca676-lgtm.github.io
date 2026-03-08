@@ -203,24 +203,29 @@ btcSocket.onmessage = (event) => {
     setTimeout(() => { priceEl.style.color = "white"; }, 300);
 };
 
-// 3. SYNC DATI DAL BOT (SEGNALE E NEWS) + AGGIORNAMENTO RELIABILITY
+// 3. SYNC DATI DAL BOT (SEGNALE E NEWS) + AGGIORNAMENTO RELIABILITY DA FILE
 async function sync() {
     try {
         const r = await fetch('market_status.json?v=' + Date.now());
         const d = await r.json();
         const signalEl = document.getElementById('signal');
+        const priceEl = document.getElementById('price');
+        const relEl = document.getElementById('reliability-val');
         
-        // Segnale
+        // Segnale - Aggiornamento da d.signal
         signalEl.innerText = d.signal || '---';
         if(d.signal === "BULLISH") signalEl.className = "text-3xl font-black mono text-green-500";
         else if(d.signal === "BEARISH") signalEl.className = "text-3xl font-black mono text-red-500";
         else signalEl.className = "text-3xl font-black mono text-blue-400";
 
-        // Variazione dinamica "live" del Reliability Index (Tra 97.0 e 99.5)
-        const relEl = document.getElementById('reliability-val');
-        if(relEl) {
-            const relValue = (97 + Math.random() * 2.5).toFixed(1);
-            relEl.innerText = relValue + '%';
+        // Prezzo - Prende il valore in Euro dal tuo Bot
+        if(priceEl && d.price) {
+            priceEl.innerText = d.price;
+        }
+
+        // Reliability Index - Legge il valore reale dal tuo JSON (es. "98%")
+        if(relEl && d.reliability) {
+            relEl.innerText = d.reliability;
         }
 
         // News
@@ -232,6 +237,13 @@ async function sync() {
                 </div>
             `).join('');
         }
+        
+        // Aggiorna anche il ticker scorrevole se presente nel JSON
+        const tickerEl = document.querySelector('.animate-\\[scroll_40s_linear_infinite\\]');
+        if(tickerEl && d.ticker) {
+            tickerEl.innerText = d.ticker + d.ticker + d.ticker; // Ripete per continuità
+        }
+
     } catch(e) { console.log("Sync Error:", e); }
 }
 
