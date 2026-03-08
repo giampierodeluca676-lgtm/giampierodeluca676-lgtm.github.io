@@ -1,11 +1,21 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.917,91",
-    "signal": "BEARISH",
+    "price": "€ 58.100,89",
+    "signal": "BULLISH",
     "reliability": "97%",
-    "last_update": "08:01:35",
-    "ticker": "BTC/EUR: € 57.917,91 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 08:01:35 • ",
+    "last_update": "08:06:37",
+    "ticker": "BTC/EUR: € 58.100,89 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 08:06:37 • ",
     "news": [
+        {
+            "time": "08:02",
+            "text": "Analyst Says XRP Could Hit $47 Before the End of May 2026 If This Happens",
+            "link": "https://timestabloid.com/analyst-says-xrp-could-hit-47-before-the-end-of-may-2026-if-this-happens/"
+        },
+        {
+            "time": "08:00",
+            "text": "South Korea moves to block USDT and USDC from corporate trading – Details",
+            "link": "https://ambcrypto.com/south-korea-moves-to-block-usdt-and-usdc-from-corporate-trading-details/"
+        },
         {
             "time": "07:46",
             "text": "ETH Tests the Crucial Zone That Defined Its Last Cycle: Could a 4x Rally Follow?",
@@ -25,16 +35,6 @@
             "time": "07:25",
             "text": "AI Regulation: The Urgent Pro-Human Declaration Emerges as Washington Stalls",
             "link": "https://bitcoinworld.co.in/pro-human-declaration-ai-regulation-framework/"
-        },
-        {
-            "time": "07:17",
-            "text": "Bessent Meets Bukele to Talk Crypto",
-            "link": "https://u.today/bessent-meets-bukele-to-talk-crypto"
-        },
-        {
-            "time": "07:02",
-            "text": "XRP News: Ripple CEO Says Investors Will Be Very Happy in 5 Years",
-            "link": "https://thecryptobasic.com/2026/03/08/xrp-news-ripple-ceo-says-investors-will-be-very-happy-in-5-years/"
         }
     ]
 }
