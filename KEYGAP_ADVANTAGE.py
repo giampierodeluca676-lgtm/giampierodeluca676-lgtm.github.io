@@ -219,8 +219,20 @@ if __name__ == "__main__":
     print("🔥 KEYGAP_ADVANTAGE CORE - Avviato e monitorato.")
     while True:
         now = datetime.now()
+        
+        # CONTROLLO ORARIO: 08:30 o 20:30
         if (now.hour == 8 and now.minute == 30) or (now.hour == 20 and now.minute == 30):
+            print(f"🚀 Orario di pubblicazione raggiunto: {now.strftime('%H:%M')}")
+            
+            # 1. Crea il report solo quando serve
+            run_update() 
+            
+            # 2. Inviarlo a Blogger
             pubblica()
-            time.sleep(65)
-        run_update()
-        time.sleep(300)
+            
+            print("✅ Operazione completata. Prossimo check tra 12 ore.")
+            # Dorme per 70 secondi per superare il minuto critico ed evitare doppioni
+            time.sleep(70) 
+        
+        # Il bot controlla l'orario ogni 30 secondi senza creare file
+        time.sleep(30)

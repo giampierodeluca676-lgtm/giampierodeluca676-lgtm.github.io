@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.204,28",
-    "signal": "BEARISH",
+    "price": "€ 58.494,64",
+    "signal": "BULLISH",
     "reliability": "97%",
-    "last_update": "09:52:16",
-    "ticker": "BTC/EUR: € 58.204,28 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 09:52:16 • ",
+    "last_update": "11:04:16",
+    "ticker": "BTC/EUR: € 58.494,64 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 11:04:16 • ",
     "news": [
         {
-            "time": "09:30",
-            "text": "A Week of Digital Darkness: Iran Passes the 168 Hour Mark With No Internet Access",
-            "link": "https://news.bitcoin.com/a-week-of-digital-darkness-iran-passes-the-168-hour-mark-with-no-internet-access/"
+            "time": "11:02",
+            "text": "Analyst Says XRP Huge Breakout Coming Next Week. Here’s why",
+            "link": "https://timestabloid.com/analyst-says-xrp-huge-breakout-coming-next-week-heres-why/"
         },
         {
-            "time": "09:29",
-            "text": "1win Arranges Private Charter Flights for VIP Clients Leaving the UAE Amid Aviation Disruptions",
-            "link": "https://www.cryptointelligence.co.uk/1win-arranges-private-charter-flights-for-vip-clients-leaving-the-uae-amid-aviation-disruptions/"
+            "time": "11:00",
+            "text": "ETH price alert: $2,100 floor recovered amid whales tracking ethereum-based protocols",
+            "link": "https://ambcrypto.com/eth-price-alert-2100-floor-recovered-amid-whales-tracking-ethereum-based-protocols/"
         },
         {
-            "time": "09:25",
-            "text": "1win Arranges Private Charter Flights for VIP Clients Leaving the UAE Amid Aviation Disruptions",
-            "link": "https://cryptodaily.co.uk/2026/03/1win-arranges-private-charter-flights-for-vip-clients-leaving-the-uae-amid-aviation-disruptions"
+            "time": "11:00",
+            "text": "Solana vs Ethereum – $4.4T traded, RWA holders flipped – But who wins?",
+            "link": "https://ambcrypto.com/solana-vs-ethereum-4-4t-traded-rwa-holders-flipped-but-who-wins/"
         },
         {
-            "time": "09:25",
-            "text": "1win Arranges Private Charter Flights for VIP Clients Leaving the UAE Amid Aviation Disruptions",
-            "link": "https://bitcoinworld.co.in/1win-arranges-private-charter-flights-for-vip-clients-leaving-the-uae-amid-aviation-disruptions/"
+            "time": "10:36",
+            "text": "Ordinals price prediction 2026 – 2032: Can ORDI surge 100X?",
+            "link": "https://www.cryptopolitan.com/ordinals-price-prediction/"
         },
         {
-            "time": "09:10",
-            "text": "Two Solana Charts Tell Completely Different Stories, One Points to $42",
-            "link": "https://coinpaper.com/15251/two-solana-charts-tell-completely-different-stories-one-points-to-42"
+            "time": "10:30",
+            "text": "Nexo Expands to Argentina to Redefine Digital Dollar Savings",
+            "link": "https://news.bitcoin.com/nexo-expands-to-argentina-to-redefine-digital-dollar-savings/"
         },
         {
-            "time": "09:10",
-            "text": "Woo on BTC Price: 'Bull Trap Incoming'",
-            "link": "https://u.today/woo-on-btc-price-bull-trap-incoming"
+            "time": "10:27",
+            "text": "Bitcoin miners sell reserves and pivot to AI as volatility bites",
+            "link": "https://coinpaprika.com/news/bitcoin-miners-sell-reserves-pivot-to-ai-volatility"
         }
     ]
 }

@@ -1,0 +1,30 @@
+Bash
+cd ~/Desktop/Keygap_AdVantage
+Lancia il bot in modalità "Immortale":
+
+Bash
+nohup python3 KEYGAP_ADVANTAGE.py > nohup.out 2>&1 & disown
+Cosa fa: nohup impedisce la chiusura all'uscita, > nohup.out salva i log, & lo mette in background e disown lo stacca definitivamente dal terminale attuale.
+
+🛑 Comandi per DISATTIVARE (Stop)
+Usa questi comandi quando vuoi fermare il bot.
+
+Spegni il processo principale:
+
+Bash
+pkill -f KEYGAP_ADVANTAGE.py
+Verifica che sia effettivamente spento (non deve uscire nessun numero):
+
+Bash
+pgrep -fl KEYGAP_ADVANTAGE
+📊 Comandi di CONTROLLO (Monitor)
+Per vedere cosa sta facendo il bot mentre è attivo:
+
+Leggi gli ultimi log di pubblicazione:
+
+Bash
+tail -n 50 nohup.out
+Vedi se il processo è vivo e quanto consuma:
+
+Bash
+ps aux | grep KEYGAP_ADVANTAGE.py
