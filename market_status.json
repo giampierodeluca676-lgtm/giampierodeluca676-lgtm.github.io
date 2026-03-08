@@ -1,11 +1,16 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.928,37",
+    "price": "€ 57.938,65",
     "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "06:41:04",
-    "ticker": "BTC/EUR: € 57.928,37 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 06:41:04 • ",
+    "reliability": "97%",
+    "last_update": "06:46:06",
+    "ticker": "BTC/EUR: € 57.938,65 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 06:46:06 • ",
     "news": [
+        {
+            "time": "06:41",
+            "text": "Markets Brace as Fed Rate Decision and Geopolitical Tensions Drive Crypto Surge",
+            "link": "https://en.coin-turk.com/markets-brace-as-fed-rate-decision-and-geopolitical-tensions-drive-crypto-surge/"
+        },
         {
             "time": "06:30",
             "text": "South African Economist Flags Authoritarian Risks in CBDCs",
@@ -30,11 +35,6 @@
             "time": "06:14",
             "text": "Top crypto to watch this week: Pi Network, Polkadot, Sei, Pump, and Starknet",
             "link": "https://invezz.com/news/2026/03/08/top-crypto-to-watch-this-week-pi-network-polkadot-sei-pump-and-starknet/"
-        },
-        {
-            "time": "06:06",
-            "text": "XRP slips as traders watch $1.35 support",
-            "link": "https://www.coindesk.com/markets/2026/03/08/xrp-slips-as-traders-watch-usd1-35-support"
         }
     ]
 }
