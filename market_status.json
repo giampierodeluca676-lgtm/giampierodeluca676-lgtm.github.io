@@ -1,11 +1,26 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.075,18",
-    "signal": "BEARISH",
-    "reliability": "97%",
-    "last_update": "08:36:49",
-    "ticker": "BTC/EUR: € 58.075,18 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 08:36:49 • ",
+    "price": "€ 58.076,08",
+    "signal": "BULLISH",
+    "reliability": "99%",
+    "last_update": "08:41:51",
+    "ticker": "BTC/EUR: € 58.076,08 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 08:41:51 • ",
     "news": [
+        {
+            "time": "08:41",
+            "text": "OmniPact Secures $50 Million to Advance Trust Infrastructure",
+            "link": "https://www.investing.com/news/cryptocurrency-news/omnipact-secures-50-million-to-advance-trust-infrastructure-4548493"
+        },
+        {
+            "time": "08:39",
+            "text": "Bitcoin slips, falling to $68k, as risk assets sell off amid Iran conflict",
+            "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-price-today-falls-to-70k-amid-iran-conflict-set-for-weekly-jump-4546036"
+        },
+        {
+            "time": "08:37",
+            "text": "BTCC TradFi Hits $200M Volume and Celebrates with Zero-Fee Campaign on Gold and Silver",
+            "link": "https://www.investing.com/news/cryptocurrency-news/btcc-tradfi-hits-200m-volume-and-celebrates-with-zerofee-campaign-on-gold-and-silver-4544808"
+        },
         {
             "time": "08:35",
             "text": "Bybit and Block Scholes Report Highlights Crypto Market Resilience Amid Geopolitical Tensions",
@@ -20,21 +35,6 @@
             "time": "08:32",
             "text": "Bitcoin slides to $67,000 as ’extreme fear’ grips crypto markets",
             "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-slides-to-67000-as-extreme-fear-grips-crypto-markets-4548565"
-        },
-        {
-            "time": "08:30",
-            "text": "Tether Invests in Axiym to Expand Global USDT Payment Infrastructure",
-            "link": "https://news.bitcoin.com/tether-invests-in-axiym-to-expand-global-usdt-payment-infrastructure/"
-        },
-        {
-            "time": "08:30",
-            "text": "Ripple Whales Take Control of XRP Trading as Key Metric Signals Potential Rally",
-            "link": "https://cryptopotato.com/ripple-whales-take-control-of-xrp-trading-as-key-metric-signals-potential-rally/"
-        },
-        {
-            "time": "08:21",
-            "text": "Crypto Investors See Bitcoin and Ethereum Deliver 20-Fold Gains Since 2018",
-            "link": "https://en.coin-turk.com/crypto-investors-see-bitcoin-and-ethereum-deliver-20-fold-gains-since-2018/"
         }
     ]
 }
