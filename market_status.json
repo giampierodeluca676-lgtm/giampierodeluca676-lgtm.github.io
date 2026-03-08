@@ -1,11 +1,16 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.100,99",
-    "signal": "BEARISH",
+    "price": "€ 58.113,05",
+    "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "08:16:41",
-    "ticker": "BTC/EUR: € 58.100,99 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 08:16:41 • ",
+    "last_update": "08:21:43",
+    "ticker": "BTC/EUR: € 58.113,05 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 08:21:43 • ",
     "news": [
+        {
+            "time": "08:13",
+            "text": "CZ says CEXs have ‘zero motive’ to aid terrorists as court dismisses terrorism case",
+            "link": "https://cointelegraph.com/news/cz-says-cexs-zero-motive-aid-terrorists-court-dismisses-binance-case?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        },
         {
             "time": "08:02",
             "text": "Analyst Says XRP Could Hit $47 Before the End of May 2026 If This Happens",
@@ -30,11 +35,6 @@
             "time": "07:30",
             "text": "Kraken’s Tokenized Equities Platform Debuts Trading Engine to Eliminate Fragmentation",
             "link": "https://news.bitcoin.com/krakens-tokenized-equities-platform-debuts-trading-engine-to-eliminate-fragmentation/"
-        },
-        {
-            "time": "07:25",
-            "text": "AI Regulation: The Urgent Pro-Human Declaration Emerges as Washington Stalls",
-            "link": "https://bitcoinworld.co.in/pro-human-declaration-ai-regulation-framework/"
         }
     ]
 }
