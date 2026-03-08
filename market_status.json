@@ -1,11 +1,16 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.113,05",
-    "signal": "BULLISH",
+    "price": "€ 58.078,83",
+    "signal": "BEARISH",
     "reliability": "98%",
-    "last_update": "08:21:43",
-    "ticker": "BTC/EUR: € 58.113,05 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 08:21:43 • ",
+    "last_update": "08:26:45",
+    "ticker": "BTC/EUR: € 58.078,83 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 08:26:45 • ",
     "news": [
+        {
+            "time": "08:21",
+            "text": "Crypto Investors See Bitcoin and Ethereum Deliver 20-Fold Gains Since 2018",
+            "link": "https://en.coin-turk.com/crypto-investors-see-bitcoin-and-ethereum-deliver-20-fold-gains-since-2018/"
+        },
         {
             "time": "08:13",
             "text": "CZ says CEXs have ‘zero motive’ to aid terrorists as court dismisses terrorism case",
@@ -30,11 +35,6 @@
             "time": "07:33",
             "text": "Ripple Quietly Moved 200 Million XRP In Single Transaction. What’s Happening?",
             "link": "https://timestabloid.com/ripple-quietly-moved-200-million-xrp-in-single-transaction-whats-happening/"
-        },
-        {
-            "time": "07:30",
-            "text": "Kraken’s Tokenized Equities Platform Debuts Trading Engine to Eliminate Fragmentation",
-            "link": "https://news.bitcoin.com/krakens-tokenized-equities-platform-debuts-trading-engine-to-eliminate-fragmentation/"
         }
     ]
 }
