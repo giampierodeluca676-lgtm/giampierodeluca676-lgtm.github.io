@@ -1,11 +1,31 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.913,44",
+    "price": "€ 58.199,33",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "20:16:24",
-    "ticker": "BTC/EUR: € 57.913,44 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 20:16:24 • ",
+    "last_update": "20:46:28",
+    "ticker": "BTC/EUR: € 58.199,33 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 20:46:28 • ",
     "news": [
+        {
+            "time": "20:37",
+            "text": "Macro Data Made Simple: Track Fed Rates and Crypto Trends in One Place",
+            "link": "https://en.coin-turk.com/macro-data-made-simple-track-fed-rates-and-crypto-trends-in-one-place/"
+        },
+        {
+            "time": "20:35",
+            "text": "CryptoQuant Names the Most Transparent Exchange for Reserves",
+            "link": "https://cryptopotato.com/cryptoquant-names-the-most-transparent-exchange-for-reserves/"
+        },
+        {
+            "time": "20:33",
+            "text": "Brazil's Pix instant payments system expands to Argentina",
+            "link": "https://cointelegraph.com/news/brazil-pix-payments-expand-argentina?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        },
+        {
+            "time": "20:27",
+            "text": "BNB Price Prediction as Judge Throws Out Anti-Terrorism Lawsuit Against Binance",
+            "link": "https://coinpaper.com/15256/bnb-price-prediction-as-judge-throws-out-anti-terrorism-lawsuit-against-binance"
+        },
         {
             "time": "20:05",
             "text": "Pundit Says BlackRock Could Easily Trigger XRP Price Rally With This Action",
@@ -15,26 +35,6 @@
             "time": "20:05",
             "text": "Crypto’s Rock ’n’ Roll Era Is Over",
             "link": "https://www.coindesk.com/opinion/2026/03/08/crypto-s-rock-n-roll-era-is-over"
-        },
-        {
-            "time": "20:01",
-            "text": "Smell Fraud? This Telegram App Was Built to Reward Whistleblowers",
-            "link": "https://decrypt.co/360294/smell-fraud-telegram-app-built-reward-whistleblowers"
-        },
-        {
-            "time": "20:00",
-            "text": "Bitcoin Price Must Not Drop Below $63,700, Analyst Warns",
-            "link": "https://www.newsbtc.com/news/bitcoin/bitcoin-price-must-not-fall-below-63700/"
-        },
-        {
-            "time": "20:00",
-            "text": "Crypto market’s weekly winners and losers – OKB, PI, ADA, WLFI",
-            "link": "https://ambcrypto.com/crypto-market-cap-weekly-review-8-march/"
-        },
-        {
-            "time": "19:41",
-            "text": "Bitcoin Network Withstands Cable Disruptions as Resilience Grows with Tor Adoption",
-            "link": "https://en.coin-turk.com/bitcoin-network-withstands-cable-disruptions-as-resilience-grows-with-tor-adoption/"
         }
     ]
 }
