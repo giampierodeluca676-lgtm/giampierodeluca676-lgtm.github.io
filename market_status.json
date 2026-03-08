@@ -1,40 +1,15 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.054,06",
-    "signal": "BEARISH",
+    "price": "€ 58.054,68",
+    "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "08:56:56",
-    "ticker": "BTC/EUR: € 58.054,06 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 08:56:56 • ",
+    "last_update": "09:01:57",
+    "ticker": "BTC/EUR: € 58.054,68 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 09:01:57 • ",
     "news": [
         {
-            "time": "08:46",
-            "text": "Bitcoin hovers just under $72k, taking a breather after hefty gains this week",
-            "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-upbeat-at-72k-leads-broader-crypto-rally-as-risk-appetite-improves-4542892"
-        },
-        {
-            "time": "08:45",
-            "text": "Kalshi, Polymarket Discuss Fundraising at $20B Valuations: Report",
-            "link": "https://cryptonews.com/news/kalshi-polymarket-discuss-fundraising-at-20b-valuations-report/"
-        },
-        {
-            "time": "08:44",
-            "text": "Bybit Releases Its 31st Proof-of-Reserves Report",
-            "link": "https://www.investing.com/news/cryptocurrency-news/bybit-releases-its-31st-proofofreserves-report-4544424"
-        },
-        {
-            "time": "08:42",
-            "text": "YY Group Holdings adopts bitcoin as treasury reserve asset",
-            "link": "https://www.investing.com/news/cryptocurrency-news/yy-group-holdings-adopts-bitcoin-as-treasury-reserve-asset-432SI-4544092"
-        },
-        {
-            "time": "08:41",
-            "text": "OmniPact Secures $50 Million to Advance Trust Infrastructure",
-            "link": "https://www.investing.com/news/cryptocurrency-news/omnipact-secures-50-million-to-advance-trust-infrastructure-4548493"
-        },
-        {
-            "time": "08:39",
-            "text": "Bitcoin slips, falling to $68k, as risk assets sell off amid Iran conflict",
-            "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-price-today-falls-to-70k-amid-iran-conflict-set-for-weekly-jump-4546036"
+            "time": "SYS",
+            "text": "Sincronizzazione flussi globali in corso...",
+            "link": "#"
         }
     ]
 }
