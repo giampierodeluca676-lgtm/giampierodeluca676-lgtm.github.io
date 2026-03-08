@@ -1,11 +1,16 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.023,49",
+    "price": "€ 58.012,21",
     "signal": "BEARISH",
-    "reliability": "97%",
-    "last_update": "01:39:05",
-    "ticker": "BTC/EUR: € 58.023,49 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 01:39:05 • ",
+    "reliability": "99%",
+    "last_update": "01:44:07",
+    "ticker": "BTC/EUR: € 58.012,21 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 01:44:07 • ",
     "news": [
+        {
+            "time": "01:40",
+            "text": "Sundar Pichai’s Staggering $692M Google Pay Package Reveals High-Stakes Performance Gamble",
+            "link": "https://bitcoinworld.co.in/sundar-pichai-google-pay-package/"
+        },
         {
             "time": "01:30",
             "text": "Pundit Says XRP Price Could Reach $1,000 By End Of 2026 If This Happens",
@@ -30,11 +35,6 @@
             "time": "00:55",
             "text": "Did George Soros Get Arrested in the US? Here’s What We Know",
             "link": "https://coinpaper.com/15250/did-george-soros-get-arrested-in-the-us-here-s-what-we-know"
-        },
-        {
-            "time": "00:50",
-            "text": "Ethereum at a Breaking Point as ETH/BTC Stalls and $2,340 Comes Into View",
-            "link": "https://coinpaper.com/15249/ethereum-at-a-breaking-point-as-eth-btc-stalls-and-2-340-comes-into-view"
         }
     ]
 }
