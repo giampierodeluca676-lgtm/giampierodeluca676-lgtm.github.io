@@ -1,11 +1,16 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.806,72",
+    "price": "€ 57.776,32",
     "signal": "BEARISH",
-    "reliability": "97%",
-    "last_update": "05:30:33",
-    "ticker": "BTC/EUR: € 57.806,72 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 05:30:33 • ",
+    "reliability": "99%",
+    "last_update": "05:35:35",
+    "ticker": "BTC/EUR: € 57.776,32 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 05:35:35 • ",
     "news": [
+        {
+            "time": "05:30",
+            "text": "Seattle Court Sentences Former CFO for Unauthorized $35M Cryptocurrency Gamble",
+            "link": "https://news.bitcoin.com/seattle-court-sentences-former-cfo-for-unauthorized-35m-cryptocurrency-gamble/"
+        },
         {
             "time": "05:21",
             "text": "Bitcoin Holds Steady as Geopolitical Tensions Rattle Crypto Markets",
@@ -30,11 +35,6 @@
             "time": "04:30",
             "text": "US Judge Throws out Lawsuit Against Binance and CZ Over Claims of Funding Linked to Violent Attacks",
             "link": "https://news.bitcoin.com/us-judge-throws-out-lawsuit-against-binance-and-cz-over-claims-of-funding-linked-to-violent-attacks/"
-        },
-        {
-            "time": "04:00",
-            "text": "Aave’s revenue surges despite DAO turmoil – Is lending DeFi’s backbone now?",
-            "link": "https://ambcrypto.com/aaves-revenue-surges-despite-dao-turmoil-is-lending-defis-backbone-now/"
         }
     ]
 }
