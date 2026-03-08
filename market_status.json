@@ -1,15 +1,20 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.952,06",
-    "signal": "BULLISH",
+    "price": "€ 57.941,38",
+    "signal": "BEARISH",
     "reliability": "98%",
-    "last_update": "07:06:15",
-    "ticker": "BTC/EUR: € 57.952,06 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 07:06:15 • ",
+    "last_update": "07:11:17",
+    "ticker": "BTC/EUR: € 57.941,38 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 07:11:17 • ",
     "news": [
         {
             "time": "07:02",
             "text": "XRP News: Ripple CEO Says Investors Will Be Very Happy in 5 Years",
             "link": "https://thecryptobasic.com/2026/03/08/xrp-news-ripple-ceo-says-investors-will-be-very-happy-in-5-years/"
+        },
+        {
+            "time": "06:59",
+            "text": "Bitcoin’s Liquidation Map Reveals Asset’s Potential Near-Term Move",
+            "link": "https://zycrypto.com/bitcoins-liquidation-map-reveals-assets-potential-near-term-move/"
         },
         {
             "time": "06:41",
@@ -30,11 +35,6 @@
             "time": "06:16",
             "text": "Bitcoin dip may not be over as whales sell into retail buying — a bearish signal",
             "link": "https://www.coindesk.com/markets/2026/03/08/bitcoin-dip-may-not-be-over-as-whales-sell-into-retail-buying-a-bearish-signal"
-        },
-        {
-            "time": "06:14",
-            "text": "Top crypto to watch: Pi Network, Polkadot, Sei, Pump, Starknet",
-            "link": "https://invezz.com/news/2026/03/08/top-crypto-to-watch-pi-network-polkadot-sei-pump-starknet/"
         }
     ]
 }
