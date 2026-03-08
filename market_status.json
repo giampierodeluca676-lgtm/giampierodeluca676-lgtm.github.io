@@ -1,11 +1,21 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.926,50",
-    "signal": "BULLISH",
-    "reliability": "97%",
-    "last_update": "06:31:00",
-    "ticker": "BTC/EUR: € 57.926,50 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 06:31:00 • ",
+    "price": "€ 57.888,58",
+    "signal": "BEARISH",
+    "reliability": "99%",
+    "last_update": "06:36:02",
+    "ticker": "BTC/EUR: € 57.888,58 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 06:36:02 • ",
     "news": [
+        {
+            "time": "06:30",
+            "text": "South African Economist Flags Authoritarian Risks in CBDCs",
+            "link": "https://news.bitcoin.com/south-african-economist-flags-authoritarian-risks-in-cbdcs/"
+        },
+        {
+            "time": "06:30",
+            "text": "The rise of yield infrastructure for long-term crypto holders",
+            "link": "https://ambcrypto.com/the-rise-of-yield-infrastructure-for-long-term-crypto-holders/"
+        },
         {
             "time": "06:16",
             "text": "Bitcoin dip may not be over as whales sell into retail buying — a bearish signal",
@@ -25,16 +35,6 @@
             "time": "06:06",
             "text": "XRP slips as traders watch $1.35 support",
             "link": "https://www.coindesk.com/markets/2026/03/08/xrp-slips-as-traders-watch-usd1-35-support"
-        },
-        {
-            "time": "06:00",
-            "text": "Satoshi Nakamoto’s Bitcoin Could Get Stolen, But A BTC Dev Has Proprosed A Solution",
-            "link": "https://bitcoinist.com/satoshi-bitcoin-risk-stolen/"
-        },
-        {
-            "time": "05:30",
-            "text": "Seattle Court Sentences Former CFO for Unauthorized $35M Cryptocurrency Gamble",
-            "link": "https://news.bitcoin.com/seattle-court-sentences-former-cfo-for-unauthorized-35m-cryptocurrency-gamble/"
         }
     ]
 }
