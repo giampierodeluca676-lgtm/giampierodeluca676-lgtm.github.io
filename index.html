@@ -171,118 +171,101 @@
 <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 
 <script>
-// 1. TRADINGVIEW WIDGET (Lascia quello che hai già)
+// 1. TRADINGVIEW WIDGET
 new TradingView.widget({
     "autosize": true,
     "symbol": "BINANCE:BTCUSDT",
-    "interval": "15",
+    "interval": "1",
     "timezone": "Europe/Rome",
     "theme": "dark",
     "style": "1",
     "locale": "it",
-    "toolbar_bg": "#f1f3f6",
     "enable_publishing": false,
     "hide_top_toolbar": false,
     "save_image": false,
     "container_id": "main-chart"
 });
 
-// 2. SYNC DATI DAL BOT (VERSIONE ANTI-TRATTINI OTTIMIZZATA)
+// 2. WEBSOCKET REAL-TIME (PREZZO AL SECONDO)
+const priceEl = document.getElementById('price');
+const btcSocket = new WebSocket('wss://stream.binance.com:9443/ws/btcusdt@ticker');
+
+btcSocket.onmessage = (event) => {
+    const data = JSON.parse(event.data);
+    const price = parseFloat(data.c).toFixed(2);
+    const oldPrice = parseFloat(priceEl.innerText.replace('€ ', '').replace('.', ''));
+    
+    priceEl.innerText = '€ ' + parseFloat(data.c).toLocaleString('it-IT', {minimumFractionDigits: 2});
+    if (parseFloat(data.c) > oldPrice) priceEl.style.color = "#22c55e";
+    else if (parseFloat(data.c) < oldPrice) priceEl.style.color = "#ef4444";
+    setTimeout(() => { priceEl.style.color = "white"; }, 500);
+};
+
+// 3. SYNC DATI BOT (SEGNALE E RELIABILITY)
 async function sync() {
     try {
-        const r = await fetch('market_status.json?v=' + new Date().getTime());
-        if (!r.ok) throw new Error('File non raggiungibile');
-        
+        const r = await fetch('market_status.json?v=' + Date.now());
         const d = await r.json();
         
         const signalEl = document.getElementById('signal');
-        const priceEl = document.getElementById('price');
         const relEl = document.getElementById('reliability-val');
-        const statusEl = document.querySelector('.text-green-500.font-bold.mono');
 
-        // Aggiorna Segnale
-        if (d.signal && signalEl) {
+        if (d.signal) {
             signalEl.innerText = d.signal;
-            signalEl.className = d.signal === "BULLISH" ? 
-                "text-3xl font-black mono text-green-500" : 
-                "text-3xl font-black mono text-red-500";
+            signalEl.className = d.signal === "BULLISH" ? "text-3xl font-black mono text-green-500" : "text-3xl font-black mono text-red-500";
         }
 
-        // Aggiorna Prezzo
-        if(priceEl && d.price) {
-            priceEl.innerText = d.price;
-            priceEl.style.color = "white"; 
-        }
+        if (d.reliability) relEl.innerText = d.reliability;
 
-        // Aggiorna Reliability
-        if(relEl && d.reliability) {
-            relEl.innerText = d.reliability;
+        if (d.news) {
+            document.getElementById('news-container').innerHTML = d.news.map(n => `
+                <div class="border-b border-white/5 pb-3">
+                    <span class="text-[10px] mono text-blue-500 font-bold">${n.time}</span>
+                    <a href="${n.link}" target="_blank" class="block mt-1 text-sm hover:text-blue-400 transition-colors italic">${n.text}</a>
+                </div>
+            `).join('');
         }
-
-        // Aggiorna News Feed
-        if (d.news && d.news.length > 0) {
-            const newsContainer = document.getElementById('news-container');
-            if (newsContainer) {
-                newsContainer.innerHTML = d.news.map(n => `
-                    <div class="group border-b border-white/5 pb-3 transition-all hover:pl-2">
-                        <span class="text-[10px] mono text-blue-500 font-bold">${n.time}</span>
-                        <a href="${n.link}" target="_blank" class="block mt-1 font-medium group-hover:text-blue-400 transition-colors italic">${n.text}</a>
-                    </div>
-                `).join('');
-            }
-        }
-        
-        // Aggiorna Ticker
-        const tickerEl = document.querySelector('.animate-\\[scroll_40s_linear_infinite\\]');
-        if(tickerEl && d.ticker) {
-            tickerEl.innerText = d.ticker.repeat(3);
-        }
-
-    } catch(e) { 
-        console.error("Errore Sync:", e);
-    }
+    } catch(e) { console.log("Sync Error"); }
 }
 
-// 3. UI HELPERS
-function toggleIntelligence() {
-    const o = document.getElementById('intelligence-overlay');
-    if (o.classList.contains('invisible')) {
-        o.classList.remove('invisible', 'opacity-0');
-        document.body.style.overflow = 'hidden';
-        loadIntelligenceReports();
-    } else {
-        o.classList.add('invisible', 'opacity-0');
-        document.body.style.overflow = '';
-    }
-}
-
+// 4. INTELLIGENCE REPORT (NUOVO LAYOUT 3 COLONNE)
 async function loadIntelligenceReports() {
     const area = document.getElementById('reports-display-area');
-    const currentReliability = document.getElementById('reliability-val')?.innerText || "98%";
-    area.innerHTML = '<div class="mono text-red-600 animate-pulse text-xl">DECRIPTING PACKETS...</div>';
+    const price = document.getElementById('price').innerText;
+    const signal = document.getElementById('signal').innerText;
+    const rel = document.getElementById('reliability-val').innerText;
+    
+    area.innerHTML = '<div class="mono text-red-600 animate-pulse text-xl">DECRIPTING...</div>';
     try {
         const response = await fetch('latest_report.html?v=' + Date.now());
-        if (response.ok) {
-            let text = await response.text();
-            const reliabilityHeader = `
-                <div class="mb-8 p-4 border-l-4 border-yellow-500 bg-yellow-500/5 rounded-r-xl">
-                    <span class="text-[10px] mono text-yellow-500 uppercase font-bold tracking-widest">Calculated Reliability</span>
-                    <div class="text-3xl font-black mono text-white">${currentReliability}</div>
-                </div>`;
-            area.innerHTML = `<div class="prose prose-invert max-w-none text-gray-300">${reliabilityHeader}${text}</div>`;
-        }
+        const text = await response.text();
+        
+        const header = `
+            <div class="grid grid-cols-3 gap-4 mb-8 p-4 bg-white/5 border border-white/10 rounded-xl text-center">
+                <div><span class="text-[9px] uppercase text-gray-500 font-bold">Market Price</span><div class="text-lg font-black mono">${price}</div></div>
+                <div><span class="text-[9px] uppercase text-gray-500 font-bold">Signal</span><div class="text-lg font-black mono text-blue-400">${signal}</div></div>
+                <div><span class="text-[9px] uppercase text-gray-500 font-bold">Reliability</span><div class="text-lg font-black mono text-yellow-500">${rel}</div></div>
+            </div>`;
+        
+        area.innerHTML = `<div class="prose prose-invert max-w-none">${header}${text}</div>`;
     } catch (e) { area.innerHTML = 'Signal Lost.'; }
+}
+
+function toggleIntelligence() {
+    const o = document.getElementById('intelligence-overlay');
+    o.classList.toggle('invisible');
+    o.classList.toggle('opacity-0');
+    if (!o.classList.contains('invisible')) loadIntelligenceReports();
 }
 
 function updateDateTime() {
     const now = new Date();
-    document.getElementById('live-date').innerText = now.toLocaleDateString('it-IT', {day:'2-digit', month:'long', year:'numeric'}).toUpperCase();
+    document.getElementById('live-date').innerText = now.toLocaleDateString('it-IT', {day:'2-digit', month:'long'}).toUpperCase();
     document.getElementById('live-clock').innerText = now.toLocaleTimeString('it-IT', {hour12: false});
 }
 
-// 4. AVVIO SISTEMA
-setInterval(updateDateTime, 1000); 
-setInterval(sync, 10000); // Sincronizza ogni 10 secondi
+setInterval(updateDateTime, 1000);
+setInterval(sync, 10000);
 updateDateTime();
 sync();
 </script>
