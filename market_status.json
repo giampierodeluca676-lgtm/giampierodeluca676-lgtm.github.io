@@ -1,11 +1,16 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.718,28",
+    "price": "€ 57.712,98",
     "signal": "BEARISH",
     "reliability": "99%",
-    "last_update": "03:59:58",
-    "ticker": "BTC/EUR: € 57.718,28 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 03:59:58 • ",
+    "last_update": "04:05:00",
+    "ticker": "BTC/EUR: € 57.712,98 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 04:05:00 • ",
     "news": [
+        {
+            "time": "04:00",
+            "text": "Aave’s revenue surges despite DAO turmoil – Is lending DeFi’s backbone now?",
+            "link": "https://ambcrypto.com/aaves-revenue-surges-despite-dao-turmoil-is-lending-defis-backbone-now/"
+        },
         {
             "time": "02:30",
             "text": "Coinbase Opens 84 Countries to ‘Everything Exchange’ Ecosystem Through Integrated Decentralized Trading",
@@ -30,11 +35,6 @@
             "time": "01:30",
             "text": "Ripple’s Global Payments Expansion Strengthens XRP’s Institutional Role",
             "link": "https://news.bitcoin.com/ripples-global-payments-expansion-strengthens-xrps-institutional-role/"
-        },
-        {
-            "time": "01:30",
-            "text": "Solana’s 755% Surge Shows That Users Are Coming Back To The Table",
-            "link": "https://bitcoinist.com/solana-users-are-coming-back/"
         }
     ]
 }
