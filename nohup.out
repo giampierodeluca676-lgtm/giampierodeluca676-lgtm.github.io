@@ -1,0 +1,11 @@
+[main e77c10e87] 📊 KEYGAP GLOBAL REPORT Update 02:09:38
+ 6 files changed, 14 insertions(+), 9 deletions(-)
+ create mode 100644 nohup.out
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   4f3344196..e77c10e87  main -> main
+🔥 KEYGAP_ADVANTAGE CORE - Avviato e monitorato.
+✅ [KEYGAP_ADVANTAGE] REPORT GENERATO: € 58.017,79 | SIGNAL: BULLISH
+Traceback (most recent call last):
+  File "/home/linuxlite/Desktop/Keygap_AdVantage/KEYGAP_ADVANTAGE.py", line 226, in <module>
+    time.sleep(300)
+KeyboardInterrupt
