@@ -189,9 +189,7 @@ new TradingView.widget({
 
 // 2. WEBSOCKET PER PREZZO IN TEMPO REALE
 const priceEl = document.getElementById('price');
-const btcSocket = new WebSocket('wss://stream.binance.com:9443/ws/btcusdt@ticker');
 
-btcSocket.onmessage = (event) => {
     const data = JSON.parse(event.data);
     const price = parseFloat(data.c).toFixed(2);
     const oldPrice = parseFloat(priceEl.innerText);
@@ -203,39 +201,47 @@ btcSocket.onmessage = (event) => {
     setTimeout(() => { priceEl.style.color = "white"; }, 300);
 };
 
-// 3. SYNC DATI DAL BOT (VERSIONE DEFINITIVA ANTI-TRATTINI)
+// 3. SYNC DATI DAL BOT (VERSIONE ANTI-TRATTINI OTTIMIZZATA)
 async function sync() {
     try {
-        // Aggiungiamo il timestamp per bypassare la cache di GitHub
-        const r = await fetch('market_status.json?nocache=' + new Date().getTime());
-        if (!r.ok) throw new Error('File non trovato');
+        // Usiamo il timestamp per forzare il download del file più recente da GitHub
+        const r = await fetch('market_status.json?v=' + new Date().getTime());
+        if (!r.ok) throw new Error('File market_status.json non raggiungibile');
         
         const d = await r.json();
         
         const signalEl = document.getElementById('signal');
         const priceEl = document.getElementById('price');
         const relEl = document.getElementById('reliability-val');
-        
-        // 1. Aggiorna Segnale
+        const statusEl = document.querySelector('.text-green-500.font-bold.mono'); // Selettore per Network Status
+
+        // 1. Aggiorna Segnale (BULLISH/BEARISH)
         if (d.signal && signalEl) {
             signalEl.innerText = d.signal;
-            if(d.signal === "BULLISH") signalEl.className = "text-3xl font-black mono text-green-500";
-            else if(d.signal === "BEARISH") signalEl.className = "text-3xl font-black mono text-red-500";
-            else signalEl.className = "text-3xl font-black mono text-blue-400";
+            if(d.signal === "BULLISH") {
+                signalEl.className = "text-3xl font-black mono text-green-500";
+            } else if(d.signal === "BEARISH") {
+                signalEl.className = "text-3xl font-black mono text-red-500";
+            }
         }
 
-        // 2. Aggiorna Prezzo (Disattiviamo temporaneamente il cambio colore del websocket per evitare i trattini)
+        // 2. Aggiorna Prezzo (Es: € 58.114,64)
         if(priceEl && d.price) {
             priceEl.innerText = d.price;
-            priceEl.style.color = "white"; 
+            priceEl.style.color = "white"; // Reset colore per evitare il grigio dei trattini
         }
 
-        // 3. Aggiorna Reliability Index
+        // 3. Aggiorna Reliability Index (Es: 98%)
         if(relEl && d.reliability) {
             relEl.innerText = d.reliability;
         }
 
-        // 4. Aggiorna News
+        // 4. Aggiorna Network Status (OPERATIVO)
+        if(statusEl && d.status) {
+            statusEl.innerText = d.status.toUpperCase();
+        }
+
+        // 5. Aggiorna News Feed
         if (d.news && d.news.length > 0) {
             const newsContainer = document.getElementById('news-container');
             if (newsContainer) {
@@ -248,14 +254,15 @@ async function sync() {
             }
         }
         
-        // 5. Aggiorna Ticker
+        // 6. Aggiorna Ticker Scorrevole in basso
         const tickerEl = document.querySelector('.animate-\\[scroll_40s_linear_infinite\\]');
         if(tickerEl && d.ticker) {
             tickerEl.innerText = d.ticker.repeat(3);
         }
 
     } catch(e) { 
-        console.log("Errore critico sincronizzazione:", e); 
+        console.error("Errore Sync Keygap:", e);
+        // In caso di errore, non resettare a trattini, mantieni gli ultimi dati validi
     }
 }
 <script>
