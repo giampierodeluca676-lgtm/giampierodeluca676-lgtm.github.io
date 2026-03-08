@@ -1,10 +1,10 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.900,67",
-    "signal": "BULLISH",
-    "reliability": "97%",
-    "last_update": "07:46:30",
-    "ticker": "BTC/EUR: € 57.900,67 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 07:46:30 • ",
+    "price": "€ 57.885,72",
+    "signal": "BEARISH",
+    "reliability": "98%",
+    "last_update": "07:51:31",
+    "ticker": "BTC/EUR: € 57.885,72 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 07:51:31 • ",
     "news": [
         {
             "time": "07:33",
