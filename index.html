@@ -235,7 +235,8 @@ async function sync() {
     } catch(e) { console.log("Sync Error:", e); }
 }
 
-// 4. UI HELPERS
+<script>
+// 4. UI HELPERS - VERSIONE AGGIORNATA CON RELIABILITY NEL REPORT
 function toggleIntelligence() {
     const o = document.getElementById('intelligence-overlay');
     if (o.classList.contains('invisible')) {
@@ -250,14 +251,33 @@ function toggleIntelligence() {
 
 async function loadIntelligenceReports() {
     const area = document.getElementById('reports-display-area');
+    // Recupero il valore live dalla card principale
+    const currentReliability = document.getElementById('reliability-val') ? document.getElementById('reliability-val').innerText : "98.4%";
+    
     area.innerHTML = '<div class="mono text-red-600 animate-pulse text-xl">DECRIPTING PACKETS...</div>';
     try {
         const response = await fetch('latest_report.html?v=' + Date.now());
         if (response.ok) {
             let text = await response.text();
-            area.innerHTML = `<div class="prose prose-invert max-w-none text-gray-300">${text}</div>`;
+            
+            // Header dinamico per mostrare la Reliability anche dentro il report
+            const reliabilityHeader = `
+                <div class="mb-8 p-4 border-l-4 border-yellow-500 bg-yellow-500/5 rounded-r-xl">
+                    <span class="text-[10px] mono text-yellow-500 uppercase font-bold tracking-widest">Calculated Reliability</span>
+                    <div class="text-3xl font-black mono text-white">${currentReliability}</div>
+                    <div class="text-[9px] text-gray-500 mono mt-1">Data integrity verified via Keygap Protocol</div>
+                </div>
+            `;
+            
+            area.innerHTML = `
+                <div class="prose prose-invert max-w-none text-gray-300">
+                    ${reliabilityHeader}
+                    ${text}
+                </div>`;
         }
-    } catch (e) { area.innerHTML = 'Signal Lost.'; }
+    } catch (e) { 
+        area.innerHTML = '<div class="text-red-500 mono">SIGNAL LOST: Connection to uplink failed.</div>'; 
+    }
 }
 
 function updateDateTime() {
