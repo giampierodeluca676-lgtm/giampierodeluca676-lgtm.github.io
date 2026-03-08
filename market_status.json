@@ -1,15 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.807,34",
-    "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "04:25:09",
-    "ticker": "BTC/EUR: € 57.807,34 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 04:25:09 • ",
+    "price": "€ 57.781,10",
+    "signal": "BEARISH",
+    "reliability": "99%",
+    "last_update": "04:30:10",
+    "ticker": "BTC/EUR: € 57.781,10 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 04:30:10 • ",
     "news": [
         {
-            "time": "SYS",
-            "text": "Sincronizzazione flussi globali in corso...",
-            "link": "#"
+            "time": "04:00",
+            "text": "Aave’s revenue surges despite DAO turmoil – Is lending DeFi’s backbone now?",
+            "link": "https://ambcrypto.com/aaves-revenue-surges-despite-dao-turmoil-is-lending-defis-backbone-now/"
+        },
+        {
+            "time": "02:30",
+            "text": "Coinbase Opens 84 Countries to ‘Everything Exchange’ Ecosystem Through Integrated Decentralized Trading",
+            "link": "https://news.bitcoin.com/coinbase-opens-84-countries-to-everything-exchange-ecosystem-through-integrated-decentralized-trading/"
+        },
+        {
+            "time": "02:00",
+            "text": "‘You’ll burn down your home?’ – Trump crypto advisor slams banks’ position on CLARITY Act",
+            "link": "https://ambcrypto.com/youll-burn-down-your-home-trump-crypto-advisor-slams-banks-position-on-clarity-act/"
+        },
+        {
+            "time": "01:40",
+            "text": "Sundar Pichai’s Staggering $692M Google Pay Package Reveals High-Stakes Performance Gamble",
+            "link": "https://bitcoinworld.co.in/sundar-pichai-google-pay-package/"
+        },
+        {
+            "time": "01:30",
+            "text": "Pundit Says XRP Price Could Reach $1,000 By End Of 2026 If This Happens",
+            "link": "https://www.newsbtc.com/altcoin/pundit-says-xrp-price-could-reach-1000-by-end-of-2026-if-this-happens/"
+        },
+        {
+            "time": "01:30",
+            "text": "Ripple’s Global Payments Expansion Strengthens XRP’s Institutional Role",
+            "link": "https://news.bitcoin.com/ripples-global-payments-expansion-strengthens-xrps-institutional-role/"
         }
     ]
 }
