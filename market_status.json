@@ -1,11 +1,21 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.757,55",
+    "price": "€ 57.811,46",
     "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "06:15:55",
-    "ticker": "BTC/EUR: € 57.757,55 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 06:15:55 • ",
+    "reliability": "97%",
+    "last_update": "06:20:56",
+    "ticker": "BTC/EUR: € 57.811,46 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 06:20:56 • ",
     "news": [
+        {
+            "time": "06:16",
+            "text": "Bitcoin dip may not be over as whales sell into retail buying — a bearish signal",
+            "link": "https://www.coindesk.com/markets/2026/03/08/bitcoin-dip-may-not-be-over-as-whales-sell-into-retail-buying-a-bearish-signal"
+        },
+        {
+            "time": "06:14",
+            "text": "Top crypto to watch this week: Pi Network, Polkadot, Sei, Pump, and Starknet",
+            "link": "https://invezz.com/news/2026/03/08/top-crypto-to-watch-this-week-pi-network-polkadot-sei-pump-and-starknet/"
+        },
         {
             "time": "06:06",
             "text": "XRP slips as traders watch $1.35 support",
@@ -25,16 +35,6 @@
             "time": "05:21",
             "text": "Bitcoin Holds Steady as Geopolitical Tensions Rattle Crypto Markets",
             "link": "https://en.coin-turk.com/bitcoin-holds-steady-as-geopolitical-tensions-rattle-crypto-markets/"
-        },
-        {
-            "time": "05:00",
-            "text": "Solana – What to expect when bullish fundamentals meet bearish market reality",
-            "link": "https://ambcrypto.com/solana-what-to-expect-when-bullish-fundamentals-meet-bearish-market-reality/"
-        },
-        {
-            "time": "04:30",
-            "text": "Grok, Claude, Qwen, ChatGPT, and More: 9 AI Models Predict Bitcoin’s Next Price Path",
-            "link": "https://news.bitcoin.com/grok-claude-qwen-chatgpt-and-more-9-ai-models-predict-bitcoins-next-price-path/"
         }
     ]
 }
