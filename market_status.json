@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.494,64",
-    "signal": "BULLISH",
+    "price": "€ 57.739,73",
+    "signal": "BEARISH",
     "reliability": "97%",
-    "last_update": "11:04:16",
-    "ticker": "BTC/EUR: € 58.494,64 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 11:04:16 • ",
+    "last_update": "17:45:55",
+    "ticker": "BTC/EUR: € 57.739,73 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 17:45:55 • ",
     "news": [
         {
-            "time": "11:02",
-            "text": "Analyst Says XRP Huge Breakout Coming Next Week. Here’s why",
-            "link": "https://timestabloid.com/analyst-says-xrp-huge-breakout-coming-next-week-heres-why/"
+            "time": "17:36",
+            "text": "Ethereum Teeters Below $2,000 as Technical Signals Flash Mounting Pressure",
+            "link": "https://news.bitcoin.com/ethereum-teeters-below-2000-as-technical-signals-flash-mounting-pressure/"
         },
         {
-            "time": "11:00",
-            "text": "ETH price alert: $2,100 floor recovered amid whales tracking ethereum-based protocols",
-            "link": "https://ambcrypto.com/eth-price-alert-2100-floor-recovered-amid-whales-tracking-ethereum-based-protocols/"
+            "time": "17:30",
+            "text": "\"Tough One\": Cardano Foundation CEO Breaks Down the Road to European Tokenization",
+            "link": "https://u.today/tough-one-cardano-foundation-ceo-breaks-down-road-to-european-tokenization"
         },
         {
-            "time": "11:00",
-            "text": "Solana vs Ethereum – $4.4T traded, RWA holders flipped – But who wins?",
-            "link": "https://ambcrypto.com/solana-vs-ethereum-4-4t-traded-rwa-holders-flipped-but-who-wins/"
+            "time": "17:25",
+            "text": "Shiba Inu Exchange Netflow Drops as Traders Accumulate Over 131B SHIB",
+            "link": "https://coinpaper.com/15253/shiba-inu-exchange-netflow-drops-as-traders-accumulate-over-131-b-shib"
         },
         {
-            "time": "10:36",
-            "text": "Ordinals price prediction 2026 – 2032: Can ORDI surge 100X?",
-            "link": "https://www.cryptopolitan.com/ordinals-price-prediction/"
+            "time": "17:15",
+            "text": "OpenAI GPT-5.4 vs xAI Grok 4.20: Which AI Chatbot Is Best for You?",
+            "link": "https://decrypt.co/360302/review-openai-gpt-5-4-vs-xai-grok-4-20-which-ai-best-you"
         },
         {
-            "time": "10:30",
-            "text": "Nexo Expands to Argentina to Redefine Digital Dollar Savings",
-            "link": "https://news.bitcoin.com/nexo-expands-to-argentina-to-redefine-digital-dollar-savings/"
+            "time": "17:01",
+            "text": "Bitcoin ETFs Draw $57 Billion in Two Years, Surpassing Gold’s Early Growth",
+            "link": "https://en.coin-turk.com/bitcoin-etfs-draw-57-billion-in-two-years-surpassing-golds-early-growth/"
         },
         {
-            "time": "10:27",
-            "text": "Bitcoin miners sell reserves and pivot to AI as volatility bites",
-            "link": "https://coinpaprika.com/news/bitcoin-miners-sell-reserves-pivot-to-ai-volatility"
+            "time": "17:00",
+            "text": "Lighter buybacks hit 3% of supply – But LIT holds above $1 IF…",
+            "link": "https://ambcrypto.com/lighter-buybacks-hit-3-of-supply-but-lit-holds-above-1-if/"
         }
     ]
 }

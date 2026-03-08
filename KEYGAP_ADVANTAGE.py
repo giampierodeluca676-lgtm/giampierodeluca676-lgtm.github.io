@@ -216,23 +216,28 @@ def run_update():
         print(f"❌ Errore aggiornamento professionale: {e}")
 
 if __name__ == "__main__":
-    print("🔥 KEYGAP_ADVANTAGE CORE - Avviato e monitorato.")
+    print("🚀 KEYGAP_ADVANTAGE CORE - Modalità Real-Time Attiva.")
+    print("📈 Aggiornamento automatico impostato ogni 30 minuti.")
+    
     while True:
         now = datetime.now()
+        print(f"🔄 Avvio ciclo di aggiornamento: {now.strftime('%H:%M:%S')}")
         
-        # CONTROLLO ORARIO: 08:30 o 20:30
-        if (now.hour == 8 and now.minute == 30) or (now.hour == 20 and now.minute == 30):
-            print(f"🚀 Orario di pubblicazione raggiunto: {now.strftime('%H:%M')}")
-            
-            # 1. Crea il report solo quando serve
+        try:
+            # 1. Recupera news fresche e aggiorna il prezzo
             run_update() 
             
-            # 2. Inviarlo a Blogger
+            # 2. Pubblica l'articolo professionale su Blogger e GitHub
             pubblica()
             
-            print("✅ Operazione completata. Prossimo check tra 12 ore.")
-            # Dorme per 70 secondi per superare il minuto critico ed evitare doppioni
-            time.sleep(70) 
-        
-        # Il bot controlla l'orario ogni 30 secondi senza creare file
-        time.sleep(30)
+            print(f"✅ Operazione completata con successo alle {datetime.now().strftime('%H:%M:%S')}")
+            print("💤 Prossimo aggiornamento tra 30 minuti...")
+            
+        except Exception as e:
+            print(f"⚠️ Errore durante il ciclo: {e}")
+            print("🔄 Tentativo di ripristino tra 60 secondi...")
+            time.sleep(60)
+            continue
+
+        # Dorme per 1800 secondi (esattamente 30 minuti)
+        time.sleep(1800)
