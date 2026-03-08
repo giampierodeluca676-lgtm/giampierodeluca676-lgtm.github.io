@@ -1,10 +1,10 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.045,62",
+    "price": "€ 58.006,85",
     "signal": "BEARISH",
-    "reliability": "99%",
-    "last_update": "02:59:37",
-    "ticker": "BTC/EUR: € 58.045,62 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 02:59:37 • ",
+    "reliability": "98%",
+    "last_update": "03:04:38",
+    "ticker": "BTC/EUR: € 58.006,85 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 03:04:38 • ",
     "news": [
         {
             "time": "02:30",
@@ -32,9 +32,9 @@
             "link": "https://news.bitcoin.com/ripples-global-payments-expansion-strengthens-xrps-institutional-role/"
         },
         {
-            "time": "01:05",
-            "text": "Shiba Inu Records -131 Billion in 24 Hours: Negative Netflow Signals Growing Demand",
-            "link": "https://u.today/shiba-inu-records-131-billion-in-24-hours-negative-netflow-signals-growing-demand"
+            "time": "01:30",
+            "text": "Solana’s 755% Surge Shows That Users Are Coming Back To The Table",
+            "link": "https://bitcoinist.com/solana-users-are-coming-back/"
         }
     ]
 }
