@@ -1,11 +1,16 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 57.631,60",
+    "price": "€ 57.707,78",
     "signal": "BULLISH",
     "reliability": "99%",
-    "last_update": "06:05:51",
-    "ticker": "BTC/EUR: € 57.631,60 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 06:05:51 • ",
+    "last_update": "06:10:53",
+    "ticker": "BTC/EUR: € 57.707,78 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 06:10:53 • ",
     "news": [
+        {
+            "time": "06:06",
+            "text": "XRP slips as traders watch $1.35 support",
+            "link": "https://www.coindesk.com/markets/2026/03/08/xrp-slips-as-traders-watch-usd1-35-support"
+        },
         {
             "time": "06:00",
             "text": "Satoshi Nakamoto’s Bitcoin Could Get Stolen, But A BTC Dev Has Proprosed A Solution",
@@ -30,11 +35,6 @@
             "time": "04:30",
             "text": "Grok, Claude, Qwen, ChatGPT, and More: 9 AI Models Predict Bitcoin’s Next Price Path",
             "link": "https://news.bitcoin.com/grok-claude-qwen-chatgpt-and-more-9-ai-models-predict-bitcoins-next-price-path/"
-        },
-        {
-            "time": "04:30",
-            "text": "Florida Passes First State-Level Stablecoin Bill — Crypto CLARITY Act Next?",
-            "link": "https://bitcoinist.com/florida-state-level-stablecoin-bill-crypto-next/"
         }
     ]
 }
