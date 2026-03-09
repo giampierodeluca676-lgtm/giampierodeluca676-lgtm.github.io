@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 59.686,70",
+    "price": "€ 59.747,99",
     "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "14:49:31",
-    "ticker": "BTC/EUR: € 59.686,70 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 14:49:31 • ",
+    "reliability": "98%",
+    "last_update": "15:19:37",
+    "ticker": "BTC/EUR: € 59.747,99 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 15:19:37 • ",
     "news": [
         {
-            "time": "14:45",
-            "text": "Nasdaq Partners With Kraken for Tokenized Stocks, Launching 2027",
-            "link": "https://decrypt.co/360403/nasdaq-partners-with-kraken-for-tokenized-stocks-launching-2027"
+            "time": "15:15",
+            "text": "EUR/JPY Surges: Oil Price Shock and BoJ Hesitation Crush the Yen",
+            "link": "https://bitcoinworld.co.in/eur-jpy-gains-oil-boj-yen/"
         },
         {
-            "time": "14:44",
-            "text": "Strategy splashes $1.2B in biggest BTC weekly purchase since January",
-            "link": "https://www.cryptopolitan.com/strategy-strong-weekly-buying-with-17994-btc/"
+            "time": "15:15",
+            "text": "Morning Minute: Bitcoin Rebounds to $69K as Oil Skyrockets, Then Cools",
+            "link": "https://decrypt.co/360397/morning-minute-bitcoin-rebounds-to-69k-as-oil-skyrockets-then-cools"
         },
         {
-            "time": "14:43",
-            "text": "Cardano Price Prediction as Foundation Approves 300M ADA Governance Plan",
-            "link": "https://coinpaper.com/15283/cardano-price-prediction-as-foundation-approves-300-m-ada-governance-plan"
+            "time": "15:14",
+            "text": "Coinbase Launches Crypto Futures Trading for 26 European Countries",
+            "link": "https://coinpaper.com/15287/coinbase-launches-crypto-futures-trading-for-26-european-countries"
         },
         {
-            "time": "14:42",
-            "text": "Bitcoiners celebrate as the network produces its 20 millionth coin",
-            "link": "https://cointelegraph.com/news/bitcoin-mined-20-million-executives-speculate-1-million-left?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            "time": "15:10",
+            "text": "Federal Reserve Faces Daunting Dilemma: Weak NFP Complicates Response to Oil Shock – MUFG Analysis",
+            "link": "https://bitcoinworld.co.in/fed-nfp-oil-shock-mufg/"
         },
         {
-            "time": "14:41",
-            "text": "US Tech Firm Ramps Up Bitcoin Holdings with $1.28 Billion Weekly Purchase",
-            "link": "https://en.coin-turk.com/us-tech-firm-ramps-up-bitcoin-holdings-with-1-28-billion-weekly-purchase/"
+            "time": "15:05",
+            "text": "US Stocks Open Lower: Market Plunge Rattles Investors as Major Indices Decline",
+            "link": "https://bitcoinworld.co.in/us-stocks-open-lower-market-decline/"
         },
         {
-            "time": "14:40",
-            "text": "Kairos Prediction Market Revolutionizes Trading with Strategic Opinion Order Book Integration",
-            "link": "https://bitcoinworld.co.in/kairos-opinion-order-book-integration/"
+            "time": "15:05",
+            "text": "Developer to XRP Holders: Do You Guys See What’s Happening Right Now?",
+            "link": "https://timestabloid.com/developer-to-xrp-holders-do-you-guys-see-whats-happening-right-now/"
         }
     ]
 }
