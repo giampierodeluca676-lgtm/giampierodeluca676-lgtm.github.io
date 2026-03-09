@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 59.452,64",
-    "signal": "BULLISH",
+    "price": "€ 59.202,72",
+    "signal": "BEARISH",
     "reliability": "97%",
-    "last_update": "21:21:01",
-    "ticker": "BTC/EUR: € 59.452,64 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 21:21:01 • ",
+    "last_update": "21:51:07",
+    "ticker": "BTC/EUR: € 59.202,72 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 21:51:07 • ",
     "news": [
         {
-            "time": "21:15",
-            "text": "USDC Minted: Whale Alert Spots Stunning 350 Million Stablecoin Creation",
-            "link": "https://bitcoinworld.co.in/usdc-minted-whale-alert-stablecoin/"
+            "time": "21:42",
+            "text": "BAT Technical Analysis March 9, 2026: Will It Rise or Fall?",
+            "link": "https://en.coinotag.com/analysis/bat-technical-analysis-march-9-2026-will-it-rise-or-fall"
         },
         {
-            "time": "21:13",
-            "text": "THETA Technical Analysis March 9, 2026: RSI MACD Momentum",
-            "link": "https://en.coinotag.com/analysis/theta-technical-analysis-march-9-2026-rsi-macd-momentum"
+            "time": "21:35",
+            "text": "USD/JPY Price Forecast Surges as Safe-Haven US Dollar Gains Momentum Amid Global Uncertainty",
+            "link": "https://bitcoinworld.co.in/usd-jpy-forecast-dollar-gains/"
         },
         {
-            "time": "21:12",
-            "text": "Bitcoin Eyes $70K, Oil Prices Dump as Trump Claims the War Is Almost Over",
-            "link": "https://cryptopotato.com/bitcoin-eyes-70k-oil-prices-dump-as-trump-claims-the-war-is-almost-over/"
+            "time": "21:32",
+            "text": "Top blockchain use cases transforming industries in 2026",
+            "link": "https://cryptodaily.co.uk/2026/03/top-blockchain-use-cases-transforming-industries-in-2026"
         },
         {
-            "time": "21:10",
-            "text": "US Dollar Index Soars to 15-Week Peak in Stunning Rally Before Late-Session Retreat",
-            "link": "https://bitcoinworld.co.in/us-dollar-index-15-week-high-retreat/"
+            "time": "21:30",
+            "text": "Why Did Bitcoin Price Crash To $67,000, And Ethereum Price Fell Below $2,000?",
+            "link": "https://www.newsbtc.com/news/bitcoin/bitcoin-price-crash-ethereum/"
         },
         {
-            "time": "21:08",
-            "text": "How to Organize Your Messy Crypto Portfolio into One Simple Dashboard",
-            "link": "https://en.coin-turk.com/how-to-organize-your-messy-crypto-portfolio-into-one-simple-dashboard/"
+            "time": "21:30",
+            "text": "Empery Digital sells 102 BTC for $7.3 million in proceeds to fund share buybacks",
+            "link": "https://www.cryptopolitan.com/empery-dumps-102-btc-purchases-hit-1-8b/"
         },
         {
-            "time": "21:05",
-            "text": "Can XRP Reach $100? Developer’s Comment Sparks Market Conversation",
-            "link": "https://timestabloid.com/can-xrp-reach-100-developers-comment-sparks-market-conversation/"
+            "time": "21:30",
+            "text": "USDC Transfer Stuns Market: 350 Million Stablecoin Movement to Coinbase Signals Major Liquidity Shift",
+            "link": "https://bitcoinworld.co.in/usdc-transfer-coinbase-stablecoin-liquidity-2/"
         }
     ]
 }
