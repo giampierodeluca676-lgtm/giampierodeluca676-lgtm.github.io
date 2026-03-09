@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.878,99",
-    "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "09:52:30",
-    "ticker": "BTC/EUR: € 58.878,99 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 09:52:30 • ",
+    "price": "€ 58.796,16",
+    "signal": "BEARISH",
+    "reliability": "97%",
+    "last_update": "10:22:34",
+    "ticker": "BTC/EUR: € 58.796,16 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 10:22:34 • ",
     "news": [
         {
-            "time": "09:50",
-            "text": "USD/CAD Forecast: Navigating the Critical Sideways Bias with Safe-Haven Support",
-            "link": "https://bitcoinworld.co.in/usd-cad-sideways-bias-rabobank/"
+            "time": "10:19",
+            "text": "Bitcoin Options Traders Eye Rebound As Volatility Hits Three-Year High",
+            "link": "https://seekingalpha.com/article/4879981-bitcoin-options-traders-eye-rebound-volatility-hits-three-year-high?utm_source=cryptocompare.com&utm_medium=referral&feed_item_type=article"
         },
         {
-            "time": "09:45",
-            "text": "Crypto Market Liquidity Crunch Deepens Despite Staggering $313 Billion Stablecoin Supply",
-            "link": "https://bitcoinworld.co.in/crypto-liquidity-crunch-stablecoin-record/"
+            "time": "10:15",
+            "text": "GBP/USD Price Forecast: Critical Breakdown Below 1.3250 Signals Alarming Downward Momentum",
+            "link": "https://bitcoinworld.co.in/gbp-usd-price-forecast-breakdown/"
         },
         {
-            "time": "09:45",
-            "text": "Bitcoin USD Dominance Drops to 58%: Smart Capital Rotating Into Ethereum?",
-            "link": "https://cryptonews.com/news/bitcoin-dominance-drops-ethereum-usd-capital-rotation/"
+            "time": "10:14",
+            "text": "XRP's Key Indicators Converge, Building a Base For a Price Recovery",
+            "link": "https://u.today/xrps-key-indicators-converge-will-it-spark-2-rally"
         },
         {
-            "time": "09:44",
-            "text": "Clarity Act will benefit banks more than crypto, former CFTC chair says",
-            "link": "https://www.coindesk.com/policy/2026/03/09/clarity-act-will-benefit-banks-more-than-crypto-former-cftc-chair-says"
+            "time": "10:12",
+            "text": "Binance coin price prediction 2026-2032: How high will BNB go?",
+            "link": "https://www.cryptopolitan.com/binance-coin-price-prediction/"
         },
         {
-            "time": "09:42",
-            "text": "I Had 500,000 Unread Emails. Here’s the Script That Cleared Them Overnight.",
-            "link": "https://www.cryptopolitan.com/i-had-500000-unread-emails-heres-the-script-that-cleared-them-overnight/"
+            "time": "10:10",
+            "text": "Federal Reserve Faces Daunting Double Inflation Data Test, Deutsche Bank Warns",
+            "link": "https://bitcoinworld.co.in/federal-reserve-double-inflation-test/"
         },
         {
-            "time": "09:40",
-            "text": "KAS Technical Analysis March 9, 2026: Support Resistance Levels",
-            "link": "https://en.coinotag.com/analysis/kas-technical-analysis-march-9-2026-support-resistance-levels"
+            "time": "10:05",
+            "text": "EUR/USD Analysis: Currency Pair Holds Steady Near 1.1550 Amid Intense Risk-Off Pressure",
+            "link": "https://bitcoinworld.co.in/eur-usd-holds-losses-risk-off/"
         }
     ]
 }
