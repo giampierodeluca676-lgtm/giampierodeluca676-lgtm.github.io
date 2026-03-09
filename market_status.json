@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 59.849,38",
-    "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "15:49:44",
-    "ticker": "BTC/EUR: € 59.849,38 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 15:49:44 • ",
+    "price": "€ 59.629,32",
+    "signal": "BEARISH",
+    "reliability": "97%",
+    "last_update": "16:19:53",
+    "ticker": "BTC/EUR: € 59.629,32 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 16:19:53 • ",
     "news": [
         {
-            "time": "15:45",
-            "text": "Bitcoin ETF Flows Cool to $619 Million as Oil Prices Spike",
-            "link": "https://decrypt.co/360410/bitcoin-etf-flows-cool-to-619-million-as-oil-prices-spike"
+            "time": "16:15",
+            "text": "Gold Price Remains Vulnerable as US-Iran War Fears and Fed Rate Outlook Crush Market Sentiment",
+            "link": "https://bitcoinworld.co.in/gold-price-vulnerable-us-iran-fed/"
         },
         {
-            "time": "15:45",
-            "text": "Crypto Venture Capital Plummets: A Staggering 71% YoY Drop in February 2025 Reveals Market Caution",
-            "link": "https://bitcoinworld.co.in/crypto-venture-capital-february-drop/"
+            "time": "16:11",
+            "text": "Binance Commands Massive Lead in Global Crypto Derivatives Market",
+            "link": "https://en.coin-turk.com/binance-commands-massive-lead-in-global-crypto-derivatives-market/"
         },
         {
-            "time": "15:40",
-            "text": "Crypto Trust Charters Face Legal Showdown as Banking Group Considers OCC Lawsuit",
-            "link": "https://bitcoinworld.co.in/banking-group-occ-crypto-lawsuit/"
+            "time": "16:10",
+            "text": "GBP/JPY Surges as Markets Dramatically Scale Back BoE Rate-Cut Expectations",
+            "link": "https://bitcoinworld.co.in/gbp-jpy-advances-boe-rate-cut/"
         },
         {
-            "time": "15:40",
-            "text": "Florida Stablecoin Bill Clears Senate 37-0, Awaits Governor Ron DeSantis",
-            "link": "https://news.bitcoin.com/florida-stablecoin-bill-clears-senate-37-0-awaits-governor-ron-desantis/"
+            "time": "16:09",
+            "text": "20 million bitcoins mined: why Bitcoin’s fixed supply cap still matters",
+            "link": "https://blog.kraken.com/news/industry-news/20-million-bitcoins-mined"
         },
         {
-            "time": "15:35",
-            "text": "Decentraland Price Prediction 2026-2030: Will MANA’s Metaverse Momentum Propel It to $1?",
-            "link": "https://bitcoinworld.co.in/decentraland-mana-price-prediction-2030-11/"
+            "time": "16:09",
+            "text": "Tom Lee's BitMine Tops Ethereum Treasury With $131 Million Purchase",
+            "link": "https://u.today/tom-lees-bitmine-tops-ethereum-treasury-with-131-million-purchase"
         },
         {
-            "time": "15:31",
-            "text": "Latin America Drives Crypto Adoption with $730 Billion Surge in 2025",
-            "link": "https://en.coin-turk.com/latin-america-drives-crypto-adoption-with-730-billion-surge-in-2025/"
+            "time": "16:07",
+            "text": "Cardano (ADA) Hits Major Tokenization Milestone with Programmable Tokens for RWA",
+            "link": "https://u.today/cardano-ada-hits-major-tokenization-milestone-with-programmable-tokens-for-rwa"
         }
     ]
 }
