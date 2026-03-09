@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.048,53",
+    "price": "€ 58.797,22",
     "signal": "BULLISH",
-    "reliability": "97%",
-    "last_update": "22:46:47",
-    "ticker": "BTC/EUR: € 58.048,53 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 22:46:47 • ",
+    "reliability": "98%",
+    "last_update": "09:50:44",
+    "ticker": "BTC/EUR: € 58.797,22 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 09:50:44 • ",
     "news": [
         {
-            "time": "22:40",
-            "text": "Ethereum Price Downtrend Intensifies: Critical $1,800 Support Faces Unrelenting Pressure",
-            "link": "https://bitcoinworld.co.in/ethereum-price-downtrend-support-pressure/"
+            "time": "09:45",
+            "text": "Crypto Market Liquidity Crunch Deepens Despite Staggering $313 Billion Stablecoin Supply",
+            "link": "https://bitcoinworld.co.in/crypto-liquidity-crunch-stablecoin-record/"
         },
         {
-            "time": "22:31",
-            "text": "Saylor signals another Bitcoin buy as BTC hovers near $66K",
-            "link": "https://cointelegraph.com/news/saylor-signals-bitcoin-buy-btc-near-66k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            "time": "09:45",
+            "text": "Bitcoin USD Dominance Drops to 58%: Smart Capital Rotating Into Ethereum?",
+            "link": "https://cryptonews.com/news/bitcoin-dominance-drops-ethereum-usd-capital-rotation/"
         },
         {
-            "time": "22:31",
-            "text": "UTEXO Partners with Tether to Enable Instant USDT Payments on Bitcoin",
-            "link": "https://en.coin-turk.com/utexo-partners-with-tether-to-enable-instant-usdt-payments-on-bitcoin/"
+            "time": "09:44",
+            "text": "Clarity Act will benefit banks more than crypto, former CFTC chair says",
+            "link": "https://www.coindesk.com/policy/2026/03/09/clarity-act-will-benefit-banks-more-than-crypto-former-cftc-chair-says"
         },
         {
-            "time": "22:13",
-            "text": "Ethereum Price Hits a Breaking Point as Support Cracks and Short Pressure Builds",
-            "link": "https://coinpaper.com/15258/ethereum-price-hits-a-breaking-point-as-support-cracks-and-short-pressure-builds"
+            "time": "09:42",
+            "text": "I Had 500,000 Unread Emails. Here’s the Script That Cleared Them Overnight.",
+            "link": "https://www.cryptopolitan.com/i-had-500000-unread-emails-heres-the-script-that-cleared-them-overnight/"
         },
         {
-            "time": "22:11",
-            "text": "Steak ‘n Shake Drives Employee Loyalty with Bitcoin Compensation Program",
-            "link": "https://en.coin-turk.com/steak-n-shake-drives-employee-loyalty-with-bitcoin-compensation-program/"
+            "time": "09:40",
+            "text": "KAS Technical Analysis March 9, 2026: Support Resistance Levels",
+            "link": "https://en.coinotag.com/analysis/kas-technical-analysis-march-9-2026-support-resistance-levels"
         },
         {
-            "time": "22:10",
-            "text": "Bitcoin Price Prediction: BTC Retests Breakout as $64K Liquidity Zone Looms",
-            "link": "https://coinpaper.com/15257/bitcoin-price-prediction-btc-retests-breakout-as-64-k-liquidity-zone-looms"
+            "time": "09:40",
+            "text": "Bitmax Reverse Stock Split: A Critical Move to Stabilize the Struggling South Korean Crypto Giant",
+            "link": "https://bitcoinworld.co.in/bitmax-reverse-stock-split-announcement/"
         }
     ]
 }
