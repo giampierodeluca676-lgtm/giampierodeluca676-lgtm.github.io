@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 59.081,89",
+    "price": "€ 59.686,70",
     "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "14:19:24",
-    "ticker": "BTC/EUR: € 59.081,89 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 14:19:24 • ",
+    "reliability": "99%",
+    "last_update": "14:49:31",
+    "ticker": "BTC/EUR: € 59.686,70 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 14:49:31 • ",
     "news": [
         {
-            "time": "14:15",
-            "text": "Solana ETFs Build ‘Serious Investor Base,’ Outpacing Bitcoin in Key Metrics",
-            "link": "https://cryptonews.com/news/solana-etfs-outpace-bitcoin-investor-metrics/"
+            "time": "14:45",
+            "text": "Nasdaq Partners With Kraken for Tokenized Stocks, Launching 2027",
+            "link": "https://decrypt.co/360403/nasdaq-partners-with-kraken-for-tokenized-stocks-launching-2027"
         },
         {
-            "time": "14:15",
-            "text": "Gold Price Faces Critical Test as US-Iran Tensions and Fed Policy Outlook Collide",
-            "link": "https://bitcoinworld.co.in/gold-price-us-iran-fed-outlook/"
+            "time": "14:44",
+            "text": "Strategy splashes $1.2B in biggest BTC weekly purchase since January",
+            "link": "https://www.cryptopolitan.com/strategy-strong-weekly-buying-with-17994-btc/"
         },
         {
-            "time": "14:12",
-            "text": "Shiba Inu Drops Off 275 Billion SHIB From Exchanges: Clear Trend is Forming",
-            "link": "https://u.today/shiba-inu-drops-275-billion-shib-from-exchanges-clear-trend-forming"
+            "time": "14:43",
+            "text": "Cardano Price Prediction as Foundation Approves 300M ADA Governance Plan",
+            "link": "https://coinpaper.com/15283/cardano-price-prediction-as-foundation-approves-300-m-ada-governance-plan"
         },
         {
-            "time": "14:11",
-            "text": "Geopolitical Tensions Push Oil Past $100 as Global Markets Feel the Strain",
-            "link": "https://en.coin-turk.com/geopolitical-tensions-push-oil-past-100-as-global-markets-feel-the-strain/"
+            "time": "14:42",
+            "text": "Bitcoiners celebrate as the network produces its 20 millionth coin",
+            "link": "https://cointelegraph.com/news/bitcoin-mined-20-million-executives-speculate-1-million-left?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
         },
         {
-            "time": "14:10",
-            "text": "EUR/USD Forecast: Critical Bearish Bias Emerges as Energy Shock Repricing Intensifies",
-            "link": "https://bitcoinworld.co.in/eur-usd-bearish-bias-energy-shock/"
+            "time": "14:41",
+            "text": "US Tech Firm Ramps Up Bitcoin Holdings with $1.28 Billion Weekly Purchase",
+            "link": "https://en.coin-turk.com/us-tech-firm-ramps-up-bitcoin-holdings-with-1-28-billion-weekly-purchase/"
         },
         {
-            "time": "14:08",
-            "text": "Bitcoin Price Prediction: Will BTC Break $72K After Holding Strong Support?",
-            "link": "https://coinpaper.com/15278/bitcoin-price-prediction-will-btc-break-72-k-after-holding-strong-support"
+            "time": "14:40",
+            "text": "Kairos Prediction Market Revolutionizes Trading with Strategic Opinion Order Book Integration",
+            "link": "https://bitcoinworld.co.in/kairos-opinion-order-book-integration/"
         }
     ]
 }
