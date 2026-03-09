@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 59.043,39",
+    "price": "€ 58.992,29",
     "signal": "BEARISH",
-    "reliability": "99%",
-    "last_update": "23:51:28",
-    "ticker": "BTC/EUR: € 59.043,39 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 23:51:28 • ",
+    "reliability": "97%",
+    "last_update": "00:21:33",
+    "ticker": "BTC/EUR: € 58.992,29 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 00:21:33 • ",
     "news": [
         {
-            "time": "23:41",
-            "text": "WAL Technical Analysis March 9, 2026: RSI MACD Momentum",
-            "link": "https://en.coinotag.com/analysis/wal-technical-analysis-march-9-2026-rsi-macd-momentum"
+            "time": "00:20",
+            "text": "NZD/USD Technical Analysis: Critical Battle at 0.59 as Moving Averages Provide Crucial Support",
+            "link": "https://bitcoinworld.co.in/nzd-usd-moving-averages-0-59-support/"
         },
         {
-            "time": "23:40",
-            "text": "Fairshake Super PAC Unleashes $8.6M in Illinois Election, Signaling Crypto’s Political Clout",
-            "link": "https://bitcoinworld.co.in/fairshake-illinois-election-funding-2025/"
+            "time": "00:19",
+            "text": "Trump’s Cyber Strategy Signals Support for Crypto Infrastructure",
+            "link": "https://news.bitcoin.com/trumps-cyber-strategy-signals-support-for-crypto-infrastructure/"
         },
         {
-            "time": "23:35",
-            "text": "JPMorgan: Iran's oil output will be cut in half if Kharg Island falls to U.S.–Israeli forces",
-            "link": "https://www.cryptopolitan.com/jpmorgan-iran-oil-output-if-kharg-falls/"
+            "time": "00:15",
+            "text": "China Economic Growth Forecast: Danske Bank Predicts Gradual Slowdown Through 2027",
+            "link": "https://bitcoinworld.co.in/china-economic-growth-danske-bank-forecast/"
         },
         {
-            "time": "23:35",
-            "text": "Moldova Uncovers Shocking $107M Crypto Fund for Election Interference Scheme",
-            "link": "https://bitcoinworld.co.in/moldova-crypto-election-interference-fund/"
+            "time": "00:15",
+            "text": "XRP Price Prediction: Whales Just Bought 210 Million Tokens – Is a Big Update Coming?",
+            "link": "https://cryptonews.com/news/xrp-price-prediction-whales-just-bought-210-million-tokens-is-a-big-update-coming/"
         },
         {
-            "time": "23:35",
-            "text": "Crypto Price Prediction Today 9 March – XRP, Solana, PEPE",
-            "link": "https://cryptonews.com/news/crypto-price-prediction-today-9-march-xrp-solana-pepe/"
+            "time": "00:10",
+            "text": "AUD/USD Bounces Sharply: The Stunning Reversal Fueling Forex Markets in Early 2025",
+            "link": "https://bitcoinworld.co.in/aud-usd-bounce-sharp-reversal/"
         },
         {
-            "time": "23:34",
-            "text": "Americans Use AI Every Day—But Most Still Don't Like It, New Poll Shows",
-            "link": "https://decrypt.co/360493/americans-ai-every-day-most-still-dont-like-it"
+            "time": "00:01",
+            "text": "IMX Comprehensive Technical Analysis: Detailed Review of March 9, 2026",
+            "link": "https://en.coinotag.com/analysis/imx-comprehensive-technical-analysis-detailed-review-of-march-9-2026"
         }
     ]
 }
