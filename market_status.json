@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.970,70",
-    "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "10:52:48",
-    "ticker": "BTC/EUR: € 58.970,70 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 10:52:48 • ",
+    "price": "€ 58.804,53",
+    "signal": "BEARISH",
+    "reliability": "97%",
+    "last_update": "11:22:54",
+    "ticker": "BTC/EUR: € 58.804,53 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 11:22:54 • ",
     "news": [
         {
-            "time": "10:50",
-            "text": "Bitcoin Soars: BTC Price Surges Above $68,000 Milestone",
-            "link": "https://bitcoinworld.co.in/bitcoin-price-surges-above-68000-10/"
+            "time": "11:21",
+            "text": "Bitcoin Holds Institutional Support but $72K Remains the Critical Barrier",
+            "link": "https://www.investing.com/analysis/bitcoin-holds-institutional-support-but-72k-remains-the-critical-barrier-200676124"
         },
         {
-            "time": "10:46",
-            "text": "Bitcoin Exchange Reserves Reach Seven-Year Low As Institutional Demand Intensifies",
-            "link": "https://en.coin-turk.com/bitcoin-exchange-reserves-reach-seven-year-low-as-institutional-demand-intensifies/"
+            "time": "11:20",
+            "text": "Bank of Canada Charts Flexible Path for Rate Cuts as Inflation Nears Target",
+            "link": "https://bitcoinworld.co.in/bank-canada-flexible-rate-cuts-inflation-target/"
         },
         {
-            "time": "10:45",
-            "text": "HTX Net Inflow Defies Market Trend with $258M Surge, Second Only to Binance",
-            "link": "https://bitcoinworld.co.in/htx-net-inflow-258-million-binance/"
+            "time": "11:19",
+            "text": "Bitcoin Stabilizes as BlackRock IBIT Drives the Latest ETF Inflow Wave",
+            "link": "https://www.investing.com/analysis/bitcoin-stabilizes-as-blackrock-ibit-drives-the-latest-etf-inflow-wave-200676221"
         },
         {
-            "time": "10:43",
-            "text": "No Crypto On X Money, Star Trek Legend William Shatner Says During Beta Testing",
-            "link": "https://u.today/no-crypto-on-x-money-star-trek-legend-william-shatner-says-during-beta-testing"
+            "time": "11:17",
+            "text": "Ethereum Tests $2,200 Breakout as ETF Flows Clash With Bear Flag Risk",
+            "link": "https://www.investing.com/analysis/ethereum-tests-2200-breakout-as-etf-flows-clash-with-bear-flag-risk-200676153"
         },
         {
-            "time": "10:40",
-            "text": "Dollar Soars to Three-Month High as Oil Prices Surge Past $100/Barrel, Triggering Market Turmoil",
-            "link": "https://bitcoinworld.co.in/dollar-soars-oil-prices-surge/"
+            "time": "11:16",
+            "text": "Bitget upgrades Agent Hub with new tools, enabling OpenClaw trading in minutes",
+            "link": "https://invezz.com/news/2026/03/09/bitget-upgrades-agent-hub-with-new-tools-enabling-openclaw-trading-in-minutes/"
         },
         {
-            "time": "10:37",
-            "text": "Cardano Called the ‘Most Useless Network in Crypto’ as ADA Down 92% From ATH",
-            "link": "https://cryptopotato.com/cardano-called-the-most-useless-network-in-crypto-as-ada-down-92-from-ath/"
+            "time": "11:15",
+            "text": "Bitcoin Tests $74K Resistance as ETF Inflows and Short Squeeze Fuel Recovery",
+            "link": "https://www.investing.com/analysis/bitcoin-tests-74k-resistance-as-etf-inflows-and-short-squeeze-fuel-recovery-200676149"
         }
     ]
 }
