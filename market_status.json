@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.796,16",
-    "signal": "BEARISH",
-    "reliability": "97%",
-    "last_update": "10:22:34",
-    "ticker": "BTC/EUR: € 58.796,16 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 10:22:34 • ",
+    "price": "€ 58.970,70",
+    "signal": "BULLISH",
+    "reliability": "99%",
+    "last_update": "10:52:48",
+    "ticker": "BTC/EUR: € 58.970,70 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 10:52:48 • ",
     "news": [
         {
-            "time": "10:19",
-            "text": "Bitcoin Options Traders Eye Rebound As Volatility Hits Three-Year High",
-            "link": "https://seekingalpha.com/article/4879981-bitcoin-options-traders-eye-rebound-volatility-hits-three-year-high?utm_source=cryptocompare.com&utm_medium=referral&feed_item_type=article"
+            "time": "10:50",
+            "text": "Bitcoin Soars: BTC Price Surges Above $68,000 Milestone",
+            "link": "https://bitcoinworld.co.in/bitcoin-price-surges-above-68000-10/"
         },
         {
-            "time": "10:15",
-            "text": "GBP/USD Price Forecast: Critical Breakdown Below 1.3250 Signals Alarming Downward Momentum",
-            "link": "https://bitcoinworld.co.in/gbp-usd-price-forecast-breakdown/"
+            "time": "10:46",
+            "text": "Bitcoin Exchange Reserves Reach Seven-Year Low As Institutional Demand Intensifies",
+            "link": "https://en.coin-turk.com/bitcoin-exchange-reserves-reach-seven-year-low-as-institutional-demand-intensifies/"
         },
         {
-            "time": "10:14",
-            "text": "XRP's Key Indicators Converge, Building a Base For a Price Recovery",
-            "link": "https://u.today/xrps-key-indicators-converge-will-it-spark-2-rally"
+            "time": "10:45",
+            "text": "HTX Net Inflow Defies Market Trend with $258M Surge, Second Only to Binance",
+            "link": "https://bitcoinworld.co.in/htx-net-inflow-258-million-binance/"
         },
         {
-            "time": "10:12",
-            "text": "Binance coin price prediction 2026-2032: How high will BNB go?",
-            "link": "https://www.cryptopolitan.com/binance-coin-price-prediction/"
+            "time": "10:43",
+            "text": "No Crypto On X Money, Star Trek Legend William Shatner Says During Beta Testing",
+            "link": "https://u.today/no-crypto-on-x-money-star-trek-legend-william-shatner-says-during-beta-testing"
         },
         {
-            "time": "10:10",
-            "text": "Federal Reserve Faces Daunting Double Inflation Data Test, Deutsche Bank Warns",
-            "link": "https://bitcoinworld.co.in/federal-reserve-double-inflation-test/"
+            "time": "10:40",
+            "text": "Dollar Soars to Three-Month High as Oil Prices Surge Past $100/Barrel, Triggering Market Turmoil",
+            "link": "https://bitcoinworld.co.in/dollar-soars-oil-prices-surge/"
         },
         {
-            "time": "10:05",
-            "text": "EUR/USD Analysis: Currency Pair Holds Steady Near 1.1550 Amid Intense Risk-Off Pressure",
-            "link": "https://bitcoinworld.co.in/eur-usd-holds-losses-risk-off/"
+            "time": "10:37",
+            "text": "Cardano Called the ‘Most Useless Network in Crypto’ as ADA Down 92% From ATH",
+            "link": "https://cryptopotato.com/cardano-called-the-most-useless-network-in-crypto-as-ada-down-92-from-ath/"
         }
     ]
 }
