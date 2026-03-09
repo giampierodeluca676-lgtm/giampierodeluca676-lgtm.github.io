@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 59.132,10",
+    "price": "€ 59.043,39",
     "signal": "BEARISH",
-    "reliability": "98%",
-    "last_update": "23:21:22",
-    "ticker": "BTC/EUR: € 59.132,10 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 23:21:22 • ",
+    "reliability": "99%",
+    "last_update": "23:51:28",
+    "ticker": "BTC/EUR: € 59.043,39 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 23:51:28 • ",
     "news": [
         {
-            "time": "23:11",
-            "text": "AR Technical Analysis March 9, 2026: Will It Rise or Fall?",
-            "link": "https://en.coinotag.com/analysis/ar-technical-analysis-march-9-2026-will-it-rise-or-fall"
+            "time": "23:41",
+            "text": "WAL Technical Analysis March 9, 2026: RSI MACD Momentum",
+            "link": "https://en.coinotag.com/analysis/wal-technical-analysis-march-9-2026-rsi-macd-momentum"
         },
         {
-            "time": "23:10",
-            "text": "Nigel Farage Discloses $288,000 Stake in Former UK Chancellor’s Bitcoin Treasury Firm",
-            "link": "https://news.bitcoin.com/nigel-farage-discloses-288000-stake-in-former-uk-chancellors-bitcoin-treasury-firm/"
+            "time": "23:40",
+            "text": "Fairshake Super PAC Unleashes $8.6M in Illinois Election, Signaling Crypto’s Political Clout",
+            "link": "https://bitcoinworld.co.in/fairshake-illinois-election-funding-2025/"
         },
         {
-            "time": "23:07",
-            "text": "Will Bitcoin follow oil’s historic surge and rally to $79K before the end of March?",
-            "link": "https://cointelegraph.com/news/will-bitcoin-follow-oil-historic-surge-and-rally-to-79k-before-end-of-march?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            "time": "23:35",
+            "text": "JPMorgan: Iran's oil output will be cut in half if Kharg Island falls to U.S.–Israeli forces",
+            "link": "https://www.cryptopolitan.com/jpmorgan-iran-oil-output-if-kharg-falls/"
         },
         {
-            "time": "23:06",
-            "text": "Bitcoin rises 3% as crypto continues to be largely unaffected by Iran conflict",
-            "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-price-today-muted-near-67k-as-oil-surge-stokes-inflation-fears-4548687"
+            "time": "23:35",
+            "text": "Moldova Uncovers Shocking $107M Crypto Fund for Election Interference Scheme",
+            "link": "https://bitcoinworld.co.in/moldova-crypto-election-interference-fund/"
         },
         {
-            "time": "23:00",
-            "text": "ASTER burns 455K tokens: Price holds range as buybacks tighten circulating supply",
-            "link": "https://ambcrypto.com/aster-burns-455k-tokens-price-holds-range-as-buybacks-tighten-circulating-supply/"
+            "time": "23:35",
+            "text": "Crypto Price Prediction Today 9 March – XRP, Solana, PEPE",
+            "link": "https://cryptonews.com/news/crypto-price-prediction-today-9-march-xrp-solana-pepe/"
         },
         {
-            "time": "23:00",
-            "text": "XRP Starts New Week With Bullish Confirmation, But This Level Is A Problem",
-            "link": "https://www.newsbtc.com/analysis/xrp/xrp-with-bullish-confirmation/"
+            "time": "23:34",
+            "text": "Americans Use AI Every Day—But Most Still Don't Like It, New Poll Shows",
+            "link": "https://decrypt.co/360493/americans-ai-every-day-most-still-dont-like-it"
         }
     ]
 }
