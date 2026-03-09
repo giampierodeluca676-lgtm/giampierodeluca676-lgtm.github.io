@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 59.128,92",
-    "signal": "BEARISH",
-    "reliability": "97%",
-    "last_update": "19:50:44",
-    "ticker": "BTC/EUR: € 59.128,92 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 19:50:44 • ",
+    "price": "€ 59.294,86",
+    "signal": "BULLISH",
+    "reliability": "99%",
+    "last_update": "20:20:49",
+    "ticker": "BTC/EUR: € 59.294,86 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 20:20:49 • ",
     "news": [
         {
-            "time": "19:45",
-            "text": "Ripple’s XRP Whales Eye $1.7 Trillion Payments Industry as New SWIFT Narrative Gains Momentum",
-            "link": "https://zycrypto.com/ripples-xrp-whales-eye-1-7-trillion-payments-industry-as-new-swift-narrative-gains-momentum/"
+            "time": "20:18",
+            "text": "Bitcoin: Failure at Key Technical Levels Signals Risk of Further Pullback",
+            "link": "https://www.investing.com/analysis/bitcoin-failure-at-key-technical-levels-signals-risk-of-further-pullback-200676203"
         },
         {
-            "time": "19:40",
-            "text": "USDC Minted: Whale Alert Reports Stunning 250 Million Stablecoin Creation",
-            "link": "https://bitcoinworld.co.in/usdc-minted-whale-alert-report-3/"
+            "time": "20:16",
+            "text": "Bitcoin Pullback Puts This Key Support Back in Focus Ahead of US Jobs Report",
+            "link": "https://www.investing.com/analysis/bitcoin-pullback-puts-this-key-support-back-in-focus-ahead-of-us-jobs-report-200676199"
         },
         {
-            "time": "19:36",
-            "text": "Bitcoin ETF Inflows Slow Dramatically After Oil Price Shock And Geopolitical Unrest",
-            "link": "https://en.coin-turk.com/bitcoin-etf-inflows-slow-dramatically-after-oil-price-shock-and-geopolitical-unrest/"
+            "time": "20:15",
+            "text": "USD/CAD Stages Resilient Rebound as WTI Crude Retreat Hammers Canadian Dollar",
+            "link": "https://bitcoinworld.co.in/usd-cad-rebound-wti-oil-canadian-dollar/"
         },
         {
-            "time": "19:34",
-            "text": "Celestia price prediction 2026-2032: Will TIA lead the altcoin rally in 2026?",
-            "link": "https://www.cryptopolitan.com/celestia-price-prediction/"
+            "time": "20:15",
+            "text": "XRP Holds $1.42 as ETF Inflows and Exchange Outflows Point to Accumulation",
+            "link": "https://www.investing.com/analysis/xrp-holds-142-as-etf-inflows-and-exchange-outflows-point-to-accumulation-200676218"
         },
         {
-            "time": "19:33",
-            "text": "GALA Technical Analysis March 9, 2026: Volume and Accumulation",
-            "link": "https://en.coinotag.com/analysis/gala-technical-analysis-march-9-2026-volume-and-accumulation"
+            "time": "20:13",
+            "text": "RAY Technical Analysis March 9, 2026: Support and Resistance Levels and Market Commentary",
+            "link": "https://en.coinotag.com/analysis/ray-technical-analysis-march-9-2026-support-and-resistance-levels-and-market-commentary"
         },
         {
-            "time": "19:32",
-            "text": "Stocks Fall Across Wall Street as Iran War Risks Lift Oil and Trigger Risk-off Trading",
-            "link": "https://news.bitcoin.com/stocks-fall-across-wall-street-as-iran-war-risks-lift-oil-and-trigger-risk-off-trading/"
+            "time": "20:13",
+            "text": "Ethereum Struggles Near $2,000 as Bearish Structure Keeps Sellers in Control",
+            "link": "https://www.investing.com/analysis/ethereum-struggles-near-2000-as-bearish-structure-keeps-sellers-in-control-200676322"
         }
     ]
 }
