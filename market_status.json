@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 59.269,14",
-    "signal": "BEARISH",
-    "reliability": "98%",
-    "last_update": "20:50:55",
-    "ticker": "BTC/EUR: € 59.269,14 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 20:50:55 • ",
+    "price": "€ 59.452,64",
+    "signal": "BULLISH",
+    "reliability": "97%",
+    "last_update": "21:21:01",
+    "ticker": "BTC/EUR: € 59.452,64 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 21:21:01 • ",
     "news": [
         {
-            "time": "20:48",
-            "text": "Crypto and stocks add to gains as Trump says Iran war could be over soon",
-            "link": "https://www.coindesk.com/markets/2026/03/09/crypto-and-stocks-add-to-gains-as-trump-says-iran-war-could-be-over-soon"
+            "time": "21:15",
+            "text": "USDC Minted: Whale Alert Spots Stunning 350 Million Stablecoin Creation",
+            "link": "https://bitcoinworld.co.in/usdc-minted-whale-alert-stablecoin/"
         },
         {
-            "time": "20:44",
-            "text": "Former CFTC chairman warns US banks could benefit most from stalled crypto legislation",
-            "link": "https://www.cryptopolitan.com/banks-are-real-winners-in-us-crypto-chaos/"
+            "time": "21:13",
+            "text": "THETA Technical Analysis March 9, 2026: RSI MACD Momentum",
+            "link": "https://en.coinotag.com/analysis/theta-technical-analysis-march-9-2026-rsi-macd-momentum"
         },
         {
-            "time": "20:41",
-            "text": "Ethereum Price Prediction as ETH Foundation Begins $140M Staking",
-            "link": "https://coinpaper.com/15294/ethereum-price-prediction-as-eth-foundation-begins-140-m-staking"
+            "time": "21:12",
+            "text": "Bitcoin Eyes $70K, Oil Prices Dump as Trump Claims the War Is Almost Over",
+            "link": "https://cryptopotato.com/bitcoin-eyes-70k-oil-prices-dump-as-trump-claims-the-war-is-almost-over/"
         },
         {
-            "time": "20:41",
-            "text": "Gold Holds Near $5,090 as Technical Levels Dictate Market Caution",
-            "link": "https://en.coin-turk.com/gold-holds-near-5090-as-technical-levels-dictate-market-caution/"
+            "time": "21:10",
+            "text": "US Dollar Index Soars to 15-Week Peak in Stunning Rally Before Late-Session Retreat",
+            "link": "https://bitcoinworld.co.in/us-dollar-index-15-week-high-retreat/"
         },
         {
-            "time": "20:40",
-            "text": "Trump Predicts Hopeful End to Iran Conflict as Diplomatic Signals Intensify",
-            "link": "https://bitcoinworld.co.in/trump-iran-war-end-prediction/"
+            "time": "21:08",
+            "text": "How to Organize Your Messy Crypto Portfolio into One Simple Dashboard",
+            "link": "https://en.coin-turk.com/how-to-organize-your-messy-crypto-portfolio-into-one-simple-dashboard/"
         },
         {
-            "time": "20:38",
-            "text": "Best Passive Income Strategies for Crypto HODLers 2026",
-            "link": "https://cryptodaily.co.uk/2026/03/best-passive-income-strategies-for-crypto-hodlers-2026"
+            "time": "21:05",
+            "text": "Can XRP Reach $100? Developer’s Comment Sparks Market Conversation",
+            "link": "https://timestabloid.com/can-xrp-reach-100-developers-comment-sparks-market-conversation/"
         }
     ]
 }
