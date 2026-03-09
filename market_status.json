@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.935,68",
+    "price": "€ 59.081,89",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "13:49:19",
-    "ticker": "BTC/EUR: € 58.935,68 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 13:49:19 • ",
+    "last_update": "14:19:24",
+    "ticker": "BTC/EUR: € 59.081,89 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 14:19:24 • ",
     "news": [
         {
-            "time": "13:46",
-            "text": "Bitcoin slides to $67,000 as ’extreme fear’ grips crypto markets",
-            "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-slides-to-67000-as-extreme-fear-grips-crypto-markets-4548565"
+            "time": "14:15",
+            "text": "Solana ETFs Build ‘Serious Investor Base,’ Outpacing Bitcoin in Key Metrics",
+            "link": "https://cryptonews.com/news/solana-etfs-outpace-bitcoin-investor-metrics/"
         },
         {
-            "time": "13:45",
-            "text": "Bitcoin’s Next Big Move Brewing? Charts Show Market Locked in Tense Standoff",
-            "link": "https://news.bitcoin.com/bitcoins-next-big-move-brewing-charts-show-market-locked-in-tense-standoff/"
+            "time": "14:15",
+            "text": "Gold Price Faces Critical Test as US-Iran Tensions and Fed Policy Outlook Collide",
+            "link": "https://bitcoinworld.co.in/gold-price-us-iran-fed-outlook/"
         },
         {
-            "time": "13:45",
-            "text": "U.S. court dismisses terrorism financing claims against Binance",
-            "link": "https://www.investing.com/news/cryptocurrency-news/us-court-dismisses-terrorism-financing-claims-against-binance-4548519"
+            "time": "14:12",
+            "text": "Shiba Inu Drops Off 275 Billion SHIB From Exchanges: Clear Trend is Forming",
+            "link": "https://u.today/shiba-inu-drops-275-billion-shib-from-exchanges-clear-trend-forming"
         },
         {
-            "time": "13:45",
-            "text": "Strategic Expansion: Bybit Doubles Down on Middle East Market with Major Infrastructure Investment",
-            "link": "https://bitcoinworld.co.in/bybit-middle-east-expansion-investment/"
+            "time": "14:11",
+            "text": "Geopolitical Tensions Push Oil Past $100 as Global Markets Feel the Strain",
+            "link": "https://en.coin-turk.com/geopolitical-tensions-push-oil-past-100-as-global-markets-feel-the-strain/"
         },
         {
-            "time": "13:43",
-            "text": "KAST raises $80 million at $600 million  valuation to expand stablecoin payments platform",
-            "link": "https://www.coindesk.com/business/2026/03/09/kast-raises-usd80-million-at-usd600-million-valuation-to-expand-stablecoin-payments-platform"
+            "time": "14:10",
+            "text": "EUR/USD Forecast: Critical Bearish Bias Emerges as Energy Shock Repricing Intensifies",
+            "link": "https://bitcoinworld.co.in/eur-usd-bearish-bias-energy-shock/"
         },
         {
-            "time": "13:43",
-            "text": "Bitcoin price today: muted near $67k as oil surge stokes inflation fears",
-            "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-price-today-muted-near-67k-as-oil-surge-stokes-inflation-fears-4548687"
+            "time": "14:08",
+            "text": "Bitcoin Price Prediction: Will BTC Break $72K After Holding Strong Support?",
+            "link": "https://coinpaper.com/15278/bitcoin-price-prediction-will-btc-break-72-k-after-holding-strong-support"
         }
     ]
 }
