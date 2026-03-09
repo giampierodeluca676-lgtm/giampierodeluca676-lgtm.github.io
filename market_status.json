@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 59.202,72",
-    "signal": "BEARISH",
-    "reliability": "97%",
-    "last_update": "21:51:07",
-    "ticker": "BTC/EUR: € 59.202,72 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 21:51:07 • ",
+    "price": "€ 59.301,73",
+    "signal": "BULLISH",
+    "reliability": "98%",
+    "last_update": "22:21:12",
+    "ticker": "BTC/EUR: € 59.301,73 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 22:21:12 • ",
     "news": [
         {
-            "time": "21:42",
-            "text": "BAT Technical Analysis March 9, 2026: Will It Rise or Fall?",
-            "link": "https://en.coinotag.com/analysis/bat-technical-analysis-march-9-2026-will-it-rise-or-fall"
+            "time": "22:15",
+            "text": "10 Promising Low Cap Meme Coins Rise While APEMARS’ 1,350+ Holder Surge Sparks ‘Next Crypto to Hit $1’ Talk",
+            "link": "https://timestabloid.com/10-promising-low-cap-meme-coins-rise-while-apemars-1350/"
         },
         {
-            "time": "21:35",
-            "text": "USD/JPY Price Forecast Surges as Safe-Haven US Dollar Gains Momentum Amid Global Uncertainty",
-            "link": "https://bitcoinworld.co.in/usd-jpy-forecast-dollar-gains/"
+            "time": "22:15",
+            "text": "Trump Iran War: Hopeful Signs Point to Potential Swift Resolution",
+            "link": "https://bitcoinworld.co.in/trump-iran-war-resolution-analysis/"
         },
         {
-            "time": "21:32",
-            "text": "Top blockchain use cases transforming industries in 2026",
-            "link": "https://cryptodaily.co.uk/2026/03/top-blockchain-use-cases-transforming-industries-in-2026"
+            "time": "22:11",
+            "text": "Tech Giants Pour Billions into AI Infrastructure as Startups Race to Simplify Corporate Adoption",
+            "link": "https://en.coin-turk.com/tech-giants-pour-billions-into-ai-infrastructure-as-startups-race-to-simplify-corporate-adoption/"
         },
         {
-            "time": "21:30",
-            "text": "Why Did Bitcoin Price Crash To $67,000, And Ethereum Price Fell Below $2,000?",
-            "link": "https://www.newsbtc.com/news/bitcoin/bitcoin-price-crash-ethereum/"
+            "time": "22:10",
+            "text": "Bitcoin Gets Its Own ‘Fear Gauge’ as Cboe Announces BITVX Index",
+            "link": "https://news.bitcoin.com/bitcoin-gets-its-own-fear-gauge-as-cboe-announces-bitvx-index/"
         },
         {
-            "time": "21:30",
-            "text": "Empery Digital sells 102 BTC for $7.3 million in proceeds to fund share buybacks",
-            "link": "https://www.cryptopolitan.com/empery-dumps-102-btc-purchases-hit-1-8b/"
+            "time": "22:10",
+            "text": "Silver Price Forecast: XAG/USD Soars Above $86 as US Dollar Retreats",
+            "link": "https://bitcoinworld.co.in/silver-price-forecast-xagusd-surges/"
         },
         {
-            "time": "21:30",
-            "text": "USDC Transfer Stuns Market: 350 Million Stablecoin Movement to Coinbase Signals Major Liquidity Shift",
-            "link": "https://bitcoinworld.co.in/usdc-transfer-coinbase-stablecoin-liquidity-2/"
+            "time": "22:08",
+            "text": "3 Things to look out for on Tuesday",
+            "link": "https://seekingalpha.com/news/4562513-3-things-to-look-out-for-on-tuesday?utm_source=cryptocompare.com&utm_medium=referral&feed_item_type=news"
         }
     ]
 }
