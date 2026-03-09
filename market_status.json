@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 59.112,20",
-    "signal": "BEARISH",
+    "price": "€ 59.252,76",
+    "signal": "BULLISH",
     "reliability": "97%",
-    "last_update": "18:50:32",
-    "ticker": "BTC/EUR: € 59.112,20 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 18:50:32 • ",
+    "last_update": "19:20:37",
+    "ticker": "BTC/EUR: € 59.252,76 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 19:20:37 • ",
     "news": [
         {
-            "time": "18:48",
-            "text": "Why Wall Street Is Finally Buying Into Crypto",
-            "link": "https://seekingalpha.com/article/4880149-wall-street-finally-buying-crypto?utm_source=cryptocompare.com&utm_medium=referral&feed_item_type=article"
+            "time": "19:15",
+            "text": "CEE FX Markets Face Critical Oil-Driven Stress as EUR/HUF Dynamics Intensify",
+            "link": "https://bitcoinworld.co.in/cee-fx-oil-stress-eur-huf-focus/"
         },
         {
-            "time": "18:41",
-            "text": "Nigel Farage Backs Bitcoin Treasury Firm Chaired By Former Chancellor",
-            "link": "https://decrypt.co/360431/nigel-farage-backs-bitcoin-treasury-firm-chaired-by-former-chancellor"
+            "time": "19:13",
+            "text": "GLM Technical Analysis March 9, 2026: Risk and Stop Loss",
+            "link": "https://en.coinotag.com/analysis/glm-technical-analysis-march-9-2026-risk-and-stop-loss"
         },
         {
-            "time": "18:40",
-            "text": "Anthropic Lawsuit: AI Firm Defiantly Sues Defense Department Over ‘Unlawful’ Supply Chain Risk Label",
-            "link": "https://bitcoinworld.co.in/anthropic-sues-defense-department-supply-chain/"
+            "time": "19:10",
+            "text": "USD/JPY Surges as Crushing Oil Price Rally and Geopolitical Tensions Hammer Japanese Yen",
+            "link": "https://bitcoinworld.co.in/usd-jpy-advances-oil-yen/"
         },
         {
-            "time": "18:38",
-            "text": "Jito price prediction 2026-2032: Will JTO price hit $5?",
-            "link": "https://www.cryptopolitan.com/jito-price-prediction/"
+            "time": "19:05",
+            "text": "Pundit: XRP Is About to Do Something That Will Make People Lose Their Minds",
+            "link": "https://timestabloid.com/pundit-xrp-is-about-to-do-something-that-will-make-people-lose-their-minds/"
         },
         {
-            "time": "18:35",
-            "text": "Dow Jones Industrial Average Plummets as Crude Oil Shatters $100 Barrier, Sparking Fears",
-            "link": "https://bitcoinworld.co.in/dow-jones-crude-oil-surge/"
+            "time": "19:03",
+            "text": "BlackRock’s Major Crypto Moves Stir Curiosity After Key Transfers To Coinbase",
+            "link": "https://en.coin-turk.com/blackrocks-major-crypto-moves-stir-curiosity-after-key-transfers-to-coinbase/"
         },
         {
-            "time": "18:33",
-            "text": "PENDLE Technical Analysis March 9, 2026: Market Structure",
-            "link": "https://en.coinotag.com/analysis/pendle-technical-analysis-march-9-2026-market-structure"
+            "time": "19:00",
+            "text": "Ethereum sees $18mln exchange inflows –  Here’s what happens next with ETH",
+            "link": "https://ambcrypto.com/ethereum-sees-18mln-exchange-inflows-heres-what-happens-next-with-eth/"
         }
     ]
 }
