@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 59.522,53",
+    "price": "€ 59.112,20",
     "signal": "BEARISH",
     "reliability": "97%",
-    "last_update": "18:20:26",
-    "ticker": "BTC/EUR: € 59.522,53 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 18:20:26 • ",
+    "last_update": "18:50:32",
+    "ticker": "BTC/EUR: € 59.112,20 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 18:50:32 • ",
     "news": [
         {
-            "time": "18:15",
-            "text": "Gold Price Faces Critical Pressure as US-Iran Conflict and Fed Rate Decisions Collide",
-            "link": "https://bitcoinworld.co.in/gold-price-pressure-us-iran-fed/"
+            "time": "18:48",
+            "text": "Why Wall Street Is Finally Buying Into Crypto",
+            "link": "https://seekingalpha.com/article/4880149-wall-street-finally-buying-crypto?utm_source=cryptocompare.com&utm_medium=referral&feed_item_type=article"
         },
         {
-            "time": "18:14",
-            "text": "Strategy makes 2nd largest BTC purchase of 2026; Here’s how much Bitcoin MSTR bought",
-            "link": "https://finbold.com/strategy-makes-2nd-largest-btc-purchase-of-2026-heres-how-much-bitcoin-mstr-bought/"
+            "time": "18:41",
+            "text": "Nigel Farage Backs Bitcoin Treasury Firm Chaired By Former Chancellor",
+            "link": "https://decrypt.co/360431/nigel-farage-backs-bitcoin-treasury-firm-chaired-by-former-chancellor"
         },
         {
-            "time": "18:13",
-            "text": "Binance Will Temporarily Suspend Withdrawals and Deposits on the Ethereum Network: Details",
-            "link": "https://cryptopotato.com/binance-will-temporarily-suspend-withdrawals-and-deposits-on-the-ethereum-network-details/"
+            "time": "18:40",
+            "text": "Anthropic Lawsuit: AI Firm Defiantly Sues Defense Department Over ‘Unlawful’ Supply Chain Risk Label",
+            "link": "https://bitcoinworld.co.in/anthropic-sues-defense-department-supply-chain/"
         },
         {
-            "time": "18:12",
-            "text": "Can you still mine Bitcoin on a PC in 2026? Here is the reality",
-            "link": "https://cointelegraph.com/bitcoin-for-beginners/can-you-still-mine-bitcoin-on-a-pc-in-2026-here-is-the-reality?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            "time": "18:38",
+            "text": "Jito price prediction 2026-2032: Will JTO price hit $5?",
+            "link": "https://www.cryptopolitan.com/jito-price-prediction/"
         },
         {
-            "time": "18:10",
-            "text": "Canada Labor Market Analysis: National Bank Forecasts Cautious February Rebound",
-            "link": "https://bitcoinworld.co.in/canada-labor-market-february-rebound-nbc/"
+            "time": "18:35",
+            "text": "Dow Jones Industrial Average Plummets as Crude Oil Shatters $100 Barrier, Sparking Fears",
+            "link": "https://bitcoinworld.co.in/dow-jones-crude-oil-surge/"
         },
         {
-            "time": "18:05",
-            "text": "Long-Term Bitcoin Trader: The Great XRP Reset Has Been Completed. What Does It Mean?",
-            "link": "https://timestabloid.com/long-term-bitcoin-trader-the-great-xrp-reset-has-been-completed-what-does-it-mean/"
+            "time": "18:33",
+            "text": "PENDLE Technical Analysis March 9, 2026: Market Structure",
+            "link": "https://en.coinotag.com/analysis/pendle-technical-analysis-march-9-2026-market-structure"
         }
     ]
 }
