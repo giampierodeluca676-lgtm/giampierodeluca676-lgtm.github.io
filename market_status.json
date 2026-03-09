@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 59.294,86",
-    "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "20:20:49",
-    "ticker": "BTC/EUR: € 59.294,86 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 20:20:49 • ",
+    "price": "€ 59.269,14",
+    "signal": "BEARISH",
+    "reliability": "98%",
+    "last_update": "20:50:55",
+    "ticker": "BTC/EUR: € 59.269,14 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 20:50:55 • ",
     "news": [
         {
-            "time": "20:18",
-            "text": "Bitcoin: Failure at Key Technical Levels Signals Risk of Further Pullback",
-            "link": "https://www.investing.com/analysis/bitcoin-failure-at-key-technical-levels-signals-risk-of-further-pullback-200676203"
+            "time": "20:48",
+            "text": "Crypto and stocks add to gains as Trump says Iran war could be over soon",
+            "link": "https://www.coindesk.com/markets/2026/03/09/crypto-and-stocks-add-to-gains-as-trump-says-iran-war-could-be-over-soon"
         },
         {
-            "time": "20:16",
-            "text": "Bitcoin Pullback Puts This Key Support Back in Focus Ahead of US Jobs Report",
-            "link": "https://www.investing.com/analysis/bitcoin-pullback-puts-this-key-support-back-in-focus-ahead-of-us-jobs-report-200676199"
+            "time": "20:44",
+            "text": "Former CFTC chairman warns US banks could benefit most from stalled crypto legislation",
+            "link": "https://www.cryptopolitan.com/banks-are-real-winners-in-us-crypto-chaos/"
         },
         {
-            "time": "20:15",
-            "text": "USD/CAD Stages Resilient Rebound as WTI Crude Retreat Hammers Canadian Dollar",
-            "link": "https://bitcoinworld.co.in/usd-cad-rebound-wti-oil-canadian-dollar/"
+            "time": "20:41",
+            "text": "Ethereum Price Prediction as ETH Foundation Begins $140M Staking",
+            "link": "https://coinpaper.com/15294/ethereum-price-prediction-as-eth-foundation-begins-140-m-staking"
         },
         {
-            "time": "20:15",
-            "text": "XRP Holds $1.42 as ETF Inflows and Exchange Outflows Point to Accumulation",
-            "link": "https://www.investing.com/analysis/xrp-holds-142-as-etf-inflows-and-exchange-outflows-point-to-accumulation-200676218"
+            "time": "20:41",
+            "text": "Gold Holds Near $5,090 as Technical Levels Dictate Market Caution",
+            "link": "https://en.coin-turk.com/gold-holds-near-5090-as-technical-levels-dictate-market-caution/"
         },
         {
-            "time": "20:13",
-            "text": "RAY Technical Analysis March 9, 2026: Support and Resistance Levels and Market Commentary",
-            "link": "https://en.coinotag.com/analysis/ray-technical-analysis-march-9-2026-support-and-resistance-levels-and-market-commentary"
+            "time": "20:40",
+            "text": "Trump Predicts Hopeful End to Iran Conflict as Diplomatic Signals Intensify",
+            "link": "https://bitcoinworld.co.in/trump-iran-war-end-prediction/"
         },
         {
-            "time": "20:13",
-            "text": "Ethereum Struggles Near $2,000 as Bearish Structure Keeps Sellers in Control",
-            "link": "https://www.investing.com/analysis/ethereum-struggles-near-2000-as-bearish-structure-keeps-sellers-in-control-200676322"
+            "time": "20:38",
+            "text": "Best Passive Income Strategies for Crypto HODLers 2026",
+            "link": "https://cryptodaily.co.uk/2026/03/best-passive-income-strategies-for-crypto-hodlers-2026"
         }
     ]
 }
