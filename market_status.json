@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 59.531,15",
-    "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "17:50:20",
-    "ticker": "BTC/EUR: € 59.531,15 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 17:50:20 • ",
+    "price": "€ 59.522,53",
+    "signal": "BEARISH",
+    "reliability": "97%",
+    "last_update": "18:20:26",
+    "ticker": "BTC/EUR: € 59.522,53 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 18:20:26 • ",
     "news": [
         {
-            "time": "17:45",
-            "text": "Qualcomm’s Strategic Partnership with Neura Robotics Ignites the Physical AI Revolution",
-            "link": "https://bitcoinworld.co.in/qualcomm-neura-robotics-physical-ai/"
+            "time": "18:15",
+            "text": "Gold Price Faces Critical Pressure as US-Iran Conflict and Fed Rate Decisions Collide",
+            "link": "https://bitcoinworld.co.in/gold-price-pressure-us-iran-fed/"
         },
         {
-            "time": "17:44",
-            "text": "Microsoft adds Anthropic AI agents to Microsoft 365 Copilot",
-            "link": "https://www.cryptopolitan.com/microsoft-brings-claude-into-copilot-cowork/"
+            "time": "18:14",
+            "text": "Strategy makes 2nd largest BTC purchase of 2026; Here’s how much Bitcoin MSTR bought",
+            "link": "https://finbold.com/strategy-makes-2nd-largest-btc-purchase-of-2026-heres-how-much-bitcoin-mstr-bought/"
         },
         {
-            "time": "17:40",
-            "text": "Bitcoin Could Soar as Prolonged US-Iran Conflict Triggers Massive Dollar Debasement, Warns Expert",
-            "link": "https://bitcoinworld.co.in/bitcoin-us-iran-conflict-dollar-debasement/"
+            "time": "18:13",
+            "text": "Binance Will Temporarily Suspend Withdrawals and Deposits on the Ethereum Network: Details",
+            "link": "https://cryptopotato.com/binance-will-temporarily-suspend-withdrawals-and-deposits-on-the-ethereum-network-details/"
         },
         {
-            "time": "17:39",
-            "text": "Ethereum Foundation to stake 70K ETH as network staking nears one-third of supply",
-            "link": "https://ambcrypto.com/ethereum-foundation-to-stake-70k-eth-as-network-staking-nears-one-third-of-supply/"
+            "time": "18:12",
+            "text": "Can you still mine Bitcoin on a PC in 2026? Here is the reality",
+            "link": "https://cointelegraph.com/bitcoin-for-beginners/can-you-still-mine-bitcoin-on-a-pc-in-2026-here-is-the-reality?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
         },
         {
-            "time": "17:35",
-            "text": "GBP/USD Plummets: Surging Oil Prices and Iran Conflict Fuel US Dollar Dominance",
-            "link": "https://bitcoinworld.co.in/gbp-usd-oil-iran-dollar/"
+            "time": "18:10",
+            "text": "Canada Labor Market Analysis: National Bank Forecasts Cautious February Rebound",
+            "link": "https://bitcoinworld.co.in/canada-labor-market-february-rebound-nbc/"
         },
         {
-            "time": "17:34",
-            "text": "Oil Trades Are Booming on 24/7 Crypto Exchange Hyperliquid",
-            "link": "https://www.bloomberg.com/news/articles/2026-03-09/oil-trades-are-booming-on-24-7-crypto-exchange-hyperliquid"
+            "time": "18:05",
+            "text": "Long-Term Bitcoin Trader: The Great XRP Reset Has Been Completed. What Does It Mean?",
+            "link": "https://timestabloid.com/long-term-bitcoin-trader-the-great-xrp-reset-has-been-completed-what-does-it-mean/"
         }
     ]
 }
