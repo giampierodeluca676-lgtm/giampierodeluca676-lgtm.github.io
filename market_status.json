@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 59.252,76",
-    "signal": "BULLISH",
+    "price": "€ 59.128,92",
+    "signal": "BEARISH",
     "reliability": "97%",
-    "last_update": "19:20:37",
-    "ticker": "BTC/EUR: € 59.252,76 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 19:20:37 • ",
+    "last_update": "19:50:44",
+    "ticker": "BTC/EUR: € 59.128,92 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 19:50:44 • ",
     "news": [
         {
-            "time": "19:15",
-            "text": "CEE FX Markets Face Critical Oil-Driven Stress as EUR/HUF Dynamics Intensify",
-            "link": "https://bitcoinworld.co.in/cee-fx-oil-stress-eur-huf-focus/"
+            "time": "19:45",
+            "text": "Ripple’s XRP Whales Eye $1.7 Trillion Payments Industry as New SWIFT Narrative Gains Momentum",
+            "link": "https://zycrypto.com/ripples-xrp-whales-eye-1-7-trillion-payments-industry-as-new-swift-narrative-gains-momentum/"
         },
         {
-            "time": "19:13",
-            "text": "GLM Technical Analysis March 9, 2026: Risk and Stop Loss",
-            "link": "https://en.coinotag.com/analysis/glm-technical-analysis-march-9-2026-risk-and-stop-loss"
+            "time": "19:40",
+            "text": "USDC Minted: Whale Alert Reports Stunning 250 Million Stablecoin Creation",
+            "link": "https://bitcoinworld.co.in/usdc-minted-whale-alert-report-3/"
         },
         {
-            "time": "19:10",
-            "text": "USD/JPY Surges as Crushing Oil Price Rally and Geopolitical Tensions Hammer Japanese Yen",
-            "link": "https://bitcoinworld.co.in/usd-jpy-advances-oil-yen/"
+            "time": "19:36",
+            "text": "Bitcoin ETF Inflows Slow Dramatically After Oil Price Shock And Geopolitical Unrest",
+            "link": "https://en.coin-turk.com/bitcoin-etf-inflows-slow-dramatically-after-oil-price-shock-and-geopolitical-unrest/"
         },
         {
-            "time": "19:05",
-            "text": "Pundit: XRP Is About to Do Something That Will Make People Lose Their Minds",
-            "link": "https://timestabloid.com/pundit-xrp-is-about-to-do-something-that-will-make-people-lose-their-minds/"
+            "time": "19:34",
+            "text": "Celestia price prediction 2026-2032: Will TIA lead the altcoin rally in 2026?",
+            "link": "https://www.cryptopolitan.com/celestia-price-prediction/"
         },
         {
-            "time": "19:03",
-            "text": "BlackRock’s Major Crypto Moves Stir Curiosity After Key Transfers To Coinbase",
-            "link": "https://en.coin-turk.com/blackrocks-major-crypto-moves-stir-curiosity-after-key-transfers-to-coinbase/"
+            "time": "19:33",
+            "text": "GALA Technical Analysis March 9, 2026: Volume and Accumulation",
+            "link": "https://en.coinotag.com/analysis/gala-technical-analysis-march-9-2026-volume-and-accumulation"
         },
         {
-            "time": "19:00",
-            "text": "Ethereum sees $18mln exchange inflows –  Here’s what happens next with ETH",
-            "link": "https://ambcrypto.com/ethereum-sees-18mln-exchange-inflows-heres-what-happens-next-with-eth/"
+            "time": "19:32",
+            "text": "Stocks Fall Across Wall Street as Iran War Risks Lift Oil and Trigger Risk-off Trading",
+            "link": "https://news.bitcoin.com/stocks-fall-across-wall-street-as-iran-war-risks-lift-oil-and-trigger-risk-off-trading/"
         }
     ]
 }
