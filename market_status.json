@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 59.453,42",
+    "price": "€ 59.387,31",
     "signal": "BEARISH",
     "reliability": "99%",
-    "last_update": "16:49:59",
-    "ticker": "BTC/EUR: € 59.453,42 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 16:49:59 • ",
+    "last_update": "17:20:14",
+    "ticker": "BTC/EUR: € 59.387,31 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 17:20:14 • ",
     "news": [
         {
-            "time": "16:48",
-            "text": "Nasdaq Partners Major U.S Crypto Exchange to Bring Tokenized Stocks Onchain",
-            "link": "https://u.today/nasdaq-partners-with-major-us-crypto-exchange-to-bring-tokenized-stocks-on-chain"
+            "time": "17:15",
+            "text": "AUD/USD Surges on China’s Inflation Surge: How USD Strength Caps the Rally",
+            "link": "https://bitcoinworld.co.in/aud-usd-rises-chinese-inflation/"
         },
         {
-            "time": "16:47",
-            "text": "Crypto Funds Pull $619M Inflows as $SOL Eyes $87 Breakout",
-            "link": "https://coinpaper.com/15290/crypto-funds-pull-619-m-inflows-as-sol-eyes-87-breakout"
+            "time": "17:10",
+            "text": "EUR/USD Analysis: Critical Sentiment Pressure Threatens Fragile Support Levels – Scotiabank Warns",
+            "link": "https://bitcoinworld.co.in/eur-usd-sentiment-pressure-support-scotiabank/"
         },
         {
-            "time": "16:45",
-            "text": "EUR Outlook: Resilient Euro Gains Momentum from Growth Divergence and Fiscal Reforms – BNP Paribas",
-            "link": "https://bitcoinworld.co.in/eur-outlook-growth-fiscal-bnp-paribas/"
+            "time": "17:08",
+            "text": "China inflation hits three-year high on Lunar New Year spending",
+            "link": "https://www.cryptopolitan.com/china-cpi-hits-3-year-high/"
         },
         {
-            "time": "16:43",
-            "text": "Dogecoin Price Volatility Rises as Analysts Warn of More Downside",
-            "link": "https://coinpaper.com/15289/dogecoin-price-volatility-rises-as-analysts-warn-of-more-downside"
+            "time": "17:07",
+            "text": "Bitcoin could be the big winner if the U.S.-Iran conflict drags on for months",
+            "link": "https://www.coindesk.com/markets/2026/03/09/bitcoin-could-be-the-big-winner-if-the-u-s-iran-conflict-drags-on-for-months"
         },
         {
-            "time": "16:42",
-            "text": "IOTA Technical Analysis March 9, 2026: RSI MACD Momentum",
-            "link": "https://en.coinotag.com/analysis/iota-technical-analysis-march-9-2026-rsi-macd-momentum"
+            "time": "17:05",
+            "text": "Pundit: XRP Will Either Go to $25 or Zero. Here’s Why",
+            "link": "https://timestabloid.com/pundit-xrp-will-either-go-to-25-or-zero-heres-why/"
         },
         {
-            "time": "16:40",
-            "text": "Nscale’s Stunning $14.6B Valuation Attracts Sandberg and Clegg to Board of ‘Stargate Norway’ AI Powerhouse",
-            "link": "https://bitcoinworld.co.in/nscale-stargate-norway-valuation-sandberg-clegg/"
+            "time": "17:05",
+            "text": "Bitcoin reaches 20M supply milestone as final coins set to take 114 years to mine",
+            "link": "https://ambcrypto.com/bitcoin-reaches-20m-supply-milestone-as-final-coins-set-to-take-114-years-to-mine/"
         }
     ]
 }
