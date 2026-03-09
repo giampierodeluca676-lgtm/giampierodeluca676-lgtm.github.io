@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 59.747,99",
+    "price": "€ 59.849,38",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "15:19:37",
-    "ticker": "BTC/EUR: € 59.747,99 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 15:19:37 • ",
+    "last_update": "15:49:44",
+    "ticker": "BTC/EUR: € 59.849,38 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 15:49:44 • ",
     "news": [
         {
-            "time": "15:15",
-            "text": "EUR/JPY Surges: Oil Price Shock and BoJ Hesitation Crush the Yen",
-            "link": "https://bitcoinworld.co.in/eur-jpy-gains-oil-boj-yen/"
+            "time": "15:45",
+            "text": "Bitcoin ETF Flows Cool to $619 Million as Oil Prices Spike",
+            "link": "https://decrypt.co/360410/bitcoin-etf-flows-cool-to-619-million-as-oil-prices-spike"
         },
         {
-            "time": "15:15",
-            "text": "Morning Minute: Bitcoin Rebounds to $69K as Oil Skyrockets, Then Cools",
-            "link": "https://decrypt.co/360397/morning-minute-bitcoin-rebounds-to-69k-as-oil-skyrockets-then-cools"
+            "time": "15:45",
+            "text": "Crypto Venture Capital Plummets: A Staggering 71% YoY Drop in February 2025 Reveals Market Caution",
+            "link": "https://bitcoinworld.co.in/crypto-venture-capital-february-drop/"
         },
         {
-            "time": "15:14",
-            "text": "Coinbase Launches Crypto Futures Trading for 26 European Countries",
-            "link": "https://coinpaper.com/15287/coinbase-launches-crypto-futures-trading-for-26-european-countries"
+            "time": "15:40",
+            "text": "Crypto Trust Charters Face Legal Showdown as Banking Group Considers OCC Lawsuit",
+            "link": "https://bitcoinworld.co.in/banking-group-occ-crypto-lawsuit/"
         },
         {
-            "time": "15:10",
-            "text": "Federal Reserve Faces Daunting Dilemma: Weak NFP Complicates Response to Oil Shock – MUFG Analysis",
-            "link": "https://bitcoinworld.co.in/fed-nfp-oil-shock-mufg/"
+            "time": "15:40",
+            "text": "Florida Stablecoin Bill Clears Senate 37-0, Awaits Governor Ron DeSantis",
+            "link": "https://news.bitcoin.com/florida-stablecoin-bill-clears-senate-37-0-awaits-governor-ron-desantis/"
         },
         {
-            "time": "15:05",
-            "text": "US Stocks Open Lower: Market Plunge Rattles Investors as Major Indices Decline",
-            "link": "https://bitcoinworld.co.in/us-stocks-open-lower-market-decline/"
+            "time": "15:35",
+            "text": "Decentraland Price Prediction 2026-2030: Will MANA’s Metaverse Momentum Propel It to $1?",
+            "link": "https://bitcoinworld.co.in/decentraland-mana-price-prediction-2030-11/"
         },
         {
-            "time": "15:05",
-            "text": "Developer to XRP Holders: Do You Guys See What’s Happening Right Now?",
-            "link": "https://timestabloid.com/developer-to-xrp-holders-do-you-guys-see-whats-happening-right-now/"
+            "time": "15:31",
+            "text": "Latin America Drives Crypto Adoption with $730 Billion Surge in 2025",
+            "link": "https://en.coin-turk.com/latin-america-drives-crypto-adoption-with-730-billion-surge-in-2025/"
         }
     ]
 }
