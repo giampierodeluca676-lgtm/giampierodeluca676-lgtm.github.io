@@ -1,11 +1,16 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.797,22",
+    "price": "€ 58.878,99",
     "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "09:50:44",
-    "ticker": "BTC/EUR: € 58.797,22 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 09:50:44 • ",
+    "reliability": "99%",
+    "last_update": "09:52:30",
+    "ticker": "BTC/EUR: € 58.878,99 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 09:52:30 • ",
     "news": [
+        {
+            "time": "09:50",
+            "text": "USD/CAD Forecast: Navigating the Critical Sideways Bias with Safe-Haven Support",
+            "link": "https://bitcoinworld.co.in/usd-cad-sideways-bias-rabobank/"
+        },
         {
             "time": "09:45",
             "text": "Crypto Market Liquidity Crunch Deepens Despite Staggering $313 Billion Stablecoin Supply",
@@ -30,11 +35,6 @@
             "time": "09:40",
             "text": "KAS Technical Analysis March 9, 2026: Support Resistance Levels",
             "link": "https://en.coinotag.com/analysis/kas-technical-analysis-march-9-2026-support-resistance-levels"
-        },
-        {
-            "time": "09:40",
-            "text": "Bitmax Reverse Stock Split: A Critical Move to Stabilize the Struggling South Korean Crypto Giant",
-            "link": "https://bitcoinworld.co.in/bitmax-reverse-stock-split-announcement/"
         }
     ]
 }
