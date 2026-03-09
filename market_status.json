@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 59.301,73",
+    "price": "€ 59.309,40",
     "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "22:21:12",
-    "ticker": "BTC/EUR: € 59.301,73 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 22:21:12 • ",
+    "reliability": "99%",
+    "last_update": "22:51:17",
+    "ticker": "BTC/EUR: € 59.309,40 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 22:51:17 • ",
     "news": [
         {
-            "time": "22:15",
-            "text": "10 Promising Low Cap Meme Coins Rise While APEMARS’ 1,350+ Holder Surge Sparks ‘Next Crypto to Hit $1’ Talk",
-            "link": "https://timestabloid.com/10-promising-low-cap-meme-coins-rise-while-apemars-1350/"
+            "time": "22:45",
+            "text": "Anthropic DOD Lawsuit Sparks Defiant Backlash from OpenAI and Google AI Experts",
+            "link": "https://bitcoinworld.co.in/anthropic-dod-lawsuit-openai-google/"
         },
         {
-            "time": "22:15",
-            "text": "Trump Iran War: Hopeful Signs Point to Potential Swift Resolution",
-            "link": "https://bitcoinworld.co.in/trump-iran-war-resolution-analysis/"
+            "time": "22:41",
+            "text": "Curve Finance Leads Active Lending Protocols in New Development Activity Report",
+            "link": "https://en.coin-turk.com/curve-finance-leads-active-lending-protocols-in-new-development-activity-report/"
         },
         {
-            "time": "22:11",
-            "text": "Tech Giants Pour Billions into AI Infrastructure as Startups Race to Simplify Corporate Adoption",
-            "link": "https://en.coin-turk.com/tech-giants-pour-billions-into-ai-infrastructure-as-startups-race-to-simplify-corporate-adoption/"
+            "time": "22:40",
+            "text": "Cash App Embraces Stablecoin Payments: Block CEO’s Strategic Pivot Despite Personal Reservations",
+            "link": "https://bitcoinworld.co.in/cash-app-stablecoin-payments-block/"
         },
         {
-            "time": "22:10",
-            "text": "Bitcoin Gets Its Own ‘Fear Gauge’ as Cboe Announces BITVX Index",
-            "link": "https://news.bitcoin.com/bitcoin-gets-its-own-fear-gauge-as-cboe-announces-bitvx-index/"
+            "time": "22:36",
+            "text": "What’s Fueling Hyperliquid’s Surge? HYPE Outperforms Top 100 Cryptos In Latest Rally",
+            "link": "https://www.newsbtc.com/breaking-news-ticker/whats-fueling-hyperliquids-surge-hype-outperforms-top-100-cryptos-in-latest-rally/"
         },
         {
-            "time": "22:10",
-            "text": "Silver Price Forecast: XAG/USD Soars Above $86 as US Dollar Retreats",
-            "link": "https://bitcoinworld.co.in/silver-price-forecast-xagusd-surges/"
+            "time": "22:25",
+            "text": "Trump’s Defiant Stance: US Vows to Continue Until Iran is Completely Defeated",
+            "link": "https://bitcoinworld.co.in/trump-iran-defeated-us-policy/"
         },
         {
-            "time": "22:08",
-            "text": "3 Things to look out for on Tuesday",
-            "link": "https://seekingalpha.com/news/4562513-3-things-to-look-out-for-on-tuesday?utm_source=cryptocompare.com&utm_medium=referral&feed_item_type=news"
+            "time": "22:23",
+            "text": "Nasdaq links EU markets to Boerse Stuttgart's tokenized settlement venue",
+            "link": "https://cointelegraph.com/news/nasdaq-partners-with-boerse-stuttgart-s-seturion-to-advance-tokenized-securities-settlement-in-europe?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
         }
     ]
 }
