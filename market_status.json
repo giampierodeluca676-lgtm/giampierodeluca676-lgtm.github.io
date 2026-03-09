@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 59.629,32",
+    "price": "€ 59.453,42",
     "signal": "BEARISH",
-    "reliability": "97%",
-    "last_update": "16:19:53",
-    "ticker": "BTC/EUR: € 59.629,32 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 16:19:53 • ",
+    "reliability": "99%",
+    "last_update": "16:49:59",
+    "ticker": "BTC/EUR: € 59.453,42 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 16:49:59 • ",
     "news": [
         {
-            "time": "16:15",
-            "text": "Gold Price Remains Vulnerable as US-Iran War Fears and Fed Rate Outlook Crush Market Sentiment",
-            "link": "https://bitcoinworld.co.in/gold-price-vulnerable-us-iran-fed/"
+            "time": "16:48",
+            "text": "Nasdaq Partners Major U.S Crypto Exchange to Bring Tokenized Stocks Onchain",
+            "link": "https://u.today/nasdaq-partners-with-major-us-crypto-exchange-to-bring-tokenized-stocks-on-chain"
         },
         {
-            "time": "16:11",
-            "text": "Binance Commands Massive Lead in Global Crypto Derivatives Market",
-            "link": "https://en.coin-turk.com/binance-commands-massive-lead-in-global-crypto-derivatives-market/"
+            "time": "16:47",
+            "text": "Crypto Funds Pull $619M Inflows as $SOL Eyes $87 Breakout",
+            "link": "https://coinpaper.com/15290/crypto-funds-pull-619-m-inflows-as-sol-eyes-87-breakout"
         },
         {
-            "time": "16:10",
-            "text": "GBP/JPY Surges as Markets Dramatically Scale Back BoE Rate-Cut Expectations",
-            "link": "https://bitcoinworld.co.in/gbp-jpy-advances-boe-rate-cut/"
+            "time": "16:45",
+            "text": "EUR Outlook: Resilient Euro Gains Momentum from Growth Divergence and Fiscal Reforms – BNP Paribas",
+            "link": "https://bitcoinworld.co.in/eur-outlook-growth-fiscal-bnp-paribas/"
         },
         {
-            "time": "16:09",
-            "text": "20 million bitcoins mined: why Bitcoin’s fixed supply cap still matters",
-            "link": "https://blog.kraken.com/news/industry-news/20-million-bitcoins-mined"
+            "time": "16:43",
+            "text": "Dogecoin Price Volatility Rises as Analysts Warn of More Downside",
+            "link": "https://coinpaper.com/15289/dogecoin-price-volatility-rises-as-analysts-warn-of-more-downside"
         },
         {
-            "time": "16:09",
-            "text": "Tom Lee's BitMine Tops Ethereum Treasury With $131 Million Purchase",
-            "link": "https://u.today/tom-lees-bitmine-tops-ethereum-treasury-with-131-million-purchase"
+            "time": "16:42",
+            "text": "IOTA Technical Analysis March 9, 2026: RSI MACD Momentum",
+            "link": "https://en.coinotag.com/analysis/iota-technical-analysis-march-9-2026-rsi-macd-momentum"
         },
         {
-            "time": "16:07",
-            "text": "Cardano (ADA) Hits Major Tokenization Milestone with Programmable Tokens for RWA",
-            "link": "https://u.today/cardano-ada-hits-major-tokenization-milestone-with-programmable-tokens-for-rwa"
+            "time": "16:40",
+            "text": "Nscale’s Stunning $14.6B Valuation Attracts Sandberg and Clegg to Board of ‘Stargate Norway’ AI Powerhouse",
+            "link": "https://bitcoinworld.co.in/nscale-stargate-norway-valuation-sandberg-clegg/"
         }
     ]
 }
