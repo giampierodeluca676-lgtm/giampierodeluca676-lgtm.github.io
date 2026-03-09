@@ -1,11 +1,31 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.992,29",
+    "price": "€ 58.983,14",
     "signal": "BEARISH",
-    "reliability": "97%",
-    "last_update": "00:21:33",
-    "ticker": "BTC/EUR: € 58.992,29 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 00:21:33 • ",
+    "reliability": "99%",
+    "last_update": "00:51:38",
+    "ticker": "BTC/EUR: € 58.983,14 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 00:51:38 • ",
     "news": [
+        {
+            "time": "00:40",
+            "text": "KMNO Technical Analysis March 9, 2026: Weekly Strategy",
+            "link": "https://en.coinotag.com/analysis/kmno-technical-analysis-march-9-2026-weekly-strategy"
+        },
+        {
+            "time": "00:30",
+            "text": "XRP Investors In Pain: $50 Billion Worth Of Supply Now In Loss",
+            "link": "https://www.newsbtc.com/xrp-news/xrp-investors-pain-50-billion-supply-now-loss/"
+        },
+        {
+            "time": "00:25",
+            "text": "CNY Gains: How China’s Inflation Recovery Signals Cautious Optimism for 2025",
+            "link": "https://bitcoinworld.co.in/cny-inflation-recovery-modest-gains/"
+        },
+        {
+            "time": "00:21",
+            "text": "EIGEN Comprehensive Technical Analysis: March 9, 2026 Detailed Review",
+            "link": "https://en.coinotag.com/analysis/eigen-comprehensive-technical-analysis-march-9-2026-detailed-review"
+        },
         {
             "time": "00:20",
             "text": "NZD/USD Technical Analysis: Critical Battle at 0.59 as Moving Averages Provide Crucial Support",
@@ -15,26 +35,6 @@
             "time": "00:19",
             "text": "Trump’s Cyber Strategy Signals Support for Crypto Infrastructure",
             "link": "https://news.bitcoin.com/trumps-cyber-strategy-signals-support-for-crypto-infrastructure/"
-        },
-        {
-            "time": "00:15",
-            "text": "China Economic Growth Forecast: Danske Bank Predicts Gradual Slowdown Through 2027",
-            "link": "https://bitcoinworld.co.in/china-economic-growth-danske-bank-forecast/"
-        },
-        {
-            "time": "00:15",
-            "text": "XRP Price Prediction: Whales Just Bought 210 Million Tokens – Is a Big Update Coming?",
-            "link": "https://cryptonews.com/news/xrp-price-prediction-whales-just-bought-210-million-tokens-is-a-big-update-coming/"
-        },
-        {
-            "time": "00:10",
-            "text": "AUD/USD Bounces Sharply: The Stunning Reversal Fueling Forex Markets in Early 2025",
-            "link": "https://bitcoinworld.co.in/aud-usd-bounce-sharp-reversal/"
-        },
-        {
-            "time": "00:01",
-            "text": "IMX Comprehensive Technical Analysis: Detailed Review of March 9, 2026",
-            "link": "https://en.coinotag.com/analysis/imx-comprehensive-technical-analysis-detailed-review-of-march-9-2026"
         }
     ]
 }
