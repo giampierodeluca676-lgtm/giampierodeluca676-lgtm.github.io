@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 59.387,31",
-    "signal": "BEARISH",
+    "price": "€ 59.531,15",
+    "signal": "BULLISH",
     "reliability": "99%",
-    "last_update": "17:20:14",
-    "ticker": "BTC/EUR: € 59.387,31 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 17:20:14 • ",
+    "last_update": "17:50:20",
+    "ticker": "BTC/EUR: € 59.531,15 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 17:50:20 • ",
     "news": [
         {
-            "time": "17:15",
-            "text": "AUD/USD Surges on China’s Inflation Surge: How USD Strength Caps the Rally",
-            "link": "https://bitcoinworld.co.in/aud-usd-rises-chinese-inflation/"
+            "time": "17:45",
+            "text": "Qualcomm’s Strategic Partnership with Neura Robotics Ignites the Physical AI Revolution",
+            "link": "https://bitcoinworld.co.in/qualcomm-neura-robotics-physical-ai/"
         },
         {
-            "time": "17:10",
-            "text": "EUR/USD Analysis: Critical Sentiment Pressure Threatens Fragile Support Levels – Scotiabank Warns",
-            "link": "https://bitcoinworld.co.in/eur-usd-sentiment-pressure-support-scotiabank/"
+            "time": "17:44",
+            "text": "Microsoft adds Anthropic AI agents to Microsoft 365 Copilot",
+            "link": "https://www.cryptopolitan.com/microsoft-brings-claude-into-copilot-cowork/"
         },
         {
-            "time": "17:08",
-            "text": "China inflation hits three-year high on Lunar New Year spending",
-            "link": "https://www.cryptopolitan.com/china-cpi-hits-3-year-high/"
+            "time": "17:40",
+            "text": "Bitcoin Could Soar as Prolonged US-Iran Conflict Triggers Massive Dollar Debasement, Warns Expert",
+            "link": "https://bitcoinworld.co.in/bitcoin-us-iran-conflict-dollar-debasement/"
         },
         {
-            "time": "17:07",
-            "text": "Bitcoin could be the big winner if the U.S.-Iran conflict drags on for months",
-            "link": "https://www.coindesk.com/markets/2026/03/09/bitcoin-could-be-the-big-winner-if-the-u-s-iran-conflict-drags-on-for-months"
+            "time": "17:39",
+            "text": "Ethereum Foundation to stake 70K ETH as network staking nears one-third of supply",
+            "link": "https://ambcrypto.com/ethereum-foundation-to-stake-70k-eth-as-network-staking-nears-one-third-of-supply/"
         },
         {
-            "time": "17:05",
-            "text": "Pundit: XRP Will Either Go to $25 or Zero. Here’s Why",
-            "link": "https://timestabloid.com/pundit-xrp-will-either-go-to-25-or-zero-heres-why/"
+            "time": "17:35",
+            "text": "GBP/USD Plummets: Surging Oil Prices and Iran Conflict Fuel US Dollar Dominance",
+            "link": "https://bitcoinworld.co.in/gbp-usd-oil-iran-dollar/"
         },
         {
-            "time": "17:05",
-            "text": "Bitcoin reaches 20M supply milestone as final coins set to take 114 years to mine",
-            "link": "https://ambcrypto.com/bitcoin-reaches-20m-supply-milestone-as-final-coins-set-to-take-114-years-to-mine/"
+            "time": "17:34",
+            "text": "Oil Trades Are Booming on 24/7 Crypto Exchange Hyperliquid",
+            "link": "https://www.bloomberg.com/news/articles/2026-03-09/oil-trades-are-booming-on-24-7-crypto-exchange-hyperliquid"
         }
     ]
 }
