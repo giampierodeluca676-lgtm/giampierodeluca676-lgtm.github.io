@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.804,53",
+    "price": "€ 58.565,87",
     "signal": "BEARISH",
     "reliability": "97%",
-    "last_update": "11:22:54",
-    "ticker": "BTC/EUR: € 58.804,53 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 11:22:54 • ",
+    "last_update": "11:48:57",
+    "ticker": "BTC/EUR: € 58.565,87 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 11:48:57 • ",
     "news": [
         {
-            "time": "11:21",
-            "text": "Bitcoin Holds Institutional Support but $72K Remains the Critical Barrier",
-            "link": "https://www.investing.com/analysis/bitcoin-holds-institutional-support-but-72k-remains-the-critical-barrier-200676124"
+            "time": "11:45",
+            "text": "Eurozone Sentix Investor Confidence Plummets to -3.1 in March 2025, Signaling Economic Uncertainty",
+            "link": "https://bitcoinworld.co.in/eurozone-sentix-investor-confidence-march-2025/"
         },
         {
-            "time": "11:20",
-            "text": "Bank of Canada Charts Flexible Path for Rate Cuts as Inflation Nears Target",
-            "link": "https://bitcoinworld.co.in/bank-canada-flexible-rate-cuts-inflation-target/"
+            "time": "11:41",
+            "text": "Coinbase Rolls Out Regulated Crypto Futures Access Across Europe",
+            "link": "https://en.coin-turk.com/coinbase-rolls-out-regulated-crypto-futures-access-across-europe/"
         },
         {
-            "time": "11:19",
-            "text": "Bitcoin Stabilizes as BlackRock IBIT Drives the Latest ETF Inflow Wave",
-            "link": "https://www.investing.com/analysis/bitcoin-stabilizes-as-blackrock-ibit-drives-the-latest-etf-inflow-wave-200676221"
+            "time": "11:40",
+            "text": "Crypto Funding Jumps +50% Year Over Year Despite Fewer Deals",
+            "link": "https://cryptonews.com/news/crypto-funding-jumps-50-percent-fewer-deals/"
         },
         {
-            "time": "11:17",
-            "text": "Ethereum Tests $2,200 Breakout as ETF Flows Clash With Bear Flag Risk",
-            "link": "https://www.investing.com/analysis/ethereum-tests-2200-breakout-as-etf-flows-clash-with-bear-flag-risk-200676153"
+            "time": "11:40",
+            "text": "Bitcoin Falls Back Below $69K Major Level: Can Bulls Reclaim It or Is $60K Next? – BTC TA March 9, 2026",
+            "link": "https://cryptodaily.co.uk/2026/03/bitcoin-falls-back-below-69k-major-level-can-bulls-reclaim-it-or-is-60k-next-btc-ta-march-9-2026"
         },
         {
-            "time": "11:16",
-            "text": "Bitget upgrades Agent Hub with new tools, enabling OpenClaw trading in minutes",
-            "link": "https://invezz.com/news/2026/03/09/bitget-upgrades-agent-hub-with-new-tools-enabling-openclaw-trading-in-minutes/"
+            "time": "11:40",
+            "text": "Bitcoin Whales Reveal Cautious Strategy as Short-Term Investors Deposit $56 Million to Binance",
+            "link": "https://bitcoinworld.co.in/bitcoin-whales-short-term-investors-deposit/"
         },
         {
-            "time": "11:15",
-            "text": "Bitcoin Tests $74K Resistance as ETF Inflows and Short Squeeze Fuel Recovery",
-            "link": "https://www.investing.com/analysis/bitcoin-tests-74k-resistance-as-etf-inflows-and-short-squeeze-fuel-recovery-200676149"
+            "time": "11:37",
+            "text": "Bitcoin rises as oil spikes, equities drop",
+            "link": "https://www.coindesk.com/markets/2026/03/09/bitcoin-rises-as-oil-spikes-equities-drop"
         }
     ]
 }
