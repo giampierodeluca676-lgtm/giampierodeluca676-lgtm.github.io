@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.565,87",
+    "price": "€ 58.340,87",
     "signal": "BEARISH",
-    "reliability": "97%",
-    "last_update": "11:48:57",
-    "ticker": "BTC/EUR: € 58.565,87 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 11:48:57 • ",
+    "reliability": "98%",
+    "last_update": "12:19:02",
+    "ticker": "BTC/EUR: € 58.340,87 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 12:19:02 • ",
     "news": [
         {
-            "time": "11:45",
-            "text": "Eurozone Sentix Investor Confidence Plummets to -3.1 in March 2025, Signaling Economic Uncertainty",
-            "link": "https://bitcoinworld.co.in/eurozone-sentix-investor-confidence-march-2025/"
+            "time": "12:15",
+            "text": "Critical Warning: UK PM Starmer Signals Economic Peril as Conflict Duration Escalates",
+            "link": "https://bitcoinworld.co.in/starmer-conflict-economic-impact-warning/"
         },
         {
-            "time": "11:41",
-            "text": "Coinbase Rolls Out Regulated Crypto Futures Access Across Europe",
-            "link": "https://en.coin-turk.com/coinbase-rolls-out-regulated-crypto-futures-access-across-europe/"
+            "time": "12:14",
+            "text": "Florida Senate Passes Stablecoin Licensing Bill as State Moves Toward Crypto Payment Rules",
+            "link": "https://coinpaper.com/15267/florida-senate-passes-stablecoin-licensing-bill-as-state-moves-toward-crypto-payment-rules"
         },
         {
-            "time": "11:40",
-            "text": "Crypto Funding Jumps +50% Year Over Year Despite Fewer Deals",
-            "link": "https://cryptonews.com/news/crypto-funding-jumps-50-percent-fewer-deals/"
+            "time": "12:13",
+            "text": "ADA could face resistance at $0.265 as trendline caps recovery",
+            "link": "https://invezz.com/news/2026/03/09/ada-could-face-resistance-at-0-265-as-trendline-caps-recovery/"
         },
         {
-            "time": "11:40",
-            "text": "Bitcoin Falls Back Below $69K Major Level: Can Bulls Reclaim It or Is $60K Next? – BTC TA March 9, 2026",
-            "link": "https://cryptodaily.co.uk/2026/03/bitcoin-falls-back-below-69k-major-level-can-bulls-reclaim-it-or-is-60k-next-btc-ta-march-9-2026"
+            "time": "12:13",
+            "text": "FET Technical Analysis March 9, 2026: Will It Rise or Fall?",
+            "link": "https://en.coinotag.com/analysis/fet-technical-analysis-march-9-2026-will-it-rise-or-fall"
         },
         {
-            "time": "11:40",
-            "text": "Bitcoin Whales Reveal Cautious Strategy as Short-Term Investors Deposit $56 Million to Binance",
-            "link": "https://bitcoinworld.co.in/bitcoin-whales-short-term-investors-deposit/"
+            "time": "12:11",
+            "text": "Middle East Tensions Push Oil to Two-Year High While Bitcoin Gains Spotlight",
+            "link": "https://en.coin-turk.com/middle-east-tensions-push-oil-to-two-year-high-while-bitcoin-gains-spotlight/"
         },
         {
-            "time": "11:37",
-            "text": "Bitcoin rises as oil spikes, equities drop",
-            "link": "https://www.coindesk.com/markets/2026/03/09/bitcoin-rises-as-oil-spikes-equities-drop"
+            "time": "12:10",
+            "text": "Silver Price Forecast: XAG/USD Stages Remarkable Recovery Amid Persistent Market Uncertainty",
+            "link": "https://bitcoinworld.co.in/silver-price-forecast-xag-usd-recovery/"
         }
     ]
 }
