@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.764,18",
+    "price": "€ 58.935,68",
     "signal": "BULLISH",
-    "reliability": "97%",
-    "last_update": "13:19:13",
-    "ticker": "BTC/EUR: € 58.764,18 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 13:19:13 • ",
+    "reliability": "98%",
+    "last_update": "13:49:19",
+    "ticker": "BTC/EUR: € 58.935,68 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 13:49:19 • ",
     "news": [
         {
-            "time": "13:15",
-            "text": "USD/INR Exchange Rate Surges Toward Historic 92.80 High Amid Critical Energy Supply Shocks",
-            "link": "https://bitcoinworld.co.in/usd-inr-historic-high-energy-shocks/"
+            "time": "13:46",
+            "text": "Bitcoin slides to $67,000 as ’extreme fear’ grips crypto markets",
+            "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-slides-to-67000-as-extreme-fear-grips-crypto-markets-4548565"
         },
         {
-            "time": "13:14",
-            "text": "Breaking: Strategy Buys $1.3 Billion Worth of Bitcoin (BTC)",
-            "link": "https://u.today/breaking-strategy-buys-13-billion-worth-of-bitcoin-btc"
+            "time": "13:45",
+            "text": "Bitcoin’s Next Big Move Brewing? Charts Show Market Locked in Tense Standoff",
+            "link": "https://news.bitcoin.com/bitcoins-next-big-move-brewing-charts-show-market-locked-in-tense-standoff/"
         },
         {
-            "time": "13:14",
-            "text": "2026 Blockchain Paradigm Shift: ‘370,000-Strong Community’ WonderChain Takes Center Stage in Global Financial Ecosystem",
-            "link": "https://bitcoinworld.co.in/2026-blockchain-paradigm-shift-370000-strong-community-wonderchain-takes-center-stage-in-global-financial-ecosystem/"
+            "time": "13:45",
+            "text": "U.S. court dismisses terrorism financing claims against Binance",
+            "link": "https://www.investing.com/news/cryptocurrency-news/us-court-dismisses-terrorism-financing-claims-against-binance-4548519"
         },
         {
-            "time": "13:11",
-            "text": "Michael Saylor's Strategy made $1.3 billion bitcoin purchase last week",
-            "link": "https://www.coindesk.com/markets/2026/03/09/michael-saylor-s-strategy-made-usd1-3-billion-bitcoin-purchase-last-week"
+            "time": "13:45",
+            "text": "Strategic Expansion: Bybit Doubles Down on Middle East Market with Major Infrastructure Investment",
+            "link": "https://bitcoinworld.co.in/bybit-middle-east-expansion-investment/"
         },
         {
-            "time": "13:11",
-            "text": "US Treasury Recognizes Privacy Role of Crypto Mixers While Advancing Security Measures",
-            "link": "https://en.coin-turk.com/us-treasury-recognizes-privacy-role-of-crypto-mixers-while-advancing-security-measures/"
+            "time": "13:43",
+            "text": "KAST raises $80 million at $600 million  valuation to expand stablecoin payments platform",
+            "link": "https://www.coindesk.com/business/2026/03/09/kast-raises-usd80-million-at-usd600-million-valuation-to-expand-stablecoin-payments-platform"
         },
         {
-            "time": "13:10",
-            "text": "US Dollar: Safe-Haven Status Faces Unprecedented Pressure as DBS Flags Critical Shifts",
-            "link": "https://bitcoinworld.co.in/us-dollar-safe-haven-pressure-dbs/"
+            "time": "13:43",
+            "text": "Bitcoin price today: muted near $67k as oil surge stokes inflation fears",
+            "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-price-today-muted-near-67k-as-oil-surge-stokes-inflation-fears-4548687"
         }
     ]
 }
