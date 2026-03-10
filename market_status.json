@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 60.819,30",
-    "signal": "BEARISH",
-    "reliability": "97%",
-    "last_update": "11:23:48",
-    "ticker": "BTC/EUR: € 60.819,30 • SIGNAL: BEARISH",
+    "price": "€ 60.930,81",
+    "signal": "BULLISH",
+    "reliability": "99%",
+    "last_update": "11:53:50",
+    "ticker": "BTC/EUR: € 60.930,81 • SIGNAL: BULLISH",
     "news": [
         {
-            "time": "11:20",
-            "text": "RBA March Hike Risk: Markets Brace for Potential Rate Increase as TD Securities Issues Critical Warning",
-            "link": "https://bitcoinworld.co.in/rba-march-hike-risk-markets-td-securities/"
+            "time": "11:50",
+            "text": "Nigeria’s Trading Ecosystem Takes Center Stage as Traders Fair 2026 Arrives in Lagos",
+            "link": "https://bitcoinworld.co.in/nigerias-trading-ecosystem-takes-center-stage-as-traders-fair-2026-arrives-in-lagos-2/"
         },
         {
-            "time": "11:15",
-            "text": "Bitcoin ETFs see $167M in inflows as BTC surges above $71K",
-            "link": "https://invezz.com/news/2026/03/10/bitcoin-etfs-see-167m-in-inflows-as-btc-surges-above-71k/"
+            "time": "11:50",
+            "text": "Bank of England Policy Shift Propels Sterling as Oil Market Turmoil Creates Volatile Backdrop",
+            "link": "https://bitcoinworld.co.in/boe-policy-sterling-oil-shock/"
         },
         {
-            "time": "11:15",
-            "text": "Strategic Bitcoin Treasury Expansion: Giga Inc. Boldly Acquires 38.03 BTC Amid Market Evolution",
-            "link": "https://bitcoinworld.co.in/giga-inc-bitcoin-treasury-expansion/"
+            "time": "11:45",
+            "text": "Thai Crypto Regulation Crackdown: Authorities Freeze Over 10,000 Accounts in Major Money Laundering Purge",
+            "link": "https://bitcoinworld.co.in/thai-crypto-accounts-frozen-money-laundering/"
         },
         {
-            "time": "11:15",
-            "text": "Former CFTC Chair Says CLARITY Act Is a Lifeline for Banks More Than Crypto",
-            "link": "https://coinpaper.com/15300/former-cftc-chair-says-clarity-act-is-a-lifeline-for-banks-more-than-crypto"
+            "time": "11:44",
+            "text": "Trade Smarter in 2026: Learn from Market Experts at Traders Fair Manila",
+            "link": "https://bitcoinworld.co.in/trade-smarter-in-2026-learn-from-market-experts-at-traders-fair-manila/"
         },
         {
-            "time": "11:11",
-            "text": "BlackRock Drives Major Shift as Institutional Flows Favor Bitcoin Over Altcoins",
-            "link": "https://en.coin-turk.com/blackrock-drives-major-shift-as-institutional-flows-favor-bitcoin-over-altcoins/"
+            "time": "11:43",
+            "text": "Solana Mobile Seeker Price Prediction 2026–2032: Can SKR Token Sustain the Bullish Surge?",
+            "link": "https://www.cryptopolitan.com/solana-mobile-seeker-price-prediction/"
         },
         {
-            "time": "11:10",
-            "text": "Hyperliquid (HYPE) Rockets by Double Digits, Bitcoin (BTC) Tops $71K: Market Watch",
-            "link": "https://cryptopotato.com/hyperliquid-hype-rockets-by-double-digits-bitcoin-btc-tops-71k-market-watch/"
+            "time": "11:43",
+            "text": "Bitcoin reclaims $71K as war volatility subsides: check forecast",
+            "link": "https://invezz.com/news/2026/03/10/bitcoin-reclaims-71k-as-war-volatility-subsides-check-forecast/"
         }
     ]
 }
