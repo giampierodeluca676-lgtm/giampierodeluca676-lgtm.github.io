@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 60.427,57",
+    "price": "€ 59.957,35",
     "signal": "BEARISH",
-    "reliability": "98%",
-    "last_update": "14:54:10",
-    "ticker": "BTC/EUR: € 60.427,57 • SIGNAL: BEARISH",
+    "reliability": "99%",
+    "last_update": "15:24:13",
+    "ticker": "BTC/EUR: € 59.957,35 • SIGNAL: BEARISH",
     "news": [
         {
-            "time": "14:51",
-            "text": "China Rolls Out Ultra-Fast Blockchain Chip as AI Agent Steps Into Crypto Mining",
-            "link": "https://en.coin-turk.com/china-rolls-out-ultra-fast-blockchain-chip-as-ai-agent-steps-into-crypto-mining/"
+            "time": "15:21",
+            "text": "Bitcoin Bulls Rally as Market Eyes Rebound; NEAR and WLD Forecasts Signal Optimism",
+            "link": "https://en.coin-turk.com/bitcoin-bulls-rally-as-market-eyes-rebound-near-and-wld-forecasts-signal-optimism/"
         },
         {
-            "time": "14:50",
-            "text": "AUD/USD Forecast: RBA Poised for Crucial Back-to-Back Rate Hike Amid Inflation Battle – BBH Analysis",
-            "link": "https://bitcoinworld.co.in/aud-usd-rba-rate-hike-bbh/"
+            "time": "15:20",
+            "text": "Gold Flows: Surprising Tepid Response to Geopolitical Shock Reveals Market Evolution – TD Securities Analysis",
+            "link": "https://bitcoinworld.co.in/gold-flows-geopolitical-shock-analysis/"
         },
         {
-            "time": "14:50",
-            "text": "XRP Bulls Step In as Long Positions and Buying Pressure Surge",
-            "link": "https://coinpaper.com/15313/xrp-bulls-step-in-as-long-positions-and-buying-pressure-surge"
+            "time": "15:18",
+            "text": "Trust Wallet adds real-time scam address checks for crypto users",
+            "link": "https://cointelegraph.com/news/trust-wallet-address-poisoning-protection-32-evm-chains?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
         },
         {
-            "time": "14:48",
-            "text": "Adam Back Hints at Who is Quietly Accumulating Bitcoin During This Rally",
-            "link": "https://u.today/adam-back-hints-at-who-is-quietly-accumulating-bitcoin-during-this-rally"
+            "time": "15:16",
+            "text": "One Analyst Calls XRP Extremely Oversold, Another Plans to Short It",
+            "link": "https://cryptopotato.com/one-analyst-calls-xrp-extremely-oversold-another-plans-to-short-it/"
         },
         {
-            "time": "14:47",
-            "text": "Nigel Farage invests in UK bitcoin treasury company Stack",
-            "link": "https://www.investing.com/news/cryptocurrency-news/nigel-farage-invests-in-uk-bitcoin-treasury-company-stack-93CH-4549451"
+            "time": "15:15",
+            "text": "SNB’s Critical Currency Watch: Swiss Franc Faces Pressure as Inflation Stays Near Zero – Nomura Analysis",
+            "link": "https://bitcoinworld.co.in/snb-currency-watch-swiss-inflation-nomura/"
         },
         {
-            "time": "14:45",
-            "text": "NASDAQ plans equity tokenization design for issuers",
-            "link": "https://www.investing.com/news/cryptocurrency-news/nasdaq-plans-equity-tokenization-design-for-issuers-432SI-4549274"
+            "time": "15:12",
+            "text": "Cardano at Key Price Juncture as Bollinger Bands Tighten, Where Next?",
+            "link": "https://u.today/cardano-at-key-price-juncture-as-bollinger-bands-tighten-where-to-next"
         }
     ]
 }
