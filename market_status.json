@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 60.238,86",
+    "price": "€ 60.024,32",
     "signal": "BEARISH",
-    "reliability": "99%",
-    "last_update": "06:53:26",
-    "ticker": "BTC/EUR: € 60.238,86 • SIGNAL: BEARISH",
+    "reliability": "98%",
+    "last_update": "07:23:29",
+    "ticker": "BTC/EUR: € 60.024,32 • SIGNAL: BEARISH",
     "news": [
         {
-            "time": "06:40",
-            "text": "Bitcoin’s Leverage Ratio Drops Sharply – Is a Healthier Market Reset Underway?",
-            "link": "https://cryptopotato.com/bitcoins-leverage-ratio-drops-sharply-is-a-healthier-market-reset-underway/"
+            "time": "07:20",
+            "text": "Gold Price Defies Gravity with Modest Gains as Safe-Haven Flows Battle Dollar Strength",
+            "link": "https://bitcoinworld.co.in/gold-price-safe-haven-dollar-strength/"
         },
         {
-            "time": "06:35",
-            "text": "World Models Revolution: Yann LeCun’s AMI Labs Secures $1.03 Billion for Groundbreaking AI",
-            "link": "https://bitcoinworld.co.in/yann-lecun-ami-labs-world-models-funding/"
+            "time": "07:18",
+            "text": "Wall Street Banks Weigh Lawsuit Over Crypto Banking Charters",
+            "link": "https://decrypt.co/360524/wall-street-banks-weigh-lawsuit-over-crypto-banking-charters"
         },
         {
-            "time": "06:30",
-            "text": "‘On Schedule:’ Central Bank of Russia Prepared for Digital Ruble Launch",
-            "link": "https://news.bitcoin.com/on-schedule-central-bank-of-russia-prepared-for-digital-ruble-launch/"
+            "time": "07:15",
+            "text": "Ripple Exec Celebrates $100 Billion Milestone",
+            "link": "https://u.today/ripple-exec-celebrates-100-billion-milestone"
         },
         {
-            "time": "06:30",
-            "text": "US Dollar Index Soars: Geopolitical Fears and CPI Anticipation Drive Rally Toward 99.00",
-            "link": "https://bitcoinworld.co.in/us-dollar-index-soars-cpi-geopolitics/"
+            "time": "07:15",
+            "text": "USD/CAD Forecast: Critical Breakdown Looms Below 1.3600 as Trading Range Collapses",
+            "link": "https://bitcoinworld.co.in/usd-cad-forecast-trading-range-breakdown/"
         },
         {
-            "time": "06:29",
-            "text": "AI tokens rally after Nvidia open-source agent plan, beat CoinDesk 20",
-            "link": "https://www.coindesk.com/markets/2026/03/10/ai-tokens-rally-after-nvidia-open-source-agent-plan-beating-coindesk-20"
+            "time": "07:14",
+            "text": "Here's how traders and big buyers stepped in to keep bitcoin steady during the oil shock",
+            "link": "https://www.coindesk.com/markets/2026/03/10/here-s-how-traders-and-big-buyers-stepped-in-to-keep-bitcoin-steady-during-the-oil-shock"
         },
         {
-            "time": "06:27",
-            "text": "Sharplink $734M ETH Loss: 2025 Results",
-            "link": "https://en.coinotag.com/sharplink-734m-eth-loss-2025-results"
+            "time": "07:10",
+            "text": "EUR/JPY Forecast: Pair Retreats Below 183.50 as Safe-Haven Flows Intensify, Yet Bullish Structure Holds",
+            "link": "https://bitcoinworld.co.in/eur-jpy-forecast-safe-haven-demand/"
         }
     ]
 }
