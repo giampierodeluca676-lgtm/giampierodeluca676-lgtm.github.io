@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 60.719,75",
-    "signal": "BEARISH",
-    "reliability": "98%",
-    "last_update": "09:53:41",
-    "ticker": "BTC/EUR: € 60.719,75 • SIGNAL: BEARISH",
+    "price": "€ 60.954,72",
+    "signal": "BULLISH",
+    "reliability": "99%",
+    "last_update": "10:23:43",
+    "ticker": "BTC/EUR: € 60.954,72 • SIGNAL: BULLISH",
     "news": [
         {
-            "time": "09:51",
-            "text": "SharpLink Posts $734 Million Loss as Ethereum Holdings Roil Annual Report",
-            "link": "https://en.coin-turk.com/sharplink-posts-734-million-loss-as-ethereum-holdings-roil-annual-report/"
+            "time": "10:20",
+            "text": "USD Currency Analysis: Softer Tone Emerges as Conflict Risks Reassessed – MUFG Insight",
+            "link": "https://bitcoinworld.co.in/usd-currency-analysis-conflict-risks-mufg/"
         },
         {
-            "time": "09:50",
-            "text": "AUD/JPY Price Forecast: Bullish Momentum Surges Above Critical 100-Day EMA with Strong RSI Signals",
-            "link": "https://bitcoinworld.co.in/aud-jpy-price-forecast-ema/"
+            "time": "10:18",
+            "text": "CoinPoker Debuts New App with Rake Free Poker, Signs Abby Merk and Papo MC",
+            "link": "https://bitcoinworld.co.in/coinpoker-debuts-new-app-with-rake-free-poker-signs-abby-merk-and-papo-mc/"
         },
         {
-            "time": "09:45",
-            "text": "Why stablecoins are becoming the preferred payment method in online casinos",
-            "link": "https://ambcrypto.com/why-stablecoins-are-becoming-the-preferred-payment-method-in-online-casinos/"
+            "time": "10:18",
+            "text": "178% In Volume, 24 Hours: Hyperliquid (HYPE) an Enormous and Unexpected Recovery",
+            "link": "https://u.today/178-in-volume-in-24-hours-hyperliquids-hype-enormous-and-unexpected-recovery"
         },
         {
-            "time": "09:45",
-            "text": "Silver Price Forecast: XAG/USD Targets $90.00 as 100-SMA Holds the Key to Explosive Upside",
-            "link": "https://bitcoinworld.co.in/silver-price-forecast-xag-usd-targets-90/"
+            "time": "10:17",
+            "text": "CoinPoker Debuts New App with Rake Free Poker, Signs Abby Merk and Papo MC",
+            "link": "https://www.cryptointelligence.co.uk/coinpoker-debuts-new-app-with-rake-free-poker-signs-abby-merk-and-papo-mc/"
         },
         {
-            "time": "09:40",
-            "text": "Gold Price: Unwavering Safe-Haven Bid Emerges on Market Dips, OCBC Analysis Reveals",
-            "link": "https://bitcoinworld.co.in/gold-safe-haven-bid-ocbc/"
+            "time": "10:16",
+            "text": "Over 50B XRP Underwater: Is XRP Still in Trouble?",
+            "link": "https://coinpaper.com/15299/over-50-b-xrp-underwater-is-xrp-still-in-trouble"
         },
         {
-            "time": "09:35",
-            "text": "Brent Crude Volatility Plummets: Market Calms After Trump’s Geopolitical Remarks – Deutsche Bank Insight",
-            "link": "https://bitcoinworld.co.in/brent-crude-volatility-trump-comments/"
+            "time": "10:15",
+            "text": "Solana ETF inflows hit 2% of SOL’s market cap, beating Bitcoin’s record",
+            "link": "https://ambcrypto.com/solana-etf-inflows-hit-2-of-sols-market-cap-beats-bitcoins-record/"
         }
     ]
 }
