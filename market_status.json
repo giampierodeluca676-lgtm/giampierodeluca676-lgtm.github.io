@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 60.096,31",
+    "price": "€ 60.227,90",
     "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "05:23:19",
-    "ticker": "BTC/EUR: € 60.096,31 • SIGNAL: BULLISH",
+    "reliability": "97%",
+    "last_update": "05:53:21",
+    "ticker": "BTC/EUR: € 60.227,90 • SIGNAL: BULLISH",
     "news": [
         {
-            "time": "05:20",
-            "text": "Bitcoin ETF Inflows Surge: $167.1 Million Rebound Led by BlackRock and Fidelity",
-            "link": "https://bitcoinworld.co.in/bitcoin-etf-inflows-march-2025/"
+            "time": "05:46",
+            "text": "Trump's DOJ Seeks October Retrial for Tornado Cash Developer Roman Storm",
+            "link": "https://decrypt.co/360521/trumps-doj-seeks-october-retrial-tornado-cash-developer"
         },
         {
-            "time": "05:15",
-            "text": "As TRX and ADA Slip, A Wave of Over 1,350 Early Investors Pushes APEMARS Toward the Best Crypto Presale Milestone",
-            "link": "https://timestabloid.com/as-trx-and-ada-slip-a-wave-of-over-1350-early-investors-pushes/"
+            "time": "05:42",
+            "text": "Ether, solana, XRP jump higher as Trump signals Iran war nearing end",
+            "link": "https://www.coindesk.com/markets/2026/03/10/ether-solana-xrp-jump-higher-as-trump-signals-iran-war-nearing-end"
         },
         {
-            "time": "05:15",
-            "text": "China’s Trade Surplus Skyrockets: Exports Defy Expectations with Strong January-February Performance",
-            "link": "https://bitcoinworld.co.in/china-trade-surplus-exports-surge-january-february/"
+            "time": "05:40",
+            "text": "Asian Currencies Weaken as Iran Uncertainty Persists; Yuan Surges on Stunning Trade Data",
+            "link": "https://bitcoinworld.co.in/asian-currencies-yuan-surge-iran/"
         },
         {
-            "time": "05:10",
-            "text": "Pound Sterling Slips as Soaring Iran Conflict Fears Reignite Safe-Haven USD Demand",
-            "link": "https://bitcoinworld.co.in/pound-sterling-iran-war-usd-demand/"
+            "time": "05:30",
+            "text": "Kraken Partners With Nasdaq In New Tokenized Stocks Move",
+            "link": "https://bitcoinist.com/kraken-partners-with-nasdaq/"
         },
         {
-            "time": "05:00",
-            "text": "PIPPIN declines 11% amid $2 mln derivatives outflows – What’s next?",
-            "link": "https://ambcrypto.com/pippin-declines-11-amid-2-mln-derivatives-outflows-whats-next/"
+            "time": "05:30",
+            "text": "Analyst: AI Might Have Been Involved in Iranian Girl’s School Massacre",
+            "link": "https://news.bitcoin.com/analyst-ai-might-have-been-involved-in-iranian-girls-school-massacre/"
         },
         {
-            "time": "05:00",
-            "text": "Oil tumbles, crypto gains as Trump sends mixed signals over Iran war",
-            "link": "https://cointelegraph.com/news/iran-war-confusion-sends-oil-tumbling-as-crypto-posts-modest-gains?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            "time": "05:30",
+            "text": "Australian Dollar Struggles: Key Pressure Mounts After China’s Trade Data Reveal",
+            "link": "https://bitcoinworld.co.in/australian-dollar-china-trade-data/"
         }
     ]
 }
