@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 60.926,69",
-    "signal": "BEARISH",
-    "reliability": "97%",
-    "last_update": "16:54:20",
-    "ticker": "BTC/EUR: € 60.926,69 • SIGNAL: BEARISH",
+    "price": "€ 61.322,32",
+    "signal": "BULLISH",
+    "reliability": "99%",
+    "last_update": "17:01:18",
+    "ticker": "BTC/EUR: € 61.322,32 • SIGNAL: BULLISH",
     "news": [
         {
-            "time": "16:50",
-            "text": "ECB Interest Rates: How Conflict-Driven Energy Shocks Are Forcing a Crucial Monetary Policy Reassessment",
-            "link": "https://bitcoinworld.co.in/ecb-energy-shock-rate-path-nomura/"
+            "time": "17:00",
+            "text": "Avalanche lands $200B real estate deal, yet ONE barrier blocks AVAX bulls",
+            "link": "https://ambcrypto.com/avalanche-lands-200b-real-estate-deal-yet-one-barrier-blocks-avax-bulls/"
         },
         {
-            "time": "16:45",
-            "text": "CFTC chair highlights wide crypto agenda, including rules on DeFi, prediction markets",
-            "link": "https://www.coindesk.com/policy/2026/03/10/cftc-chair-highlights-wide-crypto-agenda-including-rules-on-defi-prediction-markets"
+            "time": "16:58",
+            "text": "Bitcoin climbs past $71,000 as oil shock fears continue to ease",
+            "link": "https://www.coindesk.com/markets/2026/03/10/bitcoin-climbs-past-usd71-000-as-oil-shock-fears-continue-to-ease"
         },
         {
-            "time": "16:45",
-            "text": "Clarity Act Compromise Inevitable: Senator Alsobrooks Urges Pragmatic Crypto Legislation at ABA Summit",
-            "link": "https://bitcoinworld.co.in/clarity-act-compromise-aba-summit/"
+            "time": "16:55",
+            "text": "AIntuition Collection: A New Generation of Utility NFTs Bridging Digital Ownership and Real Privileges",
+            "link": "https://ambcrypto.com/aintuition-collection-a-new-generation-of-utility-nfts-bridging-digital-ownership-and-real-privileges/"
         },
         {
-            "time": "16:45",
-            "text": "Bitcoin: Bhutan sells amid MSTR’s $1.28B BTC buy – Strategic move?",
-            "link": "https://ambcrypto.com/bitcoin-bhutan-sells-amid-mstrs-1-28b-btc-buy-strategic-move/"
+            "time": "16:55",
+            "text": "USDC Minted: 250 Million Stablecoin Injection Sparks Major Market Liquidity Surge",
+            "link": "https://bitcoinworld.co.in/usdc-minted-stablecoin-liquidity-injection-5/"
         },
         {
-            "time": "16:44",
-            "text": "ABTC Director Richard Busch Buys 68,000 Shares at $1.15",
-            "link": "https://coinpaprika.com/news/abtc-director-richard-busch-buys-68000-shares-115"
+            "time": "16:53",
+            "text": "XRP derivatives funding rates rocket over 311% in a day",
+            "link": "https://finbold.com/xrp-derivatives-funding-rates-rocket-over-311-in-a-day/"
         },
         {
-            "time": "16:43",
-            "text": "Polymarket, Peter Thiel's Palantir Eye 'Surveillance Models' for Sports Prediction Markets",
-            "link": "https://decrypt.co/360558/polymarket-peter-thiel-palantir-surveillance-models-sports-prediction-markets"
+            "time": "16:51",
+            "text": "Yes Bank Share Price Up as Execs in Insider Trading Probe Opt to Settle",
+            "link": "https://coinpaper.com/15319/yes-bank-share-price-up-as-execs-in-insider-trading-probe-opt-to-settle"
         }
     ]
 }
