@@ -1,10 +1,176 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keygap Global Intelligence | Tactical Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #05070a;
+            --accent-color: #00d4ff;
+            --grid-border: #1a1f26;
+            --panel-bg: rgba(13, 17, 23, 0.9);
+            --text-main: #e6edf3;
+        }
 
-        <html>
-        <head><title>Keygap Intelligence - Live Feed</title></head>
-        <body style="font-family: sans-serif; padding: 30px;">
-            <h1>Keygap Global Intelligence - Archivio Report</h1>
-            <hr>
-            <ul><li><a href="Report_Finanziari/report_2026-03-08_10-12.html">report 2026-03-08 10-12</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_19_01.html">Report Mondiale 10 03 2026 19 01</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_18_31.html">Report Mondiale 10 03 2026 18 31</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_18_01.html">Report Mondiale 10 03 2026 18 01</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_17_31.html">Report Mondiale 10 03 2026 17 31</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_17_01.html">Report Mondiale 10 03 2026 17 01</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_16_54.html">Report Mondiale 10 03 2026 16 54</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_16_24.html">Report Mondiale 10 03 2026 16 24</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_15_54.html">Report Mondiale 10 03 2026 15 54</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_15_24.html">Report Mondiale 10 03 2026 15 24</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_14_54.html">Report Mondiale 10 03 2026 14 54</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_14_24.html">Report Mondiale 10 03 2026 14 24</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_13_54.html">Report Mondiale 10 03 2026 13 54</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_13_24.html">Report Mondiale 10 03 2026 13 24</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_12_53.html">Report Mondiale 10 03 2026 12 53</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_12_23.html">Report Mondiale 10 03 2026 12 23</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_11_53.html">Report Mondiale 10 03 2026 11 53</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_11_23.html">Report Mondiale 10 03 2026 11 23</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_10_53.html">Report Mondiale 10 03 2026 10 53</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_10_23.html">Report Mondiale 10 03 2026 10 23</a></li></ul>
-        </body>
-        </html>
-        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'JetBrains Mono', monospace;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto 500px auto;
+            gap: 15px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        /* Pannello Header */
+        .panel-header {
+            grid-column: span 4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border: 1px solid var(--accent-color);
+            background: var(--panel-bg);
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.15);
+        }
+
+        /* Widget Prezzo Live */
+        .price-box {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Grafico Principale */
+        .panel-chart {
+            grid-column: span 3;
+            background: var(--panel-bg);
+            border: 1px solid var(--grid-border);
+            position: relative;
+        }
+
+        /* Pannello laterale segnali */
+        .panel-signals {
+            grid-column: span 1;
+            background: var(--panel-bg);
+            border: 1px solid var(--grid-border);
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .status-indicator {
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid #30363d;
+        }
+
+        .bullish { color: #238636; border-color: #238636; background: rgba(35, 134, 54, 0.1); }
+        .blink { animation: blinker 1.5s linear infinite; }
+        @keyframes blinker { 50% { opacity: 0.3; } }
+
+        /* Tasto Intelligence */
+        .btn-report {
+            grid-column: span 4;
+            padding: 20px;
+            background: linear-gradient(90deg, #00d4ff, #0055ff);
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.3s;
+            border: none;
+        }
+
+        .btn-report:hover {
+            box-shadow: 0 0 25px rgba(0, 212, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        iframe { width: 100%; height: 100%; border: none; }
+    </style>
+</head>
+<body>
+
+<div class="dashboard-grid">
+    <div class="panel-header">
+        <div>
+            <span style="color: var(--accent-color)">KEYGAP</span> GLOBAL INTELLIGENCE V.2.6
+        </div>
+        <div class="price-box" id="btc-price">BTC/USDT: LOADING...</div>
+        <div style="font-size: 0.8rem; text-align: right;">
+            SISTEMA: <span style="color: #238636;">ATTIVO</span><br>
+            DATA: 10.03.2026
+        </div>
+    </div>
+
+    <div class="panel-chart">
+        <div id="tradingview_widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script type="text/javascript">
+            new TradingView.widget({
+                "autosize": true,
+                "symbol": "BINANCE:BTCUSDT",
+                "interval": "15",
+                "timezone": "Europe/Rome",
+                "theme": "dark",
+                "style": "1",
+                "locale": "it",
+                "enable_publishing": false,
+                "allow_symbol_change": true,
+                "container_id": "tradingview_widget"
+            });
+        </script>
+    </div>
+
+    <div class="panel-signals">
+        <h3 style="margin-top: 0; border-bottom: 1px solid var(--grid-border); padding-bottom: 10px;">MARKET SIGNALS</h3>
+        <div class="status-indicator bullish blink">ALGORITMO: BULLISH</div>
+        <div style="font-size: 0.7rem; color: #8b949e;">
+            <p>> ANALISI TREND... COMPLETATA</p>
+            <p>> VOLUMI... STABILI</p>
+            <p>> MOMENTUM... POSITIVO</p>
+            <p>> REPORT MONDIALE: DISPONIBILE</p>
+        </div>
+        <div style="margin-top: auto; padding: 10px; border-top: 1px solid var(--grid-border); font-size: 0.7rem;">
+            AGGIORNAMENTO OGNI 30 MIN.
+        </div>
+    </div>
+
+    <a href="archivio.html" class="btn-report">Accedi ai Report Decriptati (Archivio Mondiale)</a>
+</div>
+
+<script>
+    // WebSocket per prezzo BTC in tempo reale
+    const priceDisplay = document.getElementById('btc-price');
+    const ws = new WebSocket('wss://stream.binance.com:9443/ws/btcusdt@trade');
+    
+    ws.onmessage = (event) => {
+        const data = JSON.parse(event.data);
+        const price = parseFloat(data.p).toFixed(2);
+        priceDisplay.innerText = `BTC/USDT: $${price}`;
+    };
+
+    ws.onerror = () => {
+        priceDisplay.innerText = "BTC/USDT: OFFLINE";
+    };
+</script>
+
+</body>
+</html>
