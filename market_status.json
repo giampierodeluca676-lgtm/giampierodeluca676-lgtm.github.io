@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 60.930,81",
-    "signal": "BULLISH",
+    "price": "€ 60.773,26",
+    "signal": "BEARISH",
     "reliability": "99%",
-    "last_update": "11:53:50",
-    "ticker": "BTC/EUR: € 60.930,81 • SIGNAL: BULLISH",
+    "last_update": "12:23:53",
+    "ticker": "BTC/EUR: € 60.773,26 • SIGNAL: BEARISH",
     "news": [
         {
-            "time": "11:50",
-            "text": "Nigeria’s Trading Ecosystem Takes Center Stage as Traders Fair 2026 Arrives in Lagos",
-            "link": "https://bitcoinworld.co.in/nigerias-trading-ecosystem-takes-center-stage-as-traders-fair-2026-arrives-in-lagos-2/"
+            "time": "12:21",
+            "text": "The Crypto Market Has Temporarily Found Balance",
+            "link": "https://www.investing.com/analysis/the-crypto-market-has-temporarily-found-balance-200676281"
         },
         {
-            "time": "11:50",
-            "text": "Bank of England Policy Shift Propels Sterling as Oil Market Turmoil Creates Volatile Backdrop",
-            "link": "https://bitcoinworld.co.in/boe-policy-sterling-oil-shock/"
+            "time": "12:20",
+            "text": "Circle USDC Price Target: Bernstein’s Bold $190 Forecast Signals Explosive Stablecoin Growth",
+            "link": "https://bitcoinworld.co.in/bernstein-circle-usdc-price-target/"
         },
         {
-            "time": "11:45",
-            "text": "Thai Crypto Regulation Crackdown: Authorities Freeze Over 10,000 Accounts in Major Money Laundering Purge",
-            "link": "https://bitcoinworld.co.in/thai-crypto-accounts-frozen-money-laundering/"
+            "time": "12:18",
+            "text": "Ethereum’s Path to $4,000 Depends on Institutional Demand",
+            "link": "https://www.investing.com/analysis/ethereums-path-to-4000-depends-on-institutional-demand-200676272"
         },
         {
-            "time": "11:44",
-            "text": "Trade Smarter in 2026: Learn from Market Experts at Traders Fair Manila",
-            "link": "https://bitcoinworld.co.in/trade-smarter-in-2026-learn-from-market-experts-at-traders-fair-manila/"
+            "time": "12:17",
+            "text": "3 Altcoins Nearing Key Breakout Zones Despite Market Uncertainty",
+            "link": "https://www.investing.com/analysis/3-altcoins-nearing-key-breakout-zone-despite-market-uncertainty-200676369"
         },
         {
-            "time": "11:43",
-            "text": "Solana Mobile Seeker Price Prediction 2026–2032: Can SKR Token Sustain the Bullish Surge?",
-            "link": "https://www.cryptopolitan.com/solana-mobile-seeker-price-prediction/"
+            "time": "12:15",
+            "text": "Tokenized Stock Market Shatters $1B Barrier as Ondo and xStocks Lead Explosive Growth",
+            "link": "https://bitcoinworld.co.in/tokenized-stock-market-1b-ondo-xstocks/"
         },
         {
-            "time": "11:43",
-            "text": "Bitcoin reclaims $71K as war volatility subsides: check forecast",
-            "link": "https://invezz.com/news/2026/03/10/bitcoin-reclaims-71k-as-war-volatility-subsides-check-forecast/"
+            "time": "12:13",
+            "text": "Hyperliquid's next upgrade to let seasoned traders take bigger bets with less capital",
+            "link": "https://www.coindesk.com/markets/2026/03/10/hyperliquid-s-new-upgrade-to-let-traders-take-bigger-bets-with-less-capital"
         }
     ]
 }
