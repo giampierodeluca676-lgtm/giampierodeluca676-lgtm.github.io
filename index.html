@@ -3,194 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KEYGAP | Global Command Center</title>
+    <title>KEYGAP | CeFi & DeFi Intelligence</title>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;600;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --neon-blue: #00e5ff;
-            --neon-purple: #7000ff;
             --neon-green: #00ff88;
-            --bg-deep: #020406;
-            --glass: rgba(13, 17, 23, 0.8);
+            --bg-dark: #0a0c10;
+            --panel-bg: rgba(17, 25, 35, 0.8);
+            --border: rgba(0, 229, 255, 0.15);
         }
 
         body {
-            background: var(--bg-deep);
+            background: var(--bg-dark);
             color: #e6edf3;
             font-family: 'Outfit', sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 15px;
             overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 50% 50%, rgba(0, 229, 255, 0.05) 0%, transparent 80%),
-                linear-gradient(rgba(0, 229, 255, 0.02) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 229, 255, 0.02) 1px, transparent 1px);
-            background-size: 100% 100%, 30px 30px, 30px 30px;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* HEADER PROFESSIONALE */
-        .top-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
-            background: var(--glass);
-            border: 1px solid rgba(0, 229, 255, 0.2);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            margin-bottom: 20px;
-        }
-
-        .brand-box h1 {
-            font-size: 1.8rem; margin: 0; font-weight: 900; letter-spacing: -1px;
-        }
-
-        .brand-box span {
-            font-family: 'JetBrains Mono'; color: var(--neon-blue); font-size: 0.7rem; text-transform: uppercase;
-        }
-
-        /* TICKER NEWS SCROLLING */
-        .ticker-wrap {
-            width: 100%; overflow: hidden; background: rgba(0, 229, 255, 0.05);
-            border-bottom: 1px solid rgba(0, 229, 255, 0.1); padding: 5px 0; margin-bottom: 20px;
-        }
-        .ticker {
-            display: inline-block; white-space: nowrap; animation: ticker 30s linear infinite;
-            font-family: 'JetBrains Mono'; font-size: 0.8rem; color: var(--neon-green);
-        }
-        @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-
-        /* GRID DELLE STATISTICHE */
-        .stats-grid {
+        .dashboard-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: 280px 1fr 320px;
+            grid-template-rows: auto 1fr auto;
             gap: 15px;
-            margin-bottom: 25px;
+            height: 95vh;
         }
 
-        .stat-card {
-            background: var(--glass);
+        /* PANNELLO LATERALE: STATS CEFI/DEFI */
+        .sidebar {
+            background: var(--panel-bg);
+            border: 1px solid var(--border);
+            border-radius: 15px;
             padding: 20px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            text-align: center;
-            transition: 0.3s;
-        }
-
-        .stat-card:hover { border-color: var(--neon-blue); transform: translateY(-5px); }
-        .stat-label { font-size: 0.7rem; color: var(--neon-blue); text-transform: uppercase; margin-bottom: 8px; font-family: 'JetBrains Mono'; }
-        .stat-value { font-size: 1.4rem; font-weight: 700; }
-
-        /* MAIN CONTENT AREA */
-        .main-layout {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
+            display: flex;
+            flex-direction: column;
             gap: 20px;
         }
 
-        .chart-box {
-            background: var(--glass);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 30px;
-            min-height: 300px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .sidebar h2 { font-size: 0.9rem; color: var(--neon-blue); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; border-left: 3px solid var(--neon-blue); padding-left: 10px; }
+
+        /* GRAFICO CENTRALE DINAMICO */
+        .main-chart {
+            background: var(--panel-bg);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            overflow: hidden;
             position: relative;
         }
 
-        .action-box {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .btn {
+        /* NEWS FEED (DEFI ANALYTICS) */
+        .news-feed {
+            background: var(--panel-bg);
+            border: 1px solid var(--border);
+            border-radius: 15px;
             padding: 20px;
-            border-radius: 12px;
+            overflow-y: auto;
+        }
+
+        /* WIDGETS */
+        .widget-item {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .price-up { color: var(--neon-green); font-family: 'JetBrains Mono'; font-size: 0.8rem; }
+        
+        .header-top {
+            grid-column: 1 / 4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 229, 255, 0.05);
+            padding: 10px 25px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+
+        .btn-action {
+            background: var(--neon-blue);
+            color: #000;
             text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
             font-weight: 800;
-            text-align: center;
-            transition: 0.3s;
+            font-size: 0.8rem;
             text-transform: uppercase;
-            font-size: 0.9rem;
+            transition: 0.3s;
         }
 
-        .btn-main { background: var(--neon-blue); color: #000; box-shadow: 0 0 20px rgba(0, 229, 255, 0.2); }
-        .btn-side { border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; background: rgba(255,255,255,0.02); }
-        .btn:hover { filter: brightness(1.2); transform: scale(1.02); }
+        .btn-action:hover { box-shadow: 0 0 15px var(--neon-blue); }
 
-        /* SIMULAZIONE GRAFICO */
-        .fake-chart {
-            width: 100%; height: 150px;
-            background: repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(0, 229, 255, 0.05) 40px, rgba(0, 229, 255, 0.05) 41px);
-            border-bottom: 2px solid var(--neon-blue);
-            position: relative;
-        }
+        /* SCROLLBAR CUSTOM */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="top-bar">
-        <div class="brand-box">
-            <span>KEYGAP ADVANTAGE // SYSTEM V3</span>
-            <h1>COMMAND CENTER</h1>
+<div class="dashboard-grid">
+    
+    <div class="header-top">
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <div style="width: 12px; height: 12px; background: var(--neon-green); border-radius: 50%; box-shadow: 0 0 10px var(--neon-green);"></div>
+            <h1 style="margin: 0; font-size: 1.2rem; font-weight: 900; letter-spacing: 2px;">KEYGAP <span style="font-weight: 300; opacity: 0.7;">V3 CORE</span></h1>
         </div>
-        <div style="text-align: right;">
-            <div style="color: var(--neon-green); font-family: 'JetBrains Mono'; font-size: 0.8rem;">● NETWORK_ONLINE</div>
-            <div style="font-size: 0.6rem; opacity: 0.5;">LAST_SYNC: 10.03.2026_22:02</div>
+        <div style="display: flex; gap: 20px; font-family: 'JetBrains Mono'; font-size: 0.7rem;">
+            <span>BTC: <span class="price-up">FETCHING...</span></span>
+            <span>ETH: <span class="price-up">FETCHING...</span></span>
         </div>
+        <a href="archivio.html" class="btn-action">Apri Archivio Report</a>
     </div>
 
-    <div class="ticker-wrap">
-        <div class="ticker">
-            [ ALERT ] MARKET VOLATILITY DETECTED +4.2% --- [ BTC ] PRICE TARGET REACHED --- [ SYS ] ENCRYPTION LAYER STABLE --- [ KEYGAP ] NEW REPORT GENERATED 
-        </div>
-    </div>
-
-    <div class="stats-grid">
-        <div class="stat-card">
-            <div class="stat-label">System Load</div>
-            <div class="stat-value">24.8%</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-label">Active Nodes</div>
-            <div class="stat-value">128/128</div>
-        </div>
-        <div class="stat-card" style="border-bottom: 2px solid var(--neon-green);">
-            <div class="stat-label">Uptime</div>
-            <div class="stat-value">99.98%</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-label">Security</div>
-            <div class="stat-value">MAX</div>
-        </div>
-    </div>
-
-    <div class="main-layout">
-        <div class="chart-box">
-            <div style="align-self: flex-start; margin-bottom: 20px;">
-                <h3 style="margin: 0;">Market Pulse Analytics</h3>
-                <span style="font-size: 0.7rem; color: var(--neon-blue);">Real-time algorithmic data feed</span>
+    <div class="sidebar">
+        <div>
+            <h2>CeFi Monitor</h2>
+            <div class="widget-item">
+                <div style="font-size: 0.7rem; opacity: 0.6;">BingX Bot Status</div>
+                <div style="font-size: 1.1rem; font-weight: 700;">ACTIVE_RUNNING</div>
             </div>
-            <div class="fake-chart"></div>
-            <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.5; font-family: 'JetBrains Mono';">SCALING DATA TO KEYGAP_PROTOCOLS...</p>
         </div>
-
-        <div class="action-box">
-            <a href="archivio.html" class="btn btn-main">Accedi ai Report</a>
-            <a href="#" class="btn btn-side">Configurazione Bot</a>
-            <a href="#" class="btn btn-side" style="color: #ff4444; border-color: rgba(255, 68, 68, 0.2);">Emergency Stop</a>
+        <div>
+            <h2>DeFi Protocols</h2>
+            <div class="widget-item" style="margin-bottom: 10px;">
+                <div style="display: flex; justify-content: space-between;">
+                    <span>Uniswap V3</span>
+                    <span class="price-up">SAFE</span>
+                </div>
+            </div>
+            <div class="widget-item">
+                <div style="display: flex; justify-content: space-between;">
+                    <span>Aave V3</span>
+                    <span class="price-up">SAFE</span>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: auto;">
+            <div style="font-size: 0.6rem; opacity: 0.4; font-family: 'JetBrains Mono';">ENCRYPTION: AES-256-GCM</div>
+            <div style="font-size: 0.6rem; opacity: 0.4; font-family: 'JetBrains Mono';">IP: SECURED_VPN</div>
         </div>
     </div>
+
+    <div class="main-chart">
+        <div class="tradingview-widget-container" style="height:100%;width:100%">
+          <div id="tradingview_chart" style="height:100%;width:100%"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+          <script type="text/javascript">
+          new TradingView.widget({
+            "autosize": true,
+            "symbol": "BINANCE:BTCEUR",
+            "interval": "30",
+            "timezone": "Europe/Rome",
+            "theme": "dark",
+            "style": "1",
+            "locale": "it",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "hide_top_toolbar": false,
+            "allow_symbol_change": true,
+            "container_id": "tradingview_chart"
+          });
+          </script>
+        </div>
+        </div>
+
+    <div class="news-feed">
+        <h2 style="font-size: 0.9rem; color: var(--neon-blue); margin-top: 0; border-bottom: 1px solid var(--border); padding-bottom: 10px;">Intelligence Feed</h2>
+        
+        <div style="margin-top: 20px; font-size: 0.85rem;">
+            <div style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <small style="color: var(--neon-blue);">[ 22:04 ] DEFI_ALRT</small>
+                <p style="margin: 5px 0;">Analisi Liquidità su Curve Finance completata. Parametri stabili.</p>
+            </div>
+            <div style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <small style="color: var(--neon-blue);">[ 21:50 ] CEFI_NODE</small>
+                <p style="margin: 5px 0;">Aggiornamento API BingX completato. Latenza: 14ms.</p>
+            </div>
+            <div style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <small style="color: var(--neon-blue);">[ 21:15 ] MARKET_INSIGHT</small>
+                <p style="margin: 5px 0;">BTC rompe la resistenza locale. KEYGAP ricalcola target giornalieri.</p>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 </body>
