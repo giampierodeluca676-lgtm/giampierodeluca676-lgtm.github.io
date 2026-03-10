@@ -1,15 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 60.658,09",
+    "price": "€ 60.763,72",
     "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "13:54:04",
-    "ticker": "BTC/EUR: € 60.658,09 • SIGNAL: BULLISH",
+    "reliability": "97%",
+    "last_update": "14:24:08",
+    "ticker": "BTC/EUR: € 60.763,72 • SIGNAL: BULLISH",
     "news": [
         {
-            "time": "SYS",
-            "text": "Sincronizzazione flussi globali in corso...",
-            "link": "#"
+            "time": "14:21",
+            "text": "Ethereum and the Quantum Challenge",
+            "link": "https://www.investing.com/analysis/ethereum-and-the-quantum-challenge-200676376"
+        },
+        {
+            "time": "14:20",
+            "text": "Bitcoin Robbery Nightmare: French Couple Loses $1M to Fake Police in Paris Home Invasion",
+            "link": "https://bitcoinworld.co.in/french-couple-bitcoin-robbery-paris/"
+        },
+        {
+            "time": "14:19",
+            "text": "743 Million XRP Ledger Spike: Sparking the Potential Market Reversal",
+            "link": "https://u.today/743-million-xrp-in-24-hours-will-market-see-volatility-comeback"
+        },
+        {
+            "time": "14:15",
+            "text": "Bitcoin’s Pivotal Short-Term Moves Now Hinge on Oil Prices and Bond Yields, Analysts Reveal",
+            "link": "https://bitcoinworld.co.in/bitcoin-price-oil-bond-yields-analysis/"
+        },
+        {
+            "time": "14:15",
+            "text": "Ripple Reduces RLUSD Supply on Ethereum by 1 Million Tokens",
+            "link": "https://u.today/ripple-reduces-rlusd-supply-on-ethereum-by-one-million-tokens"
+        },
+        {
+            "time": "14:14",
+            "text": "XLM tops gainers with 7% rally, bulls target $0.165 resistance",
+            "link": "https://invezz.com/news/2026/03/10/xlm-tops-gainers-with-7-rally-bulls-target-0-165-resistance/"
         }
     ]
 }
