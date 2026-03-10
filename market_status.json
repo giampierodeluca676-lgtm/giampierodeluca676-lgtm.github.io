@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 60.156,39",
+    "price": "€ 60.594,06",
     "signal": "BULLISH",
     "reliability": "99%",
-    "last_update": "03:34:08",
-    "ticker": "BTC/EUR: € 60.156,39 • SIGNAL: BULLISH",
+    "last_update": "03:53:12",
+    "ticker": "BTC/EUR: € 60.594,06 • SIGNAL: BULLISH",
     "news": [
+        {
+            "time": "03:45",
+            "text": "PBOC USD/CNY Reference Rate: Strategic 6.8982 Fixing Signals Yuan Strength",
+            "link": "https://bitcoinworld.co.in/pboc-usd-cny-reference-rate-fixing-3/"
+        },
+        {
+            "time": "03:40",
+            "text": "CFTC Chair’s Bold Pledge: Ending Regulatory Turf Wars to Unleash Blockchain and Prediction Market Innovation",
+            "link": "https://bitcoinworld.co.in/cftc-blockchain-prediction-market-innovation/"
+        },
+        {
+            "time": "03:38",
+            "text": "NFT lending protocol Gondi says platform secured after $230K exploit",
+            "link": "https://cointelegraph.com/news/nft-platform-gondi-secure-after-230k-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+        },
+        {
+            "time": "03:35",
+            "text": "Mirae Asset’s Planned Korbit Acquisition Faces Daunting Regulatory Hurdles in South Korea",
+            "link": "https://bitcoinworld.co.in/mirae-asset-korbit-acquisition-hurdles/"
+        },
+        {
+            "time": "03:34",
+            "text": "Bitcoin Price Reclaims Ground, Can Bulls Flip Market Momentum?",
+            "link": "https://www.newsbtc.com/analysis/btc/bitcoin-price-reclaims-ground-70k/"
+        },
         {
             "time": "03:30",
             "text": "Brazil’s Crypto Faction Prepare to Fight Stablecoin Taxation in Congress",
             "link": "https://news.bitcoin.com/brazils-crypto-faction-prepare-to-fight-stablecoin-taxation-in-congress/"
-        },
-        {
-            "time": "03:30",
-            "text": "Line Next Unifi Wallet Launch: Revolutionary Stablecoin Platform Offers 5% APY and Seamless Payments",
-            "link": "https://bitcoinworld.co.in/line-next-unifi-stablecoin-wallet-launch/"
-        },
-        {
-            "time": "03:25",
-            "text": "Kaia Stablecoin Partnership Mystery: Foundation Deletes Crucial Kakao Bank Announcement",
-            "link": "https://bitcoinworld.co.in/kaia-kakao-bank-stablecoin-deleted/"
-        },
-        {
-            "time": "03:20",
-            "text": "EUR/USD Exchange Rate Plummets Below 1.1650 as Middle East Turmoil Sparks Fierce US Dollar Rally",
-            "link": "https://bitcoinworld.co.in/eur-usd-falls-middle-east-dollar-rally/"
-        },
-        {
-            "time": "03:15",
-            "text": "Japanese Yen Bulls Hesitate: Critical Analysis as Oil Supply Fears Clash with Upward Q4 GDP Revision",
-            "link": "https://bitcoinworld.co.in/japanese-yen-oil-supply-gdp-analysis/"
-        },
-        {
-            "time": "03:10",
-            "text": "Silver Price Forecast: XAG/USD Surges to $87.50 as Oil Retreat Eases Inflation Fears",
-            "link": "https://bitcoinworld.co.in/silver-price-forecast-xag-usd-oil/"
         }
     ]
 }
