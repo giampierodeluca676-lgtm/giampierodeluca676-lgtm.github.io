@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 60.413,40",
-    "signal": "BEARISH",
+    "price": "€ 60.885,65",
+    "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "08:53:36",
-    "ticker": "BTC/EUR: € 60.413,40 • SIGNAL: BEARISH",
+    "last_update": "09:23:38",
+    "ticker": "BTC/EUR: € 60.885,65 • SIGNAL: BULLISH",
     "news": [
         {
-            "time": "08:50",
-            "text": "Gold Price Holds Steady Below $5,200 as Critical Geopolitical Tensions Clash with Fed Rate Cut Outlook",
-            "link": "https://bitcoinworld.co.in/gold-price-steady-fed-outlook-tensions/"
+            "time": "09:20",
+            "text": "Forex Today: US Dollar Retreats Sharply as Plunging Oil Prices Boost Global Market Sentiment",
+            "link": "https://bitcoinworld.co.in/forex-today-us-dollar-retreat/"
         },
         {
-            "time": "08:45",
-            "text": "‘Disappointing’: U.S. DoJ seeks retrial of Tornado Cash founder",
-            "link": "https://ambcrypto.com/disappointing-u-s-doj-seeks-retrial-of-tornado-cash-founder/"
+            "time": "09:15",
+            "text": "FLOW Cryptocurrency Defies Delisting with Stunning 50% Surge After Legal Lifeline",
+            "link": "https://bitcoinworld.co.in/flow-cryptocurrency-delisting-injunction-surge/"
         },
         {
-            "time": "08:45",
-            "text": "Saudi Aramco CEO Reveals Alarming Concerns About Elevated Regional Risks Facing Energy Markets",
-            "link": "https://bitcoinworld.co.in/saudi-aramco-ceo-regional-risks-concern/"
+            "time": "09:15",
+            "text": "Florida passes stablecoin framework with rules from October 2026",
+            "link": "https://coinpaprika.com/news/florida-passes-stablecoin-framework-rules-october-2026"
         },
         {
-            "time": "08:41",
-            "text": "Ethereum Struggles to Hold the $2,000 Mark as Market Sentiment Turns Cautious",
-            "link": "https://en.coin-turk.com/ethereum-struggles-to-hold-the-2000-mark-as-market-sentiment-turns-cautious/"
+            "time": "09:10",
+            "text": "Japanese Yen Surge: June Rate Hike Prospects Bolster JPY – ING Analysis",
+            "link": "https://bitcoinworld.co.in/japanese-yen-june-rate-hike-prospects/"
         },
         {
-            "time": "08:40",
-            "text": "Brent Crude’s Dramatic Plunge: War Premium Unwinds on Iran De-escalation Headlines – MUFG Analysis",
-            "link": "https://bitcoinworld.co.in/brent-crude-war-premium-iran-headlines/"
+            "time": "09:09",
+            "text": "Bhutan trims Bitcoin reserves as BTC transfers top $40M in 2026",
+            "link": "https://invezz.com/news/2026/03/10/bhutan-trims-bitcoin-reserves-as-btc-transfers-top-40m-in-2026/"
         },
         {
-            "time": "08:38",
-            "text": "Sharplink reports $734M loss after Ethereum plunge erases $616M from holdings",
-            "link": "https://www.cryptopolitan.com/sharplink-drops-to-734m/"
+            "time": "09:05",
+            "text": "RBA’s Hauser Reveals Critical Uncertainty: Policy Response Hinges on Price Shock Size and Persistence",
+            "link": "https://bitcoinworld.co.in/rba-hauser-price-shock-response/"
         }
     ]
 }
