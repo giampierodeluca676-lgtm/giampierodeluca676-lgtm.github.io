@@ -45,6 +45,31 @@ def get_real_news():
         print(f"⚠️ Errore recupero news: {e}")
         return [{"time": "SYS", "text": "Sincronizzazione flussi globali in corso...", "link": "#"}]
 
+def update_index_github():
+    """Crea la lista cliccabile dei report per la home di GitHub"""
+    try:
+        cartella = "Report_Finanziari"
+        if not os.path.exists(cartella): os.makedirs(cartella)
+        
+        reports = sorted(os.listdir(cartella), reverse=True)
+        links_html = "".join([f'<li><a href="{cartella}/{r}">{r.replace(".html", "").replace("_", " ")}</a></li>' for r in reports[:20]])
+        
+        index_content = f"""
+        <html>
+        <head><title>Keygap Intelligence - Live Feed</title></head>
+        <body style="font-family: sans-serif; padding: 30px;">
+            <h1>Keygap Global Intelligence - Archivio Report</h1>
+            <hr>
+            <ul>{links_html}</ul>
+        </body>
+        </html>
+        """
+        with open("index.html", "w", encoding='utf-8') as f:
+            f.write(index_content)
+    except Exception as e:
+        print(f"⚠️ Errore indice: {e}")
+
+
 def pubblica():
     """Crea un post SEO-friendly per Blogger con stile Mondiale e Monetizzazione"""
     try:
@@ -98,20 +123,24 @@ def pubblica():
     except Exception as e:
         print(f"❌ Errore Blogger: {e}")
 
+
 def run_update():
-    """Aggiorna il sito e genera Report Professionali di livello Mondiale (DeFi/CeFi)"""
+    """Aggiorna il sito e genera Report Professionali"""
+    # 1. Inizializziamo status_web con valori di default per evitare l'errore "not defined"
+    status_web = {"status": "IN_AGGIORNAMENTO", "price": "N/A", "signal": "NEUTRAL"}
+    
     try:
-        # AGGIORNAMENTO PREZZO REALE
+        # --- RECUPERO PREZZO ---
         try:
             url_p = "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=EUR"
             res = requests.get(url_p, timeout=5).json()
             prezzo_numero = res.get('EUR', 87420.10)
-            prezzo_btc = f"€ {prezzo_numero:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
         except:
             prezzo_numero = 87420.10
-            prezzo_btc = "€ 87.420,10"
+        
+        prezzo_btc = f"€ {prezzo_numero:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
 
-        # --- LOGICA SEGNALE DINAMICO (INSERITA QUI) ---
+        # --- DETERMINAZIONE SEGNALE ---
         prezzo_precedente = prezzo_numero
         if os.path.exists("market_status.json"):
             try:
@@ -121,99 +150,51 @@ def run_update():
                     prezzo_precedente = float(p_str)
             except: pass
 
-        if prezzo_numero > prezzo_precedente:
-            nuovo_segnale = "BULLISH"
-            colore_segnale = "#047857" # Verde
-        elif prezzo_numero < prezzo_precedente:
-            nuovo_segnale = "BEARISH"
-            colore_segnale = "#be123c" # Rosso
-        else:
-            nuovo_segnale = "NEUTRAL"
-            colore_segnale = "#334155" # Blu scuro/Grigio
+        nuovo_segnale = "NEUTRAL"
+        if prezzo_numero > prezzo_precedente: nuovo_segnale = "BULLISH"
+        elif prezzo_numero < prezzo_precedente: nuovo_segnale = "BEARISH"
 
-        percentuale = f"{random.randint(97, 99)}%" 
+        # --- ORA DEFINIAMO status_web CON I DATI REALI ---
         ora_attuale = datetime.now().strftime("%H:%M:%S")
-        data_per_file = datetime.now().strftime("%d_%m_%Y_%H_%M")
-        data_display = datetime.now().strftime("%d/%m/%Y")
         vere_notizie = get_real_news()
-        
+        percentuale = f"{random.randint(97, 99)}%"
+
         status_web = {
             "status": "OPERATIVO",
             "price": prezzo_btc,
-            "signal": nuovo_segnale, # <--- AGGIORNATO: Ora non è più fisso
+            "signal": nuovo_segnale,
             "reliability": percentuale,
             "last_update": ora_attuale,
-            "ticker": f"BTC/EUR: {prezzo_btc} • KEYGAP SIGNAL: {nuovo_segnale} • STATUS: ONLINE • UPDATE: {ora_attuale} • ",
+            "ticker": f"BTC/EUR: {prezzo_btc} • SIGNAL: {nuovo_segnale}",
             "news": vere_notizie
         }
+
+        # --- SALVATAGGIO E REPORT ---
+        if not os.path.exists("Report_Finanziari"): os.makedirs("Report_Finanziari")
         
-        # --- GESTIONE REPORT FINANZIARI ---
-        cartella_report = "Report_Finanziari"
-        if not os.path.exists(cartella_report): os.makedirs(cartella_report)
-        nome_file_storico = f"{cartella_report}/Report_Mondiale_{data_per_file}.html"
-        adsterra_script = '<script src="https://pl28819682.effectivegatecpm.com/07/47/37/074737f2d1be0f3c0e9de0585a695fd7.js"></script>'
-        
-        html_report = f"""
-        {adsterra_script}
-        <div style="font-family: 'Segoe UI', Helvetica, Arial, sans-serif; max-width: 900px; margin: auto; border: 1px solid #e1e4e8; border-radius: 12px; background-color: #ffffff; color: #1a1d21; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-            <div style="background: linear-gradient(135deg, #0f172a, #1e293b); padding: 40px 20px; text-align: center; color: #f8fafc;">
-                <h1 style="margin: 0; font-size: 32px; text-transform: uppercase; letter-spacing: 3px; font-weight: 800;">Keygap Global Intelligence</h1>
-                <p style="margin: 10px 0 0; font-size: 16px; color: #94a3b8; font-weight: 300;">Analisi Quantitativa Asset Digitali | Report {data_display}</p>
-            </div>
-            <div style="padding: 40px;">
-                <div style="display: flex; gap: 20px; margin-bottom: 40px; text-align: center;">
-                    <div style="flex: 1; padding: 20px; background: #f1f5f9; border-radius: 8px;">
-                        <span style="display: block; font-size: 12px; color: #64748b; text-transform: uppercase; font-weight: bold; margin-bottom: 5px;">BTC/EUR Index</span>
-                        <span style="font-size: 22px; font-weight: 700; color: #0f172a;">{prezzo_btc}</span>
-                    </div>
-                    <div style="flex: 1; padding: 20px; background: {colore_segnale}15; border-radius: 8px; border: 1px solid {colore_segnale};">
-                        <span style="display: block; font-size: 12px; color: {colore_segnale}; text-transform: uppercase; font-weight: bold; margin-bottom: 5px;">Market Signal</span>
-                        <span style="font-size: 22px; font-weight: 700; color: {colore_segnale};">{nuovo_segnale}</span>
-                    </div>
-                    <div style="flex: 1; padding: 20px; background: #eff6ff; border-radius: 8px;">
-                        <span style="display: block; font-size: 12px; color: #3b82f6; text-transform: uppercase; font-weight: bold; margin-bottom: 5px;">Reliability Index</span>
-                        <span style="font-size: 22px; font-weight: 700; color: #1d4ed8;">{percentuale}</span>
-                    </div>
-                </div>
-                <div style="margin-bottom: 40px;">
-                    <h3 style="font-size: 18px; color: #0f172a; border-left: 5px solid #3b82f6; padding-left: 15px; margin-bottom: 15px;">Sommario Esecutivo CeFi & DeFi</h3>
-                    <p style="font-size: 15px; color: #475569; line-height: 1.7;">
-                        I flussi di capitale istituzionali indicano una fase di accumulo strutturale. L'analisi on-chain rileva una diminuzione delle riserve sugli exchange (CeFi) e un incremento dell'attività nei protocolli di prestito decentralizzati (DeFi).
-                    </p>
-                </div>
-                <h3 style="font-size: 18px; color: #0f172a; border-left: 5px solid #3b82f6; padding-left: 15px; margin-bottom: 20px;">Intelligence News Feed</h3>
-                <div style="background: #ffffff; border: 1px solid #f1f5f9; border-radius: 8px;">
-                    {"".join([f'''
-                    <div style="padding: 15px; border-bottom: 1px solid #f1f5f9;">
-                        <span style="color: #3b82f6; font-weight: 700; font-size: 13px;">[{n['time']}]</span>
-                        <a href="{n.get('link', '#')}" target="_blank" style="margin-left: 10px; font-size: 14px; color: #1e293b; text-decoration: none; font-weight: 500; display: inline-block;">
-                            {n['text']} <span style="color: #3b82f6; font-size: 11px; margin-left: 5px;">→</span>
-                        </a>
-                    </div>''' for n in vere_notizie])}
-                </div>
-                <div style="margin-top: 50px; text-align: center;">
-                    <a href="{SITO_MONETIZZATO}" style="display: inline-block; background: #2563eb; color: #ffffff; padding: 18px 40px; text-decoration: none; font-weight: 800; border-radius: 50px; text-transform: uppercase; font-size: 14px; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(37,99,235,0.4);">
-                        Accedi al Terminale Live Real-Time
-                    </a>
-                </div>
-            </div>
-        </div>
-        """
-        
+        # Scrittura JSON
         with open("market_status.json", "w", encoding='utf-8') as j:
             json.dump(status_web, j, indent=4, ensure_ascii=False)
-        with open(nome_file_storico, "w", encoding='utf-8') as h_rep:
+            
+        # Generazione HTML (Assicurati che html_report usi i dati di status_web)
+        data_display = datetime.now().strftime("%d/%m/%Y")
+        html_report = f"<html><body><h1>Report {data_display}</h1><p>Prezzo: {prezzo_btc}</p></body></html>"
+
+        data_per_file = datetime.now().strftime("%d_%m_%Y_%H_%M")
+        with open(f"Report_Finanziari/Report_Mondiale_{data_per_file}.html", "w", encoding='utf-8') as h_rep:
             h_rep.write(html_report)
-        with open("latest_report.html", "w", encoding='utf-8') as l_rep:
-            l_rep.write(html_report)
+
+        # --- AGGIORNAMENTO INDICE E GIT ---
+        update_index_github()
         
         subprocess.run(["git", "add", "."], check=True)
-        subprocess.run(["git", "commit", "-m", f"📊 KEYGAP GLOBAL REPORT Update {ora_attuale}"], check=True)
+        subprocess.run(["git", "commit", "-m", f"📊 Update {ora_attuale}"], check=True)
         subprocess.run(["git", "push", "origin", "main", "--force"], check=True)
-        print(f"✅ [KEYGAP_ADVANTAGE] REPORT GENERATO: {prezzo_btc} | SIGNAL: {nuovo_segnale}")
         
+        print(f"✅ [KEYGAP] Report inviato con successo alle {ora_attuale}")
+
     except Exception as e:
-        print(f"❌ Errore aggiornamento professionale: {e}")
+        print(f"❌ Errore critico durante run_update: {e}")
 
 if __name__ == "__main__":
     print("🚀 KEYGAP_ADVANTAGE CORE - Modalità Real-Time Attiva.")
@@ -228,7 +209,7 @@ if __name__ == "__main__":
             run_update() 
             
             # 2. Pubblica l'articolo professionale su Blogger e GitHub
-            pubblica()
+            # pubblica()
             
             print(f"✅ Operazione completata con successo alle {datetime.now().strftime('%H:%M:%S')}")
             print("💤 Prossimo aggiornamento tra 30 minuti...")

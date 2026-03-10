@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 59.082,74",
+    "price": "€ 59.533,36",
     "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "01:21:43",
-    "ticker": "BTC/EUR: € 59.082,74 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 01:21:43 • ",
+    "reliability": "99%",
+    "last_update": "02:04:00",
+    "ticker": "BTC/EUR: € 59.533,36 • SIGNAL: BULLISH",
     "news": [
         {
-            "time": "01:16",
-            "text": "Nasdaq, Kraken Developing Gateway Connecting Tokenized Equities With Blockchain Networks",
-            "link": "https://news.bitcoin.com/nasdaq-kraken-developing-gateway-connecting-tokenized-equities-with-blockchain-networks/"
+            "time": "02:01",
+            "text": "Solana Bounces Back After Sharp Drop as Institutional Demand Surges",
+            "link": "https://en.coin-turk.com/solana-bounces-back-after-sharp-drop-as-institutional-demand-surges/"
         },
         {
-            "time": "01:15",
-            "text": "Solana ETFs Attract $270M from Investment Advisors, Revealing Surprising Institutional Confidence",
-            "link": "https://bitcoinworld.co.in/investment-advisors-solana-etfs-270m/"
+            "time": "02:00",
+            "text": "Altcoins Approach Historic Stress Levels as 38% of Tokens Near All-Time Lows",
+            "link": "https://www.newsbtc.com/altcoin/altcoins-approach-historic-stress-levels-as-38-of-tokens-near-all-time-lows/"
         },
         {
-            "time": "01:11",
-            "text": "Trump's threat to block Congress over voter-ID law leaves crypto bill on shakier ground",
-            "link": "https://www.coindesk.com/news-analysis/2026/03/09/trump-s-threat-to-block-congress-over-voter-id-law-leaves-crypto-bill-on-shakier-ground"
+            "time": "02:00",
+            "text": "WLFI reclaims $0.10, but here’s why the bearish trend is still intact",
+            "link": "https://ambcrypto.com/wlfi-reclaims-0-10-but-heres-why-the-bearish-trend-is-still-intact/"
         },
         {
-            "time": "01:10",
-            "text": "GBP/USD Climbs Back Above 1.3400: Navigating the Precarious Consolidation Trap",
-            "link": "https://bitcoinworld.co.in/gbp-usd-climbs-above-1-3400-consolidation-trap/"
+            "time": "02:00",
+            "text": "Altcoin Season Index Plummets to 36, Signaling Bitcoin’s Resurgent Dominance",
+            "link": "https://bitcoinworld.co.in/altcoin-season-index-falls-bitcoin-dominance-7/"
         },
         {
-            "time": "01:06",
-            "text": "Bhutan quietly moves $42M in Bitcoin in 2026 while sitting on $374M crypto stash",
-            "link": "https://www.cryptopolitan.com/bhutan-quietly-moves-42m-in-bitcoin-in-2026/"
+            "time": "02:00",
+            "text": "Short-Term Oil Rally Has Surpassed Eight-Year XRP Returns, Expert Claims",
+            "link": "https://timestabloid.com/short-term-oil-rally-has-surpassed-eight-year-xrp-returns-expert-claims/"
         },
         {
-            "time": "01:01",
-            "text": "Crypto Market Review: Is Bitcoin (BTC) Bull Mode Switch On? XRP Looks Hopeless at $1, Solana (SOL) Heads to $95 in Surprising Mini-Bullrun",
-            "link": "https://u.today/crypto-market-review-is-bitcoin-btc-bull-mode-switched-on-xrp-looks-hopeless-at-1-solana-sol-heads"
+            "time": "01:58",
+            "text": "BARD Technical Analysis March 10, 2026: Support and Resistance Levels",
+            "link": "https://en.coinotag.com/analysis/bard-technical-analysis-march-10-2026-support-and-resistance-levels"
         }
     ]
 }
