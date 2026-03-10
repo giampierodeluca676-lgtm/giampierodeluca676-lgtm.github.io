@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KEYGAP | Professional Trading Terminal v3.5</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <title>KEYGAP | Professional Trading Terminal v4.5</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-main: #0b0e11;
-            --bg-card: #161a1e;
+            --bg-main: #06080a;
+            --bg-card: #0d1117;
             --accent: #00ff88;
-            --text-main: #eaecef;
+            --text-main: #f0f2f5;
             --text-dim: #848e9c;
-            --border: #2b2f36;
+            --border: #21262d;
         }
 
         body {
@@ -21,67 +21,72 @@
             font-family: 'Inter', sans-serif;
             margin: 0;
             display: grid;
-            grid-template-rows: 60px 1fr 40px;
+            grid-template-rows: 80px 1fr 35px;
             height: 100vh;
             overflow: hidden;
         }
 
+        /* HEADER CON SPAZIO BANNER */
         header {
             background: var(--bg-card);
             border-bottom: 1px solid var(--border);
-            display: flex;
+            display: grid;
+            grid-template-columns: 250px 1fr 250px;
             align-items: center;
-            justify-content: space-between;
             padding: 0 20px;
-            z-index: 100;
+            gap: 20px;
         }
 
         .logo { font-weight: 900; font-size: 1.4rem; letter-spacing: -1px; }
         .logo span { color: var(--accent); }
 
-        main {
-            display: grid;
-            grid-template-columns: 1fr 380px;
-            grid-template-rows: 1fr 1fr;
-            gap: 5px;
-            padding: 5px;
-            background: var(--border);
-        }
-
-        .panel {
-            background: var(--bg-card);
+        .ad-container-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            background: rgba(255,255,255,0.02);
             border-radius: 4px;
-            display: flex;
-            flex-direction: column;
             overflow: hidden;
-        }
-
-        /* Layout Area */
-        .chart-container { grid-row: 1 / 3; }
-        .news-container { grid-column: 2; grid-row: 1; }
-        .eco-container { grid-column: 2; grid-row: 2; }
-
-        .panel-title {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            color: var(--text-dim);
-            padding: 10px 15px;
-            background: rgba(0,0,0,0.2);
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            font-family: 'JetBrains Mono';
         }
 
         .btn-archive {
             background: var(--accent);
             color: #000;
             text-decoration: none;
-            padding: 8px 15px;
-            border-radius: 4px;
-            font-weight: 700;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-weight: 800;
             font-size: 0.75rem;
-            transition: 0.2s;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        /* LAYOUT MAIN */
+        main {
+            display: grid;
+            grid-template-columns: 300px 1fr 380px;
+            gap: 5px;
+            padding: 5px;
+            background: #000;
+        }
+
+        .panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .panel-title {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            padding: 10px 15px;
+            background: rgba(255,255,255,0.02);
+            border-bottom: 1px solid var(--border);
+            font-family: 'JetBrains Mono';
         }
 
         footer {
@@ -94,65 +99,66 @@
             color: var(--text-dim);
         }
 
-        .status-dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; margin-right: 8px; animation: pulse 2s infinite; }
-        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
+        .status-dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; margin-right: 10px; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">KEY<span>GAP</span> PRO</div>
-    <div style="display: flex; gap: 20px; align-items: center;">
-        <a href="archivio.html" class="btn-archive">ACCEDI ARCHIVIO REPORT</a>
+    <div class="logo">KEY<span>GAP</span> COMMAND</div>
+    
+    <div class="ad-container-header">
+        <script src="https://pl28819682.effectivegatecpm.com/07/47/37/074737f2d1be0f3c0e9de0585a695fd7.js"></script>
     </div>
+
+    <a href="archivio.html" class="btn-archive">📂 ARCHIVIO REPORT</a>
 </header>
 
 <main>
-    <div class="panel chart-container">
-        <div class="panel-title">LIVE_MARKET_CHART // BTCEUR</div>
+    <div class="panel">
+        <div class="panel-title">TOP_MARKET_MOVERS</div>
+        <iframe src="https://www.widgets.investing.com/top-crypto-movers?theme=darkTheme" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+    </div>
+
+    <div class="panel">
+        <div class="panel-title">LIVE_TERMINAL_CHART // BTCEUR 1m</div>
         <div style="flex-grow: 1;">
-            <div id="tradingview_chart" style="height: 100%; width: 100%;"></div>
+            <div id="tradingview_main" style="height: 100%; width: 100%;"></div>
             <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
             <script type="text/javascript">
                 new TradingView.widget({
                     "autosize": true,
                     "symbol": "BINANCE:BTCEUR",
-                    "interval": "30",
+                    "interval": "1",
                     "timezone": "Europe/Rome",
                     "theme": "dark",
                     "style": "1",
                     "locale": "it",
                     "toolbar_bg": "#f1f3f6",
                     "enable_publishing": false,
-                    "withdateranges": true,
-                    "hide_side_toolbar": false,
                     "allow_symbol_change": true,
-                    "container_id": "tradingview_chart"
+                    "container_id": "tradingview_main"
                 });
             </script>
         </div>
     </div>
 
-    <div class="panel news-container">
-        <div class="panel-title">GLOBAL_NEWS_FEED <span>REAL_TIME</span></div>
-        <iframe 
-            src="https://cryptopanic.com/widgets/news/?bg_color=161a1e&font_family=sans-serif&header_bg_color=161a1e&header_text_color=FFFFFF&link_color=00ff88&news_feed=recent&text_color=eaecef&title=Crypto" 
-            width="100%" height="100%" frameborder="0" style="border:none;">
-        </iframe>
-    </div>
-
-    <div class="panel eco-container">
-        <div class="panel-title">ECONOMIC_CALENDAR <span>MACRO_EVENTS</span></div>
-        <iframe 
-            src="https://sslecal2.investing.com?columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous&category=_main&importance=2,3&features=datepicker,timezone&countries=25,32,6,37,7,5&calType=day&timeZone=58&lang=5" 
-            width="100%" height="100%" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0">
-        </iframe>
+    <div style="display: grid; grid-template-rows: 1fr 1fr; gap: 5px;">
+        <div class="panel">
+            <div class="panel-title">INTELLIGENCE_FEED</div>
+            <iframe src="https://cryptopanic.com/widgets/news/?bg_color=0d1117&font_family=sans-serif&header_bg_color=0d1117&header_text_color=FFFFFF&link_color=00ff88&news_feed=recent&text_color=f0f2f5&title=Latest" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+        <div class="panel">
+            <div class="panel-title">ECONOMIC_CALENDAR</div>
+            <iframe src="https://sslecal2.investing.com?columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous&category=_main&importance=2,3&features=datepicker,timezone&countries=25,32,6,37,7,5&calType=day&timeZone=58&lang=5" width="100%" height="100%" frameborder="0" style="filter: invert(1) hue-rotate(180deg) brightness(0.8);"></iframe>
+        </div>
     </div>
 </main>
 
 <footer>
     <div class="status-dot"></div>
-    TERMINAL_STATUS: ONLINE // DATA_SOURCE: TRADINGVIEW & CRYPTOPANIC // LOCATION: ITALY
+    KEYGAP_TERMINAL_v4.5 // MONETIZATION_ACTIVE // SOURCE: REAL_TIME_STREAM
 </footer>
 
 </body>
