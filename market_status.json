@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 60.954,72",
+    "price": "€ 60.993,59",
     "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "10:23:43",
-    "ticker": "BTC/EUR: € 60.954,72 • SIGNAL: BULLISH",
+    "reliability": "98%",
+    "last_update": "10:53:45",
+    "ticker": "BTC/EUR: € 60.993,59 • SIGNAL: BULLISH",
     "news": [
         {
-            "time": "10:20",
-            "text": "USD Currency Analysis: Softer Tone Emerges as Conflict Risks Reassessed – MUFG Insight",
-            "link": "https://bitcoinworld.co.in/usd-currency-analysis-conflict-risks-mufg/"
+            "time": "10:50",
+            "text": "GBP/USD Forecast: Critical 50-day EMA Barrier at 1.3500 Holds Key to Bullish Breakout",
+            "link": "https://bitcoinworld.co.in/gbp-usd-forecast-50-day-ema-1-3500/"
         },
         {
-            "time": "10:18",
-            "text": "CoinPoker Debuts New App with Rake Free Poker, Signs Abby Merk and Papo MC",
-            "link": "https://bitcoinworld.co.in/coinpoker-debuts-new-app-with-rake-free-poker-signs-abby-merk-and-papo-mc/"
+            "time": "10:47",
+            "text": "USSD Stablecoin Launches On Sonic Network Backed By Major Treasury Funds",
+            "link": "https://en.coin-turk.com/ussd-stablecoin-launches-on-sonic-network-backed-by-major-treasury-funds/"
         },
         {
-            "time": "10:18",
-            "text": "178% In Volume, 24 Hours: Hyperliquid (HYPE) an Enormous and Unexpected Recovery",
-            "link": "https://u.today/178-in-volume-in-24-hours-hyperliquids-hype-enormous-and-unexpected-recovery"
+            "time": "10:45",
+            "text": "Kalshi Partners With XP to Launch Prediction Markets in Brazil",
+            "link": "https://news.bitcoin.com/kalshi-partners-with-xp-to-launch-prediction-markets-in-brazil/"
         },
         {
-            "time": "10:17",
-            "text": "CoinPoker Debuts New App with Rake Free Poker, Signs Abby Merk and Papo MC",
-            "link": "https://www.cryptointelligence.co.uk/coinpoker-debuts-new-app-with-rake-free-poker-signs-abby-merk-and-papo-mc/"
+            "time": "10:45",
+            "text": "Strategic Alliance: South Korea and Canada Forge Historic Cyber Council to Thwart North Korean Crypto Theft",
+            "link": "https://bitcoinworld.co.in/south-korea-canada-cyber-council-north-korea/"
         },
         {
-            "time": "10:16",
-            "text": "Over 50B XRP Underwater: Is XRP Still in Trouble?",
-            "link": "https://coinpaper.com/15299/over-50-b-xrp-underwater-is-xrp-still-in-trouble"
+            "time": "10:42",
+            "text": "Voter ID standoff threatens progress of Trump-backed crypto bill",
+            "link": "https://www.cryptopolitan.com/trumps-voter-id-standoff-stalls-crypto-bill/"
         },
         {
-            "time": "10:15",
-            "text": "Solana ETF inflows hit 2% of SOL’s market cap, beating Bitcoin’s record",
-            "link": "https://ambcrypto.com/solana-etf-inflows-hit-2-of-sols-market-cap-beats-bitcoins-record/"
+            "time": "10:40",
+            "text": "Defiant Stance: Iranian Parliament Speaker Rejects Ceasefire, Vows Decisive Blow Against Israel",
+            "link": "https://bitcoinworld.co.in/iran-parliament-speaker-no-ceasefire/"
         }
     ]
 }
