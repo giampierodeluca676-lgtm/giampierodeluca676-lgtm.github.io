@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 60.885,65",
-    "signal": "BULLISH",
+    "price": "€ 60.719,75",
+    "signal": "BEARISH",
     "reliability": "98%",
-    "last_update": "09:23:38",
-    "ticker": "BTC/EUR: € 60.885,65 • SIGNAL: BULLISH",
+    "last_update": "09:53:41",
+    "ticker": "BTC/EUR: € 60.719,75 • SIGNAL: BEARISH",
     "news": [
         {
-            "time": "09:20",
-            "text": "Forex Today: US Dollar Retreats Sharply as Plunging Oil Prices Boost Global Market Sentiment",
-            "link": "https://bitcoinworld.co.in/forex-today-us-dollar-retreat/"
+            "time": "09:51",
+            "text": "SharpLink Posts $734 Million Loss as Ethereum Holdings Roil Annual Report",
+            "link": "https://en.coin-turk.com/sharplink-posts-734-million-loss-as-ethereum-holdings-roil-annual-report/"
         },
         {
-            "time": "09:15",
-            "text": "FLOW Cryptocurrency Defies Delisting with Stunning 50% Surge After Legal Lifeline",
-            "link": "https://bitcoinworld.co.in/flow-cryptocurrency-delisting-injunction-surge/"
+            "time": "09:50",
+            "text": "AUD/JPY Price Forecast: Bullish Momentum Surges Above Critical 100-Day EMA with Strong RSI Signals",
+            "link": "https://bitcoinworld.co.in/aud-jpy-price-forecast-ema/"
         },
         {
-            "time": "09:15",
-            "text": "Florida passes stablecoin framework with rules from October 2026",
-            "link": "https://coinpaprika.com/news/florida-passes-stablecoin-framework-rules-october-2026"
+            "time": "09:45",
+            "text": "Why stablecoins are becoming the preferred payment method in online casinos",
+            "link": "https://ambcrypto.com/why-stablecoins-are-becoming-the-preferred-payment-method-in-online-casinos/"
         },
         {
-            "time": "09:10",
-            "text": "Japanese Yen Surge: June Rate Hike Prospects Bolster JPY – ING Analysis",
-            "link": "https://bitcoinworld.co.in/japanese-yen-june-rate-hike-prospects/"
+            "time": "09:45",
+            "text": "Silver Price Forecast: XAG/USD Targets $90.00 as 100-SMA Holds the Key to Explosive Upside",
+            "link": "https://bitcoinworld.co.in/silver-price-forecast-xag-usd-targets-90/"
         },
         {
-            "time": "09:09",
-            "text": "Bhutan trims Bitcoin reserves as BTC transfers top $40M in 2026",
-            "link": "https://invezz.com/news/2026/03/10/bhutan-trims-bitcoin-reserves-as-btc-transfers-top-40m-in-2026/"
+            "time": "09:40",
+            "text": "Gold Price: Unwavering Safe-Haven Bid Emerges on Market Dips, OCBC Analysis Reveals",
+            "link": "https://bitcoinworld.co.in/gold-safe-haven-bid-ocbc/"
         },
         {
-            "time": "09:05",
-            "text": "RBA’s Hauser Reveals Critical Uncertainty: Policy Response Hinges on Price Shock Size and Persistence",
-            "link": "https://bitcoinworld.co.in/rba-hauser-price-shock-response/"
+            "time": "09:35",
+            "text": "Brent Crude Volatility Plummets: Market Calms After Trump’s Geopolitical Remarks – Deutsche Bank Insight",
+            "link": "https://bitcoinworld.co.in/brent-crude-volatility-trump-comments/"
         }
     ]
 }
