@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 60.137,48",
+    "price": "€ 60.554,50",
     "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "07:53:31",
-    "ticker": "BTC/EUR: € 60.137,48 • SIGNAL: BULLISH",
+    "last_update": "08:23:33",
+    "ticker": "BTC/EUR: € 60.554,50 • SIGNAL: BULLISH",
     "news": [
         {
-            "time": "07:50",
-            "text": "WTI Price Forecast Soars: Crude Retakes $88 as Strait of Hormuz Closure Sparks Critical Supply Fears",
-            "link": "https://bitcoinworld.co.in/wti-price-forecast-strait-hormuz-closure/"
+            "time": "08:20",
+            "text": "USD/INR Exchange Rate Holds Firm as US Dollar’s Unyielding Strength Defies Global Risk-Off Mood",
+            "link": "https://bitcoinworld.co.in/usd-inr-stronger-dollar-risk-off/"
         },
         {
-            "time": "07:45",
-            "text": "USD/CHF Stabilizes Near 0.7800 as Diplomatic Breakthrough Eases Iran Conflict Fears",
-            "link": "https://bitcoinworld.co.in/usd-chf-steadies-iran-resolution/"
+            "time": "08:18",
+            "text": "Ethereum Price Defends $2,000 Support as RSI Hits Near-Oversold Levels",
+            "link": "https://cryptonews.com/news/ethereum-price-defends-2000-support-rsi-oversold/"
         },
         {
-            "time": "07:44",
-            "text": "Hyperliquid price surges as Arthur Hayes predicts HYPE rally to $150",
-            "link": "https://invezz.com/news/2026/03/10/hyperliquid-price-surges-as-arthur-hayes-predicts-hype-rally-to-150/"
+            "time": "08:15",
+            "text": "Bitmine moves roughly 9,600 ETH worth $19.5 million to Coinbase Prime as ether treasury firm shuffles holdings",
+            "link": "https://www.coindesk.com/markets/2026/03/10/bitmine-moves-roughly-9-600-eth-worth-usd19-5-million-to-coinbase-prime-as-ether-treasury-firm-shuffles-holdings"
         },
         {
-            "time": "07:40",
-            "text": "Artificial Superintelligence Alliance (FET) Price Prediction 2026-2030: A Comprehensive Analysis",
-            "link": "https://bitcoinworld.co.in/artificial-superintelligence-alliance-fet-price-prediction-2026-2030/"
+            "time": "08:15",
+            "text": "Federal Reserve Rate-Cut Path Faces Daunting Conflict Complications – BNY Analysis",
+            "link": "https://bitcoinworld.co.in/fed-rate-cut-path-conflict-bny/"
         },
         {
-            "time": "07:35",
-            "text": "Arbitrum (ARB) Price Prediction 2026-2030: Critical Analysis of the $6 Target",
-            "link": "https://bitcoinworld.co.in/arbitrum-arb-price-prediction-2030-2/"
+            "time": "08:10",
+            "text": "EUR/USD Plummets to Near 1.1600 as Middle East Conflict Sparks Intense Market Turmoil",
+            "link": "https://bitcoinworld.co.in/eur-usd-declines-middle-east-war/"
         },
         {
-            "time": "07:30",
-            "text": "AI Agent Diverts GPUs to Mine Crypto on Training Servers",
-            "link": "https://news.bitcoin.com/ai-agent-diverts-gpus-to-mine-crypto-on-training-servers/"
+            "time": "08:09",
+            "text": "Bank Policy Institute considers lawsuit over OCC crypto charter move: report",
+            "link": "https://invezz.com/news/2026/03/10/bank-policy-institute-considers-lawsuit-over-occ-crypto-charter-move-report/"
         }
     ]
 }
