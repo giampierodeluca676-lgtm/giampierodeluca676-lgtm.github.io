@@ -15,7 +15,7 @@
         .ad-box { display: flex; justify-content: center; height: 60px; overflow: hidden; }
         .btn-archive { background: var(--accent); color: #000; text-decoration: none; padding: 10px; border-radius: 6px; font-weight: 800; font-size: 0.7rem; text-align: center; text-transform: uppercase; }
 
-        main { display: grid; grid-template-columns: 300px 1fr 350px; gap: 5px; flex-grow: 1; padding: 5px; background: #000; }
+        main { display: grid; grid-template-columns: 300px 1fr 380px; gap: 5px; flex-grow: 1; padding: 5px; background: #000; }
         .panel { background: var(--card); border: 1px solid var(--border); display: flex; flex-direction: column; overflow: hidden; }
         .panel-title { font-size: 0.65rem; text-transform: uppercase; color: #848e9c; padding: 8px 15px; background: rgba(255,255,255,0.02); border-bottom: 1px solid var(--border); font-family: 'JetBrains Mono'; }
 
@@ -49,19 +49,7 @@
               "height": "100%",
               "isTransparent": true,
               "showSymbolLogo": true,
-              "showFloatingTooltip": false,
-              "tabs": [
-                {
-                  "title": "Crypto",
-                  "symbols": [
-                    { "s": "BINANCE:BTCUSDT" },
-                    { "s": "BINANCE:ETHUSDT" },
-                    { "s": "BINANCE:SOLUSDT" },
-                    { "s": "BINANCE:BNBUSDT" },
-                    { "s": "BINANCE:ADAUSDT" }
-                  ]
-                }
-              ]
+              "tabs": [{ "title": "Crypto", "symbols": [{ "s": "BINANCE:BTCUSDT" }, { "s": "BINANCE:ETHUSDT" }, { "s": "BINANCE:SOLUSDT" }] }]
             }
             </script>
         </div>
@@ -72,17 +60,17 @@
         <div id="tv_chart" style="flex-grow: 1;"></div>
         <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
         <script>
-            new TradingView.widget({ "autosize": true, "symbol": "BINANCE:BTCEUR", "interval": "1", "timezone": "Europe/Rome", "theme": "dark", "style": "1", "locale": "it", "enable_publishing": false, "allow_symbol_change": true, "container_id": "tv_chart" });
+            new TradingView.widget({ "autosize": true, "symbol": "BINANCE:BTCEUR", "interval": "1", "timezone": "Europe/Rome", "theme": "dark", "style": "1", "locale": "it", "enable_publishing": false, "container_id": "tv_chart" });
         </script>
     </div>
 
     <div style="display: grid; grid-template-rows: 1fr 1fr; gap: 5px;">
         <div class="panel">
-            <div class="panel-title">GLOBAL_NEWS</div>
+            <div class="panel-title">INTELLIGENCE_FEED (NEWS)</div>
             <iframe src="https://cryptopanic.com/widgets/news/?bg_color=0d1117&font_family=sans-serif&header_bg_color=0d1117&header_text_color=FFFFFF&link_color=00ff88&news_feed=recent&text_color=f0f2f5" width="100%" height="100%" frameborder="0"></iframe>
         </div>
         <div class="panel">
-            <div class="panel-title">ECONOMY_EVENTS</div>
+            <div class="panel-title">ECONOMIC_CALENDAR (MACRO)</div>
             <iframe src="https://sslecal2.investing.com?columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous&importance=2,3&features=datepicker,timezone&countries=25,32,6,37,7,5&calType=day&timeZone=58&lang=5" width="100%" height="100%" frameborder="0" style="filter: invert(0.9) hue-rotate(180deg);"></iframe>
         </div>
     </div>
@@ -90,7 +78,7 @@
 
 <footer>
     <div class="dot"></div>
-    SYSTEM ONLINE // BTCEUR LIVE // DATA REFRESH ACTIVE
+    KEYGAP TERMINAL // ADSTERRA ACTIVE // NEWS & MACRO SYNCED
 </footer>
 
 </body>
