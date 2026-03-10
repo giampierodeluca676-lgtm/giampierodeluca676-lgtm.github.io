@@ -1,40 +1,15 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 60.990,12",
+    "price": "€ 60.903,69",
     "signal": "BEARISH",
-    "reliability": "99%",
-    "last_update": "18:31:26",
-    "ticker": "BTC/EUR: € 60.990,12 • SIGNAL: BEARISH",
+    "reliability": "97%",
+    "last_update": "19:01:28",
+    "ticker": "BTC/EUR: € 60.903,69 • SIGNAL: BEARISH",
     "news": [
         {
-            "time": "18:30",
-            "text": "ETH Staking Revolution: Vitalik Buterin’s Bold Push for ‘One-Click’ Validator Simplicity",
-            "link": "https://bitcoinworld.co.in/vitalik-buterin-eth-staking-one-click/"
-        },
-        {
-            "time": "18:25",
-            "text": "USD/JPY Stalls: Markets Grapple with US-Iran War Fears and Critical Energy Supply Threats",
-            "link": "https://bitcoinworld.co.in/usd-jpy-flat-us-iran-energy-risks/"
-        },
-        {
-            "time": "18:20",
-            "text": "X Money Launch Date Confirmed — Will Dogecoin Be Part of Elon Musk's Payment App?",
-            "link": "https://coinpaper.com/15324/x-money-launch-date-confirmed-will-dogecoin-be-part-of-elon-musk-s-payment-app"
-        },
-        {
-            "time": "18:20",
-            "text": "Riksbank Monetary Policy: Crucial Extended Hold Predicted for Swedish Krona Stability – Nomura Analysis",
-            "link": "https://bitcoinworld.co.in/riksbank-extended-hold-sek-nomura/"
-        },
-        {
-            "time": "18:18",
-            "text": "Ripple Price Analysis: Where Is XRP Heading Next After 5% Weekly Increase?",
-            "link": "https://cryptopotato.com/ripple-price-analysis-where-is-xrp-heading-next-after-5-weekly-increase/"
-        },
-        {
-            "time": "18:16",
-            "text": "Strategy Breaks STRC Record With 1,420 Bitcoin Acquisition And Amended Sales Rules",
-            "link": "https://en.coin-turk.com/strategy-breaks-strc-record-with-1420-bitcoin-acquisition-and-amended-sales-rules/"
+            "time": "SYS",
+            "text": "Sincronizzazione flussi globali in corso...",
+            "link": "#"
         }
     ]
 }
