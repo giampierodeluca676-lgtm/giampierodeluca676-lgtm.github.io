@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 58.983,14",
-    "signal": "BEARISH",
-    "reliability": "99%",
-    "last_update": "00:51:38",
-    "ticker": "BTC/EUR: € 58.983,14 • KEYGAP SIGNAL: BEARISH • STATUS: ONLINE • UPDATE: 00:51:38 • ",
+    "price": "€ 59.082,74",
+    "signal": "BULLISH",
+    "reliability": "98%",
+    "last_update": "01:21:43",
+    "ticker": "BTC/EUR: € 59.082,74 • KEYGAP SIGNAL: BULLISH • STATUS: ONLINE • UPDATE: 01:21:43 • ",
     "news": [
         {
-            "time": "00:40",
-            "text": "KMNO Technical Analysis March 9, 2026: Weekly Strategy",
-            "link": "https://en.coinotag.com/analysis/kmno-technical-analysis-march-9-2026-weekly-strategy"
+            "time": "01:16",
+            "text": "Nasdaq, Kraken Developing Gateway Connecting Tokenized Equities With Blockchain Networks",
+            "link": "https://news.bitcoin.com/nasdaq-kraken-developing-gateway-connecting-tokenized-equities-with-blockchain-networks/"
         },
         {
-            "time": "00:30",
-            "text": "XRP Investors In Pain: $50 Billion Worth Of Supply Now In Loss",
-            "link": "https://www.newsbtc.com/xrp-news/xrp-investors-pain-50-billion-supply-now-loss/"
+            "time": "01:15",
+            "text": "Solana ETFs Attract $270M from Investment Advisors, Revealing Surprising Institutional Confidence",
+            "link": "https://bitcoinworld.co.in/investment-advisors-solana-etfs-270m/"
         },
         {
-            "time": "00:25",
-            "text": "CNY Gains: How China’s Inflation Recovery Signals Cautious Optimism for 2025",
-            "link": "https://bitcoinworld.co.in/cny-inflation-recovery-modest-gains/"
+            "time": "01:11",
+            "text": "Trump's threat to block Congress over voter-ID law leaves crypto bill on shakier ground",
+            "link": "https://www.coindesk.com/news-analysis/2026/03/09/trump-s-threat-to-block-congress-over-voter-id-law-leaves-crypto-bill-on-shakier-ground"
         },
         {
-            "time": "00:21",
-            "text": "EIGEN Comprehensive Technical Analysis: March 9, 2026 Detailed Review",
-            "link": "https://en.coinotag.com/analysis/eigen-comprehensive-technical-analysis-march-9-2026-detailed-review"
+            "time": "01:10",
+            "text": "GBP/USD Climbs Back Above 1.3400: Navigating the Precarious Consolidation Trap",
+            "link": "https://bitcoinworld.co.in/gbp-usd-climbs-above-1-3400-consolidation-trap/"
         },
         {
-            "time": "00:20",
-            "text": "NZD/USD Technical Analysis: Critical Battle at 0.59 as Moving Averages Provide Crucial Support",
-            "link": "https://bitcoinworld.co.in/nzd-usd-moving-averages-0-59-support/"
+            "time": "01:06",
+            "text": "Bhutan quietly moves $42M in Bitcoin in 2026 while sitting on $374M crypto stash",
+            "link": "https://www.cryptopolitan.com/bhutan-quietly-moves-42m-in-bitcoin-in-2026/"
         },
         {
-            "time": "00:19",
-            "text": "Trump’s Cyber Strategy Signals Support for Crypto Infrastructure",
-            "link": "https://news.bitcoin.com/trumps-cyber-strategy-signals-support-for-crypto-infrastructure/"
+            "time": "01:01",
+            "text": "Crypto Market Review: Is Bitcoin (BTC) Bull Mode Switch On? XRP Looks Hopeless at $1, Solana (SOL) Heads to $95 in Surprising Mini-Bullrun",
+            "link": "https://u.today/crypto-market-review-is-bitcoin-btc-bull-mode-switched-on-xrp-looks-hopeless-at-1-solana-sol-heads"
         }
     ]
 }
