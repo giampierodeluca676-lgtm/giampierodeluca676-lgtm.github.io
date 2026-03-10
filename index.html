@@ -6,7 +6,7 @@
     <title>KEYGAP | Financial Intelligence Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Outfit:wght@700;900&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #05070a; --panel: #0d1117; --acc: #00e5ff; --border: rgba(0, 229, 255, 0.2); }
+        :root { --bg: #05070a; --panel: #0d1117; --acc: #00e5ff; --border: rgba(0, 229, 255, 0.2); --green: #00ff88; }
         body { background: var(--bg); color: #fff; font-family: 'Outfit', sans-serif; margin: 0; padding: 20px; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
         
         header { 
@@ -22,9 +22,17 @@
         .card { 
             background: var(--panel); border: 1px solid var(--border); 
             border-radius: 20px; padding: 30px; display: flex; flex-direction: column;
+            position: relative; overflow: hidden;
         }
 
-        .news-text { font-size: 1.4rem; font-weight: 700; line-height: 1.6; color: #e2e8f0; border-left: 3px solid var(--acc); padding-left: 20px; }
+        /* Effetto Scanline per la card */
+        .card::after {
+            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+            background-size: 100% 2px, 3px 100%; pointer-events: none;
+        }
+
+        .news-text { font-size: 1.4rem; font-weight: 700; line-height: 1.6; color: #e2e8f0; border-left: 3px solid var(--acc); padding-left: 20px; z-index: 1; }
         
         .btn-access { 
             background: var(--acc); color: #000; padding: 25px; border-radius: 15px; 
@@ -36,8 +44,13 @@
         .btn-access span { font-size: 0.7rem; font-family: 'JetBrains Mono'; opacity: 0.7; letter-spacing: 2px; }
         .btn-access:hover { transform: translateY(-5px); filter: brightness(1.2); box-shadow: 0 15px 50px rgba(0, 229, 255, 0.4); }
         
-        #live-btc { font-family: 'JetBrains Mono'; font-size: 2rem; color: #00ff88; font-weight: 700; text-shadow: 0 0 15px rgba(0, 255, 136, 0.3); }
-        .status-tag { font-size: 0.7rem; font-family: 'JetBrains Mono'; color: var(--acc); letter-spacing: 3px; margin-bottom: 10px; }
+        #live-btc { font-family: 'JetBrains Mono'; font-size: 2rem; color: var(--green); font-weight: 700; text-shadow: 0 0 15px rgba(0, 255, 136, 0.3); }
+        .status-tag { font-size: 0.7rem; font-family: 'JetBrains Mono'; color: var(--acc); letter-spacing: 3px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        
+        /* Animazione Punto Pulsante */
+        .dot { width: 8px; height: 8px; background: var(--green); border-radius: 50%; display: inline-block; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+
     </style>
 </head>
 <body>
@@ -48,14 +61,14 @@
 
     <div class="grid">
         <div class="card">
-            <div class="status-tag">SYSTEM_CORE_STATUS: ACTIVE</div>
+            <div class="status-tag"><span class="dot"></span> SYSTEM_CORE_STATUS: ACTIVE</div>
             <div class="news-text">
                 ANALISI FLUSSI GLOBALI IN CORSO.<br>
                 Sincronizzazione nodi completata.<br>
                 Monitoraggio Asset High-Volatility attivo.
             </div>
-            <div style="margin-top:auto; font-family:'JetBrains Mono'; color:rgba(255,255,255,0.3); font-size:0.8rem;">
-                DATABASE AGGIORNATO: <span id="current-time"></span>
+            <div style="margin-top:auto; font-family:'JetBrains Mono'; color:rgba(255,255,255,0.3); font-size:0.8rem; z-index: 1;">
+                DATABASE AGGIORNATO: <span id="current-time" style="color: var(--acc);"></span>
             </div>
         </div>
         <div class="card" style="padding:0; overflow:hidden;">
@@ -78,14 +91,19 @@
 
     <script>
         // Update Time
-        document.getElementById('current-time').innerText = new Date().toLocaleString();
+        function updateClock() {
+            document.getElementById('current-time').innerText = new Date().toLocaleString();
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
 
         // WebSocket BTC
         const btcEl = document.getElementById('live-btc');
         const ws = new WebSocket('wss://stream.binance.com:9443/ws/btcusdt@trade');
         ws.onmessage = (e) => {
             const data = JSON.parse(e.data);
-            btcEl.innerText = `BTC: $ ${parseFloat(data.p).toLocaleString()}`;
+            const price = parseFloat(data.p).toLocaleString('en-US', { minimumFractionDigits: 2 });
+            btcEl.innerText = `BTC: $ ${price}`;
         };
     </script>
 </body>
