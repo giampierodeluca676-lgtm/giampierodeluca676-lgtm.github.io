@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 61.322,32",
-    "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "17:01:18",
-    "ticker": "BTC/EUR: € 61.322,32 • SIGNAL: BULLISH",
+    "price": "€ 61.311,61",
+    "signal": "BEARISH",
+    "reliability": "98%",
+    "last_update": "17:31:20",
+    "ticker": "BTC/EUR: € 61.311,61 • SIGNAL: BEARISH",
     "news": [
         {
-            "time": "17:00",
-            "text": "Avalanche lands $200B real estate deal, yet ONE barrier blocks AVAX bulls",
-            "link": "https://ambcrypto.com/avalanche-lands-200b-real-estate-deal-yet-one-barrier-blocks-avax-bulls/"
+            "time": "17:26",
+            "text": "Crypto shouldn’t “die on the hill” of stablecoin yield, Rick Edelman says",
+            "link": "https://www.coindesk.com/markets/2026/03/10/crypto-shouldn-t-die-on-the-hill-of-stablecoin-yield-rick-edelman-says"
         },
         {
-            "time": "16:58",
-            "text": "Bitcoin climbs past $71,000 as oil shock fears continue to ease",
-            "link": "https://www.coindesk.com/markets/2026/03/10/bitcoin-climbs-past-usd71-000-as-oil-shock-fears-continue-to-ease"
+            "time": "17:26",
+            "text": "Bitcoin Reclaims $70K as Exchange Balances Hit Record Lows — Is a Supply Shock Finally Starting?",
+            "link": "https://bitzo.com/2026/03/bitcoin-reclaims-70k-as-exchange-balances-hit-record-lows-is-a-supply-shock-finally-starting"
         },
         {
-            "time": "16:55",
-            "text": "AIntuition Collection: A New Generation of Utility NFTs Bridging Digital Ownership and Real Privileges",
-            "link": "https://ambcrypto.com/aintuition-collection-a-new-generation-of-utility-nfts-bridging-digital-ownership-and-real-privileges/"
+            "time": "17:25",
+            "text": "Canaan’s Strategic Surge: BTC and ETH Holdings Hit Record High as Rivals Sell",
+            "link": "https://bitcoinworld.co.in/canaan-btc-eth-record-holdings/"
         },
         {
-            "time": "16:55",
-            "text": "USDC Minted: 250 Million Stablecoin Injection Sparks Major Market Liquidity Surge",
-            "link": "https://bitcoinworld.co.in/usdc-minted-stablecoin-liquidity-injection-5/"
+            "time": "17:23",
+            "text": "XRP Holds $1.42 as ETF Inflows and Exchange Outflows Point to Accumulation",
+            "link": "https://www.investing.com/analysis/xrp-holds-142-as-etf-inflows-and-exchange-outflows-point-to-accumulation-200676218"
         },
         {
-            "time": "16:53",
-            "text": "XRP derivatives funding rates rocket over 311% in a day",
-            "link": "https://finbold.com/xrp-derivatives-funding-rates-rocket-over-311-in-a-day/"
+            "time": "17:22",
+            "text": "Ethereum Struggles Near $2,000 as Bearish Structure Keeps Sellers in Control",
+            "link": "https://www.investing.com/analysis/ethereum-struggles-near-2000-as-bearish-structure-keeps-sellers-in-control-200676322"
         },
         {
-            "time": "16:51",
-            "text": "Yes Bank Share Price Up as Execs in Insider Trading Probe Opt to Settle",
-            "link": "https://coinpaper.com/15319/yes-bank-share-price-up-as-execs-in-insider-trading-probe-opt-to-settle"
+            "time": "17:20",
+            "text": "XRP Faces Structural Resistance With 60% of Supply Still Underwater",
+            "link": "https://www.investing.com/analysis/xrp-faces-structural-resistance-with-60-of-supply-still-underwater-200676319"
         }
     ]
 }
