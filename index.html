@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KEYGAP | Professional Trading Terminal</title>
+    <title>KEYGAP | Professional Trading Terminal v3.5</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-main: #0b0e11;
             --bg-card: #161a1e;
-            --accent: #00ff88; /* Verde Trading */
-            --accent-soft: rgba(0, 255, 136, 0.1);
+            --accent: #00ff88;
             --text-main: #eaecef;
             --text-dim: #848e9c;
             --border: #2b2f36;
@@ -27,7 +26,6 @@
             overflow: hidden;
         }
 
-        /* --- HEADER --- */
         header {
             background: var(--bg-card);
             border-bottom: 1px solid var(--border);
@@ -35,23 +33,16 @@
             align-items: center;
             justify-content: space-between;
             padding: 0 20px;
+            z-index: 100;
         }
 
         .logo { font-weight: 900; font-size: 1.4rem; letter-spacing: -1px; }
         .logo span { color: var(--accent); }
 
-        .market-ticker {
-            display: flex;
-            gap: 25px;
-            font-family: 'JetBrains Mono';
-            font-size: 0.85rem;
-        }
-
-        /* --- MAIN LAYOUT --- */
         main {
             display: grid;
-            grid-template-columns: 1fr 350px;
-            grid-template-rows: 1fr 300px;
+            grid-template-columns: 1fr 380px;
+            grid-template-rows: 1fr 1fr;
             gap: 5px;
             padding: 5px;
             background: var(--border);
@@ -60,54 +51,39 @@
         .panel {
             background: var(--bg-card);
             border-radius: 4px;
-            padding: 15px;
-            overflow: hidden;
             display: flex;
             flex-direction: column;
+            overflow: hidden;
         }
 
-        /* Chart Area */
+        /* Layout Area */
         .chart-container { grid-row: 1 / 3; }
+        .news-container { grid-column: 2; grid-row: 1; }
+        .eco-container { grid-column: 2; grid-row: 2; }
 
-        /* News Area */
-        .news-container { grid-column: 2; grid-row: 1; overflow-y: auto; }
-
-        /* Control Area */
-        .control-container { grid-column: 2; grid-row: 2; }
-
-        /* --- TITOLI PANNELLI --- */
         .panel-title {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
             color: var(--text-dim);
-            margin-bottom: 15px;
+            padding: 10px 15px;
+            background: rgba(0,0,0,0.2);
+            border-bottom: 1px solid var(--border);
             display: flex;
             justify-content: space-between;
+            font-family: 'JetBrains Mono';
         }
 
-        /* --- ELEMENTI NEWS --- */
-        .news-item {
-            padding: 10px 0;
-            border-bottom: 1px solid var(--border);
-        }
-        .news-time { color: var(--accent); font-size: 0.7rem; font-family: 'JetBrains Mono'; }
-        .news-text { font-size: 0.85rem; margin-top: 5px; line-height: 1.4; }
-
-        /* --- BOTTONI --- */
-        .btn-action {
+        .btn-archive {
             background: var(--accent);
             color: #000;
             text-decoration: none;
-            padding: 15px;
+            padding: 8px 15px;
             border-radius: 4px;
-            text-align: center;
             font-weight: 700;
-            margin-top: auto;
+            font-size: 0.75rem;
             transition: 0.2s;
         }
-        .btn-action:hover { opacity: 0.9; transform: translateY(-2px); }
 
-        /* --- FOOTER --- */
         footer {
             background: var(--bg-card);
             border-top: 1px solid var(--border);
@@ -118,93 +94,65 @@
             color: var(--text-dim);
         }
 
-        .status-dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; margin-right: 8px; }
-
+        .status-dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; margin-right: 8px; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
     </style>
 </head>
 <body>
 
 <header>
     <div class="logo">KEY<span>GAP</span> PRO</div>
-    <div class="market-ticker">
-        <div>BTC/EUR <span style="color:var(--accent)">+2.41%</span></div>
-        <div>ETH/EUR <span style="color:var(--accent)">+1.15%</span></div>
-        <div>SOL/EUR <span style="color:#f6465d">-0.82%</span></div>
+    <div style="display: flex; gap: 20px; align-items: center;">
+        <a href="archivio.html" class="btn-archive">ACCEDI ARCHIVIO REPORT</a>
     </div>
-    <div style="font-size: 0.8rem; font-family: 'JetBrains Mono'; color: var(--text-dim);">10.03.2026 // 22:15:40</div>
 </header>
 
 <main>
     <div class="panel chart-container">
-        <div class="panel-title">TECHNICAL_ANALYSIS_VIEW <span>BINANCE:BTCEUR</span></div>
+        <div class="panel-title">LIVE_MARKET_CHART // BTCEUR</div>
         <div style="flex-grow: 1;">
-            <div id="tradingview_widget" style="height: 100%; width: 100%;"></div>
+            <div id="tradingview_chart" style="height: 100%; width: 100%;"></div>
             <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
             <script type="text/javascript">
                 new TradingView.widget({
                     "autosize": true,
                     "symbol": "BINANCE:BTCEUR",
-                    "interval": "60",
+                    "interval": "30",
                     "timezone": "Europe/Rome",
                     "theme": "dark",
                     "style": "1",
                     "locale": "it",
                     "toolbar_bg": "#f1f3f6",
                     "enable_publishing": false,
+                    "withdateranges": true,
                     "hide_side_toolbar": false,
                     "allow_symbol_change": true,
-                    "container_id": "tradingview_widget"
+                    "container_id": "tradingview_chart"
                 });
             </script>
         </div>
     </div>
 
-    <div class="panel news-container" style="padding: 0;">
-    <div class="panel-title" style="padding: 15px 15px 5px 15px;">GLOBAL_DEFI_NEWS <span>LIVE_FEED</span></div>
-    <div style="height: 100%; width: 100%; overflow: hidden;">
+    <div class="panel news-container">
+        <div class="panel-title">GLOBAL_NEWS_FEED <span>REAL_TIME</span></div>
         <iframe 
-            src="https://cryptopanic.com/widgets/news/?bg_color=161a1e&font_family=sans-serif&header_bg_color=161a1e&header_text_color=FFFFFF&link_color=00ff88&news_feed=recent&text_color=eaecef&title=Crypto%20News" 
-            width="100%" 
-            height="100%" 
-            frameborder="0" 
-            scrolling="yes"
-            style="border: none;">
+            src="https://cryptopanic.com/widgets/news/?bg_color=161a1e&font_family=sans-serif&header_bg_color=161a1e&header_text_color=FFFFFF&link_color=00ff88&news_feed=recent&text_color=eaecef&title=Crypto" 
+            width="100%" height="100%" frameborder="0" style="border:none;">
         </iframe>
     </div>
-</div>
-        <div class="news-item">
-            <div class="news-time">22:05</div>
-            <div class="news-text">Protocollo DeFi AAVE propone aggiornamento per pool su rete Base.</div>
-        </div>
-        <div class="news-item">
-            <div class="news-time">21:48</div>
-            <div class="news-text">Inflazione Eurozona: dati BCE indicano stabilità, mercati crypto reagiscono positivamente.</div>
-        </div>
-        <div class="news-item">
-            <div class="news-time">21:30</div>
-            <div class="news-text">KEYGAP Intelligence rileva un aumento del volume sulle balene BingX.</div>
-        </div>
-    </div>
 
-    <div class="panel control-container">
-        <div class="panel-title">SYSTEM_CONTROLS <span>V3.0</span></div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px;">
-            <div style="padding: 10px; background: rgba(255,255,255,0.03); border-radius: 4px;">
-                <small style="color:var(--text-dim); font-size: 0.6rem;">NODE_STATUS</small><br>
-                <b style="color:var(--accent)">STABLE</b>
-            </div>
-            <div style="padding: 10px; background: rgba(255,255,255,0.03); border-radius: 4px;">
-                <small style="color:var(--text-dim); font-size: 0.6rem;">LATENCY</small><br>
-                <b>12ms</b>
-            </div>
-        </div>
-        <a href="archivio.html" class="btn-action">VAI ALL'ARCHIVIO REPORT</a>
+    <div class="panel eco-container">
+        <div class="panel-title">ECONOMIC_CALENDAR <span>MACRO_EVENTS</span></div>
+        <iframe 
+            src="https://sslecal2.investing.com?columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous&category=_main&importance=2,3&features=datepicker,timezone&countries=25,32,6,37,7,5&calType=day&timeZone=58&lang=5" 
+            width="100%" height="100%" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0">
+        </iframe>
     </div>
 </main>
 
 <footer>
     <div class="status-dot"></div>
-    KEYGAP_ADVANTAGE CONNECTED TO BINGX_SERVER_ROME // ENCRYPTION_ACTIVE: YES
+    TERMINAL_STATUS: ONLINE // DATA_SOURCE: TRADINGVIEW & CRYPTOPANIC // LOCATION: ITALY
 </footer>
 
 </body>
