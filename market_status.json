@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 60.993,59",
-    "signal": "BULLISH",
-    "reliability": "98%",
-    "last_update": "10:53:45",
-    "ticker": "BTC/EUR: € 60.993,59 • SIGNAL: BULLISH",
+    "price": "€ 60.819,30",
+    "signal": "BEARISH",
+    "reliability": "97%",
+    "last_update": "11:23:48",
+    "ticker": "BTC/EUR: € 60.819,30 • SIGNAL: BEARISH",
     "news": [
         {
-            "time": "10:50",
-            "text": "GBP/USD Forecast: Critical 50-day EMA Barrier at 1.3500 Holds Key to Bullish Breakout",
-            "link": "https://bitcoinworld.co.in/gbp-usd-forecast-50-day-ema-1-3500/"
+            "time": "11:20",
+            "text": "RBA March Hike Risk: Markets Brace for Potential Rate Increase as TD Securities Issues Critical Warning",
+            "link": "https://bitcoinworld.co.in/rba-march-hike-risk-markets-td-securities/"
         },
         {
-            "time": "10:47",
-            "text": "USSD Stablecoin Launches On Sonic Network Backed By Major Treasury Funds",
-            "link": "https://en.coin-turk.com/ussd-stablecoin-launches-on-sonic-network-backed-by-major-treasury-funds/"
+            "time": "11:15",
+            "text": "Bitcoin ETFs see $167M in inflows as BTC surges above $71K",
+            "link": "https://invezz.com/news/2026/03/10/bitcoin-etfs-see-167m-in-inflows-as-btc-surges-above-71k/"
         },
         {
-            "time": "10:45",
-            "text": "Kalshi Partners With XP to Launch Prediction Markets in Brazil",
-            "link": "https://news.bitcoin.com/kalshi-partners-with-xp-to-launch-prediction-markets-in-brazil/"
+            "time": "11:15",
+            "text": "Strategic Bitcoin Treasury Expansion: Giga Inc. Boldly Acquires 38.03 BTC Amid Market Evolution",
+            "link": "https://bitcoinworld.co.in/giga-inc-bitcoin-treasury-expansion/"
         },
         {
-            "time": "10:45",
-            "text": "Strategic Alliance: South Korea and Canada Forge Historic Cyber Council to Thwart North Korean Crypto Theft",
-            "link": "https://bitcoinworld.co.in/south-korea-canada-cyber-council-north-korea/"
+            "time": "11:15",
+            "text": "Former CFTC Chair Says CLARITY Act Is a Lifeline for Banks More Than Crypto",
+            "link": "https://coinpaper.com/15300/former-cftc-chair-says-clarity-act-is-a-lifeline-for-banks-more-than-crypto"
         },
         {
-            "time": "10:42",
-            "text": "Voter ID standoff threatens progress of Trump-backed crypto bill",
-            "link": "https://www.cryptopolitan.com/trumps-voter-id-standoff-stalls-crypto-bill/"
+            "time": "11:11",
+            "text": "BlackRock Drives Major Shift as Institutional Flows Favor Bitcoin Over Altcoins",
+            "link": "https://en.coin-turk.com/blackrock-drives-major-shift-as-institutional-flows-favor-bitcoin-over-altcoins/"
         },
         {
-            "time": "10:40",
-            "text": "Defiant Stance: Iranian Parliament Speaker Rejects Ceasefire, Vows Decisive Blow Against Israel",
-            "link": "https://bitcoinworld.co.in/iran-parliament-speaker-no-ceasefire/"
+            "time": "11:10",
+            "text": "Hyperliquid (HYPE) Rockets by Double Digits, Bitcoin (BTC) Tops $71K: Market Watch",
+            "link": "https://cryptopotato.com/hyperliquid-hype-rockets-by-double-digits-bitcoin-btc-tops-71k-market-watch/"
         }
     ]
 }
