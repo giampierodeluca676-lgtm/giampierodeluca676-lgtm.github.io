@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 59.917,82",
-    "signal": "BEARISH",
-    "reliability": "97%",
-    "last_update": "04:53:17",
-    "ticker": "BTC/EUR: € 59.917,82 • SIGNAL: BEARISH",
+    "price": "€ 60.096,31",
+    "signal": "BULLISH",
+    "reliability": "98%",
+    "last_update": "05:23:19",
+    "ticker": "BTC/EUR: € 60.096,31 • SIGNAL: BULLISH",
     "news": [
         {
-            "time": "04:40",
-            "text": "Stunning $874 Million USDT Transfer from Unknown Whale to OKX Exchange Sparks Market Speculation",
-            "link": "https://bitcoinworld.co.in/usdt-transfer-okx-whale-transaction/"
+            "time": "05:20",
+            "text": "Bitcoin ETF Inflows Surge: $167.1 Million Rebound Led by BlackRock and Fidelity",
+            "link": "https://bitcoinworld.co.in/bitcoin-etf-inflows-march-2025/"
         },
         {
-            "time": "04:35",
-            "text": "Critical Warning: Iran’s IRGC Threatens Oil Export Blockade if US, Israel Attacks Persist",
-            "link": "https://bitcoinworld.co.in/iran-irgc-oil-export-blockade-warning/"
+            "time": "05:15",
+            "text": "As TRX and ADA Slip, A Wave of Over 1,350 Early Investors Pushes APEMARS Toward the Best Crypto Presale Milestone",
+            "link": "https://timestabloid.com/as-trx-and-ada-slip-a-wave-of-over-1350-early-investors-pushes/"
         },
         {
-            "time": "04:34",
-            "text": "Bitcoin Jumps Back Above $70,000 as Iran War Worries Ease",
-            "link": "https://www.bloomberg.com/news/articles/2026-03-10/bitcoin-jumps-back-above-70-000-as-iran-war-worries-ease"
+            "time": "05:15",
+            "text": "China’s Trade Surplus Skyrockets: Exports Defy Expectations with Strong January-February Performance",
+            "link": "https://bitcoinworld.co.in/china-trade-surplus-exports-surge-january-february/"
         },
         {
-            "time": "04:31",
-            "text": "Bitcoin jumps past $70,000 as war volatility fades",
-            "link": "https://www.coindesk.com/markets/2026/03/10/bitcoin-jumps-past-usd70-000-as-war-volatility-fades"
+            "time": "05:10",
+            "text": "Pound Sterling Slips as Soaring Iran Conflict Fears Reignite Safe-Haven USD Demand",
+            "link": "https://bitcoinworld.co.in/pound-sterling-iran-war-usd-demand/"
         },
         {
-            "time": "04:30",
-            "text": "Canadian Dollar Plummets as Oil Prices Ease Following Trump’s Startling Remarks",
-            "link": "https://bitcoinworld.co.in/canadian-dollar-weakens-oil-trump-remarks/"
+            "time": "05:00",
+            "text": "PIPPIN declines 11% amid $2 mln derivatives outflows – What’s next?",
+            "link": "https://ambcrypto.com/pippin-declines-11-amid-2-mln-derivatives-outflows-whats-next/"
         },
         {
-            "time": "04:30",
-            "text": "Coinbase Expands Derivatives Push in Europe via MiFID-Regulated Entity",
-            "link": "https://news.bitcoin.com/coinbase-expands-derivatives-push-in-europe-via-mifid-regulated-entity/"
+            "time": "05:00",
+            "text": "Oil tumbles, crypto gains as Trump sends mixed signals over Iran war",
+            "link": "https://cointelegraph.com/news/iran-war-confusion-sends-oil-tumbling-as-crypto-posts-modest-gains?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
         }
     ]
 }
