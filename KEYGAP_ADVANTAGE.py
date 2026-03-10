@@ -50,15 +50,32 @@ def update_index_github():
         if not os.path.exists(cartella): os.makedirs(cartella)
         
         reports = sorted(os.listdir(cartella), reverse=True)
-        links_html = "".join([f"""
-            <a href="{cartella}/{r}" style="display: flex; justify-content: space-between; align-items: center; background: #0d1117; border: 1px solid rgba(255,255,255,0.1); padding: 25px; border-radius: 12px; text-decoration: none; color: #fff; margin-bottom: 15px;">
-                <div style="display: flex; flex-direction: column;">
-                    <span style="color: #00e5ff; font-family: 'JetBrains Mono'; font-weight: 700; font-size: 0.8rem; margin-bottom: 5px;">{r.replace('.html', '').split('_')[-2]} / {r.replace('.html', '').split('_')[-3]} / {r.replace('.html', '').split('_')[-4]} - {r.replace('.html', '').split('_')[-1]}</span>
-                    <span style="font-size: 1.2rem; font-weight: 800;">{r.replace(".html", "").replace("_", " ")}</span>
-                </div>
-                <span style="background: rgba(0, 255, 136, 0.1); color: #00ff88; padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 700;">DECRIPTATO</span>
-            </a>""" for r in reports[:20]])
+        links_html = ""
         
+        for r in reports[:20]:
+            try:
+                # CORREZIONE ERRORE: Verifichiamo che il file abbia il formato corretto prima di splittare
+                parti = r.replace('.html', '').split('_')
+                if len(parti) < 6:
+                    # Se il file ha un nome corto (es. report_2026...), usiamo un formato semplificato
+                    label_data = "ARCHIVIO"
+                    titolo_display = r.replace(".html", "").replace("_", " ")
+                else:
+                    # Formato standard: Report_Mondiale_GG_MM_AAAA_HH_MM
+                    label_data = f"{parti[-4]} / {parti[-3]} / {parti[-2]} - {parti[-1]}"
+                    titolo_display = r.replace(".html", "").replace("_", " ")
+
+                links_html += f"""
+                <a href="{cartella}/{r}" style="display: flex; justify-content: space-between; align-items: center; background: #0d1117; border: 1px solid rgba(255,255,255,0.1); padding: 25px; border-radius: 12px; text-decoration: none; color: #fff; margin-bottom: 15px;">
+                    <div style="display: flex; flex-direction: column;">
+                        <span style="color: #00e5ff; font-family: 'JetBrains Mono'; font-weight: 700; font-size: 0.8rem; margin-bottom: 5px;">{label_data}</span>
+                        <span style="font-size: 1.2rem; font-weight: 800;">{titolo_display}</span>
+                    </div>
+                    <span style="background: rgba(0, 255, 136, 0.1); color: #00ff88; padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 700;">DECRIPTATO</span>
+                </a>"""
+            except Exception:
+                continue # Salta il file se genera errori e passa al prossimo
+
         archivio_content = f"""
         <!DOCTYPE html>
         <html lang="it">
@@ -77,11 +94,12 @@ def update_index_github():
             <div class="container">
                 <a href="index.html" class="btn-back">← TERMINALE</a>
                 <h1>ARCHIVIO INTELLIGENCE</h1>
-                <div class="grid">{links_html}</div>
+                <div class="grid">{{links_html}}</div>
             </div>
         </body>
         </html>
-        """
+        """.replace("{links_html}", links_html)
+        
         with open("archivio.html", "w", encoding='utf-8') as f:
             f.write(archivio_content)
     except Exception as e:
