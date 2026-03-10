@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 59.533,36",
-    "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "02:04:00",
-    "ticker": "BTC/EUR: € 59.533,36 • SIGNAL: BULLISH",
+    "price": "€ 59.464,97",
+    "signal": "BEARISH",
+    "reliability": "98%",
+    "last_update": "02:34:03",
+    "ticker": "BTC/EUR: € 59.464,97 • SIGNAL: BEARISH",
     "news": [
         {
-            "time": "02:01",
-            "text": "Solana Bounces Back After Sharp Drop as Institutional Demand Surges",
-            "link": "https://en.coin-turk.com/solana-bounces-back-after-sharp-drop-as-institutional-demand-surges/"
+            "time": "02:31",
+            "text": "Bithumb Faces Six-Month Suspension as South Korea Tightens Crypto Oversight",
+            "link": "https://en.coin-turk.com/bithumb-faces-six-month-suspension-as-south-korea-tightens-crypto-oversight/"
         },
         {
-            "time": "02:00",
-            "text": "Altcoins Approach Historic Stress Levels as 38% of Tokens Near All-Time Lows",
-            "link": "https://www.newsbtc.com/altcoin/altcoins-approach-historic-stress-levels-as-38-of-tokens-near-all-time-lows/"
+            "time": "02:30",
+            "text": "Bitcoin Supply Hits 20 Million BTC After 6,267 Days, Final Coins Stretch Across 114 Years",
+            "link": "https://news.bitcoin.com/bitcoin-supply-hits-20-million-btc-after-6267-days-final-coins-stretch-across-114-years/"
         },
         {
-            "time": "02:00",
-            "text": "WLFI reclaims $0.10, but here’s why the bearish trend is still intact",
-            "link": "https://ambcrypto.com/wlfi-reclaims-0-10-but-heres-why-the-bearish-trend-is-still-intact/"
+            "time": "02:28",
+            "text": "RSR Technical Analysis March 10, 2026: Market Structure",
+            "link": "https://en.coinotag.com/analysis/rsr-technical-analysis-march-10-2026-market-structure"
         },
         {
-            "time": "02:00",
-            "text": "Altcoin Season Index Plummets to 36, Signaling Bitcoin’s Resurgent Dominance",
-            "link": "https://bitcoinworld.co.in/altcoin-season-index-falls-bitcoin-dominance-7/"
+            "time": "02:25",
+            "text": "Strategic Move: Mara Holdings Deposits $20.6M in Bitcoin to Cumberland, Signaling Major Market Activity",
+            "link": "https://bitcoinworld.co.in/mara-holdings-bitcoin-deposit-cumberland/"
         },
         {
-            "time": "02:00",
-            "text": "Short-Term Oil Rally Has Surpassed Eight-Year XRP Returns, Expert Claims",
-            "link": "https://timestabloid.com/short-term-oil-rally-has-surpassed-eight-year-xrp-returns-expert-claims/"
+            "time": "02:21",
+            "text": "Bitcoin Shows ‘Tentative Signs of Improvement’ as Iran Conflict Fears Wane",
+            "link": "https://decrypt.co/360512/bitcoin-tentative-signs-iran-conflict-fears-wane"
         },
         {
-            "time": "01:58",
-            "text": "BARD Technical Analysis March 10, 2026: Support and Resistance Levels",
-            "link": "https://en.coinotag.com/analysis/bard-technical-analysis-march-10-2026-support-and-resistance-levels"
+            "time": "02:20",
+            "text": "WTI Crude Oil Surges to $86.50 as Critical Strait of Hormuz Closure Sparks Global Supply Crisis",
+            "link": "https://bitcoinworld.co.in/wti-oil-price-hormuz-closure-crisis/"
         }
     ]
 }
