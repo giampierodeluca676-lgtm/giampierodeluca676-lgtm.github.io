@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 60.227,90",
+    "price": "€ 60.402,64",
     "signal": "BULLISH",
     "reliability": "97%",
-    "last_update": "05:53:21",
-    "ticker": "BTC/EUR: € 60.227,90 • SIGNAL: BULLISH",
+    "last_update": "06:23:24",
+    "ticker": "BTC/EUR: € 60.402,64 • SIGNAL: BULLISH",
     "news": [
         {
-            "time": "05:46",
-            "text": "Trump's DOJ Seeks October Retrial for Tornado Cash Developer Roman Storm",
-            "link": "https://decrypt.co/360521/trumps-doj-seeks-october-retrial-tornado-cash-developer"
+            "time": "06:20",
+            "text": "Gold Price Surges: Geopolitical Risks Fuel Safe-Haven Demand While Dollar Strength Caps Rally",
+            "link": "https://bitcoinworld.co.in/gold-price-geopolitical-risks-dollar-strength/"
         },
         {
-            "time": "05:42",
-            "text": "Ether, solana, XRP jump higher as Trump signals Iran war nearing end",
-            "link": "https://www.coindesk.com/markets/2026/03/10/ether-solana-xrp-jump-higher-as-trump-signals-iran-war-nearing-end"
+            "time": "06:15",
+            "text": "India Gold Price Today: Gold Rises Significantly as Bitcoin World Data Reveals Market Shift",
+            "link": "https://bitcoinworld.co.in/india-gold-price-rises-bitcoin-data-2/"
         },
         {
-            "time": "05:40",
-            "text": "Asian Currencies Weaken as Iran Uncertainty Persists; Yuan Surges on Stunning Trade Data",
-            "link": "https://bitcoinworld.co.in/asian-currencies-yuan-surge-iran/"
+            "time": "06:10",
+            "text": "Silver Forecast: XAG/USD Gains Ground Near $88.00, But Ominous Bearish Setup Suggests Further Downside",
+            "link": "https://bitcoinworld.co.in/silver-forecast-xag-usd-bearish/"
         },
         {
-            "time": "05:30",
-            "text": "Kraken Partners With Nasdaq In New Tokenized Stocks Move",
-            "link": "https://bitcoinist.com/kraken-partners-with-nasdaq/"
+            "time": "06:08",
+            "text": "Dogecoin (DOGE) Bounce Weakens, Downtrend Risks Return Quickly",
+            "link": "https://www.newsbtc.com/analysis/doge/dogecoin-doge-bounce-weakens-0-095/"
         },
         {
-            "time": "05:30",
-            "text": "Analyst: AI Might Have Been Involved in Iranian Girl’s School Massacre",
-            "link": "https://news.bitcoin.com/analyst-ai-might-have-been-involved-in-iranian-girls-school-massacre/"
+            "time": "06:06",
+            "text": "Sharplink reports $735M loss in 2025 as Ethereum dived",
+            "link": "https://cointelegraph.com/news/sharplink-reports-734m-loss-2025-as-ethereum-dived?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
         },
         {
-            "time": "05:30",
-            "text": "Australian Dollar Struggles: Key Pressure Mounts After China’s Trade Data Reveal",
-            "link": "https://bitcoinworld.co.in/australian-dollar-china-trade-data/"
+            "time": "06:02",
+            "text": "Here’s why Pi Network Coin price may go vertical this week",
+            "link": "https://invezz.com/news/2026/03/10/heres-why-pi-network-coin-price-may-go-vertical-this-week/"
         }
     ]
 }
