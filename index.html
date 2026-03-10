@@ -27,12 +27,14 @@
         .news-text { font-size: 1.4rem; font-weight: 700; line-height: 1.6; color: #e2e8f0; border-left: 3px solid var(--acc); padding-left: 20px; }
         
         .btn-access { 
-            background: var(--acc); color: #000; padding: 30px; border-radius: 15px; 
-            font-weight: 900; font-size: 1.8rem; cursor: pointer; text-transform: uppercase; 
+            background: var(--acc); color: #000; padding: 25px; border-radius: 15px; 
+            font-weight: 900; font-size: 1.6rem; cursor: pointer; text-transform: uppercase; 
             text-align: center; text-decoration: none; transition: 0.4s; border: none;
-            box-shadow: 0 10px 40px rgba(0, 229, 255, 0.3);
+            box-shadow: 0 10px 40px rgba(0, 229, 255, 0.2);
+            display: flex; flex-direction: column; align-items: center; gap: 5px;
         }
-        .btn-access:hover { transform: translateY(-5px); filter: brightness(1.2); }
+        .btn-access span { font-size: 0.7rem; font-family: 'JetBrains Mono'; opacity: 0.7; letter-spacing: 2px; }
+        .btn-access:hover { transform: translateY(-5px); filter: brightness(1.2); box-shadow: 0 15px 50px rgba(0, 229, 255, 0.4); }
         
         #live-btc { font-family: 'JetBrains Mono'; font-size: 2rem; color: #00ff88; font-weight: 700; text-shadow: 0 0 15px rgba(0, 255, 136, 0.3); }
         .status-tag { font-size: 0.7rem; font-family: 'JetBrains Mono'; color: var(--acc); letter-spacing: 3px; margin-bottom: 10px; }
@@ -53,7 +55,7 @@
                 Monitoraggio Asset High-Volatility attivo.
             </div>
             <div style="margin-top:auto; font-family:'JetBrains Mono'; color:rgba(255,255,255,0.3); font-size:0.8rem;">
-                SECURE ACCESS GRANTED
+                DATABASE AGGIORNATO: <span id="current-time"></span>
             </div>
         </div>
         <div class="card" style="padding:0; overflow:hidden;">
@@ -69,9 +71,16 @@
         </div>
     </div>
 
-    <a href="archivio.html" class="btn-access">ENTRA NELL'ARCHIVIO INTELLIGENCE</a>
+    <a href="archivio.html" class="btn-access">
+        <span>INTELLIGENCE DATABASE</span>
+        ENTRA NELL'ARCHIVIO REPORT ORDINATO
+    </a>
 
     <script>
+        // Update Time
+        document.getElementById('current-time').innerText = new Date().toLocaleString();
+
+        // WebSocket BTC
         const btcEl = document.getElementById('live-btc');
         const ws = new WebSocket('wss://stream.binance.com:9443/ws/btcusdt@trade');
         ws.onmessage = (e) => {
