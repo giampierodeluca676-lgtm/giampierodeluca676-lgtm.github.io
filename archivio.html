@@ -1,10 +1,62 @@
-
-        <html>
-        <head><title>Keygap Intelligence - Live Feed</title></head>
-        <body style="font-family: sans-serif; padding: 30px;">
-            <h1>Keygap Global Intelligence - Archivio Report</h1>
-            <hr>
-            <ul><li><a href="Report_Finanziari/report_2026-03-08_10-12.html">report 2026-03-08 10-12</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_19_31.html">Report Mondiale 10 03 2026 19 31</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_19_01.html">Report Mondiale 10 03 2026 19 01</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_18_31.html">Report Mondiale 10 03 2026 18 31</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_18_01.html">Report Mondiale 10 03 2026 18 01</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_17_31.html">Report Mondiale 10 03 2026 17 31</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_17_01.html">Report Mondiale 10 03 2026 17 01</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_16_54.html">Report Mondiale 10 03 2026 16 54</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_16_24.html">Report Mondiale 10 03 2026 16 24</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_15_54.html">Report Mondiale 10 03 2026 15 54</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_15_24.html">Report Mondiale 10 03 2026 15 24</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_14_54.html">Report Mondiale 10 03 2026 14 54</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_14_24.html">Report Mondiale 10 03 2026 14 24</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_13_54.html">Report Mondiale 10 03 2026 13 54</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_13_24.html">Report Mondiale 10 03 2026 13 24</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_12_53.html">Report Mondiale 10 03 2026 12 53</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_12_23.html">Report Mondiale 10 03 2026 12 23</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_11_53.html">Report Mondiale 10 03 2026 11 53</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_11_23.html">Report Mondiale 10 03 2026 11 23</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_10_53.html">Report Mondiale 10 03 2026 10 53</a></li></ul>
-        </body>
-        </html>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>KEYGAP | Intelligence Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #05070a; --panel: #0d1117; --acc: #00e5ff; --border: rgba(255,255,255,0.1); }
+        body { background: var(--bg); color: #fff; font-family: 'Outfit', sans-serif; padding: 40px 20px; margin: 0; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; border-bottom: 2px solid var(--acc); padding-bottom: 20px; }
+        h1 { font-family: 'JetBrains Mono'; color: #fff; font-size: 1.8rem; margin: 0; }
+        .grid { display: grid; gap: 15px; }
+        .report-link { 
+            display: flex; justify-content: space-between; align-items: center;
+            background: var(--panel); border: 1px solid var(--border); padding: 25px;
+            border-radius: 12px; text-decoration: none; color: #fff; transition: 0.3s;
+        }
+        .report-link:hover { border-color: var(--acc); background: #161b22; transform: scale(1.01); }
+        .report-info { display: flex; flex-direction: column; }
+        .report-date { color: var(--acc); font-family: 'JetBrains Mono'; font-weight: 700; font-size: 0.8rem; margin-bottom: 5px; text-transform: uppercase; }
+        .report-title { font-size: 1.2rem; font-weight: 800; }
+        .status-badge { background: rgba(0, 255, 136, 0.1); color: #00ff88; padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 700; }
+        .btn-back { color: var(--acc); text-decoration: none; font-weight: 800; text-transform: uppercase; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ARCHIVIO INTELLIGENCE</h1>
+            <a href="index.html" class="btn-back">← TERMINALE</a>
+        </div>
         
+        <div class="grid">
+            <a href="Report_Finanziari/Report_Mondiale_10_03_2026_19_31.html" class="report-link">
+                <div class="report-info">
+                    <span class="report-date">10 Marzo 2026 - 19:31</span>
+                    <span class="report-title">REPORT MONDIALE #82</span>
+                </div>
+                <span class="status-badge">DECRIPTATO</span>
+            </a>
+
+            <a href="Report_Finanziari/Report_Mondiale_10_03_2026_19_01.html" class="report-link">
+                <div class="report-info">
+                    <span class="report-date">10 Marzo 2026 - 19:01</span>
+                    <span class="report-title">REPORT MONDIALE #81</span>
+                </div>
+                <span class="status-badge">DECRIPTATO</span>
+            </a>
+
+            <a href="Report_Finanziari/Report_Mondiale_10_03_2026_18_31.html" class="report-link">
+                <div class="report-info">
+                    <span class="report-date">10 Marzo 2026 - 18:31</span>
+                    <span class="report-title">REPORT MONDIALE #80</span>
+                </div>
+                <span class="status-badge">DECRIPTATO</span>
+            </a>
+            
+            </div>
+    </div>
+</body>
+</html>
