@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 61.198,48",
-    "signal": "BULLISH",
+    "price": "€ 60.926,69",
+    "signal": "BEARISH",
     "reliability": "97%",
-    "last_update": "16:24:18",
-    "ticker": "BTC/EUR: € 61.198,48 • SIGNAL: BULLISH",
+    "last_update": "16:54:20",
+    "ticker": "BTC/EUR: € 60.926,69 • SIGNAL: BEARISH",
     "news": [
         {
-            "time": "16:21",
-            "text": "Babylon Labs Partners with Ledger to Enable Native Bitcoin Staking in Hardware Wallets",
-            "link": "https://en.coin-turk.com/babylon-labs-partners-with-ledger-to-enable-native-bitcoin-staking-in-hardware-wallets/"
+            "time": "16:50",
+            "text": "ECB Interest Rates: How Conflict-Driven Energy Shocks Are Forcing a Crucial Monetary Policy Reassessment",
+            "link": "https://bitcoinworld.co.in/ecb-energy-shock-rate-path-nomura/"
         },
         {
-            "time": "16:20",
-            "text": "Bitcoin Soars: BTC Price Surges Above $71,000 Amid Renewed Market Optimism",
-            "link": "https://bitcoinworld.co.in/bitcoin-price-surges-above-71000-3/"
+            "time": "16:45",
+            "text": "CFTC chair highlights wide crypto agenda, including rules on DeFi, prediction markets",
+            "link": "https://www.coindesk.com/policy/2026/03/10/cftc-chair-highlights-wide-crypto-agenda-including-rules-on-defi-prediction-markets"
         },
         {
-            "time": "16:20",
-            "text": "Solana, XRP ETFs take different paths as crypto investors pile in",
-            "link": "https://www.coindesk.com/markets/2026/03/10/solana-etfs-find-institutional-backing-while-xrp-funds-depend-more-on-retail"
+            "time": "16:45",
+            "text": "Clarity Act Compromise Inevitable: Senator Alsobrooks Urges Pragmatic Crypto Legislation at ABA Summit",
+            "link": "https://bitcoinworld.co.in/clarity-act-compromise-aba-summit/"
         },
         {
-            "time": "16:19",
-            "text": "Hyperliquid Jumps on Margin Upgrade, Oil Trading Frenzy",
-            "link": "https://decrypt.co/360560/hyperliquid-jumps-on-margin-upgrade-oil-trading-frenzy"
+            "time": "16:45",
+            "text": "Bitcoin: Bhutan sells amid MSTR’s $1.28B BTC buy – Strategic move?",
+            "link": "https://ambcrypto.com/bitcoin-bhutan-sells-amid-mstrs-1-28b-btc-buy-strategic-move/"
         },
         {
-            "time": "16:15",
-            "text": "AIntuition Collection: A New Generation of Utility NFTs Bridging Digital Ownership and Real Privileges",
-            "link": "https://cryptodaily.co.uk/2026/03/aintuition-collection-a-new-generation-of-utility-nfts-bridging-digital-ownership-and-real-privileges"
+            "time": "16:44",
+            "text": "ABTC Director Richard Busch Buys 68,000 Shares at $1.15",
+            "link": "https://coinpaprika.com/news/abtc-director-richard-busch-buys-68000-shares-115"
         },
         {
-            "time": "16:15",
-            "text": "Ethereum holds $2K as whale buys 1,004 ETH: Where will price head next?",
-            "link": "https://ambcrypto.com/ethereum-holds-2k-as-whale-buys-1004-eth-where-will-price-head-next/"
+            "time": "16:43",
+            "text": "Polymarket, Peter Thiel's Palantir Eye 'Surveillance Models' for Sports Prediction Markets",
+            "link": "https://decrypt.co/360558/polymarket-peter-thiel-palantir-surveillance-models-sports-prediction-markets"
         }
     ]
 }
