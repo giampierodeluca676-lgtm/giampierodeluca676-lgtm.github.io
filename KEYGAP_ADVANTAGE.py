@@ -49,29 +49,39 @@ def update_index_github():
         cartella = "Report_Finanziari"
         if not os.path.exists(cartella): os.makedirs(cartella)
         
-        reports = sorted(os.listdir(cartella), reverse=True)
+        # Ordiniamo i file in modo che i più recenti (data e ora maggiore) appaiano per primi
+        reports = sorted([f for f in os.listdir(cartella) if f.endswith('.html')], reverse=True)
         links_html = ""
         
-        for r in reports[:20]:
+        for r in reports[:25]: # Aumentato a 25 per una visione più completa
             try:
                 # CORREZIONE ERRORE: Verifichiamo che il file abbia il formato corretto prima di splittare
                 parti = r.replace('.html', '').split('_')
+                
                 if len(parti) < 6:
                     # Se il file ha un nome corto (es. report_2026...), usiamo un formato semplificato
-                    label_data = "ARCHIVIO"
-                    titolo_display = r.replace(".html", "").replace("_", " ")
+                    label_data = "ARCHIVIO STORICO"
+                    titolo_display = r.replace(".html", "").replace("_", " ").upper()
                 else:
                     # Formato standard: Report_Mondiale_GG_MM_AAAA_HH_MM
-                    label_data = f"{parti[-4]} / {parti[-3]} / {parti[-2]} - {parti[-1]}"
-                    titolo_display = r.replace(".html", "").replace("_", " ")
+                    # Usiamo i componenti per creare una data ordinata visivamente: GG/MM/AAAA - HH:MM
+                    giorno = parti[-4]
+                    mese = parti[-3]
+                    anno = parti[-2]
+                    ora = parti[-1].replace('-', ':') # Se l'ora ha il trattino, lo rendiamo leggibile
+                    
+                    label_data = f"{giorno}/{mese}/{anno} — {ora}"
+                    titolo_display = "ANALISI MERCATO GLOBALE"
 
                 links_html += f"""
-                <a href="{cartella}/{r}" style="display: flex; justify-content: space-between; align-items: center; background: #0d1117; border: 1px solid rgba(255,255,255,0.1); padding: 25px; border-radius: 12px; text-decoration: none; color: #fff; margin-bottom: 15px;">
+                <a href="{cartella}/{r}" style="display: flex; justify-content: space-between; align-items: center; background: #0d1117; border: 1px solid rgba(0,229,255,0.1); padding: 25px; border-radius: 12px; text-decoration: none; color: #fff; margin-bottom: 15px; border-left: 4px solid #00e5ff; transition: 0.3s;">
                     <div style="display: flex; flex-direction: column;">
-                        <span style="color: #00e5ff; font-family: 'JetBrains Mono'; font-weight: 700; font-size: 0.8rem; margin-bottom: 5px;">{label_data}</span>
-                        <span style="font-size: 1.2rem; font-weight: 800;">{titolo_display}</span>
+                        <span style="color: #00e5ff; font-family: 'JetBrains Mono'; font-weight: 700; font-size: 0.8rem; margin-bottom: 5px; letter-spacing: 1px;">{label_data}</span>
+                        <span style="font-size: 1.2rem; font-weight: 800; letter-spacing: 0.5px;">{titolo_display}</span>
                     </div>
-                    <span style="background: rgba(0, 255, 136, 0.1); color: #00ff88; padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 700;">DECRIPTATO</span>
+                    <div style="text-align: right;">
+                        <span style="background: rgba(0, 255, 136, 0.1); color: #00ff88; padding: 5px 12px; border-radius: 6px; font-size: 0.75rem; font-weight: 900; border: 1px solid rgba(0,255,136,0.2);">DECRIPTATO</span>
+                    </div>
                 </a>"""
             except Exception:
                 continue # Salta il file se genera errori e passa al prossimo
@@ -86,8 +96,10 @@ def update_index_github():
             <style>
                 body {{ background: #05070a; color: #fff; font-family: 'Outfit', sans-serif; padding: 40px 20px; margin: 0; }}
                 .container {{ max-width: 900px; margin: 0 auto; }}
-                h1 {{ font-family: 'JetBrains Mono'; color: #fff; font-size: 1.8rem; margin-bottom: 30px; border-bottom: 2px solid #00e5ff; padding-bottom: 20px; }}
-                .btn-back {{ color: #00e5ff; text-decoration: none; font-weight: 800; text-transform: uppercase; font-size: 0.9rem; float: right; }}
+                h1 {{ font-family: 'JetBrains Mono'; color: #fff; font-size: 1.8rem; margin-bottom: 30px; border-bottom: 2px solid #00e5ff; padding-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }}
+                .btn-back {{ color: #00e5ff; text-decoration: none; font-weight: 800; text-transform: uppercase; font-size: 0.9rem; float: right; border: 1px solid #00e5ff; padding: 8px 15px; border-radius: 6px; transition: 0.3s; }}
+                .btn-back:hover {{ background: #00e5ff; color: #000; }}
+                .grid a:hover {{ background: #161b22 !important; border-color: #00e5ff !important; transform: translateX(5px); }}
             </style>
         </head>
         <body>
