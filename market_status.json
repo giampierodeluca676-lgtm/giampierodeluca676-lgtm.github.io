@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 60.594,06",
-    "signal": "BULLISH",
-    "reliability": "99%",
-    "last_update": "03:53:12",
-    "ticker": "BTC/EUR: € 60.594,06 • SIGNAL: BULLISH",
+    "price": "€ 60.460,42",
+    "signal": "BEARISH",
+    "reliability": "97%",
+    "last_update": "04:23:14",
+    "ticker": "BTC/EUR: € 60.460,42 • SIGNAL: BEARISH",
     "news": [
         {
-            "time": "03:45",
-            "text": "PBOC USD/CNY Reference Rate: Strategic 6.8982 Fixing Signals Yuan Strength",
-            "link": "https://bitcoinworld.co.in/pboc-usd-cny-reference-rate-fixing-3/"
+            "time": "04:20",
+            "text": "Ethereum ETF Outflow: U.S. Spot Funds See Staggering $51.26M Net Exit on March 9",
+            "link": "https://bitcoinworld.co.in/ethereum-etf-outflow-march-2025/"
         },
         {
-            "time": "03:40",
-            "text": "CFTC Chair’s Bold Pledge: Ending Regulatory Turf Wars to Unleash Blockchain and Prediction Market Innovation",
-            "link": "https://bitcoinworld.co.in/cftc-blockchain-prediction-market-innovation/"
+            "time": "04:18",
+            "text": "Ethereum Price Climbs Past $2,000, $2,200 Now in Bullish Crosshairs",
+            "link": "https://www.newsbtc.com/analysis/eth/ethereum-price-climbs-past-2000/"
         },
         {
-            "time": "03:38",
-            "text": "NFT lending protocol Gondi says platform secured after $230K exploit",
-            "link": "https://cointelegraph.com/news/nft-platform-gondi-secure-after-230k-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+            "time": "04:15",
+            "text": "South Korea’s Bold Crypto Move: Ruling Party to Cap Exchange Shareholder Stakes at 34%",
+            "link": "https://bitcoinworld.co.in/south-korea-crypto-exchange-shareholder-cap/"
         },
         {
-            "time": "03:35",
-            "text": "Mirae Asset’s Planned Korbit Acquisition Faces Daunting Regulatory Hurdles in South Korea",
-            "link": "https://bitcoinworld.co.in/mirae-asset-korbit-acquisition-hurdles/"
+            "time": "04:10",
+            "text": "Crypto Futures Liquidations Surge: $217 Million Wiped Out as Shorts Dominate Market Pressure",
+            "link": "https://bitcoinworld.co.in/crypto-futures-liquidations-analysis-21/"
         },
         {
-            "time": "03:34",
-            "text": "Bitcoin Price Reclaims Ground, Can Bulls Flip Market Momentum?",
-            "link": "https://www.newsbtc.com/analysis/btc/bitcoin-price-reclaims-ground-70k/"
+            "time": "04:00",
+            "text": "Bitcoin Exchange Reserves Fall To 2019 Levels As ETFs And Corporate Treasuries Accumulate",
+            "link": "https://www.newsbtc.com/bitcoin-news/bitcoin-exchange-reserves-fall-to-2019-levels-as-etfs-and-corporate-treasuries-accumulate/"
         },
         {
-            "time": "03:30",
-            "text": "Brazil’s Crypto Faction Prepare to Fight Stablecoin Taxation in Congress",
-            "link": "https://news.bitcoin.com/brazils-crypto-faction-prepare-to-fight-stablecoin-taxation-in-congress/"
+            "time": "04:00",
+            "text": "Bitcoin hints at accumulation after $67K drop – What it means for BTC?",
+            "link": "https://ambcrypto.com/bitcoin-hints-at-accumulation-after-67k-drop-what-it-means-for-btc/"
         }
     ]
 }
