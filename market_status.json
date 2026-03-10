@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 61.170,12",
+    "price": "€ 60.990,12",
     "signal": "BEARISH",
-    "reliability": "98%",
-    "last_update": "18:01:23",
-    "ticker": "BTC/EUR: € 61.170,12 • SIGNAL: BEARISH",
+    "reliability": "99%",
+    "last_update": "18:31:26",
+    "ticker": "BTC/EUR: € 60.990,12 • SIGNAL: BEARISH",
     "news": [
         {
-            "time": "17:55",
-            "text": "Clarity Act Crisis: Why Ric Edelman Demands Crypto Compromise Now",
-            "link": "https://bitcoinworld.co.in/ric-edelman-clarity-act-compromise/"
+            "time": "18:30",
+            "text": "ETH Staking Revolution: Vitalik Buterin’s Bold Push for ‘One-Click’ Validator Simplicity",
+            "link": "https://bitcoinworld.co.in/vitalik-buterin-eth-staking-one-click/"
         },
         {
-            "time": "17:53",
-            "text": "XRP ETFs hold $1.4B despite price pullback as Goldman Sachs and hedge funds disclose positions",
-            "link": "https://ambcrypto.com/xrp-etfs-hold-1-4b-despite-price-pullback-as-goldman-sachs-and-hedge-funds-disclose-positions/"
+            "time": "18:25",
+            "text": "USD/JPY Stalls: Markets Grapple with US-Iran War Fears and Critical Energy Supply Threats",
+            "link": "https://bitcoinworld.co.in/usd-jpy-flat-us-iran-energy-risks/"
         },
         {
-            "time": "17:51",
-            "text": "What is 0% APR Crypto Loan? LTV Requirements and Platform Comparisons",
-            "link": "https://cryptodaily.co.uk/2026/03/what-is-0-apr-crypto-loan-ltv-requirements-and-platform-comparisons"
+            "time": "18:20",
+            "text": "X Money Launch Date Confirmed — Will Dogecoin Be Part of Elon Musk's Payment App?",
+            "link": "https://coinpaper.com/15324/x-money-launch-date-confirmed-will-dogecoin-be-part-of-elon-musk-s-payment-app"
         },
         {
-            "time": "17:50",
-            "text": "Japan’s Energy Security: Minister Akazowa’s Critical Discussion on Oil Reserves and Market Stability",
-            "link": "https://bitcoinworld.co.in/japan-energy-oil-reserves-akazawa/"
+            "time": "18:20",
+            "text": "Riksbank Monetary Policy: Crucial Extended Hold Predicted for Swedish Krona Stability – Nomura Analysis",
+            "link": "https://bitcoinworld.co.in/riksbank-extended-hold-sek-nomura/"
         },
         {
-            "time": "17:48",
-            "text": "Oil shock tests markets amidst geopolitical tensions — bitcoin holds firm",
-            "link": "https://www.coindesk.com/markets/2026/03/10/oil-shock-tests-markets-amidst-geopolitical-tensions-bitcoin-holds-firm"
+            "time": "18:18",
+            "text": "Ripple Price Analysis: Where Is XRP Heading Next After 5% Weekly Increase?",
+            "link": "https://cryptopotato.com/ripple-price-analysis-where-is-xrp-heading-next-after-5-weekly-increase/"
         },
         {
-            "time": "17:47",
-            "text": "Software Eats The Brokerage—AI Lowers Cost, Crypto Makes It Verifiable",
-            "link": "https://www.forbes.com/sites/christiancatalini/2026/03/10/software-eats-the-brokerage-ai-lowers-cost-crypto-makes-it-verifiable/"
+            "time": "18:16",
+            "text": "Strategy Breaks STRC Record With 1,420 Bitcoin Acquisition And Amended Sales Rules",
+            "link": "https://en.coin-turk.com/strategy-breaks-strc-record-with-1420-bitcoin-acquisition-and-amended-sales-rules/"
         }
     ]
 }
