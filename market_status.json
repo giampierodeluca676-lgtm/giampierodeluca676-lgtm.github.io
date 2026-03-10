@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 60.024,32",
-    "signal": "BEARISH",
+    "price": "€ 60.137,48",
+    "signal": "BULLISH",
     "reliability": "98%",
-    "last_update": "07:23:29",
-    "ticker": "BTC/EUR: € 60.024,32 • SIGNAL: BEARISH",
+    "last_update": "07:53:31",
+    "ticker": "BTC/EUR: € 60.137,48 • SIGNAL: BULLISH",
     "news": [
         {
-            "time": "07:20",
-            "text": "Gold Price Defies Gravity with Modest Gains as Safe-Haven Flows Battle Dollar Strength",
-            "link": "https://bitcoinworld.co.in/gold-price-safe-haven-dollar-strength/"
+            "time": "07:50",
+            "text": "WTI Price Forecast Soars: Crude Retakes $88 as Strait of Hormuz Closure Sparks Critical Supply Fears",
+            "link": "https://bitcoinworld.co.in/wti-price-forecast-strait-hormuz-closure/"
         },
         {
-            "time": "07:18",
-            "text": "Wall Street Banks Weigh Lawsuit Over Crypto Banking Charters",
-            "link": "https://decrypt.co/360524/wall-street-banks-weigh-lawsuit-over-crypto-banking-charters"
+            "time": "07:45",
+            "text": "USD/CHF Stabilizes Near 0.7800 as Diplomatic Breakthrough Eases Iran Conflict Fears",
+            "link": "https://bitcoinworld.co.in/usd-chf-steadies-iran-resolution/"
         },
         {
-            "time": "07:15",
-            "text": "Ripple Exec Celebrates $100 Billion Milestone",
-            "link": "https://u.today/ripple-exec-celebrates-100-billion-milestone"
+            "time": "07:44",
+            "text": "Hyperliquid price surges as Arthur Hayes predicts HYPE rally to $150",
+            "link": "https://invezz.com/news/2026/03/10/hyperliquid-price-surges-as-arthur-hayes-predicts-hype-rally-to-150/"
         },
         {
-            "time": "07:15",
-            "text": "USD/CAD Forecast: Critical Breakdown Looms Below 1.3600 as Trading Range Collapses",
-            "link": "https://bitcoinworld.co.in/usd-cad-forecast-trading-range-breakdown/"
+            "time": "07:40",
+            "text": "Artificial Superintelligence Alliance (FET) Price Prediction 2026-2030: A Comprehensive Analysis",
+            "link": "https://bitcoinworld.co.in/artificial-superintelligence-alliance-fet-price-prediction-2026-2030/"
         },
         {
-            "time": "07:14",
-            "text": "Here's how traders and big buyers stepped in to keep bitcoin steady during the oil shock",
-            "link": "https://www.coindesk.com/markets/2026/03/10/here-s-how-traders-and-big-buyers-stepped-in-to-keep-bitcoin-steady-during-the-oil-shock"
+            "time": "07:35",
+            "text": "Arbitrum (ARB) Price Prediction 2026-2030: Critical Analysis of the $6 Target",
+            "link": "https://bitcoinworld.co.in/arbitrum-arb-price-prediction-2030-2/"
         },
         {
-            "time": "07:10",
-            "text": "EUR/JPY Forecast: Pair Retreats Below 183.50 as Safe-Haven Flows Intensify, Yet Bullish Structure Holds",
-            "link": "https://bitcoinworld.co.in/eur-jpy-forecast-safe-haven-demand/"
+            "time": "07:30",
+            "text": "AI Agent Diverts GPUs to Mine Crypto on Training Servers",
+            "link": "https://news.bitcoin.com/ai-agent-diverts-gpus-to-mine-crypto-on-training-servers/"
         }
     ]
 }
