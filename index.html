@@ -1,10 +1,41 @@
-
-        <html>
-        <head><title>Keygap Intelligence - Live Feed</title></head>
-        <body style="font-family: sans-serif; padding: 30px;">
-            <h1>Keygap Global Intelligence - Archivio Report</h1>
-            <hr>
-            <ul><li><a href="Report_Finanziari/report_2026-03-08_10-12.html">report 2026-03-08 10-12</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_19_45.html">Report Mondiale 10 03 2026 19 45</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_19_31.html">Report Mondiale 10 03 2026 19 31</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_19_01.html">Report Mondiale 10 03 2026 19 01</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_18_31.html">Report Mondiale 10 03 2026 18 31</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_18_01.html">Report Mondiale 10 03 2026 18 01</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_17_31.html">Report Mondiale 10 03 2026 17 31</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_17_01.html">Report Mondiale 10 03 2026 17 01</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_16_54.html">Report Mondiale 10 03 2026 16 54</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_16_24.html">Report Mondiale 10 03 2026 16 24</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_15_54.html">Report Mondiale 10 03 2026 15 54</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_15_24.html">Report Mondiale 10 03 2026 15 24</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_14_54.html">Report Mondiale 10 03 2026 14 54</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_14_24.html">Report Mondiale 10 03 2026 14 24</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_13_54.html">Report Mondiale 10 03 2026 13 54</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_13_24.html">Report Mondiale 10 03 2026 13 24</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_12_53.html">Report Mondiale 10 03 2026 12 53</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_12_23.html">Report Mondiale 10 03 2026 12 23</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_11_53.html">Report Mondiale 10 03 2026 11 53</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_11_23.html">Report Mondiale 10 03 2026 11 23</a></li></ul>
-        </body>
-        </html>
-        
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEYGAP | Intelligence Financial Terminal</title>
+    <script src="https://pl28819682.effectivegatecpm.com/07/47/37/074737f2d1be0f3c0e9de0585a695fd7.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Outfit:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #05070a; --panel: #0d1117; --acc: #00e5ff; --border: rgba(255,255,255,0.1); }
+        body { background: var(--bg); color: #fff; font-family: 'Outfit', sans-serif; margin: 0; padding: 15px; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px; background: var(--panel); border: 1px solid var(--border); border-radius: 15px; margin-bottom: 15px; }
+        .logo { font-size: 2rem; font-weight: 900; color: var(--acc); font-family: 'JetBrains Mono'; }
+        .grid { display: grid; grid-template-columns: 380px 1fr; gap: 15px; flex-grow: 1; }
+        .card { background: var(--panel); border: 1px solid var(--border); border-radius: 15px; padding: 25px; }
+        .news-text { font-size: 1.3rem; font-weight: 700; line-height: 1.6; color: #e2e8f0; }
+        .btn-access { width: 100%; background: var(--acc); color: #000; padding: 25px; border-radius: 15px; border: none; font-weight: 900; font-size: 1.5rem; cursor: pointer; text-transform: uppercase; margin-top: 15px; transition: 0.3s; text-align: center; text-decoration: none; display: block; }
+        #live-btc { font-family: 'JetBrains Mono'; font-size: 1.8rem; color: #00ff88; font-weight: 700; }
+    </style>
+</head>
+<body>
+    <header><div class="logo">KEYGAP_ADVANTAGE</div><div id="live-btc">BTC: LOADING...</div></header>
+    <div class="grid">
+        <div class="card">
+            <div style="color:var(--acc); font-weight:800; margin-bottom:15px; letter-spacing:2px;">LIVE INTELLIGENCE</div>
+            <div class="news-text">SISTEMA ATTIVO: Terminale di monitoraggio Keygap. Analisi flussi in tempo reale.</div>
+        </div>
+        <div class="card" style="padding:0; overflow:hidden;">
+            <div id="tv_widget" style="height: 100%;"></div>
+            <script src="https://s3.tradingview.com/tv.js"></script>
+            <script>new TradingView.widget({"autosize":true,"symbol":"BINANCE:BTCUSDT","interval":"15","theme":"dark","style":"1","locale":"it","container_id":"tv_widget"});</script>
+        </div>
+    </div>
+    <a href="archivio.html" class="btn-access">SFOGLIA ARCHIVIO REPORT</a>
+    <script>
+        const btcEl = document.getElementById('live-btc');
+        const ws = new WebSocket('wss://stream.binance.com:9443/ws/btcusdt@trade');
+        ws.onmessage=(e)=>{const data=JSON.parse(e.data); btcEl.innerText=`$ ${parseFloat(data.p).toLocaleString()}`;};
+    </script>
+</body>
+</html>
