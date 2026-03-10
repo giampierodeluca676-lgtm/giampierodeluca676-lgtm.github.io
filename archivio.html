@@ -1,10 +1,236 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEYGAP | Global Tactical Intelligence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #030508;
+            --panel: rgba(10, 14, 20, 0.8);
+            --accent: #00f2ff;
+            --success: #00ff88;
+            --warning: #ff3e3e;
+            --border: rgba(0, 242, 255, 0.1);
+        }
 
-        <html>
-        <head><title>Keygap Intelligence - Live Feed</title></head>
-        <body style="font-family: sans-serif; padding: 30px;">
-            <h1>Keygap Global Intelligence - Archivio Report</h1>
-            <hr>
-            <ul><li><a href="Report_Finanziari/report_2026-03-08_10-12.html">report 2026-03-08 10-12</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_19_01.html">Report Mondiale 10 03 2026 19 01</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_18_31.html">Report Mondiale 10 03 2026 18 31</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_18_01.html">Report Mondiale 10 03 2026 18 01</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_17_31.html">Report Mondiale 10 03 2026 17 31</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_17_01.html">Report Mondiale 10 03 2026 17 01</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_16_54.html">Report Mondiale 10 03 2026 16 54</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_16_24.html">Report Mondiale 10 03 2026 16 24</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_15_54.html">Report Mondiale 10 03 2026 15 54</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_15_24.html">Report Mondiale 10 03 2026 15 24</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_14_54.html">Report Mondiale 10 03 2026 14 54</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_14_24.html">Report Mondiale 10 03 2026 14 24</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_13_54.html">Report Mondiale 10 03 2026 13 54</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_13_24.html">Report Mondiale 10 03 2026 13 24</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_12_53.html">Report Mondiale 10 03 2026 12 53</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_12_23.html">Report Mondiale 10 03 2026 12 23</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_11_53.html">Report Mondiale 10 03 2026 11 53</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_11_23.html">Report Mondiale 10 03 2026 11 23</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_10_53.html">Report Mondiale 10 03 2026 10 53</a></li><li><a href="Report_Finanziari/Report_Mondiale_10_03_2026_10_23.html">Report Mondiale 10 03 2026 10 23</a></li></ul>
-        </body>
-        </html>
-        
+        body {
+            background-color: var(--bg);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* Effetto Scanline tipo terminale */
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+            z-index: 9999;
+            pointer-events: none;
+            background-size: 100% 2px, 3px 100%;
+        }
+
+        .dashboard {
+            max-width: 1800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            gap: 20px;
+        }
+
+        /* HEADER PROFESSIONALE */
+        .header {
+            grid-column: span 3;
+            padding: 20px;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .brand {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            letter-spacing: 4px;
+            color: var(--accent);
+            text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+        }
+
+        /* BARRA NOTIZIE SCORREVOLI */
+        .news-ticker {
+            grid-column: span 3;
+            background: rgba(0, 242, 255, 0.05);
+            border: 1px solid var(--border);
+            padding: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .news-content {
+            display: inline-block;
+            animation: ticker 30s linear infinite;
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* PANNELLI LATERALI (ORDINATI) */
+        .panel {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .panel-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.8rem;
+            color: var(--accent);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* GRAFICO CENTRALE */
+        .main-display {
+            background: #000;
+            border: 1px solid var(--border);
+            height: 600px;
+        }
+
+        /* BOTTONE ACTION UNICO */
+        .cta-button {
+            grid-column: span 3;
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            transition: all 0.4s;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: var(--accent);
+            color: #000;
+            box-shadow: 0 0 30px var(--accent);
+        }
+
+        .live-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--success);
+            font-size: 0.8rem;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 255, 136, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="dashboard">
+    <header class="header">
+        <div class="brand">KEYGAP_ADVANTAGE</div>
+        <div id="live-price" style="font-size: 1.4rem; font-weight: bold; color: var(--accent);">BTC/USDT: ---</div>
+        <div class="live-indicator">
+            <div class="dot"></div> SYSTEM ONLINE [V 3.0]
+        </div>
+    </header>
+
+    <div class="news-ticker">
+        <div class="news-content">
+            +++ KEYGAP INTELLIGENCE: ANALISI MONDIALE IN CORSO... BTC TESTA NUOVE RESISTENZE... AGGIORNAMENTO REPORT 30m COMPLETATO... VOLUMI IN AUMENTO SUI MERCATI ASIATICI... +++
+        </div>
+    </div>
+
+    <aside class="panel">
+        <div class="panel-title">ANALISI SISTEMA</div>
+        <div style="font-size: 0.8rem; line-height: 1.8;">
+            > TREND: <span style="color:var(--success)">POSITIVO</span><br>
+            > VOLATILITÀ: <span style="color:var(--warning)">ALTA</span><br>
+            > NODI ATTIVI: 14/14<br>
+            > LATENZA: 12ms
+        </div>
+        <div class="panel-title" style="margin-top:20px">ALGORITMO</div>
+        <div style="text-align:center; padding: 15px; border: 1px solid var(--success); color: var(--success); font-weight:bold;">
+            BUY SIGNAL ACTIVE
+        </div>
+    </aside>
+
+    <main class="main-display">
+        <div id="tv_chart" style="height: 100%;"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script type="text/javascript">
+            new TradingView.widget({
+                "autosize": true,
+                "symbol": "BINANCE:BTCUSDT",
+                "interval": "15",
+                "timezone": "Europe/Rome",
+                "theme": "dark",
+                "style": "1",
+                "locale": "it",
+                "enable_publishing": false,
+                "hide_side_toolbar": false,
+                "allow_symbol_change": true,
+                "container_id": "tv_chart"
+            });
+        </script>
+    </main>
+
+    <aside class="panel">
+        <div class="panel-title">NOTIZIE FRESCHE</div>
+        <div style="font-size: 0.75rem; color: #8b949e;">
+            <p><b style="color:var(--accent)">18:50</b> - Apertura mercati USA: Focus su inflazione.</p>
+            <p><b style="color:var(--accent)">18:15</b> - Balena sposta 5000 BTC. Monitoraggio attivo.</p>
+            <p><b style="color:var(--accent)">17:40</b> - Report Keygap: Incremento volumi spot.</p>
+            <p><b style="color:var(--accent)">17:10</b> - Analisi On-chain: Accumulo in corso.</p>
+        </div>
+    </aside>
+
+    <a href="archivio.html" class="cta-button">ACCEDI AL TERMINALE DECRIPTATO (REPORT COMPLETI)</a>
+</div>
+
+<script>
+    // WebSocket Real-Time
+    const priceEl = document.getElementById('live-price');
+    const ws = new WebSocket('wss://stream.binance.com:9443/ws/btcusdt@trade');
+    ws.onmessage = (e) => {
+        const stock = JSON.parse(e.data);
+        priceEl.innerText = `BTC/USDT: $${parseFloat(stock.p).toFixed(2)}`;
+    };
+</script>
+
+</body>
+</html>
