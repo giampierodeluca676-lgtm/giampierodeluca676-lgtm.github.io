@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 61.311,61",
+    "price": "€ 61.170,12",
     "signal": "BEARISH",
     "reliability": "98%",
-    "last_update": "17:31:20",
-    "ticker": "BTC/EUR: € 61.311,61 • SIGNAL: BEARISH",
+    "last_update": "18:01:23",
+    "ticker": "BTC/EUR: € 61.170,12 • SIGNAL: BEARISH",
     "news": [
         {
-            "time": "17:26",
-            "text": "Crypto shouldn’t “die on the hill” of stablecoin yield, Rick Edelman says",
-            "link": "https://www.coindesk.com/markets/2026/03/10/crypto-shouldn-t-die-on-the-hill-of-stablecoin-yield-rick-edelman-says"
+            "time": "17:55",
+            "text": "Clarity Act Crisis: Why Ric Edelman Demands Crypto Compromise Now",
+            "link": "https://bitcoinworld.co.in/ric-edelman-clarity-act-compromise/"
         },
         {
-            "time": "17:26",
-            "text": "Bitcoin Reclaims $70K as Exchange Balances Hit Record Lows — Is a Supply Shock Finally Starting?",
-            "link": "https://bitzo.com/2026/03/bitcoin-reclaims-70k-as-exchange-balances-hit-record-lows-is-a-supply-shock-finally-starting"
+            "time": "17:53",
+            "text": "XRP ETFs hold $1.4B despite price pullback as Goldman Sachs and hedge funds disclose positions",
+            "link": "https://ambcrypto.com/xrp-etfs-hold-1-4b-despite-price-pullback-as-goldman-sachs-and-hedge-funds-disclose-positions/"
         },
         {
-            "time": "17:25",
-            "text": "Canaan’s Strategic Surge: BTC and ETH Holdings Hit Record High as Rivals Sell",
-            "link": "https://bitcoinworld.co.in/canaan-btc-eth-record-holdings/"
+            "time": "17:51",
+            "text": "What is 0% APR Crypto Loan? LTV Requirements and Platform Comparisons",
+            "link": "https://cryptodaily.co.uk/2026/03/what-is-0-apr-crypto-loan-ltv-requirements-and-platform-comparisons"
         },
         {
-            "time": "17:23",
-            "text": "XRP Holds $1.42 as ETF Inflows and Exchange Outflows Point to Accumulation",
-            "link": "https://www.investing.com/analysis/xrp-holds-142-as-etf-inflows-and-exchange-outflows-point-to-accumulation-200676218"
+            "time": "17:50",
+            "text": "Japan’s Energy Security: Minister Akazowa’s Critical Discussion on Oil Reserves and Market Stability",
+            "link": "https://bitcoinworld.co.in/japan-energy-oil-reserves-akazawa/"
         },
         {
-            "time": "17:22",
-            "text": "Ethereum Struggles Near $2,000 as Bearish Structure Keeps Sellers in Control",
-            "link": "https://www.investing.com/analysis/ethereum-struggles-near-2000-as-bearish-structure-keeps-sellers-in-control-200676322"
+            "time": "17:48",
+            "text": "Oil shock tests markets amidst geopolitical tensions — bitcoin holds firm",
+            "link": "https://www.coindesk.com/markets/2026/03/10/oil-shock-tests-markets-amidst-geopolitical-tensions-bitcoin-holds-firm"
         },
         {
-            "time": "17:20",
-            "text": "XRP Faces Structural Resistance With 60% of Supply Still Underwater",
-            "link": "https://www.investing.com/analysis/xrp-faces-structural-resistance-with-60-of-supply-still-underwater-200676319"
+            "time": "17:47",
+            "text": "Software Eats The Brokerage—AI Lowers Cost, Crypto Makes It Verifiable",
+            "link": "https://www.forbes.com/sites/christiancatalini/2026/03/10/software-eats-the-brokerage-ai-lowers-cost-crypto-makes-it-verifiable/"
         }
     ]
 }
