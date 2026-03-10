@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 60.460,42",
+    "price": "€ 59.917,82",
     "signal": "BEARISH",
     "reliability": "97%",
-    "last_update": "04:23:14",
-    "ticker": "BTC/EUR: € 60.460,42 • SIGNAL: BEARISH",
+    "last_update": "04:53:17",
+    "ticker": "BTC/EUR: € 59.917,82 • SIGNAL: BEARISH",
     "news": [
         {
-            "time": "04:20",
-            "text": "Ethereum ETF Outflow: U.S. Spot Funds See Staggering $51.26M Net Exit on March 9",
-            "link": "https://bitcoinworld.co.in/ethereum-etf-outflow-march-2025/"
+            "time": "04:40",
+            "text": "Stunning $874 Million USDT Transfer from Unknown Whale to OKX Exchange Sparks Market Speculation",
+            "link": "https://bitcoinworld.co.in/usdt-transfer-okx-whale-transaction/"
         },
         {
-            "time": "04:18",
-            "text": "Ethereum Price Climbs Past $2,000, $2,200 Now in Bullish Crosshairs",
-            "link": "https://www.newsbtc.com/analysis/eth/ethereum-price-climbs-past-2000/"
+            "time": "04:35",
+            "text": "Critical Warning: Iran’s IRGC Threatens Oil Export Blockade if US, Israel Attacks Persist",
+            "link": "https://bitcoinworld.co.in/iran-irgc-oil-export-blockade-warning/"
         },
         {
-            "time": "04:15",
-            "text": "South Korea’s Bold Crypto Move: Ruling Party to Cap Exchange Shareholder Stakes at 34%",
-            "link": "https://bitcoinworld.co.in/south-korea-crypto-exchange-shareholder-cap/"
+            "time": "04:34",
+            "text": "Bitcoin Jumps Back Above $70,000 as Iran War Worries Ease",
+            "link": "https://www.bloomberg.com/news/articles/2026-03-10/bitcoin-jumps-back-above-70-000-as-iran-war-worries-ease"
         },
         {
-            "time": "04:10",
-            "text": "Crypto Futures Liquidations Surge: $217 Million Wiped Out as Shorts Dominate Market Pressure",
-            "link": "https://bitcoinworld.co.in/crypto-futures-liquidations-analysis-21/"
+            "time": "04:31",
+            "text": "Bitcoin jumps past $70,000 as war volatility fades",
+            "link": "https://www.coindesk.com/markets/2026/03/10/bitcoin-jumps-past-usd70-000-as-war-volatility-fades"
         },
         {
-            "time": "04:00",
-            "text": "Bitcoin Exchange Reserves Fall To 2019 Levels As ETFs And Corporate Treasuries Accumulate",
-            "link": "https://www.newsbtc.com/bitcoin-news/bitcoin-exchange-reserves-fall-to-2019-levels-as-etfs-and-corporate-treasuries-accumulate/"
+            "time": "04:30",
+            "text": "Canadian Dollar Plummets as Oil Prices Ease Following Trump’s Startling Remarks",
+            "link": "https://bitcoinworld.co.in/canadian-dollar-weakens-oil-trump-remarks/"
         },
         {
-            "time": "04:00",
-            "text": "Bitcoin hints at accumulation after $67K drop – What it means for BTC?",
-            "link": "https://ambcrypto.com/bitcoin-hints-at-accumulation-after-67k-drop-what-it-means-for-btc/"
+            "time": "04:30",
+            "text": "Coinbase Expands Derivatives Push in Europe via MiFID-Regulated Entity",
+            "link": "https://news.bitcoin.com/coinbase-expands-derivatives-push-in-europe-via-mifid-regulated-entity/"
         }
     ]
 }
