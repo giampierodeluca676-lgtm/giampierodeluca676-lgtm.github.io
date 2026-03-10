@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 60.551,40",
+    "price": "€ 60.273,86",
     "signal": "BEARISH",
-    "reliability": "99%",
-    "last_update": "19:31:32",
-    "ticker": "BTC/EUR: € 60.551,40 • SIGNAL: BEARISH",
+    "reliability": "98%",
+    "last_update": "19:45:53",
+    "ticker": "BTC/EUR: € 60.273,86 • SIGNAL: BEARISH",
     "news": [
         {
-            "time": "19:25",
-            "text": "How Clarnium Is Blending AI Automation With Token Launch Workflows",
-            "link": "https://cryptodaily.co.uk/2026/03/how-clarnium-is-blending-ai-automation-with-token-launch-workflows"
+            "time": "19:41",
+            "text": "White House Confirms Progress in Iran Conflict as Oil and Crypto Markets React",
+            "link": "https://en.coin-turk.com/white-house-confirms-progress-in-iran-conflict-as-oil-and-crypto-markets-react/"
         },
         {
-            "time": "19:25",
-            "text": "US Dollar Index Plummets from Iran War Highs as Safe-Haven Frenzy Cools",
-            "link": "https://bitcoinworld.co.in/dollar-index-retreats-iran-war-highs/"
+            "time": "19:40",
+            "text": "Bank of Canada Holds Firm: Front-End Rates Steady Despite Volatile Conflict-Driven Markets",
+            "link": "https://bitcoinworld.co.in/bank-canada-rates-steady-conflict-volatility/"
         },
         {
-            "time": "19:20",
-            "text": "GBP/JPY Surges as Yen Plummets Amid Critical Middle East Energy Supply Fears",
-            "link": "https://bitcoinworld.co.in/gbp-jpy-rises-yen-weakens/"
+            "time": "19:38",
+            "text": "Polymarket and Palantir team to protect integrity of sports betting as prediction markets face key moment",
+            "link": "https://www.coindesk.com/markets/2026/03/10/polymarket-and-palantir-team-up-to-protect-the-integrity-of-sports-betting-as-prediction-platforms-face-a-make-or-break-moment"
         },
         {
-            "time": "19:16",
-            "text": "29,000 BTC Withdrawn While Futures Shorts Continue to Rise: Data",
-            "link": "https://cryptopotato.com/29000-btc-withdrawn-while-futures-shorts-continue-to-rise-data/"
+            "time": "19:35",
+            "text": "Worldcoin price prediction 2026-2032: How high will WLD go?",
+            "link": "https://www.cryptopolitan.com/worldcoin-price-prediction/"
         },
         {
-            "time": "19:15",
-            "text": "'More Than They Can Sell'—Saylor Bitcoin Buying Fuels $200K Forecast",
-            "link": "https://www.forbes.com/sites/boazsobrado/2026/03/10/more-than-they-can-sell-saylor-bitcoin-buying-fuels-200k-forecast/"
+            "time": "19:35",
+            "text": "Dow Jones Industrial Average Soars as Oil Prices Plunge on Easing Iran Pressure",
+            "link": "https://bitcoinworld.co.in/dow-jones-rises-oil-prices-iran/"
         },
         {
-            "time": "19:15",
-            "text": "ChatGPT Interactive Visuals Revolutionize Learning with Dynamic Math and Science Explanations",
-            "link": "https://bitcoinworld.co.in/chatgpt-interactive-visuals-math-science/"
+            "time": "19:32",
+            "text": "Circle could rally 60% more on stablecoin adoption, AI agentic finance, Bernstein says",
+            "link": "https://www.coindesk.com/markets/2026/03/10/circle-could-rally-60-more-on-stablecoin-adoption-ai-agentic-finance-bernstein-says"
         }
     ]
 }
