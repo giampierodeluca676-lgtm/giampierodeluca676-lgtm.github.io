@@ -1,40 +1,40 @@
 {
     "status": "OPERATIVO",
-    "price": "€ 61.077,30",
+    "price": "€ 61.198,48",
     "signal": "BULLISH",
     "reliability": "97%",
-    "last_update": "15:54:15",
-    "ticker": "BTC/EUR: € 61.077,30 • SIGNAL: BULLISH",
+    "last_update": "16:24:18",
+    "ticker": "BTC/EUR: € 61.198,48 • SIGNAL: BULLISH",
     "news": [
         {
-            "time": "15:51",
-            "text": "Dogecoin Price Rebound Triggers 779% in Liquidation Imbalance",
-            "link": "https://u.today/dogecoin-price-rebound-triggers-779-in-liquidation-imbalance"
+            "time": "16:21",
+            "text": "Babylon Labs Partners with Ledger to Enable Native Bitcoin Staking in Hardware Wallets",
+            "link": "https://en.coin-turk.com/babylon-labs-partners-with-ledger-to-enable-native-bitcoin-staking-in-hardware-wallets/"
         },
         {
-            "time": "15:50",
-            "text": "Legora Soars to $5.55 Billion Valuation as AI Legaltech Arms Race Intensifies",
-            "link": "https://bitcoinworld.co.in/legora-ai-legaltech-valuation-series-d/"
+            "time": "16:20",
+            "text": "Bitcoin Soars: BTC Price Surges Above $71,000 Amid Renewed Market Optimism",
+            "link": "https://bitcoinworld.co.in/bitcoin-price-surges-above-71000-3/"
         },
         {
-            "time": "15:49",
-            "text": "Claude and OpenClaw face off in $1,000 Polymarket AI trading test: Here’s the winner",
-            "link": "https://finbold.com/claude-and-openclaw-face-off-in-1000-polymarket-ai-trading-test-heres-the-winner/"
+            "time": "16:20",
+            "text": "Solana, XRP ETFs take different paths as crypto investors pile in",
+            "link": "https://www.coindesk.com/markets/2026/03/10/solana-etfs-find-institutional-backing-while-xrp-funds-depend-more-on-retail"
         },
         {
-            "time": "15:48",
-            "text": "Stablecoin market hits $312B as banks, card networks embrace onchain dollars",
-            "link": "https://www.coindesk.com/business/2026/03/10/stablecoins-are-starting-to-reshape-payments-and-banking-macquarie-says"
+            "time": "16:19",
+            "text": "Hyperliquid Jumps on Margin Upgrade, Oil Trading Frenzy",
+            "link": "https://decrypt.co/360560/hyperliquid-jumps-on-margin-upgrade-oil-trading-frenzy"
         },
         {
-            "time": "15:45",
-            "text": "Bybit Alpha Officially Integrates Mantle Chain, Expanding Multi-Chain Ecosystem and Asset Diversity",
-            "link": "https://www.investing.com/news/cryptocurrency-news/bybit-alpha-officially-integrates-mantle-chain-expanding-multichain-ecosystem-and-asset-diversity-4552446"
+            "time": "16:15",
+            "text": "AIntuition Collection: A New Generation of Utility NFTs Bridging Digital Ownership and Real Privileges",
+            "link": "https://cryptodaily.co.uk/2026/03/aintuition-collection-a-new-generation-of-utility-nfts-bridging-digital-ownership-and-real-privileges"
         },
         {
-            "time": "15:45",
-            "text": "Israel Iran War: Critical Washington Consultation Will Determine Conflict’s Fate",
-            "link": "https://bitcoinworld.co.in/israel-iran-war-washington-consultation/"
+            "time": "16:15",
+            "text": "Ethereum holds $2K as whale buys 1,004 ETH: Where will price head next?",
+            "link": "https://ambcrypto.com/ethereum-holds-2k-as-whale-buys-1004-eth-where-will-price-head-next/"
         }
     ]
 }
