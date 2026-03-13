@@ -1,238 +1,143 @@
 import os, pickle, json, subprocess, time, requests, random
 from datetime import datetime
-from google_auth_oauthlib.flow import InstalledAppFlow
-from google.auth.transport.requests import Request
-from googleapiclient.discovery import build
 
-# --- SISTEMA DI IDENTIFICAZIONE PROCESSO ---
-with open("KEYGAP_ADVANTAGE.pid", "w") as f:
-    f.write(str(os.getpid()))
+# --- CONFIGURAZIONE PERCORSI ---
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+REPORT_DIR = os.path.join(BASE_DIR, "Report_Finanziari")
 
-SCOPES = ['https://www.googleapis.com/auth/blogger']
-BLOG_ID = '2744764892823107807'
-SITO_MONETIZZATO = 'https://giampierodeluca676-lgtm.github.io/'
-
-def get_service():
-    creds = None
-    if os.path.exists('token.json'):
-        with open('token.json', 'rb') as token:
-            creds = pickle.load(token)
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
-            flow = InstalledAppFlow.from_client_secrets_file('client_secrets.json', SCOPES)
-            creds = flow.run_local_server(port=0)
-        with open('token.json', 'wb') as token:
-            pickle.dump(creds, token)
-    return build('blogger', 'v3', credentials=creds)
+# Assicuriamoci che la cartella esista all'avvio
+if not os.path.exists(REPORT_DIR):
+    os.makedirs(REPORT_DIR)
 
 def get_real_news():
+    """Recupera le news con gestione robusta degli errori di slicing."""
     try:
         url = "https://min-api.cryptocompare.com/data/v2/news/?lang=EN"
-        r = requests.get(url, timeout=5).json()
+        r = requests.get(url, timeout=10).json()
+        
+        # Verifichiamo che la chiave 'Data' esista e sia una lista
+        news_data = r.get('Data', [])
+        if not isinstance(news_data, list):
+            raise ValueError("Formato dati news non valido")
+
         news_list = []
-        for item in r['Data'][:6]:
-            t = datetime.fromtimestamp(item['published_on']).strftime('%H:%M')
+        # Prendiamo le prime 6 news in modo sicuro
+        for item in news_data[:6]:
+            t = datetime.fromtimestamp(item.get('published_on', time.time())).strftime('%H:%M')
             news_list.append({
                 "time": t, 
-                "text": item['title'],
-                "link": item['url'] 
+                "text": item.get('title', 'Analisi in corso...'),
+                "link": item.get('url', '#') 
             })
         return news_list
     except Exception as e:
-        print(f"⚠️ Errore recupero news: {e}")
+        print(f"⚠️ Nota: Recupero news in standby ({e})")
         return [{"time": "SYS", "text": "Sincronizzazione flussi globali in corso...", "link": "#"}]
 
 def update_index_github():
+    """Rigenera l'archivio HTML con indici corretti per la data."""
     try:
-        cartella = "Report_Finanziari"
-        if not os.path.exists(cartella): os.makedirs(cartella)
+        if not os.path.exists(REPORT_DIR): os.makedirs(REPORT_DIR)
         
-        # Ordinamento cronologico inverso basato sul nome file (YYYY_MM_DD_HH_MM)
-        reports = sorted([f for f in os.listdir(cartella) if f.endswith('.html')], reverse=True)
+        reports = sorted([f for f in os.listdir(REPORT_DIR) if f.endswith('.html')], reverse=True)
         links_html = ""
         
         for r in reports[:30]:
             try:
+                # Esempio file: Report_Mondiale_13_03_2026_12_41.html
                 parti = r.replace('.html', '').split('_')
                 
-                # Se il file segue il formato Report_Mondiale_GG_MM_AAAA_HH_MM
-                if len(parti) >= 6:
-                    giorno = parti[-4]
-                    mese = parti[-3]
-                    anno = parti[-2]
-                    ora = parti[-1].replace('-', ':')
+                if len(parti) >= 7:
+                    # Indici corretti per il formato Mondiale_GG_MM_AAAA_HH_MM
+                    giorno = parti[-5]
+                    mese = parti[-4]
+                    anno = parti[-3]
+                    ora = f"{parti[-2]}:{parti[-1]}"
                     
                     data_display = f"{giorno}.{mese}.{anno}"
                     ora_display = ora
-                    titolo_label = "ANALISI MERCATO GLOBALE"
                 else:
-                    data_display = "STORICO"
+                    data_display = "REPORT"
                     ora_display = "--:--"
-                    titolo_label = r.replace(".html", "").replace("_", " ").upper()
 
                 links_html += f"""
-                <a href="{cartella}/{r}" style="display: flex; align-items: center; background: #0d1117; border: 1px solid rgba(0, 229, 255, 0.1); padding: 18px 25px; border-radius: 12px; text-decoration: none; color: #fff; margin-bottom: 12px; border-left: 5px solid #00e5ff; transition: 0.3s;">
+                <a href="Report_Finanziari/{r}" style="display: flex; align-items: center; background: #0d1117; border: 1px solid rgba(0, 229, 255, 0.1); padding: 18px 25px; border-radius: 12px; text-decoration: none; color: #fff; margin-bottom: 12px; border-left: 5px solid #00e5ff; transition: 0.3s;">
                     <div style="display: flex; gap: 25px; align-items: center; flex-grow: 1;">
                         <div style="display: flex; flex-direction: column; min-width: 90px; border-right: 1px solid rgba(255,255,255,0.1); padding-right: 20px; text-align: center;">
                             <span style="color: #00e5ff; font-family: 'JetBrains Mono'; font-size: 0.85rem; font-weight: 700;">{data_display}</span>
                             <span style="color: rgba(255,255,255,0.4); font-family: 'JetBrains Mono'; font-size: 0.7rem;">{ora_display}</span>
                         </div>
                         <div>
-                            <div style="font-size: 1.05rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;">{titolo_label}</div>
+                            <div style="font-size: 1.05rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;">ANALISI MERCATO GLOBALE</div>
                             <div style="font-family: 'JetBrains Mono'; font-size: 0.6rem; color: #00ff88; margin-top: 4px; letter-spacing: 2px;">STATUS: DECRIPTATO // INTELLIGENCE_CORE</div>
                         </div>
                     </div>
                     <div style="background: rgba(0, 255, 136, 0.1); color: #00ff88; padding: 6px 12px; border-radius: 4px; font-size: 0.65rem; font-weight: 900; border: 1px solid rgba(0, 255, 136, 0.2); font-family: 'JetBrains Mono';">SECURE</div>
                 </a>"""
-            except Exception:
-                continue
+            except: continue
 
-        archivio_content = f"""
-        <!DOCTYPE html>
-        <html lang="it">
-        <head>
-            <meta charset="UTF-8">
-            <title>KEYGAP | Intelligence Archive</title>
-            <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
-            <style>
-                body {{ background: #05070a; color: #fff; font-family: 'Outfit', sans-serif; padding: 40px 20px; margin: 0; }}
-                .container {{ max-width: 850px; margin: 0 auto; }}
-                h1 {{ font-family: 'JetBrains Mono'; font-size: 1.5rem; margin-bottom: 30px; border-bottom: 2px solid #00e5ff; padding-bottom: 20px; text-transform: uppercase; letter-spacing: 3px; display: flex; justify-content: space-between; align-items: center; }}
-                .btn-back {{ color: #00e5ff; text-decoration: none; font-size: 0.8rem; border: 1px solid #00e5ff; padding: 8px 16px; border-radius: 6px; transition: 0.3s; }}
-                .btn-back:hover {{ background: #00e5ff; color: #000; box-shadow: 0 0 15px rgba(0,229,255,0.3); }}
-                a:hover {{ transform: scale(1.01); background: #161b22 !important; border-color: #00e5ff !important; }}
-            </style>
-        </head>
-        <body>
-            <div class="container">
-                <h1>ARCHIVIO REPORT <a href="index.html" class="btn-back">← TERMINALE</a></h1>
-                <div class="grid">{{links_html}}</div>
-            </div>
-        </body>
-        </html>
-        """.replace("{links_html}", links_html)
-        
-        with open("archivio.html", "w", encoding='utf-8') as f:
-            f.write(archivio_content)
+        # Scrittura archivio
+        with open(os.path.join(BASE_DIR, "archivio.html"), "w", encoding='utf-8') as f:
+            f.write(f"""<!DOCTYPE html><html><head><meta charset="UTF-8"><title>KEYGAP | Archive</title>
+            <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Outfit:wght@700&display=swap" rel="stylesheet">
+            <style>body{{background:#05070a;color:#fff;font-family:'Outfit',sans-serif;padding:40px;}} .container{{max-width:850px;margin:0 auto;}}
+            h1{{font-family:'JetBrains Mono';border-bottom:2px solid #00e5ff;padding-bottom:20px;letter-spacing:3px;display:flex;justify-content:space-between;}}
+            .btn-back{{color:#00e5ff;text-decoration:none;font-size:0.8rem;border:1px solid #00e5ff;padding:8px 16px;border-radius:6px;}}</style>
+            </head><body><div class="container"><h1>ARCHIVIO <a href="index.html" class="btn-back">← TERMINALE</a></h1>{links_html}</div></body></html>""")
     except Exception as e:
-        print(f"⚠️ Errore aggiornamento archivio: {e}")
+        print(f"⚠️ Errore Archivio: {e}")
 
 def run_update():
+    """Esegue il ciclo di intelligence e push su GitHub."""
     try:
+        # Prezzo BTC
         try:
-            url_p = "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=EUR"
-            res = requests.get(url_p, timeout=5).json()
-            prezzo_numero = res.get('EUR', 60000.00)
-        except:
-            prezzo_numero = 60000.00
+            res = requests.get("https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=EUR", timeout=5).json()
+            p_num = res.get('EUR', 60000.0)
+        except: p_num = 60000.0
         
-        prezzo_btc = f"€ {prezzo_numero:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
-
+        prezzo_btc = f"€ {p_num:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
         ora_attuale = datetime.now().strftime("%H:%M")
-        data_f = datetime.now().strftime("%d/%m/%Y")
         vere_notizie = get_real_news()
-        volatilita = f"{random.uniform(0.1, 2.5):.2f}%"
-        hash_rate = f"{random.randint(500, 700)} EH/s"
-        report_id = random.randint(1000, 9999)
-
-        # --- GENERAZIONE REPORT HTML UNIFORMATO (INTELLIGENCE PRO) ---
-        html_report = f"""
-        <!DOCTYPE html>
-        <html lang="it">
-        <head>
-            <meta charset="UTF-8">
-            <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@700;900&display=swap" rel="stylesheet">
-            <style>
-                :root {{ --bg: #05070a; --acc: #00e5ff; --panel: #0d1117; --green: #00ff88; }}
-                body {{ background: var(--bg); color: #fff; font-family: 'Outfit', sans-serif; padding: 40px; margin: 0; display: flex; justify-content: center; }}
-                .report-container {{ max-width: 750px; width: 100%; background: var(--panel); padding: 40px; border-radius: 25px; border: 1px solid rgba(0, 229, 255, 0.2); border-top: 6px solid var(--acc); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }}
-                .header-intel {{ border-bottom: 1px solid rgba(0, 229, 255, 0.1); padding-bottom: 20px; margin-bottom: 30px; display: flex; justify-content: space-between; align-items: flex-start; }}
-                .title-main {{ font-family: 'JetBrains Mono'; font-size: 1.4rem; color: var(--acc); letter-spacing: 2px; font-weight: 700; }}
-                .meta-data {{ font-family: 'JetBrains Mono'; font-size: 0.75rem; color: rgba(255,255,255,0.5); text-align: right; line-height: 1.6; }}
-                .status-badge {{ background: rgba(0, 255, 136, 0.1); color: var(--green); padding: 4px 12px; border-radius: 5px; font-size: 0.7rem; font-weight: 900; border: 1px solid var(--green); }}
-                .price-box {{ background: rgba(0,0,0,0.3); padding: 30px; border-radius: 15px; text-align: center; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.05); }}
-                .price-label {{ font-size: 0.8rem; text-transform: uppercase; color: var(--acc); letter-spacing: 3px; margin-bottom: 10px; }}
-                .price-value {{ font-size: 3rem; font-weight: 900; letter-spacing: -1px; }}
-                .stat-grid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }}
-                .stat-card {{ background: rgba(255,255,255,0.02); padding: 15px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.05); }}
-                .stat-label {{ color: var(--acc); font-family: 'JetBrains Mono'; font-size: 0.65rem; text-transform: uppercase; }}
-                .stat-value {{ font-size: 1.2rem; font-weight: 800; margin-top: 5px; }}
-                .feed-title {{ font-family: 'JetBrains Mono'; font-size: 0.9rem; color: var(--acc); margin-bottom: 15px; border-left: 3px solid var(--acc); padding-left: 15px; }}
-                .news-item {{ padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.95rem; display: flex; gap: 15px; }}
-                .news-time {{ color: var(--acc); font-family: 'JetBrains Mono'; font-weight: 700; min-width: 60px; }}
-                .footer {{ text-align: center; margin-top: 40px; font-family: 'JetBrains Mono'; font-size: 0.65rem; color: rgba(255,255,255,0.2); letter-spacing: 4px; }}
-            </style>
-        </head>
-        <body>
-            <div class="report-container">
-                <div class="header-intel">
-                    <div>
-                        <div class="title-main">KEYGAP INTELLIGENCE REPORT</div>
-                        <div style="margin-top: 10px;"><span class="status-badge">STATUS: DECRYPTED</span></div>
-                    </div>
-                    <div class="meta-data">
-                        ID: {report_id} | DATA: {data_f}<br>
-                        TIME: {ora_attuale} UTC | NODES: ACTIVE
-                    </div>
-                </div>
-
-                <div class="price-box">
-                    <div class="price-label">Bitcoin Market Value (EUR)</div>
-                    <div class="price-value">{prezzo_btc}</div>
-                </div>
-
-                <div class="stat-grid">
-                    <div class="stat-card">
-                        <div class="stat-label">Network Volatility</div>
-                        <div class="stat-value">{volatilita}</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-label">Estimated Hashrate</div>
-                        <div class="stat-value">{hash_rate}</div>
-                    </div>
-                </div>
-
-                <div class="feed-title">GLOBAL MARKET FEED // LIVE_DATA</div>
-                <div class="news-list">
-                    {''.join([f'<div class="news-item"><span class="news-time">[{n["time"]}]</span><span>{n["text"]}</span></div>' for n in vere_notizie[:5]])}
-                </div>
-
-                <div class="footer">KEYGAP_ADVANTAGE CORE - SECURE ENCRYPTED DOCUMENT</div>
-            </div>
-        </body>
-        </html>
-        """
-
-        if not os.path.exists("Report_Finanziari"): os.makedirs("Report_Finanziari")
         
-        data_per_file = datetime.now().strftime("%d_%m_%Y_%H_%M")
-        with open(f"Report_Finanziari/Report_Mondiale_{data_per_file}.html", "w", encoding='utf-8') as h_rep:
-            h_rep.write(html_report)
+        # Template HTML (Versione compatta per velocità)
+        html_report = f"""<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@700;900&display=swap" rel="stylesheet">
+        <style>:root{{--bg:#05070a;--acc:#00e5ff;--panel:#0d1117;}} body{{background:var(--bg);color:#fff;font-family:'Outfit',sans-serif;padding:40px;display:flex;justify-content:center;}}
+        .report-container{{max-width:750px;width:100%;background:var(--panel);padding:40px;border-radius:25px;border:1px solid rgba(0,229,255,0.2);border-top:6px solid var(--acc);}}
+        .title-main{{font-family:'JetBrains Mono';font-size:1.4rem;color:var(--acc);}} .price-value{{font-size:3rem;font-weight:900;}}
+        .news-item{{padding:12px;border-bottom:1px solid rgba(255,255,255,0.05);}}</style></head>
+        <body><div class="report-container"><div class="title-main">KEYGAP INTELLIGENCE REPORT</div>
+        <div style="text-align:right; font-family:'JetBrains Mono'; font-size:0.7rem; color:gray;">ID: {random.randint(1000,9999)} | {datetime.now().strftime('%d/%m/%Y')}</div>
+        <div style="background:rgba(0,0,0,0.3);padding:30px;margin:20px 0;border-radius:15px;text-align:center;">
+        <div style="color:var(--acc);font-size:0.8rem;letter-spacing:2px;">BITCOIN MARKET VALUE</div><div class="price-value">{prezzo_btc}</div></div>
+        <div style="color:var(--acc);font-family:'JetBrains Mono';font-size:0.9rem;margin-bottom:10px;">GLOBAL FEED</div>
+        {''.join([f'<div class="news-item"><span style="color:var(--acc);font-family:monospace;">[{n["time"]}]</span> {n["text"]}</div>' for n in vere_notizie[:5]])}
+        <div style="text-align:center;margin-top:30px;font-size:0.6rem;color:rgba(255,255,255,0.2);">KEYGAP_ADVANTAGE CORE - SECURE DOCUMENT</div></div></body></html>"""
+
+        # Salvataggio sicuro
+        if not os.path.exists(REPORT_DIR): os.makedirs(REPORT_DIR)
+        filename = f"Report_Mondiale_{datetime.now().strftime('%d_%m_%Y_%H_%M')}.html"
+        filepath = os.path.join(REPORT_DIR, filename)
+        
+        with open(filepath, "w", encoding='utf-8') as f:
+            f.write(html_report)
 
         update_index_github()
         
-        subprocess.run(["git", "add", "."], check=True)
-        subprocess.run(["git", "commit", "-m", f"📊 Update {ora_attuale}"], check=True)
-        subprocess.run(["git", "push", "origin", "main", "--force"], check=True)
+        # Git Push
+        subprocess.run(["git", "add", "."], check=True, cwd=BASE_DIR)
+        subprocess.run(["git", "commit", "-m", f"📊 Update {ora_attuale}"], check=True, cwd=BASE_DIR)
+        subprocess.run(["git", "push", "origin", "main", "--force"], check=True, cwd=BASE_DIR)
         
-        print(f"✅ [KEYGAP] Report inviato con successo alle {ora_attuale}")
+        print(f"✅ [KEYGAP] Sincronizzazione completata alle {ora_attuale}")
 
     except Exception as e:
-        print(f"❌ Errore critico durante run_update: {e}")
+        print(f"❌ Errore critico: {e}")
 
 if __name__ == "__main__":
-    print("🚀 KEYGAP_ADVANTAGE CORE - Modalità Real-Time Attiva.")
+    print("🚀 KEYGAP_ADVANTAGE CORE - Online.")
     while True:
-        now = datetime.now()
-        print(f"🔄 Avvio ciclo di aggiornamento: {now.strftime('%H:%M:%S')}")
-        try:
-            run_update() 
-            print(f"✅ Operazione completata con successo alle {datetime.now().strftime('%H:%M:%S')}")
-            print("💤 Prossimo aggiornamento tra 30 minuti...")
-        except Exception as e:
-            print(f"⚠️ Errore durante il ciclo: {e}")
-            time.sleep(60)
-            continue
+        run_update()
+        print("💤 Standby 30 minuti...")
         time.sleep(1800)
