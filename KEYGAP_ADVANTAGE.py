@@ -93,43 +93,43 @@ def update_index_github():
         print(f"⚠️ Errore Archivio: {e}")
 
 def send_telegram_alert(prezzo_btc, news_list, id_report):
-    """Invia il report formattato al canale Telegram."""
+    """Invia il report formattato al canale Telegram in formato HTML sicuro."""
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
     
-    # Costruzione del messaggio in stile "Giornale Intelligence"
-    msg = f"""🚨 *[ALERTA DI SISTEMA - REPORT DECRIPTATO]* 🚨
+    # Costruzione del messaggio in stile "Giornale Intelligence" (Formato HTML)
+    msg = f"""🚨 <b>[ALLERTA DI SISTEMA - REPORT DECRIPTATO]</b> 🚨
 
-📊 *ID Sincronizzazione:* #KG-{id_report}
-🕒 *Timestamp:* {datetime.now().strftime('%d/%m/%Y | %H:%M CET')}
+📊 <b>ID Sincronizzazione:</b> #KG-{id_report}
+🕒 <b>Timestamp:</b> {datetime.now().strftime('%d/%m/%Y | %H:%M CET')}
 
-⬛️ *ANALISI ASSET PRINCIPALE*
-🔹 *Asset:* Bitcoin (BTC)
-🔹 *Prezzo Attuale:* {prezzo_btc}
-🔹 *Volatilità Rete:* {random.uniform(0.1, 2.5):.2f}%
-🔹 *Hashrate:* {random.randint(550, 680)} EH/s
+⬛️ <b>ANALISI ASSET PRINCIPALE</b>
+🔹 <b>Asset:</b> Bitcoin (BTC)
+🔹 <b>Prezzo Attuale:</b> {prezzo_btc}
+🔹 <b>Volatilità Rete:</b> {random.uniform(0.1, 2.5):.2f}%
+🔹 <b>Hashrate:</b> {random.randint(550, 680)} EH/s
 
-⬛️ *SITUAZIONE GLOBALE (Live Feed)*
+⬛️ <b>SITUAZIONE GLOBALE (Live Feed)</b>
 """
     # Aggiungi le prime 3 notizie come bullet point
     for n in news_list[:3]:
-        # Pulisci il testo per evitare errori nel Markdown di Telegram
-        testo_pulito = n['text'].replace('*', '').replace('_', '').replace('[', '').replace(']', '')
+        # Pulizia per evitare conflitti HTML
+        testo_pulito = n['text'].replace('<', '').replace('>', '')
         msg += f"⚠️ {testo_pulito}\n"
         
     msg += """
-⬛️ *VALUTAZIONE KEYGAP*
+⬛️ <b>VALUTAZIONE KEYGAP</b>
 I dati on-chain confermano anomalie nei flussi istituzionali. La volatilità attuale suggerisce una compressione critica.
 
-⚡️ *ACCEDI AL TERMINALE COMPLETO E AI DATI LIVE:*
-👉 [Clicca qui per decriptare il report completo](https://giampierodeluca676-lgtm.github.io/)
+⚡️ <b>ACCEDI AL TERMINALE COMPLETO E AI DATI LIVE:</b>
+👉 <a href="https://giampierodeluca676-lgtm.github.io/">Clicca qui per decriptare il report completo</a>
 
-_Keygap_AdVantage Core - Secure Encrypted Document_
+<i>Keygap AdVantage Core - Secure Encrypted Document</i>
 """
 
     payload = {
         "chat_id": TELEGRAM_CHAT_ID,
         "text": msg,
-        "parse_mode": "Markdown",
+        "parse_mode": "HTML",
         "disable_web_page_preview": False
     }
     
