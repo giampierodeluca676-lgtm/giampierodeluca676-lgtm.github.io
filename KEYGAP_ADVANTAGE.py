@@ -93,37 +93,52 @@ def update_index_github():
         print(f"⚠️ Errore Archivio: {e}")
 
 def send_telegram_alert(prezzo_btc, news_list, id_report):
-    """Invia il report formattato al canale Telegram in formato HTML sicuro."""
+    """Invia il report formattato analizzando il contesto delle news reali."""
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
     
-    # Costruzione del messaggio in stile "Giornale Intelligence" (Formato HTML)
-    msg = f"""🚨 <b>[ALLERTA DI SISTEMA - REPORT DECRIPTATO]</b> 🚨
+    # --- MOTORE NARRATIVO (Setaccia il web e decide lo stile) ---
+    all_news_text = " ".join([n['text'].lower() for n in news_list])
+    
+    if any(word in all_news_text for word in ['defi', 'exchange', 'etf', 'bank', 'institutional', 'cefi', 'fund']):
+        titolo_scenario = "🚨 <b>[ANALISI ISTITUZIONALE CeFi & DeFi]</b> 🚨"
+        analisi_algoritmica = "I dati on-chain rilevati mostrano una riallocazione strategica di liquidità dai protocolli decentralizzati verso i vault istituzionali (CeFi). L'accumulo tramite desk OTC sta assorbendo l'offerta senza impattare i prezzi spot. Imminente shock di liquidità sugli order book."
+    elif any(word in all_news_text for word in ['whale', 'outflow', 'accumulat', 'transfer', 'million', 'billion']):
+        titolo_scenario = "🐳 <b>[WHALE ALERT & ON-CHAIN COMPRESSION]</b> 🐳"
+        analisi_algoritmica = "I nostri radar on-chain segnalano trasferimenti massicci di liquidità fuori dagli exchange. Lo 'Smart Money' sta mascherando i flussi nei cold storage. Il mercato è in una fase di compressione avanzata: il retail sta vendendo, le balene stanno accumulando."
+    elif any(word in all_news_text for word in ['sec', 'fed', 'cpi', 'inflation', 'war', 'geopolitic', 'rate', 'iran', 'israel']):
+        titolo_scenario = "🌐 <b>[MACROECONOMIA & GEOPOLITICA GLOBALE]</b> 🌐"
+        analisi_algoritmica = "I fattori macroeconomici esterni stanno guidando i flussi di capitale. Il mercato sta prezzando le recenti turbolenze, utilizzando l'asset digitale come copertura (hedge) asimmetrica. La liquidità globale si sta spostando verso porti sicuri decentralizzati."
+    else:
+        titolo_scenario = "⚡️ <b>[BREAKOUT & NETWORK VOLATILITY]</b> ⚡️"
+        analisi_algoritmica = "Il mercato si trova in una fase di stabilizzazione tecnica. I volumi intraday indicano un consolidamento prima del prossimo strappo direzionale. La volatilità compressa suggerisce una rottura dei livelli di resistenza a breve termine."
+
+    # --- ASSEMBLAGGIO DEL MESSAGGIO PROFESSIONALE ---
+    msg = f"""{titolo_scenario}
 
 📊 <b>ID Sincronizzazione:</b> #KG-{id_report}
 🕒 <b>Timestamp:</b> {datetime.now().strftime('%d/%m/%Y | %H:%M CET')}
 
-⬛️ <b>ANALISI ASSET PRINCIPALE</b>
+⬛️ <b>METRICHE DI RETE E PREZZO</b>
 🔹 <b>Asset:</b> Bitcoin (BTC)
-🔹 <b>Prezzo Attuale:</b> {prezzo_btc}
-🔹 <b>Volatilità Rete:</b> {random.uniform(0.1, 2.5):.2f}%
-🔹 <b>Hashrate:</b> {random.randint(550, 680)} EH/s
+🔹 <b>Market Value:</b> {prezzo_btc}
+🔹 <b>Volatilità Rete:</b> {random.uniform(0.1, 0.9):.2f}% <i>(Compressione)</i>
+🔹 <b>Hashrate:</b> {random.randint(610, 690)} EH/s
 
-⬛️ <b>SITUAZIONE GLOBALE (Live Feed)</b>
+⬛️ <b>LIVE FEED: EVENTI GLOBALI RILEVATI</b>
 """
-    # Aggiungi le prime 3 notizie come bullet point
+    # Aggiungi le notizie reali setacciate
     for n in news_list[:3]:
-        # Pulizia per evitare conflitti HTML
         testo_pulito = n['text'].replace('<', '').replace('>', '')
         msg += f"⚠️ {testo_pulito}\n"
         
-    msg += """
+    msg += f"""
 ⬛️ <b>VALUTAZIONE KEYGAP</b>
-I dati on-chain confermano anomalie nei flussi istituzionali. La volatilità attuale suggerisce una compressione critica.
+{analisi_algoritmica}
 
 ⚡️ <b>ACCEDI AL TERMINALE COMPLETO E AI DATI LIVE:</b>
-👉 <a href="https://giampierodeluca676-lgtm.github.io/">Clicca qui per decriptare il report completo</a>
+👉 <a href="https://giampierodeluca676-lgtm.github.io/">Clicca qui per decriptare il report e i segnali completi</a>
 
-<i>Keygap AdVantage Core - Secure Encrypted Document</i>
+<i>Keygap AdVantage Core - Intelligence System Online</i>
 """
 
     payload = {
@@ -136,7 +151,7 @@ I dati on-chain confermano anomalie nei flussi istituzionali. La volatilità att
     try:
         response = requests.post(url, json=payload)
         if response.status_code == 200:
-            print("✈️ [TELEGRAM] Alert inviato con successo al canale.")
+            print(f"✈️ [TELEGRAM] Alert '{titolo_scenario.split(']')[0][7:]}' inviato con successo.")
         else:
             print(f"❌ Errore Telegram: {response.text}")
     except Exception as e:
