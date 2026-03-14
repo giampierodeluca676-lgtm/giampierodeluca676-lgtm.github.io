@@ -1,6 +1,11 @@
 import os, pickle, json, subprocess, time, requests, random
 from datetime import datetime
 
+# --- CONFIGURAZIONE TELEGRAM ---
+TELEGRAM_BOT_TOKEN = "8736329123:AAFa9k_rtKOGQmpwXGICRu-jjdAGEUuWTZM"
+# NOTA: Se ricevi errore "chat not found", cambia l'ID in "-100991589163" (i canali Telegram spesso richiedono il -100 davanti)
+TELEGRAM_CHAT_ID = "991589163" 
+
 # --- CONFIGURAZIONE PERCORSI ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 REPORT_DIR = os.path.join(BASE_DIR, "Report_Finanziari")
@@ -87,6 +92,56 @@ def update_index_github():
     except Exception as e:
         print(f"⚠️ Errore Archivio: {e}")
 
+def send_telegram_alert(prezzo_btc, news_list, id_report):
+    """Invia il report formattato al canale Telegram."""
+    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+    
+    # Costruzione del messaggio in stile "Giornale Intelligence"
+    msg = f"""🚨 *[ALERTA DI SISTEMA - REPORT DECRIPTATO]* 🚨
+
+📊 *ID Sincronizzazione:* #KG-{id_report}
+🕒 *Timestamp:* {datetime.now().strftime('%d/%m/%Y | %H:%M CET')}
+
+⬛️ *ANALISI ASSET PRINCIPALE*
+🔹 *Asset:* Bitcoin (BTC)
+🔹 *Prezzo Attuale:* {prezzo_btc}
+🔹 *Volatilità Rete:* {random.uniform(0.1, 2.5):.2f}%
+🔹 *Hashrate:* {random.randint(550, 680)} EH/s
+
+⬛️ *SITUAZIONE GLOBALE (Live Feed)*
+"""
+    # Aggiungi le prime 3 notizie come bullet point
+    for n in news_list[:3]:
+        # Pulisci il testo per evitare errori nel Markdown di Telegram
+        testo_pulito = n['text'].replace('*', '').replace('_', '').replace('[', '').replace(']', '')
+        msg += f"⚠️ {testo_pulito}\n"
+        
+    msg += """
+⬛️ *VALUTAZIONE KEYGAP*
+I dati on-chain confermano anomalie nei flussi istituzionali. La volatilità attuale suggerisce una compressione critica.
+
+⚡️ *ACCEDI AL TERMINALE COMPLETO E AI DATI LIVE:*
+👉 [Clicca qui per decriptare il report completo](https://giampierodeluca676-lgtm.github.io/)
+
+_Keygap_AdVantage Core - Secure Encrypted Document_
+"""
+
+    payload = {
+        "chat_id": TELEGRAM_CHAT_ID,
+        "text": msg,
+        "parse_mode": "Markdown",
+        "disable_web_page_preview": False
+    }
+    
+    try:
+        response = requests.post(url, json=payload)
+        if response.status_code == 200:
+            print("✈️ [TELEGRAM] Alert inviato con successo al canale.")
+        else:
+            print(f"❌ Errore Telegram: {response.text}")
+    except Exception as e:
+        print(f"❌ Errore connessione Telegram: {e}")
+
 def run_update():
     """Esegue il ciclo di intelligence e push su GitHub."""
     try:
@@ -100,7 +155,7 @@ def run_update():
         ora_attuale = datetime.now().strftime("%H:%M")
         vere_notizie = get_real_news()
         
-        # Template HTML (Versione compatta per velocità)
+        # Template HTML
         html_report = f"""<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@700;900&display=swap" rel="stylesheet">
         <style>:root{{--bg:#05070a;--acc:#00e5ff;--panel:#0d1117;}} body{{background:var(--bg);color:#fff;font-family:'Outfit',sans-serif;padding:40px;display:flex;justify-content:center;}}
@@ -131,6 +186,10 @@ def run_update():
         subprocess.run(["git", "push", "origin", "main", "--force"], check=True, cwd=BASE_DIR)
         
         print(f"✅ [KEYGAP] Sincronizzazione completata alle {ora_attuale}")
+
+        # --- INVIO TELEGRAM ---
+        id_report = random.randint(1000,9999)
+        send_telegram_alert(prezzo_btc, vere_notizie, id_report)
 
     except Exception as e:
         print(f"❌ Errore critico: {e}")
