@@ -3,7 +3,7 @@ from datetime import datetime
 
 # --- CONFIGURAZIONE TELEGRAM ---
 TELEGRAM_BOT_TOKEN = "8736329123:AAFa9k_rtKOGQmpwXGICRu-jjdAGEUuWTZM"
-TELEGRAM_CHAT_ID = "991589163" 
+TELEGRAM_CHAT_ID = "-100991589163" 
 
 # --- CONFIGURAZIONE PERCORSI ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
