@@ -3,7 +3,6 @@ from datetime import datetime
 
 # --- CONFIGURAZIONE TELEGRAM ---
 TELEGRAM_BOT_TOKEN = "8736329123:AAFa9k_rtKOGQmpwXGICRu-jjdAGEUuWTZM"
-# Se non arriva il messaggio, metti "-100" prima del numero: "-100991589163"
 TELEGRAM_CHAT_ID = "991589163" 
 
 # --- CONFIGURAZIONE PERCORSI ---
@@ -37,7 +36,7 @@ def update_index_github():
         reports = sorted([f for f in os.listdir(REPORT_DIR) if f.endswith('.html')], reverse=True)
         links_html = ""
         
-        # Trova automaticamente il link dell'ultimo report generato per evitare errori 404
+        # Trova automaticamente il link dell'ultimo report generato
         ultimo_report = f"Report_Finanziari/{reports[0]}" if reports else "archivio.html"
 
         for r in reports[:30]:
@@ -71,7 +70,7 @@ def update_index_github():
             <style>body{{background:#05070a;color:#fff;font-family:'Outfit',sans-serif;padding:40px;}} .container{{max-width:850px;margin:0 auto;}} h1{{font-family:'JetBrains Mono';border-bottom:2px solid #00e5ff;padding-bottom:20px;letter-spacing:3px;display:flex;justify-content:space-between;}} .btn-back{{color:#00e5ff;text-decoration:none;font-size:0.8rem;border:1px solid #00e5ff;padding:8px 16px;border-radius:6px;}}</style>
             </head><body><div class="container"><h1>ARCHIVIO DOSSIER <a href="index.html" class="btn-back">← TERMINALE</a></h1>{links_html}</div></body></html>""")
 
-        # 2. Scrive la pagina Index dinamicamente con il nuovo pulsante "ULTIMO DOSSIER LIVE"
+        # 2. Scrive la pagina Index dinamicamente con il nuovo pulsante
         index_html_content = f"""<!DOCTYPE html>
 <html lang="it">
 <head>
@@ -186,6 +185,40 @@ def update_index_github():
 
     except Exception as e:
         print(f"⚠️ Errore aggiornamento indici: {e}")
+
+def send_telegram_alert(prezzo_btc, news_list, id_report, scenario, analisi):
+    """Invia l'alert Telegram in formato HTML sicuro, sincronizzato con il report."""
+    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+    
+    msg = f"""🚨 <b>[{scenario}]</b> 🚨
+
+📊 <b>ID Sincronizzazione:</b> #KG-{id_report}
+🕒 <b>Timestamp:</b> {datetime.now().strftime('%d/%m/%Y | %H:%M CET')}
+
+⬛️ <b>METRICHE DI RETE</b>
+🔹 <b>Asset:</b> Bitcoin (BTC)
+🔹 <b>Market Value:</b> {prezzo_btc}
+
+⬛️ <b>LIVE FEED RILEVATO</b>
+"""
+    for n in news_list[:3]:
+        msg += f"⚠️ {n['text'].replace('<', '').replace('>', '')}\n"
+        
+    msg += f"""
+⬛️ <b>VALUTAZIONE KEYGAP</b>
+{analisi}
+
+⚡️ <b>LEGGI IL DOSSIER COMPLETO SUL TERMINALE:</b>
+👉 <a href="https://giampierodeluca676-lgtm.github.io/">Clicca qui per decriptare i dati on-chain</a>
+"""
+    try:
+        response = requests.post(url, json={"chat_id": TELEGRAM_CHAT_ID, "text": msg, "parse_mode": "HTML", "disable_web_page_preview": False})
+        if response.status_code == 200:
+            print(f"✈️ [TELEGRAM] Alert '{scenario}' inviato con successo.")
+        else:
+            print(f"❌ Errore Telegram: {response.text}")
+    except Exception as e:
+        print(f"❌ Errore connessione Telegram: {e}")
 
 def run_update():
     """Genera il dossier testuale e invia l'aggiornamento."""
