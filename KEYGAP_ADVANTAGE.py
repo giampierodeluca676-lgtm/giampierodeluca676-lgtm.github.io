@@ -83,16 +83,16 @@ def update_index_github():
 
         ultimo_report = f"Report_Finanziari/{all_files[0]}" if all_files else "archivio.html"
         
-        # FIX ARCHIVIO: Aggiunto 'word-break: break-word;' per evitare l'uscita dai rettangoli
-        links_html = "".join([f'<a href="Report_Finanziari/{r}" style="display:block; color:#00e5ff; text-decoration:none; margin-bottom:15px; border:1px solid #1a2332; padding:20px; border-radius:12px; font-size:1.1rem; background:#0d1117; word-break: break-word; box-sizing: border-box; line-height: 1.4;">> KEYGAP DOSSIER {r.replace("Report_Mondiale_","").replace(".html","")}</a>' for r in all_files])
+        # FIX ARCHIVIO: word-break: break-all; forza il testo ad andare a capo senza uscire dal box
+        links_html = "".join([f'<a href="Report_Finanziari/{r}" style="display:block; color:#00e5ff; text-decoration:none; margin-bottom:15px; border:1px solid #1a2332; padding:20px; border-radius:12px; font-size:1.1rem; background:#0d1117; word-break:break-all; overflow-wrap:break-word; box-sizing:border-box;">> DOSSIER {r.replace("Report_Mondiale_","").replace(".html","")}</a>' for r in all_files])
         
         with open(os.path.join(BASE_DIR, "archivio.html"), "w", encoding='utf-8') as f:
-            f.write(f"<html><meta name='viewport' content='width=device-width, initial-scale=1.0'><body style='background:#05070a; color:#fff; font-family:monospace; padding:5%; box-sizing: border-box;'><h1>KEYGAP ARCHIVIO</h1><hr style='border:1px solid #1a2332; margin-bottom: 20px;'>{links_html}</body></html>")
+            f.write(f"<html><head><meta name='viewport' content='width=device-width, initial-scale=1.0'></head><body style='background:#05070a; color:#fff; font-family:monospace; padding:5%; box-sizing:border-box; margin:0;'><h1>ARCHIVIO INTELLIGENCE</h1><hr style='border:1px solid #1a2332;'>{links_html}</body></html>")
 
-        # FIX INDEX: Aggiunto Footer con data e ora fluida (Javascript)
+        # FIX INDEX: Aggiunto FOOTER con Orologio Live e Layout Sistemato
         index_content = f"""<!DOCTYPE html><html><head><meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Keygap Terminal</title>
+        <title>KEYGAP | Terminal</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
         <style>
             body {{ background: #06080a; color: #f0f2f5; font-family: 'Inter', sans-serif; margin: 0; display: flex; flex-direction: column; height: 100vh; overflow: hidden; }}
@@ -104,16 +104,16 @@ def update_index_github():
             main {{ display: grid; grid-template-columns: 350px 1fr 400px; gap: 8px; flex-grow: 1; padding: 8px; background: #000; overflow: hidden; }}
             .panel {{ background: #0d1117; border: 1px solid #21262d; display: flex; flex-direction: column; overflow: hidden; }}
             .panel-title {{ font-size: 0.85rem; text-transform: uppercase; color: #848e9c; padding: 10px 15px; background: rgba(255,255,255,0.02); font-family: 'JetBrains Mono'; border-bottom: 1px solid #21262d; }}
-            iframe {{ flex-grow: 1; border: none; width: 100%; height: 100%; }}
+            iframe {{ flex-grow: 1; border: none; width: 100%; height: 100%; display: block; }}
             .grid-sidebar {{ display: flex; flex-direction: column; gap: 8px; }}
-            footer {{ background: #0d1117; border-top: 2px solid #21262d; text-align: center; padding: 10px; font-family: 'JetBrains Mono', monospace; color: #00ff88; font-size: 0.85rem; }}
+            footer {{ background: #0d1117; border-top: 2px solid #21262d; text-align: center; padding: 12px; font-family: 'JetBrains Mono', monospace; color: #00ff88; font-size: 0.9rem; font-weight: bold; width: 100%; box-sizing: border-box; }}
             @keyframes pulse {{ 0% {{ box-shadow: 0 0 0 0 rgba(255,0,85,0.7); }} 70% {{ box-shadow: 0 0 0 15px rgba(255,0,85,0); }} 100% {{ box-shadow: 0 0 0 0 rgba(255,0,85,0); }} }}
             
             @media (max-width: 1024px) {{
-                body {{ height: auto; overflow: visible; }}
+                body {{ height: auto; overflow: visible; display: flex; flex-direction: column; }}
                 header {{ flex-direction: column; justify-content: center; text-align: center; padding: 15px; }}
                 .btn-container {{ width: 100%; flex-direction: column; }}
-                main {{ display: flex; flex-direction: column; overflow: visible; padding: 10px; gap: 15px; }}
+                main {{ display: flex; flex-direction: column; overflow: visible; padding: 10px; gap: 15px; flex-grow: 1; }}
                 .panel {{ min-height: 450px; }}
                 .grid-sidebar {{ display: contents; }}
             }}
@@ -206,7 +206,7 @@ def run_update():
         
         try:
             service = get_service()
-            body = {'title': f'Keygap Intelligence #{report_id} - BTC {prezzo_btc}', 'content': html_content}
+            body = {'title': f'Intelligence Report #{report_id} - BTC {prezzo_btc}', 'content': html_content}
             service.posts().insert(blogId=BLOG_ID, body=body).execute()
         except: pass
 
