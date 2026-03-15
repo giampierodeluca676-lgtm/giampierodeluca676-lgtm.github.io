@@ -1,27 +1,42 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><title>KEYGAP | Terminal</title>
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KEYGAP | Terminal</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
         <style>
             body { background: #06080a; color: #f0f2f5; font-family: 'Inter', sans-serif; margin: 0; display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
-            header { background: #0d1117; border-bottom: 2px solid #21262d; display: grid; grid-template-columns: 300px 1fr 400px; align-items: center; padding: 15px 30px; }
+            header { background: #0d1117; border-bottom: 2px solid #21262d; display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; flex-wrap: wrap; gap: 15px; }
             .logo { font-weight: 900; font-size: 1.8rem; letter-spacing: -1px; }
+            .btn-container { display: flex; gap: 15px; }
             .btn-live { background: #ff0055; color: #fff; text-decoration: none; padding: 12px 25px; border-radius: 8px; font-weight: 900; font-size: 1rem; animation: pulse 1.5s infinite; text-align: center; border: 2px solid #ff0055; text-transform: uppercase; }
             .btn-archive { background: #00ff88; color: #000; text-decoration: none; padding: 12px 25px; border-radius: 8px; font-weight: 900; font-size: 1rem; text-align: center; text-transform: uppercase; }
-            main { display: grid; grid-template-columns: 350px 1fr 400px; gap: 8px; flex-grow: 1; padding: 8px; background: #000; }
-            .panel { background: #0d1117; border: 1px solid #21262d; display: flex; flex-direction: column; }
+            main { display: grid; grid-template-columns: 350px 1fr 400px; gap: 8px; flex-grow: 1; padding: 8px; background: #000; overflow: hidden; }
+            .panel { background: #0d1117; border: 1px solid #21262d; display: flex; flex-direction: column; overflow: hidden; }
             .panel-title { font-size: 0.85rem; text-transform: uppercase; color: #848e9c; padding: 10px 15px; background: rgba(255,255,255,0.02); font-family: 'JetBrains Mono'; border-bottom: 1px solid #21262d; }
+            iframe { flex-grow: 1; border: none; width: 100%; height: 100%; }
+            .grid-sidebar { display: flex; flex-direction: column; gap: 8px; }
             @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255,0,85,0.7); } 70% { box-shadow: 0 0 0 15px rgba(255,0,85,0); } 100% { box-shadow: 0 0 0 0 rgba(255,0,85,0); } }
+            
+            /* OTTIMIZZAZIONE SMARTPHONE */
+            @media (max-width: 1024px) {
+                body { height: auto; overflow: visible; }
+                header { flex-direction: column; justify-content: center; text-align: center; padding: 15px; }
+                .btn-container { width: 100%; flex-direction: column; }
+                main { display: flex; flex-direction: column; overflow: visible; padding: 10px; gap: 15px; }
+                .panel { min-height: 450px; } /* Altezza fissa per i grafici sul telefono */
+                .grid-sidebar { display: contents; }
+            }
         </style>
         </head><body><header>
             <div class="logo">KEY<span style="color:#00ff88;">GAP</span></div>
-            <div style="text-align:center;"><script src="https://pl28819682.effectivegatecpm.com/07/47/37/074737f2d1be0f3c0e9de0585a695fd7.js"></script></div>
-            <div style="display: flex; gap: 15px; justify-content: flex-end;">
-                <a href="Report_Finanziari/Report_Mondiale_15_03_2026_07_53.html" class="btn-live">🔴 DOSSIER LIVE</a>
+            <div style="text-align:center; max-width:100%; overflow:hidden;"><script src="https://pl28819682.effectivegatecpm.com/07/47/37/074737f2d1be0f3c0e9de0585a695fd7.js"></script></div>
+            <div class="btn-container">
+                <a href="Report_Finanziari/Report_Mondiale_15_03_2026_08_09.html" class="btn-live">🔴 DOSSIER LIVE</a>
                 <a href="archivio.html" class="btn-archive">📂 ARCHIVIO</a>
             </div>
         </header><main>
-            <div class="panel"><div class="panel-title">MARKET_WATCH</div><iframe src="https://s.tradingview.com/embed-widget/market-overview/?colorTheme=dark" width="100%" height="100%" frameborder="0"></iframe></div>
-            <div class="panel"><div class="panel-title">TERMINAL_CHART</div><iframe src="https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCEUR&interval=1&theme=dark" width="100%" height="100%" frameborder="0"></iframe></div>
-            <div style="display:grid; grid-template-rows:1fr 1fr; gap:8px;">
-                <div class="panel"><div class="panel-title">NEWS_FEED</div><iframe src="https://cryptopanic.com/widgets/news/?bg_color=0d1117&link_color=00ff88&text_color=f0f2f5" width="100%" height="100%" frameborder="0"></iframe></div>
-                <div class="panel"><div class="panel-title">MACRO_CALENDAR</div><iframe src="https://sslecal2.investing.com?importance=2,3&calType=day&timeZone=58&lang=5" width="100%" height="100%" frameborder="0" style="filter: invert(0.9) hue-rotate(180deg);"></iframe></div>
+            <div class="panel"><div class="panel-title">MARKET_WATCH</div><iframe src="https://s.tradingview.com/embed-widget/market-overview/?colorTheme=dark" frameborder="0"></iframe></div>
+            <div class="panel"><div class="panel-title">TERMINAL_CHART</div><iframe src="https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCEUR&interval=1&theme=dark" frameborder="0"></iframe></div>
+            <div class="grid-sidebar">
+                <div class="panel"><div class="panel-title">NEWS_FEED</div><iframe src="https://cryptopanic.com/widgets/news/?bg_color=0d1117&link_color=00ff88&text_color=f0f2f5" frameborder="0"></iframe></div>
+                <div class="panel"><div class="panel-title">MACRO_CALENDAR</div><iframe src="https://sslecal2.investing.com?importance=2,3&calType=day&timeZone=58&lang=5" frameborder="0" style="filter: invert(0.9) hue-rotate(180deg);"></iframe></div>
             </div></main></body></html>
