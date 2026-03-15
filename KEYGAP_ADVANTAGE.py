@@ -83,15 +83,16 @@ def update_index_github():
 
         ultimo_report = f"Report_Finanziari/{all_files[0]}" if all_files else "archivio.html"
         
-        links_html = "".join([f'<a href="Report_Finanziari/{r}" style="display:block; color:#00e5ff; text-decoration:none; margin-bottom:15px; border:1px solid #1a2332; padding:20px; border-radius:12px; font-size:1.1rem;">> DOSSIER {r.replace(".html","")}</a>' for r in all_files])
+        # FIX ARCHIVIO: Aggiunto 'word-break: break-word;' per evitare l'uscita dai rettangoli
+        links_html = "".join([f'<a href="Report_Finanziari/{r}" style="display:block; color:#00e5ff; text-decoration:none; margin-bottom:15px; border:1px solid #1a2332; padding:20px; border-radius:12px; font-size:1.1rem; background:#0d1117; word-break: break-word; box-sizing: border-box; line-height: 1.4;">> KEYGAP DOSSIER {r.replace("Report_Mondiale_","").replace(".html","")}</a>' for r in all_files])
         
         with open(os.path.join(BASE_DIR, "archivio.html"), "w", encoding='utf-8') as f:
-            f.write(f"<html><meta name='viewport' content='width=device-width, initial-scale=1.0'><body style='background:#05070a; color:#fff; font-family:monospace; padding:5%;'><h1>ARCHIVIO INTELLIGENCE</h1><hr>{links_html}</body></html>")
+            f.write(f"<html><meta name='viewport' content='width=device-width, initial-scale=1.0'><body style='background:#05070a; color:#fff; font-family:monospace; padding:5%; box-sizing: border-box;'><h1>KEYGAP ARCHIVIO</h1><hr style='border:1px solid #1a2332; margin-bottom: 20px;'>{links_html}</body></html>")
 
-        # Homepage Responsive: Su PC a 3 colonne fisse, su Mobile impilata a scorrimento
+        # FIX INDEX: Aggiunto Footer con data e ora fluida (Javascript)
         index_content = f"""<!DOCTYPE html><html><head><meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>KEYGAP | Terminal</title>
+        <title>Keygap Terminal</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
         <style>
             body {{ background: #06080a; color: #f0f2f5; font-family: 'Inter', sans-serif; margin: 0; display: flex; flex-direction: column; height: 100vh; overflow: hidden; }}
@@ -105,15 +106,15 @@ def update_index_github():
             .panel-title {{ font-size: 0.85rem; text-transform: uppercase; color: #848e9c; padding: 10px 15px; background: rgba(255,255,255,0.02); font-family: 'JetBrains Mono'; border-bottom: 1px solid #21262d; }}
             iframe {{ flex-grow: 1; border: none; width: 100%; height: 100%; }}
             .grid-sidebar {{ display: flex; flex-direction: column; gap: 8px; }}
+            footer {{ background: #0d1117; border-top: 2px solid #21262d; text-align: center; padding: 10px; font-family: 'JetBrains Mono', monospace; color: #00ff88; font-size: 0.85rem; }}
             @keyframes pulse {{ 0% {{ box-shadow: 0 0 0 0 rgba(255,0,85,0.7); }} 70% {{ box-shadow: 0 0 0 15px rgba(255,0,85,0); }} 100% {{ box-shadow: 0 0 0 0 rgba(255,0,85,0); }} }}
             
-            /* OTTIMIZZAZIONE SMARTPHONE */
             @media (max-width: 1024px) {{
                 body {{ height: auto; overflow: visible; }}
                 header {{ flex-direction: column; justify-content: center; text-align: center; padding: 15px; }}
                 .btn-container {{ width: 100%; flex-direction: column; }}
                 main {{ display: flex; flex-direction: column; overflow: visible; padding: 10px; gap: 15px; }}
-                .panel {{ min-height: 450px; }} /* Altezza fissa per i grafici sul telefono */
+                .panel {{ min-height: 450px; }}
                 .grid-sidebar {{ display: contents; }}
             }}
         </style>
@@ -130,7 +131,17 @@ def update_index_github():
             <div class="grid-sidebar">
                 <div class="panel"><div class="panel-title">NEWS_FEED</div><iframe src="https://cryptopanic.com/widgets/news/?bg_color=0d1117&link_color=00ff88&text_color=f0f2f5" frameborder="0"></iframe></div>
                 <div class="panel"><div class="panel-title">MACRO_CALENDAR</div><iframe src="https://sslecal2.investing.com?importance=2,3&calType=day&timeZone=58&lang=5" frameborder="0" style="filter: invert(0.9) hue-rotate(180deg);"></iframe></div>
-            </div></main></body></html>"""
+            </div></main>
+            <footer>
+                KEYGAP TERMINAL ACTIVE // <span id="clock"></span>
+            </footer>
+            <script>
+                setInterval(function() {{
+                    var now = new Date();
+                    document.getElementById('clock').innerHTML = now.toLocaleDateString('it-IT') + ' - ' + now.toLocaleTimeString('it-IT');
+                }}, 1000);
+            </script>
+        </body></html>"""
         
         with open(os.path.join(BASE_DIR, "index.html"), "w", encoding='utf-8') as f:
             f.write(index_content)
@@ -155,7 +166,6 @@ def run_update():
         analisi_pro = generate_pro_analysis()
         scenario = random.choice(["INSTITUTIONAL ROTATION", "LIQUIDITY BRIDGE", "VOLATILITY SHOCK", "NETWORK INTELLIGENCE"])
 
-        # Generazione HTML Dossier - OTTIMIZZATO PER PC E SMARTPHONE
         html_content = f"""
         <!DOCTYPE html><html><head><meta charset='UTF-8'>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -196,7 +206,7 @@ def run_update():
         
         try:
             service = get_service()
-            body = {'title': f'Intelligence Report #{report_id} - BTC {prezzo_btc}', 'content': html_content}
+            body = {'title': f'Keygap Intelligence #{report_id} - BTC {prezzo_btc}', 'content': html_content}
             service.posts().insert(blogId=BLOG_ID, body=body).execute()
         except: pass
 
