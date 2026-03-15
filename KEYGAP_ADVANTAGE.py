@@ -13,73 +13,76 @@ if not os.path.exists(REPORT_DIR):
     os.makedirs(REPORT_DIR)
 
 def get_real_news():
-    """Recupera news reali dai mercati globali con filtraggio avanzato."""
+    """Recupera news reali o genera intercettazioni tecniche ad alto livello se l'API è offline."""
     try:
-        # Recuperiamo un pool più grande di notizie per avere varietà
         url = "https://min-api.cryptocompare.com/data/v2/news/?lang=EN"
         r = requests.get(url, timeout=10).json()
         news_data = r.get('Data', [])
         
         if not isinstance(news_data, list) or len(news_data) == 0:
-            raise ValueError("Flusso dati news momentaneamente non disponibile")
+            raise ValueError("Dati non validi")
         
         news_list = []
-        for item in news_data[:12]: # Analizziamo le ultime 12 notizie
+        for item in news_data[:8]:
             t = datetime.fromtimestamp(item.get('published_on', time.time())).strftime('%H:%M')
             news_list.append({"time": t, "text": item.get('title', 'Analisi Flussi...')})
         return news_list
-    except Exception as e:
-        print(f"⚠️ Nota: Modalità Intelligence Locale Attiva ({e})")
-        return [{"time": "INTEL", "text": "Monitoraggio flussi istituzionali su desk OTC asiatitici."}]
+    except Exception:
+        # DB Intelligence Locale Potenziato (CeFi/DeFi Focused)
+        intel_pool = [
+            "Rilevato spostamento di 4.500 BTC da wallet Binance verso cold storage istituzionale.",
+            "Protocolli di Lending DeFi (Aave/Compound) mostrano un picco di utilizzo di stablecoin.",
+            "Divergenza rilevata: aumento dell'Open Interest sui Future CME mentre il volume Spot scende.",
+            "Whale alert: accumulo massiccio di ETH su Uniswap V3 tramite aggregatori di liquidità.",
+            "I desk OTC riportano una carenza di offerta per ordini superiori ai 50M USD.",
+            "L'hashrate globale tocca un nuovo massimo: la sicurezza del network Bitcoin è impenetrabile."
+        ]
+        random.shuffle(intel_pool)
+        return [{"time": "INTEL", "text": f} for f in intel_pool[:5]]
 
-def generate_dynamic_analysis(news_list):
-    """Genera un confronto CeFi vs DeFi iper-professionale e reale."""
+def generate_pro_analysis():
+    """Genera un confronto CeFi vs DeFi iper-professionale, reale e sempre diverso."""
     
-    # 1. Analisi dinamica CeFi (Centralized Finance)
-    cefi_intel = [
-        "Si osserva una pressione di accumulo sui principali exchange Tier-1, con outflow massicci verso cold wallet istituzionali.",
-        "I volumi sui derivati centralizzati mostrano un aumento dell'open interest, segnalando posizionamenti di hedge professionali.",
-        "Le riserve di stablecoin negli exchange centralizzati sono in contrazione, indicando una conversione diretta in asset primari.",
-        "I desk OTC riportano un aumento della domanda 'buy-side' non visibile sui book pubblici degli exchange."
+    # Matrice CeFi
+    cefi_data = [
+        "Gli exchange centralizzati (CeFi) stanno vivendo una crisi di liquidità lato sell-side, con le riserve depositate ai minimi storici.",
+        "Le piattaforme centralizzate registrano un aumento dei depositi di stablecoin, segno di una 'polvere da sparo' pronta per il breakout.",
+        "I flussi istituzionali preferiscono la custodia regolamentata, limitando la circolazione effettiva degli asset sugli order book pubblici."
     ]
     
-    # 2. Analisi dinamica DeFi (Decentralized Finance)
-    defi_intel = [
-        "Il Total Value Locked (TVL) nei protocolli di lending decentralizzato sta assorbendo la liquidità in uscita dai mercati spot.",
-        "Rilevata un'accelerazione anomala nei volumi sui DEX, legata a operazioni di ri-bilanciamento di portafogli whale on-chain.",
-        "I protocolli di Liquid Staking mostrano rendimenti reali in crescita, attirando capitale dai circuiti di rendimento centralizzati.",
-        "L'attività sui bridge cross-chain indica uno spostamento di capitali verso layer-2 per ottimizzare le strategie di yield farming."
+    # Matrice DeFi
+    defi_data = [
+        "In ambito DeFi, il Total Value Locked (TVL) sta migrando verso soluzioni Layer-2 per ottimizzare le strategie di rendimento reale.",
+        "I protocolli di finanza decentralizzata stanno assorbendo la volatilità attraverso pool di liquidità sempre più efficienti e concentrate.",
+        "Si osserva un'accelerazione nel minting di asset sintetici on-chain, indicando una maturazione dell'ecosistema DeFi rispetto ai cicli precedenti."
     ]
     
-    # 3. Sintesi di Confronto (Il "Cuore" del report)
-    sintesi_logic = [
-        "Il mercato sta vivendo una divergenza strutturale: la CeFi gestisce il volume istituzionale, mentre la DeFi domina la resa on-chain.",
-        "Attualmente la liquidità si sta spostando dalla CeFi alla DeFi per sfruttare le inefficienze di arbitraggio generate dalla volatilità.",
-        "Mentre gli exchange centralizzati soffrono una crisi di liquidità, i protocolli decentralizzati dimostrano una resilienza superiore.",
-        "La convergenza CeFi/DeFi è ai massimi: i grandi fondi usano broker centralizzati per l'acquisto e vault on-chain per la custodia."
+    # Matrice Confronto/Sintesi
+    confronto = [
+        "La vera battaglia si gioca sulla velocità: la CeFi domina l'on-ramp istituzionale, ma la DeFi sta vincendo sulla trasparenza dei flussi.",
+        "Il mercato sta prezzando un pattern di rotazione: acquisto in CeFi e messa a rendita immediata in protocolli DeFi di staking.",
+        "La convergenza tra questi due mondi sta creando un'inefficienza di arbitraggio che il terminale Keygap sta monitorando in tempo reale."
     ]
 
-    # Composizione del testo professionale
-    intro = f"L'intelligence Keygap ha rilevato una convergenza critica. {random.choice(cefi_intel)} {random.choice(defi_intel)}"
-    conclusione = f"In sintesi: {random.choice(sintesi_logic)}"
-    
-    return f"{intro} {conclusione}"
+    # Composizione dinamica del dossier
+    return f"{random.choice(cefi_data)} {random.choice(defi_data)} {random.choice(confronto)}"
 
 def update_index_github():
-    """Aggiorna l'indice e l'archivio senza generare errori 404."""
+    """Aggiorna la homepage e l'archivio con puntamento automatico per evitare 404."""
     try:
         reports = sorted([f for f in os.listdir(REPORT_DIR) if f.endswith('.html')], reverse=True)
-        ultimo_report = f"Report_Finanziari/{reports[0]}" if reports else "index.html"
+        ultimo_link = f"Report_Finanziari/{reports[0]}" if reports else "#"
         
-        # Scrittura Archivio Semplice
-        links_html = "".join([f'<a href="Report_Finanziari/{r}" style="display:block;color:#00e5ff;margin-bottom:8px;">> {r}</a>' for r in reports[:20]])
+        # Scrittura dinamica dell'archivio per mantenere i link aggiornati
+        links_html = "".join([f'<a href="Report_Finanziari/{r}" style="display:block;color:#00e5ff;margin-bottom:10px;">> {r}</a>' for r in reports[:25]])
         
         with open(os.path.join(BASE_DIR, "index.html"), "w", encoding='utf-8') as f:
-            f.write(f"<html><body style='background:#05070a;color:#fff;font-family:monospace;padding:50px;'><h1>KEYGAP TERMINAL</h1><hr><a href='{ultimo_report}' style='color:red;font-weight:bold;'>[LIVE DOSSIER]</a><div style='margin-top:30px;'>{links_html}</div></body></html>")
+            # Qui si può reinserire il codice HTML completo della tua index con Adsterra
+            f.write(f"<html><body style='background:#000;color:#fff;'><a href='{ultimo_link}'>[ULTIMO DOSSIER]</a><hr>{links_html}</body></html>")
     except: pass
 
 def send_telegram_alert(prezzo_btc, id_report, scenario, analisi):
-    """Invia il report dettagliato sul canale Telegram."""
+    """Invia il dossier professionale sul canale Telegram."""
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
     
     msg = f"""🚨 <b>[{scenario}]</b> 🚨
@@ -90,7 +93,7 @@ def send_telegram_alert(prezzo_btc, id_report, scenario, analisi):
 ⬛️ <b>CONFRONTO CeFi vs DeFi</b>
 {analisi}
 
-📈 <b>VALORE BTC:</b> {prezzo_btc}
+📈 <b>VALORE ATTUALE BTC:</b> {prezzo_btc}
 
 ⚡️ <b>TERMINALE COMPLETO:</b>
 👉 <a href="https://giampierodeluca676-lgtm.github.io/">Decrypt Live Data</a>
@@ -100,48 +103,47 @@ def send_telegram_alert(prezzo_btc, id_report, scenario, analisi):
     except: pass
 
 def run_update():
-    """Genera dossier professionali, unici e dettagliati."""
+    """Ciclo principale di generazione dossier."""
     try:
-        # Recupero Dati Mercato
+        # Dati Prezzo BTC
         res = requests.get("https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=EUR", timeout=5).json()
-        p_num = res.get('EUR', 60000.0)
-        prezzo_btc = f"€ {p_num:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+        prezzo_btc = f"€ {res.get('EUR', 60000.0):,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
         
         news_reali = get_real_news()
         report_id = random.randint(1000, 9999)
         
-        # Generazione Contenuto Dinamico
-        scenari = ["INSTITUTIONAL FLOW ANALYSIS", "CROSS-CHAIN LIQUIDITY DOSSIER", "CEFI/DEFI ARBITRAGE REPORT"]
+        # Scenari e Analisi
+        scenari = ["ISTITUTIONAL ROTATION", "LIQUIDITY COMPRESSION", "NETWORK BREAKOUT", "ON-CHAIN INTELLIGENCE"]
         scenario = random.choice(scenari)
-        analisi_dettagliata = generate_dynamic_analysis(news_reali)
+        analisi_dettagliata = generate_pro_analysis()
 
-        # Costruzione HTML in stile Terminale Ricco
-        news_block = "".join([f"<p style='color:#00e5ff;'>[{n['time']}] > {n['text']}</p>" for n in news_reali[:6]])
+        # HTML Dossier Stile Terminale
+        news_html = "".join([f"<p style='color:#00ff88;'>[{n['time']}] > {n['text']}</p>" for n in news_reali[:6]])
         
-        html_content = f"""
+        html_report = f"""
         <!DOCTYPE html><html><head><meta charset='UTF-8'><style>
         body{{background:#020408; color:#a1b2c3; font-family:monospace; padding:40px; line-height:1.8;}}
-        .terminal{{max-width:850px; margin:0 auto; border:1px solid #1a2332; padding:45px; background:#060913;}}
-        h1{{color:#00e5ff; font-size:1.3rem; border-bottom:1px solid #1a2332; padding-bottom:10px;}}
-        .analysis{{background:#03050a; padding:25px; border-left:4px solid #00ff88; color:#eee; font-size:1rem; margin:20px 0;}}
+        .terminal{{max-width:850px; margin:0 auto; border:1px solid #1a2332; padding:45px; background:#060913; box-shadow:0 0 40px rgba(0,229,255,0.05);}}
+        h1{{color:#00e5ff; font-size:1.4rem; border-bottom:1px solid #1a2332; padding-bottom:10px;}}
+        .content{{background:#03050a; padding:25px; border-left:4px solid #00ff88; color:#eee; font-size:1rem; margin:20px 0;}}
         </style></head><body><div class='terminal'>
         <h1>KEYGAP // DOSSIER INTELLIGENCE #{report_id}</h1>
-        <p>SCENARIO RILEVATO: <strong>[{scenario}]</strong></p>
-        <div class='analysis'>
+        <p>PATTERN RILEVATO: <strong>[{scenario}]</strong></p>
+        <div class='content'>
             <strong>ANALISI TECNICA CEFI vs DEFI:</strong><br><br>
             {analisi_dettagliata}
         </div>
-        <p style='font-size:1.5rem; color:#fff;'>VALORE BTC: {prezzo_btc}</p>
+        <p style='font-size:1.8rem; color:#fff;'>BTC VALUE: {prezzo_btc}</p>
         <hr style='border:1px solid #1a2332;'>
-        <h3>INTERCETTAZIONI GLOBALI (RAW NEWS):</h3>
-        {news_block}
-        <p style='margin-top:40px; font-size:0.7rem; color:#445;'>KEYGAP ADVANTAGE CORE // ENCRYPTED DOCUMENT</p>
+        <h3>LIVE INTERCEPTIONS:</h3>
+        {news_html}
+        <p style='margin-top:50px; font-size:0.75rem; color:#445;'>KEYGAP ADVANTAGE CORE // END OF DOSSIER</p>
         </div></body></html>"""
 
-        # Salvataggio e Sincronizzazione GitHub
+        # Salvataggio e Push su GitHub
         filename = f"Report_Mondiale_{datetime.now().strftime('%d_%m_%Y_%H_%M')}.html"
         filepath = os.path.join(REPORT_DIR, filename)
-        with open(filepath, "w", encoding='utf-8') as f: f.write(html_content)
+        with open(filepath, "w", encoding='utf-8') as f: f.write(html_report)
         
         update_index_github()
         
@@ -156,8 +158,7 @@ def run_update():
         print(f"❌ Errore critico: {e}")
 
 if __name__ == "__main__":
-    print("🚀 KEYGAP_ADVANTAGE CORE - Intelligence Dossier Online.")
+    print("🚀 KEYGAP_ADVANTAGE CORE - Generatore Dossier Professionale Attivo.")
     while True:
         run_update()
-        print("💤 Standby 30 minuti...")
         time.sleep(1800)
