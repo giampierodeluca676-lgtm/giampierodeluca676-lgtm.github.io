@@ -39,9 +39,8 @@ def get_service():
             pickle.dump(creds, token)
     return build('blogger', 'v3', credentials=creds)
 
-# --- MOTORE DI INTELLIGENCE DINAMICA (CeFi vs DeFi) ---
+# --- MOTORE DI INTELLIGENCE DINAMICA ---
 def generate_pro_analysis():
-    """Genera un confronto reale e professionale, sempre differente."""
     cefi_intel = [
         "Le riserve degli exchange centralizzati (CeFi) mostrano un drenaggio costante verso i cold wallet istituzionali.",
         "Si osserva un consolidamento dei volumi sugli order book CeFi, suggerendo una fase di accumulo silenzioso.",
@@ -62,7 +61,6 @@ def generate_pro_analysis():
     return f"{random.choice(cefi_intel)} {random.choice(defi_intel)} {random.choice(confronto)}"
 
 def get_real_news():
-    """Recupera news reali o genera intercettazioni se l'API è offline."""
     try:
         url = "https://min-api.cryptocompare.com/data/v2/news/?lang=EN"
         r = requests.get(url, timeout=5).json()
@@ -72,46 +70,66 @@ def get_real_news():
             news_list.append({"time": t, "text": item['title'], "link": item['url']})
         return news_list
     except:
-        return [{"time": "INTEL", "text": "Analisi flussi istituzionali in corso su canali criptati.", "link": "#"}]
+        return [{"time": "INTEL", "text": "Analisi flussi istituzionali in corso.", "link": "#"}]
 
-# --- GESTIONE SITO E ARCHIVIO (FIX 404) ---
+# --- GESTIONE SITO, ARCHIVIO & RESPONSIVE DESIGN ---
 def update_index_github():
-    """Rigenera index.html e archivio.html basandosi SOLO sui file realmente esistenti."""
     try:
-        if not os.path.exists(REPORT_DIR): os.makedirs(REPORT_DIR)
-        reports = sorted([f for f in os.listdir(REPORT_DIR) if f.endswith('.html')], reverse=True)
-        ultimo_report = f"Report_Finanziari/{reports[0]}" if reports else "archivio.html"
+        all_files = sorted([f for f in os.listdir(REPORT_DIR) if f.endswith('.html')], reverse=True)
+        if len(all_files) > 50:
+            for old_file in all_files[50:]:
+                os.remove(os.path.join(REPORT_DIR, old_file))
+            all_files = all_files[:50]
+
+        ultimo_report = f"Report_Finanziari/{all_files[0]}" if all_files else "archivio.html"
         
-        # 1. Generazione Archivio
-        links_html = "".join([f'<a href="Report_Finanziari/{r}" style="display:block; color:#00e5ff; text-decoration:none; margin-bottom:12px; border:1px solid #1a2332; padding:15px; border-radius:8px;">> DOSSIER {r.replace(".html","")}</a>' for r in reports[:30]])
+        links_html = "".join([f'<a href="Report_Finanziari/{r}" style="display:block; color:#00e5ff; text-decoration:none; margin-bottom:15px; border:1px solid #1a2332; padding:20px; border-radius:12px; font-size:1.1rem;">> DOSSIER {r.replace(".html","")}</a>' for r in all_files])
         
         with open(os.path.join(BASE_DIR, "archivio.html"), "w", encoding='utf-8') as f:
-            f.write(f"<html><body style='background:#05070a; color:#fff; font-family:monospace; padding:40px;'><h1>ARCHIVIO INTELLIGENCE</h1><hr>{links_html}</body></html>")
+            f.write(f"<html><meta name='viewport' content='width=device-width, initial-scale=1.0'><body style='background:#05070a; color:#fff; font-family:monospace; padding:5%;'><h1>ARCHIVIO INTELLIGENCE</h1><hr>{links_html}</body></html>")
 
-        # 2. Aggiornamento Index (Dashboard Live)
-        index_content = f"""<!DOCTYPE html><html><head><meta charset="UTF-8"><title>KEYGAP | Terminal</title>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=JetBrains+Mono&display=swap" rel="stylesheet">
+        # Homepage Responsive: Su PC a 3 colonne fisse, su Mobile impilata a scorrimento
+        index_content = f"""<!DOCTYPE html><html><head><meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KEYGAP | Terminal</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
         <style>
             body {{ background: #06080a; color: #f0f2f5; font-family: 'Inter', sans-serif; margin: 0; display: flex; flex-direction: column; height: 100vh; overflow: hidden; }}
-            header {{ background: #0d1117; border-bottom: 1px solid #21262d; display: grid; grid-template-columns: 250px 1fr 350px; align-items: center; padding: 10px 20px; }}
-            .btn-live {{ background: #ff0055; color: #fff; text-decoration: none; padding: 10px 15px; border-radius: 6px; font-weight: 900; font-size: 0.75rem; animation: pulse 1.5s infinite; text-align: center; border: 1px solid #ff0055; }}
-            main {{ display: grid; grid-template-columns: 300px 1fr 380px; gap: 5px; flex-grow: 1; padding: 5px; background: #000; }}
-            .panel {{ background: #0d1117; border: 1px solid #21262d; }}
-            @keyframes pulse {{ 0% {{ box-shadow: 0 0 0 0 rgba(255,0,85,0.7); }} 70% {{ box-shadow: 0 0 0 10px rgba(255,0,85,0); }} 100% {{ box-shadow: 0 0 0 0 rgba(255,0,85,0); }} }}
+            header {{ background: #0d1117; border-bottom: 2px solid #21262d; display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; flex-wrap: wrap; gap: 15px; }}
+            .logo {{ font-weight: 900; font-size: 1.8rem; letter-spacing: -1px; }}
+            .btn-container {{ display: flex; gap: 15px; }}
+            .btn-live {{ background: #ff0055; color: #fff; text-decoration: none; padding: 12px 25px; border-radius: 8px; font-weight: 900; font-size: 1rem; animation: pulse 1.5s infinite; text-align: center; border: 2px solid #ff0055; text-transform: uppercase; }}
+            .btn-archive {{ background: #00ff88; color: #000; text-decoration: none; padding: 12px 25px; border-radius: 8px; font-weight: 900; font-size: 1rem; text-align: center; text-transform: uppercase; }}
+            main {{ display: grid; grid-template-columns: 350px 1fr 400px; gap: 8px; flex-grow: 1; padding: 8px; background: #000; overflow: hidden; }}
+            .panel {{ background: #0d1117; border: 1px solid #21262d; display: flex; flex-direction: column; overflow: hidden; }}
+            .panel-title {{ font-size: 0.85rem; text-transform: uppercase; color: #848e9c; padding: 10px 15px; background: rgba(255,255,255,0.02); font-family: 'JetBrains Mono'; border-bottom: 1px solid #21262d; }}
+            iframe {{ flex-grow: 1; border: none; width: 100%; height: 100%; }}
+            .grid-sidebar {{ display: flex; flex-direction: column; gap: 8px; }}
+            @keyframes pulse {{ 0% {{ box-shadow: 0 0 0 0 rgba(255,0,85,0.7); }} 70% {{ box-shadow: 0 0 0 15px rgba(255,0,85,0); }} 100% {{ box-shadow: 0 0 0 0 rgba(255,0,85,0); }} }}
+            
+            /* OTTIMIZZAZIONE SMARTPHONE */
+            @media (max-width: 1024px) {{
+                body {{ height: auto; overflow: visible; }}
+                header {{ flex-direction: column; justify-content: center; text-align: center; padding: 15px; }}
+                .btn-container {{ width: 100%; flex-direction: column; }}
+                main {{ display: flex; flex-direction: column; overflow: visible; padding: 10px; gap: 15px; }}
+                .panel {{ min-height: 450px; }} /* Altezza fissa per i grafici sul telefono */
+                .grid-sidebar {{ display: contents; }}
+            }}
         </style>
         </head><body><header>
-            <div style="font-weight:900; font-size:1.4rem;">KEY<span style="color:#00ff88;">GAP</span></div>
-            <div style="text-align:center;"><script src="https://pl28819682.effectivegatecpm.com/07/47/37/074737f2d1be0f3c0e9de0585a695fd7.js"></script></div>
-            <div style="display: flex; gap: 10px; justify-content: flex-end;">
-                <a href="{ultimo_report}" class="btn-live">🔴 ULTIMO DOSSIER LIVE</a>
-                <a href="archivio.html" style="background:#00ff88; color:#000; text-decoration:none; padding:10px 15px; border-radius:6px; font-weight:800; font-size:0.7rem;">📂 ARCHIVIO</a>
+            <div class="logo">KEY<span style="color:#00ff88;">GAP</span></div>
+            <div style="text-align:center; max-width:100%; overflow:hidden;"><script src="https://pl28819682.effectivegatecpm.com/07/47/37/074737f2d1be0f3c0e9de0585a695fd7.js"></script></div>
+            <div class="btn-container">
+                <a href="{ultimo_report}" class="btn-live">🔴 DOSSIER LIVE</a>
+                <a href="archivio.html" class="btn-archive">📂 ARCHIVIO</a>
             </div>
         </header><main>
-            <div class="panel"><iframe src="https://s.tradingview.com/embed-widget/market-overview/?colorTheme=dark" width="100%" height="100%" frameborder="0"></iframe></div>
-            <div class="panel"><iframe src="https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCEUR&interval=1&theme=dark" width="100%" height="100%" frameborder="0"></iframe></div>
-            <div style="display:grid; grid-template-rows:1fr 1fr; gap:5px;">
-                <div class="panel"><iframe src="https://cryptopanic.com/widgets/news/?bg_color=0d1117&link_color=00ff88&text_color=f0f2f5" width="100%" height="100%" frameborder="0"></iframe></div>
-                <div class="panel"><iframe src="https://sslecal2.investing.com?importance=2,3&calType=day&timeZone=58&lang=5" width="100%" height="100%" frameborder="0" style="filter: invert(0.9) hue-rotate(180deg);"></iframe></div>
+            <div class="panel"><div class="panel-title">MARKET_WATCH</div><iframe src="https://s.tradingview.com/embed-widget/market-overview/?colorTheme=dark" frameborder="0"></iframe></div>
+            <div class="panel"><div class="panel-title">TERMINAL_CHART</div><iframe src="https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCEUR&interval=1&theme=dark" frameborder="0"></iframe></div>
+            <div class="grid-sidebar">
+                <div class="panel"><div class="panel-title">NEWS_FEED</div><iframe src="https://cryptopanic.com/widgets/news/?bg_color=0d1117&link_color=00ff88&text_color=f0f2f5" frameborder="0"></iframe></div>
+                <div class="panel"><div class="panel-title">MACRO_CALENDAR</div><iframe src="https://sslecal2.investing.com?importance=2,3&calType=day&timeZone=58&lang=5" frameborder="0" style="filter: invert(0.9) hue-rotate(180deg);"></iframe></div>
             </div></main></body></html>"""
         
         with open(os.path.join(BASE_DIR, "index.html"), "w", encoding='utf-8') as f:
@@ -129,27 +147,45 @@ def send_telegram_alert(prezzo_btc, id_report, scenario, analisi):
 
 def run_update():
     try:
-        # 1. Recupero Dati Mercato
         res = requests.get("https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=EUR", timeout=5).json()
         prezzo_btc = f"€ {res.get('EUR', 60000.0):,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
         
         notizie = get_real_news()
         report_id = random.randint(1000, 9999)
         analisi_pro = generate_pro_analysis()
-        scenario = random.choice(["INSTITUTIONAL ROTATION", "LIQUIDITY BRIDGE", "STRATEGIC COMPRESSION"])
+        scenario = random.choice(["INSTITUTIONAL ROTATION", "LIQUIDITY BRIDGE", "VOLATILITY SHOCK", "NETWORK INTELLIGENCE"])
 
-        # 2. Generazione HTML Report
+        # Generazione HTML Dossier - OTTIMIZZATO PER PC E SMARTPHONE
         html_content = f"""
-        <!DOCTYPE html><html><head><meta charset='UTF-8'><style>
-        body{{background:#020408; color:#a1b2c3; font-family:monospace; padding:40px; line-height:1.8;}}
-        .terminal{{max-width:850px; margin:0 auto; border:1px solid #1a2332; padding:45px; background:#060913;}}
-        h1{{color:#00e5ff; border-bottom:1px solid #1a2332;}} .intel-box{{background:#03050a; padding:25px; border-left:4px solid #00ff88; color:#eee;}}
+        <!DOCTYPE html><html><head><meta charset='UTF-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        body{{background:#020408; color:#a1b2c3; font-family:monospace; padding:50px; line-height:1.8; font-size:1.1rem;}}
+        .terminal{{max-width:950px; margin:0 auto; border:2px solid #1a2332; padding:50px; background:#060913; box-shadow:0 0 60px rgba(0,229,255,0.07);}}
+        h1{{color:#00e5ff; border-bottom:2px solid #1a2332; font-size:1.8rem; margin-bottom:25px; padding-bottom:15px;}}
+        .intel-box{{background:#03050a; padding:35px; border-left:6px solid #00ff88; color:#fff; font-size:1.25rem; margin:30px 0; line-height:1.7;}}
+        .price{{font-size:2.8rem; color:#fff; font-weight:bold; margin:30px 0; letter-spacing:-1px;}}
+        .news-line{{color:#00ff88; font-size:1.05rem; margin-bottom:10px; border-bottom:1px solid #111; padding-bottom:5px;}}
+        
+        @media (max-width: 768px) {{
+            body {{ padding: 15px; font-size: 1rem; }}
+            .terminal {{ padding: 20px; border: 1px solid #1a2332; }}
+            h1 {{ font-size: 1.4rem; }}
+            .intel-box {{ padding: 20px; font-size: 1.1rem; border-left: 4px solid #00ff88; }}
+            .price {{ font-size: 2rem; }}
+        }}
         </style></head><body><div class='terminal'>
-        <h1>KEYGAP // DOSSIER #{report_id}</h1><p>TIMESTAMP: {datetime.now().strftime('%d/%m/%Y %H:%M')}</p>
-        <div class='intel-box'><strong>ANALISI CEFI vs DEFI:</strong><br><br>{analisi_pro}</div>
-        <p style='font-size:1.8rem; color:#fff;'>BTC VALUE: {prezzo_btc}</p>
-        <hr><h3>LIVE RAW NEWS:</h3>
-        {"".join([f"<p style='color:#00ff88;'>> {n['text']}</p>" for n in notizie])}
+        <h1>KEYGAP // DOSSIER INTELLIGENCE #{report_id}</h1>
+        <p style="font-size:1rem; opacity:0.6;">TIMESTAMP: {datetime.now().strftime('%d/%m/%Y %H:%M')} CET | SCENARIO: {scenario}</p>
+        <div class='intel-box'>
+            <strong>VALUTAZIONE CEFI vs DEFI:</strong><br><br>
+            {analisi_pro}
+        </div>
+        <div class='price'>BTC: {prezzo_btc}</div>
+        <hr style="border:1px solid #1a2332; margin:40px 0;">
+        <h3 style="color:#00e5ff; text-transform:uppercase;">Live Data Interceptions:</h3>
+        {"".join([f"<div class='news-line'>> {n['text']}</div>" for n in notizie])}
+        <p style='margin-top:60px; font-size:0.8rem; color:#445; text-align:center; letter-spacing:4px;'>KEYGAP ADVANTAGE CORE // ENCRYPTED DOCUMENT</p>
         </div></body></html>"""
 
         filename = f"Report_Mondiale_{datetime.now().strftime('%d_%m_%Y_%H_%M')}.html"
@@ -158,15 +194,13 @@ def run_update():
 
         update_index_github()
         
-        # 3. Aggiornamento Blogger
         try:
             service = get_service()
             body = {'title': f'Intelligence Report #{report_id} - BTC {prezzo_btc}', 'content': html_content}
             service.posts().insert(blogId=BLOG_ID, body=body).execute()
-        except Exception as e: print(f"⚠️ Blogger Error: {e}")
+        except: pass
 
-        # 4. Git Sync
-        subprocess.run(["git", "add", "."], cwd=BASE_DIR)
+        subprocess.run(["git", "add", "index.html", "archivio.html", "Report_Finanziari/"], cwd=BASE_DIR)
         subprocess.run(["git", "commit", "-m", f"📊 Dossier {report_id}"], cwd=BASE_DIR)
         subprocess.run(["git", "push", "origin", "main", "--force"], cwd=BASE_DIR)
 
@@ -176,7 +210,7 @@ def run_update():
     except Exception as e: print(f"❌ Errore Ciclo: {e}")
 
 if __name__ == "__main__":
-    print("🚀 KEYGAP_ADVANTAGE CORE - Intelligence Engine Active.")
+    print("🚀 KEYGAP_ADVANTAGE CORE - Mobile Optimized Engine Active.")
     while True:
         run_update()
         time.sleep(1800)
