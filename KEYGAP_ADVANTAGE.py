@@ -344,11 +344,33 @@ def send_telegram(report, news):
     if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
         print("ℹ️ Telegram non configurato: skip invio.")
         return
+
     top_news = news.get("items", [])[:3]
-    lines = "\\n".join([f"• {n['title']}" for n in top_news]) if top_news else "• Nessuna news disponibile"
-    text = f"⚡ KEYGAP ELITE UPDATE\\n\\nBTC/EUR: {fmt_eur(report['price_eur'])}\\nBias: {report['bias']}\\nSupporto: {fmt_eur(report['support_eur'])}\\nResistenza: {fmt_eur(report['resistance_eur'])}\\n\\nTop news:\\n{lines}\\n\\nLettura rapida:\\n{report['quick_read']}\\n\\n🌐 Dashboard live:\\n{SITE_URL}"
+    lines = "\n".join([f"• {n['title']}" for n in top_news]) if top_news else "• Nessuna news disponibile"
+
+    text = (
+        "⚡ KEYGAP ELITE UPDATE\n\n"
+        f"📅 Aggiornato: {report['updated_at']}\n"
+        f"₿ BTC/EUR: {fmt_eur(report['price_eur'])}\n"
+        f"📈 Variazione 24h: {report['change_24h_pct']}%\n"
+        f"🎯 Bias: {report['bias']}\n"
+        f"🛡 Supporto: {fmt_eur(report['support_eur'])}\n"
+        f"🚀 Resistenza: {fmt_eur(report['resistance_eur'])}\n\n"
+        f"📰 Top news:\n{lines}\n\n"
+        f"🧠 Lettura rapida:\n{report['quick_read']}\n\n"
+        f"🌐 Dashboard live:\n{SITE_URL}"
+    )
+
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
-    r = requests.post(url, data={"chat_id": TELEGRAM_CHAT_ID, "text": text}, timeout=20)
+    r = requests.post(
+        url,
+        data={
+            "chat_id": TELEGRAM_CHAT_ID,
+            "text": text,
+            "disable_web_page_preview": False,
+        },
+        timeout=25,
+    )
     r.raise_for_status()
     print("✅ Telegram inviato")
 
