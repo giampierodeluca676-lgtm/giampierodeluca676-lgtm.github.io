@@ -22,7 +22,6 @@
       --danger:#ff6b81;
       --shadow:0 18px 50px rgba(0,0,0,.35);
       --radius:24px;
-      --radius2:18px;
       --max:1240px;
     }
     *{box-sizing:border-box}
@@ -48,7 +47,7 @@
       margin-bottom:18px;padding:14px 18px;border:1px solid var(--line);
       border-radius:999px;background:rgba(255,255,255,.03);backdrop-filter:blur(14px)
     }
-    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.02em}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800}
     .brand-mark{
       width:40px;height:40px;border-radius:14px;display:grid;place-items:center;
       background:linear-gradient(135deg,var(--accent),var(--accent2));color:#08111f;font-weight:900
@@ -91,45 +90,32 @@
     .btn-primary{background:linear-gradient(135deg,var(--accent),#9cf3ff);color:#07111f;border:none}
     .btn-secondary{background:rgba(255,255,255,.04)}
     .btn-ghost{background:transparent}
-    .hero-grid,.grid4,.grid3,.grid2{display:grid;gap:16px}
+    .hero-grid,.grid3,.grid2,.strip{display:grid;gap:16px}
     .hero-grid{grid-template-columns:1.2fr .8fr;align-items:stretch;margin-top:26px}
-    .grid4{grid-template-columns:repeat(4,1fr);margin-top:18px}
     .grid3{grid-template-columns:repeat(3,1fr);margin-top:18px}
     .grid2{grid-template-columns:repeat(2,1fr);margin-top:18px}
-    .card{
-      border-radius:var(--radius);padding:20px;border:1px solid var(--line);
+    .strip{grid-template-columns:repeat(4,1fr);margin-top:18px}
+    .card,.mini{
+      border-radius:24px;padding:20px;border:1px solid var(--line);
       background:linear-gradient(180deg,var(--panel),var(--panel2));box-shadow:var(--shadow)
     }
-    .card h3,.card h4{margin:0}
-    .label{
-      color:var(--muted);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px
-    }
+    .mini{padding:18px}
+    .label{color:var(--muted);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
     .title{font-size:22px;font-weight:800;margin-bottom:8px}
     .muted{color:var(--muted)}
     .stat{font-size:34px;font-weight:900;letter-spacing:-.04em}
     .statline{display:flex;justify-content:space-between;align-items:center;gap:12px}
-    .pill{
-      display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;
-      border:1px solid var(--line);background:rgba(255,255,255,.04);font-weight:700;font-size:13px
-    }
-    .ok{color:#bff8dd}
-    .warn{color:#ffe9aa}
-    .danger{color:#ffc4d0}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);font-weight:700;font-size:13px}
+    .ok{color:#bff8dd}.warn{color:#ffe9aa}.danger{color:#ffc4d0}
     .mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:16px}
-    .mini{
-      border-radius:18px;padding:16px;border:1px solid var(--line);background:rgba(255,255,255,.03)
-    }
     .tabs{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 14px}
     .tabbtn{
       border:none;padding:12px 14px;border-radius:14px;cursor:pointer;font-weight:800;
       color:var(--text);background:rgba(255,255,255,.04);border:1px solid var(--line)
     }
     .tabbtn.active{background:rgba(110,231,255,.12);border-color:rgba(110,231,255,.26)}
-    .panel{display:none}
-    .panel.active{display:block}
-    iframe{
-      width:100%;border:0;border-radius:20px;background:#0b1425;min-height:470px
-    }
+    .panel{display:none}.panel.active{display:block}
+    iframe{width:100%;border:0;border-radius:20px;background:#0b1425;min-height:470px}
     .news-list{display:grid;gap:14px}
     .news-item{
       display:block;padding:16px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.03);
@@ -150,20 +136,31 @@
       width:100%;min-height:48px;border-radius:14px;padding:12px;border:1px solid var(--line);
       background:rgba(255,255,255,.03);color:var(--text)
     }
-    .strip{
-      display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px
+    .ad-card{
+      text-align:center;
+      overflow:hidden;
     }
-    .strip .mini{padding:18px}
+    .ad-shell{
+      min-height:120px;
+      border-radius:18px;
+      border:1px dashed rgba(255,255,255,.14);
+      background:rgba(255,255,255,.02);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px;
+      margin-top:10px;
+    }
     .footer-space{height:40px}
     @media (max-width:1000px){
-      .hero-grid,.grid4,.grid3,.grid2,.strip{grid-template-columns:1fr 1fr}
+      .hero-grid,.grid3,.grid2,.strip{grid-template-columns:1fr 1fr}
     }
     @media (max-width:740px){
       .wrap{padding:14px}
       .topbar{border-radius:20px;padding:14px}
       .topnav{display:none}
       .hero{padding:22px;border-radius:26px}
-      .hero-grid,.grid4,.grid3,.grid2,.strip,.mini-grid{grid-template-columns:1fr}
+      .hero-grid,.grid3,.grid2,.strip,.mini-grid{grid-template-columns:1fr}
       .hero-actions .btn{width:100%}
       iframe{min-height:360px}
       .section-head{display:block}
@@ -209,26 +206,10 @@
           </div>
           <div id="btcMeta" class="muted" style="margin-top:10px">Caricamento dati live...</div>
           <div class="mini-grid">
-            <div class="mini">
-              <div class="label">Supporto</div>
-              <div id="supportLine" class="title">--</div>
-              <div class="muted">Primo livello difensivo</div>
-            </div>
-            <div class="mini">
-              <div class="label">Resistenza</div>
-              <div id="resistanceLine" class="title">--</div>
-              <div class="muted">Livello di accelerazione</div>
-            </div>
-            <div class="mini">
-              <div class="label">Volatilità</div>
-              <div id="volatilityLine" class="title">--</div>
-              <div class="muted">Misura del ritmo di mercato</div>
-            </div>
-            <div class="mini">
-              <div class="label">Variazione 24h</div>
-              <div id="changeLine" class="title">--</div>
-              <div class="muted">Performance recente</div>
-            </div>
+            <div class="mini"><div class="label">Supporto</div><div id="supportLine" class="title">--</div><div class="muted">Primo livello difensivo</div></div>
+            <div class="mini"><div class="label">Resistenza</div><div id="resistanceLine" class="title">--</div><div class="muted">Livello di accelerazione</div></div>
+            <div class="mini"><div class="label">Volatilità</div><div id="volatilityLine" class="title">--</div><div class="muted">Ritmo di mercato</div></div>
+            <div class="mini"><div class="label">Variazione 24h</div><div id="changeLine" class="title">--</div><div class="muted">Performance recente</div></div>
           </div>
         </div>
 
@@ -236,60 +217,25 @@
           <div class="label">Executive Snapshot</div>
           <div class="title">La view veloce che apre tutta la macchina</div>
           <div id="quickRead" class="muted" style="margin-top:8px">Caricamento sintesi report...</div>
-          <div class="strip" style="grid-template-columns:1fr 1fr;margin-top:18px">
-            <div class="mini">
-              <div class="label">Canale</div>
-              <div class="title" style="font-size:18px">Telegram live</div>
-              <div class="muted">Push immediati verso community e traffico caldo</div>
-            </div>
-            <div class="mini">
-              <div class="label">Output</div>
-              <div class="title" style="font-size:18px">Dossier HTML</div>
-              <div class="muted">Archivio report leggibile anche da desktop cliente</div>
-            </div>
-            <div class="mini">
-              <div class="label">Funnel</div>
-              <div class="title" style="font-size:18px">Traffic ready</div>
-              <div class="muted">Home studiata per bio, reel, Telegram e Facebook</div>
-            </div>
-            <div class="mini">
-              <div class="label">Stato</div>
-              <div class="title ok" style="font-size:18px">Online setup</div>
-              <div class="muted">Struttura pronta per evoluzioni premium</div>
-            </div>
+          <div class="grid2" style="margin-top:18px">
+            <div class="mini"><div class="label">Canale</div><div class="title" style="font-size:18px">Telegram live</div><div class="muted">Push immediati verso community e traffico caldo</div></div>
+            <div class="mini"><div class="label">Output</div><div class="title" style="font-size:18px">Dossier HTML</div><div class="muted">Archivio report leggibile anche da desktop</div></div>
+            <div class="mini"><div class="label">Funnel</div><div class="title" style="font-size:18px">Traffic ready</div><div class="muted">Home studiata per bio, reel, Telegram e Facebook</div></div>
+            <div class="mini"><div class="label">Stato</div><div class="title ok" style="font-size:18px">Online setup</div><div class="muted">Struttura pronta per evoluzioni premium</div></div>
           </div>
         </div>
       </div>
     </section>
 
     <div class="strip">
-      <div class="mini">
-        <div class="label">Mobile UX</div>
-        <div class="title" style="font-size:19px">Pulita e leggibile</div>
-        <div class="muted">CTA grandi, ritmo visivo corretto, niente pagina compressa.</div>
-      </div>
-      <div class="mini">
-        <div class="label">Cliente-facing</div>
-        <div class="title" style="font-size:19px">Aspetto premium</div>
-        <div class="muted">Look da prodotto vero, presentabile anche a pagamento.</div>
-      </div>
-      <div class="mini">
-        <div class="label">News engine</div>
-        <div class="title" style="font-size:19px">Top headlines</div>
-        <div class="muted">Le notizie chiave sono già visibili in homepage.</div>
-      </div>
-      <div class="mini">
-        <div class="label">Monetizzazione</div>
-        <div class="title" style="font-size:19px">Ad-ready</div>
-        <div class="muted">Spazi e struttura pronti per layer premium successivi.</div>
-      </div>
+      <div class="mini"><div class="label">Mobile UX</div><div class="title" style="font-size:19px">Pulita e leggibile</div><div class="muted">CTA grandi, ritmo visivo corretto, niente pagina compressa.</div></div>
+      <div class="mini"><div class="label">Cliente-facing</div><div class="title" style="font-size:19px">Aspetto premium</div><div class="muted">Look da prodotto vero, presentabile anche a pagamento.</div></div>
+      <div class="mini"><div class="label">News engine</div><div class="title" style="font-size:19px">Top headlines</div><div class="muted">Le notizie chiave sono già visibili in homepage.</div></div>
+      <div class="mini"><div class="label">Monetizzazione</div><div class="title" style="font-size:19px">Ad-ready</div><div class="muted">Spazi e struttura pronti per layer premium successivi.</div></div>
     </div>
 
     <div class="section-head">
-      <div>
-        <h2>Notizie in evidenza</h2>
-        <p>Le headline reali arrivano subito in home. Per la lettura completa c’è la News Room.</p>
-      </div>
+      <div><h2>Notizie in evidenza</h2><p>Le headline reali arrivano subito in home. Per la lettura completa c’è la News Room.</p></div>
       <a class="btn btn-secondary nav-link" href="news.html">Apri tutte le news</a>
     </div>
 
@@ -299,10 +245,7 @@
 
     <section id="command" class="card" style="margin-top:22px">
       <div class="section-head" style="margin-top:0">
-        <div>
-          <h2>Command Center</h2>
-          <p>Mercati, chart, news e dossier in un unico hub navigabile.</p>
-        </div>
+        <div><h2>Command Center</h2><p>Mercati, chart, news e dossier in un unico hub navigabile.</p></div>
       </div>
 
       <div class="tabs">
@@ -315,36 +258,22 @@
       <div id="tab-market" class="panel active">
         <iframe src="https://s.tradingview.com/embed-widget/market-overview/?locale=it#%7B%22colorTheme%22%3A%22dark%22%2C%22dateRange%22%3A%2212M%22%2C%22showChart%22%3Atrue%2C%22isTransparent%22%3Atrue%2C%22showSymbolLogo%22%3Atrue%2C%22showFloatingTooltip%22%3Afalse%2C%22width%22%3A%22100%25%22%2C%22height%22%3A%22470%22%2C%22tabs%22%3A%5B%7B%22title%22%3A%22Crypto%22%2C%22symbols%22%3A%5B%7B%22s%22%3A%22BINANCE%3ABTCEUR%22%2C%22d%22%3A%22Bitcoin%20%2F%20EUR%22%7D%2C%7B%22s%22%3A%22BINANCE%3AETHEUR%22%2C%22d%22%3A%22Ethereum%20%2F%20EUR%22%7D%2C%7B%22s%22%3A%22BINANCE%3ASOLEUR%22%2C%22d%22%3A%22Solana%20%2F%20EUR%22%7D%5D%7D%5D%7D"></iframe>
       </div>
-
       <div id="tab-chart" class="panel">
         <iframe src="https://s.tradingview.com/widgetembed/?symbol=BINANCE%3ABTCEUR&interval=60&hidesidetoolbar=1&symboledit=1&saveimage=0&toolbarbg=0b1220&studies=[]&theme=dark&style=1&timezone=Europe%2FRome&withdateranges=1&hideideas=1"></iframe>
       </div>
-
       <div id="tab-intel" class="panel">
         <div class="grid2">
-          <div class="card" style="padding:18px">
-            <div class="label">Top headlines</div>
-            <div id="intelNews" class="news-list">
-              <div class="news-item">Caricamento news...</div>
-            </div>
-          </div>
-          <div class="card" style="padding:18px">
-            <div class="label">Executive note</div>
-            <div id="intelReport" class="muted">Caricamento report...</div>
-          </div>
+          <div class="card"><div class="label">Top headlines</div><div id="intelNews" class="news-list"><div class="news-item">Caricamento news...</div></div></div>
+          <div class="card"><div class="label">Executive note</div><div id="intelReport" class="muted">Caricamento report...</div></div>
         </div>
       </div>
-
       <div id="tab-dossier" class="panel">
         <iframe id="dossierFrame" src="latest_report.html"></iframe>
       </div>
     </section>
 
     <div class="section-head">
-      <div>
-        <h2>Canali ufficiali e distribuzione</h2>
-        <p>Pulsanti veri, link reali, promo link pronto da usare in bio, post e reel.</p>
-      </div>
+      <div><h2>Canali ufficiali e distribuzione</h2><p>Pulsanti veri, link reali, promo link pronto da usare in bio, post e reel.</p></div>
       <a class="btn btn-secondary nav-link" href="reports.html">Apri archivio report</a>
     </div>
 
@@ -355,20 +284,27 @@
         <div class="muted">Il centro della distribuzione live: update, traffico caldo e community.</div>
         <div class="btn btn-secondary" style="margin-top:6px">Apri canale →</div>
       </a>
-
       <a class="card social-card" href="https://www.facebook.com/profile.php?id=61587728495758" target="_blank" rel="noopener">
         <div class="social-tag">Facebook ufficiale</div>
         <div class="title">Profilo pubblico</div>
         <div class="muted">Landing perfetta per contenuti social, post narrativi e hook da traffico freddo.</div>
         <div class="btn btn-secondary" style="margin-top:6px">Apri profilo →</div>
       </a>
-
       <div class="card social-card">
         <div class="social-tag">Promo link</div>
         <div class="title">Link pronto per bio e campagne</div>
         <div class="muted">Usalo per tracciamento organico, gruppi, post, descrizioni e campagne esterne.</div>
         <input class="promo-input" id="promoInput" value="https://giampierodeluca676-lgtm.github.io/?utm_source=promo&utm_medium=organic&utm_campaign=keygap_elite" readonly>
         <button class="btn btn-secondary" onclick="copyPromoLink()">Copia link →</button>
+      </div>
+    </section>
+
+    <section class="card ad-card" style="margin-top:22px">
+      <div class="label">Partner placement</div>
+      <div class="title">Sponsored placement</div>
+      <div class="muted">Inserimento pubblicitario posizionato sotto i contenuti principali per non rovinare l’impatto premium della home.</div>
+      <div class="ad-shell">
+        <script src="https://pl28819682.profitablecpmratenetwork.com/07/47/37/074737f2d1be0f3c0e9de0585a695fd7.js"></script>
       </div>
     </section>
 
