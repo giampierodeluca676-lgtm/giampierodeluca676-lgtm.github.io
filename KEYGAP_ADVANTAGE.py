@@ -109,9 +109,185 @@ def fetch_news():
     return {"updated_at": now_it(), "items": items}
 
 def write_latest_report_html(report):
-    html = f'''<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Keygap Report Live</title>
-<style>body{{margin:0;font-family:Inter,Arial,sans-serif;background:#08111e;color:#eef4ff;padding:24px}}.wrap{{max-width:900px;margin:0 auto}}.card{{background:#101b31;border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:22px;box-shadow:0 18px 50px rgba(0,0,0,.28)}}h1{{margin:0 0 14px;font-size:32px}}.muted{{color:#9db0cf}}.grid{{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px}}.mini{{background:#13213b;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px}}@media(max-width:700px){{.grid{{grid-template-columns:1fr}}}}</style></head>
-<body><div class="wrap"><div class="card"><div class="muted">Keygap / Ultimo report</div><h1>BTC live {fmt_eur(report["price_eur"])}</h1><p class="muted">Aggiornato: {report["updated_at"]}</p><div class="grid"><div class="mini"><strong>Bias</strong><br>{report["bias"]}</div><div class="mini"><strong>Variazione 24h</strong><br>{report["change_24h_pct"]}%</div><div class="mini"><strong>Supporto</strong><br>{fmt_eur(report["support_eur"])}</div><div class="mini"><strong>Resistenza</strong><br>{fmt_eur(report["resistance_eur"])}</div></div><p style="margin-top:18px">{report["quick_read"]}</p><p><a href="{SITE_URL}" style="color:#6ee7ff">Apri dashboard live</a></p></div></div></body></html>'''
+    html = f"""<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keygap Report Live</title>
+  <style>
+    :root {{
+      --bg:#08111e; --panel:#101b31; --panel2:#13213b; --line:rgba(255,255,255,.08);
+      --text:#eef4ff; --muted:#9db0cf; --accent:#6ee7ff; --shadow:0 18px 50px rgba(0,0,0,.28);
+    }}
+    * {{ box-sizing:border-box; }}
+    body {{
+      margin:0;
+      font-family:Inter,Arial,sans-serif;
+      background:linear-gradient(180deg,#08111e,#0b1526 100%);
+      color:var(--text);
+      padding:24px;
+    }}
+    .wrap {{ max-width:980px; margin:0 auto; }}
+    .hero, .card {{
+      background:linear-gradient(180deg,var(--panel),var(--panel2));
+      border:1px solid var(--line);
+      border-radius:24px;
+      box-shadow:var(--shadow);
+    }}
+    .hero {{ padding:26px; margin-bottom:18px; }}
+    .card {{ padding:22px; margin-top:18px; }}
+    .eyebrow {{
+      color:var(--muted);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin-bottom:10px;
+    }}
+    h1 {{
+      margin:0 0 10px;
+      font-size:clamp(30px,5vw,48px);
+      line-height:1;
+      letter-spacing:-.04em;
+    }}
+    h2 {{
+      margin:0 0 12px;
+      font-size:24px;
+      letter-spacing:-.02em;
+    }}
+    .muted {{ color:var(--muted); }}
+    .lead {{
+      font-size:18px;
+      line-height:1.55;
+      color:#d9e6ff;
+    }}
+    .grid {{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      margin-top:18px;
+    }}
+    .mini {{
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:16px;
+    }}
+    .mini .label {{
+      color:var(--muted);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin-bottom:6px;
+    }}
+    .mini .value {{
+      font-size:22px;
+      font-weight:800;
+    }}
+    ul {{
+      margin:0;
+      padding-left:18px;
+      color:#d9e6ff;
+      line-height:1.7;
+    }}
+    p {{
+      margin:0;
+      color:#d9e6ff;
+      line-height:1.7;
+    }}
+    .cta {{
+      margin-top:18px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:0 18px;
+      border-radius:14px;
+      background:linear-gradient(135deg,var(--accent),#9cf3ff);
+      color:#07111f;
+      font-weight:800;
+      text-decoration:none;
+    }}
+    @media (max-width:700px) {{
+      body {{ padding:14px; }}
+      .grid {{ grid-template-columns:1fr; }}
+      .hero, .card {{ padding:18px; }}
+    }}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="eyebrow">Keygap / Report Live</div>
+      <h1>BTC Live {fmt_eur(report["price_eur"])}</h1>
+      <p class="lead">
+        Report operativo aggiornato al {report["updated_at"]}. Questa pagina raccoglie il quadro sintetico di mercato,
+        i livelli tecnici principali e una lettura rapida utile sia da smartphone che da desktop.
+      </p>
+
+      <div class="grid">
+        <div class="mini">
+          <div class="label">Bias</div>
+          <div class="value">{report["bias"]}</div>
+        </div>
+        <div class="mini">
+          <div class="label">Variazione 24h</div>
+          <div class="value">{report["change_24h_pct"]}%</div>
+        </div>
+        <div class="mini">
+          <div class="label">Supporto</div>
+          <div class="value">{fmt_eur(report["support_eur"])}</div>
+        </div>
+        <div class="mini">
+          <div class="label">Resistenza</div>
+          <div class="value">{fmt_eur(report["resistance_eur"])}</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="eyebrow">Scenario operativo</div>
+      <h2>Lettura rapida</h2>
+      <p>{report["quick_read"]}</p>
+    </section>
+
+    <section class="card">
+      <div class="eyebrow">Livelli tecnici</div>
+      <h2>Range e struttura</h2>
+      <ul>
+        <li><strong>Massimo 24h:</strong> {fmt_eur(report["high_24h_eur"])}</li>
+        <li><strong>Minimo 24h:</strong> {fmt_eur(report["low_24h_eur"])}</li>
+        <li><strong>Supporto chiave:</strong> {fmt_eur(report["support_eur"])}</li>
+        <li><strong>Resistenza chiave:</strong> {fmt_eur(report["resistance_eur"])}</li>
+        <li><strong>Volatilità:</strong> {report["volatility"]}</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="eyebrow">Interpretazione</div>
+      <h2>Che cosa significa adesso</h2>
+      <p>
+        BTC quota {fmt_eur(report["price_eur"])} e si muove con una variazione giornaliera del
+        {report["change_24h_pct"]}%. Il quadro di breve periodo resta <strong>{report["bias"]}</strong>.
+        In questo contesto, il livello di {fmt_eur(report["support_eur"])} rappresenta l’area da difendere,
+        mentre {fmt_eur(report["resistance_eur"])} è il primo livello da superare per migliorare il tono operativo.
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="eyebrow">Conclusione</div>
+      <h2>Takeaway finale</h2>
+      <p>
+        Questo dossier serve come sintesi operativa: rapido da leggere, ma abbastanza completo da dare un contesto utile.
+        La home premium mostra il segnale; questa pagina conserva la lettura più strutturata del momento.
+      </p>
+      <a class="cta" href="{SITE_URL}">Apri dashboard live</a>
+    </section>
+  </div>
+</body>
+</html>"""
     LATEST_REPORT_HTML.write_text(html, encoding="utf-8")
     report_file = REPORTS_DIR / f"Report_Mondiale_{filename_stamp()}.html"
     report_file.write_text(html, encoding="utf-8")
