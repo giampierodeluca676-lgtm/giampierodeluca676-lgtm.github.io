@@ -1,18 +1,18 @@
 {
-  "updated_at": "19/03/2026 20:00:10",
+  "updated_at": "19/03/2026 20:12:16",
   "items": [
-    {
-      "title": "Bitcoin ($): resistenza a quota 76.000$",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQS1lSU2ZlcFhfOGowR2hiVVhfUGQwRmltTEgzUGwxcmcwdWJ0dU1oNFRuYVUzcnN1R0JYNGNlNXpXbW9OVE45TlRjc3ZMZk9fbC10dk5sMWZERC1nY21MbXgyT3I4b1lVQzc5ZFZEODNDY0k3QXFBOTRHbVNqSFg5Q2tvVkNnYlJrRXFkRXdqMjd1Q1V3Nm1wQmc2b3J3M3JlekJZVg?oc=5",
-      "source": "Milano Finanza",
-      "published_at": "Thu, 19 Mar 2026 07:05:00 GMT",
-      "is_new": false
-    },
     {
       "title": "Bitcoin e banche: l’adozione istituzionale cambia il mercato",
       "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPQTZsNVhoZ2gtT2ZKNWJNU2VlMWt2NzFsNDlxNy1hZzlWTVJjcXBVM2xzTVJ3d3Q3czRpLS1uZ3ZVZ0otcGxHak9lbWtJdExNQ2RQMVJtSzdVNmx3N3VFcTR1cXNOTU5yMG0tTjhHa1ZDMEQtc2syZ3g0VUZDM0V2QnJBNUxCRUlSM0xkcE84ZlBHYUdpWlRfc3RLUUZ2YVVLRzNFdDVUUUtjdw?oc=5",
       "source": "Agenda Digitale",
       "published_at": "Wed, 18 Mar 2026 19:53:42 GMT",
+      "is_new": false
+    },
+    {
+      "title": "Bitcoin ($): resistenza a quota 76.000$",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQS1lSU2ZlcFhfOGowR2hiVVhfUGQwRmltTEgzUGwxcmcwdWJ0dU1oNFRuYVUzcnN1R0JYNGNlNXpXbW9OVE45TlRjc3ZMZk9fbC10dk5sMWZERC1nY21MbXgyT3I4b1lVQzc5ZFZEODNDY0k3QXFBOTRHbVNqSFg5Q2tvVkNnYlJrRXFkRXdqMjd1Q1V3Nm1wQmc2b3J3M3JlekJZVg?oc=5",
+      "source": "Milano Finanza",
+      "published_at": "Thu, 19 Mar 2026 07:05:00 GMT",
       "is_new": false
     },
     {
@@ -58,13 +58,6 @@
       "is_new": true
     },
     {
-      "title": "Pressione di vendita diffusa, corsa agli acquisti di Bitcoin: il titolo Strategy cala del 3,53%",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNRmxqeEFXQ29uYzRudERJV3NjT0VBeVNxTGN1b0pDQUx3dDdDV3IzQmtzMzJZQXNaMTNSajg0MkVqUGlHS0pWcTB2RE1ONWExSm1UX0FXVUE0TkVTLTVqWnNjUEktMzIycHRtWVVUMzVDRlhtNVVMcy0wZDhCR0VUZ01aamVxYUhxTUNhempZMC0tMDBPelNsNGducHJHckNBVlcySA?oc=5",
-      "source": "Traders Union",
-      "published_at": "Thu, 19 Mar 2026 15:40:53 GMT",
-      "is_new": true
-    },
-    {
       "title": "DDC Enterprise aggiunge 200 bitcoin, le riserve totali raggiungono 2.383 BTC",
       "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOSlNGX3hYMVlGUkJqell2S2NUSUh1R0h0UlplanVDek5oQzlGTzNJRi1XRFNQZzlCc3RUQWRLTmFuVjJjNjE4NS05V2N4VmVmSHVtTWVRdzdMcW5GYldEVVU0dGNDOGNtTTZ4a2RZdWZiWF9OdEdJcmNuYTNONlo2WWtmWnlrZ2lnOVRyQ1Baelh1N1JrMzQwdThsRF9iMWNOdnhDa0U2NExPMlR0Zk1qMjJSYWNJa0Y3RGtQTUlaRzFiNE5IYjZQeEZ3?oc=5",
       "source": "Investing.com",
@@ -84,6 +77,13 @@
       "source": "CoinDesk",
       "published_at": "Thu, 19 Mar 2026 04:19:00 GMT",
       "is_new": false
+    },
+    {
+      "title": "La diretta da Wall Street | Le borse Usa ancora in rosso mentre il calo dell’oro zavorra i titoli minerari. Crypto.com taglia il 12% della forza lavoro",
+      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQaXA2YWg1TmFfV195aGJrYTloSnJFd1lwZllSM1Q4MnhINlhpUHZJa2JOZ0lLOGRQUnBONzc1MENmT1VGSGdLUzlzcTNBS3hkVWJqN2N4elJoaWROeTNjRHBVMWhFc3Z3NFh3N3pPV0ZxbmdJeXE5WGZKSEJ5dzc2bUxSbG9zTWhjV1lldFRicmJ4TWJ3aTRqUjRGSGk5QWItTm9yMl9ONDk5NHEzOWVHbXFrTWM0VUE4aEdOVDVtV1BZTWE5M21Ea1U0bEc3ZmpnOGhBbUllSVlVejhseF8yZQ?oc=5",
+      "source": "Milano Finanza",
+      "published_at": "Thu, 19 Mar 2026 13:40:00 GMT",
+      "is_new": true
     }
   ]
 }
