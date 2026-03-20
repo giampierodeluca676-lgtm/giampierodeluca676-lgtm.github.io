@@ -1,12 +1,19 @@
 {
-  "updated_at": "20/03/2026 11:30:07",
+  "updated_at": "20/03/2026 12:00:02",
   "items": [
     {
-      "title": "L’andamento dei prezzi di Bitcoin appare pericolosamente simile al modello che lo ha fatto precipitare fino a 60.000 dollari",
-      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNQXNIa0RqQWJYNjZrMkl4MWl3eXdTdHJqMXI5TkhLUXBFNEIzazJnUlR0UmM4cXJFLUNKQ2QyUlQ3MVZFSTlwclJCR1JxX2VsZzhodXRkS0llbThpQ05wdHVfdHY0R19ocUx2eF9DalNPLUkybnZ6ZENSdFNfd0ZMZzgySXF2ZU1fZUNqRGRNNlJKWElYeHJLSXpGVjl4OFNKYS1GVVB6dG1zeW5fd3lxSDh2Sk15Z1hCWVpOVm10ckVOZEY1a090QThodGo2ZGljRU9VV3lhUmV2TC1oUWc?oc=5",
+      "title": "Bitcoin è morto. Ma forse no. E si prepara all’esame da bene rifugio",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOeklrRzlGSHlsbFRlU1QtMVQ0RzZMVEtLZXZrbEpxRlRZZzVHOXVTVDNIbnhMUDNuNmRQZlY3RTVhc2JUMXdqeEhrQVBxX3hqUUo4c3pNTnduX0duUnRlTGtBLXlyQUZ0MHp6aTZ5d0FSZ3NMMWdPWEZubFVySUhTTW9CSEJvcDcwNDNITmFhRQ?oc=5",
+      "source": "AziendaBanca",
+      "published_at": "Fri, 20 Mar 2026 10:29:13 GMT",
+      "is_new": true
+    },
+    {
+      "title": "Bitcoin si consolida mentre i trader si coprono e l'incertezza macroeconomica persiste: Mercati Crypto Oggi",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQS1VTNFR4T3Fmb2hwbXdhMHZnc1RfTTFoa09HR1ZJaU5QWTN3MVlnak1OSDJTTmFyclNWQXVESVFPRHlqUkFjazNtRHN1VlNHdEhrWWZhZnp5VlFoYlRfTDNsVlNtTGE5clVSalBWTEZVYURaQ2k3LTA2Vy02R2dRa0hwakF3VjY2ZHc4OF94c0hONGlyOEg0Y2lJM3F0QmZQTnU5QkVZTnFjSENGdFA4ZkNIazFCMXV0Y1FnSUln?oc=5",
       "source": "CoinDesk",
-      "published_at": "Thu, 19 Mar 2026 23:14:00 GMT",
-      "is_new": false
+      "published_at": "Fri, 20 Mar 2026 02:49:00 GMT",
+      "is_new": true
     },
     {
       "title": "Bitcoin ($): duro ostacolo a quota 76.000 dollari",
@@ -35,6 +42,13 @@
       "source": "Investing.com",
       "published_at": "Fri, 20 Mar 2026 05:54:00 GMT",
       "is_new": false
+    },
+    {
+      "title": "Bitcoin sotto i 70.000$: la Fed riporta l’incertezza sui mercati.",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBmT2Y3Rkh3MzNMdGpodnlVT3NmZkpvb3JKeklLQUhyeHZKVUM2cHpGTnlaRGlwcmg2RXdjRUx5QktWUENBdWZCWWEwMTR3THhPZm9YbnNTNEM1VXVSMFRwUU1RbG9aMXYzSy1aeWs3d0pIZw?oc=5",
+      "source": "WebEconomia",
+      "published_at": "Fri, 20 Mar 2026 10:41:15 GMT",
+      "is_new": true
     },
     {
       "title": "La resilienza di Bitcoin: BTC vola a 70.800 USD mentre il mercato energetico frena",
@@ -70,20 +84,6 @@
       "source": "Bitcoin.com News",
       "published_at": "Fri, 20 Mar 2026 03:45:39 GMT",
       "is_new": true
-    },
-    {
-      "title": "Crypto, prezzi, grafici e dati in tempo reale | Bitget | P900",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1GbnNQQUw2OFY2TmtqdnVvSUF1R1JDLW9PeWtZSFpHUWFIbDZKMjcwTnZ0YTFFUnF0NHJiVW5yMGpuYlZNeDdOTEllXzlWZ2ZQM3c?oc=5",
-      "source": "Bitget",
-      "published_at": "Fri, 20 Mar 2026 02:45:06 GMT",
-      "is_new": false
-    },
-    {
-      "title": "Crypto.com Riduce del 12% la Forza Lavoro mentre Passa a una Strategia AI-First",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1hWTJ0RW01U3B5a1otUUtpY1ZCTHd0elV2TzM0R0dMcDYzcXQ0Uk0yMlJZelJENkF4d3ctTnh2UVJObk85cmhzXzdiaVBQTFNFVks3NDRaMktqNjY1amotRzh6dm8?oc=5",
-      "source": "Binance",
-      "published_at": "Thu, 19 Mar 2026 15:55:08 GMT",
-      "is_new": false
     }
   ]
 }
