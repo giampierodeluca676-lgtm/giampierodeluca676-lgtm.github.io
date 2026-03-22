@@ -11918,3 +11918,359 @@ Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coing
 Attendo 30 minuti per il prossimo ciclo...
 Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
 Attendo 30 minuti per il prossimo ciclo...
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main a29ad6447] Elite update 16519
+ 4 files changed, 10 insertions(+), 10 deletions(-)
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   56c13f716..a29ad6447  main -> main
+✅ Update 16519 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 10fe44cf5] Elite update 16985
+ 4 files changed, 10 insertions(+), 10 deletions(-)
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   86bf4a234..10fe44cf5  main -> main
+✅ Update 16985 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main a8203f26b] Elite update 37318
+ 4 files changed, 9 insertions(+), 9 deletions(-)
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   2364a9668..a8203f26b  main -> main
+✅ Update 37318 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main c257a13f1] Elite update 99204
+ 4 files changed, 9 insertions(+), 9 deletions(-)
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   8e719d738..c257a13f1  main -> main
+✅ Update 99204 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 4a4c54105] Elite update 41979
+ 4 files changed, 10 insertions(+), 10 deletions(-)
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   03b918658..4a4c54105  main -> main
+✅ Update 41979 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main cd036263f] Elite update 48986
+ 4 files changed, 9 insertions(+), 9 deletions(-)
+Everything up-to-date
+✅ Update 48986 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 65cb45daf] Elite update 73630
+ 5 files changed, 144 insertions(+), 16 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_16_02.html
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   d5359cc1a..65cb45daf  main -> main
+✅ Update 73630 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 7e7c55e74] Elite update 22007
+ 6 files changed, 240 insertions(+), 17 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_16_32.html
+
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [remote rejected]     main -> main (cannot lock ref 'refs/heads/main': is at 7e7c55e7403d263472d869d18a8243899b3fe509 but expected cbbf1f775955f3ab5073d29ddeb976a4c14ac83c)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+
+Errore nel ciclo: Errore comando: git push origin main
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 0f74de1fe] Elite update 71040
+ 6 files changed, 235 insertions(+), 11 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_17_02.html
+
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [remote rejected]     main -> main (cannot lock ref 'refs/heads/main': is at 0f74de1fed8bb5ce4d4d6c34113fa9d06afad5bf but expected 5d51fa48568155bb023e771ba08935924512e527)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+
+Errore nel ciclo: Errore comando: git push origin main
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main e260e9c06] Elite update 23580
+ 6 files changed, 225 insertions(+), 12 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_17_32.html
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   cfbdb8fee..e260e9c06  main -> main
+✅ Update 23580 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 5bf0278fa] Elite update 25054
+ 5 files changed, 145 insertions(+), 17 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_18_02.html
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   03ac8ea8b..5bf0278fa  main -> main
+✅ Update 25054 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+ℹ️ Nessuna modifica da committare
+
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [remote rejected]     main -> main (cannot lock ref 'refs/heads/main': is at 1ac4b7c9081b8c83c31137f898be5c6eef4d2eab but expected 2400a78f9d0413b17443f8ee06fad1be3f71e05a)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+
+Errore nel ciclo: Errore comando: git push origin main
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 1547bdd1d] Elite update 80854
+ 5 files changed, 140 insertions(+), 12 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_19_03.html
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   f42973ccb..1547bdd1d  main -> main
+✅ Update 80854 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+ℹ️ Nessuna modifica da committare
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   d9eb8e53e..e95839123  main -> main
+✅ Update 37950 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 45c81da25] Elite update 42847
+ 7 files changed, 242 insertions(+), 28 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_20_03.html
+
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [remote rejected]     main -> main (cannot lock ref 'refs/heads/main': is at 45c81da255aa25351ad21205d2bf8d43e5c900fa but expected edb83c5514f1d1d7980943e171d9da242e3bc775)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+
+Errore nel ciclo: Errore comando: git push origin main
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+ℹ️ Nessuna modifica da committare
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   81fc65dd7..081cfb84c  main -> main
+✅ Update 20858 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main eb32217ed] Elite update 45541
+ 5 files changed, 147 insertions(+), 20 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_21_03.html
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   6a97318c7..eb32217ed  main -> main
+✅ Update 45541 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+ℹ️ Nessuna modifica da committare
+
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [remote rejected]     main -> main (cannot lock ref 'refs/heads/main': is at b9aaf085bc72b3bd5055a95f19164ec96f28eaa2 but expected d5f0707dbf3ad67b017e33c4cb614e9b98c4639f)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+
+Errore nel ciclo: Errore comando: git push origin main
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+ℹ️ Nessuna modifica da committare
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 46ea5b071] Elite update 46280
+ 5 files changed, 149 insertions(+), 21 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_04_30.html
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   7bf48aa1a..46ea5b071  main -> main
+✅ Update 46280 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 41688115c] Elite update 52415
+ 4 files changed, 9 insertions(+), 9 deletions(-)
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   487122f9f..41688115c  main -> main
+✅ Update 52415 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 4c0764370] Elite update 70147
+ 4 files changed, 9 insertions(+), 9 deletions(-)
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   082098ab9..4c0764370  main -> main
+✅ Update 70147 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main b5a237206] Elite update 55980
+ 4 files changed, 9 insertions(+), 9 deletions(-)
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   a95407849..b5a237206  main -> main
+✅ Update 55980 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 487122f9f] Elite update 48168
+ 5 files changed, 145 insertions(+), 17 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_05_00.html
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   23fc85cbb..487122f9f  main -> main
+✅ Update 48168 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 082098ab9] Elite update 76204
+ 5 files changed, 145 insertions(+), 17 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_05_30.html
+
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [remote rejected]     main -> main (cannot lock ref 'refs/heads/main': is at 082098ab9e38839bb985c3411259215cb6e8c92f but expected e471466f9a6dbfb4c627f821a34f96c58003e33f)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+
+Errore nel ciclo: Errore comando: git push origin main
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 7100f3df8] Elite update 51487
+ 4 files changed, 9 insertions(+), 9 deletions(-)
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   d5cad1956..7100f3df8  main -> main
+✅ Update 51487 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
+Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+Attendo 30 minuti per il prossimo ciclo...
