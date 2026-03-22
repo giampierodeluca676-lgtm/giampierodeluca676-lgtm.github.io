@@ -10288,3 +10288,174 @@ Attendo 30 minuti per il prossimo ciclo...
 Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
 Attendo 30 minuti per il prossimo ciclo...
 Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
+[main fa86021e0] Elite update 98668
+ 5 files changed, 151 insertions(+), 23 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_08_32.html
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   5f6ebdfc8..fa86021e0  main -> main
+✅ Update 98668 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main caa524bca] Elite update 62778
+ 5 files changed, 136 insertions(+), 8 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_09_02.html
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   183d52f61..caa524bca  main -> main
+✅ Update 62778 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 81eb236ec] Elite update 94732
+ 6 files changed, 158 insertions(+), 29 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_09_32.html
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   da7273daf..81eb236ec  main -> main
+✅ Update 94732 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 1a604d458] Elite update 32055
+ 6 files changed, 254 insertions(+), 19 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_10_02.html
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   3c1ac306e..1a604d458  main -> main
+✅ Update 32055 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main f3986c05a] Elite update 82903
+ 5 files changed, 140 insertions(+), 12 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_10_32.html
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   c79154100..f3986c05a  main -> main
+✅ Update 82903 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 7f16cd247] Elite update 55590
+ 5 files changed, 140 insertions(+), 12 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_11_02.html
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   1b987ebea..7f16cd247  main -> main
+✅ Update 55590 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main b8aa2e153] Elite update 39442
+ 6 files changed, 162 insertions(+), 32 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_11_32.html
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   c9dc46646..b8aa2e153  main -> main
+✅ Update 39442 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main aa36c4e98] Elite update 78230
+ 5 files changed, 140 insertions(+), 12 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_12_02.html
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   a494b1922..aa36c4e98  main -> main
+✅ Update 78230 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 88faff526] Elite update 23982
+ 6 files changed, 151 insertions(+), 22 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_12_32.html
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   3fab09751..88faff526  main -> main
+✅ Update 23982 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 56c13f716] Elite update 44988
+ 6 files changed, 152 insertions(+), 23 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_13_02.html
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   1f6527215..56c13f716  main -> main
+✅ Update 44988 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 86bf4a234] Elite update 64098
+ 7 files changed, 248 insertions(+), 27 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_13_32.html
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   09fa2e794..86bf4a234  main -> main
+✅ Update 64098 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 2364a9668] Elite update 15410
+ 5 files changed, 151 insertions(+), 23 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_14_02.html
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   72b6a718a..2364a9668  main -> main
+✅ Update 15410 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 8e719d738] Elite update 46266
+ 5 files changed, 140 insertions(+), 12 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_14_32.html
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   c329a23fc..8e719d738  main -> main
+✅ Update 46266 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 03b918658] Elite update 51762
+ 6 files changed, 155 insertions(+), 26 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_15_02.html
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   c03249e08..03b918658  main -> main
+✅ Update 51762 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 3858971f2] Elite update 47977
+ 5 files changed, 140 insertions(+), 12 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_22_03_2026_15_32.html
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   680e130ac..3858971f2  main -> main
+✅ Update 47977 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+ℹ️ Nessuna modifica da committare
+
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [remote rejected]     main -> main (cannot lock ref 'refs/heads/main': is at 65cb45dafafbf25054c7f3774a84a5a961f2e795 but expected d5359cc1a25281caed7f3f3bf1b2cb2f85751758)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+
+Errore nel ciclo: Errore comando: git push origin main
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+ℹ️ Nessuna modifica da committare
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   cbbf1f775..7e7c55e74  main -> main
+✅ Update 81037 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+ℹ️ Nessuna modifica da committare
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   5d51fa485..0f74de1fe  main -> main
+✅ Update 40525 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+ℹ️ Nessuna modifica da committare
+
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [remote rejected]     main -> main (cannot lock ref 'refs/heads/main': is at e260e9c0642868b15b20760161fcf6f978cbbdbf but expected cfbdb8fee8189af73bbbb9838cfb536c7c9fc239)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+
+Errore nel ciclo: Errore comando: git push origin main
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+ℹ️ Nessuna modifica da committare
+
