@@ -1,5 +1,5 @@
 {
-  "updated_at": "25/03/2026 18:00:08",
+  "updated_at": "25/03/2026 18:30:03",
   "items": [
     {
       "title": "Bitcoin ($): i prezzi rimangono sotto le resistenze",
@@ -37,10 +37,10 @@
       "is_new": false
     },
     {
-      "title": "ETF Bitcoin, 45 milioni di deflussi da Fidelity: cosa sta facendo il mercato USA",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9xSlI0dGFTdFVHRk12WWt0LWVTY2F2T09mT1dELTNrcDZzenIzNG95RE1mUVJxSU5qRmpHcnROM3Zpd0lFWXEwQk9NUi04OW9jdks0LWRqbTZEZVVTZXFYc016dWFzRUxtX3QzNUVB?oc=5",
+      "title": "Strategy presenta un nuovo piano da $44 miiardi per acquistare più Bitcoin",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1WSENDRkdVdFd3M1NvcTBsR0FRSTFmZm1KYjRQd2FmNXhONVdhcUZiUEdmMTEzbFdMbzB2c1haVGE0SDdycmNTVTVEQ0pEc3QtYnZwMTVDckVkUTZVYzRUMGJrM3FBa2V6VHRQX01EWQ?oc=5",
       "source": "TradingView",
-      "published_at": "Wed, 25 Mar 2026 10:53:02 GMT",
+      "published_at": "Wed, 25 Mar 2026 09:00:00 GMT",
       "is_new": false
     },
     {
@@ -56,13 +56,6 @@
       "source": "MarketScreener Italia",
       "published_at": "Wed, 25 Mar 2026 15:36:57 GMT",
       "is_new": true
-    },
-    {
-      "title": "Notizie Prezzo Bitcoin: Breakout Fallito a $71.000 Preannuncia Un Forte Calo",
-      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQNlNSZXpZR19KU2xGMzBKd3dPbkhfX1IzMDM3WVpmb1I0SVlCdUhGLWI2b0Mwd0xaaXhTTV9zUUM3NXdPOVFTbmtiX1NXSFBFclZpVzIzdDR3eUpJTl95WGNvTGVUVjRJelFfZVJvT2dpR3RMRXFNUFVNMHBMVkZRU3d1cDQ0ZlE5aTcyZURBa0N1Y0RDLUFGVDY2MU5OMURvTlRzWGQzUjByUUhDcHE5cVdCc21mS0lwdnNZbXJ4UTc?oc=5",
-      "source": "FXEmpire",
-      "published_at": "Tue, 24 Mar 2026 19:48:00 GMT",
-      "is_new": false
     },
     {
       "title": "H.C. Wainwright alza il target di prezzo di Bitcoin Depot a 4$",
@@ -84,6 +77,13 @@
       "source": "CoinDesk",
       "published_at": "Wed, 25 Mar 2026 03:00:00 GMT",
       "is_new": true
+    },
+    {
+      "title": "ETF Bitcoin, 45 milioni di deflussi da Fidelity: cosa sta facendo il mercato USA",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9xSlI0dGFTdFVHRk12WWt0LWVTY2F2T09mT1dELTNrcDZzenIzNG95RE1mUVJxSU5qRmpHcnROM3Zpd0lFWXEwQk9NUi04OW9jdks0LWRqbTZEZVVTZXFYc016dWFzRUxtX3QzNUVB?oc=5",
+      "source": "TradingView",
+      "published_at": "Wed, 25 Mar 2026 10:53:02 GMT",
+      "is_new": false
     }
   ]
 }
