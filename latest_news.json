@@ -1,5 +1,5 @@
 {
-  "updated_at": "25/03/2026 10:30:02",
+  "updated_at": "25/03/2026 11:00:03",
   "items": [
     {
       "title": "Bitcoin ($): i prezzi rimangono sotto le resistenze",
@@ -7,6 +7,13 @@
       "source": "Milano Finanza",
       "published_at": "Wed, 25 Mar 2026 06:30:00 GMT",
       "is_new": false
+    },
+    {
+      "title": "Strategy presenta un nuovo piano da $44 miiardi per acquistare più Bitcoin",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1WSENDRkdVdFd3M1NvcTBsR0FRSTFmZm1KYjRQd2FmNXhONVdhcUZiUEdmMTEzbFdMbzB2c1haVGE0SDdycmNTVTVEQ0pEc3QtYnZwMTVDckVkUTZVYzRUMGJrM3FBa2V6VHRQX01EWQ?oc=5",
+      "source": "TradingView",
+      "published_at": "Wed, 25 Mar 2026 09:00:00 GMT",
+      "is_new": true
     },
     {
       "title": "Notizie Prezzo Bitcoin: Breakout Fallito a $71.000 Preannuncia Un Forte Calo",
@@ -44,13 +51,6 @@
       "is_new": false
     },
     {
-      "title": "Prezzo del Bitcoin resta sopra $71K: i rialzisti stanno riprendendo il controllo?",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9obE1ERjkyZXlvREhVQ1RrSlctR3hXQU5EUkRGaFZLY2tLNHhRNjg2NE9RdDlfNlctZGdubEZSWFRXeVg4UUlCT0c3Z243MlV2R0RfWWJuNmd1RlJLcTJZck00cnFiUQ?oc=5",
-      "source": "TradingView",
-      "published_at": "Wed, 25 Mar 2026 07:24:53 GMT",
-      "is_new": false
-    },
-    {
       "title": "Lo smart-spaccio 4.0 ad Agrigento tra Bitcoin e Tiktok, la metamorfosi digitale dei clan e dei \"Paracchi\"",
       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQV2tYNjdwNTBvVEluZmoyWTUzUXhUU1Q3cU1qSk5PV0NaTXJ2LXRoWDJvN1U4N0lkcWQtdHRpOEQ1cHlEclRfdzVycUNEcHJybEUxZURQeEpNYnJWVTBLc0hmV21xVnNoS2FoV2tUSmdVTXNpbUd3ZmJXWHFvbWpkUDE3S3lyeW9WYWwxdlR2cTlxVGFwbmVYako5WGI1Sk92WGc?oc=5",
       "source": "AgrigentoNotizie",
@@ -79,11 +79,11 @@
       "is_new": false
     },
     {
-      "title": "Criptovalute emergenti, le migliori crypto in crescita nel 2026",
-      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQeUFRRDlFQV9YcVh6X2dpS1dIWXk4ZmhXbGZNVV90NFBzNmpsUWFqN0dNZ01YVy03RXlKMmpxUU5yYmpFYzJ5ZjdBaTlldWItNUdhUk4zR2k5U2o2UmhlaXBfV0t1WFFTMVIyb21qM19HY0VvTUFGNVltZHBMZm1qeTNrWkZveHE2MGduNW5mWVF2UVU?oc=5",
-      "source": "Quotidiano Nazionale",
-      "published_at": "Tue, 24 Mar 2026 18:01:32 GMT",
-      "is_new": false
+      "title": "BlackRock gela i crypto appassionati: no a Solana, Ripple e altcoin. Mercato alt \"senza senso\"",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9ycG1EbjFYTHA1ZC1jeEVMamdiNm9kaGdvS1pzRFNXTm5FWW5CRTQ1d2Q2b0NfOTJ3c0dlM2xUeW5nS3ZaYzlOandENG51Qk5RdzMyclNjZE9qVHVqeHNtaDdlVTRJZVF5bVhIakJjdklNY0QzVUxn?oc=5",
+      "source": "Criptovaluta.it",
+      "published_at": "Wed, 25 Mar 2026 08:14:00 GMT",
+      "is_new": true
     }
   ]
 }
