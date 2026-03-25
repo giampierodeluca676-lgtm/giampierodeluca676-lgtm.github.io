@@ -1,5 +1,5 @@
 {
-  "updated_at": "25/03/2026 12:00:05",
+  "updated_at": "25/03/2026 12:30:02",
   "items": [
     {
       "title": "Bitcoin ($): i prezzi rimangono sotto le resistenze",
@@ -23,17 +23,17 @@
       "is_new": false
     },
     {
+      "title": "STS Digital presenta una piattaforma cripto strutturata, acquisisce Kraken come partner di distribuzione",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPckxITDkwYWJ4SDJ4U1BhbDRRNVBUb0Fwc01FM2tJSWVzUFFud0k0blBSQWlYaXBBUFVFQzdKeXk1OTJ4Tl9PYU0xUk1BbEExOHpUVUhpam5FZWhWQmwtcDhLbm1aMV9NNHlFOF9jVF9yT21ELVhaR255VDkxbllLdmR0UWxFOG9QS0F2M2U5TE1TRWVXQXBQaFFsckh5Z0lWTE9SR19lajdFWEMtZHQ3X3hWRVk4N09MSVc5QkpaQnV0ZTluREJPQg?oc=5",
+      "source": "CoinDesk",
+      "published_at": "Wed, 25 Mar 2026 03:00:00 GMT",
+      "is_new": true
+    },
+    {
       "title": "Notizie Prezzo Bitcoin: Breakout Fallito a $71.000 Preannuncia Un Forte Calo",
       "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQNlNSZXpZR19KU2xGMzBKd3dPbkhfX1IzMDM3WVpmb1I0SVlCdUhGLWI2b0Mwd0xaaXhTTV9zUUM3NXdPOVFTbmtiX1NXSFBFclZpVzIzdDR3eUpJTl95WGNvTGVUVjRJelFfZVJvT2dpR3RMRXFNUFVNMHBMVkZRU3d1cDQ0ZlE5aTcyZURBa0N1Y0RDLUFGVDY2MU5OMURvTlRzWGQzUjByUUhDcHE5cVdCc21mS0lwdnNZbXJ4UTc?oc=5",
       "source": "FXEmpire",
       "published_at": "Tue, 24 Mar 2026 19:48:00 GMT",
-      "is_new": false
-    },
-    {
-      "title": "Questo venerdì scade un enorme contratto di opzioni su bitcoin del valore di 14 miliardi di dollari e indica 75.000 dollari come magnete per il prezzo",
-      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOVnYtU2tlMnBkWXgta3pZNm9TZmRLcEdiX2U5TnYzM2tQU3Q4SE9tbURIWE1jTXpiM3dJYmhzR0RHZkZJWnpLeFQwSVVvS0RFcEE5MTJJcWxHME9SdjN2VFB4M2txT2pFTzFZcjZ1aHNMZlhpTEpEVmFuQ0JsWXUtZWhrS29hWW9IV0xpeHdld3U5N0dxdU9mVXNHaGhvZnAxQ3FhOTYySmpqdDZUZ25heTVRM1FCVkdyUDVoWWI0N1RENTVRUUpFV0EzeFEwMU9LalMtQzBJamxBUmxvSU1xNzBmTllqbTBL?oc=5",
-      "source": "CoinDesk",
-      "published_at": "Wed, 25 Mar 2026 00:10:00 GMT",
       "is_new": false
     },
     {
@@ -58,13 +58,6 @@
       "is_new": false
     },
     {
-      "title": "H100 punta a creare la più grande Bitcoin treasury europea con 3.500 BTC",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNT2RVWDU3dEI1VFVTT01WSDF6SjFGRXNhcE5Fc1dteGsycldNemJqbTV5c2ktMFJyeHJNc3Z6ZTJhbUt6cElkWU1GOXBEekxtTnJmMExYaFpWMjJDdEVZOEMwa3lCREYxV2tpMF9TM1hxck5WNjdDSUc3U3F5T013NVFaOWxIN2lf?oc=5",
-      "source": "Yahoo Finanza",
-      "published_at": "Tue, 24 Mar 2026 16:24:13 GMT",
-      "is_new": false
-    },
-    {
       "title": "Binance mette alla prova una famosa narrativa su Bitcoin con un decennio di dati di mercato",
       "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE42SWxRb3UwS3I1UzU0TzRMZHVfM2lELUhVVDFDMHRVU2ZQWjVPdXNHU0pxOHNkc1VmRV9nd2I2czU1QW5hdVVHMDZ6S2dfdG5qZVNybkJFb0owdG10UGthcTJEYkF1TGptcnY2YjBqeGlCc1d5UnlVME1vdlM?oc=5",
       "source": "BeInCrypto",
@@ -72,11 +65,11 @@
       "is_new": true
     },
     {
-      "title": "Previsione del prezzo di Bitcoin: la chiarezza normativa favorirà un breakout? BTC supera i 71.000 dollari",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNZWdwenpVeGRoTURxUnIwNDdEeVdjbC1sU1lFcmVzNzlVVVVYRzNmNi15dG5lWUZhd1JvMk5xSEtRQ0tpYTVuTHMwTFFScUpxLVdIandkYkw4NXRSeWFwMWMwN0hLRTRBYkVxWXYzZGMwdlh1QUNGZFNNMDMzbk1Fd1RnRGN3UmpCMFJaaE9FYzN0M1FyZXlTQS1pcXRKbHB1R1N3?oc=5",
-      "source": "Traders Union",
-      "published_at": "Wed, 25 Mar 2026 06:02:29 GMT",
-      "is_new": true
+      "title": "H100 punta a creare la più grande Bitcoin treasury europea con 3.500 BTC",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNT2RVWDU3dEI1VFVTT01WSDF6SjFGRXNhcE5Fc1dteGsycldNemJqbTV5c2ktMFJyeHJNc3Z6ZTJhbUt6cElkWU1GOXBEekxtTnJmMExYaFpWMjJDdEVZOEMwa3lCREYxV2tpMF9TM1hxck5WNjdDSUc3U3F5T013NVFaOWxIN2lf?oc=5",
+      "source": "Yahoo Finanza",
+      "published_at": "Tue, 24 Mar 2026 16:24:13 GMT",
+      "is_new": false
     },
     {
       "title": "Prezzo Bitcoin oggi: sale sopra i 71.000$ tra segnali contrastanti sulla guerra con l’Iran - Investing.com",
@@ -84,6 +77,13 @@
       "source": "Quotazioni, Borsa, Economia e Finanza",
       "published_at": "Wed, 25 Mar 2026 06:35:00 GMT",
       "is_new": true
+    },
+    {
+      "title": "Questo venerdì scade un enorme contratto di opzioni su bitcoin del valore di 14 miliardi di dollari e indica 75.000 dollari come magnete per il prezzo",
+      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOVnYtU2tlMnBkWXgta3pZNm9TZmRLcEdiX2U5TnYzM2tQU3Q4SE9tbURIWE1jTXpiM3dJYmhzR0RHZkZJWnpLeFQwSVVvS0RFcEE5MTJJcWxHME9SdjN2VFB4M2txT2pFTzFZcjZ1aHNMZlhpTEpEVmFuQ0JsWXUtZWhrS29hWW9IV0xpeHdld3U5N0dxdU9mVXNHaGhvZnAxQ3FhOTYySmpqdDZUZ25heTVRM1FCVkdyUDVoWWI0N1RENTVRUUpFV0EzeFEwMU9LalMtQzBJamxBUmxvSU1xNzBmTllqbTBL?oc=5",
+      "source": "CoinDesk",
+      "published_at": "Wed, 25 Mar 2026 00:10:00 GMT",
+      "is_new": false
     }
   ]
 }
