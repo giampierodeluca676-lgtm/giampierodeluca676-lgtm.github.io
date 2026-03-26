@@ -21557,3 +21557,156 @@ Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coing
 Attendo 30 minuti per il prossimo ciclo...
 Errore nel ciclo: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=bitcoin&price_change_percentage=24h
 Attendo 30 minuti per il prossimo ciclo...
+remote: This repository moved. Please use the new location:        
+remote:   https://github.com/Keygap-Official/https-keygap-official.github.io.git        
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   381974c7b..3ce782b89  main -> main
+✅ Update 83748 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 4eda094ec] Elite update 30457
+ 6 files changed, 162 insertions(+), 34 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_26_03_2026_12_41.html
+remote: This repository moved. Please use the new location:        
+remote:   https://github.com/Keygap-Official/https-keygap-official.github.io.git        
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   9da2afc0d..4eda094ec  main -> main
+✅ Update 30457 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main f60cadb7f] Elite update 78438
+ 6 files changed, 234 insertions(+), 13 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_26_03_2026_13_11.html
+remote: This repository moved. Please use the new location:        
+remote:   https://github.com/Keygap-Official/https-keygap-official.github.io.git        
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   f09181e28..f60cadb7f  main -> main
+✅ Update 78438 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 8f90e5296] Elite update 54180
+ 5 files changed, 157 insertions(+), 30 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_26_03_2026_13_41.html
+remote: This repository moved. Please use the new location:        
+remote:   https://github.com/Keygap-Official/https-keygap-official.github.io.git        
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   f11b82f63..8f90e5296  main -> main
+✅ Update 54180 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main c78f8a30c] Elite update 54488
+ 6 files changed, 242 insertions(+), 24 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_26_03_2026_14_11.html
+remote: This repository moved. Please use the new location:        
+remote:   https://github.com/Keygap-Official/https-keygap-official.github.io.git        
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   7db7e546f..c78f8a30c  main -> main
+✅ Update 54488 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main fef882dd2] Elite update 59384
+ 6 files changed, 341 insertions(+), 36 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_26_03_2026_14_41.html
+remote: This repository moved. Please use the new location:        
+remote:   https://github.com/Keygap-Official/https-keygap-official.github.io.git        
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   341f11bb3..fef882dd2  main -> main
+✅ Update 59384 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 108bd73fd] Elite update 42213
+ 5 files changed, 158 insertions(+), 31 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_26_03_2026_15_11.html
+remote: This repository moved. Please use the new location:        
+remote:   https://github.com/Keygap-Official/https-keygap-official.github.io.git        
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   29dd98355..108bd73fd  main -> main
+✅ Update 42213 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 928dce990] Elite update 62097
+ 6 files changed, 170 insertions(+), 42 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_26_03_2026_15_41.html
+remote: This repository moved. Please use the new location:        
+remote:   https://github.com/Keygap-Official/https-keygap-official.github.io.git        
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+   9bc4b4a12..928dce990  main -> main
+✅ Update 62097 pubblicato
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main b9e693947] Elite update 44948
+ 6 files changed, 247 insertions(+), 27 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_26_03_2026_16_11.html
+
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [rejected]            main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Errore nel ciclo: Errore comando: git push origin main
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 2f7cfe6a8] Elite update 22029
+ 6 files changed, 240 insertions(+), 20 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_26_03_2026_16_41.html
+
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [rejected]            main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Errore nel ciclo: Errore comando: git push origin main
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 9710c9641] Elite update 30416
+ 6 files changed, 233 insertions(+), 13 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_26_03_2026_17_11.html
+
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [rejected]            main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Errore nel ciclo: Errore comando: git push origin main
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 1f2a9a778] Elite update 71307
+ 7 files changed, 245 insertions(+), 24 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_26_03_2026_17_41.html
+
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [rejected]            main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Errore nel ciclo: Errore comando: git push origin main
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
