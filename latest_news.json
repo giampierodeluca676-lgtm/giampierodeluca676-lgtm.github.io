@@ -1,11 +1,25 @@
 {
-  "updated_at": "27/03/2026 21:13:55",
+  "updated_at": "27/03/2026 21:30:03",
   "items": [
+    {
+      "title": "Morgan Stanley entra nella gara per l'ETF Bitcoin con una commissione di mercato leader e bassa",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNcDFodkthdURSbGlhMnc0MTZGaXFZNDJ4T0RBWEdSUzRnRTdOY1Z0TWY3Y09WZjZvSDhlY2FXcmdmMUJnYWtZTzBEU0hnQk1nSXRjQ3dQV2t2SGF0aVpmcUpBMF9wS0pjSVkwdDViejJqMVlCeDEzcFl1cWFXY25WdF8yOElnQl9UWXhMLVFLVXQ0UGc5MUcydlRJNWxTbFRMOTFmYktGaWtVelhwdFdzR0xFRQ?oc=5",
+      "source": "CoinDesk",
+      "published_at": "Fri, 27 Mar 2026 12:21:00 GMT",
+      "is_new": true
+    },
     {
       "title": "Bitcoin a 80.000 dollari? Per Novogratz la risalita è vicina: “Ha battuto l’oro nel caos della guerra”",
       "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPSE1iOXl6OHNvWlN5OElyN0F4emg5Q0ZfSHFuRE1qV0xHUkp5akYzOEZxejVZRUF5YXJTbjB6ZGJwVW1FQ085Zm5xQWtVRGxseHllTXZRZWhEd0dhM05jVmNaTnl6MGZrSFJNaEhnMWlIUHJ5UkxZTEZPTUlGdW11ajBObHU?oc=5",
       "source": "it.finance.yahoo.com",
       "published_at": "Fri, 27 Mar 2026 10:53:53 GMT",
+      "is_new": false
+    },
+    {
+      "title": "Bitcoin ed Ethereum rompono supporti: Hormuz e Treasury affossano mercati",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQUG5PZ3l4RHFXRHRTMDJNS09SZ2pBMjN0ZXdKLUF0QzRKdHpjc3pZMkFLRUYtdWJETGRzeDlpc29VS0RFRHM4aHBITzNNc0s3Xy1kVTFsaWtCZGRnbUxFV0w0RUphTTJncHk3b25JT3JhYURSUGh2c25XRkJScFBhSzRsVi1iSTRaNmhRTlFJSQ?oc=5",
+      "source": "Criptovaluta.it",
+      "published_at": "Fri, 27 Mar 2026 15:17:00 GMT",
       "is_new": false
     },
     {
@@ -16,18 +30,18 @@
       "is_new": false
     },
     {
+      "title": "Flessione per le principali criptovalute; Bitcoin scivola sotto i 67.000 dollari",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPc3gzdENELUE1aXN3b3NxTWFxNDhrN0pwZzQ1X3hoZ0huTXYxR2VQM0lTREQ5NnF1UTR5Zk5ZV2oydnRwOHkxOXFXMzNibkthbF8zdFotOHU1cnc0U2VOTGdVelBZUjBkT0F1cldRNXlNWXBoWEJNQW10UVV1czk0OWZhZWM3YS1saWNvNlJTNnBEOWlWUldBVjUxR3ZMeW5IZGJqb2F3Tm5WMTgzdEFDc1NfeXo3MFcxMkZhb2had2JROUkwbGJFX2xoSVY2SDA?oc=5",
+      "source": "MarketScreener Italia",
+      "published_at": "Fri, 27 Mar 2026 20:05:15 GMT",
+      "is_new": false
+    },
+    {
       "title": "Il Bitcoin scende sotto i 67.000 dollari mentre le tensioni geopolitiche e la scadenza di opzioni per un valore di 14 miliardi di dollari pesano sui mercati",
       "link": "https://news.google.com/rss/articles/CBMikgJBVV95cUxOSFhkX3p6b3Zzd2xIcjBUY0htS1I3NEtyVjYtaWw5eHJNUGh6ZEJaZjhYSmdSTkgyMWtKTkZHVGFTZ0ljQThmWEtXbU03NFNZUWFBajBCR24xaURSRk5kdUNhcVdmTjF0dmN6UWZMVWVGSmRwUTh5LWQ4bEFKU3prZDV1ZVpJUF9wYnhlOVdLNlRWWGJDZXV0WGttMkduQV9KZUtFNDhkLUZVWWZVeTZ0YVgzSmNFUHducjJRQXc3b3B1RE1PTllVQjFMYzQyZlh4ZXpTclFFeHViZWV5TjNLcm9OdkRTT2hqRTE2dDZhWVdIM25MNUNxbUw0ZmNhWmo5RXIyV053RHpDRVVFM2lKd2dR?oc=5",
       "source": "Bitcoin.com News",
       "published_at": "Fri, 27 Mar 2026 13:21:05 GMT",
       "is_new": false
-    },
-    {
-      "title": "Flessione per le principali criptovalute; Bitcoin scivola sotto i 67.000 dollari",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPc3gzdENELUE1aXN3b3NxTWFxNDhrN0pwZzQ1X3hoZ0huTXYxR2VQM0lTREQ5NnF1UTR5Zk5ZV2oydnRwOHkxOXFXMzNibkthbF8zdFotOHU1cnc0U2VOTGdVelBZUjBkT0F1cldRNXlNWXBoWEJNQW10UVV1czk0OWZhZWM3YS1saWNvNlJTNnBEOWlWUldBVjUxR3ZMeW5IZGJqb2F3Tm5WMTgzdEFDc1NfeXo3MFcxMkZhb2had2JROUkwbGJFX2xoSVY2SDA?oc=5",
-      "source": "MarketScreener Italia",
-      "published_at": "Fri, 27 Mar 2026 20:05:15 GMT",
-      "is_new": true
     },
     {
       "title": "Dove vive il capitale digitale. I crypto-eventi da seguire",
@@ -44,27 +58,6 @@
       "is_new": false
     },
     {
-      "title": "Bitcoin ($): andamento contrastato",
-      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQMFNhdXJ3bEpuWVZTanRDTkNReERQeUhmRXhyc21NRnNVZVE0Zk9Fa18za2w5dWxtMGw4MkVscWxBMTNzcnMzZE1CdzBxXzBiQnFNbWRwMVVVR1JnSGJlUTR1WnFIem1SQndxUGxMdmE2U0RYeUhsSVgxZ2pwaU9DMEhVdWVJRDFWRW1YMFJuYUZubGY4RGlNSW5ETnMtcVh6?oc=5",
-      "source": "Milano Finanza",
-      "published_at": "Fri, 27 Mar 2026 06:18:35 GMT",
-      "is_new": false
-    },
-    {
-      "title": "Bitcoin ed Ethereum rompono supporti: Hormuz e Treasury affossano mercati",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQUG5PZ3l4RHFXRHRTMDJNS09SZ2pBMjN0ZXdKLUF0QzRKdHpjc3pZMkFLRUYtdWJETGRzeDlpc29VS0RFRHM4aHBITzNNc0s3Xy1kVTFsaWtCZGRnbUxFV0w0RUphTTJncHk3b25JT3JhYURSUGh2c25XRkJScFBhSzRsVi1iSTRaNmhRTlFJSQ?oc=5",
-      "source": "Criptovaluta.it",
-      "published_at": "Fri, 27 Mar 2026 15:17:00 GMT",
-      "is_new": false
-    },
-    {
-      "title": "Notizie crypto: Bitcoin, Coinbase, Strategy, Gemini, Galaxy travolti dalla crisi di mercato",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPbkRNX09Dc3dPSFlySXJyeGlyMmRSRWZGMG12cmVtbFlaU3NiWUduS3VPREp0Sy13NHdrZTRNUFdzczRCOTBNdU0tc0Fpbng0aDJpOTBnVGFadkozeVBrd0xsRWVhWEJOQnItYUdFaHY3NWZNb1BNeExyRFpkOGxNU2otdmd0a0tHMkd1eGJFc1BnT09qWEpVbWxzNUdlcTZkM3RrWXZNLWtHTnppdGJFZUtsQmVNMDFjRzNqZGZ5U241ZFBqOUE?oc=5",
-      "source": "CoinDesk",
-      "published_at": "Fri, 27 Mar 2026 10:48:00 GMT",
-      "is_new": true
-    },
-    {
       "title": "Previsioni Prezzo Bitcoin: “Dump Istituzionale” Confermato Prepara il Terreno per una Discesa a 60.000 USD",
       "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPZm9MaXJhOEJpUG5BdTV2dEdWbVJSZUNXdWVSeTh2N3NHcVMxTjlZMW5YMXhad0Z5dUV4UWhScm01SldrRFpWOWY5TmFDOW15c3BIVDlYLU91SHg3MU9uX3BUT3FCRWc5V1A1WVNKTGw3bS1GbVd1VjBZT3FEdG82WkUtT2dzU1JzYWpJblUzQmJUWjdWaVhhY2FIUzhQcHEtLTFhZnRObnktR0dwY3h4UTNkajd3R2h1VS1Bc2RUTjg4dEFDaS1mNlFxZ0x5RFZXV28xcXVidWdWOXVXbGxlR3kwbjM0UmM?oc=5",
       "source": "FXEmpire",
@@ -72,10 +65,10 @@
       "is_new": true
     },
     {
-      "title": "Oro in forte calo, mentre Bitcoin mostra resilienza: l’analisi",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPWHdTWVhvUkdSSkxqWHF4SlZGOFBkblh3UmZTVEVxNEpmYzRLckl5Mmw1MDBKR0F6ZnRuaE9LWkZJVXAzUl9NRVFpSXl1VkJJUGV2cWNLaGI3YjVHZ3pTVTVGTDRzcW9LdzFKNDZ3NTFrTGZrSEYxSHEzNnVKN01hOWh5WkpZWG5zaThyQkVSbzFxcjFhbzh3RG16NA?oc=5",
-      "source": "Conio Blog",
-      "published_at": "Fri, 27 Mar 2026 10:16:06 GMT",
+      "title": "Bitcoin ($): andamento contrastato",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQMFNhdXJ3bEpuWVZTanRDTkNReERQeUhmRXhyc21NRnNVZVE0Zk9Fa18za2w5dWxtMGw4MkVscWxBMTNzcnMzZE1CdzBxXzBiQnFNbWRwMVVVR1JnSGJlUTR1WnFIem1SQndxUGxMdmE2U0RYeUhsSVgxZ2pwaU9DMEhVdWVJRDFWRW1YMFJuYUZubGY4RGlNSW5ETnMtcVh6?oc=5",
+      "source": "Milano Finanza",
+      "published_at": "Fri, 27 Mar 2026 06:18:35 GMT",
       "is_new": false
     },
     {
@@ -84,6 +77,13 @@
       "source": "it.finance.yahoo.com",
       "published_at": "Fri, 27 Mar 2026 12:01:17 GMT",
       "is_new": true
+    },
+    {
+      "title": "Bitcoin in forte calo, vicino a 66'000 dollari",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQZFplb21nRGFZOGg4Ykt5YzJpNWhPbTJfelFja083ZGhYRVZMUk95UG1GMnc1LVBSazRTRUJhOVNCQjVJczZvbmNiYjYwcXEzX2lveFRxZUFlNkFPX1J6SEg2ZUIzb3RCQlpwMFZUeE5IQXAwOGMxdXBqbE9XaFJvZEt1M09PaGlmTzVSVjAzV1NOZlh4T2tadXhlbVQtMl83VFE?oc=5",
+      "source": "MarketScreener Italia",
+      "published_at": "Fri, 27 Mar 2026 15:48:20 GMT",
+      "is_new": false
     }
   ]
 }
