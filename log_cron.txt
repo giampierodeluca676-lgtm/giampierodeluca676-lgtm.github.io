@@ -32059,3 +32059,152 @@ Attendo 30 minuti per il prossimo ciclo...
  6 files changed, 521 insertions(+), 13 deletions(-)
  create mode 100644 Report_Finanziari/Report_Mondiale_27_03_2026_20_01.html
 
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [rejected]            main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Errore nel ciclo: Errore comando: git push origin main
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 65c1b0d3b] Elite update 45765
+ 5 files changed, 144 insertions(+), 17 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_27_03_2026_16_13.html
+
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [rejected]            main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Errore nel ciclo: Errore comando: git push origin main
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main cb86957f6] Elite update 17637
+ 6 files changed, 151 insertions(+), 23 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_27_03_2026_16_43.html
+
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [rejected]            main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Errore nel ciclo: Errore comando: git push origin main
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main ca21ac46e] Elite update 46042
+ 5 files changed, 147 insertions(+), 20 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_27_03_2026_17_13.html
+
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [rejected]            main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Errore nel ciclo: Errore comando: git push origin main
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main edef10f88] Elite update 20109
+ 6 files changed, 157 insertions(+), 29 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_27_03_2026_17_43.html
+
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [rejected]            main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Errore nel ciclo: Errore comando: git push origin main
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 1ab945094] Elite update 92654
+ 6 files changed, 234 insertions(+), 18 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_27_03_2026_18_13.html
+
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [rejected]            main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Errore nel ciclo: Errore comando: git push origin main
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main a81c5aabb] Elite update 98156
+ 5 files changed, 151 insertions(+), 24 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_27_03_2026_18_43.html
+
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [rejected]            main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Errore nel ciclo: Errore comando: git push origin main
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 0beea06d8] Elite update 53593
+ 6 files changed, 249 insertions(+), 24 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_27_03_2026_19_13.html
+
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [rejected]            main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Errore nel ciclo: Errore comando: git push origin main
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
+[main 4eaed5e37] Elite update 82845
+ 5 files changed, 144 insertions(+), 17 deletions(-)
+ create mode 100644 Report_Finanziari/Report_Mondiale_27_03_2026_19_43.html
+
+To https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git
+ ! [rejected]            main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/giampierodeluca676-lgtm/giampierodeluca676-lgtm.github.io.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Errore nel ciclo: Errore comando: git push origin main
+Attendo 30 minuti per il prossimo ciclo...
+✅ Telegram inviato
+ℹ️ Blogger non configurato: skip publish.
