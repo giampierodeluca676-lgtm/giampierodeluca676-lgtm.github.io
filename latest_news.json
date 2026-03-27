@@ -1,5 +1,5 @@
 {
-  "updated_at": "27/03/2026 00:42:28",
+  "updated_at": "27/03/2026 01:00:02",
   "items": [
     {
       "title": "Bitcoin, Fannie Mae adesso li accetta come garanzia sui mutui per la casa",
@@ -16,17 +16,17 @@
       "is_new": false
     },
     {
+      "title": "L'ETF su Bitcoin di Morgan Stanley è prossimo al lancio sul NYSE",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQUXFYVGNvSl9mamdpMzJ1MEQwN0pSRGIxSVdIamFfcmlEck9GbjVCOGM3RlFEWHNRbFhIYTZmendKR3ZuTVVHSnFMU0U4ak9kMGdjYkszLTlsdFBBTUgzUVdYV1Nha1dmMlZ5ejhwT2dEejdsSVowZ0ZqZ2VKWG9LNklrR1VyTmpBcF8yQmQ2R19SRkdBcnQ4?oc=5",
+      "source": "Bitcoin.com News",
+      "published_at": "Thu, 26 Mar 2026 23:58:47 GMT",
+      "is_new": true
+    },
+    {
       "title": "Valbelluna, anziano compra Bitcoin: persi 100 mila euro",
       "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNdHVGTzIzbjJHbllNTFN2cEJTdEFnS0pfLWtCUXpYbjFsOWJDVzFjOWp1aVVFRlZLeFpINnhHQ2hHbHJfOHdVaG1DN3MyZEN1Y0xnUlh1NDZobW9tSXd3Q1hxaERhWjFSbGdPXzRrOTYtWkZOMks2WnowYjcwbHdnMlJWdzlWdnpqQllKM2lraVM?oc=5",
       "source": "Corriere delle Alpi",
       "published_at": "Thu, 26 Mar 2026 20:44:10 GMT",
-      "is_new": false
-    },
-    {
-      "title": "Goldman Sachs segnala che il Bitcoin ha toccato il minimo e indica opportunità interessanti nel settore delle criptovalute",
-      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNcy03TllfeGRnMkk0VFRNTEVjamF4N3NSaVRHTmRUbi0yTFVLYlY1Vng1T1MzeVhoNmdHU0ROaS1tekJ6MkJwY2ZFdHNtRmFnekkzTGI1bTVkbzNWbnQtdkxIVnQ3a3lxVVVTdTgxUzNXVk44SDdvc25yQ3hvSUZOWWd2RG14X0h5X0tuTVcxR3JNN1RuZmVQR3daeUVtN3p4RUZmMS0wMG91TzhFMGVWbmw2MnVqVDIwUUNPRG9yckszWWJFQ09BSmhMcGd3V2Q2UzdWX0sxQjF1LXJGWC1tck5pa1ZWQQ?oc=5",
-      "source": "Bitcoin.com News",
-      "published_at": "Thu, 26 Mar 2026 19:06:59 GMT",
       "is_new": false
     },
     {
@@ -79,10 +79,10 @@
       "is_new": false
     },
     {
-      "title": "Market Insight: Immobili, oro, petrolio e crypto",
-      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNVENmSzBpaVUzUnVLeDZ5TkVPMTFYMzBUWW5kSXh5Mno4ZEZhREVFRW1HeUJVSVZEU041WmZYM1lfVmVuZlJiTWlubnhqUTFBa0FoM1lqbm5LRkI5QmJYTmpjNm56WTd2Q1VfTFYtN2NsMFFYbzlGaUZ4RHlVRWNsT0YtQlBMbHR0Uk9QWnJJRHlfZ3c?oc=5",
-      "source": "Investing.com",
-      "published_at": "Thu, 26 Mar 2026 15:43:00 GMT",
+      "title": "Goldman Sachs segnala che il Bitcoin ha toccato il minimo e indica opportunità interessanti nel settore delle criptovalute",
+      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNcy03TllfeGRnMkk0VFRNTEVjamF4N3NSaVRHTmRUbi0yTFVLYlY1Vng1T1MzeVhoNmdHU0ROaS1tekJ6MkJwY2ZFdHNtRmFnekkzTGI1bTVkbzNWbnQtdkxIVnQ3a3lxVVVTdTgxUzNXVk44SDdvc25yQ3hvSUZOWWd2RG14X0h5X0tuTVcxR3JNN1RuZmVQR3daeUVtN3p4RUZmMS0wMG91TzhFMGVWbmw2MnVqVDIwUUNPRG9yckszWWJFQ09BSmhMcGd3V2Q2UzdWX0sxQjF1LXJGWC1tck5pa1ZWQQ?oc=5",
+      "source": "Bitcoin.com News",
+      "published_at": "Thu, 26 Mar 2026 19:06:59 GMT",
       "is_new": false
     }
   ]
