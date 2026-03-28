@@ -1,5 +1,5 @@
 {
-  "updated_at": "28/03/2026 16:30:06",
+  "updated_at": "28/03/2026 17:00:02",
   "items": [
     {
       "title": "Dal rally al crollo, come la guerra in Medio Oriente può ridisegnare il prezzo del bitcoin",
@@ -9,17 +9,17 @@
       "is_new": false
     },
     {
+      "title": "Il volume OTC di Binance aumenta mentre la domanda istituzionale di Bitcoin accelera nel 2026",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9udnpPYW5INlVORW9va0lvWUtPR1oxNF9YRmFJdHN4T0pxTS04anJOZGdxZ0FUR190ZXlWRkgxU0RGRjRUQ243NHRLTWl3WWl3aVZvQ19Pc2p0TlhBSlR4T3VpYXI?oc=5",
+      "source": "Binance",
+      "published_at": "Sat, 28 Mar 2026 10:59:14 GMT",
+      "is_new": true
+    },
+    {
       "title": "Un mese di guerra in Iran: il greggio vola, crypto in frenata e crollo per oro e argento [Analisi]",
       "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNQVRoOHd2UFlOaEJGb2lydzEzVlFDejBrcUNjek1oci1yTEdkSVZ4MGs1TTY2Tm1hZnotM1k1Yml1VTRLejFRcmJfMmpxcWloVS1rSlVNSnh6V2sxNDlKZW52MzNlc3A5NjRxZ2tKR012NTY4UWlYNlltVERPZDVONUEwZFhKUF8yMWRKNUNialdKUVhhbExKSGxn?oc=5",
       "source": "Criptovaluta.it",
       "published_at": "Sat, 28 Mar 2026 10:09:00 GMT",
-      "is_new": false
-    },
-    {
-      "title": "Wall Street va on-chain mentre le balene di Bitcoin accumulano e emergono segnali di trading rossi da $143M",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1oU1ZRRU85dGdLZXFheWx6NU9SZEt1eTBoYzROX3JROVViNmF2dUtUM0tuTW13Z3pmc2NaT1lqNnpsbkpwVXJjMTVwcUxyZ1N2bmJqLU1RNHlBMjhlb0FSVlVUZGs?oc=5",
-      "source": "Binance",
-      "published_at": "Sat, 28 Mar 2026 09:30:05 GMT",
       "is_new": false
     },
     {
@@ -44,11 +44,11 @@
       "is_new": false
     },
     {
-      "title": "Crypto, GPU e miliardi: la causa che mette NVIDIA all'angolo entra nel vivo",
-      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPUGFlM3NBbldQUjBzX3BSVEFmUEJZUzJqUG1ETVVJZ3c3ZkVTMW5qSzJvTFFGenBTdkZCMF9oN1J4bFhWMGpzT3FuMVVndnFzMGpxMEZPOWd6US0xZl9ybDlTdHNST0ZtYXNESXljSnRLcmloRk5vSUFsOHZBM0Nzek9RUVJQeVFrQ0sxXzdSR1FoRlBrWXRONFdHUXh6TUJWd01pQjM1V19JZTJNX2Q1NHp3NkNWeE9WVVBiekpWclc?oc=5",
-      "source": "Hardware Upgrade",
-      "published_at": "Sat, 28 Mar 2026 07:57:41 GMT",
-      "is_new": false
+      "title": "Bitcoin scende a $66K mentre il premio di Coinbase diventa più negativo, segnalando vendite guidate dagli Stati Uniti",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9QTTdHQmFPSzFxYWFfMDZxeTNMVExmZ3RGTktsbzBnTnJjT0xNRG83QjZWU3ZHTkhxakpnUlVxbVdtbGtDcS1oVWhJNU9ULWduR2NabFV5Rmp6cWhMc1dWU2h4TlI?oc=5",
+      "source": "Binance",
+      "published_at": "Sat, 28 Mar 2026 10:51:21 GMT",
+      "is_new": true
     },
     {
       "title": "Bitcoin: è sfida tra i due giganti di Wall Street. Morgan Stanley, commissioni shock",
@@ -65,6 +65,13 @@
       "is_new": true
     },
     {
+      "title": "Wall Street va on-chain mentre le balene di Bitcoin accumulano e emergono segnali di trading rossi da $143M",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1oU1ZRRU85dGdLZXFheWx6NU9SZEt1eTBoYzROX3JROVViNmF2dUtUM0tuTW13Z3pmc2NaT1lqNnpsbkpwVXJjMTVwcUxyZ1N2bmJqLU1RNHlBMjhlb0FSVlVUZGs?oc=5",
+      "source": "Binance",
+      "published_at": "Sat, 28 Mar 2026 09:30:05 GMT",
+      "is_new": false
+    },
+    {
       "title": "PANICO Bitcoin: il pattern ribassista minaccia i supporti tra Iran e Treasury [Analisi]",
       "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNRzd0QnlLZ2JtOUVnSlRZQmEzdi13c1lGWFV2ZXFoYTNVblEtMnpFeGp4VFpBdXBtbDROelRDTjgwMDhqekxWZzRmRjFPNDFzSHl6NndUNkpQWG42NjZ5MDdSYjZWZnFlTi1uOGFtZFNlZ1BDVENqajRycmVnXzF6THpaclBqb1hhSEFXdmhsR1o3UUtsVFVlMlNB?oc=5",
       "source": "Criptovaluta.it",
@@ -77,13 +84,6 @@
       "source": "Criptovaluta.it",
       "published_at": "Sat, 28 Mar 2026 14:27:00 GMT",
       "is_new": true
-    },
-    {
-      "title": "Bitcoin? Tutt'altro che «porto sicuro»: nei periodi di crisi delle Borse amplifica le perdite, ecco perché",
-      "link": "https://news.google.com/rss/articles/CBMinwJBVV95cUxPMUhRazVmMVJTMmhhX1M4VThjU1d2NFdsRmhvbEVCamIxdHhCNl9zS2ZlSFBsbW1MVWVCZThMd2hsZERlMDRnWm93SElYbGNkaVp2QUFwa2hLTGpzY2JxdW1sdUJoUkx0RWZzcm41SlNCQjRGN1VRMzRnbUNIQ3lkWlNHdk9mRE5SNjN6LThmQlFBRnJQSXFtNjV4WUMyZGNwcFRkRm92alVIcTJfWGJHQ0ZTRnA3UTg3UTZhN0NORm5rRUxmZ21NVTRRVlJQbms2Nm1zWFpMN2F2UUROQnY0VllJRC1oc21YVG9uQ1EyNXZYcTlLeEdDamVESktkdDcxWElZQXVUOGM5dFk1aVFSWExheER2dzVZbi1xRm9qZ9IBrwJBVV95cUxPcFpFTXZvR0h3eDlDckF0NnAxNUgxdHcyX2dqU191MHdSMmQzSzJPNzcwb0d6ejREMHJOeDc1VkpYazJDOGZza0pSSUp5YlEtOW42MEt0WnNvRGV2S3FVOGpmS2FVdWNHcV9fd0FoWWhydG8ydncwSnl6d1RWdFpDalJGdlRIRWRZTW9WZTdoN0daR0I0MHVGVGxfallMM1MwN0ZoV041VGJiREQ2allBbGpZSWZrR2o5XzludWdsWE9KU2JsVTN5N3YyMlN4Nnk0aWt0MFJ5MGV6MzZLN3oxa1BYNHdYS1g4U0xjRDBQOGNtT3lxXzlISktibUtwNnBSRlFlNEN6aDZ6NXJodTNoY3FTSWNNaENzNUFpamIzazhQM05mRXgyeFd6TE9YcWs?oc=5",
-      "source": "Corriere della Sera",
-      "published_at": "Sat, 28 Mar 2026 07:57:00 GMT",
-      "is_new": false
     }
   ]
 }
