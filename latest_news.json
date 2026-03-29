@@ -1,18 +1,11 @@
 {
-  "updated_at": "29/03/2026 15:30:06",
+  "updated_at": "29/03/2026 16:00:02",
   "items": [
     {
       "title": "Bitcoin e oro non sono più beni rifugio mentre il dollaro torna a correre: l’analisi",
       "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5xWWdhbm9HU09iYWVUNTNFVmlIYjlYZ2dJWlhyenkweExyMllzYlFSMUtqZkExX3A5UkVfbGNxQmpHbnBBNG1TSktycG1jNlZkSTc0MTM3U25TX2kyb2pCUGFQTXRPb05nWEx1N3NocHhZUHY0T2YxbzVlYmF6XzQ?oc=5",
       "source": "Criptovaluta.it",
       "published_at": "Sun, 29 Mar 2026 10:17:00 GMT",
-      "is_new": false
-    },
-    {
-      "title": "Previsione del prezzo Bitcoin 2026-2032: il BTC raggiungerà presto i 150.000 dollari?",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBpREF4bV9IYWNVcHhFVnZJNndLQW4yT0NKNFRva3h4UUNLX1F1NzVOdUNQUTdkTTUtajBuQWxSUjd3QXVGZE4ybFVKZE80enZ4SkQ4RGs5LVRJZUppbkg4RC1BMnhzaHFRa3c?oc=5",
-      "source": "Cryptopolitan",
-      "published_at": "Sun, 29 Mar 2026 11:11:00 GMT",
       "is_new": false
     },
     {
@@ -28,6 +21,13 @@
       "source": "Traders Union",
       "published_at": "Sun, 29 Mar 2026 06:02:21 GMT",
       "is_new": false
+    },
+    {
+      "title": "Perché il Canada ha vietato le donazioni in crypto che non sono mai state usate",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOV1dzdlpzcDctekxEakJOcEZVMTYtV2t3Q3FvTERBRlppdjJKVjkxM0xBV0N1YUpBU1FyNEhqc0ZKVWFnYVJmRUVJdEFpM2VRb2VYUTZuR1ZEYWhoalBpbHZXanVWSDIwS28xSE0wSTdnVFUwZjQ2cERCczlBelI5TzZRemFjRHNERGdiaGlSY2JCaU1sTmdUNEd6UW8xeG5ySWRueW5OOUNyWG5zWUlOMQ?oc=5",
+      "source": "Yellow.com",
+      "published_at": "Sun, 29 Mar 2026 07:07:50 GMT",
+      "is_new": true
     },
     {
       "title": "La proposta di legge \"Strong and Free Elections Act\" inasprisce le norme sulle donazioni in criptovaluta in Canada",
@@ -51,17 +51,17 @@
       "is_new": false
     },
     {
-      "title": "Previsioni prezzo Bitcoin: modello allarmante mentre aumentano i rischi geopolitici",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOa3hYaXViMU9Zc0V5TFlLWlljRFVzZy1kSE1UaDFZMFpaS2JaUEtMTkVEbEdRZjVXX21qdG9BdEMyVzZnQnN4X3dXN25kbnFhOXE0WUw5MGE0MEZFSnlIRm16WE1XTTBXM0stQ2htUkdFQm9kcFJNSFNGNnZtR3JuU2ZCSkFiOVVPUHlkSTVzem1LekMzTURDWFVidUZlVXpsb0Z3NmdCRENjd3hQV09fYW9FXzhoTlJLWXpVYmY4RWN0dw?oc=5",
-      "source": "Invezz",
-      "published_at": "Sun, 29 Mar 2026 04:52:00 GMT",
-      "is_new": false
-    },
-    {
       "title": "Approfondimenti di Crypto News Portal(@TerraHaberTR)",
       "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE94LV9EekNTMTNmZU9XVllrX3VrczRKcnpyOTRaYy1qSmg5VWZnamdjWXhQZVJTbkRVcVJvRVhURHBvWHF1UjlQYTZ3VVNhZ1cxc0VkMkZGbG5VcExkdkZSbWpfYVk?oc=5",
       "source": "Binance",
       "published_at": "Sat, 28 Mar 2026 21:24:26 GMT",
+      "is_new": false
+    },
+    {
+      "title": "Previsioni prezzo Bitcoin: modello allarmante mentre aumentano i rischi geopolitici",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOa3hYaXViMU9Zc0V5TFlLWlljRFVzZy1kSE1UaDFZMFpaS2JaUEtMTkVEbEdRZjVXX21qdG9BdEMyVzZnQnN4X3dXN25kbnFhOXE0WUw5MGE0MEZFSnlIRm16WE1XTTBXM0stQ2htUkdFQm9kcFJNSFNGNnZtR3JuU2ZCSkFiOVVPUHlkSTVzem1LekMzTURDWFVidUZlVXpsb0Z3NmdCRENjd3hQV09fYW9FXzhoTlJLWXpVYmY4RWN0dw?oc=5",
+      "source": "Invezz",
+      "published_at": "Sun, 29 Mar 2026 04:52:00 GMT",
       "is_new": false
     },
     {
@@ -72,10 +72,10 @@
       "is_new": true
     },
     {
-      "title": "La piattaforma di titoli azionari tokenizzati di Kraken quota VCXx, offrendo esposizione a SpaceX, OpenAI, Anthropic e altre società",
-      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQajVnczlyMjBBak1RZTZYMm1LY3hQbHhWVi0xXzRNMWo3aVBVV21nX2h2SFJoWXJoSEhsbUxxdmNMM3NSa0N1VEJncVJZNnQtZ1EzaktPcEZ4N2pWVlpuQXRCdVlSTkp1b20xZEZiNGxtQUlFS0R2MXpMcXJ1eEdMdjJFcTFNeHpmejYwUHdHM1VoTHl3ZG1jTF9CTEN2a21Ec0dJemgxc09UakdNZ3pPU3FxZEFQWmhaY190R3ZjYWh2OU9FZWdhUTZROUU4T2hMZl9fcllyb2FScUQ3Qjd4X2dXcUZ3UmQzN2lVRzI1dw?oc=5",
+      "title": "Gli ETF su Bitcoin chiudono la settimana con un deflusso di 225 milioni di dollari, mentre Ether registra un calo per l'ottavo giorno consecutivo",
+      "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOZVlqR1kzN3IwTWwzVGhRLWFqNlJya0JCR1IwSWZQRmdwcTZyWjlQSmI5aklKSVFXemxiSk1QaEhmNld5R3MyVkZZanV5blk4SUYyUERtMXNXOUVQTWF0RExEVG12RzdkNTcyZGNvMnRvWEpQUXhOS0h3VzNucTBtekF4UkhfUFFQZGhkdWhyNUNPUDdqM0ZDZDV6aXFiXzAzSDM2blA2OV84R21YNmRXVkZ6ekFmUXBjTkp3aGN6TmFQdWYzdVhRQVI5Z0dKLVJ5emRWNGpGcVlNVXdweUpVVlJPQ0M2d05pUmVnYnFGaUtMYWlkZEV5dV9GV3c5U0dvUEE?oc=5",
       "source": "Bitcoin.com News",
-      "published_at": "Sun, 29 Mar 2026 08:11:04 GMT",
+      "published_at": "Sun, 29 Mar 2026 01:45:41 GMT",
       "is_new": true
     },
     {
