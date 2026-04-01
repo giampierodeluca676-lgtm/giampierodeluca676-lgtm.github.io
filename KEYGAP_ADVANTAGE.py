@@ -16,9 +16,12 @@ LATEST_REPORT_HTML = ROOT / "latest_report.html"
 ARCHIVIO = ROOT / "archivio.html"
 
 # --- CONFIGURAZIONE ---
+# Questo link serve per i tasti "Torna alla dashboard" e per Telegram
 SITE_URL = "https://keygap-official.github.io/https-keygap-official.github.io/"
 TELEGRAM_BOT_TOKEN = "8736329123:AAFa9k_rtKOGQmpwXGICRu-jjdAGEUuWTZM"
 TELEGRAM_CHAT_ID = "@KeygapTerminal"
+
+# MONETIZZAZIONE ADSTERRA (Verificata: Presente)
 AD_POPUNDER = '<script src="https://pl28819682.profitablecpmratenetwork.com/07/47/37/074737f2d1be0f3c0e9de0585a695fd7.js"></script>'
 
 def fmt_eur(v):
@@ -32,16 +35,19 @@ def fetch_btc():
         r = requests.get("https://api.coingecko.com/api/v3/coins/markets", params={"vs_currency": "eur", "ids": "bitcoin", "price_change_percentage": "24h"}, timeout=20)
         data = r.json()[0]
         p = data["current_price"]
+        # NOMI DELLE VARIABILI SINCRONIZZATI CON INDEX.HTML PER ELIMINARE I TRATTINI
         return {
             "id": random.randint(10000, 99999),
             "updated_at": now_it(),
             "price_eur": p,
-            "change": round(data["price_change_percentage_24h"], 2),
-            "high": data["high_24h"],
-            "low": data["low_24h"],
-            "support": round(p * 0.982, 2),
-            "resistance": round(p * 1.021, 2),
-            "bias": "Rialzista" if data["price_change_percentage_24h"] > 0 else "Ribassista"
+            "change_24h_pct": round(data["price_change_percentage_24h"], 2),
+            "high_24h_eur": data["high_24h"],
+            "low_24h_eur": data["low_24h"],
+            "support_eur": round(p * 0.982, 2),
+            "resistance_eur": round(p * 1.021, 2),
+            "bias": "Rialzista" if data["price_change_percentage_24h"] > 0 else "Ribassista",
+            "volatility": "Alta" if abs(data["price_change_percentage_24h"]) > 3 else "Media",
+            "quick_read": f"Analisi Terminale: BTC tiene l'area {fmt_eur(p)}. Supporto critico a {fmt_eur(p*0.982)}."
         }
     except: return None
 
@@ -68,17 +74,17 @@ def write_professional_report(report):
         <div class="card">
             <div class="label">Quotazione Attuale BTC/EUR</div>
             <div style="font-size:40px; font-weight:bold;">{fmt_eur(report['price_eur'])}</div>
-            <span class="status">Trend: {report['bias']} ({report['change']}%)</span>
+            <span class="status">Trend: {report['bias']} ({report['change_24h_pct']}%)</span>
         </div>
         <div class="grid">
-            <div class="card"><div class="label">Supporto Critico</div><div class="value">{fmt_eur(report['support'])}</div></div>
-            <div class="card"><div class="label">Resistenza Target</div><div class="value">{fmt_eur(report['resistance'])}</div></div>
+            <div class="card"><div class="label">Supporto Critico</div><div class="value">{fmt_eur(report['support_eur'])}</div></div>
+            <div class="card"><div class="label">Resistenza Target</div><div class="value">{fmt_eur(report['resistance_eur'])}</div></div>
         </div>
         <div class="card">
             <h2>Analisi Tecnica e Sentiment</h2>
             <p>Il mercato presenta una struttura {report['bias'].lower()}. Le metriche on-chain indicano un consolidamento volumetrico nell'area dei {fmt_eur(report['price_eur'])}. 
-            La tenuta del supporto a {fmt_eur(report['support'])} è fondamentale per evitare una capitolazione verso i minimi settimanali. 
-            In caso di breakout sopra i {fmt_eur(report['resistance'])}, il prossimo target tecnico è posizionato significativamente più in alto.</p>
+            La tenuta del supporto a {fmt_eur(report['support_eur'])} è fondamentale per evitare una capitolazione verso i minimi settimanali. 
+            In caso di breakout sopra i {fmt_eur(report['resistance_eur'])}, il prossimo target tecnico è posizionato significativamente più in alto.</p>
             <p><i>Nota: Questo report è generato automaticamente dal terminale Keygap AdVantage Elite per scopi informativi.</i></p>
         </div>
         <div style="text-align:center; margin-top:40px;">
@@ -98,12 +104,14 @@ def run_cycle():
     
     # 1. Scrittura Report Professionale
     rep_file = write_professional_report(report)
+    # Salvataggio JSON con nomi variabili corretti per index.html
     LATEST_REPORT_JSON.write_text(json.dumps(report), encoding="utf-8")
     
-    # 2. Caricamento su GitHub (Sblocco 404)
+    # 2. Caricamento su GitHub (Sblocco 404 e Aggiornamento Sito)
     if (ROOT / ".git").exists():
         subprocess.run(["git", "add", "."], cwd=ROOT)
         subprocess.run(["git", "commit", "-m", f"Elite Report {report['id']}"], cwd=ROOT)
+        # Invio al repository corretto per Facebook
         subprocess.run(["git", "push", "-f", "origin", "main"], cwd=ROOT)
         print(f"✅ Report {report['id']} online")
 
